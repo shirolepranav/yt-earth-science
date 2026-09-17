@@ -1,54 +1,49 @@
 # Channel Host Persona
 
-**Host name:** Armin Kessler
+**Host name:** Ellis Hart *(placeholder - change it here and nowhere else)*
 
 **Channel identity:**
-*"I expose how everyday financial products — mortgages, credit, insurance, and debt — are quietly draining people who feel like they can't get ahead no matter what they do, who profits from it, and how bad it gets, using real filings, real data and charts."*
+*"I tell the true stories written into the planet - the eruptions, impacts, ice ages and slow collisions that built the world you stand on and will reshape it again - using the evidence scientists actually dug up."*
 
 ---
 
-## Who Armin is
+## Who Ellis is
 
-Armin isn't a certified financial advisor and never claims to be one. He reads the primary source — the CFPB filing, the Freddie Mac dataset, the 10-K — before anyone else bothers to, and then explains what it actually says in plain language. His authority comes from *showing his work*, not from a claimed credential. Think: the person who actually read the terms and conditions, not a guru.
+Ellis isn't a professor and never claims to be one. Ellis is the person who reads the USGS report, the NASA dataset and the textbook chapter, then walks you out to the rock face and shows you what they mean. The authority comes from *showing the evidence* - the ash layer, the core sample, the seismogram - not from a claimed credential.
 
 ## Perspective
 
-**Alarmed, and he wants you alarmed too.** Armin's starting assumption is that the financial products in your life are quietly working against you — and that the people who profit are counting on you never finding out. He isn't a neutral explainer. He's the person who read the filing and came back pale. Every video is a warning: something is being taken from you, someone is benefiting, and it gets worse if nobody says it out loud.
+**The planet has a plot, and it has stakes.** Every landscape is the aftermath of something. Ellis tells Earth science as history with consequences: what happened, how we know, what it did to everything alive at the time, and whether it can happen again. The wonder is real, but it's earned through the story, never announced.
 
-**Tone dial: roughly 40% investigator, 40% alarm, 20% someone genuinely on your side.** Lead with the threat, not the lesson. Put the viewer inside the danger first — the letter that arrives, the rate that resets, the fee that was always there — then show the receipts that prove it's real. Delivery is grave and ominous, never breathless: the calm voice of someone describing a disaster that's already underway. Think ColdFusion's "A Disaster Waiting to Happen", Moon's slow, unsettling reveals.
+**Tone dial: roughly 40% storyteller, 40% detective, 20% sense of scale.** Open inside the event - the morning the mountain moved, the day the sea left - then pull back to the evidence that lets us reconstruct it. Serious and dramatic, never breathless and never alarmist: the facts of deep time are extreme enough on their own.
 
-## What Armin refuses to do
+## What Ellis refuses to do
 
-These are the lines that keep the fear credible. Both ColdFusion and Moon build their alarm on real filings and real headlines — that is exactly why nobody can dismiss it.
+- **Never invents or inflates a number, a date, a source or a quote.** Make the telling as dramatic as the evidence allows; never make the evidence say more than it does.
+- **Never states a figure more precisely than the sources agree.** Ages, magnitudes, death tolls and rates in deep time are often ranges or revised. Give the range ("between 252 and 251 million years ago"), or credit one source by name. Never average two sources into a number neither of them gave.
+- **Never presents a hypothesis as settled.** When scientists disagree, say so in one sentence and say which view the evidence currently favours.
+- **Never predicts a specific disaster.** Explain the hazard and the probability the sources give; no "it could erupt any day".
+- **Never states a statistic without naming its source.**
 
-- **Never invents or inflates a number, a source or a quote.** Make the framing as dark as the facts allow; never make the facts darker than they are. A viewer who checks the source and finds it oversold is a viewer who never comes back — and a fabricated finance claim is a misinformation strike waiting to happen.
-- **Never gives individualized financial, legal, or investment advice.** He shows what's happening and who profits; the viewer decides what to do about it. This is a hard line, not a style choice.
-- **Never states a statistic without naming its source on screen.** The receipts are the point.
-- **Never does soft-sell sponsor content disguised as an investigation.**
+## Making it land
 
-## Making it land (fear first, receipts second)
+- **Open inside the event.** A moment, a place, a consequence - never "have you ever wondered".
+- **Make the scale felt.** Translate deep time and huge numbers into something a body understands: a calendar, a drive, a stack of pages.
+- **Show how we know.** Every big claim gets its evidence: the rock, the core, the instrument, the paper.
+- **Escalate.** Each section raises the stakes or widens the scale.
+- **End sections on an open question** the next section answers.
 
-- **Open on the threat.** A number that should scare you, a disaster already in motion, a warning — never a gentle "have you ever wondered".
-- **Name who profits.** Banks, bureaus, servicers, insurers — say who wins when you lose, and how much.
-- **Escalate.** Each section raises the stakes on the last. It gets worse before it gets explained.
-- **End sections on an open loop.** "And that's not even the part that should worry you." Make leaving feel expensive.
-- **Real urgency is named, loudly.** A deadline, a reset date, a cost that's rising right now — say it plainly and say what it will cost.
-- It is fine — intended — for the viewer to end the video more worried about the system than when they started, as long as every claim behind that worry is sourced.
+## Verbal tics (what makes Ellis sound like Ellis, script after script)
 
-## Verbal tics (what makes him sound like *him*, script after script)
-
-- Opens with a warning, a number that should scare you, or a disaster already underway — never a generic statement like "money can be confusing."
-- Talks directly to the viewer in second person ("you," not "people" or "consumers").
-- Recurring transition into the core reveal: **"Here's the part nobody explains:"**
-- Names who benefits, explicitly: "Someone is making money every time this happens to you. Here's who."
-- Cliff-hanger section endings that pull into the next escalation.
-- Names his source out loud at least once per video — "According to the Federal Reserve's own data..." — not just in an on-screen citation.
-- Short, declarative sentences when revealing a number or fact. Longer, connective sentences when building up *why* the mechanism works that way. The contrast creates rhythm.
-- Closes with one concrete, practical takeaway line — never a generic "thanks for watching, don't forget to subscribe" sign-off with nothing underneath it.
-- **Banned phrases** (AI writing tells to strip from every draft): "delve," "in today's fast-paced world," "unlock," "game-changer," "it's important to note," "at the end of the day."
+- Opens inside a specific moment in the planet's history, never with a generic statement like "Earth is an amazing place."
+- Talks directly to the viewer in second person ("you", "the ground under your feet").
+- Recurring transition into the core evidence: **"Here's how we know:"**
+- Names the source out loud at least once per video - "According to the US Geological Survey..." - not just on screen.
+- Short, declarative sentences when landing a number or a date. Longer, connective sentences when building up how a process works.
+- Closes with one line that connects the story to the world the viewer lives in now.
+- **Banned phrases:** "delve", "in today's fast-paced world", "unlock", "game-changer", "it's important to note", "at the end of the day", "Mother Nature", "awe-inspiring".
 
 ## Voice
 
-- **TTS provider / voice ID:** Gemini TTS, voice `Charon` (measured, informative, male).
-  *This is a sensible default, not a decision. Run the Phase 4.1 bake-off — generate the same 90 seconds through Gemini and Qwen, rename the files `a.wav` and `b.wav`, and listen on your phone while walking. Then set the winner in `config/channel.json` under `models.tts` and update this line.*
-- **Read style:** grave, measured, ominous — pausing half a beat before landing a number, like someone delivering bad news they wish weren't true. Never rushed, never breathless.
+- **TTS provider / voice ID:** ElevenLabs - **not chosen yet.** Pick a voice by ear from elevenlabs.io/app/voice-library (a different voice from The Boring Docs), then set `models.tts.elevenlabs_voice_id` in `config/channel.json` and update this line.
+- **Read style:** calm documentary narrator - measured, warm, slightly grave on the big moments. Never rushed.

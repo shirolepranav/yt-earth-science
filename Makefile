@@ -38,7 +38,7 @@ setup:
 
 demo:
 	python tools/make_demo.py
-	cd remotion && npx remotion render MainVideo out/demo.mp4 --props=demo-props.json
+	cd remotion && npx remotion render MainVideo out/demo.mp4 --props=demo-props.json --gl=angle --concurrency=2
 	@echo "Demo video: remotion/out/demo.mp4"
 
 check:

@@ -1,6 +1,8 @@
-# The Boring Docs — automated video pipeline
+# Deep Earth — automated video pipeline
 
-Makes long-form personal-finance explainer videos for [@TheBoringDocs](https://youtube.com/@TheBoringDocs), start to finish, with two short human approvals.
+Makes long-form Earth science documentaries (volcanoes, earthquakes, deep time, ice ages, oceans) for the Deep Earth channel, start to finish, with two short human approvals.
+
+Forked on 17 Sep 2026 from the pipeline behind The Boring Docs. The engine is the same; the tone, the research sources and the footage libraries are not. See DECISIONS.md.
 
 It runs on GitHub's servers on a weekly schedule, so nothing needs to be switched on at your end. It also runs on your own Mac with the same commands — see [MAC.md](MAC.md).
 
@@ -36,7 +38,7 @@ It runs on GitHub's servers on a weekly schedule, so nothing needs to be switche
         ▼
   ┌───────────────────┐
   │  Build the video  │  narrate → time the captions → build charts →
-  └───────────────────┘  fetch and check stock → render → thumbnail
+  └───────────────────┘  fetch and check footage → render → thumbnail
         │
         ▼
   Finished MP4 + thumbnail + title/description, posted back to the issue
@@ -58,7 +60,7 @@ Using AI is explicitly allowed. Producing interchangeable, templated, low-variat
 config/           Your channel, as data. Edit these, not the code.
   channel.json      cadence, model choices, safety switches, shot rules
   brand.json        colours — used by charts, cards, thumbnails and video
-  persona.md        who Armin Kessler is; pasted into every writing prompt
+  persona.md        who Ellis Hart is; pasted into every writing prompt
   topic_backlog.csv your 32 seed topics
 
 prompts/          The instructions sent to the writing model, one file per pass.
@@ -68,13 +70,13 @@ pipeline/         One module per stage. Each runs on its own.
   common.py         config, secrets, retries, run folders
   llm.py            talks to DeepSeek, falls back to Gemini
   topics.py         stage 1 — topic engine
-  research.py       stage 2 — dossier from Exa + Tavily + trafilatura
+  research.py       stage 2 — dossier from Exa + Tavily, plus a USGS/NASA/NOAA/textbook-only search
   script.py         stage 3 — the five-pass writing chain
   narrate.py        stage 4 — text to speech
   align.py          stage 5 — word-level timings (required)
   storyboard.py     stage 6 — plans every shot against those timings
   charts3d.py       stage 7 — GPT-6 Astra writes a three.js component per chart
-  stock.py          stage 7 — stock clips, ranked by vision against the narration
+  stock.py          stage 7 — NASA, Wikimedia Commons, Pexels, Pixabay footage and photos, ranked by vision against the narration
   visuals.py        stage 8 — AI keyframes, motion clips, depth maps, budget cap
   fal.py            the fal.ai client every generation model goes through
   shotlist.py       stage 9 — maps the storyboard to what was built
@@ -104,7 +106,7 @@ The writing model has never heard the narration, so it can't know that the credi
 
 So shots aren't planned with the script. They're planned by `storyboard.py` *after* the voice is recorded and every word is timestamped: the model sees each sentence with its real start and end time and decides what's on screen while it's spoken, cutting where the narration changes subject. Code then snaps every shot to the words where its subject starts and refuses anything it can't verify: a chart that doesn't exist, a "quote" that isn't in the source, a figure the research doesn't contain. Those become ordinary footage instead of reaching the screen.
 
-That one ordering is why the videos cut like ColdFusion and Moon rather than like a slideshow, and it's the piece worth understanding if you only read one part of the code.
+That one ordering is why the videos cut like a real documentary rather than like a slideshow, and it's the piece worth understanding if you only read one part of the code.
 
 ---
 
@@ -139,15 +141,15 @@ At six videos a month, on the free GitHub Actions allowance:
 | GitHub Actions | $0 — free for public repos; 2,000 min/month on private |
 | Remotion (individual licence) | $0 |
 | Word timing (runs on the runner) | $0 |
-| Pexels + Pixabay + Exa + Tavily free tiers | $0 |
+| NASA + Wikimedia Commons (no keys) + Pexels + Pixabay + Exa + Tavily free tiers | $0 |
 | DeepSeek — the scripts and storyboards | ~$3 |
-| Gemini TTS — the narration | ~$1.50 |
+| ElevenLabs — the narration | ~$7 |
 | Gemini vision checks (keyframes, clips, stock, thumbnails) | ~$1 |
-| **fal.ai — AI visuals, capped at `visuals.budget_usd` ($25) per video** | **~$150** |
+| fal.ai — last-resort AI visuals and photo depth maps, capped at `visuals.budget_usd` ($5) per video | ≤ $30 |
 | fal.ai — thumbnails, 3 per video | ~$2 |
-| **Total** | **~$155/month** |
+| **Total** | **≤ ~$45/month** |
 
-The AI visuals are the product now — about 80% of what's on screen. The cap is enforced before anything is spent: lower `visuals.budget_usd` and fewer shots get paid motion (the rest get free depth-parallax moves). See DECISIONS.md.
+Real footage and photographs are the product: AI is only for scenes no camera recorded, and for shots no library could fill. The cap is enforced before anything is spent. See DECISIONS.md.
 
 If you make the repo **private**, watch the 2,000 free minutes: a build is roughly 60–150 minutes (most of it waiting on video generation and the three.js render), so six videos can approach the limit. A **public** repo has unlimited minutes. Nothing here is secret — the keys live in GitHub Secrets, not in the code — so public is a reasonable choice.
 
@@ -164,7 +166,7 @@ Four changes, each with a reason:
 | WhisperX for word timing | faster-whisper | Same word-level output, no PyTorch, ~200 MB instead of ~2.5 GB, far less likely to break. |
 | Rendering on your Mac | Rendering on the runner | Removes the "is the Mac awake?" dependency. The Mac still works — see [MAC.md](MAC.md). |
 
-Everything else follows the plan: the phases, the two gates and the anti-templating rules. The visual style, tone and budget changed in September 2026 — see DECISIONS.md.
+Everything else follows the plan: the phases, the two gates and the anti-templating rules. The tone, sources and footage differ from The Boring Docs — see DECISIONS.md.
 
 **And one thing the plan is right about that this repo cannot do for you:** Phase 1. Three videos made by hand, published, measured. Retention above 35%, click-through above 4%. Until you have those numbers, `config/channel.json` keeps `review_only: true` and the pipeline will not publish anything — it hands you the file and you decide.
 

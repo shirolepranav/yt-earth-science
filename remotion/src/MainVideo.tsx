@@ -11,9 +11,9 @@ import { BigNumber } from "./components/charts/BigNumber";
 import { ChartView } from "./components/charts/ChartView";
 import type { Shot, ShotList } from "./types";
 
-// Footage from two AI models and two stock libraries only reads as one film
-// once it shares a grade: a little desaturated, blacks crushed, slightly dark.
-const FOOTAGE_GRADE = "saturate(0.78) contrast(1.1) brightness(0.9)";
+// Footage from four libraries and the occasional AI shot only reads as one film
+// once it shares a grade: near-natural colour (a nature documentary, not the finance channel's crushed look).
+const FOOTAGE_GRADE = "saturate(0.95) contrast(1.05) brightness(0.97)";
 
 const ShotView: React.FC<{ shot: Shot; brand: ShotList["brand"] }> = ({ shot, brand }) => {
   switch (shot.type) {

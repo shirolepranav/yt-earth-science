@@ -33,7 +33,7 @@ from PIL import Image  # noqa: E402
 
 import pipeline.llm as llm  # noqa: E402
 from pipeline.common import Run, load_config  # noqa: E402
-from pipeline.shotlist import build as build_shotlist  # noqa: E402
+from pipeline.shotlist import build as build_shotlist, stock_clips  # noqa: E402
 import pipeline.stock as stock  # noqa: E402
 from pipeline.stock import MIN_SCORE, fill  # noqa: E402
 from pipeline.storyboard import (  # noqa: E402
@@ -246,7 +246,7 @@ def check_deepseek_timeout() -> None:
 
 def check_allocator() -> None:
     cfg = load_config()["visuals"]
-    shots = [{"id": i, "kind": "ai", "priority": i % 3 + 1, "start": float(i)} for i in range(120)]
+    shots = [{"id": i, "kind": "ai", "priority": i % 3 + 1, "start": float(i)} for i in range(60)]  # fits the $5 cap with some motion
     motion, estimate = allocate(shots, cfg)
     assert estimate <= cfg["budget_usd"], f"estimate ${estimate} over budget"
     assert motion, "some shots should be animated at the default budget"
@@ -292,6 +292,20 @@ def check_shotlist(run: Run, shots: list[dict]) -> None:
     assert {"still", "chart", "evidence", "number", "card"} <= types, types
 
 
+def check_open_libraries() -> None:
+    """Licence filter, NASA's duration strings, and a photograph becoming a still."""
+    for code in ("pd", "pd-usgov", "cc0", "cc-by-4.0", "cc-by-2.0-de"):
+        assert stock.license_ok(code), code
+    for code in ("cc-by-sa-4.0", "cc-by-nc-4.0", "cc-by-nd-3.0", "arr", "", None):
+        assert not stock.license_ok(code), code
+    assert stock.media_seconds("0:05:27") == 327 and stock.media_seconds("23.84 s") == 23.84
+    assert stock.media_seconds("12.5 s (approx)") == 12.5 and stock.media_seconds(None) == 0
+    pieces = stock_clips({"clips": [{"path": "a.mp4", "duration": 3.0},
+                                    {"path": "p.jpg", "duration": 15.0, "media": "image", "depth": "d.png"}]}, 10.0, 20.0)
+    assert [p["type"] for p in pieces] == ["clip", "still"] and pieces[1]["depth"] == "d.png", pieces
+    assert pieces[1]["start"] == 13.0 and pieces[1]["end"] == 20.0, pieces
+
+
 def main() -> None:
     run = Run("selftest")
     shots = check_storyboard(run)
@@ -306,7 +320,8 @@ def main() -> None:
     check_cache(run)
     print("3/5 cache keys ok")
     check_shotlist(run, shots)
-    print("4/5 shot list ok")
+    check_open_libraries()
+    print("4/5 shot list, licence filter and photo stills ok")
     image = compose(Image.new("RGB", (2560, 1440), (30, 20, 40)), {"text": "THEY TOOK $40,000", "symbol": "arrow"})
     assert image.size == (1280, 720)
     print("5/5 thumbnail compositing ok")

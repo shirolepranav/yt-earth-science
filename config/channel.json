@@ -1,20 +1,28 @@
 {
   "_comment": "Everything about YOUR channel lives here. Change values in this file rather than editing code - every script reads from it.",
-
   "channel": {
-    "handle": "@TheBoringDocs",
-    "angle": "I expose how everyday financial products - mortgages, credit, insurance, and debt - are quietly draining people who feel like they can't get ahead no matter what they do, who profits from it, and how bad it gets, using real filings, real data and charts.",
+    "handle": "@DeepEarth",
+    "_handle_comment": "Placeholder - set to the real handle once the channel exists.",
+    "angle": "I tell the true stories written into the planet - the eruptions, earthquakes, impacts, ice ages and slow collisions that built the world and will reshape it again - using the evidence scientists actually dug up: USGS, NASA and NOAA records, rock layers, ice cores and real footage.",
     "niche_keywords": [
-      "mortgage rates explained",
-      "credit score explained",
-      "how insurance pricing works",
-      "why debt is expensive",
-      "consumer finance data",
-      "personal finance economics"
+      "volcano eruption explained",
+      "biggest earthquake in history",
+      "plate tectonics explained",
+      "mass extinction explained",
+      "ice age explained",
+      "geology documentary",
+      "how old is the earth",
+      "supervolcano"
     ],
-    "subreddits": ["personalfinance", "economics", "Mortgages", "CRedit"]
+    "subreddits": [
+      "geology",
+      "EarthScience",
+      "volcanoes",
+      "Paleontology",
+      "oceanography",
+      "meteorology"
+    ]
   },
-
   "video": {
     "_comment": "YouTube unlocks mid-roll ads at 8:00. 10-12 min is the sweet spot.",
     "target_minutes_min": 10,
@@ -27,9 +35,8 @@
     "_letterbox_comment": "true adds 2.39:1 cinema bars over footage. Off by default: bars shrink the picture on phones, where most views happen.",
     "letterbox": false
   },
-
   "storyboard": {
-    "_comment": "Shot planning, done after narration against the real word timings (pipeline/storyboard.py). All footage is planned as stock, cut where the narration changes subject; the stock stage fills a shot with as many short clips as it needs and only shots no library can show become AI. Cards are ColdFusion-style question/fact cards and numbers are big key-figure shots - both capped, never captions.",
+    "_comment": "Shot planning, done after narration against the real word timings (pipeline/storyboard.py). All footage is planned as stock, cut where the narration changes subject; the stock stage fills a shot with as many short clips as it needs and only shots no library can show become AI. Cards are documentary question/fact cards and numbers are big key-figure shots - both capped, never captions.",
     "min_shot_seconds": 2.0,
     "max_cards": 8,
     "max_numbers": 10,
@@ -41,7 +48,6 @@
     "figure_spacing_seconds": 12,
     "sentences_per_call": 30
   },
-
   "charts3d": {
     "_comment": "GPT-6 Astra (OPENAI_API_KEY) writes a bespoke three.js/Remotion component for every chart shot, designed for that data and line of narration. Each must pass static rules, tsc, a full test render and a vision read-back of its numbers, or it falls back to the built-in chart (pipeline/charts3d.py). Big-number shots always use the built-in component. Prices per million tokens as of 14 Sep 2026; reasoning tokens bill as output.",
     "model": "gpt-6-astra",
@@ -51,10 +57,9 @@
     "usd_per_million_input": 10,
     "usd_per_million_output": 50
   },
-
   "visuals": {
-    "_comment": "AI visuals via fal.ai (FAL_KEY). Every AI shot gets a keyframe image; the highest-priority ones are animated with image-to-video until the estimate hits budget_usd, the rest get depth-parallax camera moves (free, rendered in three.js). Generated files are cached by content hash in runs/<id>/assets/gen/, so reruns cost nothing. Prices are per call/second as of 14 Sep 2026 - check fal.ai/models when switching models; the budget cap is only as accurate as this table. Motion at 768P is scaled to 1080p in render; '1080P' roughly doubles motion cost.",
-    "budget_usd": 25,
+    "_comment": "AI visuals via fal.ai (FAL_KEY) - the LAST resort on this channel, for scenes no camera recorded (deep-time landscapes) and shots no library could fill. Real footage from NASA, Wikimedia Commons, Pexels and Pixabay comes first (pipeline/stock.py). Every AI shot gets a keyframe image; the highest-priority ones are animated until the estimate hits budget_usd, the rest get depth-parallax camera moves. Cached by content hash in runs/<id>/assets/gen/. Prices as of 14 Sep 2026.",
+    "budget_usd": 5,
     "retry_allowance": 1.2,
     "image_model": "fal-ai/bytedance/seedream/v5/lite/text-to-image",
     "video_model": "minimax/h3-max/image-to-video",
@@ -72,7 +77,6 @@
       "gemini-omni-1.1-flash": 0.15
     }
   },
-
   "models": {
     "_comment": "Model IDs change. If a call 404s, check the provider's docs and update here - no code change needed.",
     "writer": {
@@ -92,10 +96,10 @@
       "model": "gemini-3.1-flash-lite"
     },
     "tts": {
-      "_comment": "Default is ElevenLabs since 15 Sep 2026: Gemini's voice changed between chunks (heard at 2:19 in the 14 Sep build). eleven_multilingual_v2 is ElevenLabs' most stable long-form model (10k chars/request, $0.10 per 1k chars as of Sep 2026). Voice id is 'Bren' (Irish, from the voice library, chosen by ear 15 Sep 2026 over Charlie/Brian/Adam/Bill; the documentary read is kept - stability 0.6, no conversational styling). Bren reads ~14% faster than Charlie, which keeps an 11-12 minute target in reach - swap for any id from elevenlabs.io/app/voice-library, avoiding voices that show a custom-rate credit multiplier. 'gemini', 'qwen' and 'speechify' still work.",
+      "_comment": "ElevenLabs eleven_multilingual_v2, one fixed voice and seed (the Boring Docs channel proved Gemini TTS re-rolls the voice between chunks). VOICE NOT CHOSEN YET: pick one by ear at elevenlabs.io/app/voice-library - deliberately NOT Bren, which narrates The Boring Docs - and paste its id into elevenlabs_voice_id. Avoid voices with a custom-rate credit multiplier. Voice pace changes runtime by ~15%.",
       "provider": "elevenlabs",
       "elevenlabs_model": "eleven_multilingual_v2",
-      "elevenlabs_voice_id": "RlSVB64yXMZJjq67jbB1",
+      "elevenlabs_voice_id": "CHOOSE_A_VOICE",
       "elevenlabs_stability": 0.6,
       "elevenlabs_similarity": 0.8,
       "elevenlabs_seed": 1,
@@ -113,24 +117,21 @@
       "max_chars_per_call": 2500
     }
   },
-
   "thumbnail": {
     "_comment": "Three concepts from the polish pass (or generated here for older runs) -> one image each with image_model -> Pillow draws the text and symbol -> a vision model runs the shrink test and ranks them. thumbnail.jpg is the winner; _b and _c are for YouTube Studio's Test & Compare.",
     "image_model": "fal-ai/nano-banana-2",
     "variants": 3
   },
-
   "safety": {
     "_comment": "review_only=true means the pipeline NEVER publishes. It builds the video and hands it to you. Flip to false only after your Phase 1 numbers say the format works.",
     "review_only": true,
     "upload_privacy": "private",
     "declare_ai_generated": true
   },
-
   "targets": {
     "_comment": "From Phase 9.3 of the plan. Used by the topic engine as context.",
     "click_through_rate": 0.04,
     "average_percent_viewed": 0.35,
-    "thirty_second_retention": 0.70
+    "thirty_second_retention": 0.7
   }
 }

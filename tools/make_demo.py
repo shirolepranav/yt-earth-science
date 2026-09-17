@@ -34,7 +34,7 @@ def make_silence(path: Path, seconds: float, sample_rate: int = 24000) -> None:
 
 
 def make_scene(size=(1920, 1080)) -> tuple[Image.Image, Image.Image]:
-    """A dark room with a lit 'table' and an amber 'lamp', plus a matching depth map."""
+    """A dark scene with a lit ground plane and an orange glow, plus a matching depth map."""
     w, h = size
     image = Image.new("RGB", size, (14, 17, 23))
     depth = Image.new("L", size, 30)

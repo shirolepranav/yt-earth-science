@@ -62,9 +62,9 @@ CHARTY = re.compile(r"\b(charts?|graphs?|diagrams?|infographics?|data visuali[sz
 # first full build's "glowing phone screen financial chart" returned fake charts).
 # Real-world establishing footage instead, rotated so consecutive swaps differ.
 SAFE_STOCK_QUERIES = [
-    "city street at night", "apartment building exterior", "rain on window at night",
-    "empty apartment interior", "keys on kitchen table", "suburban houses at dusk",
-    "construction site crane", "people walking in city", "moving boxes in apartment",
+    "mountain range aerial", "ocean waves on rocky coast", "desert canyon aerial",
+    "glacier aerial", "earth from space", "volcano smoke plume",
+    "rock strata cliff", "storm clouds timelapse", "river valley aerial",
 ]
 
 
@@ -651,7 +651,7 @@ def generate(run: Run) -> list[dict]:
         log(f"  warning: chart(s) {unplaced} never made it on screen")
     if counts.get("evidence", 0) < len(charts):
         log(f"  warning: only {counts.get('evidence', 0)} evidence shot(s) - "
-            "the receipts carry the fear, aim for one per section")
+            "the evidence is what makes it credible, aim for one per section")
     return shots
 
 

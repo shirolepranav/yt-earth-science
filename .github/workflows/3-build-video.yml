@@ -117,11 +117,12 @@ jobs:
             runs/${{ steps.meta.outputs.run_id }}/output/video.mp4
             runs/${{ steps.meta.outputs.run_id }}/output/thumbnail*.jpg
             runs/${{ steps.meta.outputs.run_id }}/metadata.json
+            runs/${{ steps.meta.outputs.run_id }}/output/description.txt
             runs/${{ steps.meta.outputs.run_id }}/script.txt
 
       - name: Save the run folder
         run: |
-          git config user.name "boringdocs-bot"
+          git config user.name "deepearth-bot"
           git config user.email "actions@github.com"
           git add runs/
           git commit -m "Built run ${{ steps.meta.outputs.run_id }}" || echo "nothing to commit"

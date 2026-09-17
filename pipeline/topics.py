@@ -35,7 +35,7 @@ from .common import (
 )
 from .llm import chat_json
 
-USER_AGENT = "TheBoringDocs-pipeline/1.0"
+USER_AGENT = "DeepEarth-pipeline/1.0"
 
 
 # ---------------------------------------------------------------------------
@@ -196,7 +196,7 @@ def find_questions(subreddits: list[str], per_sub: int = 10) -> str:
     """Top posts of the month from the niche's subreddits.
 
     High comment counts are the signal worth chasing: lots of comments on a
-    money question usually means nobody gave a clear answer.
+    science question usually means nobody gave a clear answer.
     """
     lines: list[str] = []
     for sub in subreddits:

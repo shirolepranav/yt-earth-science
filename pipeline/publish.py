@@ -61,6 +61,13 @@ def build_description(run: Run, metadata: dict) -> str:
     for source in sources[:12]:
         parts.append(f"- {source.get('title', 'Source')}: {source['url']}")
 
+    # Commons' CC BY files require this, and NASA asks for it.
+    stock = run.read_json("stock.json") if run.path("stock.json").exists() else {}
+    credits = sorted({f"- {c['credit']} ({c['license']}): {c['page']}"
+                      for entry in stock.values() for c in entry.get("clips", []) if c.get("credit")})
+    if credits:
+        parts += ["", "FOOTAGE & IMAGES", "", *credits]
+
     parts += [
         "",
         "This video's narration is generated with AI text-to-speech. "
@@ -72,6 +79,9 @@ def build_description(run: Run, metadata: dict) -> str:
 def upload(run: Run) -> str:
     cfg = load_config()
     safety = cfg["safety"]
+
+    # Written every time, so a hand upload gets the sources and footage credits too.
+    run.write_text("output/description.txt", build_description(run, run.read_json("metadata.json")))
 
     if safety.get("review_only", True):
         log("review_only is true in config/channel.json - not uploading.")
@@ -95,7 +105,7 @@ def upload(run: Run) -> str:
             "title": metadata["title"][:100],
             "description": build_description(run, metadata)[:5000],
             "tags": metadata.get("tags", [])[:15],
-            "categoryId": "22",  # People & Blogs. 25 is News & Politics.
+            "categoryId": "28",  # Science & Technology. 27 is Education.
         },
         "status": {
             "privacyStatus": safety.get("upload_privacy", "private"),

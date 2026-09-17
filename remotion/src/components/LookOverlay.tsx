@@ -3,7 +3,7 @@ import { AbsoluteFill, useCurrentFrame, useVideoConfig } from "remotion";
 
 /**
  * The grade that makes AI footage, stock footage, charts and cards read as one
- * film: a heavy vignette, animated film grain, and optional 2.39:1 bars.
+ * film: a soft vignette, light film grain, and optional 2.39:1 bars.
  * (The desaturate/crush part of the grade is applied to footage only, in
  * MainVideo - charts and cards keep their colours.)
  *
@@ -19,9 +19,9 @@ export const LookOverlay: React.FC<{ letterbox?: boolean }> = ({ letterbox }) =>
   return (
     <AbsoluteFill style={{ pointerEvents: "none" }}>
       <AbsoluteFill
-        style={{ background: "radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 100%)" }}
+        style={{ background: "radial-gradient(ellipse at center, rgba(0,0,0,0) 55%, rgba(0,0,0,0.4) 100%)" }}
       />
-      <AbsoluteFill style={{ mixBlendMode: "overlay", opacity: 0.35 }}>
+      <AbsoluteFill style={{ mixBlendMode: "overlay", opacity: 0.2 }}>
         <svg width={width / 3} height={height / 3} style={{ transform: "scale(3)", transformOrigin: "0 0" }}>
           <filter id="grain">
             <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves={2} seed={frame % 24} stitchTiles="stitch" />

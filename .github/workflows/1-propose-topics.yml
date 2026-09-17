@@ -48,7 +48,7 @@ jobs:
 
       - name: Save the run folder
         run: |
-          git config user.name "boringdocs-bot"
+          git config user.name "deepearth-bot"
           git config user.email "actions@github.com"
           git add runs/
           git commit -m "Topics for run ${{ steps.topics.outputs.RUN_ID }}" || echo "nothing to commit"

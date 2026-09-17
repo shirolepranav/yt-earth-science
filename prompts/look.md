@@ -1,4 +1,4 @@
-You are the director of photography for a dark, investigative finance documentary on YouTube, in the vein of ColdFusion and Moon. Write the look bible for this one video. Every AI-generated shot will be prompted with it, so it is what makes ninety separate images feel like one film.
+You are the director of photography for a cinematic Earth science documentary on YouTube. Write the look bible for this one video. Most shots are real footage; the few AI-generated shots are for things no camera ever recorded (deep-time landscapes, events before people), and they are prompted with this bible so they sit alongside the real footage as one film.
 
 TITLE: {title}
 
@@ -6,23 +6,23 @@ TITLE: {title}
 {script}
 --- END SCRIPT ---
 
-Brand palette: near-black blue {background}, warm amber accent {accent}. (The brand's danger red {negative} belongs to charts and cards, not to images.)
+Brand palette: basalt near-black {background}, magma accent {accent}. (The brand's warning colour {negative} belongs to charts and cards, not to images.)
 
 Rules for the whole film:
-- Cinematic documentary: 35mm film look, anamorphic lens, practical light sources (desk lamps, window light, streetlights), shallow depth of field, fine grain, crushed blacks, desaturated with the warm amber accent. Ominous, quiet, expensive.
-- The script carries the fear; the images stay ordinary. Tension comes from light, shadow, emptiness and scale - never from what is in frame. Locations are clean, well-kept, recognisable homes, offices, streets and buildings the viewer could live or work in.
-- Never: blood, red liquid, red stains or red splashes, injury, gore, mould, rust, decay, peeling walls, broken or filthy rooms, squalor, horror imagery. No red at all except a small practical light.
-- No props with displays or digits: calculators, phones or screens showing numbers, clocks, tickers (image models garble them).
-- No recurring people. People may appear only as hands, silhouettes, backs, or out-of-focus figures - never a face as the subject.
-- No readable text, signage, logos or brand marks anywhere (image models garble them).
+- Nature documentary cinematography: natural light (low sun, overcast, dusk, firelight of lava), wide lenses for scale, aerial and ground-level views, fine grain, rich but natural colour. Grand, quiet, real.
+- Geologically plausible above all. Rocks, landforms, skies, seas and ice must look like the real processes the script describes. No fantasy or sci-fi styling: no glowing crystals, floating rocks, alien skies or impossible colours.
+- Never a specific real, recognisable landmark or place presented as if photographed - real places are shown with real footage.
+- Never: gore, dead bodies, injury, horror imagery.
+- No readable text, signage, logos, charts or numbers anywhere (image models garble them).
+- No recurring people. People may appear only as small silhouettes for scale - never a face as the subject.
 
-Invent 4 to 6 recurring LOCATIONS and 4 to 6 recurring PROPS specific to this story (e.g. "a tidy kitchen table under a single pendant lamp", "a thick sealed envelope on a hallway console", "a glass bank tower at dusk"). They will come back across the video the way a set does in a real documentary.
+Invent 4 to 6 recurring LOCATIONS and 4 to 6 recurring ELEMENTS specific to this story (e.g. "a black basalt shoreline under a low overcast sky", "a layered red sandstone cliff at dusk", "a steaming fissure across bare rock"). They will come back across the video the way a set does in a real documentary.
 
 Reply with JSON only:
 
 {{
   "style": "One dense sentence of camera, lens, light, grade and mood language, prefixed to every cinematic shot prompt",
-  "collage_style": "One dense sentence describing a dark editorial collage look (halftone photo cut-outs, torn paper edges, flat color blocks in navy and amber), prefixed to metaphor shots",
+  "collage_style": "One dense sentence describing a clean scientific-illustration collage look (cut-out rock and landscape photos, paper textures, flat colour blocks in basalt black and magma orange), prefixed to metaphor shots",
   "locations": ["...", "..."],
   "props": ["...", "..."]
 }}

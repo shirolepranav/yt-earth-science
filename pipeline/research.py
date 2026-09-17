@@ -23,11 +23,19 @@ from .common import Run, has_secret, log, resolve_run, secret, with_retries
 # Domains whose numbers we trust without hedging. Anything from here is placed
 # at the top of the dossier so the writing model leans on it first.
 PRIMARY_SOURCE_HINTS = (
-    ".gov", ".gov.uk", "europa.eu", "federalreserve.gov", "bls.gov",
-    "census.gov", "cfpb.gov", "consumerfinance.gov", "freddiemac.com",
-    "fanniemae.com", "sec.gov", "imf.org", "worldbank.org", "oecd.org",
-    "bankofengland.co.uk", "ecb.europa.eu", "nber.org", ".edu", "jstor.org",
+    ".gov", ".gov.uk", "europa.eu", ".edu", "si.edu", "opentextbc.ca",
+    "openstax.org", "esa.int", "bgs.ac.uk", "ipcc.ch", "nature.com",
+    "science.org", "agu.org", "agupubs.onlinelibrary.wiley.com",
+    "geosociety.org", "pnas.org", "jstor.org",
 )
+
+# The canonical sources, searched on their own so every dossier carries them
+# even when the open web ranks blogs higher. opentextbc.ca/geology is Steven
+# Earle's Physical Geology (CC BY 4.0).
+CANONICAL_DOMAINS = [
+    "usgs.gov", "nasa.gov", "noaa.gov", "volcano.si.edu", "opentextbc.ca",
+    "nps.gov", "bgs.ac.uk", "esa.int",
+]
 
 # Content farms and SEO aggregators. Their numbers are often copied wrong, and
 # repeating them means laundering someone else's error into your video.
@@ -53,19 +61,23 @@ def is_blocked(url: str) -> bool:
 # Search provider 1: Exa (semantic - finds meaning, not just keywords)
 # ---------------------------------------------------------------------------
 
-def search_exa(query: str, count: int = 12) -> list[dict]:
+def search_exa(query: str, count: int = 12, include_domains: list[str] | None = None) -> list[dict]:
+    body = {
+        "query": query,
+        "numResults": count,
+        "type": "auto",
+        # Ask Exa for the page text directly - saves a second fetch for
+        # most results and works on pages that block plain scrapers.
+        "contents": {"text": {"maxCharacters": MAX_CHARS_PER_SOURCE}},
+    }
+    if include_domains:
+        body["includeDomains"] = include_domains
+
     def call() -> list[dict]:
         response = requests.post(
             "https://api.exa.ai/search",
             headers={"x-api-key": secret("EXA_API_KEY"), "Content-Type": "application/json"},
-            json={
-                "query": query,
-                "numResults": count,
-                "type": "auto",
-                # Ask Exa for the page text directly - saves a second fetch for
-                # most results and works on pages that block plain scrapers.
-                "contents": {"text": {"maxCharacters": MAX_CHARS_PER_SOURCE}},
-            },
+            json=body,
             timeout=120,
         )
         response.raise_for_status()
@@ -170,8 +182,8 @@ def build_queries(topic: dict) -> list[str]:
 
     queries = [
         question,
-        f"{title} data statistics",
-        f"{question} official government data",
+        f"{title} evidence research",
+        f"{question} USGS NASA scientific explanation",
     ]
     if source:
         queries.append(f"{source} {question}")
@@ -183,9 +195,12 @@ def generate(run: Run, topic: dict) -> str:
 
     collected: dict[str, dict] = {}  # keyed by URL so duplicates collapse
 
-    for query in build_queries(topic):
-        log(f"  searching: {query}")
-        for result in search_exa(query) + search_tavily(query):
+    searches = [(q, search_exa(q) + search_tavily(q)) for q in build_queries(topic)]
+    question = topic.get("core_question", topic["title"])
+    searches.append((f"{question} [canonical sources]", search_exa(question, include_domains=CANONICAL_DOMAINS)))
+    for query, results in searches:
+        log(f"  searched: {query}")
+        for result in results:
             url = result["url"]
             if not url or url in collected or is_blocked(url):
                 continue

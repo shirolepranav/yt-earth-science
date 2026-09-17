@@ -29,10 +29,10 @@ Open each link, sign up, generate a key, and **paste it somewhere you can get to
 | 2 | **Google AI Studio** | The vision checks on every clip and image (Gemini 3.8 Flash ranks the stock footage, Flash-Lite checks AI images), the backup writer, and a fallback video model — one key does all of it | ~$1–2/video. Prepaid: when credits run out every check fails, so keep a few dollars of balance | [aistudio.google.com/apikey](https://aistudio.google.com/apikey) → Create API key |
 | 3 | **Exa** | Finds research sources | Free (20k/mo) | [dashboard.exa.ai](https://dashboard.exa.ai) → API Keys |
 | 4 | **Tavily** | Backup research | Free (1k/mo) | [app.tavily.com](https://app.tavily.com) → API Keys |
-| 5 | **Pexels** | Stock video | Free | [pexels.com/api](https://www.pexels.com/api/) → Get Started |
+| 5 | **Pexels** | Stock video (after the NASA and Wikimedia Commons archives, which need no key) | Free | [pexels.com/api](https://www.pexels.com/api/) → Get Started |
 | 6 | **Pixabay** | More stock video | Free | [pixabay.com/api/docs](https://pixabay.com/api/docs/) — the key is shown on that page once you're signed in |
 | 7 | **ElevenLabs** | The narrator's voice (`eleven_multilingual_v2`, one fixed voice stitched across chunks) | ~$1.10/video ($0.10 per 1k characters) | [elevenlabs.io/app/settings/api-keys](https://elevenlabs.io/app/settings/api-keys) → Create key. A paid plan (Creator) covers many videos a month. |
-| 8 | **fal.ai** | Every AI-generated visual and thumbnail: keyframe images, image-to-video clips, depth maps | ~$25/video, hard-capped by `visuals.budget_usd` | [fal.ai/dashboard/keys](https://fal.ai/dashboard/keys) → Add key. Add credit under Billing first. |
+| 8 | **fal.ai** | Every AI-generated visual and thumbnail: keyframe images, image-to-video clips, depth maps | ≤ $5/video, hard-capped by `visuals.budget_usd` | [fal.ai/dashboard/keys](https://fal.ai/dashboard/keys) → Add key. Add credit under Billing first. |
 
 ### Two notes before you start
 
@@ -150,7 +150,7 @@ To approve with your edit — paste the whole corrected script inside a fenced b
 approve
 
 ```
-Two people with the same income walked into the same bank...
+The morning of May eighteenth, the north face of the mountain began to move...
 ...your full edited script...
 ```
 ````

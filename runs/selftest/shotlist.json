@@ -7,12 +7,12 @@
   "brand": {
     "_comment": "Your Phase 0.3 brand sheet, as data. Charts, thumbnails and the video components all read these exact values, so changing a colour here changes it everywhere.",
     "colors": {
-      "accent": "#F5A623",
-      "background": "#0E1117",
+      "accent": "#FF7A1A",
+      "background": "#101214",
       "text": "#FFFFFF",
-      "muted": "#8B949E",
-      "positive": "#3FB950",
-      "negative": "#F85149"
+      "muted": "#A89C8A",
+      "positive": "#4FB3BF",
+      "negative": "#E5484D"
     },
     "fonts": {
       "heading": "Inter",
@@ -25,7 +25,7 @@
       "stroke_width": 12
     }
   },
-  "audioFile": "/Users/pranav/coding/projects/yt-boring-docs/runs/selftest/audio/narration_mixed.wav",
+  "audioFile": "/Users/pranav/coding/projects/yt-deep-earth/runs/selftest/audio/narration_mixed.wav",
   "shots": [
     {
       "type": "chart",
@@ -49,13 +49,13 @@
       "type": "card",
       "variant": "question",
       "text": "WHO PROFITS?",
-      "src": "/Users/pranav/coding/projects/yt-boring-docs/runs/selftest/assets/frame.jpg",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/selftest/assets/frame.jpg",
       "start": 8.68,
       "end": 12.68
     },
     {
       "type": "still",
-      "src": "/Users/pranav/coding/projects/yt-boring-docs/runs/selftest/assets/frame.jpg",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/selftest/assets/frame.jpg",
       "depth": null,
       "seed": 3,
       "start": 12.68,

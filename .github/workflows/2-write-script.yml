@@ -90,7 +90,7 @@ jobs:
       - name: Save the run folder
         if: steps.pick.outputs.skip == 'false'
         run: |
-          git config user.name "boringdocs-bot"
+          git config user.name "deepearth-bot"
           git config user.email "actions@github.com"
           git add runs/
           git commit -m "Script for run ${{ steps.pick.outputs.run_id }}" || echo "nothing to commit"

@@ -19,10 +19,11 @@ You have three kinds of evidence below. Weigh them like this:
 
 Rules for the topics you propose:
 - Each must fit the channel angle exactly. If it needs a different audience, it's the wrong topic.
-- Each must be answerable from free primary data: a government statistics agency, a central bank, a regulator, a public filing, or an academic paper. Name that source.
-- No topic that requires giving individual advice.
+- Each must be answerable from free authoritative sources: USGS, NASA, NOAA, the Smithsonian Global Volcanism Program, a geological survey, the Physical Geology open textbook, or a peer-reviewed paper. Name that source.
+- Each must be a story with stakes: an event, a turning point, a hazard or a mystery with consequences - not a textbook chapter heading.
+- Each must be showable: real footage or imagery of the phenomenon or place exists (NASA, USGS, Wikimedia Commons).
 - No topic already covered in the backlog's "already made" section, if present.
-- Titles must be under 70 characters and contain a specific number or a genuine contradiction — not a vague promise.
+- Titles must be under 70 characters and contain a specific number, a place, or a genuine mystery — not a vague promise.
 
 Reply with JSON only, in exactly this shape:
 

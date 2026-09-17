@@ -124,7 +124,7 @@ def cmd_stage(args) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="The Boring Docs video pipeline.",
+        description="Deep Earth video pipeline.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=__doc__,
     )

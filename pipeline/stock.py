@@ -1,4 +1,10 @@
-"""STAGE 7 - Stock footage, found by what the narration actually says.
+"""STAGE 7 - Real footage and photographs, found by what the narration actually says.
+
+Four libraries, searched together and ranked on one contact sheet: NASA's Image
+and Video Library and Wikimedia Commons (public domain / CC0 / CC BY only - the
+actual volcano, not a metaphor for it, with credits kept for the description),
+then Pexels and Pixabay. A chosen photograph holds the whole shot as a parallax
+still.
 
 Real footage is most of the video, so a clip that's merely "about housing" isn't
 good enough - it has to show what is being said at that second. For every stock
@@ -35,20 +41,25 @@ Run it:  python -m pipeline.stock --run latest
 
 from __future__ import annotations
 
+import html
 import io
 import json
+import re
 import threading
 import time
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
+from urllib.parse import quote, urlparse
 
 import requests
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageOps
 
-from .common import RUNS_DIR, Run, has_secret, log, resolve_run, secret, with_retries
+from .common import RUNS_DIR, Run, has_secret, load_config, log, resolve_run, secret, with_retries
 from .llm import chat_json, vision_check
+from .storyboard import MAX_FOOTAGE_SECONDS
+from .visuals import depth
 
-CANDIDATES = 16       # per shot, across all its searches
+CANDIDATES = 20       # per shot, across all its searches and all four libraries
 PER_QUERY = 30        # results asked for per search, per library
 MIN_SCORE = 6         # below this a generated shot is the better choice
 MIN_CLIP_SECONDS = 1.5  # shorter is a flash, not a shot
@@ -64,19 +75,25 @@ WORKERS = 4
 # if footage relevance slips. See DECISIONS.md.
 RANK_MODEL = "gemini-3.8-flash"
 USED_REGISTRY = RUNS_DIR / "stock_used.json"  # every clip the channel has ever used
+NASA_VIDEOS_PER_QUERY = 8  # per search; each video costs one extra request for its length and size
+USER_AGENT = "DeepEarth-pipeline/1.0 (automated documentary footage search)"  # Wikimedia requires one
 
-RANK_PROMPT = """You are choosing real stock footage for one shot of a dark, investigative finance documentary.
+RANK_PROMPT = """You are choosing real footage for one shot of a cinematic Earth science documentary.
 
 Narration spoken during this shot: "{spoken}"
 What the shot must show: {intent}
 
 The image is a contact sheet. Each numbered row is one candidate clip, shown as three frames (start, middle, end).
+A row showing one frame three times is a still photograph, or a clip with a single preview - judge it the same way.
+Some rows are still photographs (the same image three times) - judge those exactly like clips.
 Score EVERY candidate from 0 to 10 for how well it shows what this moment of narration needs.
 Score 0 (reject) for: a watermark or logo; charts, graphs, tickers or numbers on screens or paper; readable brand names;
-glossy corporate stock (smiling people in bright offices, handshakes, thumbs-up); vertical or letterboxed footage; anything unrelated.
-Tone matters as much as subject: this is an ominous documentary. Bright, cheerful, airy or sunny footage, and people
-smiling or looking relaxed, scores AT MOST 4 even if the subject matches. Prefer real, candid, cinematic footage -
-dim, moody or night-time light, tension, solitude - that would sit well in a dark documentary.
+glossy lifestyle stock (smiling people posing, tourists taking selfies); vertical or letterboxed footage; illustrations,
+renders or CGI presented as real; anything unrelated.
+Accuracy matters more than mood: footage of the ACTUAL phenomenon, rock, landform or place named in the narration
+beats a pretty but generic landscape. A different volcano, glacier or fault than the one named scores AT MOST 5
+unless the narration is speaking generally. Scientific photos, field and aerial survey footage and satellite imagery
+are welcome; prefer sharp, well-exposed, cinematic material.
 
 Reply as JSON only: {{"scores": [{{"n": 1, "score": 7, "why": "few words"}}]}}"""
 
@@ -174,13 +191,122 @@ def search_pixabay(query: str, count: int = PER_QUERY) -> list[dict]:
     return results
 
 
+# ---------------------------------------------------------------------------
+# Public-domain and openly licensed libraries - the real thing, not a metaphor
+# ---------------------------------------------------------------------------
+
+def media_seconds(value) -> float:
+    """'0:05:27', '23.84 s' or '12.5 s (approx)' -> seconds."""
+    match = re.search(r"[\d:.]+", str(value or ""))
+    try:
+        parts = [float(p) for p in match.group().split(":")] if match else []
+    except ValueError:
+        return 0.0
+    return sum(part * 60 ** i for i, part in enumerate(reversed(parts)))
+
+
+def license_ok(code: str) -> bool:
+    """Public domain, CC0 and CC BY only. Share-alike could bind the whole video
+    to its licence, and NC/ND forbid a monetised edit."""
+    code = (code or "").lower()
+    if code.startswith("pd") or code == "cc0":
+        return True
+    return code.startswith("cc-by-") and not any(tag in code for tag in ("-sa", "-nc", "-nd"))
+
+
+def search_nasa(query: str, count: int = PER_QUERY) -> list[dict]:
+    """NASA Image and Video Library: no key, and satellite, aerial and field
+    imagery of the actual event. Images and videos are searched separately -
+    mixed, the images crowd the videos out of the first page."""
+    results = []
+    for media, size in (("image", count // 2), ("video", NASA_VIDEOS_PER_QUERY)):
+        try:
+            items = library_get(
+                "nasa", "https://images-api.nasa.gov/search",
+                params={"q": query, "media_type": media, "page_size": size},
+            ).json()["collection"]["items"]
+        except Exception as error:  # noqa: BLE001
+            log(f"  nasa failed for '{query}': {error}")
+            continue
+        for item in items:
+            data, links = item["data"][0], item.get("links", [])
+            nasa_id = data["nasa_id"]
+            base = {
+                "id": f"nasa-{nasa_id}",
+                "media": media,
+                "page": f"https://images.nasa.gov/details/{quote(nasa_id)}",
+                "credit": data.get("photographer") or data.get("secondary_creator") or f"NASA {data.get('center', '')}".strip(),
+                "license": "NASA media (public domain)",
+            }
+            if media == "image":
+                results.append({**base, "duration": MAX_FOOTAGE_SECONDS,
+                                "frames": [l["href"] for l in links if l.get("rel") == "preview"],
+                                "files": [{"width": l.get("width") or 0, "height": l.get("height") or 0, "url": l["href"]}
+                                          for l in links if l.get("rel") != "preview"]})
+                continue
+            root = f"https://images-assets.nasa.gov/video/{quote(nasa_id)}"
+            try:
+                meta = library_get("nasa", f"{root}/metadata.json").json()
+            except Exception:  # noqa: BLE001 - one unreadable video just isn't a candidate
+                continue
+            width, height = int(meta.get("QuickTime:ImageWidth") or 0), int(meta.get("QuickTime:ImageHeight") or 0)
+            # ~large.mp4 is NASA's 1080p encode, a third the size of ~orig (204 vs 653 MB for a 5-minute
+            # 1080p original, 17 Sep 2026). The whole file downloads though only a shot's length plays.
+            results.append({**base,
+                            "duration": media_seconds(meta.get("QuickTime:Duration") or meta.get("Composite:Duration")),
+                            "files": [{"width": min(width, 1920), "height": round(height * min(1, 1920 / max(width, 1))),
+                                       "url": f"{root}/{quote(nasa_id)}~large.mp4"}],
+                            "frames": [f"{root}/{quote(nasa_id)}~large_{n}.jpg" for n in (1, 3, 5)]})
+    return results
+
+
+def search_commons(query: str, count: int = PER_QUERY) -> list[dict]:
+    """Wikimedia Commons, keeping only files whose licence allows this use
+    (see license_ok). Holds much of USGS's public-domain photography."""
+    results = []
+    for filetype in ("video", "bitmap"):
+        try:
+            pages = library_get(
+                "commons", "https://commons.wikimedia.org/w/api.php",
+                headers={"User-Agent": USER_AGENT},
+                params={"action": "query", "format": "json", "generator": "search", "gsrnamespace": 6,
+                        "gsrsearch": f"{query} filetype:{filetype}", "gsrlimit": count // 2,
+                        "prop": "imageinfo", "iiprop": "url|size|extmetadata", "iiurlwidth": 1920,
+                        "iiextmetadatafilter": "License|LicenseShortName|Artist"},
+            ).json().get("query", {}).get("pages", {})
+        except Exception as error:  # noqa: BLE001
+            log(f"  commons failed for '{query}': {error}")
+            continue
+        for page in sorted(pages.values(), key=lambda p: p.get("index", 0)):
+            info = (page.get("imageinfo") or [{}])[0]
+            meta = info.get("extmetadata", {})
+            if not info.get("url") or not license_ok(meta.get("License", {}).get("value", "")):
+                continue
+            video = filetype == "video"
+            # ponytail: videos download the original file (up to 4K webm); use Commons' 1080p transcode if renders get slow
+            file = ({"width": info.get("width", 0), "height": info.get("height", 0), "url": info["url"]} if video else
+                    {"width": info.get("thumbwidth", 0), "height": info.get("thumbheight", 0),
+                     "url": info.get("thumburl") or info["url"]})
+            results.append({
+                "id": f"commons-{page['pageid']}",
+                "media": "video" if video else "image",
+                "duration": info.get("duration", 0) if video else MAX_FOOTAGE_SECONDS,
+                "files": [file],
+                "frames": [info["thumburl"]] if info.get("thumburl") else [],
+                "page": info.get("descriptionurl", ""),
+                "credit": re.sub(r"\[\d+\]", "", html.unescape(re.sub(r"<[^>]+>", "", meta.get("Artist", {}).get("value", "")))).strip() or "Wikimedia Commons",
+                "license": meta.get("LicenseShortName", {}).get("value", ""),
+            })
+    return results
+
+
 def pick_best_file(video: dict, min_width: int = 1280, max_width: int = 1920) -> dict | None:
-    """Largest landscape file that isn't bigger than 1080p needs."""
+    """Largest landscape file that isn't bigger than 1080p needs, else the smallest one that is."""
     landscape = [f for f in video["files"] if f["width"] >= min_width and f["width"] > f["height"]]
     if not landscape:
         return None
     within = [f for f in landscape if f["width"] <= max_width]
-    return max(within or landscape, key=lambda f: f["width"])
+    return max(within, key=lambda f: f["width"]) if within else min(landscape, key=lambda f: f["width"])
 
 
 # ---------------------------------------------------------------------------
@@ -198,7 +324,7 @@ def contact_sheet(candidates: list[dict], path: Path) -> None:
         frames = (candidate["frames"] * 3)[:3] if candidate["frames"] else []
         for col, url in enumerate(frames):
             try:
-                raw = requests.get(url, timeout=30)
+                raw = requests.get(url, timeout=30, headers={"User-Agent": USER_AGENT})
                 raw.raise_for_status()
                 tile = Image.open(io.BytesIO(raw.content)).convert("RGB")
                 tile.thumbnail((tile_w, tile_h))
@@ -235,7 +361,7 @@ def rank(candidates: list[dict], spoken: str, intent: str, sheet_path: Path) -> 
 
 def download(url: str, path: Path) -> bool:
     try:
-        with requests.get(url, stream=True, timeout=300) as response:
+        with requests.get(url, stream=True, timeout=300, headers={"User-Agent": USER_AGENT}) as response:
             response.raise_for_status()
             with path.open("wb") as handle:
                 for block in response.iter_content(chunk_size=1 << 16):
@@ -247,6 +373,18 @@ def download(url: str, path: Path) -> bool:
         return False
 
 
+def prepare_photo(run: Run, path: Path) -> dict:
+    """A photograph as a 1920x1080 frame (centre-cropped, so the parallax plane
+    isn't stretched) plus a depth map for a slow parallax move (~$0.005 on
+    fal.ai; without one it gets a plain push-in)."""
+    frame = path.with_suffix(".jpg")
+    ImageOps.fit(Image.open(path).convert("RGB"), (1920, 1080)).save(frame, "JPEG", quality=92)
+    if frame != path:
+        path.unlink(missing_ok=True)
+    depth_map = depth(run, frame, load_config()["visuals"], []) if has_secret("FAL_KEY") else None
+    return {"path": str(frame), "depth": str(depth_map) if depth_map else None}
+
+
 def spoken_during(words: list[dict], start: float, end: float) -> str:
     """The words heard during the shot, with a little lead-in for context."""
     return " ".join(w["word"] for w in words if start - 1.5 <= w["start"] < end)
@@ -256,7 +394,8 @@ def gather(queries: list[str], used: set[str], lock: threading.Lock, seen: set[s
     """Up to CANDIDATES fresh clips across the searches, round-robin so one
     query can't crowd out the others."""
     pool: dict[str, dict] = {}
-    per_query = [search_pexels(q) + search_pixabay(q) for q in queries]
+    # The public-domain archives first - footage of the actual thing - with stock filling what's left.
+    per_query = [search_nasa(q) + search_commons(q) + search_pexels(q) + search_pixabay(q) for q in queries]
     for tier in range(PER_QUERY * 2):
         for results in per_query:
             if tier < len(results):
@@ -303,10 +442,10 @@ def fresh_queries(spoken: str, intent: str, tried: list[str]) -> list[str]:
         reply = chat_json(
             "You find footage in stock video libraries. Reply with JSON only.",
             f'Narration: "{spoken}"\nThe shot must show: {intent or "what the narration describes"}\n'
-            f"These searches on Pexels and Pixabay found too little usable footage: {tried}\n\n"
+            f"These searches on NASA, Wikimedia Commons, Pexels and Pixabay found too little usable footage: {tried}\n\n"
             "Write three DIFFERENT searches (two to five plain, concrete, visual words each) that a stock "
-            "library is likely to have and that would still fit this moment - try simpler subjects, other "
-            "settings, or a related action. No charts, numbers, screens, illustrations or brand names.\n"
+            "library is likely to have and that would still fit this moment - try the proper scientific name, the "
+            "place name, simpler subjects, or a related landform. No charts, numbers, screens, illustrations or brand names.\n"
             'Reply as JSON: {"queries": ["...", "...", "..."]}',
             label="stock search rewrite",
         )
@@ -347,10 +486,21 @@ def fetch_for_shot(run: Run, shot: dict, words: list[dict], used: set[str], lock
 
     clips = []
     for candidate in picks:  # already claimed by fill()
-        path = run.path("assets", f"stock_{shot['id']:03d}_{len(clips)}_{candidate['id']}.mp4")
-        if download(pick_best_file(candidate)["url"], path):
-            clips.append({"id": candidate["id"], "path": str(path), "duration": candidate["duration"],
-                          "score": candidate["score"], "page": candidate["page"]})
+        url = pick_best_file(candidate)["url"]
+        ext = Path(urlparse(url).path).suffix.lower() or ".mp4"
+        safe_id = re.sub(r"[^\w.-]", "_", candidate["id"])[:80]
+        path = run.path("assets", f"stock_{shot['id']:03d}_{len(clips)}_{safe_id}{ext}")
+        if download(url, path):
+            clip = {"id": candidate["id"], "path": str(path), "duration": candidate["duration"],
+                    "score": candidate["score"], "page": candidate["page"], "media": candidate.get("media", "video"),
+                    "credit": candidate.get("credit"), "license": candidate.get("license")}
+            if clip["media"] == "image":
+                try:
+                    clip.update(prepare_photo(run, path))
+                except Exception as error:  # noqa: BLE001 - an unreadable photo is just a lost candidate
+                    log(f"    photo unusable ({error})")
+                    continue
+            clips.append(clip)
 
     covered = sum(c["duration"] for c in clips)
     if covered < MIN_COVERAGE * length:

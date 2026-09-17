@@ -162,15 +162,11 @@ def generate(run: Run) -> dict:
     # Apply the suggested fixes automatically. Anything the checker says to CUT
     # is left in place but flagged, because silently deleting a sentence can
     # break the flow - that's a judgement call for the human gate.
-    # overstated_causation is a warning, not an auto-rewrite: the checker
-    # softens dramatic framing into neutral prose, and the fear-driven tone
-    # (see DECISIONS.md) is deliberate. Wrong numbers and sources still get fixed.
+    # Every flag is applied, overstated_causation included: on a science
+    # channel a dramatic causal leap is a factual error, not a tone choice.
     for flag in flags:
         fix = (flag.get("suggested_fix") or "").strip()
         quote = (flag.get("quote") or "").strip()
-        if flag.get("problem") == "overstated_causation":
-            log(f"  warning (not rewritten): {quote[:60]}...")
-            continue
         if fix and fix.upper() != "CUT" and quote and quote in draft:
             draft = draft.replace(quote, fix, 1)
             log(f"  fixed: {quote[:60]}...")

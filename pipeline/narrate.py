@@ -190,6 +190,8 @@ def _elevenlabs_pcm(text: str, cfg: dict, previous_text: str = "", next_text: st
     second model has to guess them back out. previous_text/next_text tell it
     what surrounds this chunk, so the delivery carries across the join; the
     fixed seed keeps a regenerated chunk close to its neighbours."""
+    if cfg["elevenlabs_voice_id"] == "CHOOSE_A_VOICE":
+        raise RuntimeError("No narrator voice chosen yet - set models.tts.elevenlabs_voice_id in config/channel.json.")
     response = requests.post(
         f"https://api.elevenlabs.io/v1/text-to-speech/{cfg['elevenlabs_voice_id']}/with-timestamps",
         params={"output_format": f"pcm_{cfg['sample_rate']}"},

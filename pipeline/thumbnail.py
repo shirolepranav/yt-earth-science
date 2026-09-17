@@ -5,8 +5,8 @@ different concepts are made, tested, and ranked:
 
   1. Concepts   - planned with the title at Gate 2 (polish pass): at most four
                   words that DON'T repeat the title, or no text at all (the
-                  strongest thumbnails in this genre - Moon, ColdFusion - often
-                  have none); one hero image that tells the threat story; one
+                  strongest thumbnails in this genre often
+                  have none); one hero image that tells the story; one
                   symbol. Older runs without concepts get them generated here.
   2. Image      - one photographic hero per concept, prompted for the checklist:
                   one huge subject, high contrast and saturation, darkened
@@ -17,7 +17,7 @@ different concepts are made, tested, and ranked:
                   Pixel-perfect every time. Plus the symbol (arrow, circle, red X,
                   REC dot) and no border, no channel logo.
   4. Shrink test - each candidate is shown to a vision model at phone size and
-                  scored for readability, attention and fear/curiosity.
+                  scored for readability, attention and curiosity.
 
 Writes output/thumbnail.jpg (the winner) plus thumbnail_b.jpg and
 thumbnail_c.jpg for YouTube Studio's Test & Compare, and thumbnails.json with
@@ -42,7 +42,7 @@ FONT = ROOT / "assets" / "fonts" / "Anton-Regular.ttf"
 YELLOW, RED = (255, 212, 0), (235, 38, 38)
 
 IMAGE_PROMPT = (
-    "Photographic YouTube thumbnail for a dark investigative finance documentary: {hero}. "
+    "Photographic YouTube thumbnail for a cinematic Earth science documentary: {hero}. "
     "One single huge hero subject, dramatic high-contrast lighting, rich saturated colour "
     "against a darkened, softly blurred background, razor-sharp detail. {layout} "
     "Nothing important in the bottom-right corner. Absolutely no text, letters, numbers, "
@@ -53,16 +53,16 @@ SHRINK_TEST = (
     'Reply as JSON only: {"text_readable": true/false (true if there is no text), '
     '"about": "what you think the video is about, in under 10 words", '
     '"attention": 0-10 (how hard it grabs the eye in a feed), '
-    '"emotion": 0-10 (how much fear or curiosity it creates)}'
+    '"emotion": 0-10 (how much curiosity or sense of scale it creates)}'
 )
-CONCEPTS_PROMPT = """Title of a dark investigative finance video: {title}
+CONCEPTS_PROMPT = """Title of a cinematic Earth science video: {title}
 
 Opening of the narration:
 {opening}
 
 Give three genuinely different thumbnail concepts. The thumbnail must NOT repeat the title's words.
 "text": at most 4 words, ALL CAPS, or null for a pure visual story (at least one must be null).
-"hero": one striking photographic image telling the threat story at phone size - objects, hands, places, or one extreme close-up face showing fear or shock.
+"hero": one striking photographic image telling the story at phone size - a landscape, a phenomenon, an object or a dramatic scale contrast. Never a specific real person.
 "symbol": one of "arrow", "circle", "red_x", "rec_dot", "none".
 "why_click": one sentence.
 
@@ -107,7 +107,7 @@ def draw_text(image: Image.Image, text: str) -> tuple[int, int, int, int]:
     for index, line in enumerate(lines):
         cursor = x
         for word in line.split():
-            # Figures in yellow: on a money channel the number is the hook.
+            # Figures in yellow: the number is the hook.
             fill = YELLOW if re.search(r"[\d$%?!]", word) else (255, 255, 255)
             draw.text((cursor, y + index * line_height), word, font=font, fill=fill,
                       stroke_width=max(6, size // 16), stroke_fill=(0, 0, 0))

@@ -47,28 +47,28 @@ NEGATIVE = (
     "No charts, graphs, bars, trend lines, arrows or data visualisations on screens, "
     "paper or anywhere else - real figures are shown separately. "
     "No calculators, clocks, phones or screens showing digits. "
-    "No blood, red liquid, stains, injury, gore, mould, rust, decay, peeling walls, squalor or "
-    "horror imagery - ordinary, clean, well-kept places; the tension comes from light and shadow."
+    "No gore, injury, dead bodies or horror imagery. No fantasy or sci-fi styling - geologically "
+    "plausible landscapes, rocks, skies and seas only; no recognisable real landmark."
 )
 # Calibrated on the first pilot: a strict "anything AI-looking" check rejected 23
 # of 30 good cinematic frames for tiny background hands. These shots are on
 # screen for 3-5 seconds, darkened and under film grain - judge like a viewer
 # on a phone, not a pixel-peeper.
 KEYFRAME_CHECK = (
-    "You are checking an AI-generated frame for a dark cinematic documentary. It will be "
+    "You are checking an AI-generated frame for a cinematic Earth science documentary. It will be "
     "on screen for about 4 seconds, darkened, under film grain, mostly watched on phones. "
     "Reject it ONLY if a casual viewer would clearly notice a problem at a glance: large "
     "readable or garbled text that draws the eye, a visible logo, a human face as the main "
     "subject, a prominent hand in the foreground with obviously wrong fingers, or a main "
     "object that is clearly melted or impossible, or any chart, graph, bar, trend "
     "line or data visualisation (the video shows real charts separately), a calculator or screen showing "
-    "digits, anything that reads as blood, gore, injury or horror, or a filthy, decaying or squalid "
-    "room (the script carries the fear; the images stay ordinary). Small, dark, blurred or background "
+    "digits, anything that reads as gore, injury or horror, or geology that is obviously impossible or "
+    "fantasy-styled (floating rocks, glowing crystals, alien skies). Small, dark, blurred or background "
     "imperfections are fine - do not reject for them. "
     'Reply as JSON only: {"usable": true/false, "reason": "one short sentence"}'
 )
 MOTION_CHECK = (
-    "You are checking a 5-second AI-generated clip for a dark cinematic documentary, watched "
+    "You are checking a 5-second AI-generated clip for a cinematic Earth science documentary, watched "
     "mostly on phones under film grain. Reject it ONLY if a casual viewer would clearly "
     "notice something wrong on first watch: the main subject visibly morphing into a "
     "different shape, objects melting or passing through each other, a prominent hand with "
