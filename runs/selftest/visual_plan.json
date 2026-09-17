@@ -1,0 +1,18 @@
+[
+  {
+    "kind": "chart",
+    "anchor_phrase": "different mortgage rates",
+    "chart_index": 0
+  },
+  {
+    "kind": "stock",
+    "anchor_phrase": "neither of them fully understood",
+    "query": "person reading documents",
+    "fallback_query": "home office desk"
+  },
+  {
+    "kind": "chart",
+    "anchor_phrase": "forty thousand dollars",
+    "chart_index": 1
+  }
+]

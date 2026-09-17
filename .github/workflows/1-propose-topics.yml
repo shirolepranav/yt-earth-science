@@ -1,0 +1,94 @@
+# =============================================================================
+# STEP 1 of 3 - Propose topics, then wait for you.
+#
+# Runs itself every Monday morning. Gathers signals, asks the model for ten
+# ranked topics, and opens a GitHub issue with the list.
+#
+# You reply to that issue with a single number. That's Gate 1.
+# =============================================================================
+name: 1 - Propose topics (Gate 1)
+
+on:
+  schedule:
+    # 06:00 UTC every Monday. Times here are always UTC - adjust for your zone.
+    - cron: "0 6 * * 1"
+  # Lets you start a run by hand from the Actions tab, which works fine on a phone.
+  workflow_dispatch:
+
+permissions:
+  contents: write   # to commit the run folder
+  issues: write     # to open the Gate 1 issue
+
+jobs:
+  propose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate topics
+        id: topics
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: |
+          python -m pipeline.run topics | tee topics-output.txt
+          # The last line of the output is RUN_ID=... - pass it to later steps.
+          grep '^RUN_ID=' topics-output.txt >> "$GITHUB_OUTPUT"
+
+      - name: Save the run folder
+        run: |
+          git config user.name "boringdocs-bot"
+          git config user.email "actions@github.com"
+          git add runs/
+          git commit -m "Topics for run ${{ steps.topics.outputs.RUN_ID }}" || echo "nothing to commit"
+          git push
+
+      - name: Open the Gate 1 issue
+        uses: actions/github-script@v7
+        env:
+          RUN_ID: ${{ steps.topics.outputs.RUN_ID }}
+        with:
+          script: |
+            const fs = require('fs');
+            const runId = process.env.RUN_ID;
+
+            // Make sure the two gate labels exist. Creating one that's already
+            // there returns an error, which we ignore - so this is safe to run
+            // on every single week's job.
+            for (const [name, color, description] of [
+              ['gate-1', 'FBCA04', 'Waiting for you to pick a topic'],
+              ['gate-2', '0E8A16', 'Waiting for you to approve the script'],
+            ]) {
+              await github.rest.issues.createLabel({
+                owner: context.repo.owner, repo: context.repo.repo,
+                name, color, description,
+              }).catch(() => {});
+            }
+
+            // The human-readable topic list is everything after the JSON header
+            // that `pipeline.run topics` prints.
+            const raw = fs.readFileSync('topics-output.txt', 'utf8');
+            const body = raw.split('Pick one by replying').slice(1).join('Pick one by replying');
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Gate 1 - pick a topic (run ${runId})`,
+              labels: ['gate-1'],
+              body: [
+                `**Run:** \`${runId}\``,
+                '',
+                'Pick one by replying' + body,
+              ].join('\n'),
+            });

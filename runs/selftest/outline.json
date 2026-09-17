@@ -1,0 +1,21 @@
+{
+  "sections": [
+    {
+      "source": "CFPB",
+      "visual": {
+        "kind": "comparison",
+        "title": "Rate on the same loan",
+        "labels": [
+          "760+",
+          "620-659"
+        ],
+        "values": [
+          6.4,
+          8.1
+        ],
+        "unit": "%",
+        "source_note": "CFPB"
+      }
+    }
+  ]
+}

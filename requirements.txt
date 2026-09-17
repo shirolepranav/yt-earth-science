@@ -1,0 +1,23 @@
+# Core HTTP + config
+requests==2.32.3
+python-dotenv==1.0.1
+
+# Thumbnail compositing and keyframe resizing
+Pillow==11.0.0
+
+# Research: strips ads and navigation out of fetched web pages
+trafilatura==2.0.0
+
+# Topic signals: Google Trends direction. Optional - the pipeline skips this
+# signal cleanly if it fails, which it occasionally does.
+pytrends==4.9.2
+
+# YouTube upload. Only needed if you turn auto-upload on.
+google-api-python-client==2.149.0
+google-auth-oauthlib==1.2.1
+google-auth-httplib2==0.2.0
+
+# Word-level timing. Required: shots cut every 2-6 seconds against the real
+# narration, and estimated timings drift visibly within a minute. faster-whisper
+# rather than WhisperX: same word timestamps, no PyTorch, ~200 MB install.
+faster-whisper==1.1.0

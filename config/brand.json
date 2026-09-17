@@ -1,0 +1,24 @@
+{
+  "_comment": "Your Phase 0.3 brand sheet, as data. Charts, thumbnails and the video components all read these exact values, so changing a colour here changes it everywhere.",
+
+  "colors": {
+    "accent": "#F5A623",
+    "background": "#0E1117",
+    "text": "#FFFFFF",
+    "muted": "#8B949E",
+    "positive": "#3FB950",
+    "negative": "#F85149"
+  },
+
+  "fonts": {
+    "heading": "Inter",
+    "body": "Inter",
+    "_note": "If you change these, also update the Google Fonts link in remotion/src/fonts.ts"
+  },
+
+  "thumbnail": {
+    "max_words": 5,
+    "font_size": 150,
+    "stroke_width": 12
+  }
+}

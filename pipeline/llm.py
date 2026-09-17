@@ -1,0 +1,244 @@
+"""One place that talks to language models, so the rest of the code doesn't care
+which provider is in use.
+
+Two providers are supported:
+  * DeepSeek  - cheap, strong English prose. Used for writing.
+  * Gemini    - free tier, vision-capable. Used as a backup writer and for the
+                stock-footage image checks.
+
+Both are wrapped by `chat()`, which automatically falls back to the backup
+provider if the primary one errors out. That fallback is the difference between
+"a run failed at 3am" and "a run finished at 3am".
+"""
+
+from __future__ import annotations
+
+import base64
+import json
+import re
+import time
+from typing import Any
+
+import requests
+
+from .common import log, load_config, secret, with_retries
+
+TIMEOUT = 420  # seconds. A storyboard chunk measured 174s (27k chars in, 14k out).
+
+# Set once DeepSeek has failed every retry in this process. After that, calls go
+# straight to Gemini: an overloaded DeepSeek otherwise costs every later call
+# its full retry cycle before falling back (observed: 45 minutes per call).
+_deepseek_down = False
+
+
+# ---------------------------------------------------------------------------
+# Provider 1: DeepSeek (and anything else that speaks the OpenAI format)
+# ---------------------------------------------------------------------------
+
+def _deepseek_chat(system: str, user: str, model: str, json_mode: bool) -> str:
+    cfg = load_config()["models"]["writer"]
+    base_url = cfg["base_url"].rstrip("/")
+
+    payload: dict[str, Any] = {
+        "model": model,
+        "messages": [
+            {"role": "system", "content": system},
+            {"role": "user", "content": user},
+        ],
+        "temperature": 0.7,
+    }
+    # "JSON mode" tells the model to return valid JSON and nothing else.
+    if json_mode:
+        payload["response_format"] = {"type": "json_object"}
+
+    # The reply arrives in one piece only when generation finishes, so the read
+    # timeout has to cover the whole generation, not a chunk of it: a 60s read
+    # timeout here killed every storyboard call (measured 174s) long before the
+    # wall-clock deadline below, and sent the run to Gemini for no reason.
+    # The deadline stays as the guard against a connection that dribbles.
+    started = time.monotonic()
+    chunks: list[bytes] = []
+    with requests.post(
+        f"{base_url}/chat/completions",
+        headers={
+            "Authorization": f"Bearer {secret('DEEPSEEK_API_KEY')}",
+            "Content-Type": "application/json",
+        },
+        json=payload,
+        timeout=(15, TIMEOUT),
+        stream=True,
+    ) as response:
+        response.raise_for_status()
+        for chunk in response.iter_content(chunk_size=8192):
+            chunks.append(chunk)
+            if time.monotonic() - started > TIMEOUT:
+                raise TimeoutError(f"DeepSeek gave no complete reply within {TIMEOUT}s")
+
+    body = json.loads(b"".join(chunks) or b"{}")
+    if "choices" not in body:
+        raise RuntimeError(f"DeepSeek returned no choices: {str(body)[:200]}")
+    return body["choices"][0]["message"]["content"]
+
+
+# ---------------------------------------------------------------------------
+# Provider 2: Gemini
+# ---------------------------------------------------------------------------
+
+def _gemini_chat(system: str, user: str, model: str, json_mode: bool) -> str:
+    generation_config: dict[str, Any] = {"temperature": 0.7}
+    if json_mode:
+        generation_config["responseMimeType"] = "application/json"
+
+    response = requests.post(
+        f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+        headers={"x-goog-api-key": secret("GEMINI_API_KEY")},  # header, not URL: URLs end up in error logs
+        json={
+            # Gemini keeps the "system" instruction in its own field rather than
+            # as a message, which is why this looks different from DeepSeek.
+            "systemInstruction": {"parts": [{"text": system}]},
+            "contents": [{"role": "user", "parts": [{"text": user}]}],
+            "generationConfig": generation_config,
+        },
+        timeout=TIMEOUT,
+    )
+    response.raise_for_status()
+    data = response.json()
+    return data["candidates"][0]["content"]["parts"][0]["text"]
+
+
+# ---------------------------------------------------------------------------
+# The function everything else calls
+# ---------------------------------------------------------------------------
+
+def chat(
+    system: str,
+    user: str,
+    *,
+    json_mode: bool = False,
+    heavy: bool = False,
+    label: str = "llm",
+) -> str:
+    """Send a prompt to the writing model and return its text reply.
+
+    Args:
+        system: the persistent instruction (persona, rules, banned phrases).
+        user:   the actual request for this call.
+        json_mode: ask the model to reply with strict JSON.
+        heavy:  use the more expensive, better model. Reserve this for the final
+                polish pass - it's where script quality actually shows up.
+        label:  what to call this in the logs when it retries.
+    """
+    cfg = load_config()["models"]
+    writer = cfg["writer"]
+    fallback = cfg["writer_fallback"]
+
+    model = writer["polish_model"] if heavy else writer["model"]
+
+    def validated(raw: str) -> str:
+        # In json_mode, a 200 with unparseable JSON is still a failure - it
+        # needs to trigger the same retry-then-fallback path as an HTTP error,
+        # not surface as a crash two calls further up the stack.
+        if json_mode:
+            parse_json_loosely(raw)
+        return raw
+
+    global _deepseek_down
+    try:
+        if _deepseek_down:
+            raise RuntimeError("it already failed earlier in this run")
+        return with_retries(
+            lambda: validated(_deepseek_chat(system, user, model, json_mode)),
+            label=f"{label} (deepseek/{model})",
+        )
+    except Exception as error:  # noqa: BLE001
+        if not _deepseek_down:
+            log(f"  DeepSeek unavailable ({error}). Falling back to Gemini for the rest of this run.")
+        _deepseek_down = True
+        return with_retries(
+            lambda: validated(_gemini_chat(system, user, fallback["model"], json_mode)),
+            label=f"{label} (gemini fallback)",
+        )
+
+
+def chat_json(system: str, user: str, *, heavy: bool = False, label: str = "llm") -> Any:
+    """Same as chat(), but parses the reply as JSON and hands back Python data.
+
+    Models occasionally wrap JSON in ```json fences even when told not to, so we
+    strip those before parsing rather than letting the whole run fail on it.
+    """
+    raw = chat(system, user, json_mode=True, heavy=heavy, label=label)
+    return parse_json_loosely(raw)
+
+
+def parse_json_loosely(raw: str) -> Any:
+    """Best-effort JSON parsing of a model reply."""
+    text = raw.strip()
+
+    # Strip ```json ... ``` fences if present.
+    fence = re.match(r"^```(?:json)?\s*(.*?)\s*```$", text, re.DOTALL)
+    if fence:
+        text = fence.group(1)
+
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        # Last resort: grab the outermost {...} or [...] block and try that.
+        match = re.search(r"(\{.*\}|\[.*\])", text, re.DOTALL)
+        if match:
+            return json.loads(match.group(1))
+        raise
+
+
+# ---------------------------------------------------------------------------
+# Vision - used to check a stock clip's frame, or an AI-generated clip's
+# actual motion, before either is allowed into the render.
+# ---------------------------------------------------------------------------
+
+def _vision_generate(mime_type: str, data_b64: str, prompt: str, *, timeout: int, label: str,
+                     model: str | None = None) -> Any:
+    cfg = {**load_config()["models"]["vision"], **({"model": model} if model else {})}
+
+    def call() -> Any:
+        response = requests.post(
+            f"https://generativelanguage.googleapis.com/v1beta/models/{cfg['model']}:generateContent",
+            headers={"x-goog-api-key": secret("GEMINI_API_KEY")},  # header, not URL: URLs end up in error logs
+            json={
+                "contents": [{
+                    "parts": [
+                        {"text": prompt},
+                        {"inline_data": {"mime_type": mime_type, "data": data_b64}},
+                    ]
+                }],
+                "generationConfig": {"responseMimeType": "application/json"},
+            },
+            timeout=timeout,
+        )
+        response.raise_for_status()
+        text = response.json()["candidates"][0]["content"]["parts"][0]["text"]
+        return parse_json_loosely(text)
+
+    # Generous backoff: parallel visuals QA hits per-minute rate limits (429s).
+    return with_retries(call, attempts=5, base_delay=4.0, label=label)
+
+
+def vision_check(image_path: str, prompt: str, model: str | None = None) -> Any:
+    """Show one still frame to a cheap vision model and get a small JSON verdict back.
+
+    Kept deliberately tiny: a short prompt and a yes/no answer means a few
+    hundred tokens per call, which is a fraction of a cent even at 60 clips
+    per video.
+    """
+    with open(image_path, "rb") as handle:
+        image_b64 = base64.b64encode(handle.read()).decode()
+    return _vision_generate("image/jpeg", image_b64, prompt, timeout=120, label="vision check", model=model)
+
+
+def vision_check_video(video_path: str, prompt: str) -> Any:
+    """Same idea as vision_check(), but hands the model the actual clip so it
+    can judge motion over time - a still frame can't show a physics mistake
+    or a morphing artifact that only appears between frames.
+    """
+    with open(video_path, "rb") as handle:
+        video_b64 = base64.b64encode(handle.read()).decode()
+    # Video understanding takes longer than a single image - generous timeout.
+    return _vision_generate("video/mp4", video_b64, prompt, timeout=180, label="physics check")

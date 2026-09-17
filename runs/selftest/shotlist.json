@@ -1,0 +1,117 @@
+{
+  "title": "Self-test",
+  "durationSeconds": 40.2,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "brand": {
+    "_comment": "Your Phase 0.3 brand sheet, as data. Charts, thumbnails and the video components all read these exact values, so changing a colour here changes it everywhere.",
+    "colors": {
+      "accent": "#F5A623",
+      "background": "#0E1117",
+      "text": "#FFFFFF",
+      "muted": "#8B949E",
+      "positive": "#3FB950",
+      "negative": "#F85149"
+    },
+    "fonts": {
+      "heading": "Inter",
+      "body": "Inter",
+      "_note": "If you change these, also update the Google Fonts link in remotion/src/fonts.ts"
+    },
+    "thumbnail": {
+      "max_words": 5,
+      "font_size": 150,
+      "stroke_width": 12
+    }
+  },
+  "audioFile": "/Users/pranav/coding/projects/yt-boring-docs/runs/selftest/audio/narration_mixed.wav",
+  "shots": [
+    {
+      "type": "chart",
+      "chartKind": "comparison",
+      "title": "Rate on the same loan",
+      "labels": [
+        "760+",
+        "620-659"
+      ],
+      "values": [
+        6.4,
+        8.1
+      ],
+      "unit": "%",
+      "source": "CFPB",
+      "component": null,
+      "start": 0.0,
+      "end": 8.68
+    },
+    {
+      "type": "card",
+      "variant": "question",
+      "text": "WHO PROFITS?",
+      "src": "/Users/pranav/coding/projects/yt-boring-docs/runs/selftest/assets/frame.jpg",
+      "start": 8.68,
+      "end": 12.68
+    },
+    {
+      "type": "still",
+      "src": "/Users/pranav/coding/projects/yt-boring-docs/runs/selftest/assets/frame.jpg",
+      "depth": null,
+      "seed": 3,
+      "start": 12.68,
+      "end": 14.28
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "consumerfinance.gov",
+      "headline": "Rate spreads and credit scores",
+      "before": "",
+      "quote": "Borrowers with lower credit scores paid rates up to 1.7 percentage points higher",
+      "after": " on otherwise identical loans. Over thirty years that gap can exceed $40,000 in interest.",
+      "start": 14.28,
+      "end": 20.28
+    },
+    {
+      "type": "clip",
+      "src": "a.mp4",
+      "playbackRate": 1.0,
+      "start": 20.28,
+      "end": 20.76
+    },
+    {
+      "type": "clip",
+      "src": "b.mp4",
+      "playbackRate": 1.0,
+      "start": 20.76,
+      "end": 21.88
+    },
+    {
+      "type": "number",
+      "value": "$40,000",
+      "label": "extra interest",
+      "source": "CFPB",
+      "start": 21.88,
+      "end": 31.88
+    },
+    {
+      "type": "chart",
+      "chartKind": "comparison",
+      "title": "Rate gap",
+      "labels": [
+        "760+",
+        "620-659"
+      ],
+      "values": [
+        1.7,
+        40000
+      ],
+      "unit": "",
+      "source": "CFPB",
+      "component": null,
+      "start": 31.88,
+      "end": 40.2
+    }
+  ],
+  "letterbox": false
+}

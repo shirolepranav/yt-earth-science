@@ -1,0 +1,145 @@
+# =============================================================================
+# STEP 2 of 3 - Research and write, then wait for you again.
+#
+# Fires when you reply to a Gate 1 issue with a single number.
+# Runs the research chain and the five-pass script chain, then posts the script
+# back into the same issue for review. That's Gate 2.
+# =============================================================================
+name: 2 - Research and write (Gate 2)
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  write:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    # Three guards, all of which must pass:
+    #   - the issue is a Gate 1 issue
+    #   - the comment came from the repo owner (not a passing stranger)
+    #   - the comment is just a number
+    if: >
+      contains(join(github.event.issue.labels.*.name, ','), 'gate-1') &&
+      github.event.comment.user.login == github.repository_owner &&
+      !github.event.issue.pull_request
+
+    steps:
+      - name: Read the pick
+        id: pick
+        env:
+          COMMENT: ${{ github.event.comment.body }}
+          TITLE: ${{ github.event.issue.title }}
+        run: |
+          # Strip whitespace and check the comment is a plain number.
+          PICK=$(echo "$COMMENT" | tr -d '[:space:]')
+          if ! [[ "$PICK" =~ ^[0-9]+$ ]]; then
+            echo "Comment is not a topic number - ignoring."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          # The run id is in the issue title: "Gate 1 - pick a topic (run XXX)"
+          RUN_ID=$(echo "$TITLE" | sed -n 's/.*(run \(.*\))/\1/p')
+          echo "pick=$PICK"     >> "$GITHUB_OUTPUT"
+          echo "run_id=$RUN_ID" >> "$GITHUB_OUTPUT"
+          echo "skip=false"     >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@v4
+        if: steps.pick.outputs.skip == 'false'
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+
+      - uses: actions/setup-python@v5
+        if: steps.pick.outputs.skip == 'false'
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        if: steps.pick.outputs.skip == 'false'
+        run: pip install -r requirements.txt
+
+      - name: React so you know it started
+        if: steps.pick.outputs.skip == 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.reactions.createForIssueComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              comment_id: context.payload.comment.id,
+              content: 'rocket',
+            });
+
+      - name: Research and write
+        if: steps.pick.outputs.skip == 'false'
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+        run: |
+          python -m pipeline.run choose --run "${{ steps.pick.outputs.run_id }}" --pick "${{ steps.pick.outputs.pick }}"
+          python -m pipeline.run write  --run "${{ steps.pick.outputs.run_id }}" | tee script-output.txt
+
+      - name: Save the run folder
+        if: steps.pick.outputs.skip == 'false'
+        run: |
+          git config user.name "boringdocs-bot"
+          git config user.email "actions@github.com"
+          git add runs/
+          git commit -m "Script for run ${{ steps.pick.outputs.run_id }}" || echo "nothing to commit"
+          git push
+
+      - name: Post the script for review
+        if: steps.pick.outputs.skip == 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const raw = fs.readFileSync('script-output.txt', 'utf8');
+            const marker = '## Gate 2';
+            const body = marker + raw.split(marker).slice(1).join(marker);
+
+            // GitHub caps a comment at 65,536 characters. A 1,700-word script
+            // is nowhere near that, but truncate defensively rather than fail.
+            const safe = body.length > 60000 ? body.slice(0, 60000) + '\n\n_(truncated)_' : body;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: safe,
+            });
+
+            // Move the issue from Gate 1 to Gate 2.
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ['gate-2'],
+            });
+            await github.rest.issues.removeLabel({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              name: 'gate-1',
+            }).catch(() => {});
+
+      - name: Report a failure into the issue
+        if: failure() && steps.pick.outputs.skip == 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const url = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `Writing failed. [Open the log](${url}) to see why. Reply with the same number to try again.`,
+            });

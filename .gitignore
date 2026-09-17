@@ -1,0 +1,48 @@
+# ---------------------------------------------------------------------------
+# Secrets. NEVER remove these two lines.
+# ---------------------------------------------------------------------------
+.env
+config/youtube_oauth.json
+config/youtube_token.json
+
+# ---------------------------------------------------------------------------
+# Big binary files. Git is bad at these; they get uploaded as build artifacts
+# instead (see .github/workflows/).
+# ---------------------------------------------------------------------------
+audio/
+output/
+assets/stock/
+assets/charts/
+assets/music/
+runs/*/audio/
+runs/*/assets/
+runs/*/output/
+# ...and the rest of a run is working data too: scripts, dossiers, storyboards
+# and stray experiment folders (one held a 146 MB WAV, past GitHub's 100 MB
+# limit). Regenerable, not code. The self-test's fixtures stay.
+runs/*
+!runs/selftest/
+!runs/selftest/**
+
+# ---------------------------------------------------------------------------
+# Installed dependencies and caches - anyone can regenerate these.
+# ---------------------------------------------------------------------------
+node_modules/
+venv/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+frame.jpg
+
+# Remotion build output and staged assets
+remotion/public/
+remotion/out/
+remotion/build/
+
+# Thumbnail bake-off output (tools/thumbnail_bakeoff.py). Throwaway comparison
+# images and the answer key - no reason to commit them.
+bakeoff/
+runs/selftest/assets/
+runs/selftest/output/

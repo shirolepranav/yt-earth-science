@@ -1,0 +1,46 @@
+{
+  "_comment": "A tiny fake shot list covering every shot type, so Remotion Studio has something to show and you can test the render without spending a penny. Generate the assets it needs with:  python tools/make_demo.py",
+  "title": "The Boring Docs",
+  "durationSeconds": 24,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "brand": {
+    "colors": {
+      "accent": "#F5A623",
+      "background": "#0E1117",
+      "text": "#FFFFFF",
+      "muted": "#8B949E",
+      "positive": "#3FB950",
+      "negative": "#F85149"
+    },
+    "fonts": { "heading": "Inter", "body": "Inter" }
+  },
+  "audioFile": "demo/narration.wav",
+  "letterbox": false,
+  "shots": [
+    { "type": "still", "start": 0, "end": 3, "src": "demo/still.jpg", "depth": "demo/depth.png", "seed": 0 },
+    {
+      "type": "chart", "start": 3, "end": 8, "chartKind": "bar",
+      "title": "Mortgage rate by credit score",
+      "labels": ["620", "660", "700", "740", "780+"], "values": [7.5, 7.2, 7.0, 6.9, 6.7], "unit": "%",
+      "source": "Curinos LLC via Experian, August 2026"
+    },
+    { "type": "number", "start": 8, "end": 11, "value": "$40,000", "label": "Extra interest over the loan", "source": "myFICO loan savings calculator" },
+    {
+      "type": "evidence", "start": 11, "end": 16, "variant": "article",
+      "publisher": "fhfa.gov",
+      "headline": "Results of Fannie Mae and Freddie Mac Guarantee Fee Review",
+      "before": "The review examined how fees are charged across the credit spectrum, and",
+      "quote": "borrowers with lower credit scores pay substantially more for the same guarantee.",
+      "after": "The agency said it would continue to monitor the pricing framework."
+    },
+    { "type": "card", "start": 16, "end": 19, "variant": "question", "text": "WHO PROFITS FROM THIS?", "src": "demo/plate.jpg" },
+    {
+      "type": "chart", "start": 19, "end": 24, "chartKind": "line",
+      "title": "Average guarantee fee",
+      "labels": ["2016", "2018", "2020", "2022", "2024"], "values": [55, 57, 52, 60, 64], "unit": "basis points",
+      "source": "FHFA"
+    }
+  ]
+}
