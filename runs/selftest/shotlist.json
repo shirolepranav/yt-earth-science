@@ -1,6 +1,7 @@
 {
   "title": "Self-test",
-  "durationSeconds": 40.2,
+  "durationSeconds": 45.2,
+  "outroSeconds": 5,
   "fps": 30,
   "width": 1920,
   "height": 1080,

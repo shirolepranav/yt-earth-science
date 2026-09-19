@@ -23,6 +23,7 @@ bug in the pipeline. Run it after `make setup` and after any code change.
 from __future__ import annotations
 
 import json
+import time
 import sys
 from pathlib import Path
 
@@ -207,41 +208,42 @@ def check_figure_detector() -> None:
 
 
 def check_deepseek_timeout() -> None:
-    """The read timeout must cover a whole generation, not a chunk of it.
-
-    A 60s read timeout killed every storyboard call (they take ~3 minutes) and
-    sent runs to the fallback model for no reason.
-    """
+    """The read timeout must cover a whole generation (~3 minutes for a
+    storyboard), and a reply that never finishes is abandoned at the deadline."""
     captured = {}
 
     class Reply:
         status_code = 200
 
-        def __enter__(self):
-            return self
-
-        def __exit__(self, *_):
-            return False
-
         def raise_for_status(self):
             pass
 
-        def iter_content(self, chunk_size):
-            yield json.dumps({"choices": [{"message": {"content": "{}"}}]}).encode()
+        def json(self):
+            return {"choices": [{"message": {"content": "{}"}}]}
 
     def fake_post(url, **kwargs):
         captured.update(kwargs)
         return Reply()
 
-    real_post = llm.requests.post
+    real_post, real_timeout = llm.requests.post, llm.TIMEOUT
     llm.requests.post = fake_post
     try:
         llm._deepseek_chat("system", "user", "model", True)
+        connect, read = captured["timeout"]
+        assert read >= 300, f"read timeout {read}s is shorter than a storyboard call takes (~180s)"
+        assert connect <= 30, f"connect timeout {connect}s should stay short"
+
+        # A connection that trickles keep-alive bytes forever must still fail at the deadline.
+        llm.requests.post = lambda url, **kwargs: time.sleep(60)
+        llm.TIMEOUT = 0.5
+        started = time.monotonic()
+        try:
+            llm._post_with_deadline("https://example.invalid", {}, {})
+            raise AssertionError("a reply that never finishes must time out")
+        except TimeoutError:
+            assert time.monotonic() - started < 5, "the deadline must be wall clock"
     finally:
-        llm.requests.post = real_post
-    connect, read = captured["timeout"]
-    assert read >= 300, f"read timeout {read}s is shorter than a storyboard call takes (~180s)"
-    assert connect <= 30, f"connect timeout {connect}s should stay short"
+        llm.requests.post, llm.TIMEOUT = real_post, real_timeout
 
 
 def check_allocator() -> None:
