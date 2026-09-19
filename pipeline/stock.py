@@ -271,6 +271,13 @@ def search_nasa(query: str, count: int = PER_QUERY) -> list[dict]:
     return results
 
 
+def _credit(artist) -> str:
+    """The uploader's name, stripped of Commons' markup. Some files carry no
+    artist at all, and the API can send that as the string "null"."""
+    text = re.sub(r"\[\d+\]", "", html.unescape(re.sub(r"<[^>]+>", "", str(artist or "")))).strip()
+    return "Wikimedia Commons" if text.lower() in ("", "null", "none", "unknown") else text
+
+
 def _commons_turn() -> bool:
     """Take the next Commons search slot, or give up if the queue is too long."""
     with _pause_lock:
@@ -321,7 +328,7 @@ def search_commons(query: str, count: int = PER_QUERY) -> list[dict]:
             "files": [file],
             "frames": [info["thumburl"]] if info.get("thumburl") else [],
             "page": info.get("descriptionurl", ""),
-            "credit": re.sub(r"\[\d+\]", "", html.unescape(re.sub(r"<[^>]+>", "", meta.get("Artist", {}).get("value", "")))).strip() or "Wikimedia Commons",
+            "credit": _credit(meta.get("Artist", {}).get("value")),
             "license": meta.get("LicenseShortName", {}).get("value", ""),
         })
     return results
