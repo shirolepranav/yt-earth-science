@@ -66,6 +66,17 @@ MIN_CLIP_SECONDS = 1.5  # shorter is a flash, not a shot
 MIN_COVERAGE = 0.6    # clips covering this much of a shot are slowed to fill it (>= 0.6x)
 SINGLE_CLIP_TOLERANCE = 1.0  # points of score worth giving up to hold one clip instead of cutting
 RATE_LIMIT_STEP = 600          # Pexels sends no reset time with a 429 - look again every 10 minutes
+# Wikimedia's anonymous search quota is tight and counted per unit time: four
+# workers searching at once drew a 429 five seconds in, and even one at a time
+# a second apart broke after six. Twelve searches five seconds apart ran clean
+# (measured 19 Sep 2026), so Commons gets one search every COMMONS_INTERVAL
+# seconds across all workers - and a shot that would have to wait longer than
+# COMMONS_MAX_WAIT for its turn skips Commons rather than stalling the stage,
+# since NASA, Pexels and Pixabay are still searching for it.
+COMMONS_PAUSE = 60
+COMMONS_INTERVAL = 5.0
+COMMONS_MAX_WAIT = 20.0
+_commons_slot = [0.0]
 RATE_LIMIT_MAX_WAIT = 75 * 60  # past a whole hour it's the monthly quota, and waiting won't help
 WORKERS = 4
 # Ranking a sheet of clips needs more judgement than Flash-Lite. 3.8 Flash is
@@ -129,7 +140,9 @@ def library_get(library: str, url: str, **kwargs) -> requests.Response:
         if waited >= RATE_LIMIT_MAX_WAIT:
             raise RuntimeError(f"{library} is still rate-limited after {waited / 60:.0f} minutes "
                                "- probably the monthly quota")
-        pause = float(response.headers.get("X-RateLimit-Reset") or RATE_LIMIT_STEP) + 1
+        pause = float(response.headers.get("Retry-After")
+                      or response.headers.get("X-RateLimit-Reset")
+                      or (COMMONS_PAUSE if library == "commons" else RATE_LIMIT_STEP)) + 1
         with _pause_lock:
             if _paused_until.get(library, 0.0) <= time.time():
                 _paused_until[library] = time.time() + pause
@@ -260,43 +273,59 @@ def search_nasa(query: str, count: int = PER_QUERY) -> list[dict]:
     return results
 
 
+def _commons_turn() -> bool:
+    """Take the next Commons search slot, or give up if the queue is too long."""
+    with _pause_lock:
+        wait = _commons_slot[0] - time.time()
+        if wait > COMMONS_MAX_WAIT:
+            return False
+        _commons_slot[0] = max(time.time(), _commons_slot[0]) + COMMONS_INTERVAL
+    if wait > 0:
+        time.sleep(wait)
+    return True
+
+
 def search_commons(query: str, count: int = PER_QUERY) -> list[dict]:
     """Wikimedia Commons, keeping only files whose licence allows this use
-    (see license_ok). Holds much of USGS's public-domain photography."""
+    (see license_ok). Holds much of USGS's public-domain photography.
+
+    Video and images come back in one request: the quota is per request, not
+    per result."""
+    if not _commons_turn():
+        return []
+    try:
+        pages = library_get(
+            "commons", "https://commons.wikimedia.org/w/api.php",
+            headers={"User-Agent": USER_AGENT},
+            params={"action": "query", "format": "json", "generator": "search", "gsrnamespace": 6,
+                    "gsrsearch": f"{query} filetype:video|bitmap", "gsrlimit": count,
+                    "prop": "imageinfo", "iiprop": "url|size|mime|extmetadata", "iiurlwidth": 1920,
+                    "iiextmetadatafilter": "License|LicenseShortName|Artist"},
+        ).json().get("query", {}).get("pages", {})
+    except Exception as error:  # noqa: BLE001
+        log(f"  commons failed for '{query}': {error}")
+        return []
     results = []
-    for filetype in ("video", "bitmap"):
-        try:
-            pages = library_get(
-                "commons", "https://commons.wikimedia.org/w/api.php",
-                headers={"User-Agent": USER_AGENT},
-                params={"action": "query", "format": "json", "generator": "search", "gsrnamespace": 6,
-                        "gsrsearch": f"{query} filetype:{filetype}", "gsrlimit": count // 2,
-                        "prop": "imageinfo", "iiprop": "url|size|extmetadata", "iiurlwidth": 1920,
-                        "iiextmetadatafilter": "License|LicenseShortName|Artist"},
-            ).json().get("query", {}).get("pages", {})
-        except Exception as error:  # noqa: BLE001
-            log(f"  commons failed for '{query}': {error}")
+    for page in sorted(pages.values(), key=lambda p: p.get("index", 0)):
+        info = (page.get("imageinfo") or [{}])[0]
+        meta = info.get("extmetadata", {})
+        if not info.get("url") or not license_ok(meta.get("License", {}).get("value", "")):
             continue
-        for page in sorted(pages.values(), key=lambda p: p.get("index", 0)):
-            info = (page.get("imageinfo") or [{}])[0]
-            meta = info.get("extmetadata", {})
-            if not info.get("url") or not license_ok(meta.get("License", {}).get("value", "")):
-                continue
-            video = filetype == "video"
-            # ponytail: videos download the original file (up to 4K webm); use Commons' 1080p transcode if renders get slow
-            file = ({"width": info.get("width", 0), "height": info.get("height", 0), "url": info["url"]} if video else
-                    {"width": info.get("thumbwidth", 0), "height": info.get("thumbheight", 0),
-                     "url": info.get("thumburl") or info["url"]})
-            results.append({
-                "id": f"commons-{page['pageid']}",
-                "media": "video" if video else "image",
-                "duration": info.get("duration", 0) if video else MAX_FOOTAGE_SECONDS,
-                "files": [file],
-                "frames": [info["thumburl"]] if info.get("thumburl") else [],
-                "page": info.get("descriptionurl", ""),
-                "credit": re.sub(r"\[\d+\]", "", html.unescape(re.sub(r"<[^>]+>", "", meta.get("Artist", {}).get("value", "")))).strip() or "Wikimedia Commons",
-                "license": meta.get("LicenseShortName", {}).get("value", ""),
-            })
+        video = not str(info.get("mime", "")).startswith("image/")
+        # ponytail: videos download the original file (up to 4K webm); use Commons' 1080p transcode if renders get slow
+        file = ({"width": info.get("width", 0), "height": info.get("height", 0), "url": info["url"]} if video else
+                {"width": info.get("thumbwidth", 0), "height": info.get("thumbheight", 0),
+                 "url": info.get("thumburl") or info["url"]})
+        results.append({
+            "id": f"commons-{page['pageid']}",
+            "media": "video" if video else "image",
+            "duration": info.get("duration", 0) if video else MAX_FOOTAGE_SECONDS,
+            "files": [file],
+            "frames": [info["thumburl"]] if info.get("thumburl") else [],
+            "page": info.get("descriptionurl", ""),
+            "credit": re.sub(r"\[\d+\]", "", html.unescape(re.sub(r"<[^>]+>", "", meta.get("Artist", {}).get("value", "")))).strip() or "Wikimedia Commons",
+            "license": meta.get("LicenseShortName", {}).get("value", ""),
+        })
     return results
 
 
@@ -395,7 +424,10 @@ def gather(queries: list[str], used: set[str], lock: threading.Lock, seen: set[s
     query can't crowd out the others."""
     pool: dict[str, dict] = {}
     # The public-domain archives first - footage of the actual thing - with stock filling what's left.
-    per_query = [search_nasa(q) + search_commons(q) + search_pexels(q) + search_pixabay(q) for q in queries]
+    # Commons is searched once per shot, not once per query: its quota is the
+    # scarce one, and its results rarely differ much between a shot's queries.
+    per_query = [search_nasa(q) + (search_commons(q) if i == 0 else []) + search_pexels(q) + search_pixabay(q)
+                 for i, q in enumerate(queries)]
     for tier in range(PER_QUERY * 2):
         for results in per_query:
             if tier < len(results):
