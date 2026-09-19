@@ -303,7 +303,10 @@ def assemble(beats: list[dict], sentences: list[dict], words: list[dict], durati
                 used_charts.add(index)
                 continue
         elif kind == "number":
+            # A figure from an illustrative scene ("14 months", source "Narration")
+            # is not a fact - only sourced figures get the big-number treatment.
             if (numbers_left > 0 and str(shot.get("value", "")).strip()
+                    and str(shot.get("source") or "").strip().lower() not in ("", "narration", "script")
                     and figures_supported(str(shot["value"]), dossier)):
                 numbers_left -= 1
                 continue
@@ -626,15 +629,21 @@ def generate(run: Run) -> list[dict]:
     look = make_look(run)
     # The model's raw beats are kept, so assembly rules can be changed and
     # re-run for free. Delete look.json and beats.json to re-plan from scratch.
-    if run.path("beats.json").exists():
-        beats = run.read_json("beats.json")
+    # Beats point at sentences by index, so they're only reused against the same
+    # sentences - a new greeting once shifted every shot one sentence early.
+    texts = [s["text"] for s in sentences]
+    saved = run.read_json("beats.json") if run.path("beats.json").exists() else {}
+    if isinstance(saved, dict) and saved.get("sentences") == texts:
+        beats = saved["beats"]
     else:
+        if saved:
+            log("  narration changed since beats.json was planned - re-planning")
         beats = plan_beats(look, sentences, charts, sources, cfg)
-        run.write_json("beats.json", beats)
+        run.write_json("beats.json", {"sentences": texts, "beats": beats})
     place_missing_charts(beats, sentences, charts)
     top_up_evidence(beats, sentences, sources, cfg)
     cover_figures(beats, sentences, sources, cfg)
-    run.write_json("beats.json", beats)
+    run.write_json("beats.json", {"sentences": texts, "beats": beats})
 
     shots = assemble(beats, sentences, words, duration + 1.0, charts, sources, dossier, cfg)
     run.write_json("storyboard.json", {"duration": round(duration + 1.0, 3), "shots": shots})

@@ -33,7 +33,11 @@
     "width": 1920,
     "height": 1080,
     "_letterbox_comment": "true adds 2.39:1 cinema bars over footage. Off by default: bars shrink the picture on phones, where most views happen.",
-    "letterbox": false
+    "letterbox": false,
+    "_outro_comment": "Seconds of quiet, darkened hold on the last shot after the narration ends, for YouTube end screens (5s is the shortest end screen YouTube allows, 20s the longest). No text on it - the end-screen tiles and subscribe button sit over it.",
+    "outro_seconds": 5,
+    "_intro_line_comment": "Spoken before the script on every video (pipeline/narrate.py), so the word timings and storyboard include it. Empty string to drop it. The <break> tag is ElevenLabs syntax for a pause (a comma alone gave 0.03s).",
+    "intro_line": "Hi, <break time=\"0.4s\" /> welcome to another episode of the Earth Docs."
   },
   "storyboard": {
     "_comment": "Shot planning, done after narration against the real word timings (pipeline/storyboard.py). All footage is planned as stock, cut where the narration changes subject; the stock stage fills a shot with as many short clips as it needs and only shots no library can show become AI. Cards are documentary question/fact cards and numbers are big key-figure shots - both capped, never captions.",

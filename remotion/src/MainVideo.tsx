@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, Audio, Sequence, staticFile, useVideoConfig } from "remotion";
+import { AbsoluteFill, Audio, Freeze, Sequence, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 
 import { useFonts } from "./fonts";
 import { EvidenceCard } from "./components/EvidenceCard";
@@ -43,15 +43,38 @@ const ShotView: React.FC<{ shot: Shot; brand: ShotList["brand"] }> = ({ shot, br
 };
 
 /**
+ * The end-screen hold: the last shot's final frame, frozen, pushing in very
+ * slowly while it fades most of the way to black. Nothing drawn on top -
+ * YouTube places its video tiles and subscribe button over this.
+ */
+const Outro: React.FC<{ shot: Shot; brand: ShotList["brand"]; lastFrame: number }> = ({ shot, brand, lastFrame }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const dark = interpolate(frame, [0, 2 * fps], [0, 0.8], { extrapolateRight: "clamp" });
+  return (
+    <AbsoluteFill style={{ backgroundColor: brand.colors.background }}>
+      <AbsoluteFill style={{ transform: `scale(${1 + frame * 0.00004})` }}>
+        <Freeze frame={lastFrame}>
+          <ShotView shot={shot} brand={brand} />
+        </Freeze>
+      </AbsoluteFill>
+      <AbsoluteFill style={{ backgroundColor: "#000", opacity: dark }} />
+    </AbsoluteFill>
+  );
+};
+
+/**
  * The whole video, assembled from the shot list: the narration, one Sequence
  * per shot (cut hard on the storyboard's timings), and the film grade on top.
  * No captions and no kinetic text - on-screen words are limited to charts,
  * key numbers, evidence pages and the occasional card.
  */
-export const MainVideo: React.FC<ShotList> = ({ brand, shots, audioFile, letterbox }) => {
+export const MainVideo: React.FC<ShotList> = ({ brand, shots, audioFile, letterbox, outroSeconds }) => {
   useFonts();
-  const { fps } = useVideoConfig();
+  const { fps, durationInFrames } = useVideoConfig();
   const toFrames = (seconds: number) => Math.round(seconds * fps);
+  const last = shots[shots.length - 1];
+  const outroFrom = durationInFrames - toFrames(outroSeconds ?? 0);
 
   return (
     <AbsoluteFill style={{ backgroundColor: brand.colors.background }}>
@@ -64,6 +87,11 @@ export const MainVideo: React.FC<ShotList> = ({ brand, shots, audioFile, letterb
           </Sequence>
         );
       })}
+      {outroFrom < durationInFrames && last ? (
+        <Sequence from={outroFrom}>
+          <Outro shot={last} brand={brand} lastFrame={Math.max(0, toFrames(last.end) - toFrames(last.start) - 1)} />
+        </Sequence>
+      ) : null}
       <LookOverlay letterbox={letterbox} />
     </AbsoluteFill>
   );

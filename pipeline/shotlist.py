@@ -103,7 +103,10 @@ def build(run: Run) -> dict:
 
     shot_list = {
         "title": run.read_json("metadata.json").get("title", ""),
-        "durationSeconds": board["duration"],
+        # The outro is part of the video's length, so the composition and the
+        # segmented render both pick it up from here.
+        "durationSeconds": board["duration"] + video_cfg.get("outro_seconds", 0),
+        "outroSeconds": video_cfg.get("outro_seconds", 0),
         "fps": video_cfg["fps"],
         "width": video_cfg["width"],
         "height": video_cfg["height"],

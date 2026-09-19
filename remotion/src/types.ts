@@ -64,7 +64,9 @@ export type ChartPreviewProps = {
 
 export type ShotList = {
   title: string;
+  // Includes outroSeconds: the silent end-screen hold after the narration.
   durationSeconds: number;
+  outroSeconds?: number;
   fps: number;
   width: number;
   height: number;

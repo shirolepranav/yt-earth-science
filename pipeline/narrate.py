@@ -20,6 +20,7 @@ from __future__ import annotations
 import base64
 import hashlib
 import json
+import re
 import subprocess
 import tempfile
 import wave
@@ -159,27 +160,6 @@ def _speechify_pcm(text: str, cfg: dict) -> bytes:
     return base64.b64decode(body["audio_base64"]), body.get("alignment") or {}
 
 
-def words_from_alignment(alignment: dict, offset: float) -> list[dict]:
-    """Character times -> one entry per word, shifted to its place in the full WAV."""
-    words: list[dict] = []
-    letters, starts, ends = (alignment.get("characters") or [],
-                             alignment.get("character_start_times_seconds") or [],
-                             alignment.get("character_end_times_seconds") or [])
-    current, start, end = "", 0.0, 0.0
-    for letter, first, last in zip(letters, starts, ends):
-        if letter.isspace():
-            if current:
-                words.append({"word": current, "start": round(start + offset, 3), "end": round(end + offset, 3)})
-                current = ""
-            continue
-        if not current:
-            start = first
-        current, end = current + letter, last
-    if current:
-        words.append({"word": current, "start": round(start + offset, 3), "end": round(end + offset, 3)})
-    return words
-
-
 # ---------------------------------------------------------------------------
 # Provider: ElevenLabs (the default - one fixed voice, stitched across chunks)
 # ---------------------------------------------------------------------------
@@ -230,7 +210,8 @@ def words_from_alignment(alignment: dict, offset: float) -> list[dict]:
         current, end = current + letter, last
     if current:
         words.append({"word": current, "start": round(start + offset, 3), "end": round(end + offset, 3)})
-    return words
+    # A <break time="0.4s" /> tag comes back as characters too; it's a pause, not words.
+    return [w for w in words if not re.search(r'[<>]|="', w["word"])]
 
 
 # ---------------------------------------------------------------------------
@@ -306,11 +287,15 @@ def synth_consistent(synth, chunk: str, cfg: dict, reference: float | None, labe
 # ---------------------------------------------------------------------------
 
 def generate(run: Run) -> Path:
-    cfg = load_config()["models"]["tts"]
+    config = load_config()
+    cfg = config["models"]["tts"]
     provider = cfg["provider"]
     sample_rate = cfg["sample_rate"]
 
-    script = run.read_text("script.txt")
+    # The channel greeting is added here rather than to script.txt, so the
+    # script stages never rewrite or fact-check it.
+    intro = config["video"].get("intro_line", "").strip()
+    script = f"{intro}\n\n{run.read_text('script.txt')}" if intro else run.read_text("script.txt")
     chunks = chunk_text(script, cfg.get(f"{provider}_max_chars", cfg["max_chars_per_call"]))
     log(f"Narrating with {provider}: {len(chunks)} chunk(s), "
         f"{len(script):,} characters total")
@@ -323,8 +308,10 @@ def generate(run: Run) -> Path:
     words: list[dict] = []
     spoken_seconds = 0.0  # where the next chunk starts in the finished WAV
     for index, chunk in enumerate(chunks, 1):
-        chunk_path = run.path("audio", f"chunk{index:02d}.wav")
-        align_path = run.path("audio", f"chunk{index:02d}.align.json")
+        # Named by the chunk's text too, so an edited script or greeting never reuses stale audio.
+        stem = f"chunk{index:02d}-{hashlib.sha1(chunk.encode()).hexdigest()[:8]}"
+        chunk_path = run.path("audio", f"{stem}.wav")
+        align_path = run.path("audio", f"{stem}.align.json")
 
         # Skip anything already generated - this is what makes a re-run cheap.
         if chunk_path.exists():
