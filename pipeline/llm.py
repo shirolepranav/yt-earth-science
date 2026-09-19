@@ -22,7 +22,7 @@ from typing import Any
 
 import requests
 
-from .common import log, load_config, secret, with_retries
+from .common import has_secret, log, load_config, secret, with_retries
 
 TIMEOUT = 420  # seconds. A storyboard chunk measured 174s (27k chars in, 14k out).
 
@@ -204,9 +204,32 @@ def parse_json_loosely(raw: str) -> Any:
 # actual motion, before either is allowed into the render.
 # ---------------------------------------------------------------------------
 
+def _openai_vision(mime_type: str, data_b64: str, prompt: str, model: str, timeout: int) -> Any:
+    """OpenAI's chat API, which takes an image as a data URI. Images only -
+    these models don't accept video, which is why motion QA stays on Gemini."""
+    response = requests.post(
+        "https://api.openai.com/v1/chat/completions",
+        headers={"Authorization": f"Bearer {secret('OPENAI_API_KEY')}"},
+        json={
+            "model": model,
+            "response_format": {"type": "json_object"},
+            "messages": [{"role": "user", "content": [
+                {"type": "text", "text": prompt},
+                {"type": "image_url", "image_url": {"url": f"data:{mime_type};base64,{data_b64}"}},
+            ]}],
+        },
+        timeout=timeout,
+    )
+    response.raise_for_status()
+    return parse_json_loosely(response.json()["choices"][0]["message"]["content"])
+
+
 def _vision_generate(mime_type: str, data_b64: str, prompt: str, *, timeout: int, label: str,
-                     model: str | None = None) -> Any:
+                     model: str | None = None, provider: str | None = None) -> Any:
     cfg = {**load_config()["models"]["vision"], **({"model": model} if model else {})}
+    if (provider or cfg.get("provider")) == "openai":
+        return with_retries(lambda: _openai_vision(mime_type, data_b64, prompt, cfg["model"], timeout),
+                            attempts=5, base_delay=4.0, label=label)
 
     def call() -> Any:
         response = requests.post(
@@ -231,6 +254,12 @@ def _vision_generate(mime_type: str, data_b64: str, prompt: str, *, timeout: int
     return with_retries(call, attempts=5, base_delay=4.0, label=label)
 
 
+def has_vision() -> bool:
+    """Whether the configured vision provider has a key to call."""
+    cfg = load_config()["models"]["vision"]
+    return has_secret("OPENAI_API_KEY" if cfg.get("provider") == "openai" else "GEMINI_API_KEY")
+
+
 def vision_check(image_path: str, prompt: str, model: str | None = None) -> Any:
     """Show one still frame to a cheap vision model and get a small JSON verdict back.
 
@@ -251,4 +280,7 @@ def vision_check_video(video_path: str, prompt: str) -> Any:
     with open(video_path, "rb") as handle:
         video_b64 = base64.b64encode(handle.read()).decode()
     # Video understanding takes longer than a single image - generous timeout.
-    return _vision_generate("video/mp4", video_b64, prompt, timeout=180, label="physics check")
+    # Gemini regardless of the configured vision provider: OpenAI's chat models
+    # take images only. Without a Gemini key the caller keeps the clip (visuals.check).
+    return _vision_generate("video/mp4", video_b64, prompt, timeout=180, label="physics check",
+                            model=load_config()["models"]["writer_fallback"]["model"], provider="gemini")

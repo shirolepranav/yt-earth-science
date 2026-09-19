@@ -38,7 +38,7 @@ from pathlib import Path
 import requests
 
 from .common import ROOT, Run, has_secret, load_brand, load_config, load_prompt, log, resolve_run, secret, with_retries
-from .llm import vision_check
+from .llm import has_vision, vision_check
 from .storyboard import outline_charts
 
 REMOTION = ROOT / "remotion"
@@ -167,9 +167,9 @@ def render_errors(key: str, spec: dict, seconds: float, workdir: Path) -> tuple[
 
 
 def number_errors(frame: Path, spec: dict) -> str:
-    if not has_secret("GEMINI_API_KEY"):
+    if not has_vision():
         return ""
-    verdict = vision_check(str(frame), NUMBERS_CHECK, model="gemini-3.8-flash")
+    verdict = vision_check(str(frame), NUMBERS_CHECK)
     seen = " ".join(str(n) for n in verdict.get("numbers", [])).replace(",", "")
     missing = []
     for value in spec["values"]:

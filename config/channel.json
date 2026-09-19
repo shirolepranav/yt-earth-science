@@ -96,8 +96,9 @@
       "model": "gemini-3.8-flash"
     },
     "vision": {
-      "provider": "gemini",
-      "model": "gemini-3.1-flash-lite"
+      "_comment": "Every picture the pipeline judges: stock contact sheets, AI keyframes, chart number read-backs and the thumbnail shrink test. Moved from Gemini to OpenAI on 19 Sep 2026, when Gemini's prepaid balance ran dry mid-build: measured on a real 20-candidate contact sheet, gpt-5.4-mini costs $0.0033 a sheet (~$0.23 a video) against Gemini 3.8 Flash's ~$0.007, and scored the eruption footage sensibly. gpt-5.4-nano is $0.001 but scored everything at most 3/10, which would send every shot to AI generation. Motion QA on AI clips still needs Gemini (OpenAI takes images only).",
+      "provider": "openai",
+      "model": "gpt-5.4-mini"
     },
     "tts": {
       "_comment": "ElevenLabs eleven_multilingual_v2, one fixed voice and seed (the Boring Docs channel proved Gemini TTS re-rolls the voice between chunks). Voice is 'Australian Baritone' (KmnvDXRA0HU55Q0aqkPG), picked 19 Sep 2026 from 8 samples of the greeting plus two script sentences: the only one ElevenLabs labels for documentary, deepest (81 Hz median), 141 wpm vs Bren's 154 - so an 11-minute script runs ~9% longer. Avoid voices with a custom-rate credit multiplier.",

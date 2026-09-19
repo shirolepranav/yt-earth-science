@@ -55,7 +55,7 @@ import requests
 from PIL import Image, ImageDraw, ImageOps
 
 from .common import RUNS_DIR, Run, has_secret, load_config, log, resolve_run, secret, with_retries
-from .llm import chat_json, vision_check
+from .llm import chat_json, has_vision, vision_check
 from .storyboard import MAX_FOOTAGE_SECONDS
 from .visuals import depth
 
@@ -79,12 +79,10 @@ COMMONS_MAX_WAIT = 20.0
 _commons_slot = [0.0]
 RATE_LIMIT_MAX_WAIT = 75 * 60  # past a whole hour it's the monthly quota, and waiting won't help
 WORKERS = 4
-# Ranking a sheet of clips needs more judgement than Flash-Lite. 3.8 Flash is
-# ~4x cheaper per sheet than 3.5 Flash ($0.007 vs $0.029, 15 Sep 2026), chosen
-# to cut costs. In a 10-sheet A/B it was a little less discerning (one unrelated
-# clip passed, one good clip missed) - switch back to "gemini-3.5-flash" here
-# if footage relevance slips. See DECISIONS.md.
-RANK_MODEL = "gemini-3.8-flash"
+# None means the configured vision model (models.vision in config/channel.json,
+# gpt-5.4-mini since 19 Sep 2026). Set a model id here to rank on a different
+# one than the other vision checks use. See DECISIONS.md.
+RANK_MODEL = None
 USED_REGISTRY = RUNS_DIR / "stock_used.json"  # every clip the channel has ever used
 NASA_VIDEOS_PER_QUERY = 8  # per search; each video costs one extra request for its length and size
 USER_AGENT = "DeepEarth-pipeline/1.0 (automated documentary footage search)"  # Wikimedia requires one
@@ -365,7 +363,7 @@ def contact_sheet(candidates: list[dict], path: Path) -> None:
 
 def rank(candidates: list[dict], spoken: str, intent: str, sheet_path: Path) -> list[tuple[float, dict]]:
     """(score, candidate) best first. Without a vision key, keep search order."""
-    if not has_secret("GEMINI_API_KEY"):
+    if not has_vision():
         return [(MIN_SCORE, c) for c in candidates]
     contact_sheet(candidates, sheet_path)
     try:
