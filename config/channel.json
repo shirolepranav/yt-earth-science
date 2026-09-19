@@ -100,10 +100,10 @@
       "model": "gemini-3.1-flash-lite"
     },
     "tts": {
-      "_comment": "ElevenLabs eleven_multilingual_v2, one fixed voice and seed (the Boring Docs channel proved Gemini TTS re-rolls the voice between chunks). Voice is 'Bren' (Irish, same as The Boring Docs) for now, by the owner's choice on 18 Sep 2026 - swap for a channel-specific voice from elevenlabs.io/app/voice-library later. Avoid voices with a custom-rate credit multiplier. Voice pace changes runtime by ~15%.",
+      "_comment": "ElevenLabs eleven_multilingual_v2, one fixed voice and seed (the Boring Docs channel proved Gemini TTS re-rolls the voice between chunks). Voice is 'Australian Baritone' (KmnvDXRA0HU55Q0aqkPG), picked 19 Sep 2026 from 8 samples of the greeting plus two script sentences: the only one ElevenLabs labels for documentary, deepest (81 Hz median), 141 wpm vs Bren's 154 - so an 11-minute script runs ~9% longer. Avoid voices with a custom-rate credit multiplier.",
       "provider": "elevenlabs",
       "elevenlabs_model": "eleven_multilingual_v2",
-      "elevenlabs_voice_id": "RlSVB64yXMZJjq67jbB1",
+      "elevenlabs_voice_id": "KmnvDXRA0HU55Q0aqkPG",
       "elevenlabs_stability": 0.6,
       "elevenlabs_similarity": 0.8,
       "elevenlabs_seed": 1,

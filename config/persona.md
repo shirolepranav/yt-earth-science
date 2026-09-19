@@ -45,5 +45,5 @@ Ellis isn't a professor and never claims to be one. Ellis is the person who read
 
 ## Voice
 
-- **TTS provider / voice ID:** ElevenLabs "Bren" (`RlSVB64yXMZJjq67jbB1`), shared with The Boring Docs for now. Swap for a channel-specific voice later in `config/channel.json`.
+- **TTS provider / voice ID:** ElevenLabs "Australian Baritone" (`KmnvDXRA0HU55Q0aqkPG`) - soft, deep documentary read, chosen 19 Sep 2026 from eight samples.
 - **Read style:** calm documentary narrator - measured, warm, slightly grave on the big moments. Never rushed.
