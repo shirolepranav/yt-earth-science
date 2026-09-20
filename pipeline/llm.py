@@ -22,7 +22,8 @@ from typing import Any
 
 import requests
 
-from .common import has_secret, log, load_config, permanent_if_hopeless, secret, with_retries
+from .common import (PermanentError, has_secret, load_config, log, permanent_if_hopeless, secret,
+                      with_retries)
 
 TIMEOUT = 420  # seconds. A storyboard chunk measured 174s (27k chars in, 14k out).
 
@@ -231,7 +232,8 @@ def _openai_vision(mime_type: str, data_b64: str, prompt: str, model: str, timeo
 def _vision_generate(mime_type: str, data_b64: str, prompt: str, *, timeout: int, label: str,
                      model: str | None = None, provider: str | None = None) -> Any:
     cfg = {**load_config()["models"]["vision"], **({"model": model} if model else {})}
-    if (provider or cfg.get("provider")) == "openai":
+    chosen = provider or cfg.get("provider")
+    if chosen == "openai":
         return with_retries(lambda: _openai_vision(mime_type, data_b64, prompt, cfg["model"], timeout),
                             attempts=5, base_delay=4.0, label=label)
 
@@ -259,13 +261,24 @@ def _vision_generate(mime_type: str, data_b64: str, prompt: str, *, timeout: int
         return parse_json_loosely(text)
 
     # Generous backoff: parallel visuals QA hits per-minute rate limits (429s).
-    return with_retries(call, attempts=5, base_delay=4.0, label=label)
+    try:
+        return with_retries(call, attempts=5, base_delay=4.0, label=label)
+    except PermanentError:
+        # An empty balance or a bad key: the other provider can still answer,
+        # which is how a dry Gemini account stops costing a whole build.
+        fallback = cfg.get("fallback_model")
+        if provider == "gemini" or not fallback or not has_secret("OPENAI_API_KEY"):
+            raise
+        log(f"  {label}: gemini unavailable - falling back to {fallback}")
+        return with_retries(lambda: _openai_vision(mime_type, data_b64, prompt, fallback, timeout),
+                            attempts=3, base_delay=2.0, label=f"{label} (openai)")
 
 
 def has_vision() -> bool:
     """Whether the configured vision provider has a key to call."""
     cfg = load_config()["models"]["vision"]
-    return has_secret("OPENAI_API_KEY" if cfg.get("provider") == "openai" else "GEMINI_API_KEY")
+    keys = ["OPENAI_API_KEY"] if cfg.get("provider") == "openai" else ["GEMINI_API_KEY", "OPENAI_API_KEY"]
+    return any(has_secret(k) for k in keys)
 
 
 def vision_check(image_path: str, prompt: str, model: str | None = None) -> Any:
