@@ -28,9 +28,13 @@ const FootageCredit: React.FC<{ credit: string; brand: ShotList["brand"] }> = ({
   return (
     <div
       style={{
-        position: "absolute", left: 120, bottom: 36, opacity: 0.85 * fade,
-        fontFamily: BODY, fontSize: 22, color: brand.colors.muted,
-        textShadow: "0 2px 8px rgba(0,0,0,0.85)",
+        position: "absolute", left: 120, bottom: 36, opacity: 0.9 * fade,
+        fontFamily: BODY, fontSize: 22, letterSpacing: 0.3,
+        // White, not muted: footage runs from night-time ocean to bright cloud,
+        // and a grey credit disappeared into the clouds. The shadow carries it
+        // over pale shots without a box.
+        color: brand.colors.text,
+        textShadow: "0 1px 3px rgba(0,0,0,0.95), 0 2px 12px rgba(0,0,0,0.8)",
       }}
     >
       {credit}
