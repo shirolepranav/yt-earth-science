@@ -26,15 +26,15 @@ const FootageCredit: React.FC<{ credit: string; brand: ShotList["brand"] }> = ({
   const { fps } = useVideoConfig();
   const fade = interpolate(frame, [0, Math.round(0.4 * fps)], [0, 1], { extrapolateRight: "clamp" });
   return (
+    // Footage runs from night-time ocean to sunlit cloud, and neither a grey
+    // credit nor a white one with a shadow survived the bright shots. A low
+    // scrim behind the text does, without reading as a label.
     <div
       style={{
-        position: "absolute", left: 120, bottom: 36, opacity: 0.9 * fade,
-        fontFamily: BODY, fontSize: 22, letterSpacing: 0.3,
-        // White, not muted: footage runs from night-time ocean to bright cloud,
-        // and a grey credit disappeared into the clouds. The shadow carries it
-        // over pale shots without a box.
-        color: brand.colors.text,
-        textShadow: "0 1px 3px rgba(0,0,0,0.95), 0 2px 12px rgba(0,0,0,0.8)",
+        position: "absolute", left: 120, bottom: 36, opacity: fade,
+        padding: "7px 14px", borderRadius: 4, backgroundColor: "rgba(0,0,0,0.45)",
+        fontFamily: BODY, fontSize: 22, letterSpacing: 0.3, color: "rgba(255,255,255,0.92)",
+        textShadow: "0 1px 3px rgba(0,0,0,0.9)",
       }}
     >
       {credit}
