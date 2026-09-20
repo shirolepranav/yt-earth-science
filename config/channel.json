@@ -49,7 +49,7 @@
     "sentences_per_call": 30
   },
   "charts3d": {
-    "_comment": "GPT-6 Astra (OPENAI_API_KEY) writes a bespoke three.js/Remotion component for every chart shot, designed for that data and line of narration. Each must pass static rules, tsc, a full test render and a vision read-back of its numbers, or it falls back to the built-in chart (pipeline/charts3d.py). Big-number shots always use the built-in component. Prices per million tokens as of 14 Sep 2026; reasoning tokens bill as output.",
+    "_comment": "GPT-6 Astra (OPENAI_API_KEY) writes a bespoke three.js/Remotion component for every chart shot, designed for that data and line of narration. Each must pass static rules, tsc, a full test render and a vision read-back of its numbers, or it falls back to the built-in chart (pipeline/charts3d.py). Big-number shots always use the built-in component. Prices per million tokens, re-checked 20 Sep 2026 and unchanged; reasoning tokens bill as output. Cached input bills at 90% off, and a prompt over 272K tokens bills at 2x input / 1.5x output for the whole request - neither applies at this repo's prompt sizes.",
     "model": "gpt-6-astra",
     "reasoning_effort": "medium",
     "repairs": 2,
@@ -58,7 +58,8 @@
     "usd_per_million_output": 50
   },
   "visuals": {
-    "_comment": "AI visuals via fal.ai (FAL_KEY) - the LAST resort on this channel, for scenes no camera recorded (deep-time landscapes) and shots no library could fill. Real footage from NASA, Wikimedia Commons, Pexels and Pixabay comes first (pipeline/stock.py). Every AI shot gets a keyframe image; the highest-priority ones are animated until the estimate hits budget_usd, the rest get depth-parallax camera moves. Cached by content hash in runs/<id>/assets/gen/. Prices as of 14 Sep 2026.",
+    "_comment": "AI visuals via fal.ai (FAL_KEY) - the LAST resort on this channel, for scenes no camera recorded (deep-time landscapes) and shots no library could fill. Real footage from NASA, Wikimedia Commons, Pexels and Pixabay comes first (pipeline/stock.py). Every AI shot gets a keyframe image; the highest-priority ones are animated until the estimate hits budget_usd, the rest get depth-parallax camera moves. Cached by content hash in runs/<id>/assets/gen/.",
+    "_prices_comment": "Re-checked 20 Sep 2026, all still current. These figures drive the budget ledger, not the bill - fal charges what it charges, and these only decide how many shots get animated before the cap stops it. So where a price is uncertain, the SAFE direction is to overestimate. Three notes: (1) nano-banana-2 is $0.08 base but pipeline/fal.py asks for 2K, which bills at 1.5x - hence $0.12. Change both together. (2) h3-max 768P is $0.04/sec on a launch promotion until 30 Sep 2026, then $0.08. It is left at $0.08 deliberately: until the promo ends the ledger overestimates by 2x and animates fewer clips than the $5 cap really allows, which is the right way round to be wrong. (3) depth-anything v2 could not be re-verified on 20 Sep - $0.005 is carried over from 14 Sep and is the smallest line here either way.",
     "budget_usd": 5,
     "retry_allowance": 1.2,
     "image_model": "fal-ai/bytedance/seedream/v5/lite/text-to-image",
@@ -87,7 +88,7 @@
       "polish_model": "deepseek-flash"
     },
     "writer_fallback": {
-      "_comment": "gemini-3.1-flash was retired; renamed to gemini-3.5-flash. Moved to gemini-3.8-flash on 15 Sep 2026: newer, and $0.75/$3.75 per 1M tokens vs 3.5 Flash's $1.50/$9.00 (introductory until 31 Dec 2026, then $1.50/$7.50).",
+      "_comment": "gemini-3.1-flash was retired; renamed to gemini-3.5-flash. Moved to gemini-3.8-flash on 15 Sep 2026: newer, and $0.75/$3.75 per 1M tokens vs 3.5 Flash's $1.50/$9.00. Re-checked 20 Sep 2026: still $0.75/$3.75, introductory until 31 Dec 2026, then both rates double to $1.50/$7.50 on 1 Jan 2027. This is the FALLBACK writer, so it only bills when DeepSeek is down - but diarise that date, because it is a silent 2x on the day it lands.",
       "provider": "gemini",
       "model": "gemini-3.8-flash"
     },

@@ -212,7 +212,10 @@ run's current state as context, returning JSON:
  "reply": "Rewriting the opening now."}
 ```
 
-Cost: roughly $0.00002 per message on a budget model. Genuinely negligible.
+Cost: on DeepSeek V4.1 Flash ($0.30 / $1.20 per million tokens, halved off-peak
+as of Sept 2026), a routing call is ~600 input and ~60 output tokens, so about
+**$0.0003 per message** — roughly five cents a month at 200 messages. Price
+your own router rather than copying that figure; per-token rates move fast.
 
 **Three rules that matter:**
 
@@ -352,8 +355,12 @@ Port this to another project by building these seven pieces:
 | Cloudflare Workers | 100,000 req/day | ~200/week | $0 |
 | GitHub Actions (public repo) | Unlimited | ~10 hours/month | $0 |
 | GitHub storage | 1 GB | Text only; artefacts excluded via `.gitignore` | $0 |
-| Intent parsing (budget LLM) | — | ~200 calls/month | <$0.01 |
+| Intent parsing (budget LLM) | — | ~200 calls/month | ~$0.05 |
 | **Infrastructure total** | | | **$0** |
+
+*Free-tier limits and the intent-parsing rate were checked on 20 Sept 2026.
+Re-check both before relying on them: the tier limits have been stable for
+years, but per-token model pricing has moved by 50% within a quarter.*
 
 On a **private** repo you get 2,000 Actions minutes/month, and a 90-minute
 build six times a month will approach that. Public is the cheaper choice, and
