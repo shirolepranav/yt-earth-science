@@ -35,11 +35,12 @@ def stock_clips(entry: dict, start: float, end: float) -> list[dict]:
     for clip in clips:
         if at >= end - 1e-6:
             break
+        credit = clip.get("on_screen")
         if clip.get("media") == "image":  # a photograph: a parallax still, held as long as it's given
             shots.append({"type": "still", "src": clip["path"], "depth": clip.get("depth"), "seed": int(at * 1000),
-                          "start": at, "end": min(end, at + clip["duration"])})
+                          "credit": credit, "start": at, "end": min(end, at + clip["duration"])})
         else:
-            shots.append({"type": "clip", "src": clip["path"], "playbackRate": round(rate, 3),
+            shots.append({"type": "clip", "src": clip["path"], "playbackRate": round(rate, 3), "credit": credit,
                           "start": at, "end": min(end, at + clip["duration"] / rate)})
         at = shots[-1]["end"]
     shots[-1]["end"] = end

@@ -1,7 +1,7 @@
 import React from "react";
 import { AbsoluteFill, Audio, Freeze, Sequence, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 
-import { useFonts } from "./fonts";
+import { BODY, useFonts } from "./fonts";
 import { EvidenceCard } from "./components/EvidenceCard";
 import { ImpactCard } from "./components/ImpactCard";
 import { LookOverlay } from "./components/LookOverlay";
@@ -15,18 +15,47 @@ import type { Shot, ShotList } from "./types";
 // once it shares a grade: near-natural colour (a nature documentary, not the finance channel's crushed look).
 const FOOTAGE_GRADE = "saturate(0.95) contrast(1.05) brightness(0.97)";
 
+/**
+ * Where a shot came from, bottom-left, in the same place and size as a chart's
+ * source line. Only public-domain and openly licensed archives are named: it is
+ * what turns "some footage of a volcano" into "this volcano, filmed by NASA".
+ * Outside the grade, so the credit stays legible over a darkened shot.
+ */
+const FootageCredit: React.FC<{ credit: string; brand: ShotList["brand"] }> = ({ credit, brand }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const fade = interpolate(frame, [0, Math.round(0.4 * fps)], [0, 1], { extrapolateRight: "clamp" });
+  return (
+    <div
+      style={{
+        position: "absolute", left: 120, bottom: 36, opacity: 0.85 * fade,
+        fontFamily: BODY, fontSize: 22, color: brand.colors.muted,
+        textShadow: "0 2px 8px rgba(0,0,0,0.85)",
+      }}
+    >
+      {credit}
+    </div>
+  );
+};
+
 const ShotView: React.FC<{ shot: Shot; brand: ShotList["brand"] }> = ({ shot, brand }) => {
   switch (shot.type) {
     case "clip":
       return (
-        <AbsoluteFill style={{ filter: FOOTAGE_GRADE }}>
-          <StockClip src={shot.src} playbackRate={shot.playbackRate} />
+        <AbsoluteFill>
+          <AbsoluteFill style={{ filter: FOOTAGE_GRADE }}>
+            <StockClip src={shot.src} playbackRate={shot.playbackRate} />
+          </AbsoluteFill>
+          {shot.credit ? <FootageCredit credit={shot.credit} brand={brand} /> : null}
         </AbsoluteFill>
       );
     case "still":
       return (
-        <AbsoluteFill style={{ filter: FOOTAGE_GRADE }}>
-          <ParallaxStill src={shot.src} depth={shot.depth} seed={shot.seed} />
+        <AbsoluteFill>
+          <AbsoluteFill style={{ filter: FOOTAGE_GRADE }}>
+            <ParallaxStill src={shot.src} depth={shot.depth} seed={shot.seed} />
+          </AbsoluteFill>
+          {shot.credit ? <FootageCredit credit={shot.credit} brand={brand} /> : null}
         </AbsoluteFill>
       );
     case "chart": {

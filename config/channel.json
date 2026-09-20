@@ -102,10 +102,10 @@
       "fallback_model": "gpt-5.4-mini"
     },
     "tts": {
-      "_comment": "ElevenLabs eleven_multilingual_v2, one fixed voice and seed (the Boring Docs channel proved Gemini TTS re-rolls the voice between chunks). Voice is 'Australian Baritone' (KmnvDXRA0HU55Q0aqkPG), picked 19 Sep 2026 from 8 samples of the greeting plus two script sentences: the only one ElevenLabs labels for documentary, deepest (81 Hz median), 141 wpm vs Bren's 154 - so an 11-minute script runs ~9% longer. Avoid voices with a custom-rate credit multiplier.",
+      "_comment": "ElevenLabs eleven_multilingual_v2, one fixed voice and seed (Gemini TTS re-rolls the voice between calls). Voice is 'Liam' (TX3LPaxmHKxFdv7VOQHJ), chosen 19 Sep 2026 by the channel owner after listening to five-minute reads of the real script in six voices. It reads ~156 wpm at 125 Hz - the brightest and second fastest of the set, so a 13-minute script at 140 wpm lands nearer 11:45. Avoid voices with a custom-rate credit multiplier.",
       "provider": "elevenlabs",
       "elevenlabs_model": "eleven_multilingual_v2",
-      "elevenlabs_voice_id": "KmnvDXRA0HU55Q0aqkPG",
+      "elevenlabs_voice_id": "TX3LPaxmHKxFdv7VOQHJ",
       "elevenlabs_stability": 0.6,
       "elevenlabs_similarity": 0.8,
       "elevenlabs_seed": 1,

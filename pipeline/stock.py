@@ -417,6 +417,21 @@ def download(url: str, path: Path) -> bool:
         return False
 
 
+def on_screen_credit(candidate: dict) -> str | None:
+    """The line shown in the corner of the shot, for archives whose whole point
+    is that the footage is real and checkable. Pexels and Pixabay ask for no
+    credit and naming them adds nothing, so they get none."""
+    credit, library = candidate.get("credit") or "", candidate["id"].split("-")[0]
+    if library == "nasa":
+        return credit if credit.upper().startswith("NASA") else f"NASA / {credit}" if credit else "NASA"
+    if library == "commons":
+        licence = candidate.get("license") or ""
+        who = credit if credit and credit != "Wikimedia Commons" else "Wikimedia Commons"
+        return f"{who} / Wikimedia Commons ({licence})".replace(" ()", "") if who != "Wikimedia Commons" \
+            else f"Wikimedia Commons ({licence})".replace(" ()", "")
+    return None
+
+
 def prepare_photo(run: Run, path: Path) -> dict:
     """A photograph as a 1920x1080 frame (centre-cropped, so the parallax plane
     isn't stretched) plus a depth map for a slow parallax move (~$0.005 on
@@ -547,7 +562,8 @@ def fetch_for_shot(run: Run, shot: dict, words: list[dict], used: set[str], lock
         if download(url, path):
             clip = {"id": candidate["id"], "path": str(path), "duration": candidate["duration"],
                     "score": candidate["score"], "page": candidate["page"], "media": candidate.get("media", "video"),
-                    "credit": candidate.get("credit"), "license": candidate.get("license")}
+                    "credit": candidate.get("credit"), "license": candidate.get("license"),
+                    "on_screen": on_screen_credit(candidate)}
             if clip["media"] == "image":
                 try:
                     clip.update(prepare_photo(run, path))
