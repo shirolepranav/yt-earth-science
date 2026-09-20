@@ -5,6 +5,47 @@ doesn't restart an argument that's already been had.
 
 ---
 
+## 19 September 2026 — what the first real build taught us
+
+Video 1 (Hunga Tonga, 13:11) came out at 81% real footage, 19% AI, with 39 data
+shots. These changes came out of watching it build.
+
+### Vision: Gemini 3.8 Flash ranks, OpenAI catches the fall
+Measured head to head on 7 real contact sheets from that build. Gemini passes
+honest stand-in footage for subjects no camera can film (satellite wave clouds
+9/10 for a pressure pulse, a sunset haze layer 7/10); gpt-5.4-mini scored both
+under the 6/10 bar and those shots became AI. gpt-5.4-mini is stricter, 3s vs
+7-14s per sheet, $0.0033 vs $0.007, and better on literal subjects - it found
+real underwater vent plumes Gemini missed. Strictness is the dearer option
+here: a rejected shot costs $0.04-$0.44 of AI generation. OpenAI is now the
+automatic fallback when Gemini's prepaid balance runs dry, which it did
+mid-build. Motion QA on AI clips stays Gemini-only: OpenAI takes images only.
+
+### The ranking prompt allows stand-ins
+"Footage of the ACTUAL phenomenon" is right for a named volcano and wrong for a
+pressure wave, an aerosol layer or anything in deep time. For a subject that
+cannot be filmed, footage of the right setting, material or scale now scores
+7-8 instead of 2.
+
+### A clip may come back once, 150s away
+Never reusing a clip is right for a channel covering different subjects each
+week. On one volcano, the handful of real clips were claimed by the first shots
+and later ones fell to AI. MAX_USES_PER_VIDEO = 2, REUSE_GAP_SECONDS = 150.
+Across videos the rule is unchanged: never twice on the channel.
+
+### A dead provider costs seconds, not minutes
+402/401/403 - and Google's 400 INVALID_ARGUMENT for a bad key - raise
+PermanentError instead of being retried five times with backoff.
+
+### Wikimedia is paced, not hammered
+Its anonymous search quota is per unit time: four workers at once drew a 429
+five seconds in, and even one a second apart broke after six. Twelve searches
+5s apart ran clean. Commons gets one combined video+image search every 5s
+across all workers, once per shot, and a shot that would wait more than 20s
+skips it rather than stalling the stage.
+
+---
+
 ## 17 September 2026 — founding: forked from The Boring Docs
 
 This repo started as a copy of the `yt-boring-docs` pipeline (finance channel).

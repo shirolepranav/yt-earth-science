@@ -1,29 +1,29 @@
-# Graph Report - yt-deep-earth  (2026-09-17)
+# Graph Report - yt-deep-earth  (2026-09-19)
 
 ## Corpus Check
-- 76 files · ~46,022 words
+- 81 files · ~53,134 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 512 nodes · 1130 edges · 31 communities (28 shown, 3 thin omitted)
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 11 edges (avg confidence: 0.55)
+- 552 nodes · 1285 edges · 35 communities (32 shown, 3 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 26 edges (avg confidence: 0.7)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `85059d87`
+- Built from commit: `7a03ca60`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - MainVideo.tsx
+- storyboard.py
+- chat_json
 - Run
-- llm.py
-- common.py
-- secret
+- narrate.py
 - visuals.py
 - Running it on your Mac
 - log
-- storyboard.py
+- llm.py
 - dependencies
 - charts3d.py
 - compilerOptions
@@ -35,79 +35,83 @@
 - youtube_auth.py
 - CLAUDE.md
 - assets.d.ts
+- common.py
+- research.py
+- thumbnail.py
+- search_commons
 
 ## God Nodes (most connected - your core abstractions)
-1. `log()` - 67 edges
+1. `log()` - 68 edges
 2. `Run` - 63 edges
-3. `load_config()` - 30 edges
-4. `secret()` - 28 edges
+3. `load_config()` - 32 edges
+4. `secret()` - 29 edges
 5. `resolve_run()` - 26 edges
-6. `has_secret()` - 21 edges
-7. `with_retries()` - 20 edges
+6. `with_retries()` - 23 edges
+7. `has_secret()` - 22 edges
 8. `chat_json()` - 19 edges
-9. `build_one()` - 14 edges
-10. `generate()` - 14 edges
+9. `formatValue()` - 16 edges
+10. `project()` - 15 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `check_deepseek_timeout()` --calls--> `_deepseek_chat()`  [EXTRACTED]
-  tools/selftest.py → pipeline/llm.py
-- `check_rate_limit()` --calls--> `library_get()`  [EXTRACTED]
-  tools/selftest.py → pipeline/stock.py
-- `check_open_libraries()` --calls--> `media_seconds()`  [EXTRACTED]
-  tools/selftest.py → pipeline/stock.py
-- `check_open_libraries()` --calls--> `license_ok()`  [EXTRACTED]
-  tools/selftest.py → pipeline/stock.py
-- `check_storyboard()` --calls--> `sources_from_dossier()`  [EXTRACTED]
-  tools/selftest.py → pipeline/storyboard.py
+- `check_allocator()` --calls--> `load_config()`  [EXTRACTED]
+  tools/selftest.py → pipeline/common.py
+- `check_storyboard()` --calls--> `load_config()`  [EXTRACTED]
+  tools/selftest.py → pipeline/common.py
+- `check_reuse_and_permanent_errors()` --calls--> `permanent_if_hopeless()`  [EXTRACTED]
+  tools/selftest.py → pipeline/common.py
+- `check_reuse_and_permanent_errors()` --calls--> `with_retries()`  [EXTRACTED]
+  tools/selftest.py → pipeline/common.py
+- `check_cache()` --references--> `Run`  [EXTRACTED]
+  tools/selftest.py → pipeline/common.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (31 total, 3 thin omitted)
+## Communities (35 total, 3 thin omitted)
 
 ### Community 0 - "MainVideo.tsx"
-Cohesion: 0.08
-Nodes (38): Bars3D(), BigNumber(), Camera, ChartStage(), decimalsOf(), formatValue(), Label(), project() (+30 more)
-
-### Community 1 - "Run"
 Cohesion: 0.07
-Nodes (45): build_for_run(), chart_spec(), die(), load_brand(), load_config(), Any, Path, Everything about one video-in-progress lives in `runs/<run_id>/`. Why a folder… (+37 more)
+Nodes (54): Bars3D(), BigNumber(), Camera, ChartStage(), decimalsOf(), formatValue(), Label(), project() (+46 more)
 
-### Community 2 - "llm.py"
-Cohesion: 0.08
-Nodes (41): load_persona(), load_prompt(), Read config/persona.md - pasted into every script-writing prompt., Read a prompt template from the prompts/ folder. Prompts live in their own…, chat(), chat_json(), _deepseek_chat(), _gemini_chat() (+33 more)
+### Community 1 - "storyboard.py"
+Cohesion: 0.05
+Nodes (69): chart_spec(), load_brand(), Read config/brand.json - colours and fonts., build(), STAGE 9 - The shot list. The join between planning and rendering. The…, One planned stock shot as consecutive clips. Clips that together fall short of…, stock_clips(), to_shot() (+61 more)
 
-### Community 3 - "common.py"
-Cohesion: 0.08
-Nodes (37): audio_duration_seconds(), generate(), Path, STAGE 5 - Word-level timing. Produces a JSON file listing every spoken word…, transcribe_with_whisper(), master(), pick_music(), Path (+29 more)
+### Community 2 - "chat_json"
+Cohesion: 0.12
+Nodes (23): load_persona(), Read config/persona.md - pasted into every script-writing prompt., chat(), chat_json(), Send a prompt to the writing model and return its text reply. Args: system: the…, Same as chat(), but parses the reply as JSON and hands back Python data. Models…, _elevenlabs_pcm(), ElevenLabs returns raw PCM when asked, plus the exact time of every character… (+15 more)
 
-### Community 4 - "secret"
-Cohesion: 0.09
-Nodes (37): Run `fn`, retrying on failure with an increasing wait between tries. The wait…, Fetch an API key from the environment. Args: name: the environment variable…, secret(), with_retries(), chunk_text(), _elevenlabs_pcm(), _gemini_pcm(), generate() (+29 more)
+### Community 3 - "Run"
+Cohesion: 0.07
+Nodes (41): audio_duration_seconds(), generate(), Path, STAGE 5 - Word-level timing. Produces a JSON file listing every spoken word…, transcribe_with_whisper(), master(), pick_music(), Path (+33 more)
+
+### Community 4 - "narrate.py"
+Cohesion: 0.15
+Nodes (20): chunk_text(), _gemini_pcm(), generate(), median_pitch(), Path, _qwen_pcm(), STAGE 4 - Narration. Turns script.txt into one narration WAV. Long scripts have…, Speechify streams raw 16-bit PCM directly when asked via output_format. (+12 more)
 
 ### Community 5 - "visuals.py"
-Cohesion: 0.12
-Nodes (36): data_uri(), download(), fal_run(), generate_image(), _headers(), image_args(), Path, fal.ai - one pay-per-use key (FAL_KEY) for every image, video and depth model.… (+28 more)
+Cohesion: 0.18
+Nodes (25): data_uri(), download(), fal_run(), generate_image(), _headers(), image_args(), Path, fal.ai - one pay-per-use key (FAL_KEY) for every image, video and depth model.… (+17 more)
 
 ### Community 6 - "Running it on your Mac"
 Cohesion: 0.05
 Nodes (35): 1. Install the toolchain, 2. Get the code, 3. Install the project, 4. Add your keys, 5. Check it works, Faster renders, If you'd rather not use GitHub Actions at all, Making a video locally (+27 more)
 
 ### Community 7 - "log"
-Cohesion: 0.11
-Nodes (35): Lock, log(), Print a timestamped message that flushes immediately. Flushing matters: without…, build_for_run(), contact_sheet(), download(), fetch_for_shot(), fresh_queries() (+27 more)
+Cohesion: 0.12
+Nodes (34): Lock, log(), Run `fn`, retrying on failure with an increasing wait between tries. The wait…, Print a timestamped message that flushes immediately. Flushing matters: without…, Fetch an API key from the environment. Args: name: the environment variable…, secret(), with_retries(), search_tavily() (+26 more)
 
-### Community 8 - "storyboard.py"
-Cohesion: 0.09
-Nodes (31): assemble(), clean_page_text(), clean_title(), cover_figures(), figures_supported(), find_quote(), find_words(), normalise() (+23 more)
+### Community 8 - "llm.py"
+Cohesion: 0.16
+Nodes (20): Exception, permanent_if_hopeless(), PermanentError, A failure no amount of retrying will fix - an empty balance, a bad key. Raised…, Re-raise as PermanentError when the response says retrying is pointless., _deepseek_chat(), _gemini_chat(), _openai_vision() (+12 more)
 
 ### Community 9 - "dependencies"
 Cohesion: 0.06
 Nodes (30): react, react-dom, @react-three/fiber, remotion, @remotion/cli, dependencies, react, react-dom (+22 more)
 
 ### Community 10 - "charts3d.py"
-Cohesion: 0.17
-Nodes (19): astra(), build_one(), compile_errors(), contract_errors(), extract_code(), key_for(), number_errors(), Path (+11 more)
+Cohesion: 0.15
+Nodes (22): astra(), build_for_run(), build_one(), compile_errors(), contract_errors(), extract_code(), key_for(), number_errors() (+14 more)
 
 ### Community 11 - "compilerOptions"
 Cohesion: 0.12
@@ -133,25 +137,41 @@ Nodes (4): extract_script(), main(), Replace a run's script with an edited versi
 Cohesion: 0.50
 Nodes (4): main(), Path, Embed the Remotion fonts in the JS bundle as base64, subset to Latin. Why:…, subset_font()
 
+### Community 31 - "common.py"
+Cohesion: 0.15
+Nodes (18): has_secret(), load_config(), Shared plumbing used by every other module. Nothing in here is specific to…, True if a key is set. Used to decide whether an optional step can run., Read config/channel.json - the settings for the whole pipeline., has_vision(), Whether the configured vision provider has a key to call., build_client() (+10 more)
+
+### Community 32 - "research.py"
+Cohesion: 0.31
+Nodes (9): build_queries(), fetch_clean_text(), generate(), is_blocked(), is_primary(), STAGE 2 - Research chain. Turns an approved topic into a dossier of real,…, Download a page and strip the navigation, ads and cookie banners. trafilatura…, Turn one topic into several searches that hit different angles. One search… (+1 more)
+
+### Community 33 - "thumbnail.py"
+Cohesion: 0.38
+Nodes (9): compose(), draw_symbol(), draw_text(), generate(), Image, STAGE 11 - Thumbnails. Thumbnail and title decide whether anyone ever sees the…, Big block capitals in the left ~45%, top-aligned. Returns the text box., score() (+1 more)
+
+### Community 34 - "search_commons"
+Cohesion: 0.25
+Nodes (8): _commons_turn(), _credit(), license_ok(), Public domain, CC0 and CC BY only. Share-alike could bind the whole video to…, The uploader's name, stripped of Commons' markup. Some files carry no artist at…, Take the next Commons search slot, or give up if the queue is too long., Wikimedia Commons, keeping only files whose licence allows this use (see…, search_commons()
+
 ## Knowledge Gaps
-- **78 isolated node(s):** `name`, `version`, `private`, `description`, `dev` (+73 more)
+- **79 isolated node(s):** `name`, `version`, `private`, `description`, `dev` (+74 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Run` connect `Run` to `llm.py`, `common.py`, `secret`, `visuals.py`, `log`, `storyboard.py`, `charts3d.py`?**
-  _High betweenness centrality (0.085) - this node is a cross-community bridge._
-- **Why does `log()` connect `log` to `Run`, `llm.py`, `common.py`, `secret`, `visuals.py`, `storyboard.py`, `charts3d.py`?**
-  _High betweenness centrality (0.085) - this node is a cross-community bridge._
-- **Why does `secret()` connect `secret` to `Run`, `llm.py`, `common.py`, `visuals.py`, `log`, `charts3d.py`?**
-  _High betweenness centrality (0.022) - this node is a cross-community bridge._
+- **Why does `log()` connect `log` to `research.py`, `storyboard.py`, `chat_json`, `Run`, `narrate.py`, `search_commons`, `thumbnail.py`, `visuals.py`, `llm.py`, `charts3d.py`, `common.py`?**
+  _High betweenness centrality (0.075) - this node is a cross-community bridge._
+- **Why does `Run` connect `Run` to `research.py`, `storyboard.py`, `chat_json`, `thumbnail.py`, `narrate.py`, `visuals.py`, `log`, `charts3d.py`, `common.py`?**
+  _High betweenness centrality (0.074) - this node is a cross-community bridge._
+- **Why does `secret()` connect `log` to `research.py`, `chat_json`, `Run`, `narrate.py`, `visuals.py`, `llm.py`, `charts3d.py`, `common.py`?**
+  _High betweenness centrality (0.020) - this node is a cross-community bridge._
 - **What connects `name`, `version`, `private` to the rest of the system?**
-  _78 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _79 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `MainVideo.tsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.08192090395480225 - nodes in this community are weakly interconnected._
-- **Should `Run` be split into smaller, more focused modules?**
-  _Cohesion score 0.07199032062915911 - nodes in this community are weakly interconnected._
-- **Should `llm.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.07822410147991543 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06964443138407288 - nodes in this community are weakly interconnected._
+- **Should `storyboard.py` be split into smaller, more focused modules?**
+  _Cohesion score 0.051251956181533644 - nodes in this community are weakly interconnected._
+- **Should `chat_json` be split into smaller, more focused modules?**
+  _Cohesion score 0.11594202898550725 - nodes in this community are weakly interconnected._
