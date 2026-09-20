@@ -13,6 +13,7 @@ the logic that decides what reaches the screen and what it costs:
   4. the shot list: every planned shot mapped, several clips per stock shot,
      missing assets held over
   5. thumbnail compositing: text and symbols drawn
+  6. subtitle cues: two lines of 42 characters, no overlaps, no word lost
 
 If this passes, any later failure is an API key or a network problem, not a
 bug in the pipeline. Run it after `make setup` and after any code change.
@@ -306,25 +307,69 @@ def check_open_libraries() -> None:
     assert pieces[1]["start"] == 13.0 and pieces[1]["end"] == 20.0, pieces
 
 
+def check_captions() -> None:
+    """Subtitle cues: two lines of 42, no overlaps, and no word lost.
+
+    All three matter to YouTube. Overlapping cues make the player flicker, an
+    over-long line is clipped off the side on a phone, and a dropped word is a
+    caption that contradicts the narration.
+    """
+    from pipeline.captions import MAX_LINE_CHARS, MAX_LINES, build_cues, to_srt
+
+    text = ("In 1783 a fissure opened in southern Iceland and did not close for "
+            "eight months. It poured out fifteen cubic kilometres of lava, and "
+            "the haze that followed killed a fifth of the population.")
+
+    # Fake word timings of the shape align.py produces.
+    words, clock = [], 0.0
+    for word in text.split():
+        length = 0.06 * len(word) + 0.12
+        words.append({"word": word, "start": round(clock, 3), "end": round(clock + length, 3)})
+        clock += length + (0.8 if word.endswith(".") else 0.0)
+
+    cues = build_cues(words)
+    assert cues, "no cues produced"
+
+    for cue in cues:
+        lines = cue["text"].split("\n")
+        assert len(lines) <= MAX_LINES, f"{len(lines)} lines in one cue"
+        for line in lines:
+            # A single word longer than the limit is allowed - it can't be split.
+            assert len(line) <= MAX_LINE_CHARS or " " not in line, f"long line: {line!r}"
+        assert cue["end"] > cue["start"], "zero-length cue"
+
+    for earlier, later in zip(cues, cues[1:]):
+        assert earlier["end"] <= later["start"] + 1e-6, "cues overlap"
+
+    spoken = " ".join(c["text"].replace("\n", " ") for c in cues).split()
+    assert spoken == [w["word"] for w in words], "a word was lost or reordered"
+
+    # The SRT itself must carry a counter and a well-formed timestamp.
+    srt = to_srt(cues)
+    assert srt.startswith("1\n00:00:00,000 --> "), srt[:60]
+
+
 def main() -> None:
     run = Run("selftest")
     shots = check_storyboard(run)
-    print("1/5 storyboard assembly ok")
+    print("1/6 storyboard assembly ok")
     check_rate_limit()
     print("    stock rate-limit wait ok")
     check_allocator()
     check_deepseek_timeout()
     check_figure_detector()
     check_plate_prompt()
-    print("2/5 budget allocator, timeouts and card plates ok")
+    print("2/6 budget allocator, timeouts and card plates ok")
     check_cache(run)
-    print("3/5 cache keys ok")
+    print("3/6 cache keys ok")
     check_shotlist(run, shots)
     check_open_libraries()
-    print("4/5 shot list, licence filter and photo stills ok")
+    print("4/6 shot list, licence filter and photo stills ok")
     image = compose(Image.new("RGB", (2560, 1440), (30, 20, 40)), {"text": "THEY TOOK $40,000", "symbol": "arrow"})
     assert image.size == (1280, 720)
-    print("5/5 thumbnail compositing ok")
+    print("5/6 thumbnail compositing ok")
+    check_captions()
+    print("6/6 subtitle cues ok")
     print("\nSELF-TEST PASSED")
 
 

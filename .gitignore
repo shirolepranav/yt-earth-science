@@ -9,20 +9,44 @@ config/youtube_token.json
 # Big binary files. Git is bad at these; they get uploaded as build artifacts
 # instead (see .github/workflows/).
 # ---------------------------------------------------------------------------
-audio/
-output/
-assets/stock/
-assets/charts/
-assets/music/
+# Anchored to the repo root with a leading slash. Unanchored, `output/` would
+# match runs/<id>/output/ too - and because git never descends into an excluded
+# directory, the `!runs/*/output/...` exceptions below could never take effect.
+/audio/
+/output/
+/assets/stock/
+/assets/charts/
+/assets/music/
 runs/*/audio/
 runs/*/assets/
-runs/*/output/
-# ...and the rest of a run is working data too: scripts, dossiers, storyboards
-# and stray experiment folders (one held a 146 MB WAV, past GitHub's 100 MB
-# limit). Regenerable, not code. The self-test's fixtures stay.
-runs/*
-!runs/selftest/
-!runs/selftest/**
+
+# ---------------------------------------------------------------------------
+# A run's text files ARE committed, and that matters.
+#
+# The runs/ folder is the only memory this system has. Every chat message
+# arrives in a brand-new container that knows nothing about the last one, so
+# state.json, the topic list, the script and the metadata have to be in the
+# repo or the conversation forgets itself between messages. They're small -
+# a whole run is well under 200 KB of text.
+#
+# What must NOT be committed is the heavy output: one run held a 146 MB WAV,
+# past GitHub's 100 MB file limit. So the output folder is excluded except for
+# the three small files you'd want to read on your phone, and the binary
+# extensions are blocked outright wherever they turn up.
+# ---------------------------------------------------------------------------
+runs/*/output/*
+!runs/*/output/subtitles.srt
+!runs/*/output/UPLOAD.md
+!runs/*/output/description.txt
+
+runs/**/*.wav
+runs/**/*.mp3
+runs/**/*.mp4
+runs/**/*.webm
+runs/**/*.mov
+runs/**/*.jpg
+runs/**/*.jpeg
+runs/**/*.png
 
 # ---------------------------------------------------------------------------
 # Installed dependencies and caches - anyone can regenerate these.

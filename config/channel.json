@@ -123,7 +123,7 @@
     "variants": 3
   },
   "safety": {
-    "_comment": "review_only=true means the pipeline NEVER publishes. It builds the video and hands it to you. Flip to false only after your Phase 1 numbers say the format works.",
+    "_comment": "review_only=true means nothing goes public on its own. The finished video is still uploaded to YouTube - that is how you review it on your phone - but at upload_privacy, and only your 'publish' reply makes it public. upload_privacy is the state it sits in while you review: 'private' (only your account) or 'unlisted' (anyone with the link, easier to open on a second device). Flip review_only to false after your Phase 1 numbers say the format works.",
     "review_only": true,
     "upload_privacy": "private",
     "declare_ai_generated": true

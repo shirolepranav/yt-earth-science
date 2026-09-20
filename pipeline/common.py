@@ -194,6 +194,17 @@ class Run:
     def is_done(self, stage: str) -> bool:
         return stage in self.state().get("stages_done", [])
 
+    def reset_stages(self, keep: list[str]) -> None:
+        """Forget every finished stage except the ones named.
+
+        Used when something upstream changes - an edited script makes the
+        narration, the shots and the render stale, so they have to be redone
+        rather than skipped as "already done".
+        """
+        data = self.state()
+        data["stages_done"] = [s for s in data.get("stages_done", []) if s in keep]
+        self.state_file.write_text(json.dumps(data, indent=2))
+
     # --- convenience --------------------------------------------------------
     def write_json(self, name: str, data: Any) -> Path:
         p = self.path(name)

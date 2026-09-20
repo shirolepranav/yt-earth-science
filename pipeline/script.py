@@ -198,6 +198,62 @@ def generate(run: Run) -> dict:
     }
 
 
+def revise(run: Run, instruction: str) -> str:
+    """Apply a change you asked for in words, and rewrite script.txt.
+
+    This is what happens when you reply "the opening is flat, start on the
+    1783 eruption" instead of "approve". One focused model call, the whole
+    script back, the metadata refreshed if the change affects the title.
+
+    The fact-check verdict is deliberately NOT re-run here: a targeted edit to
+    prose doesn't invalidate the dossier, and re-running it would cost a full
+    pass for every small change. Re-approve triggers the build either way.
+    """
+    cfg = load_config()
+    system = load_prompt("system.md").format(
+        persona=load_persona(), angle=cfg["channel"]["angle"]
+    )
+    current = run.read_text("script.txt")
+    metadata = run.read_json("metadata.json") if run.path("metadata.json").exists() else {}
+    video_cfg = cfg["video"]
+
+    prompt = f"""Revise this narration script. The channel owner asked for one change:
+
+\"\"\"{instruction}\"\"\"
+
+Make that change and nothing else. Do not rewrite passages the request doesn't
+touch - the rest of this script has already been approved. Keep the length
+between {video_cfg['target_words_min']} and {video_cfg['target_words_max']} words.
+
+If the change makes the current title wrong, give a new one. Otherwise repeat
+the existing title unchanged.
+
+Current title: {metadata.get('title', '(none)')}
+
+--- SCRIPT ---
+{current}
+
+Reply with JSON only:
+{{"script": "the full revised script", "title": "...", "what_changed": "one sentence"}}"""
+
+    result = chat_json(system, prompt, heavy=True, label="revise")
+
+    revised = result["script"].strip()
+    run.write_text("script.txt", revised)
+
+    if result.get("title"):
+        metadata["title"] = result["title"]
+        run.write_json("metadata.json", metadata)
+
+    # The approved script changed, so the narration and everything cut against
+    # it are stale. Keep only the stages that came before the script.
+    run.reset_stages(keep=["choose", "research", "script"])
+
+    log(f"Revised: {result.get('what_changed', instruction)}")
+    log(f"  {word_count(revised):,} words")
+    return result.get("what_changed", "Done.")
+
+
 def format_for_humans(run: Run) -> str:
     """Render the script for review in a GitHub issue comment (Gate 2)."""
     script = run.read_text("script.txt")

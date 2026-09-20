@@ -36,8 +36,8 @@ import argparse
 import sys
 
 from . import (
-    align, audio, charts3d, narrate, publish, render, research, script, shotlist, stock,
-    storyboard, thumbnail, topics, visuals,
+    align, audio, captions, charts3d, narrate, publish, render, research, script, shotlist,
+    stock, storyboard, thumbnail, topics, visuals,
 )
 from .common import Run, log, resolve_run
 
@@ -47,6 +47,7 @@ STAGES = {
     "script": script.generate,
     "narrate": narrate.generate,
     "align": align.generate,
+    "captions": captions.generate,
     "storyboard": storyboard.generate,
     "charts": charts3d.build_for_run,
     "stock": stock.build_for_run,
@@ -60,7 +61,7 @@ STAGES = {
 
 # Everything that happens after the human approves the script at Gate 2.
 BUILD_STAGES = [
-    "narrate", "align", "storyboard", "charts", "stock", "visuals", "shotlist",
+    "narrate", "align", "captions", "storyboard", "charts", "stock", "visuals", "shotlist",
     "audio", "thumbnail", "render", "publish",
 ]
 

@@ -1,0 +1,12 @@
+# Cloudflare Worker config. `wrangler deploy` reads this file.
+#
+# Nothing secret lives here - the five secrets are set separately with
+# `wrangler secret put`, so this file is safe to commit.
+
+name = "deepearth-chat"
+main = "worker.js"
+compatibility_date = "2026-09-01"
+
+# The Worker is stateless: no KV, no D1, no durable objects. All state lives in
+# the repo's runs/ folder, which means redeploying it can never lose a run.
+workers_dev = true
