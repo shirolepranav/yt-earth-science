@@ -64,6 +64,11 @@ PER_QUERY = 30        # results asked for per search, per library
 MIN_SCORE = 6         # below this a generated shot is the better choice
 MIN_CLIP_SECONDS = 1.5  # shorter is a flash, not a shot
 MIN_COVERAGE = 0.6    # clips covering this much of a shot are slowed to fill it (>= 0.6x)
+# A clip may come back once, far enough away that nobody reads it as a repeat.
+# A single-subject documentary (one volcano) has only a handful of clips of the
+# real thing, and the first shots claimed them all, leaving later ones to AI.
+MAX_USES_PER_VIDEO = 2
+REUSE_GAP_SECONDS = 150.0
 SINGLE_CLIP_TOLERANCE = 1.0  # points of score worth giving up to hold one clip instead of cutting
 RATE_LIMIT_STEP = 600          # Pexels sends no reset time with a 429 - look again every 10 minutes
 # Wikimedia's anonymous search quota is tight and counted per unit time: four
@@ -100,8 +105,13 @@ Score 0 (reject) for: a watermark or logo; charts, graphs, tickers or numbers on
 glossy lifestyle stock (smiling people posing, tourists taking selfies); vertical or letterboxed footage; illustrations,
 renders or CGI presented as real; anything unrelated.
 Accuracy matters more than mood: footage of the ACTUAL phenomenon, rock, landform or place named in the narration
-beats a pretty but generic landscape. A different volcano, glacier or fault than the one named scores AT MOST 5
-unless the narration is speaking generally. Scientific photos, field and aerial survey footage and satellite imagery
+beats a pretty but generic landscape. A named place shown by a different volcano, glacier or fault scores AT MOST 5,
+unless the narration is speaking generally.
+Some subjects cannot be filmed at all - a pressure wave, an aerosol layer, a measurement, a process inside the Earth,
+anything in deep time. When "what the shot must show" describes something like that, judge how well the footage stands
+in for it instead: honest, real footage of the right setting, material or scale (the sky it happened in, the ocean it
+crossed, the instrument that recorded it) is a GOOD shot and can score 7 or 8. Reserve low scores for footage that
+would mislead the viewer or has nothing to do with the moment. Scientific photos, field and aerial survey footage and satellite imagery
 are welcome; prefer sharp, well-exposed, cinematic material.
 
 Reply as JSON only: {{"scores": [{{"n": 1, "score": 7, "why": "few words"}}]}}"""
@@ -492,28 +502,35 @@ def fresh_queries(spoken: str, intent: str, tried: list[str]) -> list[str]:
     return [q.strip() for q in reply.get("queries", []) if isinstance(q, str) and q.strip() and q not in tried][:3]
 
 
-def fetch_for_shot(run: Run, shot: dict, words: list[dict], used: set[str], lock: threading.Lock) -> dict | None:
+def fetch_for_shot(run: Run, shot: dict, words: list[dict], used: set[str], lock: threading.Lock,
+                   claims: dict[str, list[float]] | None = None) -> dict | None:
     length = shot["end"] - shot["start"]
     queries = shot.get("queries") or [q for q in (shot.get("query"), shot.get("fallback_query")) if q]
     spoken = spoken_during(words, shot["start"], shot["end"])
     intent = shot.get("intent", "")
     sheet = run.path("assets", f"_sheet_{shot['id']}.jpg")
+    claims = {} if claims is None else claims
 
     def claim(candidate: dict) -> bool:
-        """Take a clip for this shot, unless a parallel shot got there first."""
+        """Take a clip for this shot. A clip already used in this video comes
+        back only once, and only REUSE_GAP_SECONDS away from where it played."""
         with lock:
-            if candidate["id"] in used:
+            at = shot["start"]
+            when = claims.get(candidate["id"], [])
+            if len(when) >= MAX_USES_PER_VIDEO or any(abs(at - t) < REUSE_GAP_SECONDS for t in when):
                 return False
-            used.add(candidate["id"])
+            claims.setdefault(candidate["id"], []).append(at)
             return True
 
-    candidates = gather(queries, used, lock, set())
+    with lock:  # clips from other videos, and ones this video has finished with
+        spent = used | {cid for cid, when in claims.items() if len(when) >= MAX_USES_PER_VIDEO}
+    candidates = gather(queries, spent, lock, set())
     ranked = rank(candidates, spoken, intent, sheet) if candidates else []
     picks = fill(ranked, length, claim)
     if sum(c["duration"] for c in picks) < length:
         # Not enough good footage yet - search differently before settling.
         extra = fresh_queries(spoken, intent, queries)
-        more = gather(extra, used, lock, {c["id"] for c in candidates}) if extra else []
+        more = gather(extra, spent, lock, {c["id"] for c in candidates}) if extra else []
         if more:
             ranked = sorted(ranked + rank(more, spoken, intent, sheet), key=lambda pair: pair[0], reverse=True)
             already = {c["id"] for c in picks}
@@ -561,13 +578,14 @@ def build_for_run(run: Run) -> dict:
     used = {clip for run_id, clips in registry.items() if run_id != run.id for clip in clips}
     lock = threading.Lock()
 
+    claims: dict[str, list[float]] = {}  # clip id -> the shot times it plays at, this video
     log(f"Finding {len(shots)} stock clips ({len(used)} already used on the channel)")
     with ThreadPoolExecutor(WORKERS) as pool:
-        results = pool.map(lambda s: fetch_for_shot(run, s, words, used, lock), shots)
+        results = pool.map(lambda s: fetch_for_shot(run, s, words, used, lock, claims), shots)
         clips = {str(s["id"]): r for s, r in zip(shots, results) if r}
 
     run.write_json("stock.json", clips)
-    registry[run.id] = sorted(c["id"] for entry in clips.values() for c in entry["clips"])
+    registry[run.id] = sorted({c["id"] for entry in clips.values() for c in entry["clips"]})
     USED_REGISTRY.write_text(json.dumps(registry, indent=1))
     run.mark_done("stock")
     scores = [c["score"] for entry in clips.values() for c in entry["clips"]]

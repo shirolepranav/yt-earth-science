@@ -111,6 +111,22 @@ def has_secret(name: str) -> bool:
 # Retrying - because APIs fail, and a pipeline that dies at 3am is useless
 # ---------------------------------------------------------------------------
 
+class PermanentError(RuntimeError):
+    """A failure no amount of retrying will fix - an empty balance, a bad key.
+    Raised instead of retrying, so a dead provider costs seconds, not minutes."""
+
+
+# Payment required, unauthorised, forbidden: the call will fail the same way every time.
+PERMANENT_STATUSES = (401, 402, 403)
+
+
+def permanent_if_hopeless(error: Exception, label: str) -> None:
+    """Re-raise as PermanentError when the response says retrying is pointless."""
+    status = getattr(getattr(error, "response", None), "status_code", None)
+    if status in PERMANENT_STATUSES:
+        raise PermanentError(f"{label}: HTTP {status} - check the key or the account balance") from error
+
+
 def with_retries(
     fn: Callable[[], Any],
     attempts: int = 3,
@@ -128,6 +144,8 @@ def with_retries(
     for attempt in range(1, attempts + 1):
         try:
             return fn()
+        except PermanentError:
+            raise
         except Exception as error:  # noqa: BLE001 - we genuinely want any failure
             # HTTP errors quote the full URL, and some APIs (Pixabay) only take
             # their key as a query parameter - never let a key reach a log.

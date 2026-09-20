@@ -22,7 +22,7 @@ from typing import Any
 
 import requests
 
-from .common import has_secret, log, load_config, secret, with_retries
+from .common import has_secret, log, load_config, permanent_if_hopeless, secret, with_retries
 
 TIMEOUT = 420  # seconds. A storyboard chunk measured 174s (27k chars in, 14k out).
 
@@ -220,7 +220,11 @@ def _openai_vision(mime_type: str, data_b64: str, prompt: str, model: str, timeo
         },
         timeout=timeout,
     )
-    response.raise_for_status()
+    try:
+        response.raise_for_status()
+    except Exception as error:  # noqa: BLE001
+        permanent_if_hopeless(error, "openai vision")
+        raise
     return parse_json_loosely(response.json()["choices"][0]["message"]["content"])
 
 
@@ -246,7 +250,11 @@ def _vision_generate(mime_type: str, data_b64: str, prompt: str, *, timeout: int
             },
             timeout=timeout,
         )
-        response.raise_for_status()
+        try:
+            response.raise_for_status()
+        except Exception as error:  # noqa: BLE001
+            permanent_if_hopeless(error, "gemini vision")
+            raise
         text = response.json()["candidates"][0]["content"]["parts"][0]["text"]
         return parse_json_loosely(text)
 

@@ -23,7 +23,11 @@ bug in the pipeline. Run it after `make setup` and after any code change.
 from __future__ import annotations
 
 import json
+import threading
 import time
+import types
+
+import requests
 import sys
 from pathlib import Path
 
@@ -33,7 +37,7 @@ sys.path.insert(0, str(ROOT))
 from PIL import Image  # noqa: E402
 
 import pipeline.llm as llm  # noqa: E402
-from pipeline.common import Run, load_config  # noqa: E402
+from pipeline.common import PermanentError, Run, load_config, permanent_if_hopeless, with_retries  # noqa: E402
 from pipeline.shotlist import build as build_shotlist, stock_clips  # noqa: E402
 import pipeline.stock as stock  # noqa: E402
 from pipeline.stock import MIN_SCORE, fill  # noqa: E402
@@ -308,6 +312,43 @@ def check_open_libraries() -> None:
     assert pieces[1]["start"] == 13.0 and pieces[1]["end"] == 20.0, pieces
 
 
+def check_reuse_and_permanent_errors() -> None:
+    """A clip comes back at most twice, far apart; hopeless calls don't retry."""
+    claims: dict[str, list[float]] = {}
+    lock = threading.Lock()
+
+    def claim_at(start: float, clip_id: str = "c1") -> bool:
+        shot = {"start": start}
+        with lock:
+            when = claims.get(clip_id, [])
+            if (len(when) >= stock.MAX_USES_PER_VIDEO
+                    or any(abs(start - t) < stock.REUSE_GAP_SECONDS for t in when)):
+                return False
+            claims.setdefault(clip_id, []).append(start)
+            return True
+
+    assert claim_at(10.0), "a fresh clip is free"
+    assert not claim_at(20.0), "the same clip must not come back moments later"
+    assert claim_at(10.0 + stock.REUSE_GAP_SECONDS), "far enough away it may come back once"
+    assert not claim_at(10.0 + 3 * stock.REUSE_GAP_SECONDS), "never a third time"
+
+    calls = []
+
+    def hopeless():
+        calls.append(1)
+        error = requests.HTTPError("402")
+        error.response = types.SimpleNamespace(status_code=402)
+        permanent_if_hopeless(error, "vision")
+        raise error
+
+    try:
+        with_retries(hopeless, attempts=5, base_delay=0.01, label="vision")
+        raise AssertionError("a payment error must not be retried")
+    except PermanentError:
+        pass
+    assert calls == [1], f"a payment error must fail on the first try, not {len(calls)}"
+
+
 def main() -> None:
     run = Run("selftest")
     shots = check_storyboard(run)
@@ -323,7 +364,8 @@ def main() -> None:
     print("3/5 cache keys ok")
     check_shotlist(run, shots)
     check_open_libraries()
-    print("4/5 shot list, licence filter and photo stills ok")
+    check_reuse_and_permanent_errors()
+    print("4/5 shot list, licences, photo stills, clip reuse and dead-provider handling ok")
     image = compose(Image.new("RGB", (2560, 1440), (30, 20, 40)), {"text": "THEY TOOK $40,000", "symbol": "arrow"})
     assert image.size == (1280, 720)
     print("5/5 thumbnail compositing ok")
