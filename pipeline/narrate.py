@@ -290,6 +290,10 @@ def generate(run: Run) -> Path:
     config = load_config()
     cfg = config["models"]["tts"]
     provider = cfg["provider"]
+    # Everything that changes how a chunk sounds, folded into its cache name.
+    voice_key = "|".join(str(cfg.get(k, "")) for k in (
+        "provider", "elevenlabs_voice_id", "elevenlabs_model", "elevenlabs_stability", "elevenlabs_similarity",
+        "elevenlabs_seed", "gemini_voice", "gemini_model", "gemini_style", "qwen_voice", "speechify_voice"))
     sample_rate = cfg["sample_rate"]
 
     # The channel greeting is added here rather than to script.txt, so the
@@ -308,8 +312,10 @@ def generate(run: Run) -> Path:
     words: list[dict] = []
     spoken_seconds = 0.0  # where the next chunk starts in the finished WAV
     for index, chunk in enumerate(chunks, 1):
-        # Named by the chunk's text too, so an edited script or greeting never reuses stale audio.
-        stem = f"chunk{index:02d}-{hashlib.sha1(chunk.encode()).hexdigest()[:8]}"
+        # Named by the chunk's text AND the voice, so neither an edited script nor
+        # a changed voice ever reuses stale audio. (Text alone once left a whole
+        # video in the old voice while the log said "already done, skipping".)
+        stem = f"chunk{index:02d}-{hashlib.sha1((chunk + voice_key).encode()).hexdigest()[:8]}"
         chunk_path = run.path("audio", f"{stem}.wav")
         align_path = run.path("audio", f"{stem}.align.json")
 

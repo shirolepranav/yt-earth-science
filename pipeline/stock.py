@@ -284,7 +284,13 @@ def search_nasa(query: str, count: int = PER_QUERY) -> list[dict]:
 def _credit(artist) -> str:
     """The uploader's name, stripped of Commons' markup. Some files carry no
     artist at all, and the API can send that as the string "null"."""
-    text = re.sub(r"\[\d+\]", "", html.unescape(re.sub(r"<[^>]+>", "", str(artist or "")))).strip()
+    text = re.sub(r"\[\d+\]", "", html.unescape(re.sub(r"<[^>]+>", "", str(artist or ""))))
+    # Derivative works list every source file ("Sarychev.jpg: NASA\nderivative: User"),
+    # and the credit has one line in the corner of the shot.
+    text = re.sub(r"^[^\n:]+\.(jpg|jpeg|png|tif|tiff|webm|ogv|gif):\s*", "", text.strip(), flags=re.I)
+    text = re.sub(r"\s+", " ", text.split("\n")[0]).strip(" ,;:-")
+    if len(text) > 60:
+        text = text[:57].rsplit(" ", 1)[0] + "..."
     return "Wikimedia Commons" if text.lower() in ("", "null", "none", "unknown") else text
 
 

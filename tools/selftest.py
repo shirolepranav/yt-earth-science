@@ -298,6 +298,22 @@ def check_shotlist(run: Run, shots: list[dict]) -> None:
     assert {"still", "chart", "evidence", "number", "card"} <= types, types
 
 
+def check_voice_cache_key() -> None:
+    """Changing the voice must not reuse audio recorded in the old one."""
+    import hashlib
+    keys = set()
+    for voice in ("voice-a", "voice-b"):
+        cfg = {"provider": "elevenlabs", "elevenlabs_voice_id": voice, "elevenlabs_model": "m",
+               "elevenlabs_stability": 0.6, "elevenlabs_similarity": 0.8, "elevenlabs_seed": 1}
+        voice_key = "|".join(str(cfg.get(k, "")) for k in (
+            "provider", "elevenlabs_voice_id", "elevenlabs_model", "elevenlabs_stability",
+            "elevenlabs_similarity", "elevenlabs_seed", "gemini_voice", "gemini_model",
+            "gemini_style", "qwen_voice", "speechify_voice"))
+        keys.add(hashlib.sha1(("same words" + voice_key).encode()).hexdigest()[:8])
+    assert len(keys) == 2, "two voices must produce two cache names"
+    assert "voice_key" in Path("pipeline/narrate.py").read_text(), "narrate must fold the voice into the name"
+
+
 def check_open_libraries() -> None:
     """Licence filter, NASA's duration strings, and a photograph becoming a still."""
     for code in ("pd", "pd-usgov", "cc0", "cc-by-4.0", "cc-by-2.0-de"):
@@ -364,6 +380,7 @@ def main() -> None:
     print("3/5 cache keys ok")
     check_shotlist(run, shots)
     check_open_libraries()
+    check_voice_cache_key()
     check_reuse_and_permanent_errors()
     print("4/5 shot list, licences, photo stills, clip reuse and dead-provider handling ok")
     image = compose(Image.new("RGB", (2560, 1440), (30, 20, 40)), {"text": "THEY TOOK $40,000", "symbol": "arrow"})
