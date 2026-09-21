@@ -149,6 +149,8 @@ Buttons cover the common path, but anything below works as typed text.
 
 Anything else is read by a model, which either does what you meant or asks.
 
+Full reference, including `redo`, `retry` and the free-text edits: [CHAT_COMMANDS.md](CHAT_COMMANDS.md).
+
 ---
 
 ## A note on publishing

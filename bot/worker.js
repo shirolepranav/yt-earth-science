@@ -68,7 +68,9 @@ export default {
     }
 
     try {
-      if (text === "/status" || text === "cmd:status") {
+      // Plain "status" is what you actually type - it belongs on the fast
+      // path just as much as the slash command and the button.
+      if (["/status", "status", "cmd:status"].includes(text.toLowerCase())) {
         await sendStatus(env);
       } else {
         await dispatch(env, text);

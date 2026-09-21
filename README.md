@@ -80,7 +80,7 @@ Using AI is explicitly allowed. Producing interchangeable, templated, low-variat
 | `publish` | Flips the video from private to public |
 | `status` | Where the current run is |
 
-Anything else is read by a model, which either does what you meant or asks. Full list in [docs/TELEGRAM_SETUP.md](docs/TELEGRAM_SETUP.md).
+Anything else is read by a model, which either does what you meant or asks. Every command, and what each one costs you in time: [docs/CHAT_COMMANDS.md](docs/CHAT_COMMANDS.md).
 
 ---
 
