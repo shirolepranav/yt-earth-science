@@ -33,7 +33,11 @@
     "width": 1920,
     "height": 1080,
     "_letterbox_comment": "true adds 2.39:1 cinema bars over footage. Off by default: bars shrink the picture on phones, where most views happen.",
-    "letterbox": false
+    "letterbox": false,
+    "_outro_comment": "Seconds of quiet, darkened hold on the last shot after the narration ends, for YouTube end screens (5s is the shortest end screen YouTube allows, 20s the longest). No text on it - the end-screen tiles and subscribe button sit over it.",
+    "outro_seconds": 5,
+    "_intro_line_comment": "Spoken before the script on every video (pipeline/narrate.py), so the word timings and storyboard include it. Empty string to drop it. The <break> tag is ElevenLabs syntax for a pause (a comma alone gave 0.03s).",
+    "intro_line": "Hi, <break time=\"0.4s\" /> welcome to another episode of the Earth Docs."
   },
   "storyboard": {
     "_comment": "Shot planning, done after narration against the real word timings (pipeline/storyboard.py). All footage is planned as stock, cut where the narration changes subject; the stock stage fills a shot with as many short clips as it needs and only shots no library can show become AI. Cards are documentary question/fact cards and numbers are big key-figure shots - both capped, never captions.",
@@ -58,8 +62,8 @@
     "usd_per_million_output": 50
   },
   "visuals": {
-    "_comment": "AI visuals via fal.ai (FAL_KEY) - the LAST resort on this channel, for scenes no camera recorded (deep-time landscapes) and shots no library could fill. Real footage from NASA, Wikimedia Commons, Pexels and Pixabay comes first (pipeline/stock.py). Every AI shot gets a keyframe image; the highest-priority ones are animated until the estimate hits budget_usd, the rest get depth-parallax camera moves. Cached by content hash in runs/<id>/assets/gen/.",
-    "_prices_comment": "Re-checked 20 Sep 2026, all still current. These figures drive the budget ledger, not the bill - fal charges what it charges, and these only decide how many shots get animated before the cap stops it. So where a price is uncertain, the SAFE direction is to overestimate. Three notes: (1) nano-banana-2 is $0.08 base but pipeline/fal.py asks for 2K, which bills at 1.5x - hence $0.12. Change both together. (2) h3-max 768P is $0.04/sec on a launch promotion until 30 Sep 2026, then $0.08. It is left at $0.08 deliberately: until the promo ends the ledger overestimates by 2x and animates fewer clips than the $5 cap really allows, which is the right way round to be wrong. (3) depth-anything v2 could not be re-verified on 20 Sep - $0.005 is carried over from 14 Sep and is the smallest line here either way.",
+    "_comment": "AI visuals via fal.ai (FAL_KEY) - the LAST resort on this channel, for scenes no camera recorded and shots no library could fill. Real footage from NASA, Wikimedia Commons, Pexels and Pixabay comes first (pipeline/stock.py). Every AI shot gets a keyframe; the highest-priority ones are animated until the estimate hits budget_usd, the rest get depth-parallax moves. Cached by content hash, so reruns cost nothing. PRICES CHECKED 20 Sep 2026 on fal.ai: minimax h3-max is $0.025/s at 480P, $0.04/s at 768P and $0.08/s at 1080P on a launch promotion that ends 30 Sep 2026, after which they become $0.05, $0.08 and $0.16 - double the usd_per_second below then, or the cap will under-count. Seedream lite is $0.035 an image at any size up to 3072x3072, so a sharper keyframe costs nothing extra. The video stays 1080p: the model cannot output 4K, and most real footage is 1080p, so a 4K render would upscale most of the screen for 4x the render time.",
+    "_image_prices_comment": "Two notes on the per-image figures below, both easy to get wrong. (1) nano-banana-2 is $0.08 base, but pipeline/fal.py asks for 2K, which bills at 1.5x - hence $0.12. If you change that resolution, change this price with it. (2) depth-anything v2 could not be re-verified on 20 Sep 2026; $0.005 is carried over from 14 Sep. It is the smallest line here, and these figures only drive the budget ledger rather than the bill, so an overestimate simply animates a few less shots.",
     "budget_usd": 5,
     "retry_allowance": 1.2,
     "image_model": "fal-ai/bytedance/seedream/v5/lite/text-to-image",
@@ -74,7 +78,7 @@
       "fal-ai/image-preprocessors/depth-anything/v2": 0.005
     },
     "usd_per_second": {
-      "minimax/h3-max/image-to-video": 0.08,
+      "minimax/h3-max/image-to-video": 0.04,
       "gemini-omni-1.1-flash": 0.15
     }
   },
@@ -93,14 +97,16 @@
       "model": "gemini-3.8-flash"
     },
     "vision": {
+      "_comment": "Every picture the pipeline judges: stock contact sheets, AI keyframes, chart number read-backs and the thumbnail shrink test. Compared head to head on 7 real contact sheets from the Hunga Tonga build (19 Sep 2026): Gemini 3.8 Flash reads stand-in footage for things no camera can film (it passed satellite wave clouds 9/10 for a pressure pulse, and a sunset haze layer 7/10, where gpt-5.4-mini scored both below the 6/10 bar and sent the shots to AI). gpt-5.4-mini is stricter, 3s vs 7-14s per sheet and $0.0033 vs $0.007, and it is better on literal subjects (it found real underwater vent plumes Gemini missed) - but a rejected shot costs $0.04-$0.44 of AI generation, so the stricter model is the dearer one here. OpenAI is the automatic fallback when Gemini's prepaid balance runs out. Motion QA on AI clips is Gemini-only (OpenAI takes images only).",
       "provider": "gemini",
-      "model": "gemini-3.1-flash-lite"
+      "model": "gemini-3.8-flash",
+      "fallback_model": "gpt-5.4-mini"
     },
     "tts": {
-      "_comment": "ElevenLabs eleven_multilingual_v2, one fixed voice and seed (the Boring Docs channel proved Gemini TTS re-rolls the voice between chunks). VOICE NOT CHOSEN YET: pick one by ear at elevenlabs.io/app/voice-library - deliberately NOT Bren, which narrates The Boring Docs - and paste its id into elevenlabs_voice_id. Avoid voices with a custom-rate credit multiplier. Voice pace changes runtime by ~15%.",
+      "_comment": "ElevenLabs eleven_multilingual_v2, one fixed voice and seed (Gemini TTS re-rolls the voice between calls). Voice is 'Liam' (TX3LPaxmHKxFdv7VOQHJ), chosen 19 Sep 2026 by the channel owner after listening to five-minute reads of the real script in six voices. It reads ~156 wpm at 125 Hz - the brightest and second fastest of the set, so a 13-minute script at 140 wpm lands nearer 11:45. Avoid voices with a custom-rate credit multiplier.",
       "provider": "elevenlabs",
       "elevenlabs_model": "eleven_multilingual_v2",
-      "elevenlabs_voice_id": "CHOOSE_A_VOICE",
+      "elevenlabs_voice_id": "TX3LPaxmHKxFdv7VOQHJ",
       "elevenlabs_stability": 0.6,
       "elevenlabs_similarity": 0.8,
       "elevenlabs_seed": 1,

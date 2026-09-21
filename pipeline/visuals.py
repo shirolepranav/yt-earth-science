@@ -37,7 +37,7 @@ import requests
 
 from .common import Run, has_secret, load_config, log, resolve_run, secret, with_retries
 from .fal import data_uri, download, fal_run, generate_image
-from .llm import vision_check, vision_check_video
+from .llm import has_vision, vision_check, vision_check_video
 
 WORKERS = 6  # parallel shots; fal queues the rest, so more mostly adds rate-limit retries
 NEGATIVE = (
@@ -235,7 +235,8 @@ def depth(run: Run, frame: Path, cfg: dict, ledger: list) -> Path | None:
 
 def check(path: Path, prompt: str, key: str, *, video: bool) -> bool:
     """Vision QA. If the check itself can't run, keep the asset."""
-    if not has_secret("GEMINI_API_KEY"):
+    # Motion QA is Gemini-only (OpenAI's vision takes images), so it checks that key.
+    if not (has_secret("GEMINI_API_KEY") if video else has_vision()):
         return True
     try:
         verdict = (vision_check_video if video else vision_check)(str(path), prompt)

@@ -45,5 +45,5 @@ Ellis isn't a professor and never claims to be one. Ellis is the person who read
 
 ## Voice
 
-- **TTS provider / voice ID:** ElevenLabs - **not chosen yet.** Pick a voice by ear from elevenlabs.io/app/voice-library (a different voice from The Boring Docs), then set `models.tts.elevenlabs_voice_id` in `config/channel.json` and update this line.
+- **TTS provider / voice ID:** ElevenLabs "Liam" (`TX3LPaxmHKxFdv7VOQHJ`), chosen by ear from five-minute reads of a real script, 19 Sep 2026.
 - **Read style:** calm documentary narrator - measured, warm, slightly grave on the big moments. Never rushed.

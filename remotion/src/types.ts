@@ -22,9 +22,11 @@ export type Shot = Timed &
   (
     // AI image-to-video or stock footage. playbackRate < 1 stretches a clip
     // that's slightly shorter than its shot.
-    | { type: "clip"; src: string; playbackRate?: number }
+    // `credit` names the archive a public-domain / openly licensed shot came
+    // from, shown bottom-left like a chart's source.
+    | { type: "clip"; src: string; playbackRate?: number; credit?: string | null }
     // AI keyframe with an optional depth map for the parallax camera move.
-    | { type: "still"; src: string; depth?: string | null; seed: number }
+    | { type: "still"; src: string; depth?: string | null; seed: number; credit?: string | null }
     // `component` names a GPT-6 Astra component staged into src/generated/;
     // without one (or if it's missing) the built-in chart renders instead.
     | ({ type: "chart"; component?: string | null } & ChartData)
@@ -64,7 +66,9 @@ export type ChartPreviewProps = {
 
 export type ShotList = {
   title: string;
+  // Includes outroSeconds: the silent end-screen hold after the narration.
   durationSeconds: number;
+  outroSeconds?: number;
   fps: number;
   width: number;
   height: number;

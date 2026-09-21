@@ -161,7 +161,10 @@ def render(run: Run, output_name: str = "video.mp4") -> Path:
     subprocess.run([
         "ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", str(concat_list),
         "-i", str(REMOTION_DIR / "public" / shot_list["audioFile"]),
-        "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
+        # Silence under the outro. Padding with silence leaves the -14 LUFS
+        # integrated loudness from the audio stage unchanged (gated measure).
+        "-map", "0:v", "-map", "1:a", "-af", "apad", "-t", f"{total_frames / shot_list['fps']:.3f}",
+        "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
         "-movflags", "+faststart", str(output_path),
     ], check=True)
 

@@ -24,6 +24,11 @@ bug in the pipeline. Run it after `make setup` and after any code change.
 from __future__ import annotations
 
 import json
+import threading
+import time
+import types
+
+import requests
 import sys
 from pathlib import Path
 
@@ -33,7 +38,7 @@ sys.path.insert(0, str(ROOT))
 from PIL import Image  # noqa: E402
 
 import pipeline.llm as llm  # noqa: E402
-from pipeline.common import Run, load_config  # noqa: E402
+from pipeline.common import PermanentError, Run, load_config, permanent_if_hopeless, with_retries  # noqa: E402
 from pipeline.shotlist import build as build_shotlist, stock_clips  # noqa: E402
 import pipeline.stock as stock  # noqa: E402
 from pipeline.stock import MIN_SCORE, fill  # noqa: E402
@@ -208,41 +213,42 @@ def check_figure_detector() -> None:
 
 
 def check_deepseek_timeout() -> None:
-    """The read timeout must cover a whole generation, not a chunk of it.
-
-    A 60s read timeout killed every storyboard call (they take ~3 minutes) and
-    sent runs to the fallback model for no reason.
-    """
+    """The read timeout must cover a whole generation (~3 minutes for a
+    storyboard), and a reply that never finishes is abandoned at the deadline."""
     captured = {}
 
     class Reply:
         status_code = 200
 
-        def __enter__(self):
-            return self
-
-        def __exit__(self, *_):
-            return False
-
         def raise_for_status(self):
             pass
 
-        def iter_content(self, chunk_size):
-            yield json.dumps({"choices": [{"message": {"content": "{}"}}]}).encode()
+        def json(self):
+            return {"choices": [{"message": {"content": "{}"}}]}
 
     def fake_post(url, **kwargs):
         captured.update(kwargs)
         return Reply()
 
-    real_post = llm.requests.post
+    real_post, real_timeout = llm.requests.post, llm.TIMEOUT
     llm.requests.post = fake_post
     try:
         llm._deepseek_chat("system", "user", "model", True)
+        connect, read = captured["timeout"]
+        assert read >= 300, f"read timeout {read}s is shorter than a storyboard call takes (~180s)"
+        assert connect <= 30, f"connect timeout {connect}s should stay short"
+
+        # A connection that trickles keep-alive bytes forever must still fail at the deadline.
+        llm.requests.post = lambda url, **kwargs: time.sleep(60)
+        llm.TIMEOUT = 0.5
+        started = time.monotonic()
+        try:
+            llm._post_with_deadline("https://example.invalid", {}, {})
+            raise AssertionError("a reply that never finishes must time out")
+        except TimeoutError:
+            assert time.monotonic() - started < 5, "the deadline must be wall clock"
     finally:
-        llm.requests.post = real_post
-    connect, read = captured["timeout"]
-    assert read >= 300, f"read timeout {read}s is shorter than a storyboard call takes (~180s)"
-    assert connect <= 30, f"connect timeout {connect}s should stay short"
+        llm.requests.post, llm.TIMEOUT = real_post, real_timeout
 
 
 def check_allocator() -> None:
@@ -291,6 +297,22 @@ def check_shotlist(run: Run, shots: list[dict]) -> None:
     assert abs(pieces[-1]["end"] - filled["end"]) < 1e-6 and pieces[0]["playbackRate"] == 1.0, pieces
     types = {s["type"] for s in out}
     assert {"still", "chart", "evidence", "number", "card"} <= types, types
+
+
+def check_voice_cache_key() -> None:
+    """Changing the voice must not reuse audio recorded in the old one."""
+    import hashlib
+    keys = set()
+    for voice in ("voice-a", "voice-b"):
+        cfg = {"provider": "elevenlabs", "elevenlabs_voice_id": voice, "elevenlabs_model": "m",
+               "elevenlabs_stability": 0.6, "elevenlabs_similarity": 0.8, "elevenlabs_seed": 1}
+        voice_key = "|".join(str(cfg.get(k, "")) for k in (
+            "provider", "elevenlabs_voice_id", "elevenlabs_model", "elevenlabs_stability",
+            "elevenlabs_similarity", "elevenlabs_seed", "gemini_voice", "gemini_model",
+            "gemini_style", "qwen_voice", "speechify_voice"))
+        keys.add(hashlib.sha1(("same words" + voice_key).encode()).hexdigest()[:8])
+    assert len(keys) == 2, "two voices must produce two cache names"
+    assert "voice_key" in Path("pipeline/narrate.py").read_text(), "narrate must fold the voice into the name"
 
 
 def check_open_libraries() -> None:
@@ -349,6 +371,43 @@ def check_captions() -> None:
     assert srt.startswith("1\n00:00:00,000 --> "), srt[:60]
 
 
+def check_reuse_and_permanent_errors() -> None:
+    """A clip comes back at most twice, far apart; hopeless calls don't retry."""
+    claims: dict[str, list[float]] = {}
+    lock = threading.Lock()
+
+    def claim_at(start: float, clip_id: str = "c1") -> bool:
+        shot = {"start": start}
+        with lock:
+            when = claims.get(clip_id, [])
+            if (len(when) >= stock.MAX_USES_PER_VIDEO
+                    or any(abs(start - t) < stock.REUSE_GAP_SECONDS for t in when)):
+                return False
+            claims.setdefault(clip_id, []).append(start)
+            return True
+
+    assert claim_at(10.0), "a fresh clip is free"
+    assert not claim_at(20.0), "the same clip must not come back moments later"
+    assert claim_at(10.0 + stock.REUSE_GAP_SECONDS), "far enough away it may come back once"
+    assert not claim_at(10.0 + 3 * stock.REUSE_GAP_SECONDS), "never a third time"
+
+    calls = []
+
+    def hopeless():
+        calls.append(1)
+        error = requests.HTTPError("402")
+        error.response = types.SimpleNamespace(status_code=402)
+        permanent_if_hopeless(error, "vision")
+        raise error
+
+    try:
+        with_retries(hopeless, attempts=5, base_delay=0.01, label="vision")
+        raise AssertionError("a payment error must not be retried")
+    except PermanentError:
+        pass
+    assert calls == [1], f"a payment error must fail on the first try, not {len(calls)}"
+
+
 def main() -> None:
     run = Run("selftest")
     shots = check_storyboard(run)
@@ -364,7 +423,9 @@ def main() -> None:
     print("3/6 cache keys ok")
     check_shotlist(run, shots)
     check_open_libraries()
-    print("4/6 shot list, licence filter and photo stills ok")
+    check_voice_cache_key()
+    check_reuse_and_permanent_errors()
+    print("4/6 shot list, licences, photo stills, clip reuse and dead-provider handling ok")
     image = compose(Image.new("RGB", (2560, 1440), (30, 20, 40)), {"text": "THEY TOOK $40,000", "symbol": "arrow"})
     assert image.size == (1280, 720)
     print("5/6 thumbnail compositing ok")

@@ -1,11 +1,11 @@
 {
   "3": {
     "kind": "still",
-    "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/selftest/assets/frame.jpg",
+    "src": "/home/user/yt-earth-science/runs/selftest/assets/frame.jpg",
     "depth": null
   },
   "2": {
     "kind": "plate",
-    "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/selftest/assets/frame.jpg"
+    "src": "/home/user/yt-earth-science/runs/selftest/assets/frame.jpg"
   }
 }

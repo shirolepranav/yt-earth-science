@@ -17,7 +17,7 @@ JOB 2 — The YouTube metadata and thumbnail concepts.
 
 Title: under 70 characters, specific and intriguing — an event, a place, a mystery or a scale. Patterns that work: "The Day ___", "What Really Killed ___", "The ___ That Almost Ended ___", "Why ___ Shouldn't Exist". It must be literally true to the script - no invented doom.
 
-Description: open with a two-sentence summary that keeps the tension, then the sources as a plain list of URLs from the outline, then a one-line note that the narration is AI-generated. (Footage credits are appended automatically - don't write them.) Ten to fifteen tags.
+Description: a two-sentence summary that keeps the tension, and nothing else. (The source list, the AI-narration note and the footage credits are all appended automatically - don't write them.) Ten to fifteen tags.
 
 Thumbnail concepts: three genuinely different ideas. The thumbnail and title work as a pair — the thumbnail must NOT repeat the title's words; it adds the curiosity gap the title leaves open.
   * "text": at most 4 words, ALL CAPS, or null for a pure visual story with no text at all (the strongest thumbnails in this genre often have none). At least one of the three must be null.

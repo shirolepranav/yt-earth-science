@@ -16,12 +16,14 @@ from __future__ import annotations
 import base64
 import json
 import re
+import threading
 import time
 from typing import Any
 
 import requests
 
-from .common import log, load_config, secret, with_retries
+from .common import (PermanentError, has_secret, load_config, log, permanent_if_hopeless, secret,
+                      with_retries)
 
 TIMEOUT = 420  # seconds. A storyboard chunk measured 174s (27k chars in, 14k out).
 
@@ -30,6 +32,34 @@ TIMEOUT = 420  # seconds. A storyboard chunk measured 174s (27k chars in, 14k ou
 # its full retry cycle before falling back (observed: 45 minutes per call).
 _deepseek_down = False
 
+
+def _post_with_deadline(url: str, headers: dict, payload: dict) -> dict:
+    """POST and return the JSON reply, failing after TIMEOUT seconds of wall clock.
+
+    requests' timeout is per read, so a server that trickles keep-alive bytes
+    never trips it (one storyboard call hung 107 minutes). The request runs in a
+    daemon thread and is abandoned at the deadline, whatever the socket is doing.
+    The reply arrives in one piece only when generation finishes, so the
+    deadline covers the whole generation (a storyboard chunk measured 174s).
+    """
+    result: dict[str, Any] = {}
+
+    def work() -> None:
+        try:
+            response = requests.post(url, headers=headers, json=payload, timeout=(15, TIMEOUT))
+            response.raise_for_status()
+            result["data"] = response.json()
+        except Exception as error:  # noqa: BLE001 - re-raised in the caller's thread
+            result["error"] = error
+
+    thread = threading.Thread(target=work, daemon=True)
+    thread.start()
+    thread.join(TIMEOUT)
+    if thread.is_alive():
+        raise TimeoutError(f"no complete reply within {TIMEOUT}s")
+    if "error" in result:
+        raise result["error"]
+    return result["data"]
 
 # ---------------------------------------------------------------------------
 # Provider 1: DeepSeek (and anything else that speaks the OpenAI format)
@@ -51,30 +81,14 @@ def _deepseek_chat(system: str, user: str, model: str, json_mode: bool) -> str:
     if json_mode:
         payload["response_format"] = {"type": "json_object"}
 
-    # The reply arrives in one piece only when generation finishes, so the read
-    # timeout has to cover the whole generation, not a chunk of it: a 60s read
-    # timeout here killed every storyboard call (measured 174s) long before the
-    # wall-clock deadline below, and sent the run to Gemini for no reason.
-    # The deadline stays as the guard against a connection that dribbles.
-    started = time.monotonic()
-    chunks: list[bytes] = []
-    with requests.post(
+    body = _post_with_deadline(
         f"{base_url}/chat/completions",
         headers={
             "Authorization": f"Bearer {secret('DEEPSEEK_API_KEY')}",
             "Content-Type": "application/json",
         },
-        json=payload,
-        timeout=(15, TIMEOUT),
-        stream=True,
-    ) as response:
-        response.raise_for_status()
-        for chunk in response.iter_content(chunk_size=8192):
-            chunks.append(chunk)
-            if time.monotonic() - started > TIMEOUT:
-                raise TimeoutError(f"DeepSeek gave no complete reply within {TIMEOUT}s")
-
-    body = json.loads(b"".join(chunks) or b"{}")
+        payload=payload,
+    )
     if "choices" not in body:
         raise RuntimeError(f"DeepSeek returned no choices: {str(body)[:200]}")
     return body["choices"][0]["message"]["content"]
@@ -89,20 +103,17 @@ def _gemini_chat(system: str, user: str, model: str, json_mode: bool) -> str:
     if json_mode:
         generation_config["responseMimeType"] = "application/json"
 
-    response = requests.post(
+    data = _post_with_deadline(
         f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
         headers={"x-goog-api-key": secret("GEMINI_API_KEY")},  # header, not URL: URLs end up in error logs
-        json={
+        payload={
             # Gemini keeps the "system" instruction in its own field rather than
             # as a message, which is why this looks different from DeepSeek.
             "systemInstruction": {"parts": [{"text": system}]},
             "contents": [{"role": "user", "parts": [{"text": user}]}],
             "generationConfig": generation_config,
         },
-        timeout=TIMEOUT,
     )
-    response.raise_for_status()
-    data = response.json()
     return data["candidates"][0]["content"]["parts"][0]["text"]
 
 
@@ -194,9 +205,37 @@ def parse_json_loosely(raw: str) -> Any:
 # actual motion, before either is allowed into the render.
 # ---------------------------------------------------------------------------
 
+def _openai_vision(mime_type: str, data_b64: str, prompt: str, model: str, timeout: int) -> Any:
+    """OpenAI's chat API, which takes an image as a data URI. Images only -
+    these models don't accept video, which is why motion QA stays on Gemini."""
+    response = requests.post(
+        "https://api.openai.com/v1/chat/completions",
+        headers={"Authorization": f"Bearer {secret('OPENAI_API_KEY')}"},
+        json={
+            "model": model,
+            "response_format": {"type": "json_object"},
+            "messages": [{"role": "user", "content": [
+                {"type": "text", "text": prompt},
+                {"type": "image_url", "image_url": {"url": f"data:{mime_type};base64,{data_b64}"}},
+            ]}],
+        },
+        timeout=timeout,
+    )
+    try:
+        response.raise_for_status()
+    except Exception as error:  # noqa: BLE001
+        permanent_if_hopeless(error, "openai vision")
+        raise
+    return parse_json_loosely(response.json()["choices"][0]["message"]["content"])
+
+
 def _vision_generate(mime_type: str, data_b64: str, prompt: str, *, timeout: int, label: str,
-                     model: str | None = None) -> Any:
+                     model: str | None = None, provider: str | None = None) -> Any:
     cfg = {**load_config()["models"]["vision"], **({"model": model} if model else {})}
+    chosen = provider or cfg.get("provider")
+    if chosen == "openai":
+        return with_retries(lambda: _openai_vision(mime_type, data_b64, prompt, cfg["model"], timeout),
+                            attempts=5, base_delay=4.0, label=label)
 
     def call() -> Any:
         response = requests.post(
@@ -213,12 +252,33 @@ def _vision_generate(mime_type: str, data_b64: str, prompt: str, *, timeout: int
             },
             timeout=timeout,
         )
-        response.raise_for_status()
+        try:
+            response.raise_for_status()
+        except Exception as error:  # noqa: BLE001
+            permanent_if_hopeless(error, "gemini vision")
+            raise
         text = response.json()["candidates"][0]["content"]["parts"][0]["text"]
         return parse_json_loosely(text)
 
     # Generous backoff: parallel visuals QA hits per-minute rate limits (429s).
-    return with_retries(call, attempts=5, base_delay=4.0, label=label)
+    try:
+        return with_retries(call, attempts=5, base_delay=4.0, label=label)
+    except PermanentError:
+        # An empty balance or a bad key: the other provider can still answer,
+        # which is how a dry Gemini account stops costing a whole build.
+        fallback = cfg.get("fallback_model")
+        if provider == "gemini" or not fallback or not has_secret("OPENAI_API_KEY"):
+            raise
+        log(f"  {label}: gemini unavailable - falling back to {fallback}")
+        return with_retries(lambda: _openai_vision(mime_type, data_b64, prompt, fallback, timeout),
+                            attempts=3, base_delay=2.0, label=f"{label} (openai)")
+
+
+def has_vision() -> bool:
+    """Whether the configured vision provider has a key to call."""
+    cfg = load_config()["models"]["vision"]
+    keys = ["OPENAI_API_KEY"] if cfg.get("provider") == "openai" else ["GEMINI_API_KEY", "OPENAI_API_KEY"]
+    return any(has_secret(k) for k in keys)
 
 
 def vision_check(image_path: str, prompt: str, model: str | None = None) -> Any:
@@ -241,4 +301,7 @@ def vision_check_video(video_path: str, prompt: str) -> Any:
     with open(video_path, "rb") as handle:
         video_b64 = base64.b64encode(handle.read()).decode()
     # Video understanding takes longer than a single image - generous timeout.
-    return _vision_generate("video/mp4", video_b64, prompt, timeout=180, label="physics check")
+    # Gemini regardless of the configured vision provider: OpenAI's chat models
+    # take images only. Without a Gemini key the caller keeps the clip (visuals.check).
+    return _vision_generate("video/mp4", video_b64, prompt, timeout=180, label="physics check",
+                            model=load_config()["models"]["writer_fallback"]["model"], provider="gemini")

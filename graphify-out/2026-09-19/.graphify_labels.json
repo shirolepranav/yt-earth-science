@@ -1,13 +1,13 @@
 {
   "0": "MainVideo.tsx",
-  "1": "storyboard.py",
-  "2": "chat_json",
-  "3": "Run",
-  "4": "narrate.py",
+  "1": "Run",
+  "2": "llm.py",
+  "3": "common.py",
+  "4": "secret",
   "5": "visuals.py",
   "6": "Running it on your Mac",
   "7": "log",
-  "8": "llm.py",
+  "8": "storyboard.py",
   "9": "dependencies",
   "10": "charts3d.py",
   "11": "compilerOptions",
@@ -29,9 +29,5 @@
   "27": "storyboard.md",
   "28": "system.md",
   "29": "topics.md",
-  "30": "remotion.config.ts",
-  "31": "common.py",
-  "32": "research.py",
-  "33": "thumbnail.py",
-  "34": "search_commons"
+  "30": "remotion.config.ts"
 }

@@ -35,11 +35,12 @@ def stock_clips(entry: dict, start: float, end: float) -> list[dict]:
     for clip in clips:
         if at >= end - 1e-6:
             break
+        credit = clip.get("on_screen")
         if clip.get("media") == "image":  # a photograph: a parallax still, held as long as it's given
             shots.append({"type": "still", "src": clip["path"], "depth": clip.get("depth"), "seed": int(at * 1000),
-                          "start": at, "end": min(end, at + clip["duration"])})
+                          "credit": credit, "start": at, "end": min(end, at + clip["duration"])})
         else:
-            shots.append({"type": "clip", "src": clip["path"], "playbackRate": round(rate, 3),
+            shots.append({"type": "clip", "src": clip["path"], "playbackRate": round(rate, 3), "credit": credit,
                           "start": at, "end": min(end, at + clip["duration"] / rate)})
         at = shots[-1]["end"]
     shots[-1]["end"] = end
@@ -103,7 +104,10 @@ def build(run: Run) -> dict:
 
     shot_list = {
         "title": run.read_json("metadata.json").get("title", ""),
-        "durationSeconds": board["duration"],
+        # The outro is part of the video's length, so the composition and the
+        # segmented render both pick it up from here.
+        "durationSeconds": board["duration"] + video_cfg.get("outro_seconds", 0),
+        "outroSeconds": video_cfg.get("outro_seconds", 0),
         "fps": video_cfg["fps"],
         "width": video_cfg["width"],
         "height": video_cfg["height"],
