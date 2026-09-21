@@ -1,0 +1,84 @@
+{
+  "topics": [
+    {
+      "rank": 1,
+      "title": "Did Toba's Eruption Nearly End Us 74,000 Years Ago?",
+      "core_question": "How big was the Toba eruption roughly 74,000 years ago, and did it really push early humans to the edge of extinction?",
+      "why_they_click": "The largest eruption of the last two million years may \u2014 or may not \u2014 have nearly wiped out our species, and the evidence genuinely splits scientists.",
+      "data_source": "Smithsonian Global Volcanism Program eruption catalogue; peer-reviewed Toba ash and ice-core studies; NOAA NCEI paleoclimate data",
+      "evidence": "Sits on two rising searches at once \u2014 'ice age explained' (+1472%) and 'supervolcano' (+37%) \u2014 with the disaster-with-a-twist shape the backlog already proved."
+    },
+    {
+      "rank": 2,
+      "title": "Marie Tharp: The Map That Proved Continents Move",
+      "core_question": "How did a hand-drawn map of the Atlantic seafloor turn a mocked idea into the theory of plate tectonics?",
+      "why_they_click": "An idea dismissed as impossible for decades was confirmed by a rift valley drawn in pen by a woman kept off the research ship.",
+      "data_source": "USGS 'This Dynamic Earth'; Lamont-Doherty Earth Observatory archives; peer-reviewed Heezen\u2013Tharp seafloor mapping papers",
+      "evidence": "'plate tectonics explained' is rising +205% over five years and no backlog episode covers how the theory was actually proven."
+    },
+    {
+      "rank": 3,
+      "title": "Why Earth Plunged Back Into Cold 12,900 Years Ago",
+      "core_question": "What stopped the last ice age's warming and threw the planet back into a thousand-year freeze?",
+      "why_they_click": "The world was warming, then reversed \u2014 and the cause is still argued over: a collapsed ocean current, or an impact nobody can find.",
+      "data_source": "NOAA NCEI Paleoclimatology; Greenland ice cores (NGRIP and GISP2); peer-reviewed Younger Dryas studies",
+      "evidence": "'ice age explained' is rising +1472% over five years, the fastest-growing search in the channel's own subject area."
+    },
+    {
+      "rank": 4,
+      "title": "The 1811 Quakes That Rang Bells in Boston",
+      "core_question": "What caused the New Madrid earthquakes of 1811\u20131812, and can a major quake strike the middle of a continent again?",
+      "why_they_click": "The Mississippi reportedly ran backwards \u2014 and the fault zone sits under several US states with no plate boundary anywhere near it.",
+      "data_source": "USGS Earthquake Hazards Program (New Madrid seismic zone); peer-reviewed New Madrid paleoseismic studies",
+      "evidence": "'biggest earthquake in history' is rising +38%, and the backlog's Chile 1960 and Tohoku episodes show this audience returns for record quakes."
+    },
+    {
+      "rank": 5,
+      "title": "Tunguska 1908: The Explosion That Left No Crater",
+      "core_question": "What flattened a vast stretch of Siberian forest in 1908, and why is there no crater under it?",
+      "why_they_click": "Something burst over Siberia with a force compared to a nuclear weapon, decades before nuclear weapons existed \u2014 and the ground shows nothing.",
+      "data_source": "NASA Planetary Science and Near-Earth Object records; peer-reviewed Tunguska airburst modelling studies",
+      "evidence": "The backlog's Chicxulub episode proves demand for impact detective stories; this is the same evidence-first shape with an unsolved centre."
+    },
+    {
+      "rank": 6,
+      "title": "Nevado del Ruiz: The Eruption That Killed 23,000",
+      "core_question": "Why did a relatively small eruption in Colombia kill roughly 23,000 people in 1985 when scientists had already mapped the danger?",
+      "why_they_click": "A hazard map existed, warnings went out, and the town still went to bed \u2014 this is a story about the gap between knowing and surviving.",
+      "data_source": "Smithsonian Global Volcanism Program (fatalities and eruption record); USGS Volcano Hazards Program; peer-reviewed Nevado del Ruiz lahar studies",
+      "evidence": "The same 'famous disaster with a twist most people never heard' framing that carried the channel's Mount St. Helens episode."
+    },
+    {
+      "rank": 7,
+      "title": "Campi Flegrei: The Supervolcano Lifting a Town",
+      "core_question": "Why does the ground under Pozzuoli rise and fall, and what does the Campi Flegrei record show this caldera has done before?",
+      "why_they_click": "Towns sit inside a caldera whose floor moves measurably year on year \u2014 and the old shoreline is now metres above your head.",
+      "data_source": "Smithsonian Global Volcanism Program; INGV (Italian National Institute of Geophysics and Volcanology) monitoring data; NASA and ESA ground-deformation imagery",
+      "evidence": "'supervolcano' is rising +37%, and this gives the channel a location-specific caldera story distinct from its Yellowstone myth-buster."
+    },
+    {
+      "rank": 8,
+      "title": "The 1755 Lisbon Quake That Started a Science",
+      "core_question": "How did one morning of earthquake, tsunami and fire in 1755 become the beginning of modern seismology?",
+      "why_they_click": "Three catastrophes struck the same city in one morning, and the questionnaires sent afterwards are the first real earthquake survey in history.",
+      "data_source": "USGS Earthquake Hazards Program; NOAA NCEI Global Historical Tsunami Database; peer-reviewed Lisbon 1755 studies",
+      "evidence": "'biggest earthquake in history' is rising +38%, and this adds a historical, document-driven quake story the backlog hasn't told."
+    },
+    {
+      "rank": 9,
+      "title": "The Aral Sea: A Sea That Vanished in a Lifetime",
+      "core_question": "How did one of the largest inland seas on Earth break into fragments within fifty years, and what did it leave behind?",
+      "why_they_click": "You can watch an entire sea disappear in satellite imagery, decade by decade, while the port towns sit stranded in desert.",
+      "data_source": "NASA Earth Observatory satellite imagery; USGS and international basin assessment reports; peer-reviewed Aral Sea desiccation studies",
+      "evidence": "'geology documentary' is rising +5500%, the biggest trend in the dataset, and this topic is the most visually self-evident one on the list."
+    },
+    {
+      "rank": 10,
+      "title": "Mount Pel\u00e9e 1902: The Survivors of Saint-Pierre",
+      "core_question": "Why did the 1902 eruption of Mount Pel\u00e9e destroy Saint-Pierre almost completely, and how did a handful of people live through it?",
+      "why_they_click": "A volcano gave weeks of warning before it killed a city in minutes \u2014 and the survivors' accounts are on the record.",
+      "data_source": "Smithsonian Global Volcanism Program; USGS Volcano Hazards Program; peer-reviewed Mount Pel\u00e9e 1902 studies",
+      "evidence": "Volcano disasters are the channel's proven ground (St. Helens, Tambora, Krakatoa in the backlog), and this one comes with named eyewitness testimony."
+    }
+  ]
+}
