@@ -1,0 +1,41 @@
+{
+  "title": "Why the Ice Ages Beat to a 100,000-Year Clock We Can't Quite Read",
+  "description": "Every glaciation of the past 900,000 years began and ended in the same orbital sequence, and then the rhythm switched to a 100,000-year beat that the quietest knob in Earth's orbit barely explains. The best current answer puts the next ice age about ten thousand years out, and says the carbon dioxide already in the air has taken us off that schedule.",
+  "tags": [
+    "milankovitch cycles",
+    "ice ages",
+    "obliquity",
+    "axial precession",
+    "orbital eccentricity",
+    "100,000 year cycle",
+    "mid-Pleistocene transition",
+    "paleoclimate",
+    "ocean sediment cores",
+    "Devils Hole",
+    "USGS",
+    "NASA",
+    "climate science",
+    "orbital forcing",
+    "quaternary glaciation"
+  ],
+  "thumbnail_concepts": [
+    {
+      "text": "ONE WARM SUMMER",
+      "hero": "the ragged edge of a vast northern ice sheet streaming meltwater into a grey sea under a low, cold sun, seen from the air",
+      "symbol": "arrow",
+      "why_click": "It claims a single season did the destroying, and the viewer needs the rest of the story to see how one summer can undo an ice sheet."
+    },
+    {
+      "text": null,
+      "hero": "gloved hands lifting a metre-long tube of banded grey seafloor mud clear of a corer on an open-ocean deck, the layers as sharp as tree rings against the empty horizon",
+      "symbol": "none",
+      "why_click": "A wordless record held up to the camera: the viewer wants to know what those hundreds of thousands of layers are counting."
+    },
+    {
+      "text": "OFF SCHEDULE",
+      "hero": "a crowded coastal city skyline at dusk seen from the water, its lights just coming on, the whole skyline small beneath a huge blank sky",
+      "symbol": "rec_dot",
+      "why_click": "Something in the planet's timing has been disturbed, and this skyline is what was built inside the gap."
+    }
+  ]
+}

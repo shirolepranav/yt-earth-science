@@ -1,7 +1,10 @@
 {
   "run_id": "2026-09-21-0252",
   "stages_done": [
-    "topics"
+    "topics",
+    "choose",
+    "research",
+    "script"
   ],
-  "chat_stage": "topics"
+  "chat_stage": "script"
 }

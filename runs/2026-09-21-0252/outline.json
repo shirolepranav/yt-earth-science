@@ -1,0 +1,86 @@
+{
+  "hook_angle": "Roughly 11,700 years ago the last glaciation ended \u2014 and it didn't fade, it failed. According to a 2013 study in Nature, once the North American ice sheet had grown large enough, a moderate increase in summer sunlight was enough to push its mass balance negative and drive an almost complete retreat within several thousand years. That collapse was the end of one beat of a cycle running on a 100,000-year clock \u2014 a clock whose mechanism still isn't fully explained.",
+  "stakes": "That rhythm has set sea level, carved the shape of the continents and decided where humans could live \u2014 and because we are sitting inside one of its interglacials, knowing what drives it decides whether another ice age is owed to us, when, and why the answer isn't clean.",
+  "sections": [
+    {
+      "heading": "The 41,000-year tilt",
+      "claim": "Earth's axis leans between 22.1 and 24.5 degrees on a 41,000-year cycle, and that swing changes how much summer energy the high northern latitudes receive \u2014 the latitudes where ice sheets live or die.",
+      "key_number": "41,000-year obliquity cycle; tilt ranging from 22.1 to 24.5 degrees",
+      "source": "NASA Science",
+      "visual": {
+        "kind": "comparison",
+        "title": "Earth's tilt: the 41,000-year swing",
+        "labels": [
+          "Minimum axial tilt",
+          "Maximum axial tilt"
+        ],
+        "values": [
+          22.1,
+          24.5
+        ],
+        "unit": "degrees",
+        "source_note": "NASA Science \u2014 Milankovitch (Orbital) Cycles and Their Role in Earth's Climate"
+      }
+    },
+    {
+      "heading": "The wobble that re-times summer",
+      "claim": "The wobble of Earth's axis changes when the northern summer peak falls relative to Earth's closest approach to the Sun, on a precession cycle of roughly 21,000 years \u2014 a different number from the 25,771.5-year axial wobble itself, and the distinction matters when you try to match the cycle to the rock record.",
+      "key_number": "About 21,000 years for the precession of the seasons against the orbit; about 25,771.5 years for axial precession",
+      "source": "NASA Science; Milankovitch cycles reference hosted by Harvard SEAS",
+      "visual": {
+        "kind": "comparison",
+        "title": "Two ways to count Earth's wobble",
+        "labels": [
+          "Axial precession, axis against the stars (NASA)",
+          "Precession of the seasons against the orbit"
+        ],
+        "values": [
+          25771.5,
+          21000
+        ],
+        "unit": "years",
+        "source_note": "NASA Science; Milankovitch cycles reference (Harvard SEAS course copy)"
+      }
+    },
+    {
+      "heading": "The beat that shouldn't be there",
+      "claim": "Around 800,000 years ago the dominant rhythm of the ice ages switched from 41,000 years to 100,000 years, even though nothing in the orbital forcing changed \u2014 and the only orbital cycle with a 100,000-year period, eccentricity, moves Earth's orbit from nearly circular to mildly elliptical while barely changing the total sunlight the planet receives.",
+      "key_number": "41,000 years before the mid-Pleistocene transition, 100,000 years after; eccentricity itself only ranges from 0.005 to 0.058",
+      "source": "Nature Geoscience (2023); Nature Communications (2025); NASA Science on eccentricity's small insolation effect",
+      "visual": {
+        "kind": "comparison",
+        "title": "The rhythm changes: 41,000 years to 100,000 years",
+        "labels": [
+          "Before the mid-Pleistocene transition",
+          "After the mid-Pleistocene transition"
+        ],
+        "values": [
+          41000,
+          100000
+        ],
+        "unit": "years",
+        "source_note": "Nature Geoscience (2023); Nature Communications (2025)"
+      }
+    },
+    {
+      "heading": "Precession starts it, obliquity finishes it",
+      "claim": "A 2025 analysis in Science found that every glaciation of the past 900,000 years follows the same sequence \u2014 deglaciation begins with the first precession peak that starts while obliquity is rising, immediately after an eccentricity minimum, and glacial inception follows with the next decrease in obliquity \u2014 which makes the 100,000-year pattern largely deterministic without eccentricity having to drive it directly.",
+      "key_number": "900,000 years of glacial cycles reproduced from orbital phasing alone",
+      "source": "Barker et al., Science (2025), reported by UC Santa Barbara",
+      "visual": {
+        "kind": "bignumber",
+        "title": "900,000 years of ice ages, predicted from orbital geometry",
+        "labels": [
+          "Climate cycles reproduced from orbital phasing alone"
+        ],
+        "values": [
+          900000
+        ],
+        "unit": "years",
+        "source_note": "Barker et al., Science (2025)"
+      }
+    }
+  ],
+  "payoff": "The best-supported answer is that the 100,000-year beat is a grouping rather than a pulse: precession peaks do the loading, obliquity decides when ice sheets form and peak, and the slow 100,000-year eccentricity modulation decides which precession peaks are allowed to end an ice age. It is not settled \u2014 Barker's team puts the pacing in precession and eccentricity, a 2025 Nature Communications study traces it to eccentricity-modulated carbon cycles, others argue for 'obliquity skipping' with terminations every two or three 41,000-year cycles, Richard Muller and Gordon MacDonald proposed orbital inclination instead (a claim others call an artifact of spectral analysis), Nicholas Shackleton found ice volume lagging both carbon dioxide and eccentricity, and the USGS Devils Hole calcite record contains a full glacial-interglacial cycle between 350,000 and 450,000 years ago when insolation in both hemispheres barely changed.",
+  "takeaway": "The clock is still running \u2014 the Science team puts the next natural ice age about 10,000 years out \u2014 but the carbon dioxide already in the air has pulled the climate off that schedule, which is exactly why the beat of the ice ages is worth knowing."
+}
