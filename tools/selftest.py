@@ -13,7 +13,8 @@ the logic that decides what reaches the screen and what it costs:
   4. the shot list: every planned shot mapped, several clips per stock shot,
      missing assets held over
   5. thumbnail compositing: text and symbols drawn
-  6. subtitle cues: two lines of 42 characters, no overlaps, no word lost
+  6. subtitle cues: two lines of 42 characters, no overlaps, no word lost;
+     and that a stage whose output has vanished is not treated as done
 
 If this passes, any later failure is an API key or a network problem, not a
 bug in the pipeline. Run it after `make setup` and after any code change.
@@ -24,6 +25,7 @@ bug in the pipeline. Run it after `make setup` and after any code change.
 from __future__ import annotations
 
 import json
+import shutil
 import threading
 import time
 import types
@@ -408,6 +410,58 @@ def check_reuse_and_permanent_errors() -> None:
     assert calls == [1], f"a payment error must fail on the first try, not {len(calls)}"
 
 
+def check_resume_honesty() -> None:
+    """A stage whose output has vanished must not count as done.
+
+    This is the CI-versus-laptop trap: `stages_done` is committed to the repo,
+    but `audio/` and `assets/` are gitignored because they're far too big for
+    git. So a resumed build is handed a state file claiming the audio stage
+    finished, on a machine where the WAV has never existed. It skipped to the
+    render and died on a missing file after a three-hour wait.
+    """
+    from pipeline.run import BUILD_STAGES, missing_outputs, reconcile_stages
+
+    run = Run("selftest-resume")
+    try:
+        # Every stage marked finished, and every text output present - which is
+        # exactly what survives a commit.
+        run.write_json("words.json", {"words": []})
+        run.write_json("storyboard.json", {})
+        run.write_json("shotlist.json", {})
+        run.write_json("charts3d.json", {})
+        run.write_json("stock.json", {})
+        run.write_json("visuals.json", {})
+        run.write_text("output/subtitles.srt", "1\n")
+        for stage in BUILD_STAGES:
+            run.mark_done(stage)
+
+        # The binaries are absent, so these must all report themselves missing.
+        for stage in ("narrate", "audio", "thumbnail", "render"):
+            assert missing_outputs(run, stage), f"{stage} claims its output is present"
+        # ...and the text-only stages must not, or we'd redo work for nothing.
+        for stage in ("align", "captions", "storyboard", "shotlist"):
+            assert not missing_outputs(run, stage), f"{stage} wrongly reported missing"
+
+        reconcile_stages(run)
+        assert not run.is_done("narrate"), "narrate must be redone - its WAV is gone"
+        assert not run.is_done("audio"), "audio must be redone - this was the crash"
+        assert not run.is_done("render"), "render must be redone"
+
+        # A complete working directory must be left entirely alone.
+        whole = Run("selftest-resume-ok")
+        try:
+            whole.write_json("words.json", {"words": []})
+            whole.write_text("output/subtitles.srt", "1\n")
+            whole.mark_done("align")
+            whole.mark_done("captions")
+            assert reconcile_stages(whole) == [], "nothing was missing, nothing should be redone"
+            assert whole.is_done("align") and whole.is_done("captions")
+        finally:
+            shutil.rmtree(whole.dir, ignore_errors=True)
+    finally:
+        shutil.rmtree(run.dir, ignore_errors=True)
+
+
 def main() -> None:
     run = Run("selftest")
     shots = check_storyboard(run)
@@ -430,7 +484,8 @@ def main() -> None:
     assert image.size == (1280, 720)
     print("5/6 thumbnail compositing ok")
     check_captions()
-    print("6/6 subtitle cues ok")
+    check_resume_honesty()
+    print("6/6 subtitle cues and resume honesty ok")
     print("\nSELF-TEST PASSED")
 
 
