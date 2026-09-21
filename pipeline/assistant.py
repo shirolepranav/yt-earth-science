@@ -134,6 +134,13 @@ def present_review(run: Run) -> None:
         "the title, the tags, the thumbnail, or a stage to redo.",
     ]
 
+    # Anything that quietly fell back to a lesser path during the build. The
+    # video is finished either way, but you should know before you publish it.
+    problems = chat.degraded()
+    if problems:
+        lines += ["", "⚠️ <b>Built with something degraded:</b>"]
+        lines += [f"• {chat.escape(p)}" for p in problems]
+
     chat.send("\n".join(lines), preview=True)
 
     # The three thumbnails, so you can pick by eye rather than by filename.

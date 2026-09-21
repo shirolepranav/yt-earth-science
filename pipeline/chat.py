@@ -184,6 +184,35 @@ def progress(stage: str, detail: str = "") -> None:
     send(f"⚙️ <b>{escape(stage)}</b>{(' — ' + escape(detail)) if detail else ''}")
 
 
+# ---------------------------------------------------------------------------
+# Degraded, but not failed
+#
+# Several stages are deliberately built to carry on when a provider won't
+# answer: a chart falls back to the built-in component, a vision check falls
+# back to the other provider. That's the right behaviour - a video should never
+# be lost over one chart - but it used to be invisible. An empty OpenAI balance
+# produced a finished video with plainer charts and not a word about why, with
+# the only trace in an Actions log nobody reads.
+#
+# Stages record it here instead, and the review message lists it. The whole
+# build runs in one process, so a plain list is all this needs.
+# ---------------------------------------------------------------------------
+
+_degraded: list[str] = []
+
+
+def note_degraded(what: str) -> None:
+    """Record that something fell back to a lesser path. Deduplicated, because
+    eight charts failing for one reason is one problem, not eight."""
+    if what not in _degraded:
+        _degraded.append(what)
+        log(f"  degraded: {what}")
+
+
+def degraded() -> list[str]:
+    return list(_degraded)
+
+
 def failed(stage: str, error: str, log_url: str = "") -> None:
     """Report a stage that blew up, with a link to the log."""
     lines = [f"❌ <b>{escape(stage)} failed</b>", "", f"<code>{escape(error[:600])}</code>"]
