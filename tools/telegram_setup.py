@@ -37,7 +37,17 @@ def api(method: str, token: str, **params) -> dict:
     )
     body = response.json()
     if not body.get("ok"):
-        raise SystemExit(f"Telegram refused {method}: {body.get('description')}")
+        detail = body.get("description", "")
+        # By far the most common cause, and the description alone ("Unauthorized")
+        # doesn't say which of the two things is wrong.
+        if response.status_code == 401:
+            raise SystemExit(
+                f"Telegram rejected the token.\n\n"
+                "Either TELEGRAM_BOT_TOKEN is wrong, or it was revoked in @BotFather.\n"
+                "It looks like 8134567890:AAHdq... - digits, a colon, then ~35 characters.\n"
+                "Send @BotFather /mybots -> your bot -> API Token to see the current one."
+            )
+        raise SystemExit(f"Telegram refused {method}: {detail}")
     return body["result"]
 
 
@@ -47,14 +57,46 @@ def find_chat_id(token: str) -> None:
     Telegram won't tell you your own id directly - you have to send the bot a
     message first, then read it back off the update. Say anything to the bot,
     then run this.
+
+    When there's nothing to read, "no messages yet" is a useless answer on its
+    own: it looks identical whether you messaged the wrong bot, a webhook is
+    collecting the updates instead, or you simply haven't sent anything. So
+    each of those is checked and named before we give up.
     """
+    # Which bot does this token actually belong to? If the answer isn't the
+    # bot you've been messaging, that's the whole problem - and it is
+    # invisible otherwise, because both look like silence.
+    bot = api("getMe", token)
+    handle = bot.get("username", "?")
+    print(f"\nThis token belongs to:  @{handle}  ({bot.get('first_name', '')})")
+
+    # A webhook takes delivery of every update, and then getUpdates is refused
+    # outright (409). Say so plainly rather than letting the API error surface.
+    info = api("getWebhookInfo", token)
+    if info.get("url"):
+        raise SystemExit(
+            f"\nA webhook is already set: {info['url']}\n"
+            "Telegram delivers your messages there, so there is nothing left for\n"
+            "this command to read. Clear it, find your id, then set it again:\n\n"
+            "    python tools/telegram_setup.py --delete-webhook\n"
+            "    python tools/telegram_setup.py --find-chat-id\n"
+            f"    python tools/telegram_setup.py --url {info['url']}\n"
+        )
+
     updates = api("getUpdates", token)
     if not updates:
         raise SystemExit(
-            "No messages yet. Open Telegram, find your bot, send it 'hello', "
-            "then run this again.\n\n"
-            "(If you've already set a webhook, Telegram delivers updates there "
-            "instead - run with --delete-webhook first.)"
+            f"\nNo messages waiting for @{handle}.\n\n"
+            "Most likely one of these:\n\n"
+            f"  1. You haven't messaged @{handle} yet. Open this link on your\n"
+            f"     phone, tap Start, and send it 'hello':\n\n"
+            f"         https://t.me/{handle}\n\n"
+            "  2. You messaged a DIFFERENT bot. Check the @name at the top of\n"
+            f"     the Telegram chat you typed into - it has to read @{handle}\n"
+            "     exactly. Making two bots while picking a free username is an\n"
+            "     easy way to end up talking to the first one.\n\n"
+            "  3. The message is more than 24 hours old. Telegram drops\n"
+            "     undelivered updates after that - just send another.\n"
         )
 
     seen = {}
@@ -64,6 +106,12 @@ def find_chat_id(token: str) -> None:
         if message.get("chat", {}).get("id"):
             seen[message["chat"]["id"]] = sender.get("username") or sender.get("first_name", "?")
 
+    if not seen:
+        raise SystemExit(
+            f"\n{len(updates)} update(s) arrived, but none was a message with a chat id.\n"
+            "Send the bot a plain text message rather than tapping a button.\n"
+        )
+
     print("\nChat ids that have messaged this bot:\n")
     for chat_id, name in seen.items():
         print(f"  {chat_id}   ({name})")
@@ -71,16 +119,26 @@ def find_chat_id(token: str) -> None:
 
 
 def show_status(token: str) -> None:
+    bot = api("getMe", token)
     info = api("getWebhookInfo", token)
+
+    print(f"\nBot:  @{bot.get('username', '?')}")
     print("\nWebhook status\n")
-    print(f"  URL:            {info.get('url') or '(none set)'}")
+    print(f"  URL:             {info.get('url') or '(none set)'}")
     print(f"  Pending updates: {info.get('pending_update_count', 0)}")
-    print(f"  Secret token:   {'set' if info.get('has_custom_certificate') is not None else '?'}")
+    # Telegram does not report the secret token back - it can only be checked
+    # by whether deliveries are actually succeeding, below. (An earlier version
+    # of this line reported has_custom_certificate, which is a different thing
+    # entirely and was always printed as "set".)
+    print(f"  Max connections: {info.get('max_connections', '?')}")
 
     if info.get("last_error_message"):
         print(f"\n  ⚠️  Last error: {info['last_error_message']}")
         print("      That's Telegram failing to reach your Worker. Check the URL,")
-        print("      and that TELEGRAM_WEBHOOK_SECRET matches on both sides.")
+        print("      and that TELEGRAM_WEBHOOK_SECRET matches on both sides -")
+        print("      a mismatch shows up here as 401 Unauthorized.")
+    elif not info.get("url"):
+        print("\n  No webhook set yet - run with --url once the Worker is deployed.")
     else:
         print("\n  No delivery errors. ✅")
     print()
