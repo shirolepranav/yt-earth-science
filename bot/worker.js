@@ -156,10 +156,31 @@ async function sendStatus(env) {
     { headers },
   );
 
+  // A rejected request and an empty repo are completely different problems, and
+  // reporting both as "no runs yet" hides a broken token behind a healthy-looking
+  // answer - you'd only find out when a real command quietly did nothing.
   if (!listing.ok) {
+    const reason = {
+      401: "GITHUB_TOKEN is wrong or expired.",
+      403: "GITHUB_TOKEN lacks Contents access to this repo.",
+      404: `Can't see ${env.GITHUB_REPO} — check GITHUB_REPO is "owner/repo", and that the token covers it.`,
+    }[listing.status];
+
+    // 404 with no runs/ folder yet is the one benign case: the repo is fine,
+    // it just has not produced a run. Tell them apart by asking for the repo.
+    if (listing.status === 404) {
+      const repo = await fetch(`https://api.github.com/repos/${env.GITHUB_REPO}`, { headers });
+      if (repo.ok) {
+        return telegram(env, "sendMessage", {
+          chat_id: env.TELEGRAM_CHAT_ID,
+          text: "No runs yet. Send “new video” to start one.",
+        });
+      }
+    }
+
     return telegram(env, "sendMessage", {
       chat_id: env.TELEGRAM_CHAT_ID,
-      text: "No runs yet. Send “new video” to start one.",
+      text: `⚠️ GitHub returned ${listing.status}.\n\n${reason || "Unexpected response."}\n\nFix it with: wrangler secret put <NAME>`,
     });
   }
 
