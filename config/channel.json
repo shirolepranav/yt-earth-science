@@ -62,7 +62,7 @@
     "usd_per_million_output": 50
   },
   "visuals": {
-    "_comment": "AI visuals via fal.ai (FAL_KEY) - the LAST resort on this channel, for scenes no camera recorded (deep-time landscapes) and shots no library could fill. Real footage from NASA, Wikimedia Commons, Pexels and Pixabay comes first (pipeline/stock.py). Every AI shot gets a keyframe image; the highest-priority ones are animated until the estimate hits budget_usd, the rest get depth-parallax camera moves. Cached by content hash in runs/<id>/assets/gen/. Prices as of 14 Sep 2026.",
+    "_comment": "AI visuals via fal.ai (FAL_KEY) - the LAST resort on this channel, for scenes no camera recorded and shots no library could fill. Real footage from NASA, Wikimedia Commons, Pexels and Pixabay comes first (pipeline/stock.py). Every AI shot gets a keyframe; the highest-priority ones are animated until the estimate hits budget_usd, the rest get depth-parallax moves. Cached by content hash, so reruns cost nothing. PRICES CHECKED 20 Sep 2026 on fal.ai: minimax h3-max is $0.025/s at 480P, $0.04/s at 768P and $0.08/s at 1080P on a launch promotion that ends 30 Sep 2026, after which they become $0.05, $0.08 and $0.16 - double the usd_per_second below then, or the cap will under-count. Seedream lite is $0.035 an image at any size up to 3072x3072, so a sharper keyframe costs nothing extra. The video stays 1080p: the model cannot output 4K, and most real footage is 1080p, so a 4K render would upscale most of the screen for 4x the render time.",
     "budget_usd": 5,
     "retry_allowance": 1.2,
     "image_model": "fal-ai/bytedance/seedream/v5/lite/text-to-image",
@@ -77,7 +77,7 @@
       "fal-ai/image-preprocessors/depth-anything/v2": 0.005
     },
     "usd_per_second": {
-      "minimax/h3-max/image-to-video": 0.08,
+      "minimax/h3-max/image-to-video": 0.04,
       "gemini-omni-1.1-flash": 0.15
     }
   },
