@@ -39,6 +39,7 @@ INTENTS = {
     "pick_thumbnail":  "Use thumbnail a, b or c",
     "redo":            "Re-run one stage (thumbnail, stock, visuals, narrate, render)",
     "publish":         "Make the video public on YouTube",
+    "retry":           "Run the stage that just failed again",
     "status":          "Where is the current run up to?",
     "cancel":          "Abandon the current run",
     "question":        "A question or remark that needs an answer, not an action",
@@ -86,6 +87,7 @@ def match_literally(text: str) -> dict | None:
         "status": "status", "where are we": "status", "?": "status",
         "cancel": "cancel", "stop": "cancel", "abandon": "cancel",
         "new": "new", "new video": "new", "start": "new", "make a video": "new",
+        "retry": "retry", "try again": "retry", "again": "retry",
     }
     if clean in exact:
         return {"intent": exact[clean], "args": {}}

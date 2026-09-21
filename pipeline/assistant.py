@@ -162,6 +162,37 @@ def present_review(run: Run) -> None:
 # The fast handlers
 # ---------------------------------------------------------------------------
 
+def resolve_retry(run: Run | None) -> tuple[str, dict]:
+    """Turn "retry" into whatever actually needs re-running.
+
+    The workflow decides which job to start from the intent alone, so "retry"
+    has to become a concrete intent before it gets there. Which one depends on
+    how far the run got, and the run folder already records that: each stage
+    writes its output before the next begins, so the first missing file is the
+    stage that failed.
+
+    Re-running is safe. Finished stages are skipped by `run.is_done`, so a
+    retry picks up where it stopped rather than paying for the whole thing
+    again.
+    """
+    if run is None or not run.path("topics.json").exists():
+        # Either nothing has ever run, or the topic engine itself failed.
+        return "new", {}
+
+    if not run.path("chosen_topic.json").exists():
+        # Topics exist and are waiting on you - there's nothing to re-run.
+        return "waiting_for_pick", {}
+
+    if not run.path("script.txt").exists():
+        # Research or writing fell over. Re-run it with the topic you chose.
+        rank = run.read_json("chosen_topic.json").get("rank")
+        return "pick", {"number": int(rank)} if rank else {}
+
+    # The script exists, so the build is what broke. Finished stages are
+    # already recorded, so this resumes rather than restarting.
+    return "approve_script", {}
+
+
 def do_status(run: Run | None) -> None:
     if not run:
         chat.send("Nothing in progress. Reply <code>new video</code> to start one.",
@@ -287,6 +318,18 @@ def route(text: str) -> dict:
     decision = brain.understand(text, run)
     intent, args = decision["intent"], decision.get("args", {})
     reply = decision.get("reply", "")
+
+    # "retry" isn't a job in its own right - work out what it means here, so
+    # the workflow still gates on a concrete intent.
+    if intent == "retry":
+        intent, args = resolve_retry(run)
+        decision["intent"], decision["args"] = intent, args
+        if intent == "waiting_for_pick":
+            chat.send("Nothing failed — the topics are waiting for you. "
+                      "Tap a number above, or send one.")
+            log("routed to: waiting_for_pick")
+            return decision
+        reply = f"Retrying from {intent.replace('_', ' ')}."
 
     # Acknowledge slow work immediately - otherwise you're staring at nothing
     # for the twenty minutes a script takes.
