@@ -1,0 +1,84 @@
+{
+  "topics": [
+    {
+      "rank": 1,
+      "title": "Doggerland: The Stone Age Land the Sea Drowned",
+      "core_question": "How much land did the rising sea swallow as the last ice age ended, and how do we know people lived on it?",
+      "why_they_click": "A whole inhabited landscape sits under the North Sea, and fishing nets keep dragging up its bones and peat.",
+      "data_source": "British Geological Survey North Sea seabed mapping; peer-reviewed Doggerland studies (Gaffney et al.); NOAA sea-level reconstructions",
+      "evidence": "\"ice age explained\" is the fastest-rising search term in the dossier, up 1680% over five years."
+    },
+    {
+      "rank": 2,
+      "title": "Why Ice Ages Run on a 100,000-Year Clock",
+      "core_question": "What sets the planet's ice-age rhythm, and why does the 100,000-year beat still not fully match the theory?",
+      "why_they_click": "Tiny wobbles in Earth's orbit pace the ice, but the biggest cycle is the one the maths explains worst.",
+      "data_source": "NOAA NCEI Paleoclimatology; NASA orbital-cycle explainers; peer-reviewed ice-core and Milankovitch studies",
+      "evidence": "\"ice age explained\" is up 1680% over five years, the strongest rising signal available."
+    },
+    {
+      "rank": 3,
+      "title": "Hunga Tonga 2022: The Eruption That Circled the Earth",
+      "core_question": "What made the January 2022 Hunga Tonga eruption send a pressure wave around the world and water into the stratosphere?",
+      "why_they_click": "An eruption that broke the ocean surface and rang the planet's atmosphere like a bell, captured on satellite from the first second.",
+      "data_source": "NASA Earth Observatory; NOAA satellite and pressure records; Smithsonian Global Volcanism Program",
+      "evidence": "\"volcano eruption explained\" is rising, up 283% over five years."
+    },
+    {
+      "rank": 4,
+      "title": "The 1811 Earthquake That Made the Mississippi Run Backwards",
+      "core_question": "Why did a series of great earthquakes strike the middle of a continent in 1811-1812, and what does the record say about the hazard there today?",
+      "why_they_click": "The largest quakes east of the Rockies hit a frontier almost nobody was watching, and eyewitnesses said the river reversed.",
+      "data_source": "USGS Earthquake Hazards Program New Madrid studies; USGS historical earthquake accounts",
+      "evidence": "Serves both \"biggest earthquake in history\" (up 47%) and \"plate tectonics explained\" (up 571%) as an intraplate mystery."
+    },
+    {
+      "rank": 5,
+      "title": "Toba: The Supervolcano That Blocked the Sun",
+      "core_question": "What did the Toba supereruption roughly 74,000 years ago do to the climate, and did it really push early humans through a bottleneck?",
+      "why_they_click": "The largest known eruption of the last 100,000 years, with a live scientific argument over how much damage it actually did.",
+      "data_source": "Smithsonian Global Volcanism Program; peer-reviewed Toba tephra and climate studies",
+      "evidence": "\"supervolcano\" is rising, up 38% over five years, and the debate gives the video a genuine unsettled question."
+    },
+    {
+      "rank": 6,
+      "title": "Why the Mariana Trench Is 11 Kilometres Deep",
+      "core_question": "How does one plate bending under another carve the deepest place on Earth, and what does that same process do at the surface?",
+      "why_they_click": "The deepest point on the planet is a side effect of the same subduction that produces the largest earthquakes and tsunamis.",
+      "data_source": "NOAA Ocean Exploration bathymetry; USGS subduction zone research; peer-reviewed Challenger Deep depth measurements",
+      "evidence": "\"plate tectonics explained\" is up 571% over five years, the second-strongest rising term."
+    },
+    {
+      "rank": 7,
+      "title": "Pinatubo 1991: The Eruption That Cooled the Earth",
+      "core_question": "How much did the 1991 Pinatubo eruption cool the planet, and how did scientists predict the cooling before it showed up in the temperature record?",
+      "why_they_click": "A single eruption measurably dropped global temperatures for two years, and the forecast of it was one of volcanology's cleanest wins.",
+      "data_source": "USGS Volcano Hazards Program and Pinatubo reports; NASA Earth Observatory stratospheric aerosol records",
+      "evidence": "\"volcano eruption explained\" is rising, up 283% over five years."
+    },
+    {
+      "rank": 8,
+      "title": "The Younger Dryas: When the World Froze Again",
+      "core_question": "What sent the Northern Hemisphere back into near-glacial cold around 12,900 years ago, and why do scientists still argue about the cause?",
+      "why_they_click": "The thaw was interrupted for more than a thousand years, and the competing explanations include an ocean shutdown and a contested impact.",
+      "data_source": "NOAA NCEI Paleoclimatology; peer-reviewed Younger Dryas and North Atlantic circulation studies",
+      "evidence": "\"ice age explained\" is up 1680% over five years, and the unsettled cause satisfies the rule on naming disagreement."
+    },
+    {
+      "rank": 9,
+      "title": "Lisbon 1755: The Quake That Invented Seismology",
+      "core_question": "How did the earthquake, tsunami and fire that destroyed Lisbon in 1755 change both European thought and the way we study earthquakes?",
+      "why_they_click": "Three disasters in one day, on a holy day, in a city of churches, that forced Europe to ask what the ground actually is.",
+      "data_source": "USGS Earthquake Hazards Program historical earthquake catalogue; peer-reviewed 1755 Lisbon earthquake and tsunami studies",
+      "evidence": "\"biggest earthquake in history\" is rising, up 47% over five years."
+    },
+    {
+      "rank": 10,
+      "title": "The 1964 Alaska Quake: Four Minutes of Shaking",
+      "core_question": "What did the magnitude 9.2 Alaska earthquake of 1964 do in four minutes, and how did it teach scientists how megathrusts behave?",
+      "why_they_click": "The second-largest earthquake ever recorded, whose ground measurements are still the reference for how a great fault breaks.",
+      "data_source": "USGS Earthquake Hazards Program; Alaska Earthquake Center (University of Alaska Fairbanks)",
+      "evidence": "\"biggest earthquake in history\" is rising, up 47% over five years, and this is the strongest record not already covered."
+    }
+  ]
+}
