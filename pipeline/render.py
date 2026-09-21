@@ -132,7 +132,11 @@ def render(run: Run, output_name: str = "video.mp4") -> Path:
         # 30s default to load textures.
         "--timeout=120000",
         "--muted",  # the narration is muxed in once at the end, sample-accurate
-        "--log=error",
+        # "error" hid Remotion's own frame counter, which left a multi-hour
+        # render with no way to tell "slow" from "stuck" - not in the chat, and
+        # not even in the CI log. "info" prints the frame progress that makes
+        # the render rate measurable.
+        f"--log={os.getenv('REMOTION_LOG', 'info')}",
     ]
     # Some environments already have a Chromium installed. Pointing Remotion at
     # it skips a ~150 MB download on every fresh machine.
