@@ -22,6 +22,7 @@ from __future__ import annotations
 
 import argparse
 import sys
+import time
 from pathlib import Path
 
 import requests
@@ -31,9 +32,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from pipeline.common import log, secret  # noqa: E402
 
 
-def api(method: str, token: str, **params) -> dict:
+def api(method: str, token: str, http_timeout: int = 30, **params) -> dict:
     response = requests.post(
-        f"https://api.telegram.org/bot{token}/{method}", json=params, timeout=30
+        f"https://api.telegram.org/bot{token}/{method}", json=params, timeout=http_timeout
     )
     body = response.json()
     if not body.get("ok"):
@@ -49,6 +50,64 @@ def api(method: str, token: str, **params) -> dict:
             )
         raise SystemExit(f"Telegram refused {method}: {detail}")
     return body["result"]
+
+
+def chat_id_from(update: dict) -> tuple[int, str] | None:
+    """Pull (chat_id, who) out of an update, or None if it carries neither."""
+    message = update.get("message") or update.get("edited_message") or {}
+    chat = message.get("chat") or {}
+    if not chat.get("id"):
+        return None
+    sender = message.get("from") or {}
+    return chat["id"], sender.get("username") or sender.get("first_name") or "?"
+
+
+def watch_for_chat_id(token: str, seconds: int = 120) -> None:
+    """Hold the line open and print the chat id the moment a message arrives.
+
+    This exists because "nothing is queued" and "you sent nothing" are
+    indistinguishable after the fact. Watching live removes the ordering
+    question entirely: start this, then send the message, and either it turns
+    up - in which case the bot and the token match - or it does not, which
+    means the message is reaching a different bot.
+
+    Long polling, so Telegram answers the instant something lands rather than
+    on the next poll.
+    """
+    bot = api("getMe", token)
+    handle = bot.get("username", "?")
+
+    print(f"\nWatching @{handle} for {seconds} seconds.\n")
+    print(f"  Open  https://t.me/{handle}  and send it any message now.")
+    print("  (Ctrl-C to stop.)\n")
+
+    deadline = time.monotonic() + seconds
+    offset = None
+
+    while time.monotonic() < deadline:
+        params = {"timeout": 20}
+        if offset is not None:
+            params["offset"] = offset
+        # The HTTP read must outlast the long poll, or requests gives up first.
+        updates = api("getUpdates", token, http_timeout=40, **params)
+
+        for update in updates:
+            offset = update["update_id"] + 1
+            found = chat_id_from(update)
+            if found:
+                chat_id, who = found
+                print(f"  ✅ Message from {who}\n")
+                print(f"     TELEGRAM_CHAT_ID = {chat_id}\n")
+                print("  Put that in GitHub Secrets and in the Worker.\n")
+                return
+            print("  ...an update arrived, but it carried no chat id. Send plain text.")
+
+    raise SystemExit(
+        f"\nNothing arrived in {seconds} seconds.\n\n"
+        f"That means your message is not reaching @{handle}. The chat you are\n"
+        f"typing into belongs to some other bot - open https://t.me/{handle}\n"
+        "directly (don't use Telegram search) and send from the chat it opens.\n"
+    )
 
 
 def find_chat_id(token: str) -> None:
@@ -96,7 +155,10 @@ def find_chat_id(token: str) -> None:
             "     exactly. Making two bots while picking a free username is an\n"
             "     easy way to end up talking to the first one.\n\n"
             "  3. The message is more than 24 hours old. Telegram drops\n"
-            "     undelivered updates after that - just send another.\n"
+            "     undelivered updates after that - just send another.\n\n"
+            "To settle which it is, watch for one live:\n\n"
+            "    python tools/telegram_setup.py --watch\n\n"
+            "then send the message while it's running.\n"
         )
 
     seen = {}
@@ -150,10 +212,15 @@ def main() -> None:
     parser.add_argument("--secret", help="TELEGRAM_WEBHOOK_SECRET. Read from the environment if omitted.")
     parser.add_argument("--status", action="store_true", help="Just show the current webhook.")
     parser.add_argument("--find-chat-id", action="store_true", help="Print your chat id.")
+    parser.add_argument("--watch", action="store_true",
+                        help="Wait for a message and print its chat id as it arrives.")
     parser.add_argument("--delete-webhook", action="store_true", help="Unhook the bot.")
     args = parser.parse_args()
 
     token = secret("TELEGRAM_BOT_TOKEN")
+
+    if args.watch:
+        return watch_for_chat_id(token)
 
     if args.find_chat_id:
         return find_chat_id(token)
