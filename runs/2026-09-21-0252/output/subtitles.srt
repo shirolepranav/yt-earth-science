@@ -1,0 +1,819 @@
+1
+00:00:00,000 --> 00:00:03,146
+Hi, welcome to another
+episode of the Earth Docs.
+
+2
+00:00:04,261 --> 00:00:06,130
+Here is a fact that sounds backwards:
+
+3
+00:00:06,827 --> 00:00:10,844
+the ice sheets of the Northern Hemisphere
+were not destroyed by a catastrophe.
+
+4
+00:00:11,447 --> 00:00:13,735
+They were destroyed by a
+slightly warmer summer.
+
+5
+00:00:14,431 --> 00:00:17,484
+According to a 2013 study
+in the journal Nature,
+
+6
+00:00:17,809 --> 00:00:20,294
+once the North American ice
+sheet had grown large enough,
+
+7
+00:00:20,619 --> 00:00:24,613
+a moderate increase in summer sunlight
+pushed its mass balance negative,
+
+8
+00:00:24,938 --> 00:00:27,934
+and it retreated almost completely
+within a few thousand years.
+
+9
+00:00:28,746 --> 00:00:31,869
+The bigger the ice got, the
+readier it was to fail.
+
+10
+00:00:32,566 --> 00:00:35,352
+That pattern has been running for
+two and a half million years,
+
+11
+00:00:35,434 --> 00:00:37,222
+according to UC Santa Barbara.
+
+12
+00:00:37,825 --> 00:00:39,056
+The growth was slow.
+
+13
+00:00:39,439 --> 00:00:40,728
+The endings were fast.
+
+14
+00:00:41,424 --> 00:00:44,548
+That lopsided rhythm, long
+build and sudden failure,
+
+15
+00:00:44,722 --> 00:00:47,938
+is written into sea level, into
+the shape of the continents,
+
+16
+00:00:48,147 --> 00:00:49,888
+into where you are allowed to live.
+
+17
+00:00:50,213 --> 00:00:52,802
+You are standing in one of
+the warm intervals right now.
+
+18
+00:00:53,406 --> 00:00:57,075
+The thing driving the whole pattern is
+a clock nobody has finished reading.
+
+19
+00:00:57,516 --> 00:01:01,951
+So let's take it apart, in order,
+and see where the knowing stops.
+
+20
+00:01:02,764 --> 00:01:04,540
+Earth does not spin upright.
+
+21
+00:01:05,051 --> 00:01:07,826
+Its axis leans, and the lean changes.
+
+22
+00:01:08,523 --> 00:01:13,247
+According to NASA Science, over the last
+million years that tilt has swung between
+
+23
+00:01:13,294 --> 00:01:16,463
+twenty-two point one degrees and
+twenty-four point five degrees and back
+
+24
+00:01:16,510 --> 00:01:20,004
+again, on a cycle that takes
+about forty-one thousand years.
+
+25
+00:01:20,701 --> 00:01:23,859
+Today the axis sits at
+twenty-three point four degrees,
+
+26
+00:01:24,068 --> 00:01:28,074
+roughly halfway between the extremes,
+and it is very slowly decreasing.
+
+27
+00:01:28,770 --> 00:01:33,194
+NASA notes that it was last at maximum
+tilt about ten thousand years ago,
+
+28
+00:01:33,519 --> 00:01:36,340
+and will reach its minimum about
+ten thousand years from now.
+
+29
+00:01:37,454 --> 00:01:38,778
+Why does a lean matter?
+
+30
+00:01:39,475 --> 00:01:43,724
+Because it changes where the sunlight
+lands, not how much the planet gets.
+
+31
+00:01:44,676 --> 00:01:49,332
+A larger tilt means each hemisphere leans
+further into the Sun in summer and further
+
+32
+00:01:49,390 --> 00:01:53,871
+away in winter, so the seasons sharpen,
+and the effect is strongest at high
+
+33
+00:01:53,941 --> 00:01:58,585
+northern latitudes. Those are the
+latitudes where ice sheets live or die.
+
+34
+00:01:59,537 --> 00:02:04,564
+NASA states it plainly: larger tilt
+angles favour periods of deglaciation.
+
+35
+00:02:05,260 --> 00:02:09,823
+Two point four degrees of total travel,
+spread across forty-one thousand years.
+
+36
+00:02:10,636 --> 00:02:15,570
+In a single human lifetime, the axis moves
+so little you would need an instrument to
+
+37
+00:02:15,640 --> 00:02:19,622
+notice. And it helps decide
+whether ice sits on top of Canada.
+
+38
+00:02:20,133 --> 00:02:22,745
+But the tilt has been swinging
+for millions of years.
+
+39
+00:02:23,349 --> 00:02:26,948
+If it were the whole story, the ice
+ages would beat like a metronome.
+
+40
+00:02:27,645 --> 00:02:31,441
+Warm, cold, warm, cold, every
+forty-one thousand years.
+
+41
+00:02:32,138 --> 00:02:35,261
+They do not. So what does the wobble do?
+
+42
+00:02:35,957 --> 00:02:39,963
+Stand outside on the third of January and
+you are closer to the Sun than at any
+
+43
+00:02:40,009 --> 00:02:43,783
+other moment of the year, about five
+point one million kilometres closer,
+
+44
+00:02:43,933 --> 00:02:46,801
+according to NASA. You are also freezing.
+
+45
+00:02:47,405 --> 00:02:52,060
+That is precession, and it is the reason
+the seasons and the orbit do not line up
+
+46
+00:02:52,107 --> 00:02:53,307
+the way you would assume.
+
+47
+00:02:53,814 --> 00:02:56,542
+It comes in two numbers,
+and people mix them up.
+
+48
+00:02:57,146 --> 00:03:00,849
+NASA Science puts the wobble of
+the axis against the fixed stars,
+
+49
+00:03:01,174 --> 00:03:05,714
+axial precession, at twenty-five thousand
+seven hundred seventy-one point five
+
+50
+00:03:05,760 --> 00:03:09,464
+years. But the seasons cycle
+against the orbit faster,
+
+51
+00:03:09,789 --> 00:03:13,701
+in roughly twenty-one thousand years,
+because the ellipse itself is rotating as
+
+52
+00:03:13,748 --> 00:03:19,181
+the axis turns. A Milankovitch cycles
+reference hosted by Harvard's school of
+
+53
+00:03:19,239 --> 00:03:21,202
+engineering gives the same picture.
+
+54
+00:03:21,898 --> 00:03:25,068
+About twenty-six thousand years
+for the full turn of the axis.
+
+55
+00:03:25,579 --> 00:03:28,969
+About twenty-one thousand years for the
+beat between the seasons and the orbit.
+
+56
+00:03:29,665 --> 00:03:33,392
+That distinction matters the moment you
+try to match the cycle to the rock record.
+
+57
+00:03:34,205 --> 00:03:39,127
+Watch what it does. NASA says
+perihelion, our closest approach,
+
+58
+00:03:39,278 --> 00:03:42,459
+currently falls around the
+third of January, and aphelion,
+
+59
+00:03:42,552 --> 00:03:45,060
+the farthest point, around
+the fourth of July.
+
+60
+00:03:45,757 --> 00:03:50,064
+That means each January, about six
+point eight percent more incoming solar
+
+61
+00:03:50,110 --> 00:03:52,874
+radiation reaches Earth
+than it does each July.
+
+62
+00:03:53,384 --> 00:03:57,529
+When the orbit is at its most elliptical,
+that gap widens to about twenty-three
+
+63
+00:03:57,564 --> 00:04:01,256
+percent. Precession does not
+change the total sunlight.
+
+64
+00:04:01,581 --> 00:04:04,344
+It changes the timing and the
+intensity of the seasons,
+
+65
+00:04:04,623 --> 00:04:08,721
+and it decides whether the northern summer
+peak lands near the Sun or far from it.
+
+66
+00:04:09,417 --> 00:04:13,516
+Now you have two real cycles, forty-one
+thousand years and twenty-one thousand
+
+67
+00:04:13,574 --> 00:04:15,559
+years, both measurable in the rock.
+
+68
+00:04:16,256 --> 00:04:18,334
+Neither of them is one
+hundred thousand years.
+
+69
+00:04:19,286 --> 00:04:22,061
+So where does the one hundred
+thousand year beat come from?
+
+70
+00:04:22,757 --> 00:04:24,034
+The problem has a date.
+
+71
+00:04:24,731 --> 00:04:27,680
+During a stretch called the
+mid-Pleistocene transition,
+
+72
+00:04:28,063 --> 00:04:32,173
+roughly one point two five million to
+seven hundred thousand years ago according
+
+73
+00:04:32,208 --> 00:04:37,003
+to a 2023 study in Nature Geoscience,
+the rhythm of the ice ages changed.
+
+74
+00:04:37,700 --> 00:04:41,554
+Before it, the cycles were dominated
+by forty-one thousand years.
+
+75
+00:04:42,251 --> 00:04:46,453
+After it, strong one hundred thousand
+year power appears in the climate record.
+
+76
+00:04:47,150 --> 00:04:51,086
+And according to a study in Nature, that
+switch happened without any apparent
+
+77
+00:04:51,132 --> 00:04:53,919
+change in the insolation forcing.
+
+78
+00:04:54,268 --> 00:04:58,204
+Of the three classic Milankovitch
+parameters, only eccentricity has
+
+79
+00:04:58,285 --> 00:05:00,967
+variations anywhere near
+one hundred thousand years,
+
+80
+00:05:01,408 --> 00:05:05,344
+and even there the reference gives a set
+of terms between ninety-five thousand and
+
+81
+00:05:05,425 --> 00:05:09,512
+one hundred thirty-six thousand years
+that only loosely combine into the beat.
+
+82
+00:05:10,626 --> 00:05:15,375
+The Milankovitch reference gives the range
+as an eccentricity of zero point zero zero
+
+83
+00:05:15,444 --> 00:05:20,541
+five to zero point zero five eight, with
+a mean of zero point zero two eight.
+
+84
+00:05:21,145 --> 00:05:23,954
+Today it sits at zero
+point zero one seven.
+
+85
+00:05:24,558 --> 00:05:27,960
+And there is the catch that has
+annoyed researchers for fifty years.
+
+86
+00:05:28,656 --> 00:05:32,174
+Eccentricity barely changes the
+total energy Earth receives.
+
+87
+00:05:32,871 --> 00:05:37,700
+NASA Science says the change in global
+annual insolation from the eccentricity
+
+88
+00:05:37,758 --> 00:05:43,018
+cycle is very small, and calls
+eccentricity a relatively minor factor in
+
+89
+00:05:43,087 --> 00:05:48,010
+seasonal climate. So the loudest rhythm in
+the ice record appears to be paced by the
+
+90
+00:05:48,068 --> 00:05:50,413
+quietest knob in the orbital system.
+
+91
+00:05:51,110 --> 00:05:53,560
+How does a quiet knob write a loud beat?
+
+92
+00:05:54,372 --> 00:05:58,819
+A piston corer comes up over the rail of
+a research ship in the North Atlantic.
+
+93
+00:05:59,516 --> 00:06:04,845
+Inside the tube is a column of grey mud,
+layer on layer of microscopic shells that
+
+94
+00:06:04,915 --> 00:06:08,270
+sank to the seafloor over
+hundreds of thousands of years.
+
+95
+00:06:09,384 --> 00:06:13,053
+Each layer records how much of the
+planet's water was locked in ice at that
+
+96
+00:06:13,123 --> 00:06:18,881
+moment. Here's how we know: in 2025, a
+team led by Stephen Barker at Cardiff
+
+97
+00:06:18,951 --> 00:06:22,318
+University published an analysis
+in the journal Science.
+
+98
+00:06:23,130 --> 00:06:25,499
+They took a million year
+record of climate change,
+
+99
+00:06:25,824 --> 00:06:30,433
+changes in the size of Northern Hemisphere
+ice sheets and in deep ocean temperature,
+
+100
+00:06:30,758 --> 00:06:33,184
+and matched it against the
+shape of Earth's orbit,
+
+101
+00:06:33,428 --> 00:06:35,193
+its wobble, and its tilt.
+
+102
+00:06:36,307 --> 00:06:39,036
+Then they did something different
+from everyone before them.
+
+103
+00:06:39,732 --> 00:06:42,647
+Instead of trying to date
+individual events precisely,
+
+104
+00:06:43,030 --> 00:06:45,897
+they looked at the shape of the climate
+record and asked how the orbital
+
+105
+00:06:45,955 --> 00:06:47,244
+parameters fit together.
+
+106
+00:06:48,196 --> 00:06:50,820
+According to UC Santa
+Barbara's report on the work,
+
+107
+00:06:51,099 --> 00:06:54,477
+the team found a clear imprint of the
+different orbital parameters on the
+
+108
+00:06:54,512 --> 00:06:59,318
+climate record. Every glaciation of
+the past nine hundred thousand years,
+
+109
+00:06:59,493 --> 00:07:02,140
+the study reports, follows
+the same sequence.
+
+110
+00:07:02,836 --> 00:07:06,435
+Deglaciation begins with the first
+precession peak that starts while
+
+111
+00:07:06,493 --> 00:07:10,719
+obliquity is rising, and that peak
+arrives immediately after a minimum in
+
+112
+00:07:10,812 --> 00:07:15,550
+eccentricity. Glacial inception then
+follows with the next decrease in
+
+113
+00:07:15,596 --> 00:07:19,567
+obliquity. One type of orbital
+change ends the ice ages.
+
+114
+00:07:20,170 --> 00:07:21,370
+Another brings them back.
+
+115
+00:07:22,063 --> 00:07:23,263
+Notice what that does.
+
+116
+00:07:24,315 --> 00:07:27,287
+Eccentricity never has to
+force the climate directly.
+
+117
+00:07:27,891 --> 00:07:32,036
+It only has to sit at its minimum,
+damping the amplitude of precession,
+
+118
+00:07:32,210 --> 00:07:36,889
+and let whichever precession peaks survive
+become the ones that can end an ice age.
+
+119
+00:07:38,004 --> 00:07:41,916
+On this reading, the one hundred thousand
+year beat is a grouping rather than a
+
+120
+00:07:41,963 --> 00:07:46,885
+pulse, a counting out of precession
+cycles, gated by eccentricity.
+
+121
+00:07:47,698 --> 00:07:50,635
+Barker's team called the
+pattern largely deterministic,
+
+122
+00:07:50,961 --> 00:07:54,536
+and used it to predict when each
+interglacial of the past million years
+
+123
+00:07:54,583 --> 00:07:56,905
+would occur, and how long it would last.
+
+124
+00:07:57,718 --> 00:07:59,586
+But that is one strong result.
+
+125
+00:08:00,190 --> 00:08:01,792
+It is not a settled field.
+
+126
+00:08:02,489 --> 00:08:06,413
+The one hundred thousand year beat has a
+habit of outrunning every explanation we
+
+127
+00:08:06,483 --> 00:08:12,137
+hand it. A 2025 paper in Nature
+Communications traces the same cycles to
+
+128
+00:08:12,253 --> 00:08:17,291
+internal carbon, a coupling between ice
+volume and the carbon cycle that recurs on
+
+129
+00:08:17,338 --> 00:08:19,985
+a two point four million
+year eccentricity rhythm,
+
+130
+00:08:20,426 --> 00:08:24,014
+and that the authors argue amplifies
+the one hundred thousand year signal.
+
+131
+00:08:24,710 --> 00:08:27,763
+Others back a hypothesis
+called obliquity skipping,
+
+132
+00:08:28,042 --> 00:08:33,232
+described in that 2023 Nature Geoscience
+paper, which holds that ice ages simply
+
+133
+00:08:33,290 --> 00:08:37,086
+terminate every two or three of the
+forty-one thousand year cycles.
+
+134
+00:08:37,783 --> 00:08:39,896
+That averages out to
+about a hundred thousand.
+
+135
+00:08:40,709 --> 00:08:42,705
+Then there are the older candidates.
+
+136
+00:08:43,402 --> 00:08:48,255
+In 1997, Richard Muller and Gordon
+MacDonald proposed in the Proceedings of
+
+137
+00:08:48,289 --> 00:08:52,852
+the National Academy of Sciences that the
+one hundred thousand year cycle tracks the
+
+138
+00:08:52,945 --> 00:08:56,683
+inclination of Earth's orbital
+plane rather than eccentricity.
+
+139
+00:08:57,380 --> 00:09:01,084
+Other researchers have since called
+that an artifact of spectral analysis,
+
+140
+00:09:01,467 --> 00:09:04,485
+so treat it as a live
+disagreement, not an answer.
+
+141
+00:09:05,182 --> 00:09:10,185
+Nicholas Shackleton's 2000 paper in
+Science used oxygen isotopes trapped in
+
+142
+00:09:10,302 --> 00:09:14,005
+Antarctic ice to separate ice
+volume from deep water temperature.
+
+143
+00:09:14,702 --> 00:09:17,326
+He found that at the one
+hundred thousand year period,
+
+144
+00:09:17,569 --> 00:09:21,517
+carbon dioxide and temperature sit
+in phase with orbital eccentricity,
+
+145
+00:09:21,842 --> 00:09:24,222
+while ice volume lags behind all three.
+
+146
+00:09:24,918 --> 00:09:29,516
+That puts the carbon cycle, not the
+ice, closer to the driver's seat.
+
+147
+00:09:29,868 --> 00:09:32,701
+And then there is the record
+that refuses to cooperate.
+
+148
+00:09:33,142 --> 00:09:37,182
+The US Geological Survey studied
+a calcite core from Devils Hole,
+
+149
+00:09:37,507 --> 00:09:39,841
+a fault-created cave in the Nevada desert.
+
+150
+00:09:40,538 --> 00:09:44,601
+The core is thirty-six centimetres
+long, about the length of your forearm,
+
+151
+00:09:44,810 --> 00:09:47,272
+and it holds five hundred
+thousand years of climate,
+
+152
+00:09:47,597 --> 00:09:49,988
+dated by uranium and thorium isotopes.
+
+153
+00:09:50,685 --> 00:09:54,807
+According to the USGS, between three
+hundred fifty thousand and four hundred
+
+154
+00:09:54,853 --> 00:09:59,462
+fifty thousand years ago, when insolation
+in both hemispheres barely changed at all,
+
+155
+00:09:59,788 --> 00:10:03,236
+that record still shows a full
+glacial and interglacial cycle.
+
+156
+00:10:03,932 --> 00:10:08,634
+The USGS also notes that Devils Hole
+suggests the last four interglacials each
+
+157
+00:10:08,692 --> 00:10:12,512
+lasted around twenty thousand years,
+twice the commonly assumed length.
+
+158
+00:10:13,209 --> 00:10:18,050
+According to the USGS, this warm interval
+has run about ten thousand years,
+
+159
+00:10:18,433 --> 00:10:22,670
+though UC Santa Barbara dates the end
+of the last glaciation to around eleven
+
+160
+00:10:22,717 --> 00:10:24,284
+thousand seven hundred years ago.
+
+161
+00:10:24,888 --> 00:10:26,246
+So the clock is still running.
+
+162
+00:10:26,571 --> 00:10:30,321
+The Science team behind the
+2025 analysis estimates that,
+
+163
+00:10:30,379 --> 00:10:34,327
+on its own, Earth would shift toward
+another ice age in roughly ten thousand
+
+164
+00:10:34,385 --> 00:10:37,589
+years. Then they add
+the part that matters.
+
+165
+00:10:38,285 --> 00:10:41,176
+That transition is very
+unlikely to arrive on schedule,
+
+166
+00:10:41,501 --> 00:10:45,542
+because the carbon dioxide already in the
+atmosphere has diverted the climate from
+
+167
+00:10:45,588 --> 00:10:49,919
+its natural course. Which is the reason
+the beat is worth knowing at all.
+
+168
+00:10:50,615 --> 00:10:55,143
+Every coastline, every field, every city
+you have ever stood in was built during
+
+169
+00:10:55,178 --> 00:10:58,231
+the ten thousand years
+since the ice last let go,
+
+170
+00:10:58,556 --> 00:11:02,608
+in the gap between two beats, on a
+clock we only partly understand.

@@ -4,7 +4,22 @@
     "topics",
     "choose",
     "research",
-    "script"
+    "script",
+    "narrate",
+    "align",
+    "captions",
+    "storyboard",
+    "charts",
+    "stock",
+    "visuals",
+    "shotlist",
+    "audio",
+    "thumbnail"
   ],
-  "chat_stage": "script"
+  "chat_stage": "building",
+  "narration_seconds": 662.96,
+  "subtitle_path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-0252/output/subtitles.srt",
+  "subtitle_cues": 170,
+  "charts3d_spend_usd": 1.15,
+  "visuals_spend_usd": 0.61
 }
