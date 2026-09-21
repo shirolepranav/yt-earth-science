@@ -26,7 +26,7 @@
       "stroke_width": 12
     }
   },
-  "audioFile": "/home/user/yt-earth-science/runs/selftest/audio/narration_mixed.wav",
+  "audioFile": "/Users/pranav/coding/projects/yt-deep-earth/runs/selftest/audio/narration_mixed.wav",
   "shots": [
     {
       "type": "chart",
@@ -50,13 +50,13 @@
       "type": "card",
       "variant": "question",
       "text": "WHO PROFITS?",
-      "src": "/home/user/yt-earth-science/runs/selftest/assets/frame.jpg",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/selftest/assets/frame.jpg",
       "start": 8.68,
       "end": 12.68
     },
     {
       "type": "still",
-      "src": "/home/user/yt-earth-science/runs/selftest/assets/frame.jpg",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/selftest/assets/frame.jpg",
       "depth": null,
       "seed": 3,
       "start": 12.68,
