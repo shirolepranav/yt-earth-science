@@ -1,0 +1,730 @@
+1
+00:00:00,000 --> 00:00:03,146
+Hi, welcome to another
+episode of the Earth Docs.
+
+2
+00:00:04,098 --> 00:00:07,512
+In August 2014 you can stand
+where the water used to be,
+
+3
+00:00:07,790 --> 00:00:11,981
+on the eastern lobe of the southern Aral
+Sea, and there is nothing under your boots
+
+4
+00:00:12,016 --> 00:00:15,175
+but pale, cracked plates of clay
+running out to the horizon.
+
+5
+00:00:15,987 --> 00:00:20,654
+According to NASA's Earth Observatory,
+that basin went completely dry that month.
+
+6
+00:00:21,351 --> 00:00:26,332
+Fifty-four years earlier, in 1960, this
+was part of the fourth-largest lake on
+
+7
+00:00:26,378 --> 00:00:29,130
+Earth, and the towns on
+this shoreline fished it.
+
+8
+00:00:29,826 --> 00:00:33,507
+According to NASA's Earth Observatory,
+it has since lost ninety percent of its
+
+9
+00:00:33,565 --> 00:00:36,839
+volume and shrunk to roughly
+a tenth of its former size.
+
+10
+00:00:37,535 --> 00:00:39,939
+You are standing on a seabed
+you could once have sailed.
+
+11
+00:00:40,751 --> 00:00:42,063
+The Aral isn't a sea.
+
+12
+00:00:42,307 --> 00:00:47,055
+It's a lake with no outlet, fed by two
+rivers, the Amu Darya from the south and
+
+13
+00:00:47,102 --> 00:00:48,611
+the Syr Darya from the north.
+
+14
+00:00:49,308 --> 00:00:53,336
+Aladin and colleagues date its origin to
+roughly seventeen thousand years ago.
+
+15
+00:00:53,940 --> 00:00:55,879
+Water arrives, and water leaves.
+
+16
+00:00:56,482 --> 00:00:58,166
+But it leaves only as vapour.
+
+17
+00:00:58,410 --> 00:01:01,800
+That single fact is the hinge
+this whole story turns on.
+
+18
+00:01:02,496 --> 00:01:04,052
+So what happened to the rivers?
+
+19
+00:01:04,749 --> 00:01:08,545
+In the nineteen fifties, Soviet planners
+looked at those two rivers and saw
+
+20
+00:01:08,626 --> 00:01:09,973
+something other than a sea.
+
+21
+00:01:10,670 --> 00:01:14,942
+They saw cotton, "white gold", and
+a desert they intended to farm.
+
+22
+00:01:15,639 --> 00:01:16,904
+So they took the rivers.
+
+23
+00:01:17,601 --> 00:01:20,701
+The Kara Kum Canal opened
+in nineteen fifty-six.
+
+24
+00:01:21,305 --> 00:01:26,204
+According to Guy Fipps of Texas A&M
+University, that one canal diverted a
+
+25
+00:01:26,320 --> 00:01:29,281
+third of the Amu Darya's
+flow in the year it opened,
+
+26
+00:01:29,455 --> 00:01:32,706
+into newly irrigated land in
+Uzbekistan and Turkmenistan.
+
+27
+00:01:33,402 --> 00:01:34,738
+Not a third of a trickle.
+
+28
+00:01:35,248 --> 00:01:37,176
+A third of the river that fed the sea.
+
+29
+00:01:37,779 --> 00:01:39,382
+And the diversion kept growing.
+
+30
+00:01:40,078 --> 00:01:45,187
+Fipps records that roughly twenty dams
+and reservoirs and sixty major irrigation
+
+31
+00:01:45,233 --> 00:01:48,147
+schemes went up across the basin
+over the following decades.
+
+32
+00:01:48,844 --> 00:01:53,256
+Central Asian irrigation experts quoted
+in his work estimate that only twenty to
+
+33
+00:01:53,302 --> 00:01:57,482
+twenty-five percent of the water pulled
+from those rivers ever reached the crops.
+
+34
+00:01:58,179 --> 00:02:01,546
+The rest leaked from unlined
+canals or evaporated on the way.
+
+35
+00:02:02,358 --> 00:02:04,042
+So the sea's income was cut.
+
+36
+00:02:04,738 --> 00:02:07,432
+Its outgoings fell too, but never as fast.
+
+37
+00:02:08,128 --> 00:02:11,553
+Net evaporation declined;
+the rivers declined faster.
+
+38
+00:02:12,250 --> 00:02:16,777
+The deficit grew. What happens to
+a basin when fewer drops come in,
+
+39
+00:02:16,986 --> 00:02:19,367
+and every drop that leaves
+it leaves as vapour?
+
+40
+00:02:20,063 --> 00:02:24,150
+Stand on the shore in the nineteen sixties
+and you'd see nothing change from one year
+
+41
+00:02:24,196 --> 00:02:28,526
+to the next. It was the kind of shift a
+fisherman measured by where his boat sat
+
+42
+00:02:28,573 --> 00:02:33,495
+against the dock. But by nineteen seventy,
+the level had fallen past the range of
+
+43
+00:02:33,588 --> 00:02:36,119
+natural variation the sea
+had shown in the past.
+
+44
+00:02:36,816 --> 00:02:41,750
+Here's how we know: hydrologists worked
+out the water budget term by term,
+
+45
+00:02:42,075 --> 00:02:45,860
+river inflow, rainfall,
+groundwater, evaporation.
+
+46
+00:02:46,557 --> 00:02:51,061
+Columbia University's Aral Sea Crisis
+project, drawing on Micklin's two thousand
+
+47
+00:02:51,131 --> 00:02:53,244
+seven analysis, gives the result.
+
+48
+00:02:53,941 --> 00:02:57,819
+In the first decade of desiccation, the
+water level fell by about twenty-one
+
+49
+00:02:57,865 --> 00:03:02,068
+centimetres a year. In the next
+decade, by about fifty-seven.
+
+50
+00:03:03,020 --> 00:03:04,541
+Then it accelerated further.
+
+51
+00:03:05,052 --> 00:03:07,385
+Why would a shrinking sea shrink faster?
+
+52
+00:03:07,768 --> 00:03:09,115
+Because it got shallower.
+
+53
+00:03:09,556 --> 00:03:12,691
+The same sunlight now had to
+heat a smaller volume of water,
+
+54
+00:03:12,900 --> 00:03:16,812
+so the surface warmed faster, and
+warmer water evaporates faster,
+
+55
+00:03:17,021 --> 00:03:18,786
+and the level dropped further still.
+
+56
+00:03:19,483 --> 00:03:22,931
+The Aral was paying for its own
+disappearance out of a shrinking account.
+
+57
+00:03:23,627 --> 00:03:27,760
+Between nineteen sixty and nineteen
+ninety, according to Guy Fipps of Texas
+
+58
+00:03:27,830 --> 00:03:31,766
+A&M, the sea lost about six
+hundred cubic kilometres of water.
+
+59
+00:03:32,462 --> 00:03:36,526
+Picture a cube of water roughly eight
+and a half kilometres along every edge.
+
+60
+00:03:37,223 --> 00:03:38,423
+Now picture it gone.
+
+61
+00:03:39,150 --> 00:03:43,399
+And the water that left took nothing with
+it, which raises the question of what it
+
+62
+00:03:43,446 --> 00:03:47,509
+left behind. Picture the shore of a
+fishing town in the late nineteen
+
+63
+00:03:47,579 --> 00:03:51,584
+seventies. The boats are still
+tied up, or run aground,
+
+64
+00:03:51,910 --> 00:03:53,431
+or sitting upright on sand.
+
+65
+00:03:54,244 --> 00:03:58,830
+Photographs from the region show exactly
+that, trawlers stranded kilometres from
+
+66
+00:03:58,899 --> 00:04:02,510
+open water. They stopped
+sailing because the water left.
+
+67
+00:04:03,207 --> 00:04:05,076
+But there's a second reason they stayed.
+
+68
+00:04:05,679 --> 00:04:10,626
+The salt stayed. Every dissolved mineral
+the rivers carried in stayed in the basin
+
+69
+00:04:10,660 --> 00:04:12,321
+when the water evaporated off.
+
+70
+00:04:13,017 --> 00:04:17,313
+Salinity rose from about ten parts per
+thousand in nineteen sixty to ninety-two
+
+71
+00:04:17,383 --> 00:04:21,898
+parts per thousand by two thousand four,
+according to Zavialov's measurements cited
+
+72
+00:04:21,933 --> 00:04:24,871
+in Columbia University's
+Aral Sea Crisis project.
+
+73
+00:04:25,567 --> 00:04:29,398
+The University of West Florida's
+environmental science text puts the
+
+74
+00:04:29,456 --> 00:04:33,172
+southern sea at that point at roughly
+three times the salt of seawater.
+
+75
+00:04:33,868 --> 00:04:35,076
+Fish can't live in that.
+
+76
+00:04:35,679 --> 00:04:39,035
+According to Bosch, cited in
+the same Columbia project,
+
+77
+00:04:39,278 --> 00:04:42,494
+the commercial fishery that landed
+forty-three thousand four hundred and
+
+78
+00:04:42,541 --> 00:04:46,883
+thirty tons in nineteen sixty landed
+nothing at all by nineteen eighty.
+
+79
+00:04:47,580 --> 00:04:50,621
+Twenty years, from a
+working industry to zero.
+
+80
+00:04:51,434 --> 00:04:55,369
+The University of West Florida's text
+records twenty-four species of fish in
+
+81
+00:04:55,439 --> 00:04:58,969
+that water. They could not
+adapt to the rising salt,
+
+82
+00:04:59,143 --> 00:05:03,324
+and they are gone. And the salt
+didn't stay in the basin either.
+
+83
+00:05:04,020 --> 00:05:09,048
+NASA describes winds lifting salt-laden
+sediment off the exposed seabed and
+
+84
+00:05:09,094 --> 00:05:13,761
+dropping tens of thousands of tons of it
+a year onto farmland and towns downwind.
+
+85
+00:05:14,458 --> 00:05:18,672
+Fipps notes that dust is likely to
+carry pesticide and chemical residues,
+
+86
+00:05:18,916 --> 00:05:21,668
+and links it to serious health
+problems across the region.
+
+87
+00:05:22,364 --> 00:05:25,093
+The sea had been doing
+one other job, quietly.
+
+88
+00:05:25,696 --> 00:05:27,542
+It moderated the climate of a desert.
+
+89
+00:05:28,355 --> 00:05:31,849
+The University of West Florida's text
+notes that the regional climate is now
+
+90
+00:05:31,931 --> 00:05:34,322
+drier, with greater temperature extremes.
+
+91
+00:05:35,274 --> 00:05:36,474
+The lake was weather.
+
+92
+00:05:37,341 --> 00:05:40,777
+So what happens when a body of
+water that size tears itself apart?
+
+93
+00:05:41,590 --> 00:05:45,375
+By nineteen ninety, the Aral was
+no longer one body of water.
+
+94
+00:05:45,700 --> 00:05:49,601
+It had torn in two. According
+to Aladin and colleagues,
+
+95
+00:05:49,810 --> 00:05:53,212
+writing in the journal Zoological
+Studies in two thousand twenty-three,
+
+96
+00:05:53,595 --> 00:05:57,403
+the surface area fell from sixty-seven
+thousand four hundred and ninety-nine
+
+97
+00:05:57,438 --> 00:06:01,327
+square kilometres in nineteen sixty to
+thirty-nine thousand seven hundred and
+
+98
+00:06:01,374 --> 00:06:02,929
+thirty-four by nineteen ninety.
+
+99
+00:06:03,626 --> 00:06:06,552
+Nearly twenty-eight thousand square
+kilometres of water surface,
+
+100
+00:06:06,726 --> 00:06:07,926
+gone in thirty years.
+
+101
+00:06:08,526 --> 00:06:11,266
+And the water didn't retreat
+to a tidy new shoreline.
+
+102
+00:06:11,962 --> 00:06:14,563
+According to the University
+of West Florida's text,
+
+103
+00:06:14,888 --> 00:06:18,905
+the present shore sits tens of kilometres
+from towns that were once ports.
+
+104
+00:06:19,602 --> 00:06:21,076
+The sea didn't just leave.
+
+105
+00:06:21,517 --> 00:06:24,791
+It left a desert between itself and
+everyone who used to live on it.
+
+106
+00:06:25,488 --> 00:06:28,100
+The Amu Darya delta is another casualty.
+
+107
+00:06:28,796 --> 00:06:32,825
+Fipps records that the delta once covered
+five hundred and fifty thousand hectares
+
+108
+00:06:32,872 --> 00:06:34,497
+of wetland and reed bed.
+
+109
+00:06:35,101 --> 00:06:37,167
+It has shrunk to less
+than twenty thousand.
+
+110
+00:06:37,771 --> 00:06:41,916
+The shallower the basin, the sooner
+a falling level cuts it into pieces.
+
+111
+00:06:42,612 --> 00:06:46,083
+The northern Small Aral separated
+from the southern Large Aral,
+
+112
+00:06:46,525 --> 00:06:48,336
+each now fed by a different river.
+
+113
+00:06:49,032 --> 00:06:53,293
+The Large Aral split again, into
+an eastern lobe and a western one.
+
+114
+00:06:53,897 --> 00:06:57,903
+Every fragment got its own depth,
+its own salt, its own odds.
+
+115
+00:06:58,599 --> 00:07:02,314
+In two thousand five, Kazakhstan
+finished the Kokaral Dam,
+
+116
+00:07:02,523 --> 00:07:05,368
+sealing off the northern
+sea to hold its water in.
+
+117
+00:07:06,064 --> 00:07:09,872
+NASA's Earth Observatory reports that
+fisheries in the north rebounded.
+
+118
+00:07:10,313 --> 00:07:14,969
+The same agency's earlier reporting is
+blunter: the dam ended any prospect of
+
+119
+00:07:15,027 --> 00:07:19,230
+recovery for the southern sea, which some
+authorities already regarded as beyond
+
+120
+00:07:19,300 --> 00:07:23,850
+help. So one half of the Aral is
+recovering and one half is not.
+
+121
+00:07:24,547 --> 00:07:26,904
+Why would the southern
+half fail that completely,
+
+122
+00:07:27,113 --> 00:07:28,959
+and how far does the failure go?
+
+123
+00:07:29,655 --> 00:07:32,790
+Hypersalinity doesn't stop at
+the point where the fish die.
+
+124
+00:07:33,486 --> 00:07:37,086
+Aladin and colleagues, writing in
+Zoological Studies in two thousand
+
+125
+00:07:37,132 --> 00:07:41,451
+twenty-three, describe the remnants of the
+southern Large Aral as progressing toward
+
+126
+00:07:41,486 --> 00:07:46,386
+what they call a "Dead Sea" condition,
+water hostile to all animal life.
+
+127
+00:07:47,082 --> 00:07:49,463
+Not depleted. Not degraded.
+
+128
+00:07:50,159 --> 00:07:52,899
+Finished, for anything
+that swims or crawls.
+
+129
+00:07:53,596 --> 00:07:55,407
+And it isn't a smooth decline.
+
+130
+00:07:56,104 --> 00:08:00,515
+NASA's Earth Observatory records that the
+eastern lobe was completely dry in August
+
+131
+00:08:00,539 --> 00:08:01,739
+two thousand fourteen.
+
+132
+00:08:02,408 --> 00:08:05,879
+In twenty seventeen, a wet
+year, it partly refilled,
+
+133
+00:08:06,123 --> 00:08:10,790
+helped by large releases from the Toktogul
+reservoir and an unusually warm spring
+
+134
+00:08:10,848 --> 00:08:14,041
+that melted snow and glacial
+ice in the Tien Shan.
+
+135
+00:08:14,854 --> 00:08:18,662
+But Philip Micklin, the geographer
+who has studied this sea for decades,
+
+136
+00:08:19,045 --> 00:08:23,236
+told NASA those events do not signal a
+restoration of the eastern lobe as a
+
+137
+00:08:23,317 --> 00:08:27,021
+permanent feature. What he
+expects is the pattern itself,
+
+138
+00:08:27,462 --> 00:08:31,734
+refilling in heavy flow years,
+near-total dry-out in low-flow years,
+
+139
+00:08:31,908 --> 00:08:33,266
+for the foreseeable future.
+
+140
+00:08:33,592 --> 00:08:37,957
+That's where the science is still open:
+whether that oscillation is the new steady
+
+141
+00:08:38,015 --> 00:08:41,904
+state, or the last stage of a one-way
+decline with the wet years as
+
+142
+00:08:41,974 --> 00:08:45,817
+interruptions. The evidence
+currently favours Micklin's reading.
+
+143
+00:08:46,513 --> 00:08:49,346
+What nobody disputes is the
+arithmetic that produced it.
+
+144
+00:08:49,671 --> 00:08:51,401
+The Aral had no outlet.
+
+145
+00:08:51,843 --> 00:08:55,999
+Every drop that left it left as vapour,
+which means every drop of river water
+
+146
+00:08:56,045 --> 00:08:59,586
+taken upstream was a drop subtracted
+from the sea permanently.
+
+147
+00:08:59,911 --> 00:09:01,642
+Not borrowed. Not delayed.
+
+148
+00:09:02,025 --> 00:09:05,310
+Subtracted. The Great Salt
+Lake has no outlet either.
+
+149
+00:09:05,914 --> 00:09:08,910
+According to a report by Utah
+State University and others,
+
+150
+00:09:09,153 --> 00:09:13,704
+cited by the US Geological Survey,
+consumptive water use has reduced net
+
+151
+00:09:13,762 --> 00:09:17,977
+river inflow to that lake by thirty-nine
+percent over the past one hundred and
+
+152
+00:09:18,023 --> 00:09:21,866
+fifty years. The Aral isn't a
+story about a faraway place.
+
+153
+00:09:22,249 --> 00:09:24,803
+It's the same sum, running
+in a different desert,
+
+154
+00:09:25,012 --> 00:09:26,870
+and that one, you can drive to.

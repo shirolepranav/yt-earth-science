@@ -1,0 +1,864 @@
+{
+  "title": "How the Soviet Union Erased the Fourth-Largest Lake on Earth",
+  "durationSeconds": 573.22,
+  "outroSeconds": 5,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "brand": {
+    "_comment": "Your Phase 0.3 brand sheet, as data. Charts, thumbnails and the video components all read these exact values, so changing a colour here changes it everywhere.",
+    "colors": {
+      "accent": "#FF7A1A",
+      "background": "#101214",
+      "text": "#FFFFFF",
+      "muted": "#A89C8A",
+      "positive": "#4FB3BF",
+      "negative": "#E5484D"
+    },
+    "fonts": {
+      "heading": "Inter",
+      "body": "Inter",
+      "_note": "If you change these, also update the Google Fonts link in remotion/src/fonts.ts"
+    },
+    "thumbnail": {
+      "max_words": 5,
+      "font_size": 150,
+      "stroke_width": 12
+    }
+  },
+  "audioFile": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/audio/narration_mixed.wav",
+  "shots": [
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_000_0_pexels-4454104.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 0.0,
+      "end": 3.978
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_001_0_pexels-14975787.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 3.978,
+      "end": 9.191
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "science.nasa.gov",
+      "headline": "New Water in the Aral Sea",
+      "before": "While the lake was much smaller in August 2017 than it was in the 1960s, ",
+      "quote": "some growth in the eastern lobe of the South Aral represents an improvement over August 2014, when that lobe was completely dry.",
+      "after": " Instead of pooling in one large basin, water flowing down the two rivers now ends up in either the North Aral Sea (fed by the Syr Darya) or the South Aral Sea (fed by Amu Darya). The Kok-Aral dike and dam, finished in 2005, separates the two water bodies and prevents flow out of the North Aral into the lower-elevation South Aral. The dam has actually led fisheries in the",
+      "start": 9.191,
+      "end": 15.867
+    },
+    {
+      "type": "still",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_003_0_nasa-GSFC_20171208_Archive_e000965.jpg",
+      "depth": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/gen/4f93d8ec76b2dfa2a123f24d.png",
+      "seed": 15867,
+      "credit": "NASA GSFC",
+      "start": 15.867,
+      "end": 21.231
+    },
+    {
+      "type": "still",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_004_0_commons-24488347.jpg",
+      "depth": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/gen/c254237cf3d83a6218b57adc.png",
+      "seed": 21231,
+      "credit": "Arian Zwegers / Wikimedia Commons (CC BY 2.0)",
+      "start": 21.231,
+      "end": 29.706
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "science.nasa.gov",
+      "headline": "Aral Sea 2011",
+      "before": "",
+      "quote": "Since 1960, local rivers have been diverted in large-scale agricultural projects, and the Aral Sea has lost 90 percent of its volume.",
+      "after": " Once the world\u2019s fourth largest lake, the rapidly shrinking Aral Sea has fragmented into four bodies of water: the Northern Aral Sea, the eastern and western basins of the Southern Aral Sea, and Tsche-Bas Gulf. Of these, the eastern basin of the Southern Aral Sea and Tsche-Bas Gulf show the most dramatic change in 2011. The Moderate Resolution Imaging Spectroradiometer(MODIS)",
+      "start": 29.706,
+      "end": 37.415
+    },
+    {
+      "type": "card",
+      "variant": "question",
+      "text": "WHAT IS THE ARAL?",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/gen/6d7991dbd8dd55b47ab79472.jpg",
+      "start": 37.415,
+      "end": 42.187
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_007_0_pexels-4275467.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 42.187,
+      "end": 49.188
+    },
+    {
+      "type": "number",
+      "value": "17,000 years",
+      "label": "ARAL SEA'S ORIGIN",
+      "source": "Aladin et al. 2023",
+      "start": 49.188,
+      "end": 53.82
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_009_0_pexels-12106448.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 53.82,
+      "end": 56.362
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "pressbooks.uwf.edu",
+      "headline": "7.5 Case Study: The Aral Sea",
+      "before": "",
+      "quote": "Due to the arid and seasonally hot climate, there is extensive evaporation and limited surface waters.",
+      "after": " Summer temperatures can reach 60\u03bfC (140\u03bfF)! The Aral Sea\u2019s water supply is mainly from the Amu Darya and the Syr Darya, which carry snowmelt from mountainous areas. In the early 1960s, the then-Soviet Union diverted the Amu Darya and Syr Darya Rivers for irrigation of one of the driest parts of Asia to produce rice, melons, cereals, and especially cotton. The Soviets wanted",
+      "start": 56.362,
+      "end": 62.376
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_011_0_pexels-36460243.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 62.376,
+      "end": 64.629
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_012_0_pexels-38286613.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 64.629,
+      "end": 70.55
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "pressbooks.uwf.edu",
+      "headline": "7.5 Case Study: The Aral Sea",
+      "before": "",
+      "quote": "The Soviets wanted cotton or white gold to become a major export.",
+      "after": " They were successful, and today Uzbekistan is one of the world\u2019s largest exporters of cotton. Unfortunately, this action eliminated any river inflow to the Aral Sea and caused it to disappear almost completely. Figure 2. Map of Aral Sea Area Map shows the size of the lake in 1960 and the political boundaries of 2011. Countries in yellow are at least partially in the Aral Sea",
+      "start": 70.55,
+      "end": 76.55
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_014_0_pexels-5418114.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 76.55,
+      "end": 81.185
+    },
+    {
+      "type": "chart",
+      "chartKind": "bignumber",
+      "title": "A THIRD OF A RIVER, TURNED INTO A CANAL",
+      "labels": [
+        "Share of the Amu Darya's flow diverted by the Kara Kum Canal when it opened in 1956"
+      ],
+      "values": [
+        33
+      ],
+      "unit": "%",
+      "source": "Guy Fipps, Texas A&M University",
+      "component": null,
+      "start": 81.185,
+      "end": 93.282
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_016_0_pexels-38244488.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 93.282,
+      "end": 99.958
+    },
+    {
+      "type": "chart",
+      "chartKind": "bar",
+      "title": "BUILT ACROSS THE BASIN",
+      "labels": [
+        "Dams and reservoirs",
+        "Major irrigation schemes"
+      ],
+      "values": [
+        20,
+        60
+      ],
+      "unit": "sites",
+      "source": "Guy Fipps, Texas A&M",
+      "component": null,
+      "start": 99.958,
+      "end": 108.724
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_018_0_pexels-6496275.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 108.724,
+      "end": 122.238
+    },
+    {
+      "type": "still",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_019_0_nasa-iss012e23057.jpg",
+      "depth": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/gen/ff442229424136e049bf4e33.png",
+      "seed": 122238,
+      "credit": "NASA JSC",
+      "start": 122.238,
+      "end": 128.008
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "columbia.edu",
+      "headline": "Environmental Impacts",
+      "before": "",
+      "quote": "Net evaporation has also decreased, but at a slower rate while the groundwater inflow has remained approximately the same.",
+      "after": " As a result, there was a net deficit of water to the sea. The figure below shows the components of water balance that resulted in the net deficit of incoming water flow (Micklin 2007). In the first desiccation period, water level dropped by about 21 cm/year. In the next decade, water level decreased by 57 cm/year, and afterwards the drop in water level started accelerating",
+      "start": 128.008,
+      "end": 134.008
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_021_0_pexels-37899363.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 134.008,
+      "end": 139.943
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_022_0_pexels-13067839.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 139.943,
+      "end": 145.458
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_023_0_pexels-34514411.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 145.458,
+      "end": 149.962
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_024_0_pexels-18990795.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 149.962,
+      "end": 156.696
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "columbia.edu",
+      "headline": "Environmental Impacts",
+      "before": "",
+      "quote": "The water budget is determined by several components: Inflow from the river, evaporation, precipitation rates, and groundwater inflow.",
+      "after": " Net evaporation is defined as the difference between evaporation and precipitation at the surface (Micklin 2007). The river inflow has been rapidly decreasing since 1960. Net evaporation has also decreased, but at a slower rate while the groundwater inflow has remained approximately the same. As a result, there was a net deficit of water to the sea. The figure below shows the",
+      "start": 156.696,
+      "end": 166.437
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_026_0_pexels-36163703.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 166.437,
+      "end": 171.452
+    },
+    {
+      "type": "chart",
+      "chartKind": "bar",
+      "title": "HOW FAST THE ARAL FELL",
+      "labels": [
+        "First decade of desiccation",
+        "Following decade"
+      ],
+      "values": [
+        21,
+        57
+      ],
+      "unit": "cm per year",
+      "source": "Micklin 2007, via Columbia University's Aral Sea Crisis project",
+      "component": null,
+      "start": 171.452,
+      "end": 179.452
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "columbia.edu",
+      "headline": "Environmental Impacts",
+      "before": "",
+      "quote": "In the next decade, water level decreased by 57 cm/year, and afterwards the drop in water level started accelerating faster.",
+      "after": " The acceleration of the rate of water loss from the Aral Sea can be explained by the positive feedback between evaporation and Sea Surface Temperature. As the lake loses water, it becomes shallower. The incoming solar radiation for a given square area now has to heat up a smaller volume of water, thus the water temperature at the surface increases faster. This in turn lowers",
+      "start": 179.452,
+      "end": 184.932
+    },
+    {
+      "type": "card",
+      "variant": "question",
+      "text": "WHY DOES IT SHRINK FASTER?",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/gen/a5024a9225ecc857fd71a096.jpg",
+      "start": 184.932,
+      "end": 188.932
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_030_0_pexels-19285362.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 188.932,
+      "end": 199.363
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_031_0_pexels-38062561.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 199.363,
+      "end": 203.507
+    },
+    {
+      "type": "number",
+      "value": "600 km\u00b3",
+      "label": "water lost 1960-1990",
+      "source": "Guy Fipps, Texas A&M",
+      "start": 203.507,
+      "end": 208.507
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_033_0_pexels-31755961.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 208.507,
+      "end": 219.03
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "oneonta.edu",
+      "headline": "THE ARAL SEA CRISIS: DESICCATION AND PERSPECTIVES ON ...",
+      "before": "",
+      "quote": "By the year 2000, little more than a shallow brine pool will be all that remains of this former fourth largest lake in the world.",
+      "after": " The negative impacts of desiccation range from regional climate change to socioeconomic and health problems. Restoration of the Aral Sea basin is imperative if humans wish to live and function as they once did in a pre-degraded environment a mere 30 years ago. Interbasin transfers and water management practices are not successful methods for ameliorating the problems of",
+      "start": 219.03,
+      "end": 225.03
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_035_0_pexels-34155780.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 225.03,
+      "end": 234.124
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "science.nasa.gov",
+      "headline": "Aral Sea 2011",
+      "before": "Aral Sea 2011 - NASA Science Search Suggested Searches Earth Observatory Image of the Day for September 11, 2011 ",
+      "quote": "Once the world\u2019s fourth largest lake, the rapidly shrinking Aral Sea has fragmented into four bodies of water.",
+      "after": " The Southern Aral Sea and Tsche-Bas Gulf show the most dramatic change in 2011. NASA Earth Observatory Sep 11, 2011 Article - Share on X. - Share on Facebook. - Share on LinkedIn. - Link to RSS Feed. August 15, 2011 August 26, 2010 Aral Sea 2011 Aral Sea 2011 August 15, 2011August 26, 2010 Aral Sea 2011 Aral Sea 2011 August 15, 2011 August 26, 2010 August 15, 2011 Aral Sea",
+      "start": 234.124,
+      "end": 243.087
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_037_0_pexels-15938885.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 243.087,
+      "end": 247.173
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_038_0_pexels-4028972.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 247.173,
+      "end": 252.897
+    },
+    {
+      "type": "chart",
+      "chartKind": "comparison",
+      "title": "Aral Sea salinity",
+      "labels": [
+        "1960",
+        "2004"
+      ],
+      "values": [
+        10,
+        92
+      ],
+      "unit": "ppt",
+      "source": "Zavialov / Columbia",
+      "component": null,
+      "start": 252.897,
+      "end": 265.447
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_040_0_pexels-30714899.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 265.447,
+      "end": 275.559
+    },
+    {
+      "type": "chart",
+      "chartKind": "comparison",
+      "title": "THE FISHERY, 1960 TO 1980",
+      "labels": [
+        "1960",
+        "1980"
+      ],
+      "values": [
+        43430,
+        0
+      ],
+      "unit": "tons of commercial catch per year",
+      "source": "Bosch, cited in Columbia University's Aral Sea Crisis project",
+      "component": null,
+      "start": 275.559,
+      "end": 287.46
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_042_0_pexels-8968775.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 287.46,
+      "end": 291.314
+    },
+    {
+      "type": "number",
+      "value": "24",
+      "label": "fish species in the Aral",
+      "source": "Univ. of West Florida",
+      "start": 291.314,
+      "end": 296.314
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_044_0_pexels-15100741.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 296.314,
+      "end": 301.114
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "gfipps.tamu.edu",
+      "headline": "The Aral Sea is one of the worst ecological diasters on our planet",
+      "before": "",
+      "quote": "Winds pick up dust from the dry seabed and deposit it over a large populated area.",
+      "after": " The dust likely contains pesticide and chemical residues that are blamed for the serious rise in mortality and health problems in the region. The Aral Sea, and the now exposed dry seabed, may also be contaminated by runoff from a former Soviet military base and a biological weapons laboratory. The ecosystem of the Aral Sea has collapsed, and climate changes in the Aral Sea",
+      "start": 301.114,
+      "end": 307.114
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_046_0_pexels-7895679.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 307.114,
+      "end": 308.672
+    },
+    {
+      "type": "number",
+      "value": "tens of thousands of tons",
+      "label": "SALT DUST A YEAR",
+      "source": "NASA",
+      "start": 308.672,
+      "end": 313.672
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_048_0_pexels-35665668.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 313.672,
+      "end": 318.796
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "gfipps.tamu.edu",
+      "headline": "The Aral Sea is one of the worst ecological diasters on our planet",
+      "before": "",
+      "quote": "The dust likely contains pesticide and chemical residues that are blamed for the serious rise in mortality and health problems in the region.",
+      "after": " The Aral Sea, and the now exposed dry seabed, may also be contaminated by runoff from a former Soviet military base and a biological weapons laboratory. The ecosystem of the Aral Sea has collapsed, and climate changes in the Aral Sea Basin have been documented. Hundreds of agreements have been signed since the 1980\u2019s on programs designed to address the \u201cAral Sea Problem\u201d",
+      "start": 318.796,
+      "end": 324.796
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_050_0_pexels-17336279.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 324.796,
+      "end": 328.235
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_051_0_pexels-5358448.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 328.235,
+      "end": 337.221
+    },
+    {
+      "type": "card",
+      "variant": "question",
+      "text": "WHEN A SEA TEARS APART",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/gen/00e41d2f89627990cb3ed7f4.jpg",
+      "start": 337.221,
+      "end": 341.47
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_053_0_pexels-8415422.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 341.47,
+      "end": 347.798
+    },
+    {
+      "type": "chart",
+      "chartKind": "bar",
+      "title": "THE SEA, BY SURFACE AREA",
+      "labels": [
+        "1960",
+        "1990"
+      ],
+      "values": [
+        67499,
+        39734
+      ],
+      "unit": "square kilometres",
+      "source": "Aladin et al., Zoological Studies, 2023",
+      "component": null,
+      "start": 347.798,
+      "end": 359.798
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_055_0_pexels-5985519.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 359.798,
+      "end": 365.642
+    },
+    {
+      "type": "number",
+      "value": "28,000",
+      "label": "square kilometres of water surface",
+      "source": "NASA Earth Observatory",
+      "start": 365.642,
+      "end": 370.642
+    },
+    {
+      "type": "still",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/gen/1b6afb787cb443a055085639.jpg",
+      "depth": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/gen/1ad6e710c6484051e7927f08.png",
+      "seed": 57,
+      "start": 370.642,
+      "end": 381.397
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_058_0_pexels-35868207.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 381.397,
+      "end": 385.368
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_059_0_pexels-10069767.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 385.368,
+      "end": 394.981
+    },
+    {
+      "type": "chart",
+      "chartKind": "bar",
+      "title": "AMU DARYA DELTA WETLAND",
+      "labels": [
+        "1950s",
+        "Today"
+      ],
+      "values": [
+        550000,
+        20000
+      ],
+      "unit": "hectares",
+      "source": "Fipps, Texas A&M",
+      "component": null,
+      "start": 394.981,
+      "end": 402.981
+    },
+    {
+      "type": "still",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_061_0_nasa-GSFC_20171208_Archive_e000965.jpg",
+      "depth": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/gen/24b49f8a15eec32b92375e4b.png",
+      "seed": 402981,
+      "credit": "NASA GSFC",
+      "start": 402.981,
+      "end": 408.912
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "science.nasa.gov",
+      "headline": "New Water in the Aral Sea",
+      "before": "",
+      "quote": "During subsequent decades, the fourth largest lake in the world shrank to roughly a tenth of its former size and divided into several smaller bodies of water.",
+      "after": " The image above, captured by the Moderate Resolution Imaging Spectroradiometer(MODIS) on NASA's Terra satellite, shows the Aral Sea in Central Asia on August 22, 2017. While the lake was much smaller in August 2017 than it was in the 1960s, some growth in the eastern lobe of the South Aral represents an improvement over August 2014, when that lobe was completely dry. Instead",
+      "start": 408.912,
+      "end": 414.912
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_063_0_pexels-30714888.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 414.912,
+      "end": 418.479
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_064_0_pexels-17283408.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 418.479,
+      "end": 425.944
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_065_0_pexels-5327726.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 425.944,
+      "end": 430.193
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "earthobservatory.nasa.gov",
+      "headline": "Aral Sea Continues to Shrink",
+      "before": "",
+      "quote": "This update shows that by August 2009, virtually nothing remained of the Southern Aral Sea\u2019s eastern lobe.",
+      "after": " The Moderate Resolution Imaging Spectroradiometer(MODIS)on NASA\u2019sTerrasatellite captured this true-color image of the Aral Sea on August 16, 2009. Although the Northern Aral Sea (upper right) still appears healthy, the Southern Aral Sea consists of two isolated water bodies: an irregular oval shape directly southwest of the Northern Aral Sea, and the long, thin remainder of",
+      "start": 430.193,
+      "end": 438.193
+    },
+    {
+      "type": "still",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_067_0_commons-51482661.jpg",
+      "depth": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/gen/bb9dfb6e1a3feb36b558831b.png",
+      "seed": 438193,
+      "credit": "NASA Goddard Space Flight Center from Greenbelt, MD, USA / Wikimedia Commons (Public domain)",
+      "start": 438.193,
+      "end": 449.535
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_068_0_pexels-4028972.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 449.535,
+      "end": 453.366
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_069_0_pexels-38062561.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 453.366,
+      "end": 467.082
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_070_0_pexels-30133679.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 467.082,
+      "end": 468.495
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_071_0_pexels-32003011.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 468.495,
+      "end": 475.984
+    },
+    {
+      "type": "number",
+      "value": "August 2014",
+      "label": "EASTERN LOBE COMPLETELY DRY",
+      "source": "NASA Earth Observatory",
+      "start": 475.984,
+      "end": 480.984
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_073_0_pexels-6635294.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 480.984,
+      "end": 486.003
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_074_0_pexels-8761189.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 486.003,
+      "end": 494.734
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_075_0_pexels-28368861.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 494.734,
+      "end": 504.788
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_076_0_pexels-13121064.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 504.788,
+      "end": 513.472
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_077_0_pexels-26580103.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 513.472,
+      "end": 524.472
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_077_1_pexels-32003017.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 524.472,
+      "end": 526.393
+    },
+    {
+      "type": "card",
+      "variant": "question",
+      "text": "WHERE DID THE WATER GO?",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/gen/20e0d2364a7d8f6bc48be5ce.jpg",
+      "start": 526.393,
+      "end": 530.393
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_079_0_pexels-12106447.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 530.393,
+      "end": 534.195
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "oneonta.edu",
+      "headline": "THE ARAL SEA CRISIS: DESICCATION AND PERSPECTIVES ON ...",
+      "before": "",
+      "quote": "The cause of the Sea's degradation is massive, consumptive withdrawals of water from the Amu and Syr Daryas.",
+      "after": " Irrigation accounts for 94 percent of all consumptive uses and is situated over 8.5 million hectares of land across the Aral basin. At current rates of water use, the Aral will progressively decline in size. By the year 2000, little more than a shallow brine pool will be all that remains of this former fourth largest lake in the world. The negative impacts of desiccation",
+      "start": 534.195,
+      "end": 540.195
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_081_0_pexels-6498490.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 540.195,
+      "end": 543.054
+    },
+    {
+      "type": "still",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_082_0_commons-30338720.jpg",
+      "depth": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/gen/8fe91e466b5c0e4f848dff74.png",
+      "seed": 543054,
+      "credit": "David Herrera / Wikimedia Commons (CC BY 2.0)",
+      "start": 543.054,
+      "end": 545.794
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "usgs.gov",
+      "headline": "Great Salt Lake",
+      "before": "",
+      "quote": "Subsequent years of drought and increased use of inflows have brought the lake to record low levels.",
+      "after": " Sources/Usage: Public Domain. View Media Details Satellite images show 50 years of change on the Great Salt Lake, 1972-2021. False-Color Composite Satellite Imagery Differences in coloration of the false-color infrared imagery in the satellite image map are due to physical, chemical, and biological factors. Terrestrial vegetation appears as bright red throughout the mountains",
+      "start": 545.794,
+      "end": 551.794
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_084_0_pexels-33400595.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 551.794,
+      "end": 555.349
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_085_0_pexels-3120741.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 555.349,
+      "end": 559.378
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_086_0_pexels-32002994.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 559.378,
+      "end": 564.892
+    },
+    {
+      "type": "clip",
+      "src": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_087_0_pexels-9318006.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 564.892,
+      "end": 568.22
+    }
+  ],
+  "letterbox": false
+}
