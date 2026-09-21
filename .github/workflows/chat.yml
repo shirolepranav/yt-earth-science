@@ -24,6 +24,7 @@ on:
 
 permissions:
   contents: write
+  actions: read    # to find the render segments an earlier attempt left behind
 
 # One conversation at a time. Two jobs writing runs/ at once would fight when
 # they commit. `cancel-in-progress: false` means a new message queues behind
@@ -74,12 +75,15 @@ jobs:
         run: python -m pipeline.assistant --text "$MESSAGE"
 
       - name: Save anything the fast handlers changed
+        if: always()
         run: bash .github/scripts/commit-runs.sh "Chat - ${{ steps.route.outputs.intent }}"
 
-      # Without this, a crash in the router is completely silent: you'd send a
-      # message, see "On it…" from the Worker, and never hear anything again.
+      # `if: failure()` is NOT enough here. A job killed by timeout-minutes is
+      # CANCELLED, not failed, so failure() skips - which is how a three-hour
+      # build died in total silence. Testing the step's own outcome catches
+      # both, and `always()` is what lets this step run at all after a cancel.
       - name: Tell me if it broke
-        if: failure()
+        if: always() && steps.route.outcome != 'success'
         run: |
           python -c "from pipeline import chat, assistant; \
             chat.failed('Reading your message', 'The router stopped.', assistant.log_url())"
@@ -102,6 +106,7 @@ jobs:
       - run: pip install -r requirements.txt
 
       - name: Propose topics
+        id: topics
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: |
@@ -112,7 +117,7 @@ jobs:
         run: bash .github/scripts/commit-runs.sh "Topics for run ${RUN_ID:-unknown}"
 
       - name: Tell me if it broke
-        if: failure()
+        if: always() && steps.topics.outcome != 'success'
         run: |
           python -c "from pipeline import chat, assistant; \
             chat.failed('Topics', 'The topic engine stopped.', assistant.log_url())"
@@ -138,6 +143,7 @@ jobs:
       # the command line: an edit instruction like "the opening's flat" has an
       # apostrophe in it, which would break out of a quoted shell argument.
       - name: Research, write or revise
+        id: write
         env:
           EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
           TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
@@ -150,7 +156,7 @@ jobs:
         run: bash .github/scripts/commit-runs.sh "Script for run ${{ needs.route.outputs.run_id }}"
 
       - name: Tell me if it broke
-        if: failure()
+        if: always() && steps.write.outcome != 'success'
         run: |
           python -c "from pipeline import chat, assistant; \
             chat.failed('Writing', 'The script chain stopped.', assistant.log_url())"
@@ -165,7 +171,7 @@ jobs:
     needs: route
     if: contains(fromJSON('["approve_script","redo"]'), needs.route.outputs.intent)
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 350
 
     steps:
       - uses: actions/checkout@v4
@@ -194,7 +200,33 @@ jobs:
       - run: npm install --no-audit --no-fund
         working-directory: remotion
 
+      # Pick up segments a previous attempt finished before it was stopped.
+      # download-artifact only reaches the current run, so this asks the API
+      # for the newest artifact of that name across runs. Segment filenames
+      # carry a hash of the shot list, so segments from a since-changed video
+      # simply never match and are ignored.
+      - name: Restore render segments from an earlier attempt
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ needs.route.outputs.run_id }}
+        run: |
+          set -uo pipefail
+          url=$(curl -sS -H "Authorization: Bearer $GH_TOKEN" \
+            "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/artifacts?name=segments-$RUN_ID&per_page=1" \
+            | python -c "import json,sys; a=json.load(sys.stdin).get('artifacts') or []; \
+                print(a[0]['archive_download_url'] if a and not a[0]['expired'] else '')")
+          if [ -z "$url" ]; then
+            echo "No earlier segments for $RUN_ID - rendering from the start."
+            exit 0
+          fi
+          mkdir -p "runs/$RUN_ID/output/parts"
+          curl -sSL -H "Authorization: Bearer $GH_TOKEN" "$url" -o /tmp/segments.zip
+          unzip -q -o /tmp/segments.zip -d "runs/$RUN_ID/output/parts"
+          echo "Restored $(find "runs/$RUN_ID/output/parts" -name '*.mp4' | wc -l) segment(s)."
+
       - name: Build the video
+        id: build
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -207,7 +239,27 @@ jobs:
           INTENT: ${{ needs.route.outputs.intent }}
           ARGS: ${{ needs.route.outputs.args }}
           RUN_ID: ${{ needs.route.outputs.run_id }}
-        run: python tools/chat_job.py --intent "$INTENT" --args "$ARGS" --run "$RUN_ID"
+        run: |
+          # render.py defaults to 2, which suited the old 2-core runners.
+          # Public-repo runners have 4 vCPUs, and the render is the longest
+          # thing here by far, so use whatever the machine actually has.
+          export REMOTION_CONCURRENCY="$(nproc)"
+          echo "Rendering with concurrency $REMOTION_CONCURRENCY"
+          python tools/chat_job.py --intent "$INTENT" --args "$ARGS" --run "$RUN_ID"
+
+      # The render is done in 2-minute segments, and a finished segment is
+      # never re-rendered - but only if it's still on disk. Every job gets a
+      # fresh container, so without this the segments are lost and a killed
+      # render starts again from zero. `always()` matters: a timeout cancels
+      # the job, and post-steps are skipped on cancel while always() steps run.
+      - name: Keep the finished render segments
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: segments-${{ needs.route.outputs.run_id }}
+          retention-days: 3
+          if-no-files-found: ignore
+          path: runs/${{ needs.route.outputs.run_id }}/output/parts
 
       # A backup copy of the deliverables, in case you'd rather upload by hand
       # or the YouTube upload was skipped.
@@ -217,6 +269,7 @@ jobs:
         with:
           name: video-${{ needs.route.outputs.run_id }}
           retention-days: 30
+          if-no-files-found: ignore
           path: |
             runs/${{ needs.route.outputs.run_id }}/output/video.mp4
             runs/${{ needs.route.outputs.run_id }}/output/thumbnail*.jpg
@@ -228,7 +281,14 @@ jobs:
         run: bash .github/scripts/commit-runs.sh "Built run ${{ needs.route.outputs.run_id }}"
 
       - name: Tell me if it broke
-        if: failure()
+        if: always() && steps.build.outcome != 'success'
+        env:
+          OUTCOME: ${{ steps.build.outcome }}
         run: |
-          python -c "from pipeline import chat, assistant; \
-            chat.failed('Build', 'A build stage stopped.', assistant.log_url())"
+          if [ "$OUTCOME" = "cancelled" ]; then
+            export REASON="The build hit the 350-minute limit and was stopped. Finished render segments were kept, so replying retry resumes from where it stopped rather than starting over."
+          else
+            export REASON="A build stage stopped."
+          fi
+          python -c "import os; from pipeline import chat, assistant; \
+            chat.failed('Build', os.environ['REASON'], assistant.log_url())"
