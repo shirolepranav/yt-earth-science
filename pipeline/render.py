@@ -23,6 +23,7 @@ import math
 import os
 import shutil
 import subprocess
+import time
 from pathlib import Path
 
 from .common import ROOT, Run, log, resolve_run
@@ -139,10 +140,23 @@ def render(run: Run, output_name: str = "video.mp4") -> Path:
     if browser:
         base_command.append(f"--browser-executable={browser}")
 
+    from . import chat  # late import: rendering must work with no chat configured
+
     parts = []
-    starts = range(0, total_frames, SEGMENT_FRAMES)
+    starts = list(range(0, total_frames, SEGMENT_FRAMES))
     log(f"Rendering {total_frames / shot_list['fps'] / 60:.1f} min in {len(starts)} segments "
         "(the slow part - roughly 4-8 minutes per segment on a Mac)...")
+    chat.send(
+        f"🎞 <b>Rendering</b> — {total_frames / shot_list['fps'] / 60:.0f} minutes of video "
+        f"in {len(starts)} segments.\n\n"
+        "<i>This is the long one. I'll report after each segment with an estimate.</i>"
+    )
+
+    # Timing only the segments actually rendered in this job. A restored
+    # segment costs nothing, so counting it would flatter the estimate.
+    rendered = 0
+    spent = 0.0
+
     for number, start in enumerate(starts, 1):
         end = min(total_frames, start + SEGMENT_FRAMES) - 1
         part = parts_dir / f"{fingerprint}_{start:06d}.mp4"
@@ -152,9 +166,27 @@ def render(run: Run, output_name: str = "video.mp4") -> Path:
             continue
         log(f"  segment {number}/{len(starts)}: frames {start}-{end}")
         tmp = part.with_name(part.stem + ".partial.mp4")
+
+        began = time.monotonic()
         subprocess.run(["npx", "remotion", "render", COMPOSITION, str(tmp),
                         f"--frames={start}-{end}", *base_command], cwd=REMOTION_DIR, check=True)
         tmp.replace(part)
+
+        rendered += 1
+        spent += time.monotonic() - began
+
+        # How many are genuinely left - a segment already on disk is not work.
+        left = sum(1 for later, other in enumerate(starts[number:], number + 1)
+                   if not (parts_dir / f"{fingerprint}_{other:06d}.mp4").exists())
+        each = spent / rendered
+        log(f"    {each / 60:.1f} min for that segment; {left} left")
+
+        if left:
+            chat.send(f"🎞 Segment <b>{number}/{len(starts)}</b> done — "
+                      f"about <b>{left * each / 60:.0f} min</b> left "
+                      f"({each / 60:.1f} min per segment)")
+        else:
+            chat.send(f"🎞 Segment <b>{number}/{len(starts)}</b> done — stitching the audio on now.")
 
     concat_list = parts_dir / f"{fingerprint}.txt"
     concat_list.write_text("".join(f"file '{p.name}'\n" for p in parts))
