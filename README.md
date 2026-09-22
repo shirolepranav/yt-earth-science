@@ -13,7 +13,7 @@ It runs on your Mac because the render needs a GPU: the three.js charts and dept
 ## The loop
 
 ```
-  make app  →  http://127.0.0.1:8765
+  yt-studio: make app  →  http://127.0.0.1:8765  →  🌋 Deep Earth
         │
   ┌───────────────────┐
   │ Propose 10 topics │  YouTube outliers, search trends, forum questions, your backlog
@@ -102,16 +102,15 @@ pipeline/         One module per stage. Each runs on its own.
   brain.py          reads what you typed — rules first, then a model
   assistant.py      does it, answers questions, and posts the three gates
 
-app.py            the studio: a stdlib web server on 127.0.0.1 that runs slow
-                  requests as background tools/chat_job.py processes
-ui.html           the studio page — chat, buttons, video player, thumbnails
-
 remotion/         The video itself, written as React components.
   src/components/   StockClip, ParallaxStill, EvidenceCard, ImpactCard,
                     LookOverlay, charts/ (Bars3D, Line3D, BigNumber - three.js)
   src/MainVideo.tsx the composition that assembles them from the shot list
 
 tools/            chat_job.py (the slow half of a chat request), YouTube sign-in, demo, self-test.
+
+The chat app itself lives in ../yt-studio and drives every channel repo; this
+repo honours its CHANNEL_CONTRACT.md.
 docs/             A portable blueprint for reusing this design.
 DECISIONS.md      Why the model choices are what they are. Read before
                   swapping in a newly-launched model.

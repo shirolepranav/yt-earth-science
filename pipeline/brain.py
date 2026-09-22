@@ -25,7 +25,7 @@ import re
 
 from .common import Run, log
 
-# Every intent the system understands. app.py routes on these strings: anything
+# Every intent the system understands. The studio routes on these strings: anything
 # not in assistant.FAST is run as a background job by tools/chat_job.py.
 INTENTS = {
     "new":             "Start a new video - propose ten topics",

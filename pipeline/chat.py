@@ -1,10 +1,10 @@
 """Talking to you in the local studio app.
 
 Everything the pipeline says to you goes through here. Each message is one JSON
-line appended to `runs/chat.jsonl`; `app.py` serves that file to the page in
-your browser, which polls it every two seconds. So a 90-minute build running in
-a background process talks to you the same way a quick reply does - it appends
-a line.
+line appended to `runs/chat.jsonl`; the studio (../yt-studio) serves that file
+to the page in your browser, which polls it every two seconds. So a 90-minute
+build running in a background process talks to you the same way a quick reply
+does - it appends a line.
 
 Buttons are `(label, code)` pairs. Tapping one sends the code back as if you
 had typed it ("cmd:approve", "pick:3", "thumb:b"), and `brain.py` reads it.

@@ -1,7 +1,8 @@
 # =============================================================================
 # Shortcuts for running the pipeline on your Mac.
 #
-# `make app` is the normal way in: the studio chat drives everything below.
+# `make app` is the normal way in: it opens the studio (../yt-studio), whose
+# chat drives everything below for this channel and the others.
 #
 # Type `make` on its own to see this list.
 # =============================================================================
@@ -25,7 +26,7 @@ help:
 	@echo ""
 
 app:
-	./venv/bin/python app.py
+	cd ../yt-studio && $(MAKE) app
 
 setup:
 	python3 -m venv venv

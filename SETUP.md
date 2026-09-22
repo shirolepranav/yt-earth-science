@@ -75,13 +75,17 @@ Two things to know:
 
 ## 4 — Open the studio
 
+The chat app lives in its own folder, `../yt-studio`, and drives all your
+channels. Deep Earth is listed in its `channels.json`.
+
 ```bash
-make app
+make app            # here, or in ../yt-studio
 ```
 
-Your browser opens **http://127.0.0.1:8765**. Keep the Terminal window open; the
-Mac won't idle-sleep while the studio runs (it may still sleep if you close the
-lid on battery).
+Your browser opens **http://127.0.0.1:8765**; pick **🌋 Deep Earth** in the header.
+Keep the Terminal window open; the Mac won't idle-sleep while the studio runs (it
+may still sleep if you close the lid on battery). One job runs at a time across
+all channels, so another channel's build may queue behind this one.
 
 From there it's all chat:
 

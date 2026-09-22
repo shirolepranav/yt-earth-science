@@ -5,11 +5,11 @@
 It splits the work in two, because the jobs have wildly different runtimes:
 
   * **Fast intents** - status, a title change, picking a thumbnail, a question -
-    are handled right here, inside app.py. You get an answer in seconds.
+    are handled right here, as soon as the studio passes your message on.
 
   * **Slow intents** - proposing topics, writing a script, building a video,
     uploading - are only *named* here. `route()` returns the intent string and
-    app.py starts tools/chat_job.py for it in the background, so a 90-minute
+    the studio (../yt-studio) queues tools/chat_job.py for it, so a 90-minute
     build never blocks a reply.
 
 The other half of this module is the three gates: the messages that present
@@ -32,7 +32,7 @@ from .common import RUNS_DIR, Run, latest_run_id, load_persona, log, resolve_run
 STAGES = ("topics", "script", "building", "review", "published", "cancelled")
 
 # Intents this module finishes on the spot. Everything else is handed to
-# tools/chat_job.py by app.py.
+# tools/chat_job.py by the studio.
 FAST = {"status", "question", "unclear", "pick_thumbnail", "set_title", "set_tags",
         "set_description", "set_pinned_comment", "cancel"}
 
@@ -44,7 +44,7 @@ def active_run() -> Run | None:
 
 
 def log_path() -> str:
-    """Where app.py sends background jobs' output, for error messages."""
+    """Where the studio sends background jobs' output, for error messages."""
     return str(RUNS_DIR / "job.log")
 
 
@@ -298,15 +298,15 @@ def do_cancel(run: Run | None) -> None:
 def route(text: str) -> dict:
     """Work out what you meant, do it if it's quick, and name it either way.
 
-    Returns the whole decision - `{"intent", "args", "reply"}`. app.py reads
-    the intent and decides whether to start a background job.
+    Returns the whole decision - `{"intent", "args", "reply"}`. The studio
+    reads the intent and decides whether to start a background job.
     """
     run = active_run()
     decision = brain.understand(text, run)
     intent, args = decision["intent"], decision.get("args", {})
     reply = decision.get("reply", "")
 
-    # Slow intents are acknowledged by app.py, once it knows it can start them.
+    # Slow intents are acknowledged by the studio, once it knows it can start them.
 
     if intent == "status":
         do_status(run)
@@ -342,6 +342,8 @@ if __name__ == "__main__":
          "review": present_review}[args.present](target)
     elif args.text:
         decision = route(args.text)
-        print(json.dumps(decision))
+        # The studio (yt-studio/app.py) reads this last line to decide whether
+        # to queue a background job. See yt-studio/CHANNEL_CONTRACT.md.
+        print(json.dumps({**decision, "slow": decision["intent"] not in FAST}))
     else:
         parser.error("Pass either --text or --present.")

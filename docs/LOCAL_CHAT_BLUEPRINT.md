@@ -40,7 +40,8 @@ title · description (with sources/credits) · tags (<=15) · 3 thumbnails + cho
 - Keep the Mac awake during jobs with `caffeinate -i`; set `REMOTION_GL=angle` and a sensible concurrency (8 on an M2 Pro).
 
 ## Reference implementation
-This repo: `app.py` (server), `ui.html` (page), `pipeline/chat.py` (transport),
+`../yt-studio`: `app.py` (server, multi-channel queue), `ui.html` (page), `CHANNEL_CONTRACT.md`.
+This repo: `pipeline/chat.py` (transport),
 `pipeline/brain.py` (routing), `pipeline/assistant.py` (fast intents + gates),
 `tools/chat_job.py` (slow intents), `pipeline/publish.py` (YouTube upload).
 

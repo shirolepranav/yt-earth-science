@@ -1,8 +1,8 @@
 """Runs the slow half of a chat request.
 
-`pipeline/assistant.py` answers anything quick inside app.py. Anything that
+`pipeline/assistant.py` answers anything quick on the spot. Anything that
 takes minutes - proposing topics, writing a script, building a video, uploading
-it - lands here instead, started by app.py as a background process so the fast
+it - lands here instead, queued by the studio (../yt-studio) so the fast
 replies stay fast.
 
 One entry point for all of them:

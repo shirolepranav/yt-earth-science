@@ -4,237 +4,6 @@
   "graph": {},
   "nodes": [
     {
-      "label": "app.py",
-      "file_type": "code",
-      "source_file": "app.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "app",
-      "community": 37,
-      "community_name": "app.py",
-      "norm_label": "app.py"
-    },
-    {
-      "label": "start_job()",
-      "file_type": "code",
-      "source_file": "app.py",
-      "source_location": "L49",
-      "_origin": "ast",
-      "id": "app_start_job",
-      "community": 37,
-      "community_name": "app.py",
-      "norm_label": "start_job()"
-    },
-    {
-      "label": "reap()",
-      "file_type": "code",
-      "source_file": "app.py",
-      "source_location": "L68",
-      "_origin": "ast",
-      "id": "app_reap",
-      "community": 37,
-      "community_name": "app.py",
-      "norm_label": "reap()"
-    },
-    {
-      "label": "Popen",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "popen",
-      "community": 37,
-      "community_name": "app.py",
-      "norm_label": "popen"
-    },
-    {
-      "label": "stop_job()",
-      "file_type": "code",
-      "source_file": "app.py",
-      "source_location": "L77",
-      "_origin": "ast",
-      "id": "app_stop_job",
-      "community": 37,
-      "community_name": "app.py",
-      "norm_label": "stop_job()"
-    },
-    {
-      "label": "handle()",
-      "file_type": "code",
-      "source_file": "app.py",
-      "source_location": "L88",
-      "_origin": "ast",
-      "id": "app_handle",
-      "community": 37,
-      "community_name": "app.py",
-      "norm_label": "handle()"
-    },
-    {
-      "label": "Handler",
-      "file_type": "code",
-      "source_file": "app.py",
-      "source_location": "L120",
-      "_origin": "ast",
-      "id": "app_handler",
-      "community": 37,
-      "community_name": "app.py",
-      "norm_label": "handler"
-    },
-    {
-      "label": "BaseHTTPRequestHandler",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "basehttprequesthandler",
-      "community": 37,
-      "community_name": "app.py",
-      "norm_label": "basehttprequesthandler"
-    },
-    {
-      "label": ".log_message()",
-      "file_type": "code",
-      "source_file": "app.py",
-      "source_location": "L121",
-      "_origin": "ast",
-      "id": "app_handler_log_message",
-      "community": 37,
-      "community_name": "app.py",
-      "norm_label": ".log_message()"
-    },
-    {
-      "label": ".trusted()",
-      "file_type": "code",
-      "source_file": "app.py",
-      "source_location": "L124",
-      "_origin": "ast",
-      "id": "app_handler_trusted",
-      "community": 37,
-      "community_name": "app.py",
-      "norm_label": ".trusted()"
-    },
-    {
-      "label": ".send_json()",
-      "file_type": "code",
-      "source_file": "app.py",
-      "source_location": "L130",
-      "_origin": "ast",
-      "id": "app_handler_send_json",
-      "community": 37,
-      "community_name": "app.py",
-      "norm_label": ".send_json()"
-    },
-    {
-      "label": ".do_GET()",
-      "file_type": "code",
-      "source_file": "app.py",
-      "source_location": "L138",
-      "_origin": "ast",
-      "id": "app_handler_do_get",
-      "community": 37,
-      "community_name": "app.py",
-      "norm_label": ".do_get()"
-    },
-    {
-      "label": ".do_POST()",
-      "file_type": "code",
-      "source_file": "app.py",
-      "source_location": "L160",
-      "_origin": "ast",
-      "id": "app_handler_do_post",
-      "community": 37,
-      "community_name": "app.py",
-      "norm_label": ".do_post()"
-    },
-    {
-      "label": ".serve()",
-      "file_type": "code",
-      "source_file": "app.py",
-      "source_location": "L169",
-      "_origin": "ast",
-      "id": "app_handler_serve",
-      "community": 37,
-      "community_name": "app.py",
-      "norm_label": ".serve()"
-    },
-    {
-      "label": "Path",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "app_py_path",
-      "community": 37,
-      "community_name": "app.py",
-      "norm_label": "path"
-    },
-    {
-      "label": "main()",
-      "file_type": "code",
-      "source_file": "app.py",
-      "source_location": "L215",
-      "_origin": "ast",
-      "id": "app_main",
-      "community": 37,
-      "community_name": "app.py",
-      "norm_label": "main()"
-    },
-    {
-      "label": "Deep Earth studio - the local chat app that drives the whole pipeline. make app\u2026",
-      "file_type": "rationale",
-      "source_file": "app.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "app_rationale_1",
-      "community": 37,
-      "community_name": "app.py",
-      "norm_label": "deep earth studio - the local chat app that drives the whole pipeline. make app..."
-    },
-    {
-      "label": "Forget the job when it exits. Failures report themselves via chat.failed.",
-      "file_type": "rationale",
-      "source_file": "app.py",
-      "source_location": "L69",
-      "_origin": "ast",
-      "id": "app_rationale_69",
-      "community": 37,
-      "community_name": "app.py",
-      "norm_label": "forget the job when it exits. failures report themselves via chat.failed."
-    },
-    {
-      "label": "One message from the page. Runs in its own thread: routing may call a model.",
-      "file_type": "rationale",
-      "source_file": "app.py",
-      "source_location": "L89",
-      "_origin": "ast",
-      "id": "app_rationale_89",
-      "community": 37,
-      "community_name": "app.py",
-      "norm_label": "one message from the page. runs in its own thread: routing may call a model."
-    },
-    {
-      "label": "Only this page, on this Mac. Blocks DNS rebinding and cross-site POSTs.",
-      "file_type": "rationale",
-      "source_file": "app.py",
-      "source_location": "L125",
-      "_origin": "ast",
-      "id": "app_rationale_125",
-      "community": 37,
-      "community_name": "app.py",
-      "norm_label": "only this page, on this mac. blocks dns rebinding and cross-site posts."
-    },
-    {
-      "label": "Send a file, honouring Range - browsers need it to play and seek a video.",
-      "file_type": "rationale",
-      "source_file": "app.py",
-      "source_location": "L170",
-      "_origin": "ast",
-      "id": "app_rationale_170",
-      "community": 37,
-      "community_name": "app.py",
-      "norm_label": "send a file, honouring range - browsers need it to play and seek a video."
-    },
-    {
       "label": "__init__.py",
       "file_type": "code",
       "source_file": "pipeline/__init__.py",
@@ -263,8 +32,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pipeline_align",
-      "community": 3,
-      "community_name": "resolve_run",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "align.py"
     },
     {
@@ -274,8 +43,8 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "pipeline_align_audio_duration_seconds",
-      "community": 3,
-      "community_name": "resolve_run",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "audio_duration_seconds()"
     },
     {
@@ -285,8 +54,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "pipeline_align_py_path",
-      "community": 3,
-      "community_name": "resolve_run",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "path"
     },
     {
@@ -296,8 +65,8 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "pipeline_align_transcribe_with_whisper",
-      "community": 3,
-      "community_name": "resolve_run",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "transcribe_with_whisper()"
     },
     {
@@ -307,8 +76,8 @@
       "source_location": "L79",
       "_origin": "ast",
       "id": "pipeline_align_generate",
-      "community": 3,
-      "community_name": "resolve_run",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "generate()"
     },
     {
@@ -318,8 +87,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pipeline_align_rationale_1",
-      "community": 3,
-      "community_name": "resolve_run",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "stage 5 - word-level timing. produces a json file listing every spoken word..."
     },
     {
@@ -477,7 +246,7 @@
       "norm_label": "the run the conversation is about - always the most recent one."
     },
     {
-      "label": "Where app.py sends background jobs' output, for error messages.",
+      "label": "Where the studio sends background jobs' output, for error messages.",
       "file_type": "rationale",
       "source_file": "pipeline/assistant.py",
       "source_location": "L47",
@@ -485,7 +254,7 @@
       "id": "pipeline_assistant_rationale_47",
       "community": 40,
       "community_name": "chat_job.py",
-      "norm_label": "where app.py sends background jobs' output, for error messages."
+      "norm_label": "where the studio sends background jobs' output, for error messages."
     },
     {
       "label": "Post the ten proposed topics with a numbered button for each.",
@@ -560,8 +329,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pipeline_audio",
-      "community": 3,
-      "community_name": "resolve_run",
+      "community": 33,
+      "community_name": "audio.py",
       "norm_label": "audio.py"
     },
     {
@@ -571,8 +340,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "pipeline_audio_pick_music",
-      "community": 3,
-      "community_name": "resolve_run",
+      "community": 33,
+      "community_name": "audio.py",
       "norm_label": "pick_music()"
     },
     {
@@ -582,8 +351,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "pipeline_audio_py_path",
-      "community": 3,
-      "community_name": "resolve_run",
+      "community": 33,
+      "community_name": "audio.py",
       "norm_label": "path"
     },
     {
@@ -593,8 +362,8 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "pipeline_audio_run_ffmpeg",
-      "community": 3,
-      "community_name": "resolve_run",
+      "community": 33,
+      "community_name": "audio.py",
       "norm_label": "run_ffmpeg()"
     },
     {
@@ -604,8 +373,8 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "pipeline_audio_master",
-      "community": 3,
-      "community_name": "resolve_run",
+      "community": 33,
+      "community_name": "audio.py",
       "norm_label": "master()"
     },
     {
@@ -615,8 +384,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pipeline_audio_rationale_1",
-      "community": 3,
-      "community_name": "resolve_run",
+      "community": 33,
+      "community_name": "audio.py",
       "norm_label": "stage 8 - audio mastering. two jobs: 1. duck background music under the..."
     },
     {
@@ -626,8 +395,8 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "pipeline_audio_rationale_34",
-      "community": 3,
-      "community_name": "resolve_run",
+      "community": 33,
+      "community_name": "audio.py",
       "norm_label": "choose a music bed, rotating between tracks across videos. rotation is..."
     },
     {
@@ -637,8 +406,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pipeline_brain",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 32,
+      "community_name": "brain.py",
       "norm_label": "brain.py"
     },
     {
@@ -659,8 +428,8 @@
       "source_location": "L113",
       "_origin": "ast",
       "id": "pipeline_brain_extract_fenced_script",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 32,
+      "community_name": "brain.py",
       "norm_label": "extract_fenced_script()"
     },
     {
@@ -670,8 +439,8 @@
       "source_location": "L169",
       "_origin": "ast",
       "id": "pipeline_brain_ask_model",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 32,
+      "community_name": "brain.py",
       "norm_label": "ask_model()"
     },
     {
@@ -681,8 +450,8 @@
       "source_location": "L199",
       "_origin": "ast",
       "id": "pipeline_brain_understand",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 32,
+      "community_name": "brain.py",
       "norm_label": "understand()"
     },
     {
@@ -692,8 +461,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pipeline_brain_rationale_1",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 32,
+      "community_name": "brain.py",
       "norm_label": "turning what you typed into something the pipeline can do. you shouldn't have..."
     },
     {
@@ -714,8 +483,8 @@
       "source_location": "L114",
       "_origin": "ast",
       "id": "pipeline_brain_rationale_114",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 32,
+      "community_name": "brain.py",
       "norm_label": "pull a pasted script out of a ``` code block, if there is one. takes the..."
     },
     {
@@ -725,8 +494,8 @@
       "source_location": "L170",
       "_origin": "ast",
       "id": "pipeline_brain_rationale_170",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 32,
+      "community_name": "brain.py",
       "norm_label": "send the message to deepseek and get a structured intent back."
     },
     {
@@ -736,8 +505,8 @@
       "source_location": "L200",
       "_origin": "ast",
       "id": "pipeline_brain_rationale_200",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 32,
+      "community_name": "brain.py",
       "norm_label": "message in, `{\"intent\", \"args\", \"reply\"}` out. never raises."
     },
     {
@@ -747,8 +516,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pipeline_captions",
-      "community": 3,
-      "community_name": "resolve_run",
+      "community": 5,
+      "community_name": "captions.py",
       "norm_label": "captions.py"
     },
     {
@@ -758,8 +527,8 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "pipeline_captions_timestamp",
-      "community": 3,
-      "community_name": "resolve_run",
+      "community": 41,
+      "community_name": "build_cues",
       "norm_label": "_timestamp()"
     },
     {
@@ -769,8 +538,8 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "pipeline_captions_wrap",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 5,
+      "community_name": "captions.py",
       "norm_label": "_wrap()"
     },
     {
@@ -780,8 +549,8 @@
       "source_location": "L84",
       "_origin": "ast",
       "id": "pipeline_captions_fits",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 5,
+      "community_name": "captions.py",
       "norm_label": "_fits()"
     },
     {
@@ -791,8 +560,8 @@
       "source_location": "L98",
       "_origin": "ast",
       "id": "pipeline_captions_text_of",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 5,
+      "community_name": "captions.py",
       "norm_label": "_text_of()"
     },
     {
@@ -802,8 +571,8 @@
       "source_location": "L103",
       "_origin": "ast",
       "id": "pipeline_captions_fix_orphans",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 5,
+      "community_name": "captions.py",
       "norm_label": "_fix_orphans()"
     },
     {
@@ -813,8 +582,8 @@
       "source_location": "L137",
       "_origin": "ast",
       "id": "pipeline_captions_build_cues",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 41,
+      "community_name": "build_cues",
       "norm_label": "build_cues()"
     },
     {
@@ -824,8 +593,8 @@
       "source_location": "L200",
       "_origin": "ast",
       "id": "pipeline_captions_to_srt",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 41,
+      "community_name": "build_cues",
       "norm_label": "to_srt()"
     },
     {
@@ -836,7 +605,7 @@
       "_origin": "ast",
       "id": "pipeline_captions_generate",
       "community": 41,
-      "community_name": "log",
+      "community_name": "build_cues",
       "norm_label": "generate()"
     },
     {
@@ -846,8 +615,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pipeline_captions_rationale_1",
-      "community": 3,
-      "community_name": "resolve_run",
+      "community": 5,
+      "community_name": "captions.py",
       "norm_label": "stage - subtitles. turns the word-level timings from the align stage into a..."
     },
     {
@@ -857,8 +626,8 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "pipeline_captions_rationale_39",
-      "community": 3,
-      "community_name": "resolve_run",
+      "community": 41,
+      "community_name": "build_cues",
       "norm_label": "seconds -> the `hh:mm:ss,mmm` format srt requires."
     },
     {
@@ -868,8 +637,8 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "pipeline_captions_rationale_50",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 5,
+      "community_name": "captions.py",
       "norm_label": "split a cue across at most two lines, keeping them a similar length. greedy..."
     },
     {
@@ -879,8 +648,8 @@
       "source_location": "L85",
       "_origin": "ast",
       "id": "pipeline_captions_rationale_85",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 5,
+      "community_name": "captions.py",
       "norm_label": "would this cue text wrap into the two-line box without overflowing? counting..."
     },
     {
@@ -890,8 +659,8 @@
       "source_location": "L99",
       "_origin": "ast",
       "id": "pipeline_captions_rationale_99",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 5,
+      "community_name": "captions.py",
       "norm_label": "the words of a cue, joined back into a line."
     },
     {
@@ -901,8 +670,8 @@
       "source_location": "L104",
       "_origin": "ast",
       "id": "pipeline_captions_rationale_104",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 5,
+      "community_name": "captions.py",
       "norm_label": "deal with a stranded tail like \"sea.\" alone on screen. working on word lists..."
     },
     {
@@ -912,8 +681,8 @@
       "source_location": "L138",
       "_origin": "ast",
       "id": "pipeline_captions_rationale_138",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 41,
+      "community_name": "build_cues",
       "norm_label": "group timed words into subtitle cues. each word is `{\"word\": ..., \"start\": ...,..."
     },
     {
@@ -923,8 +692,8 @@
       "source_location": "L201",
       "_origin": "ast",
       "id": "pipeline_captions_rationale_201",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 41,
+      "community_name": "build_cues",
       "norm_label": "render cues as subrip (.srt) text."
     },
     {
@@ -935,7 +704,7 @@
       "_origin": "ast",
       "id": "pipeline_captions_rationale_213",
       "community": 41,
-      "community_name": "log",
+      "community_name": "build_cues",
       "norm_label": "write output/subtitles.srt from words.json."
     },
     {
@@ -956,8 +725,8 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "pipeline_charts3d_chart_spec",
-      "community": 43,
-      "community_name": "shotlist.py",
+      "community": 10,
+      "community_name": "charts3d.py",
       "norm_label": "chart_spec()"
     },
     {
@@ -1264,8 +1033,8 @@
       "source_location": "L112",
       "_origin": "ast",
       "id": "pipeline_chat_progress",
-      "community": 35,
-      "community_name": "assistant.py",
+      "community": 40,
+      "community_name": "chat_job.py",
       "norm_label": "progress()"
     },
     {
@@ -1385,8 +1154,8 @@
       "source_location": "L113",
       "_origin": "ast",
       "id": "pipeline_chat_rationale_113",
-      "community": 35,
-      "community_name": "assistant.py",
+      "community": 40,
+      "community_name": "chat_job.py",
       "norm_label": "a one-line 'still working' note. called between build stages."
     },
     {
@@ -1407,8 +1176,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pipeline_common",
-      "community": 41,
-      "community_name": "log",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "common.py"
     },
     {
@@ -1418,7 +1187,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "pipeline_common_log",
-      "community": 41,
+      "community": 7,
       "community_name": "log",
       "norm_label": "log()"
     },
@@ -1440,7 +1209,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "pipeline_common_load_config",
-      "community": 2,
+      "community": 43,
       "community_name": "load_config",
       "norm_label": "load_config()"
     },
@@ -1452,7 +1221,7 @@
       "_origin": "ast",
       "id": "pipeline_common_load_brand",
       "community": 43,
-      "community_name": "shotlist.py",
+      "community_name": "load_config",
       "norm_label": "load_brand()"
     },
     {
@@ -1462,8 +1231,8 @@
       "source_location": "L72",
       "_origin": "ast",
       "id": "pipeline_common_load_persona",
-      "community": 2,
-      "community_name": "load_config",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "load_persona()"
     },
     {
@@ -1473,8 +1242,8 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "pipeline_common_load_prompt",
-      "community": 2,
-      "community_name": "load_config",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "load_prompt()"
     },
     {
@@ -1484,8 +1253,8 @@
       "source_location": "L86",
       "_origin": "ast",
       "id": "pipeline_common_secret",
-      "community": 32,
-      "community_name": "secret",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "secret()"
     },
     {
@@ -1495,8 +1264,8 @@
       "source_location": "L105",
       "_origin": "ast",
       "id": "pipeline_common_has_secret",
-      "community": 5,
-      "community_name": "visuals.py",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "has_secret()"
     },
     {
@@ -1507,7 +1276,7 @@
       "_origin": "ast",
       "id": "pipeline_common_permanenterror",
       "community": 8,
-      "community_name": "llm.py",
+      "community_name": "common.py",
       "norm_label": "permanenterror"
     },
     {
@@ -1518,7 +1287,7 @@
       "_origin": "ast",
       "id": "runtimeerror",
       "community": 8,
-      "community_name": "llm.py",
+      "community_name": "common.py",
       "norm_label": "runtimeerror"
     },
     {
@@ -1529,7 +1298,7 @@
       "_origin": "ast",
       "id": "pipeline_common_permanent_if_hopeless",
       "community": 8,
-      "community_name": "llm.py",
+      "community_name": "common.py",
       "norm_label": "permanent_if_hopeless()"
     },
     {
@@ -1540,7 +1309,7 @@
       "_origin": "ast",
       "id": "exception",
       "community": 8,
-      "community_name": "llm.py",
+      "community_name": "common.py",
       "norm_label": "exception"
     },
     {
@@ -1550,8 +1319,8 @@
       "source_location": "L134",
       "_origin": "ast",
       "id": "pipeline_common_with_retries",
-      "community": 47,
-      "community_name": "with_retries",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "with_retries()"
     },
     {
@@ -1715,8 +1484,8 @@
       "source_location": "L247",
       "_origin": "ast",
       "id": "pipeline_common_run_read_text",
-      "community": 2,
-      "community_name": "load_config",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": ".read_text()"
     },
     {
@@ -1759,8 +1528,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pipeline_common_rationale_1",
-      "community": 41,
-      "community_name": "log",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "shared plumbing used by every other module. nothing in here is specific to..."
     },
     {
@@ -1770,7 +1539,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "pipeline_common_rationale_43",
-      "community": 41,
+      "community": 7,
       "community_name": "log",
       "norm_label": "print a timestamped message that flushes immediately. flushing matters: without..."
     },
@@ -1792,7 +1561,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "pipeline_common_rationale_63",
-      "community": 2,
+      "community": 43,
       "community_name": "load_config",
       "norm_label": "read config/channel.json - the settings for the whole pipeline."
     },
@@ -1804,7 +1573,7 @@
       "_origin": "ast",
       "id": "pipeline_common_rationale_68",
       "community": 43,
-      "community_name": "shotlist.py",
+      "community_name": "load_config",
       "norm_label": "read config/brand.json - colours and fonts."
     },
     {
@@ -1814,8 +1583,8 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "pipeline_common_rationale_73",
-      "community": 2,
-      "community_name": "load_config",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "read config/persona.md - pasted into every script-writing prompt."
     },
     {
@@ -1825,8 +1594,8 @@
       "source_location": "L78",
       "_origin": "ast",
       "id": "pipeline_common_rationale_78",
-      "community": 2,
-      "community_name": "load_config",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "read a prompt template from the prompts/ folder. prompts live in their own..."
     },
     {
@@ -1836,8 +1605,8 @@
       "source_location": "L87",
       "_origin": "ast",
       "id": "pipeline_common_rationale_87",
-      "community": 32,
-      "community_name": "secret",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "fetch an api key from the environment. args: name: the environment variable..."
     },
     {
@@ -1847,8 +1616,8 @@
       "source_location": "L106",
       "_origin": "ast",
       "id": "pipeline_common_rationale_106",
-      "community": 5,
-      "community_name": "visuals.py",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "true if a key is set. used to decide whether an optional step can run."
     },
     {
@@ -1859,7 +1628,7 @@
       "_origin": "ast",
       "id": "pipeline_common_rationale_115",
       "community": 8,
-      "community_name": "llm.py",
+      "community_name": "common.py",
       "norm_label": "a failure no amount of retrying will fix - an empty balance, a bad key. raised..."
     },
     {
@@ -1870,7 +1639,7 @@
       "_origin": "ast",
       "id": "pipeline_common_rationale_124",
       "community": 8,
-      "community_name": "llm.py",
+      "community_name": "common.py",
       "norm_label": "re-raise as permanenterror when the response says retrying is pointless."
     },
     {
@@ -1880,8 +1649,8 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "pipeline_common_rationale_140",
-      "community": 47,
-      "community_name": "with_retries",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "run `fn`, retrying on failure with an increasing wait between tries. the wait..."
     },
     {
@@ -1979,8 +1748,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pipeline_fal",
-      "community": 47,
-      "community_name": "with_retries",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "fal.py"
     },
     {
@@ -1990,8 +1759,8 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "pipeline_fal_headers",
-      "community": 47,
-      "community_name": "with_retries",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "_headers()"
     },
     {
@@ -2001,8 +1770,8 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "pipeline_fal_fal_run",
-      "community": 47,
-      "community_name": "with_retries",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "fal_run()"
     },
     {
@@ -2012,8 +1781,8 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "pipeline_fal_download",
-      "community": 5,
-      "community_name": "visuals.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "download()"
     },
     {
@@ -2023,8 +1792,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "pipeline_fal_py_path",
-      "community": 5,
-      "community_name": "visuals.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "path"
     },
     {
@@ -2034,8 +1803,8 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "pipeline_fal_data_uri",
-      "community": 5,
-      "community_name": "visuals.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "data_uri()"
     },
     {
@@ -2045,8 +1814,8 @@
       "source_location": "L74",
       "_origin": "ast",
       "id": "pipeline_fal_image_args",
-      "community": 47,
-      "community_name": "with_retries",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "image_args()"
     },
     {
@@ -2056,8 +1825,8 @@
       "source_location": "L81",
       "_origin": "ast",
       "id": "pipeline_fal_generate_image",
-      "community": 33,
-      "community_name": "thumbnail.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "generate_image()"
     },
     {
@@ -2067,8 +1836,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pipeline_fal_rationale_1",
-      "community": 47,
-      "community_name": "with_retries",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "fal.ai - one pay-per-use key (fal_key) for every image, video and depth model...."
     },
     {
@@ -2078,8 +1847,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "pipeline_fal_rationale_33",
-      "community": 47,
-      "community_name": "with_retries",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "run one model call to completion and return its output json."
     },
     {
@@ -2089,8 +1858,8 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "pipeline_fal_rationale_69",
-      "community": 5,
-      "community_name": "visuals.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "local file as a data uri - fal accepts these anywhere it takes a url."
     },
     {
@@ -2100,8 +1869,8 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "pipeline_fal_rationale_75",
-      "community": 47,
-      "community_name": "with_retries",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "each image family names its size parameters differently."
     },
     {
@@ -2111,8 +1880,8 @@
       "source_location": "L82",
       "_origin": "ast",
       "id": "pipeline_fal_rationale_82",
-      "community": 33,
-      "community_name": "thumbnail.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "generate one image, cover-crop it to exactly width x height, save as jpeg."
     },
     {
@@ -2123,7 +1892,7 @@
       "_origin": "ast",
       "id": "pipeline_llm",
       "community": 8,
-      "community_name": "llm.py",
+      "community_name": "common.py",
       "norm_label": "llm.py"
     },
     {
@@ -2134,7 +1903,7 @@
       "_origin": "ast",
       "id": "pipeline_llm_post_with_deadline",
       "community": 8,
-      "community_name": "llm.py",
+      "community_name": "common.py",
       "norm_label": "_post_with_deadline()"
     },
     {
@@ -2145,7 +1914,7 @@
       "_origin": "ast",
       "id": "pipeline_llm_deepseek_chat",
       "community": 8,
-      "community_name": "llm.py",
+      "community_name": "common.py",
       "norm_label": "_deepseek_chat()"
     },
     {
@@ -2156,7 +1925,7 @@
       "_origin": "ast",
       "id": "pipeline_llm_gemini_chat",
       "community": 8,
-      "community_name": "llm.py",
+      "community_name": "common.py",
       "norm_label": "_gemini_chat()"
     },
     {
@@ -2167,7 +1936,7 @@
       "_origin": "ast",
       "id": "pipeline_llm_chat",
       "community": 8,
-      "community_name": "llm.py",
+      "community_name": "common.py",
       "norm_label": "chat()"
     },
     {
@@ -2177,8 +1946,8 @@
       "source_location": "L174",
       "_origin": "ast",
       "id": "pipeline_llm_chat_json",
-      "community": 2,
-      "community_name": "load_config",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "chat_json()"
     },
     {
@@ -2189,7 +1958,7 @@
       "_origin": "ast",
       "id": "pipeline_llm_py_any",
       "community": 8,
-      "community_name": "llm.py",
+      "community_name": "common.py",
       "norm_label": "any"
     },
     {
@@ -2200,7 +1969,7 @@
       "_origin": "ast",
       "id": "pipeline_llm_parse_json_loosely",
       "community": 8,
-      "community_name": "llm.py",
+      "community_name": "common.py",
       "norm_label": "parse_json_loosely()"
     },
     {
@@ -2211,7 +1980,7 @@
       "_origin": "ast",
       "id": "pipeline_llm_openai_vision",
       "community": 8,
-      "community_name": "llm.py",
+      "community_name": "common.py",
       "norm_label": "_openai_vision()"
     },
     {
@@ -2222,7 +1991,7 @@
       "_origin": "ast",
       "id": "pipeline_llm_vision_generate",
       "community": 8,
-      "community_name": "llm.py",
+      "community_name": "common.py",
       "norm_label": "_vision_generate()"
     },
     {
@@ -2232,8 +2001,8 @@
       "source_location": "L277",
       "_origin": "ast",
       "id": "pipeline_llm_has_vision",
-      "community": 10,
-      "community_name": "charts3d.py",
+      "community": 7,
+      "community_name": "log",
       "norm_label": "has_vision()"
     },
     {
@@ -2243,8 +2012,8 @@
       "source_location": "L284",
       "_origin": "ast",
       "id": "pipeline_llm_vision_check",
-      "community": 8,
-      "community_name": "llm.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "vision_check()"
     },
     {
@@ -2255,7 +2024,7 @@
       "_origin": "ast",
       "id": "pipeline_llm_vision_check_video",
       "community": 8,
-      "community_name": "llm.py",
+      "community_name": "common.py",
       "norm_label": "vision_check_video()"
     },
     {
@@ -2266,7 +2035,7 @@
       "_origin": "ast",
       "id": "pipeline_llm_rationale_1",
       "community": 8,
-      "community_name": "llm.py",
+      "community_name": "common.py",
       "norm_label": "one place that talks to language models, so the rest of the code doesn't care..."
     },
     {
@@ -2277,7 +2046,7 @@
       "_origin": "ast",
       "id": "pipeline_llm_rationale_37",
       "community": 8,
-      "community_name": "llm.py",
+      "community_name": "common.py",
       "norm_label": "post and return the json reply, failing after timeout seconds of wall clock...."
     },
     {
@@ -2288,7 +2057,7 @@
       "_origin": "ast",
       "id": "pipeline_llm_rationale_132",
       "community": 8,
-      "community_name": "llm.py",
+      "community_name": "common.py",
       "norm_label": "send a prompt to the writing model and return its text reply. args: system: the..."
     },
     {
@@ -2298,8 +2067,8 @@
       "source_location": "L175",
       "_origin": "ast",
       "id": "pipeline_llm_rationale_175",
-      "community": 2,
-      "community_name": "load_config",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "same as chat(), but parses the reply as json and hands back python data. models..."
     },
     {
@@ -2310,7 +2079,7 @@
       "_origin": "ast",
       "id": "pipeline_llm_rationale_185",
       "community": 8,
-      "community_name": "llm.py",
+      "community_name": "common.py",
       "norm_label": "best-effort json parsing of a model reply."
     },
     {
@@ -2321,7 +2090,7 @@
       "_origin": "ast",
       "id": "pipeline_llm_rationale_209",
       "community": 8,
-      "community_name": "llm.py",
+      "community_name": "common.py",
       "norm_label": "openai's chat api, which takes an image as a data uri. images only - these..."
     },
     {
@@ -2331,8 +2100,8 @@
       "source_location": "L278",
       "_origin": "ast",
       "id": "pipeline_llm_rationale_278",
-      "community": 10,
-      "community_name": "charts3d.py",
+      "community": 7,
+      "community_name": "log",
       "norm_label": "whether the configured vision provider has a key to call."
     },
     {
@@ -2342,8 +2111,8 @@
       "source_location": "L285",
       "_origin": "ast",
       "id": "pipeline_llm_rationale_285",
-      "community": 8,
-      "community_name": "llm.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "show one still frame to a cheap vision model and get a small json verdict back...."
     },
     {
@@ -2354,7 +2123,7 @@
       "_origin": "ast",
       "id": "pipeline_llm_rationale_297",
       "community": 8,
-      "community_name": "llm.py",
+      "community_name": "common.py",
       "norm_label": "same idea as vision_check(), but hands the model the actual clip so it can..."
     },
     {
@@ -2419,8 +2188,8 @@
       "source_location": "L167",
       "_origin": "ast",
       "id": "pipeline_narrate_elevenlabs_pcm",
-      "community": 32,
-      "community_name": "secret",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "_elevenlabs_pcm()"
     },
     {
@@ -2562,8 +2331,8 @@
       "source_location": "L168",
       "_origin": "ast",
       "id": "pipeline_narrate_rationale_168",
-      "community": 32,
-      "community_name": "secret",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "elevenlabs returns raw pcm when asked, plus the exact time of every character..."
     },
     {
@@ -2628,8 +2397,8 @@
       "source_location": "L54",
       "_origin": "ast",
       "id": "pipeline_publish_select_thumbnail",
-      "community": 36,
-      "community_name": "Run",
+      "community": 31,
+      "community_name": "publish.py",
       "norm_label": "select_thumbnail()"
     },
     {
@@ -2793,8 +2562,8 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "pipeline_publish_rationale_55",
-      "community": 36,
-      "community_name": "Run",
+      "community": 31,
+      "community_name": "publish.py",
       "norm_label": "record which of the three thumbnails you want used. called from the review chat..."
     },
     {
@@ -2936,7 +2705,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pipeline_render",
-      "community": 41,
+      "community": 7,
       "community_name": "log",
       "norm_label": "render.py"
     },
@@ -2947,7 +2716,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "pipeline_render_stage_assets",
-      "community": 41,
+      "community": 7,
       "community_name": "log",
       "norm_label": "stage_assets()"
     },
@@ -2958,7 +2727,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "pipeline_render_py_path",
-      "community": 41,
+      "community": 7,
       "community_name": "log",
       "norm_label": "path"
     },
@@ -2969,7 +2738,7 @@
       "source_location": "L104",
       "_origin": "ast",
       "id": "pipeline_render_ensure_dependencies",
-      "community": 41,
+      "community": 7,
       "community_name": "log",
       "norm_label": "ensure_dependencies()"
     },
@@ -2980,7 +2749,7 @@
       "source_location": "L111",
       "_origin": "ast",
       "id": "pipeline_render_render",
-      "community": 41,
+      "community": 7,
       "community_name": "log",
       "norm_label": "render()"
     },
@@ -2991,7 +2760,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pipeline_render_rationale_1",
-      "community": 41,
+      "community": 7,
       "community_name": "log",
       "norm_label": "stage 10 - render. hands the shot list to remotion, which draws every frame in..."
     },
@@ -3002,7 +2771,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "pipeline_render_rationale_40",
-      "community": 41,
+      "community": 7,
       "community_name": "log",
       "norm_label": "copy this run's assets where the browser can reach them. returns the path to..."
     },
@@ -3013,8 +2782,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pipeline_research",
-      "community": 32,
-      "community_name": "secret",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "research.py"
     },
     {
@@ -3024,8 +2793,8 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "pipeline_research_is_primary",
-      "community": 32,
-      "community_name": "secret",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "is_primary()"
     },
     {
@@ -3035,8 +2804,8 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "pipeline_research_is_blocked",
-      "community": 32,
-      "community_name": "secret",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "is_blocked()"
     },
     {
@@ -3046,8 +2815,8 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "pipeline_research_search_exa",
-      "community": 32,
-      "community_name": "secret",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "search_exa()"
     },
     {
@@ -3057,8 +2826,8 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "pipeline_research_search_tavily",
-      "community": 32,
-      "community_name": "secret",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "search_tavily()"
     },
     {
@@ -3068,8 +2837,8 @@
       "source_location": "L147",
       "_origin": "ast",
       "id": "pipeline_research_fetch_clean_text",
-      "community": 32,
-      "community_name": "secret",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "fetch_clean_text()"
     },
     {
@@ -3079,8 +2848,8 @@
       "source_location": "L172",
       "_origin": "ast",
       "id": "pipeline_research_build_queries",
-      "community": 32,
-      "community_name": "secret",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "build_queries()"
     },
     {
@@ -3090,8 +2859,8 @@
       "source_location": "L193",
       "_origin": "ast",
       "id": "pipeline_research_generate",
-      "community": 32,
-      "community_name": "secret",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "generate()"
     },
     {
@@ -3101,8 +2870,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pipeline_research_rationale_1",
-      "community": 32,
-      "community_name": "secret",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "stage 2 - research chain. turns an approved topic into a dossier of real,..."
     },
     {
@@ -3112,8 +2881,8 @@
       "source_location": "L148",
       "_origin": "ast",
       "id": "pipeline_research_rationale_148",
-      "community": 32,
-      "community_name": "secret",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "download a page and strip the navigation, ads and cookie banners. trafilatura..."
     },
     {
@@ -3123,8 +2892,8 @@
       "source_location": "L173",
       "_origin": "ast",
       "id": "pipeline_research_rationale_173",
-      "community": 32,
-      "community_name": "secret",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "turn one topic into several searches that hit different angles. one search..."
     },
     {
@@ -3255,8 +3024,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pipeline_script",
-      "community": 2,
-      "community_name": "load_config",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "script.py"
     },
     {
@@ -3266,8 +3035,8 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "pipeline_script_pick_shape",
-      "community": 2,
-      "community_name": "load_config",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "pick_shape()"
     },
     {
@@ -3277,8 +3046,8 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "pipeline_script_word_count",
-      "community": 2,
-      "community_name": "load_config",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "word_count()"
     },
     {
@@ -3288,8 +3057,8 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "pipeline_script_first_seconds_of",
-      "community": 2,
-      "community_name": "load_config",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "first_seconds_of()"
     },
     {
@@ -3299,8 +3068,8 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "pipeline_script_generate",
-      "community": 2,
-      "community_name": "load_config",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "generate()"
     },
     {
@@ -3310,8 +3079,8 @@
       "source_location": "L201",
       "_origin": "ast",
       "id": "pipeline_script_revise",
-      "community": 2,
-      "community_name": "load_config",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "revise()"
     },
     {
@@ -3321,8 +3090,8 @@
       "source_location": "L257",
       "_origin": "ast",
       "id": "pipeline_script_format_for_humans",
-      "community": 2,
-      "community_name": "load_config",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "format_for_humans()"
     },
     {
@@ -3332,8 +3101,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pipeline_script_rationale_1",
-      "community": 2,
-      "community_name": "load_config",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "stage 3 - the script chain. five separate model calls, each doing one job: 1...."
     },
     {
@@ -3343,8 +3112,8 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "pipeline_script_rationale_51",
-      "community": 2,
-      "community_name": "load_config",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "choose a structure from the rotation, based on the run id. using the id rather..."
     },
     {
@@ -3354,8 +3123,8 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "pipeline_script_rationale_65",
-      "community": 2,
-      "community_name": "load_config",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "roughly the opening n seconds of narration. spoken english runs about 150 words..."
     },
     {
@@ -3365,8 +3134,8 @@
       "source_location": "L202",
       "_origin": "ast",
       "id": "pipeline_script_rationale_202",
-      "community": 2,
-      "community_name": "load_config",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "apply a change you asked for in words, and rewrite script.txt. this is what..."
     },
     {
@@ -3376,8 +3145,8 @@
       "source_location": "L258",
       "_origin": "ast",
       "id": "pipeline_script_rationale_258",
-      "community": 2,
-      "community_name": "load_config",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "render the script for review in a github issue comment (gate 2)."
     },
     {
@@ -3388,7 +3157,7 @@
       "_origin": "ast",
       "id": "pipeline_shotlist",
       "community": 43,
-      "community_name": "shotlist.py",
+      "community_name": "load_config",
       "norm_label": "shotlist.py"
     },
     {
@@ -3399,7 +3168,7 @@
       "_origin": "ast",
       "id": "pipeline_shotlist_stock_clips",
       "community": 43,
-      "community_name": "shotlist.py",
+      "community_name": "load_config",
       "norm_label": "stock_clips()"
     },
     {
@@ -3410,7 +3179,7 @@
       "_origin": "ast",
       "id": "pipeline_shotlist_to_shot",
       "community": 43,
-      "community_name": "shotlist.py",
+      "community_name": "load_config",
       "norm_label": "to_shot()"
     },
     {
@@ -3421,7 +3190,7 @@
       "_origin": "ast",
       "id": "pipeline_shotlist_build",
       "community": 43,
-      "community_name": "shotlist.py",
+      "community_name": "load_config",
       "norm_label": "build()"
     },
     {
@@ -3432,7 +3201,7 @@
       "_origin": "ast",
       "id": "pipeline_shotlist_rationale_1",
       "community": 43,
-      "community_name": "shotlist.py",
+      "community_name": "load_config",
       "norm_label": "stage 9 - the shot list. the join between planning and rendering. the..."
     },
     {
@@ -3443,7 +3212,7 @@
       "_origin": "ast",
       "id": "pipeline_shotlist_rationale_28",
       "community": 43,
-      "community_name": "shotlist.py",
+      "community_name": "load_config",
       "norm_label": "one planned stock shot as consecutive clips. clips that together fall short of..."
     },
     {
@@ -3454,7 +3223,7 @@
       "_origin": "ast",
       "id": "pipeline_stock",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "stock.py"
     },
     {
@@ -3465,7 +3234,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_library_get",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "library_get()"
     },
     {
@@ -3476,7 +3245,7 @@
       "_origin": "ast",
       "id": "response",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "response"
     },
     {
@@ -3487,7 +3256,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_search_pexels",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "search_pexels()"
     },
     {
@@ -3498,7 +3267,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_search_pixabay",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "search_pixabay()"
     },
     {
@@ -3509,7 +3278,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_media_seconds",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "media_seconds()"
     },
     {
@@ -3520,7 +3289,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_license_ok",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "license_ok()"
     },
     {
@@ -3531,7 +3300,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_search_nasa",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "search_nasa()"
     },
     {
@@ -3542,7 +3311,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_credit",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "_credit()"
     },
     {
@@ -3553,7 +3322,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_commons_turn",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "_commons_turn()"
     },
     {
@@ -3564,7 +3333,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_search_commons",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "search_commons()"
     },
     {
@@ -3575,7 +3344,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_pick_best_file",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "pick_best_file()"
     },
     {
@@ -3586,7 +3355,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_contact_sheet",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "contact_sheet()"
     },
     {
@@ -3597,7 +3366,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_py_path",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "path"
     },
     {
@@ -3608,7 +3377,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_rank",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "rank()"
     },
     {
@@ -3619,7 +3388,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_download",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "download()"
     },
     {
@@ -3630,7 +3399,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_on_screen_credit",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "on_screen_credit()"
     },
     {
@@ -3641,7 +3410,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_prepare_photo",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "prepare_photo()"
     },
     {
@@ -3652,7 +3421,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_spoken_during",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "spoken_during()"
     },
     {
@@ -3663,7 +3432,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_gather",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "gather()"
     },
     {
@@ -3674,7 +3443,7 @@
       "_origin": "ast",
       "id": "lock",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "lock"
     },
     {
@@ -3684,8 +3453,8 @@
       "source_location": "L482",
       "_origin": "ast",
       "id": "pipeline_stock_fill",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 2,
+      "community_name": "check_storyboard",
       "norm_label": "fill()"
     },
     {
@@ -3696,7 +3465,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_fresh_queries",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "fresh_queries()"
     },
     {
@@ -3707,7 +3476,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_fetch_for_shot",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "fetch_for_shot()"
     },
     {
@@ -3718,7 +3487,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_build_for_run",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "build_for_run()"
     },
     {
@@ -3729,7 +3498,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_rationale_1",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "stage 7 - real footage and photographs, found by what the narration actually..."
     },
     {
@@ -3740,7 +3509,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_rationale_129",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "get a stock library api, waiting out its rate limit rather than giving up: an..."
     },
     {
@@ -3751,7 +3520,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_rationale_220",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "0:05:27', '23.84 s' or '12.5 s (approx)' -> seconds."
     },
     {
@@ -3762,7 +3531,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_rationale_230",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "public domain, cc0 and cc by only. share-alike could bind the whole video to..."
     },
     {
@@ -3773,7 +3542,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_rationale_239",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "nasa image and video library: no key, and satellite, aerial and field imagery..."
     },
     {
@@ -3784,7 +3553,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_rationale_285",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "the uploader's name, stripped of commons' markup. some files carry no artist at..."
     },
     {
@@ -3795,7 +3564,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_rationale_298",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "take the next commons search slot, or give up if the queue is too long."
     },
     {
@@ -3806,7 +3575,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_rationale_310",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "wikimedia commons, keeping only files whose licence allows this use (see..."
     },
     {
@@ -3817,7 +3586,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_rationale_354",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "largest landscape file that isn't bigger than 1080p needs, else the smallest..."
     },
     {
@@ -3828,7 +3597,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_rationale_367",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "one row per candidate: its number, then three frames."
     },
     {
@@ -3839,7 +3608,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_rationale_388",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "(score, candidate) best first. without a vision key, keep search order."
     },
     {
@@ -3850,7 +3619,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_rationale_427",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "the line shown in the corner of the shot, for archives whose whole point is..."
     },
     {
@@ -3861,7 +3630,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_rationale_442",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "a photograph as a 1920x1080 frame (centre-cropped, so the parallax plane isn't..."
     },
     {
@@ -3872,7 +3641,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_rationale_454",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "the words heard during the shot, with a little lead-in for context."
     },
     {
@@ -3883,7 +3652,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_rationale_459",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "up to candidates fresh clips across the searches, round-robin so one query..."
     },
     {
@@ -3893,8 +3662,8 @@
       "source_location": "L483",
       "_origin": "ast",
       "id": "pipeline_stock_rationale_483",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 2,
+      "community_name": "check_storyboard",
       "norm_label": "best clips first, scoring at least min_score, until they cover `length`. one..."
     },
     {
@@ -3905,7 +3674,7 @@
       "_origin": "ast",
       "id": "pipeline_stock_rationale_508",
       "community": 7,
-      "community_name": "stock.py",
+      "community_name": "log",
       "norm_label": "three new searches when the first ones didn't find enough footage."
     },
     {
@@ -3970,8 +3739,8 @@
       "source_location": "L99",
       "_origin": "ast",
       "id": "pipeline_storyboard_sentences_from_words",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 2,
+      "community_name": "check_storyboard",
       "norm_label": "sentences_from_words()"
     },
     {
@@ -3981,8 +3750,8 @@
       "source_location": "L116",
       "_origin": "ast",
       "id": "pipeline_storyboard_clean_page_text",
-      "community": 42,
-      "community_name": "generate",
+      "community": 2,
+      "community_name": "check_storyboard",
       "norm_label": "clean_page_text()"
     },
     {
@@ -3992,8 +3761,8 @@
       "source_location": "L126",
       "_origin": "ast",
       "id": "pipeline_storyboard_clean_title",
-      "community": 42,
-      "community_name": "generate",
+      "community": 2,
+      "community_name": "check_storyboard",
       "norm_label": "clean_title()"
     },
     {
@@ -4003,8 +3772,8 @@
       "source_location": "L131",
       "_origin": "ast",
       "id": "pipeline_storyboard_sources_from_dossier",
-      "community": 42,
-      "community_name": "generate",
+      "community": 2,
+      "community_name": "check_storyboard",
       "norm_label": "sources_from_dossier()"
     },
     {
@@ -4015,7 +3784,7 @@
       "_origin": "ast",
       "id": "pipeline_storyboard_outline_charts",
       "community": 43,
-      "community_name": "shotlist.py",
+      "community_name": "load_config",
       "norm_label": "outline_charts()"
     },
     {
@@ -4114,7 +3883,7 @@
       "_origin": "ast",
       "id": "pipeline_storyboard_make_look",
       "community": 43,
-      "community_name": "shotlist.py",
+      "community_name": "load_config",
       "norm_label": "make_look()"
     },
     {
@@ -4124,8 +3893,8 @@
       "source_location": "L425",
       "_origin": "ast",
       "id": "pipeline_storyboard_plan_beats",
-      "community": 2,
-      "community_name": "load_config",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "plan_beats()"
     },
     {
@@ -4212,8 +3981,8 @@
       "source_location": "L100",
       "_origin": "ast",
       "id": "pipeline_storyboard_rationale_100",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 2,
+      "community_name": "check_storyboard",
       "norm_label": "group whisper's words into sentences, keeping word indices for snapping."
     },
     {
@@ -4223,8 +3992,8 @@
       "source_location": "L117",
       "_origin": "ast",
       "id": "pipeline_storyboard_rationale_117",
-      "community": 42,
-      "community_name": "generate",
+      "community": 2,
+      "community_name": "check_storyboard",
       "norm_label": "scraped pages arrive with markdown images, links, bare urls and heading marks -..."
     },
     {
@@ -4234,8 +4003,8 @@
       "source_location": "L132",
       "_origin": "ast",
       "id": "pipeline_storyboard_rationale_132",
-      "community": 42,
-      "community_name": "generate",
+      "community": 2,
+      "community_name": "check_storyboard",
       "norm_label": "the research dossier already holds each source's title, url and text."
     },
     {
@@ -4333,8 +4102,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pipeline_thumbnail",
-      "community": 33,
-      "community_name": "thumbnail.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "thumbnail.py"
     },
     {
@@ -4344,8 +4113,8 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "pipeline_thumbnail_wrap_to_width",
-      "community": 33,
-      "community_name": "thumbnail.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "wrap_to_width()"
     },
     {
@@ -4355,8 +4124,8 @@
       "source_location": "L90",
       "_origin": "ast",
       "id": "pipeline_thumbnail_draw_text",
-      "community": 33,
-      "community_name": "thumbnail.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "draw_text()"
     },
     {
@@ -4366,8 +4135,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "pipeline_thumbnail_py_image",
-      "community": 33,
-      "community_name": "thumbnail.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "image"
     },
     {
@@ -4377,8 +4146,8 @@
       "source_location": "L119",
       "_origin": "ast",
       "id": "pipeline_thumbnail_draw_symbol",
-      "community": 33,
-      "community_name": "thumbnail.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "draw_symbol()"
     },
     {
@@ -4388,8 +4157,8 @@
       "source_location": "L148",
       "_origin": "ast",
       "id": "pipeline_thumbnail_compose",
-      "community": 33,
-      "community_name": "thumbnail.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "compose()"
     },
     {
@@ -4399,8 +4168,8 @@
       "source_location": "L160",
       "_origin": "ast",
       "id": "pipeline_thumbnail_score",
-      "community": 33,
-      "community_name": "thumbnail.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "score()"
     },
     {
@@ -4410,8 +4179,8 @@
       "source_location": "L173",
       "_origin": "ast",
       "id": "pipeline_thumbnail_generate",
-      "community": 33,
-      "community_name": "thumbnail.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "generate()"
     },
     {
@@ -4421,8 +4190,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pipeline_thumbnail_rationale_1",
-      "community": 33,
-      "community_name": "thumbnail.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "stage 11 - thumbnails. thumbnail and title decide whether anyone ever sees the..."
     },
     {
@@ -4432,8 +4201,8 @@
       "source_location": "L91",
       "_origin": "ast",
       "id": "pipeline_thumbnail_rationale_91",
-      "community": 33,
-      "community_name": "thumbnail.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "big block capitals in the left ~45%, top-aligned. returns the text box."
     },
     {
@@ -4443,8 +4212,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pipeline_topics",
-      "community": 3,
-      "community_name": "resolve_run",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "topics.py"
     },
     {
@@ -4454,8 +4223,8 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "pipeline_topics_read_backlog",
-      "community": 3,
-      "community_name": "resolve_run",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "read_backlog()"
     },
     {
@@ -4465,8 +4234,8 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "pipeline_topics_find_outliers",
-      "community": 3,
-      "community_name": "resolve_run",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "find_outliers()"
     },
     {
@@ -4476,8 +4245,8 @@
       "source_location": "L152",
       "_origin": "ast",
       "id": "pipeline_topics_find_trends",
-      "community": 3,
-      "community_name": "resolve_run",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "find_trends()"
     },
     {
@@ -4487,8 +4256,8 @@
       "source_location": "L195",
       "_origin": "ast",
       "id": "pipeline_topics_find_questions",
-      "community": 3,
-      "community_name": "resolve_run",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "find_questions()"
     },
     {
@@ -4498,8 +4267,8 @@
       "source_location": "L228",
       "_origin": "ast",
       "id": "pipeline_topics_generate",
-      "community": 3,
-      "community_name": "resolve_run",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "generate()"
     },
     {
@@ -4520,8 +4289,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pipeline_topics_rationale_1",
-      "community": 3,
-      "community_name": "resolve_run",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "stage 1 - topic engine. gathers evidence about what people in this niche are..."
     },
     {
@@ -4531,8 +4300,8 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "pipeline_topics_rationale_46",
-      "community": 3,
-      "community_name": "resolve_run",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "load config/topic_backlog.csv as plain text for the prompt."
     },
     {
@@ -4542,8 +4311,8 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "pipeline_topics_rationale_67",
-      "community": 3,
-      "community_name": "resolve_run",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "find videos that outperformed their own channel. the ratio views / subscribers..."
     },
     {
@@ -4553,8 +4322,8 @@
       "source_location": "L153",
       "_origin": "ast",
       "id": "pipeline_topics_rationale_153",
-      "community": 3,
-      "community_name": "resolve_run",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "five-year interest direction for each keyword, via google trends. pytrends..."
     },
     {
@@ -4564,8 +4333,8 @@
       "source_location": "L196",
       "_origin": "ast",
       "id": "pipeline_topics_rationale_196",
-      "community": 3,
-      "community_name": "resolve_run",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "top posts of the month from the niche's subreddits. high comment counts are the..."
     },
     {
@@ -4586,8 +4355,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pipeline_visuals",
-      "community": 5,
-      "community_name": "visuals.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "visuals.py"
     },
     {
@@ -4597,8 +4366,8 @@
       "source_location": "L85",
       "_origin": "ast",
       "id": "pipeline_visuals_allocate",
-      "community": 5,
-      "community_name": "visuals.py",
+      "community": 15,
+      "community_name": "selftest.py",
       "norm_label": "allocate()"
     },
     {
@@ -4608,8 +4377,8 @@
       "source_location": "L116",
       "_origin": "ast",
       "id": "pipeline_visuals_cache_path",
-      "community": 5,
-      "community_name": "visuals.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "cache_path()"
     },
     {
@@ -4619,8 +4388,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "pipeline_visuals_py_path",
-      "community": 5,
-      "community_name": "visuals.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "path"
     },
     {
@@ -4641,8 +4410,8 @@
       "source_location": "L137",
       "_origin": "ast",
       "id": "pipeline_visuals_keyframe",
-      "community": 5,
-      "community_name": "visuals.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "keyframe()"
     },
     {
@@ -4652,8 +4421,8 @@
       "source_location": "L167",
       "_origin": "ast",
       "id": "pipeline_visuals_motion",
-      "community": 5,
-      "community_name": "visuals.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "motion()"
     },
     {
@@ -4663,8 +4432,8 @@
       "source_location": "L187",
       "_origin": "ast",
       "id": "pipeline_visuals_omni_fallback",
-      "community": 5,
-      "community_name": "visuals.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "omni_fallback()"
     },
     {
@@ -4674,8 +4443,8 @@
       "source_location": "L222",
       "_origin": "ast",
       "id": "pipeline_visuals_depth",
-      "community": 5,
-      "community_name": "visuals.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "depth()"
     },
     {
@@ -4685,8 +4454,8 @@
       "source_location": "L236",
       "_origin": "ast",
       "id": "pipeline_visuals_check",
-      "community": 5,
-      "community_name": "visuals.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "check()"
     },
     {
@@ -4696,8 +4465,8 @@
       "source_location": "L251",
       "_origin": "ast",
       "id": "pipeline_visuals_clip_seconds",
-      "community": 5,
-      "community_name": "visuals.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "clip_seconds()"
     },
     {
@@ -4707,8 +4476,8 @@
       "source_location": "L263",
       "_origin": "ast",
       "id": "pipeline_visuals_build_shot",
-      "community": 5,
-      "community_name": "visuals.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "build_shot()"
     },
     {
@@ -4718,8 +4487,8 @@
       "source_location": "L287",
       "_origin": "ast",
       "id": "pipeline_visuals_build_for_run",
-      "community": 5,
-      "community_name": "visuals.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "build_for_run()"
     },
     {
@@ -4729,8 +4498,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pipeline_visuals_rationale_1",
-      "community": 5,
-      "community_name": "visuals.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "stage 8 - ai visuals. turns every stock shot the libraries couldn't fill (and..."
     },
     {
@@ -4740,8 +4509,8 @@
       "source_location": "L86",
       "_origin": "ast",
       "id": "pipeline_visuals_rationale_86",
-      "community": 5,
-      "community_name": "visuals.py",
+      "community": 15,
+      "community_name": "selftest.py",
       "norm_label": "pick which ai shots get motion. returns (shot ids, estimated usd). every ai..."
     },
     {
@@ -4762,8 +4531,8 @@
       "source_location": "L188",
       "_origin": "ast",
       "id": "pipeline_visuals_rationale_188",
-      "community": 5,
-      "community_name": "visuals.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "gemini omni flash text-to-video, only when the fal video call itself fails."
     },
     {
@@ -4773,8 +4542,8 @@
       "source_location": "L237",
       "_origin": "ast",
       "id": "pipeline_visuals_rationale_237",
-      "community": 5,
-      "community_name": "visuals.py",
+      "community": 36,
+      "community_name": "Run",
       "norm_label": "vision qa. if the check itself can't run, keep the asset."
     },
     {
@@ -6302,8 +6071,8 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "tools_chat_job_do_publish",
-      "community": 40,
-      "community_name": "chat_job.py",
+      "community": 31,
+      "community_name": "publish.py",
       "norm_label": "do_publish()"
     },
     {
@@ -6390,8 +6159,8 @@
       "source_location": "L141",
       "_origin": "ast",
       "id": "tools_chat_job_rationale_141",
-      "community": 40,
-      "community_name": "chat_job.py",
+      "community": 31,
+      "community_name": "publish.py",
       "norm_label": "accept: upload with every detail filled in, make it public, post the comment."
     },
     {
@@ -6555,8 +6324,8 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "tools_selftest_fake_words",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 2,
+      "community_name": "check_storyboard",
       "norm_label": "fake_words()"
     },
     {
@@ -6566,8 +6335,8 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "tools_selftest_check_storyboard",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 2,
+      "community_name": "check_storyboard",
       "norm_label": "check_storyboard()"
     },
     {
@@ -6610,8 +6379,8 @@
       "source_location": "L217",
       "_origin": "ast",
       "id": "tools_selftest_check_deepseek_timeout",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "check_deepseek_timeout()"
     },
     {
@@ -6643,8 +6412,8 @@
       "source_location": "L278",
       "_origin": "ast",
       "id": "tools_selftest_check_shotlist",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 43,
+      "community_name": "load_config",
       "norm_label": "check_shotlist()"
     },
     {
@@ -6676,8 +6445,8 @@
       "source_location": "L334",
       "_origin": "ast",
       "id": "tools_selftest_check_captions",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 41,
+      "community_name": "build_cues",
       "norm_label": "check_captions()"
     },
     {
@@ -6692,21 +6461,21 @@
       "norm_label": "check_reuse_and_permanent_errors()"
     },
     {
-      "label": "check_studio()",
+      "label": "check_button_routing()",
       "file_type": "code",
       "source_file": "tools/selftest.py",
       "source_location": "L413",
       "_origin": "ast",
-      "id": "tools_selftest_check_studio",
+      "id": "tools_selftest_check_button_routing",
       "community": 15,
       "community_name": "selftest.py",
-      "norm_label": "check_studio()"
+      "norm_label": "check_button_routing()"
     },
     {
       "label": "main()",
       "file_type": "code",
       "source_file": "tools/selftest.py",
-      "source_location": "L447",
+      "source_location": "L422",
       "_origin": "ast",
       "id": "tools_selftest_main",
       "community": 15,
@@ -6753,8 +6522,8 @@
       "source_location": "L218",
       "_origin": "ast",
       "id": "tools_selftest_rationale_218",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 8,
+      "community_name": "common.py",
       "norm_label": "the read timeout must cover a whole generation (~3 minutes for a storyboard),..."
     },
     {
@@ -6786,8 +6555,8 @@
       "source_location": "L335",
       "_origin": "ast",
       "id": "tools_selftest_rationale_335",
-      "community": 15,
-      "community_name": "selftest.py",
+      "community": 41,
+      "community_name": "build_cues",
       "norm_label": "subtitle cues: two lines of 42, no overlaps, and no word lost. all three matter..."
     },
     {
@@ -7102,7 +6871,7 @@
       "label": "The idea that makes it work: planning shots after the narration exists",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L123",
+      "source_location": "L122",
       "_origin": "ast",
       "id": "readme_the_idea_that_makes_it_work_planning_shots_after_the_narration_exists",
       "community": 6,
@@ -7113,7 +6882,7 @@
       "label": "Running a stage by hand",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L133",
+      "source_location": "L132",
       "_origin": "ast",
       "id": "readme_running_a_stage_by_hand",
       "community": 6,
@@ -7124,7 +6893,7 @@
       "label": "Cost",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L164",
+      "source_location": "L163",
       "_origin": "ast",
       "id": "readme_cost",
       "community": 6,
@@ -7201,7 +6970,7 @@
       "label": "Working on the look",
       "file_type": "document",
       "source_file": "SETUP.md",
-      "source_location": "L102",
+      "source_location": "L106",
       "_origin": "ast",
       "id": "setup_working_on_the_look",
       "community": 6,
@@ -7212,7 +6981,7 @@
       "label": "When something breaks",
       "file_type": "document",
       "source_file": "SETUP.md",
-      "source_location": "L112",
+      "source_location": "L116",
       "_origin": "ast",
       "id": "setup_when_something_breaks",
       "community": 6,
@@ -8629,540 +8398,6 @@
     }
   ],
   "links": [
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L88",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app",
-      "target": "app_handle",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L120",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app",
-      "target": "app_handler",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L215",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app",
-      "target": "app_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L68",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app",
-      "target": "app_reap",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L49",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app",
-      "target": "app_start_job",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L77",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app",
-      "target": "app_stop_job",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "submodule_import",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L33",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app",
-      "target": "pipeline_assistant",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "submodule_import",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L33",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app",
-      "target": "pipeline_chat",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L34",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app",
-      "target": "pipeline_common",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L34",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app",
-      "target": "pipeline_common_log",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_rationale_1",
-      "target": "app",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L103",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_handle",
-      "target": "app_start_job",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "indirect_call",
-      "context": "argument",
-      "confidence": "INFERRED",
-      "source_file": "app.py",
-      "source_location": "L65",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_start_job",
-      "target": "app_reap",
-      "confidence_score": 0.5
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app.py",
-      "source_location": "L55",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_start_job",
-      "target": "pipeline_chat_escape"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app.py",
-      "source_location": "L53",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_start_job",
-      "target": "pipeline_chat_send"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L59",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_start_job",
-      "target": "popen",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L69",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_rationale_69",
-      "target": "app_reap",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L68",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_reap",
-      "target": "popen",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L218",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_main",
-      "target": "popen",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L94",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_handle",
-      "target": "app_stop_job",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L232",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_main",
-      "target": "app_stop_job",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app.py",
-      "source_location": "L108",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_handle",
-      "target": "pipeline_assistant_route"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app.py",
-      "source_location": "L90",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_handle",
-      "target": "pipeline_chat_append"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app.py",
-      "source_location": "L96",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_handle",
-      "target": "pipeline_chat_keyboard"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app.py",
-      "source_location": "L95",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_handle",
-      "target": "pipeline_chat_send"
-    },
-    {
-      "relation": "indirect_call",
-      "context": "argument",
-      "confidence": "INFERRED",
-      "source_file": "app.py",
-      "source_location": "L166",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_handler_do_post",
-      "target": "app_handle",
-      "confidence_score": 0.5
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L89",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_rationale_89",
-      "target": "app_handle",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "indirect_call",
-      "context": "argument",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "pipeline/topics.py",
-      "source_location": "L53",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "pipeline_topics_read_backlog",
-      "target": "app_handle"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L138",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_handler",
-      "target": "app_handler_do_get",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L160",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_handler",
-      "target": "app_handler_do_post",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L121",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_handler",
-      "target": "app_handler_log_message",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L130",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_handler",
-      "target": "app_handler_send_json",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L169",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_handler",
-      "target": "app_handler_serve",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L124",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_handler",
-      "target": "app_handler_trusted",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "inherits",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L120",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_handler",
-      "target": "basehttprequesthandler",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L139",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_handler_do_get",
-      "target": "app_handler_trusted",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L161",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_handler_do_post",
-      "target": "app_handler_trusted",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L125",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_rationale_125",
-      "target": "app_handler_trusted",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L148",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_handler_do_get",
-      "target": "app_handler_send_json",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L167",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_handler_do_post",
-      "target": "app_handler_send_json",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L143",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_handler_do_get",
-      "target": "app_handler_serve",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L169",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_handler_serve",
-      "target": "app_py_path",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L170",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_rationale_170",
-      "target": "app_handler_serve",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app.py",
-      "source_location": "L222",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_main",
-      "target": "pipeline_chat_keyboard"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app.py",
-      "source_location": "L220",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_main",
-      "target": "pipeline_chat_send"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app.py",
-      "source_location": "L226",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_main",
-      "target": "pipeline_common_log",
-      "confidence_score": 1.0
-    },
     {
       "relation": "imports_from",
       "context": "import",
@@ -10851,7 +10086,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tools/selftest.py",
-      "source_location": "L417",
+      "source_location": "L414",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tools_selftest",
@@ -10863,10 +10098,10 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tools/selftest.py",
-      "source_location": "L441",
+      "source_location": "L416",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "tools_selftest_check_studio",
+      "source": "tools_selftest_check_button_routing",
       "target": "pipeline_brain_match_literally",
       "confidence_score": 1.0
     },
@@ -16568,23 +15803,11 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "tools/selftest.py",
-      "source_location": "L413",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "tools_selftest_check_studio",
-      "target": "pipeline_common_run",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tools/selftest.py",
-      "source_location": "L448",
+      "source_location": "L423",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tools_selftest_main",
@@ -22578,7 +21801,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tools/selftest.py",
-      "source_location": "L465",
+      "source_location": "L440",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tools_selftest_main",
@@ -27054,6 +26277,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tools/selftest.py",
+      "source_location": "L413",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tools_selftest",
+      "target": "tools_selftest_check_button_routing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tools/selftest.py",
       "source_location": "L272",
       "weight": 1.0,
       "_origin": "ast",
@@ -27164,17 +26398,6 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tools/selftest.py",
-      "source_location": "L413",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "tools_selftest",
-      "target": "tools_selftest_check_studio",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tools/selftest.py",
       "source_location": "L304",
       "weight": 1.0,
       "_origin": "ast",
@@ -27197,7 +26420,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tools/selftest.py",
-      "source_location": "L447",
+      "source_location": "L422",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tools_selftest",
@@ -27232,7 +26455,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tools/selftest.py",
-      "source_location": "L449",
+      "source_location": "L424",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tools_selftest_main",
@@ -27244,7 +26467,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tools/selftest.py",
-      "source_location": "L451",
+      "source_location": "L426",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tools_selftest_main",
@@ -27267,7 +26490,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tools/selftest.py",
-      "source_location": "L456",
+      "source_location": "L431",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tools_selftest_main",
@@ -27279,7 +26502,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tools/selftest.py",
-      "source_location": "L455",
+      "source_location": "L430",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tools_selftest_main",
@@ -27302,7 +26525,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tools/selftest.py",
-      "source_location": "L454",
+      "source_location": "L429",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tools_selftest_main",
@@ -27325,7 +26548,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tools/selftest.py",
-      "source_location": "L453",
+      "source_location": "L428",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tools_selftest_main",
@@ -27337,7 +26560,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tools/selftest.py",
-      "source_location": "L458",
+      "source_location": "L433",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tools_selftest_main",
@@ -27349,7 +26572,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tools/selftest.py",
-      "source_location": "L460",
+      "source_location": "L435",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tools_selftest_main",
@@ -27361,7 +26584,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tools/selftest.py",
-      "source_location": "L462",
+      "source_location": "L437",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tools_selftest_main",
@@ -27384,7 +26607,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tools/selftest.py",
-      "source_location": "L461",
+      "source_location": "L436",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tools_selftest_main",
@@ -27407,7 +26630,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tools/selftest.py",
-      "source_location": "L468",
+      "source_location": "L443",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tools_selftest_main",
@@ -27430,7 +26653,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tools/selftest.py",
-      "source_location": "L463",
+      "source_location": "L438",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tools_selftest_main",
@@ -27453,11 +26676,11 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tools/selftest.py",
-      "source_location": "L470",
+      "source_location": "L445",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tools_selftest_main",
-      "target": "tools_selftest_check_studio",
+      "target": "tools_selftest_check_button_routing",
       "confidence_score": 1.0
     },
     {
@@ -27684,7 +26907,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L164",
+      "source_location": "L163",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_deep_earth_automated_video_pipeline",
@@ -27695,7 +26918,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L133",
+      "source_location": "L132",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_deep_earth_automated_video_pipeline",
@@ -27706,7 +26929,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L123",
+      "source_location": "L122",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_deep_earth_automated_video_pipeline",
@@ -27816,7 +27039,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "SETUP.md",
-      "source_location": "L112",
+      "source_location": "L116",
       "weight": 1.0,
       "_origin": "ast",
       "source": "setup_setup",
@@ -27827,7 +27050,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "SETUP.md",
-      "source_location": "L102",
+      "source_location": "L106",
       "weight": 1.0,
       "_origin": "ast",
       "source": "setup_4_open_the_studio",
@@ -29090,5 +28313,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "6192b934ee54fbed6b654784d08baf7a07c21a2a"
+  "built_at_commit": "e880b6341415953c431f859c6706d57eeead5167"
 }
