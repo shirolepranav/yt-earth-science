@@ -19,6 +19,8 @@ Title: under 70 characters, specific and intriguing — an event, a place, a mys
 
 Description: a two-sentence summary that keeps the tension, and nothing else. (The source list, the AI-narration note and the footage credits are all appended automatically - don't write them.) Ten to fifteen tags.
 
+Pinned comment: one or two sentences, under 400 characters, in the host's voice, to sit pinned under the video. Ask viewers one specific question the video raises but can't settle, or add one striking fact that didn't make the cut, so people have something to answer. No "like and subscribe", no links, no emoji.
+
 Thumbnail concepts: three genuinely different ideas. The thumbnail and title work as a pair — the thumbnail must NOT repeat the title's words; it adds the curiosity gap the title leaves open.
   * "text": at most 4 words, ALL CAPS, or null for a pure visual story with no text at all (the strongest thumbnails in this genre often have none). At least one of the three must be null.
   * "hero": one striking, photographic image that tells the story on its own at phone size. A landscape, a phenomenon, an object or a dramatic scale contrast. One hero, huge in frame. Example: "a lone hiker silhouetted at the rim of a glowing lava lake at night". Never a specific real person.
@@ -33,6 +35,7 @@ Reply with JSON only:
     "title": "...",
     "description": "...",
     "tags": ["...", "..."],
+    "pinned_comment": "...",
     "thumbnail_concepts": [
       {{"text": "4 WORDS MAX", "hero": "...", "symbol": "arrow", "why_click": "..."}},
       {{"text": null, "hero": "...", "symbol": "none", "why_click": "..."}},

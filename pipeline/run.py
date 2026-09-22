@@ -20,7 +20,7 @@ The order:
     audio      music ducking + loudness
     thumbnail  three thumbnails, ranked by a shrink test
     render     Remotion draws the video
-    publish    upload (only if review_only is false)
+    publish    upload - run by Accept in the studio, not by `build`
 
 Common uses:
 
@@ -59,10 +59,11 @@ STAGES = {
     "publish": publish.upload,
 }
 
-# Everything that happens after the human approves the script at Gate 2.
+# Everything that happens after the human approves the script at Gate 2. Upload
+# is not one of them: you watch the video locally first, and Accept uploads it.
 BUILD_STAGES = [
     "narrate", "align", "captions", "storyboard", "charts", "stock", "visuals", "shotlist",
-    "audio", "thumbnail", "render", "publish",
+    "audio", "thumbnail", "render",
 ]
 
 
@@ -107,7 +108,7 @@ def cmd_write(args) -> None:
 
 
 def cmd_build(args) -> None:
-    """Everything after Gate 2: audio, visuals, render, and maybe upload."""
+    """Everything after Gate 2: audio, visuals, render. Upload is separate."""
     active = resolve_run(args.run)
     for name in BUILD_STAGES:
         run_stage(active, name, args.force)

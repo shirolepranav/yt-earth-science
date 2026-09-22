@@ -14,6 +14,8 @@ the logic that decides what reaches the screen and what it costs:
      missing assets held over
   5. thumbnail compositing: text and symbols drawn
   6. subtitle cues: two lines of 42 characters, no overlaps, no word lost
+  7. the studio server: video byte ranges, no files outside runs/, no
+     requests from other sites; button codes route without a model
 
 If this passes, any later failure is an API key or a network problem, not a
 bug in the pipeline. Run it after `make setup` and after any code change.
@@ -408,29 +410,65 @@ def check_reuse_and_permanent_errors() -> None:
     assert calls == [1], f"a payment error must fail on the first try, not {len(calls)}"
 
 
+def check_studio(run: Run) -> None:
+    from http.server import ThreadingHTTPServer
+
+    import app
+    from pipeline.brain import match_literally
+
+    run.write_text("output/clip.bin", "0123456789")
+    server = ThreadingHTTPServer(("127.0.0.1", 0), app.Handler)
+    port = server.server_address[1]
+    app.ALLOWED_HOSTS = {f"127.0.0.1:{port}"}
+    threading.Thread(target=server.serve_forever, daemon=True).start()
+    base = f"http://127.0.0.1:{port}"
+    try:
+        url = f"{base}/runs/selftest/output/clip.bin"
+        assert requests.get(url).content == b"0123456789"
+        part = requests.get(url, headers={"Range": "bytes=2-4"})
+        assert (part.status_code, part.content) == (206, b"234"), part.status_code
+        assert requests.get(url, headers={"Range": "bytes=-3"}).content == b"789"
+        assert requests.get(url, headers={"Range": "bytes=20-"}).status_code == 416
+        for escape in ("/runs/../.env", "/runs/%2e%2e/.env", "/runs/../app.py"):
+            code = requests.Session().send(requests.Request("GET", base + escape).prepare()).status_code
+            assert code == 404, f"{escape} gave {code}"
+        assert requests.get(url, headers={"Host": "evil.example"}).status_code == 403
+        assert requests.post(f"{base}/send", json={"text": "x"},
+                             headers={"Origin": "https://evil.example"}).status_code == 403
+    finally:
+        server.shutdown()
+
+    assert match_literally("cmd:publish")["intent"] == "publish"
+    assert match_literally("thumb:c")["args"] == {"choice": "c"}
+    assert match_literally("redo:stock")["args"] == {"stage": "stock"}
+    assert match_literally("accept")["intent"] == "publish"
+
+
 def main() -> None:
     run = Run("selftest")
     shots = check_storyboard(run)
-    print("1/6 storyboard assembly ok")
+    print("1/7 storyboard assembly ok")
     check_rate_limit()
     print("    stock rate-limit wait ok")
     check_allocator()
     check_deepseek_timeout()
     check_figure_detector()
     check_plate_prompt()
-    print("2/6 budget allocator, timeouts and card plates ok")
+    print("2/7 budget allocator, timeouts and card plates ok")
     check_cache(run)
-    print("3/6 cache keys ok")
+    print("3/7 cache keys ok")
     check_shotlist(run, shots)
     check_open_libraries()
     check_voice_cache_key()
     check_reuse_and_permanent_errors()
-    print("4/6 shot list, licences, photo stills, clip reuse and dead-provider handling ok")
+    print("4/7 shot list, licences, photo stills, clip reuse and dead-provider handling ok")
     image = compose(Image.new("RGB", (2560, 1440), (30, 20, 40)), {"text": "THEY TOOK $40,000", "symbol": "arrow"})
     assert image.size == (1280, 720)
-    print("5/6 thumbnail compositing ok")
+    print("5/7 thumbnail compositing ok")
     check_captions()
-    print("6/6 subtitle cues ok")
+    print("6/7 subtitle cues ok")
+    check_studio(run)
+    print("7/7 studio server and button routing ok")
     print("\nSELF-TEST PASSED")
 
 

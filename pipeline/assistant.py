@@ -4,13 +4,13 @@
 
 It splits the work in two, because the jobs have wildly different runtimes:
 
-  * **Fast intents** - status, a title change, picking a thumbnail, publishing -
-    are handled right here, in the same GitHub Actions job that received your
-    message. You get an answer in under a minute.
+  * **Fast intents** - status, a title change, picking a thumbnail, a question -
+    are handled right here, inside app.py. You get an answer in seconds.
 
-  * **Slow intents** - proposing topics, writing a script, building a video -
-    are only *named* here. `route()` returns the intent string and the workflow
-    starts a separate job for it, so a 90-minute build never blocks a reply.
+  * **Slow intents** - proposing topics, writing a script, building a video,
+    uploading - are only *named* here. `route()` returns the intent string and
+    app.py starts tools/chat_job.py for it in the background, so a 90-minute
+    build never blocks a reply.
 
 The other half of this module is the three gates: the messages that present
 topics, the script and the finished video, each with the buttons that move the
@@ -21,19 +21,20 @@ Run it:  python -m pipeline.assistant --text "use thumbnail b"
 
 from __future__ import annotations
 
-import os
+
+import re
 
 from . import brain, chat, publish
-from .common import Run, latest_run_id, log, resolve_run
+from .common import RUNS_DIR, Run, latest_run_id, load_persona, log, resolve_run
 
 # Where a run is, from the chat's point of view. Kept in the run's state.json
-# so a fresh Actions job can pick up the conversation with no memory of its own.
+# so a background job and the app agree on it.
 STAGES = ("topics", "script", "building", "review", "published", "cancelled")
 
-# Intents this module finishes on the spot. Everything else is handed to a
-# dedicated job by the workflow.
+# Intents this module finishes on the spot. Everything else is handed to
+# tools/chat_job.py by app.py.
 FAST = {"status", "question", "unclear", "pick_thumbnail", "set_title", "set_tags",
-        "set_description", "publish", "cancel"}
+        "set_description", "set_pinned_comment", "cancel"}
 
 
 def active_run() -> Run | None:
@@ -42,11 +43,9 @@ def active_run() -> Run | None:
     return resolve_run(run_id) if run_id else None
 
 
-def log_url() -> str:
-    """A link to the job currently running, for error messages."""
-    repo = os.environ.get("GITHUB_REPOSITORY", "")
-    run_id = os.environ.get("GITHUB_RUN_ID", "")
-    return f"https://github.com/{repo}/actions/runs/{run_id}" if repo and run_id else ""
+def log_path() -> str:
+    """Where app.py sends background jobs' output, for error messages."""
+    return str(RUNS_DIR / "job.log")
 
 
 # ---------------------------------------------------------------------------
@@ -66,7 +65,7 @@ def present_topics(run: Run) -> None:
             "",
         ]
 
-    # Telegram gets cramped past five buttons in a row.
+    # Five buttons to a row keeps them readable.
     numbers = [str(t["rank"]) for t in topics]
     rows = [[(n, f"pick:{n}") for n in numbers[i:i + 5]] for i in range(0, len(numbers), 5)]
 
@@ -114,46 +113,48 @@ def present_script(run: Run) -> None:
 # ---------------------------------------------------------------------------
 
 def present_review(run: Run) -> None:
-    """Post the private YouTube link, the thumbnails and the upload details."""
+    """Post the video to watch here, the thumbnails and every upload detail."""
     state = run.state()
     metadata = run.read_json("metadata.json")
-    video_url = state.get("video_url", "")
 
-    lines = [f"🎥 <b>Video ready</b> — run <code>{run.id}</code>", ""]
-    if video_url:
-        lines += [f'<a href="{video_url}">Watch it on YouTube</a> (private — only you can see it)', ""]
-    else:
-        lines += ["The upload was skipped, so the file is in the Actions artifact for this run.", ""]
+    # Written here as well as at upload, so the packet exists while you review.
+    description = publish.build_description(run, metadata)
+    run.write_text("output/description.txt", description)
+    run.write_text("output/UPLOAD.md", publish.build_packet(run))
 
-    lines += [
+    chat.send_video(run.path("output", "video.mp4"),
+                    caption=f"🎥 <b>Video ready</b> — run <code>{run.id}</code>")
+
+    chat.send("\n".join([
         f"<b>Title:</b> {chat.escape(metadata.get('title', ''))}",
-        f"<b>Tags:</b> {chat.escape(', '.join(metadata.get('tags', [])[:15]))}",
-        f"<b>Subtitles:</b> {state.get('subtitle_cues', 0):,} cues",
         "",
-        "Watch the first 30 seconds, then tell me anything you want changed — "
-        "the title, the tags, the thumbnail, or a stage to redo.",
-    ]
-
-    chat.send("\n".join(lines), preview=True)
+        "<b>Description:</b>",
+        f"<pre>{chat.escape(description)}</pre>",
+        f"<b>Tags:</b> {chat.escape(', '.join(metadata.get('tags', [])[:15]))}",
+        "",
+        f"<b>Pinned comment:</b> {chat.escape(metadata.get('pinned_comment') or '(none)')}",
+        f"<b>Subtitles:</b> {state.get('subtitle_cues', 0):,} cues",
+    ]))
 
     # The three thumbnails, so you can pick by eye rather than by filename.
     selected = publish.chosen_thumbnail(run).name
     for letter, filename in publish.THUMBNAIL_FILES.items():
         path = run.path("output", filename)
         if path.exists():
-            mark = " ← currently selected" if filename == selected else ""
-            chat.send_photo(path, caption=f"<b>Thumbnail {letter}</b>{mark}")
+            mark = " ← selected" if filename == selected else ""
+            chat.send_photo(path, caption=f"<b>Thumbnail {letter}</b>{mark}",
+                            buttons=None if mark else chat.keyboard([(f"Use {letter}", f"thumb:{letter}")]))
 
-    chat.send_file(run.path("output", "subtitles.srt"), caption="Subtitles, ready to upload")
+    chat.send_file(run.path("output", "subtitles.srt"), caption="Subtitles")
     chat.send_file(run.path("output", "UPLOAD.md"), caption="Everything needed for a manual upload")
 
     run.save_state(chat_stage="review")
     chat.send(
-        "Ready?",
+        "Watch it, then tell me anything to change — the title, description, tags, "
+        "pinned comment, thumbnail, or a stage to redo.",
         buttons=chat.keyboard(
-            [("🅰️", "thumb:a"), ("🅱️", "thumb:b"), ("🅲", "thumb:c")],
             [("🔁 Redo thumbnail", "redo:thumbnail"), ("🔁 Redo footage", "redo:stock")],
-            [("🚀 Publish", "cmd:publish")],
+            [("✅ Accept & upload", "cmd:publish")],
         ),
     )
 
@@ -217,6 +218,7 @@ def do_edit_metadata(run: Run | None, intent: str, args: dict) -> None:
         "set_title": ("title", args.get("title")),
         "set_tags": ("tags", args.get("tags")),
         "set_description": ("description", args.get("description")),
+        "set_pinned_comment": ("pinned_comment", args.get("text")),
     }[intent]
 
     if not value:
@@ -241,26 +243,42 @@ def do_edit_metadata(run: Run | None, intent: str, args: dict) -> None:
     chat.send(f"✅ New {field}:\n\n{chat.escape(shown[:600])}{note}")
 
 
-def do_publish(run: Run | None) -> None:
-    if not run:
-        chat.send("There's nothing to publish.")
-        return
-    if not run.state().get("video_id"):
-        chat.send("This run has no uploaded video — upload it by hand from output/UPLOAD.md.")
-        return
+def do_question(run: Run | None, text: str) -> None:
+    """Actually talk: answer with the run and the recent conversation in view."""
+    from .llm import chat as ask
 
+    context = ["No run in progress."]
+    if run:
+        state = run.state()
+        context = [f"Run {run.id}, stage: {state.get('chat_stage', 'unknown')}, "
+                   f"finished: {', '.join(state.get('stages_done', []))}"]
+        if run.path("metadata.json").exists():
+            metadata = run.read_json("metadata.json")
+            context += [f"Title: {metadata.get('title', '')}",
+                        f"Description: {metadata.get('description', '')}",
+                        f"Tags: {', '.join(metadata.get('tags', []))}",
+                        f"Pinned comment: {metadata.get('pinned_comment', '')}"]
+        if run.path("thumbnails.json").exists():
+            chosen = publish.chosen_thumbnail(run).name
+            for t in run.read_json("thumbnails.json"):
+                context.append(f"Thumbnail {t.get('file')}{' (selected)' if t.get('file') == chosen else ''}: "
+                               f"text {t.get('text')!r}, image: {t.get('hero', '')}")
+        if run.path("script.txt").exists():
+            context.append("Script (start):\n" + " ".join(run.read_text("script.txt").split()[:1500]))
+
+    recent = "\n".join(f"{m.get('role')}: {m.get('html', '')[:500]}"
+                       for m in chat.history(20) if m.get("html"))
+    system = (load_persona() + "\n\nYou are also the producer running this channel's video "
+              "pipeline, chatting with the channel owner in their studio app. Answer "
+              "plainly and briefly. You can't take actions from this reply - if they want "
+              "a change, tell them what to say (e.g. 'change the title to ...', 'redo the footage').")
     try:
-        video_id = publish.go_live(run)
+        answer = ask(system, "\n".join(context) + f"\n\nRecent chat:\n{recent}\n\nThey said: {text}",
+                     label="chat answer")
     except Exception as error:  # noqa: BLE001
-        chat.send(f"❌ Publishing failed: {chat.escape(str(error))}")
-        return
-
-    chat.send(
-        f"🚀 <b>Published.</b>\n\nhttps://youtu.be/{video_id}\n\n"
-        "<i>If it still shows as private, the Google API project hasn't been "
-        "audited yet — flip it public in the YouTube app.</i>",
-        preview=True,
-    )
+        answer = f"I couldn't reach the model ({error})."
+    # Models write **bold** whatever you ask; show it as bold rather than asterisks.
+    chat.send(re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", chat.escape(answer)))
 
 
 def do_cancel(run: Run | None) -> None:
@@ -280,30 +298,27 @@ def do_cancel(run: Run | None) -> None:
 def route(text: str) -> dict:
     """Work out what you meant, do it if it's quick, and name it either way.
 
-    Returns the whole decision - `{"intent", "args", "reply"}`. The workflow
-    reads the intent and decides whether to start a long-running job.
+    Returns the whole decision - `{"intent", "args", "reply"}`. app.py reads
+    the intent and decides whether to start a background job.
     """
     run = active_run()
     decision = brain.understand(text, run)
     intent, args = decision["intent"], decision.get("args", {})
     reply = decision.get("reply", "")
 
-    # Acknowledge slow work immediately - otherwise you're staring at nothing
-    # for the twenty minutes a script takes.
-    if intent not in FAST and reply:
-        chat.send(f"👍 {chat.escape(reply)}")
+    # Slow intents are acknowledged by app.py, once it knows it can start them.
 
     if intent == "status":
         do_status(run)
     elif intent == "pick_thumbnail":
         do_pick_thumbnail(run, args)
-    elif intent in ("set_title", "set_tags", "set_description"):
+    elif intent in ("set_title", "set_tags", "set_description", "set_pinned_comment"):
         do_edit_metadata(run, intent, args)
-    elif intent == "publish":
-        do_publish(run)
     elif intent == "cancel":
         do_cancel(run)
-    elif intent in ("question", "unclear"):
+    elif intent == "question":
+        do_question(run, text)
+    elif intent == "unclear":
         chat.send(chat.escape(reply) or "I'm not sure what you meant — try rephrasing?")
 
     log(f"routed to: {intent}")
@@ -327,17 +342,6 @@ if __name__ == "__main__":
          "review": present_review}[args.present](target)
     elif args.text:
         decision = route(args.text)
-
-        # GitHub Actions reads these to decide which job to start next. Writing
-        # them from the one decision matters: asking the model twice could give
-        # two different answers and start the wrong job.
-        output = os.environ.get("GITHUB_OUTPUT")
-        if output:
-            with open(output, "a") as handle:
-                handle.write(f"intent={decision['intent']}\n")
-                handle.write(f"args={json.dumps(decision.get('args', {}))}\n")
-                current = active_run()
-                handle.write(f"run_id={current.id if current else ''}\n")
-        print(decision["intent"])
+        print(json.dumps(decision))
     else:
         parser.error("Pass either --text or --present.")

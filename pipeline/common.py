@@ -31,18 +31,18 @@ RUNS_DIR = ROOT / "runs"
 PROMPTS_DIR = ROOT / "prompts"
 
 # Load secrets from .env into the environment (no-op if the file is absent,
-# which is the case on GitHub Actions where secrets arrive as env vars).
+# in which case secrets come from the environment).
 load_dotenv(ROOT / ".env")
 
 
 # ---------------------------------------------------------------------------
-# Logging - deliberately plain so it reads well in GitHub Actions logs
+# Logging - deliberately plain so it reads well in runs/job.log
 # ---------------------------------------------------------------------------
 
 def log(message: str) -> None:
     """Print a timestamped message that flushes immediately.
 
-    Flushing matters: without it, GitHub Actions shows nothing for minutes and
+    Flushing matters: without it, a job's log shows nothing for minutes and
     then dumps everything at the end, which makes a stuck run impossible to spot.
     """
     stamp = time.strftime("%H:%M:%S")

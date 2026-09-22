@@ -1,15 +1,15 @@
 """Runs the slow half of a chat request.
 
-`pipeline/assistant.py` answers anything quick inside the job that received
-your message. Anything that takes minutes - proposing topics, writing a script,
-building a video - lands here instead, started by its own job in
-.github/workflows/chat.yml so the fast replies stay fast.
+`pipeline/assistant.py` answers anything quick inside app.py. Anything that
+takes minutes - proposing topics, writing a script, building a video, uploading
+it - lands here instead, started by app.py as a background process so the fast
+replies stay fast.
 
-One entry point for all of them, so the workflow stays a thin wrapper:
+One entry point for all of them:
 
     python tools/chat_job.py --intent approve_script --args '{}' --run latest
 
-Every path ends the same way: it posts the next gate to Telegram, so you always
+Every path ends the same way: it posts the next gate to the chat, so you always
 know what it wants from you next.
 """
 
@@ -45,8 +45,6 @@ def do_topics() -> None:
     topics.generate(run)
     assistant.present_topics(run)
 
-    # The workflow reads this to know what to commit.
-    print(f"RUN_ID={run.id}")
 
 
 def do_pick(run_id: str, args: dict) -> None:
@@ -126,7 +124,7 @@ def do_build(run_id: str, args: dict, redo_stage: str = "") -> None:
         # private upload has to go before the new one arrives.
         publish.delete_video(run)
     else:
-        chat.send("🎬 Building. This takes 30–90 minutes — I'll send the link when it's ready.")
+        chat.send("🎬 Building. This takes 20–40 minutes on the Mac — I'll send the video when it's ready.")
 
     run.save_state(chat_stage="building")
 
@@ -137,6 +135,30 @@ def do_build(run_id: str, args: dict, redo_stage: str = "") -> None:
         run_stage(run, name)
 
     assistant.present_review(run)
+
+
+def do_publish(run_id: str) -> None:
+    """Accept: upload with every detail filled in, make it public, post the comment."""
+    run = resolve_run(run_id)
+    if not publish.have_youtube_keys():
+        chat.send("YouTube isn't connected (no YOUTUBE_* keys in .env), so upload it by hand "
+                  "from the packet:")
+        chat.send_file(run.path("output", "UPLOAD.md"))
+        return
+
+    if not run.state().get("video_id"):
+        chat.send("⬆️ Uploading to YouTube with the title, description, tags, thumbnail and subtitles…")
+        publish.upload(run)
+    video_id = publish.go_live(run)
+    commented = publish.post_comment(run)
+
+    chat.send(
+        f"🚀 <b>Published.</b>\n\nhttps://youtu.be/{video_id}\n\n"
+        + ("💬 Comment posted — open it and tap <b>Pin</b> (YouTube's API can't pin).\n\n"
+           if commented else "")
+        + "<i>If it still shows as private, the Google API project hasn't been audited "
+        "yet — flip it public in YouTube Studio.</i>"
+    )
 
 
 def main() -> None:
@@ -152,16 +174,26 @@ def main() -> None:
         args = {}
 
     intent = options.intent
+    try:
+        dispatch(intent, args, options.run)
+    except (Exception, SystemExit) as error:  # noqa: BLE001 - die() raises SystemExit
+        chat.failed(intent, str(error) or type(error).__name__, assistant.log_path())
+        raise
+
+
+def dispatch(intent: str, args: dict, run_id: str) -> None:
     if intent == "new":
         do_topics()
     elif intent == "pick":
-        do_pick(options.run, args)
+        do_pick(run_id, args)
     elif intent in ("edit_script", "replace_script"):
-        do_revise(options.run, intent, args)
+        do_revise(run_id, intent, args)
     elif intent == "approve_script":
-        do_build(options.run, args)
+        do_build(run_id, args)
     elif intent == "redo":
-        do_build(options.run, args, redo_stage=args.get("stage", ""))
+        do_build(run_id, args, redo_stage=args.get("stage", ""))
+    elif intent == "publish":
+        do_publish(run_id)
     else:
         log(f"Nothing slow to do for intent '{intent}'.")
 

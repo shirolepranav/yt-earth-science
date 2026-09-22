@@ -1,72 +1,69 @@
-"""Talking to you on Telegram.
+"""Talking to you in the local studio app.
 
-Everything the pipeline says to you goes through here, and every button you tap
-comes back through the Cloudflare Worker in `bot/`. This module is deliberately
-one-way plumbing: it sends, it does not listen. Listening is the Worker's job.
+Everything the pipeline says to you goes through here. Each message is one JSON
+line appended to `runs/chat.jsonl`; `app.py` serves that file to the page in
+your browser, which polls it every two seconds. So a 90-minute build running in
+a background process talks to you the same way a quick reply does - it appends
+a line.
 
-Two secrets make it work:
+Buttons are `(label, code)` pairs. Tapping one sends the code back as if you
+had typed it ("cmd:approve", "pick:3", "thumb:b"), and `brain.py` reads it.
 
-  TELEGRAM_BOT_TOKEN   from @BotFather when you create the bot
-  TELEGRAM_CHAT_ID     your own chat id, so the bot only ever messages you
-
-If either is missing, every function here quietly does nothing. That's on
-purpose: the pipeline still runs end to end without Telegram configured, it
-just doesn't narrate itself.
-
-See docs/TELEGRAM_SETUP.md for the ten-minute setup.
+Nothing here ever raises: a chat message failing must not take a video build
+down with it.
 """
 
 from __future__ import annotations
 
 import html
 import json
+import os
+import time
 from pathlib import Path
 
-import requests
+from .common import ROOT, RUNS_DIR, log
 
-from .common import has_secret, log, secret
+LOG_FILE = RUNS_DIR / "chat.jsonl"
 
-# Telegram caps a message at 4096 characters. We split below that with headroom
-# for the "(1/3)" counter we add.
-MAX_MESSAGE_CHARS = 3900
-TIMEOUT = 60
-
-
-# ---------------------------------------------------------------------------
-# Is Telegram switched on?
-# ---------------------------------------------------------------------------
 
 def enabled() -> bool:
-    """True when both secrets are present. Everything else checks this first."""
-    return has_secret("TELEGRAM_BOT_TOKEN") and has_secret("TELEGRAM_CHAT_ID")
+    """Always on - the chat is a local file. Kept so callers needn't change."""
+    return True
 
 
-def _call(method: str, payload: dict, files: dict | None = None) -> dict:
-    """POST to the Telegram Bot API.
-
-    Never raises. A chat notification failing is annoying; a chat notification
-    failing and taking a 90-minute video build down with it is unacceptable.
-    """
-    if not enabled():
-        return {}
-
-    url = f"https://api.telegram.org/bot{secret('TELEGRAM_BOT_TOKEN')}/{method}"
-    payload.setdefault("chat_id", secret("TELEGRAM_CHAT_ID"))
-
+def _append(record: dict) -> str:
+    """Write one message as one line. O_APPEND keeps concurrent writers whole."""
+    record.setdefault("id", str(time.time_ns()))
+    record.setdefault("ts", time.time())
+    record.setdefault("role", "ai")
     try:
-        if files:
-            # Multipart upload: the payload fields ride alongside the file.
-            response = requests.post(url, data=payload, files=files, timeout=TIMEOUT)
-        else:
-            response = requests.post(url, json=payload, timeout=TIMEOUT)
-        body = response.json()
-        if not body.get("ok"):
-            log(f"  telegram {method} refused: {body.get('description', response.text[:200])}")
-            return {}
-        return body.get("result", {})
+        LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
+        line = (json.dumps(record) + "\n").encode()
+        fd = os.open(LOG_FILE, os.O_WRONLY | os.O_APPEND | os.O_CREAT, 0o644)
+        try:
+            os.write(fd, line)
+        finally:
+            os.close(fd)
     except Exception as error:  # noqa: BLE001
-        log(f"  telegram {method} failed: {error}")
-        return {}
+        log(f"  chat write failed: {error}")
+    return record["id"]
+
+
+def _web_path(path: Path) -> str | None:
+    """A file under runs/ as the URL the page loads it from, cache-busted by mtime
+    so a redone thumbnail with the same name shows the new image."""
+    path = Path(path).resolve()
+    if not path.exists():
+        return None
+    return f"/{path.relative_to(ROOT).as_posix()}?v={int(path.stat().st_mtime)}"
+
+
+def history(limit: int = 20) -> list[dict]:
+    """The last few messages, for giving the model conversational context."""
+    if not LOG_FILE.exists():
+        return []
+    lines = LOG_FILE.read_text().splitlines()[-limit:]
+    return [json.loads(line) for line in lines if line.strip()]
 
 
 # ---------------------------------------------------------------------------
@@ -74,109 +71,42 @@ def _call(method: str, payload: dict, files: dict | None = None) -> dict:
 # ---------------------------------------------------------------------------
 
 def escape(text: str) -> str:
-    """Make text safe for Telegram's HTML mode.
-
-    HTML mode rather than Markdown: a stray underscore or asterisk in a script
-    silently breaks a Markdown message, and scripts are full of both.
-    """
+    """Make text safe to show as HTML. Messages use <b>, <i>, <code> and <a>."""
     return html.escape(str(text), quote=False)
 
 
-def keyboard(*rows: list[tuple[str, str]]) -> dict:
-    """Build the row of tappable buttons under a message.
-
-    Each button is a `(label, code)` pair. The code comes back to the Worker as
-    `callback_data` when you tap it, so keep it short - Telegram caps it at 64
-    bytes. We use forms like "pick:3", "ok:script", "thumb:b".
-    """
-    return {
-        "inline_keyboard": [
-            [{"text": label, "callback_data": code} for label, code in row]
-            for row in rows
-        ]
-    }
-
-
-def split(text: str) -> list[str]:
-    """Break a long message into Telegram-sized pieces, on line boundaries."""
-    if len(text) <= MAX_MESSAGE_CHARS:
-        return [text]
-
-    pieces, current = [], ""
-    for line in text.split("\n"):
-        # A single line longer than a whole message - a script pasted with no
-        # paragraph breaks - has to be chopped, or Telegram rejects the send.
-        while len(line) > MAX_MESSAGE_CHARS:
-            if current:
-                pieces.append(current)
-                current = ""
-            pieces.append(line[:MAX_MESSAGE_CHARS])
-            line = line[MAX_MESSAGE_CHARS:]
-
-        # +1 for the newline we're about to add back.
-        if len(current) + len(line) + 1 > MAX_MESSAGE_CHARS:
-            pieces.append(current)
-            current = ""
-        current += line + "\n"
-    if current.strip():
-        pieces.append(current)
-
-    total = len(pieces)
-    return [f"{piece}\n<i>({index}/{total})</i>" for index, piece in enumerate(pieces, 1)]
+def keyboard(*rows: list[tuple[str, str]]) -> list[list[list[str]]]:
+    """Rows of buttons under a message, each a `(label, code)` pair."""
+    return [[[label, code] for label, code in row] for row in rows]
 
 
 # ---------------------------------------------------------------------------
 # Sending
 # ---------------------------------------------------------------------------
 
-def send(text: str, *, buttons: dict | None = None, preview: bool = False) -> int | None:
+def send(text: str, *, buttons=None, preview: bool = False) -> str:
     """Send a message. Returns its id so it can be edited later."""
-    message_id = None
-    pieces = split(text)
-
-    for index, piece in enumerate(pieces):
-        payload = {
-            "text": piece,
-            "parse_mode": "HTML",
-            "link_preview_options": {"is_disabled": not preview},
-        }
-        # Buttons go on the last piece only, where your thumb ends up.
-        if buttons and index == len(pieces) - 1:
-            payload["reply_markup"] = buttons
-        result = _call("sendMessage", payload)
-        message_id = result.get("message_id", message_id)
-
-    return message_id
+    return _append({"html": text, "buttons": buttons})
 
 
-def edit(message_id: int, text: str, *, buttons: dict | None = None) -> None:
-    """Rewrite a message already on screen - used for live progress updates."""
-    payload = {"message_id": message_id, "text": text, "parse_mode": "HTML"}
-    if buttons is not None:
-        payload["reply_markup"] = buttons
-    _call("editMessageText", payload)
+def edit(message_id: str, text: str, *, buttons=None) -> None:
+    """Rewrite a message already on screen - the page replaces it in place."""
+    _append({"edit": message_id, "html": text, "buttons": buttons})
 
 
-def send_photo(path: Path, caption: str = "", buttons: dict | None = None) -> None:
-    """Send an image - thumbnails, mostly. Telegram caps photos at 10 MB."""
-    if not Path(path).exists():
-        return
-    payload = {"caption": caption[:1024], "parse_mode": "HTML"}
-    if buttons:
-        payload["reply_markup"] = json.dumps(buttons)
-    with open(path, "rb") as handle:
-        _call("sendPhoto", payload, files={"photo": handle})
+def send_photo(path: Path, caption: str = "", buttons=None) -> None:
+    if (url := _web_path(path)):
+        _append({"html": caption, "image": url, "buttons": buttons})
+
+
+def send_video(path: Path, caption: str = "") -> None:
+    if (url := _web_path(path)):
+        _append({"html": caption, "video": url})
 
 
 def send_file(path: Path, caption: str = "") -> None:
-    """Send a file - the .srt, the description. Bots cap documents at 50 MB,
-    which is why the finished video goes to YouTube rather than down this pipe.
-    """
-    if not Path(path).exists():
-        return
-    payload = {"caption": caption[:1024], "parse_mode": "HTML"}
-    with open(path, "rb") as handle:
-        _call("sendDocument", payload, files={"document": handle})
+    if (url := _web_path(path)):
+        _append({"html": caption, "file": url, "name": Path(path).name})
 
 
 def progress(stage: str, detail: str = "") -> None:
@@ -184,22 +114,16 @@ def progress(stage: str, detail: str = "") -> None:
     send(f"⚙️ <b>{escape(stage)}</b>{(' — ' + escape(detail)) if detail else ''}")
 
 
-def failed(stage: str, error: str, log_url: str = "") -> None:
-    """Report a stage that blew up, with a link to the log."""
+def failed(stage: str, error: str, log_path: str = "") -> None:
+    """Report a stage that blew up, with where to find the log."""
     lines = [f"❌ <b>{escape(stage)} failed</b>", "", f"<code>{escape(error[:600])}</code>"]
-    if log_url:
-        lines += ["", f'<a href="{log_url}">Open the log</a>']
-    lines += ["", "Reply <code>retry</code> to pick up from where it stopped."]
-    send("\n".join(lines), preview=False)
+    if log_path:
+        lines += ["", f"Log: <code>{escape(log_path)}</code>"]
+    lines += ["", "Tap Retry to pick up from where it stopped."]
+    send("\n".join(lines), buttons=keyboard([("🔁 Retry", "retry")]))
 
 
 if __name__ == "__main__":
-    # `python -m pipeline.chat` sends a test message, so you can check the two
-    # secrets are right without running anything expensive.
-    if not enabled():
-        raise SystemExit("TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID are not both set.")
-    send(
-        "✅ <b>Deep Earth is connected.</b>\n\nReply <code>new video</code> to start one.",
-        buttons=keyboard([("🎬 New video", "cmd:new"), ("📊 Status", "cmd:status")]),
-    )
-    log("Test message sent.")
+    send("✅ <b>Deep Earth studio is connected.</b>",
+         buttons=keyboard([("🎬 New video", "cmd:new"), ("📊 Status", "cmd:status")]))
+    log(f"Test message written to {LOG_FILE}")

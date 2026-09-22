@@ -1,16 +1,16 @@
 # =============================================================================
-# Shortcuts for running the pipeline on your own Mac.
+# Shortcuts for running the pipeline on your Mac.
 #
-# The same commands GitHub Actions runs - just typed by hand. Nothing here is
-# Mac-specific; it works on Linux too.
+# `make app` is the normal way in: the studio chat drives everything below.
 #
 # Type `make` on its own to see this list.
 # =============================================================================
 
-.PHONY: help setup demo topics choose write build render clean check
+.PHONY: help app setup demo topics choose write build render clean check
 
 help:
 	@echo ""
+	@echo "  make app              Open the studio - chat, review, upload"
 	@echo "  make setup            Install everything (run once)"
 	@echo "  make demo             Render a 14-second test video, no API keys needed"
 	@echo "  make check            Check that every module imports and the config is valid"
@@ -23,6 +23,9 @@ help:
 	@echo "  make render           Re-run just the render step"
 	@echo "  make clean            Delete build output (keeps your runs)"
 	@echo ""
+
+app:
+	./venv/bin/python app.py
 
 setup:
 	python3 -m venv venv

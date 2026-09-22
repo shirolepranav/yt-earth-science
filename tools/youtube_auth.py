@@ -1,7 +1,7 @@
 """One-off helper: get a YouTube refresh token.
 
 You run this ONCE, on a machine with a web browser, and paste the token it
-prints into your secrets. After that the pipeline can upload on its own,
+prints into .env. After that the pipeline can upload on its own,
 forever, without you signing in again.
 
 What a refresh token is: a long-lived pass that lets the pipeline ask Google for
@@ -26,7 +26,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 CLIENT_SECRETS = ROOT / "config" / "youtube_oauth.json"
-SCOPES = ["https://www.googleapis.com/auth/youtube.upload"]
+# upload for the video; force-ssl for subtitles, the comment, and edits after upload.
+SCOPES = ["https://www.googleapis.com/auth/youtube.upload",
+          "https://www.googleapis.com/auth/youtube.force-ssl"]
 
 
 def main() -> None:
@@ -48,8 +50,7 @@ def main() -> None:
     )
 
     print("\n" + "=" * 70)
-    print("Copy these three values into your secrets.")
-    print("On GitHub: Settings > Secrets and variables > Actions > New secret")
+    print("Copy these three values into .env.")
     print("=" * 70)
     print(f"\nYOUTUBE_CLIENT_ID\n{credentials.client_id}")
     print(f"\nYOUTUBE_CLIENT_SECRET\n{credentials.client_secret}")

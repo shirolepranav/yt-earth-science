@@ -123,7 +123,8 @@ def render(run: Run, output_name: str = "video.mp4") -> Path:
 
     base_command = [
         f"--props={props_path}",
-        f"--concurrency={os.getenv('REMOTION_CONCURRENCY', '2')}",  # 2 suits a 2-core CI runner
+        # Half the cores: each worker is a browser tab, and past that they fight for memory.
+        f"--concurrency={os.getenv('REMOTION_CONCURRENCY', str(max(2, (os.cpu_count() or 4) // 2)))}",
         # WebGL backend for the three.js charts and parallax stills: "angle" uses
         # the GPU (a Mac); "swangle" is software rendering for GPU-less CI.
         f"--gl={os.getenv('REMOTION_GL', 'angle')}",

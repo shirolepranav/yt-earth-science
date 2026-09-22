@@ -25,8 +25,8 @@ import re
 
 from .common import Run, log
 
-# Every intent the system understands. The workflow routes on these strings, so
-# adding one here means adding a job in .github/workflows/chat.yml too.
+# Every intent the system understands. app.py routes on these strings: anything
+# not in assistant.FAST is run as a background job by tools/chat_job.py.
 INTENTS = {
     "new":             "Start a new video - propose ten topics",
     "pick":            "Choose topic number N from the list",
@@ -36,9 +36,10 @@ INTENTS = {
     "set_title":       "Change the video title",
     "set_tags":        "Change the tags",
     "set_description": "Change the description",
+    "set_pinned_comment": "Change the pinned comment",
     "pick_thumbnail":  "Use thumbnail a, b or c",
     "redo":            "Re-run one stage (thumbnail, stock, visuals, narrate, render)",
-    "publish":         "Make the video public on YouTube",
+    "publish":         "Accept the video - upload it to YouTube and make it public",
     "status":          "Where is the current run up to?",
     "cancel":          "Abandon the current run",
     "question":        "A question or remark that needs an answer, not an action",
@@ -82,7 +83,7 @@ def match_literally(text: str) -> dict | None:
     exact = {
         "approve": "approve_script", "approved": "approve_script", "ok": "approve_script",
         "yes": "approve_script", "go": "approve_script", "build it": "approve_script",
-        "publish": "publish", "ship it": "publish", "go live": "publish",
+        "publish": "publish", "ship it": "publish", "go live": "publish", "accept": "publish",
         "status": "status", "where are we": "status", "?": "status",
         "cancel": "cancel", "stop": "cancel", "abandon": "cancel",
         "new": "new", "new video": "new", "start": "new", "make a video": "new",
@@ -129,7 +130,7 @@ def extract_fenced_script(text: str) -> str | None:
 
 SYSTEM = (
     "You route messages for a YouTube video pipeline. The user is the channel "
-    "owner, talking to you from their phone. Reply with JSON only."
+    "owner, talking to you from their studio app. Reply with JSON only."
 )
 
 TEMPLATE = """The user sent this message:
@@ -151,7 +152,7 @@ Rules:
 - "pick_thumbnail" needs args.choice, one of "a", "b", "c".
 - "redo" needs args.stage, one of: {redoable}.
 - "set_title" needs args.title; "set_tags" needs args.tags (a list);
-  "set_description" needs args.description.
+  "set_description" needs args.description; "set_pinned_comment" needs args.text.
 - "edit_script" needs args.instruction - their change, in their own words.
 - If they are asking something rather than instructing, use "question" and put
   the answer in "reply".

@@ -21,19 +21,12 @@ runs/*/audio/
 runs/*/assets/
 
 # ---------------------------------------------------------------------------
-# A run's text files ARE committed, and that matters.
-#
-# The runs/ folder is the only memory this system has. Every chat message
-# arrives in a brand-new container that knows nothing about the last one, so
-# state.json, the topic list, the script and the metadata have to be in the
-# repo or the conversation forgets itself between messages. They're small -
-# a whole run is well under 200 KB of text.
-#
-# What must NOT be committed is the heavy output: one run held a 146 MB WAV,
-# past GitHub's 100 MB file limit. So the output folder is excluded except for
-# the three small files you'd want to read on your phone, and the binary
-# extensions are blocked outright wherever they turn up.
+# Runs: text files are small and worth keeping in git; the heavy output and the
+# studio's chat log and job log are not.
 # ---------------------------------------------------------------------------
+runs/chat.jsonl
+runs/job.log
+runs/last_job.json
 runs/*/output/*
 !runs/*/output/subtitles.srt
 !runs/*/output/UPLOAD.md

@@ -183,6 +183,12 @@ def build_packet(run: Run) -> str:
         (f"`output/subtitles.srt` — {state.get('subtitle_cues', 0):,} cues"
          if subtitles.exists() else "_Not produced - run the captions stage._"),
         "",
+        "## Pinned comment",
+        "",
+        "```",
+        metadata.get("pinned_comment") or "(none written)",
+        "```",
+        "",
         "## Before you publish",
         "",
         "- Category: **Science & Technology**",
@@ -366,6 +372,30 @@ def go_live(run: Run, privacy: str = "public") -> str:
     return video_id
 
 
+def post_comment(run: Run) -> bool:
+    """Post metadata's pinned_comment under the video. Never raises.
+
+    YouTube's API can post a comment but cannot pin it - that's one tap on
+    the comment in the YouTube app or Studio.
+    """
+    video_id = run.state().get("video_id")
+    text = run.read_json("metadata.json").get("pinned_comment", "")
+    if not video_id or not text or not have_youtube_keys() or run.state().get("comment_id"):
+        return False
+    try:
+        response = build_client().commentThreads().insert(
+            part="snippet",
+            body={"snippet": {"videoId": video_id,
+                              "topLevelComment": {"snippet": {"textOriginal": text}}}},
+        ).execute()
+    except Exception as error:  # noqa: BLE001
+        log(f"Could not post the comment ({error}) - paste it from UPLOAD.md")
+        return False
+    run.save_state(comment_id=response["id"])
+    log(f"Comment posted on {video_id}")
+    return True
+
+
 def delete_video(run: Run) -> bool:
     """Remove the private upload.
 
@@ -384,7 +414,7 @@ def delete_video(run: Run) -> bool:
         log(f"Could not delete {video_id} ({error}) - remove it in YouTube Studio")
 
     # Cleared either way: the run must not keep pointing at a video it replaced.
-    run.save_state(video_id="", video_url="", video_privacy="")
+    run.save_state(video_id="", video_url="", video_privacy="", comment_id="")
     return True
 
 
