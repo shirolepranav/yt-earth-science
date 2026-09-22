@@ -51,8 +51,9 @@ def log(message: str) -> None:
 
 def die(message: str) -> None:
     """Print an error and stop with a non-zero exit code (which fails the CI job)."""
-    print(f"\nERROR: {message}\n", file=sys.stderr, flush=True)
-    sys.exit(1)
+    # sys.exit with a string prints it to stderr and exits 1 - and keeps the
+    # message on the exception, so the chat can say why a job stopped.
+    sys.exit(f"\nERROR: {message}\n")
 
 
 # ---------------------------------------------------------------------------

@@ -1,35 +1,21 @@
 """STAGE - Publish.
 
 Uploads the finished video to YouTube with its title, description, tags,
-thumbnail and subtitles, then waits for you to say the word before it goes
-public.
+thumbnail and subtitles, then makes it public. Nothing here runs during a build:
+you watch the video in the studio first, and its Accept & upload button runs
+`upload` -> `go_live` -> `post_comment` (tools/chat_job.py, intent "publish").
 
-The two-step matters, and it's what makes reviewing from a phone work at all.
-An eleven-minute 1080p video is 150-400 MB - far too big to send over a chat
-app. So the video is uploaded to YouTube as **private** first, and the chat
-sends you the link. YouTube becomes the review player: it streams to your
-phone, it's free, and approving costs one more API call rather than a second
-upload.
+  you tap Accept   -> uploads (private first), flips it public    (upload, go_live)
+                   -> posts the pinned comment - you tap Pin       (post_comment)
+  edits afterwards -> title/tags/thumbnail changes land in place   (apply_metadata)
 
-  build stage      -> uploads PRIVATE, sends you the link       (upload)
-  you reply        -> title/tags/thumbnail edits land in place  (apply_metadata)
-  you say publish  -> the same video flips to public            (go_live)
+Google restricts unaudited API projects: until your compliance audit clears, a
+video uploaded through the API is locked private no matter what privacy you ask
+for - so `go_live` will appear to work and the video will stay private. Flip it
+public in YouTube Studio until the audit clears, and submit the audit early.
 
-Two things to know:
-
-1. Google restricts unaudited API projects. Until your compliance audit clears,
-   a video uploaded through the API is locked private no matter what privacy
-   you ask for - so `go_live` will appear to work and the video will stay
-   private. Flip it public with two taps in the YouTube app until the audit
-   clears, and submit the audit request early so the clock runs.
-
-2. `safety.review_only` in config/channel.json controls only the automatic
-   flip to public. Private review uploads still happen, because that's how you
-   see the video at all. Replying `publish` in the chat is a human decision and
-   is always honoured.
-
-Getting the refresh token: run `python tools/youtube_auth.py` once, on a machine
-with a browser, and paste the token it prints into your secrets.
+Getting the refresh token: run `python tools/youtube_auth.py` once, and paste
+what it prints into .env.
 
 Run it:  python -m pipeline.publish --run latest
 """

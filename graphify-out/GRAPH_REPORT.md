@@ -1,7 +1,7 @@
 # Graph Report - yt-deep-earth  (2026-09-21)
 
 ## Corpus Check
-- 105 files · ~123,930 words
+- 105 files · ~123,847 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e880b634`
+- Built from commit: `4d813aff`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
