@@ -1,0 +1,8796 @@
+{
+  "method": "elevenlabs",
+  "duration": 683.159375,
+  "words": [
+    {
+      "word": "Hi,",
+      "start": 0.0,
+      "end": 0.453
+    },
+    {
+      "word": "welcome",
+      "start": 0.929,
+      "end": 1.265
+    },
+    {
+      "word": "to",
+      "start": 1.289,
+      "end": 1.347
+    },
+    {
+      "word": "another",
+      "start": 1.416,
+      "end": 1.637
+    },
+    {
+      "word": "episode",
+      "start": 1.695,
+      "end": 2.067
+    },
+    {
+      "word": "of",
+      "start": 2.09,
+      "end": 2.136
+    },
+    {
+      "word": "the",
+      "start": 2.171,
+      "end": 2.241
+    },
+    {
+      "word": "Earth",
+      "start": 2.299,
+      "end": 2.473
+    },
+    {
+      "word": "Docs.",
+      "start": 2.508,
+      "end": 2.984
+    },
+    {
+      "word": "It's",
+      "start": 3.309,
+      "end": 3.518
+    },
+    {
+      "word": "January",
+      "start": 3.599,
+      "end": 4.122
+    },
+    {
+      "word": "2022,",
+      "start": 4.191,
+      "end": 5.097
+    },
+    {
+      "word": "and",
+      "start": 5.248,
+      "end": 5.375
+    },
+    {
+      "word": "you're",
+      "start": 5.422,
+      "end": 5.584
+    },
+    {
+      "word": "standing",
+      "start": 5.608,
+      "end": 5.921
+    },
+    {
+      "word": "on",
+      "start": 5.956,
+      "end": 6.002
+    },
+    {
+      "word": "the",
+      "start": 6.037,
+      "end": 6.107
+    },
+    {
+      "word": "coast",
+      "start": 6.142,
+      "end": 6.374
+    },
+    {
+      "word": "of",
+      "start": 6.42,
+      "end": 6.467
+    },
+    {
+      "word": "Tonga,",
+      "start": 6.536,
+      "end": 7.152
+    },
+    {
+      "word": "looking",
+      "start": 7.43,
+      "end": 7.709
+    },
+    {
+      "word": "out",
+      "start": 7.767,
+      "end": 7.883
+    },
+    {
+      "word": "at",
+      "start": 7.918,
+      "end": 7.988
+    },
+    {
+      "word": "open",
+      "start": 8.104,
+      "end": 8.382
+    },
+    {
+      "word": "ocean",
+      "start": 8.44,
+      "end": 8.696
+    },
+    {
+      "word": "where",
+      "start": 8.731,
+      "end": 8.893
+    },
+    {
+      "word": "a",
+      "start": 8.94,
+      "end": 8.975
+    },
+    {
+      "word": "volcano",
+      "start": 9.033,
+      "end": 9.485
+    },
+    {
+      "word": "is",
+      "start": 9.555,
+      "end": 9.625
+    },
+    {
+      "word": "supposed",
+      "start": 9.648,
+      "end": 9.973
+    },
+    {
+      "word": "to",
+      "start": 9.996,
+      "end": 10.043
+    },
+    {
+      "word": "be.",
+      "start": 10.101,
+      "end": 10.461
+    },
+    {
+      "word": "Underwater.",
+      "start": 11.157,
+      "end": 11.9
+    },
+    {
+      "word": "Out",
+      "start": 12.504,
+      "end": 12.678
+    },
+    {
+      "word": "of",
+      "start": 12.713,
+      "end": 12.771
+    },
+    {
+      "word": "sight.",
+      "start": 12.829,
+      "end": 13.259
+    },
+    {
+      "word": "Then",
+      "start": 14.071,
+      "end": 14.373
+    },
+    {
+      "word": "the",
+      "start": 14.489,
+      "end": 14.617
+    },
+    {
+      "word": "horizon",
+      "start": 14.687,
+      "end": 15.174
+    },
+    {
+      "word": "changes.",
+      "start": 15.244,
+      "end": 15.86
+    },
+    {
+      "word": "By",
+      "start": 16.672,
+      "end": 16.812
+    },
+    {
+      "word": "the",
+      "start": 16.87,
+      "end": 16.939
+    },
+    {
+      "word": "time",
+      "start": 16.974,
+      "end": 17.183
+    },
+    {
+      "word": "it",
+      "start": 17.218,
+      "end": 17.288
+    },
+    {
+      "word": "stops,",
+      "start": 17.346,
+      "end": 18.008
+    },
+    {
+      "word": "according",
+      "start": 18.182,
+      "end": 18.553
+    },
+    {
+      "word": "to",
+      "start": 18.588,
+      "end": 18.634
+    },
+    {
+      "word": "the",
+      "start": 18.693,
+      "end": 18.762
+    },
+    {
+      "word": "2022",
+      "start": 18.832,
+      "end": 19.737
+    },
+    {
+      "word": "study",
+      "start": 19.795,
+      "end": 20.039
+    },
+    {
+      "word": "by",
+      "start": 20.097,
+      "end": 20.237
+    },
+    {
+      "word": "Wright",
+      "start": 20.306,
+      "end": 20.55
+    },
+    {
+      "word": "and",
+      "start": 20.597,
+      "end": 20.666
+    },
+    {
+      "word": "colleagues,",
+      "start": 20.736,
+      "end": 21.432
+    },
+    {
+      "word": "the",
+      "start": 21.641,
+      "end": 21.746
+    },
+    {
+      "word": "plume",
+      "start": 21.804,
+      "end": 22.059
+    },
+    {
+      "word": "has",
+      "start": 22.083,
+      "end": 22.199
+    },
+    {
+      "word": "punched",
+      "start": 22.268,
+      "end": 22.535
+    },
+    {
+      "word": "more",
+      "start": 22.582,
+      "end": 22.71
+    },
+    {
+      "word": "than",
+      "start": 22.744,
+      "end": 22.861
+    },
+    {
+      "word": "fifty",
+      "start": 22.942,
+      "end": 23.255
+    },
+    {
+      "word": "kilometres",
+      "start": 23.313,
+      "end": 23.824
+    },
+    {
+      "word": "above",
+      "start": 23.871,
+      "end": 24.091
+    },
+    {
+      "word": "your",
+      "start": 24.126,
+      "end": 24.242
+    },
+    {
+      "word": "head.",
+      "start": 24.3,
+      "end": 24.683
+    },
+    {
+      "word": "Not",
+      "start": 25.38,
+      "end": 25.612
+    },
+    {
+      "word": "into",
+      "start": 25.659,
+      "end": 25.809
+    },
+    {
+      "word": "the",
+      "start": 25.868,
+      "end": 25.937
+    },
+    {
+      "word": "clouds.",
+      "start": 25.972,
+      "end": 26.599
+    },
+    {
+      "word": "Through",
+      "start": 27.296,
+      "end": 27.621
+    },
+    {
+      "word": "them.",
+      "start": 27.655,
+      "end": 27.981
+    },
+    {
+      "word": "Through",
+      "start": 28.677,
+      "end": 28.944
+    },
+    {
+      "word": "the",
+      "start": 28.967,
+      "end": 29.037
+    },
+    {
+      "word": "weather.",
+      "start": 29.072,
+      "end": 29.571
+    },
+    {
+      "word": "Into",
+      "start": 30.268,
+      "end": 30.488
+    },
+    {
+      "word": "the",
+      "start": 30.546,
+      "end": 30.616
+    },
+    {
+      "word": "stratosphere,",
+      "start": 30.651,
+      "end": 31.452
+    },
+    {
+      "word": "and",
+      "start": 31.568,
+      "end": 31.731
+    },
+    {
+      "word": "beyond",
+      "start": 31.789,
+      "end": 32.126
+    },
+    {
+      "word": "it.",
+      "start": 32.184,
+      "end": 32.427
+    },
+    {
+      "word": "To",
+      "start": 33.124,
+      "end": 33.24
+    },
+    {
+      "word": "see",
+      "start": 33.31,
+      "end": 33.472
+    },
+    {
+      "word": "how",
+      "start": 33.53,
+      "end": 33.658
+    },
+    {
+      "word": "it",
+      "start": 33.716,
+      "end": 33.786
+    },
+    {
+      "word": "got",
+      "start": 33.844,
+      "end": 34.03
+    },
+    {
+      "word": "there,",
+      "start": 34.076,
+      "end": 34.448
+    },
+    {
+      "word": "go",
+      "start": 34.657,
+      "end": 34.784
+    },
+    {
+      "word": "back.",
+      "start": 34.866,
+      "end": 35.26
+    },
+    {
+      "word": "Sixteen",
+      "start": 35.701,
+      "end": 36.166
+    },
+    {
+      "word": "minutes",
+      "start": 36.212,
+      "end": 36.433
+    },
+    {
+      "word": "past",
+      "start": 36.468,
+      "end": 36.712
+    },
+    {
+      "word": "four",
+      "start": 36.781,
+      "end": 36.99
+    },
+    {
+      "word": "in",
+      "start": 37.025,
+      "end": 37.071
+    },
+    {
+      "word": "the",
+      "start": 37.106,
+      "end": 37.176
+    },
+    {
+      "word": "morning,",
+      "start": 37.211,
+      "end": 37.664
+    },
+    {
+      "word": "Coordinated",
+      "start": 37.873,
+      "end": 38.418
+    },
+    {
+      "word": "Universal",
+      "start": 38.476,
+      "end": 38.929
+    },
+    {
+      "word": "Time,",
+      "start": 38.987,
+      "end": 39.405
+    },
+    {
+      "word": "on",
+      "start": 39.649,
+      "end": 39.788
+    },
+    {
+      "word": "the",
+      "start": 39.823,
+      "end": 39.893
+    },
+    {
+      "word": "fifteenth",
+      "start": 39.962,
+      "end": 40.403
+    },
+    {
+      "word": "of",
+      "start": 40.438,
+      "end": 40.485
+    },
+    {
+      "word": "January,",
+      "start": 40.543,
+      "end": 41.1
+    },
+    {
+      "word": "two",
+      "start": 41.123,
+      "end": 41.297
+    },
+    {
+      "word": "thousand",
+      "start": 41.355,
+      "end": 41.669
+    },
+    {
+      "word": "twenty-two.",
+      "start": 41.715,
+      "end": 42.4
+    },
+    {
+      "word": "On",
+      "start": 43.097,
+      "end": 43.236
+    },
+    {
+      "word": "the",
+      "start": 43.271,
+      "end": 43.352
+    },
+    {
+      "word": "islands",
+      "start": 43.422,
+      "end": 43.724
+    },
+    {
+      "word": "of",
+      "start": 43.759,
+      "end": 43.817
+    },
+    {
+      "word": "Tonga",
+      "start": 43.886,
+      "end": 44.374
+    },
+    {
+      "word": "it",
+      "start": 44.653,
+      "end": 44.78
+    },
+    {
+      "word": "was",
+      "start": 44.815,
+      "end": 44.908
+    },
+    {
+      "word": "just",
+      "start": 44.966,
+      "end": 45.164
+    },
+    {
+      "word": "after",
+      "start": 45.21,
+      "end": 45.419
+    },
+    {
+      "word": "five",
+      "start": 45.489,
+      "end": 45.709
+    },
+    {
+      "word": "in",
+      "start": 45.744,
+      "end": 45.79
+    },
+    {
+      "word": "the",
+      "start": 45.825,
+      "end": 45.895
+    },
+    {
+      "word": "evening.",
+      "start": 45.965,
+      "end": 46.406
+    },
+    {
+      "word": "And",
+      "start": 46.65,
+      "end": 46.801
+    },
+    {
+      "word": "at",
+      "start": 46.87,
+      "end": 46.987
+    },
+    {
+      "word": "that",
+      "start": 47.033,
+      "end": 47.196
+    },
+    {
+      "word": "moment,",
+      "start": 47.265,
+      "end": 47.695
+    },
+    {
+      "word": "the",
+      "start": 47.811,
+      "end": 47.927
+    },
+    {
+      "word": "land",
+      "start": 47.997,
+      "end": 48.229
+    },
+    {
+      "word": "that",
+      "start": 48.275,
+      "end": 48.38
+    },
+    {
+      "word": "had",
+      "start": 48.415,
+      "end": 48.507
+    },
+    {
+      "word": "stood",
+      "start": 48.542,
+      "end": 48.751
+    },
+    {
+      "word": "above",
+      "start": 48.786,
+      "end": 48.995
+    },
+    {
+      "word": "the",
+      "start": 49.018,
+      "end": 49.088
+    },
+    {
+      "word": "vent",
+      "start": 49.146,
+      "end": 49.355
+    },
+    {
+      "word": "of",
+      "start": 49.401,
+      "end": 49.459
+    },
+    {
+      "word": "the",
+      "start": 49.494,
+      "end": 49.564
+    },
+    {
+      "word": "Hunga",
+      "start": 49.622,
+      "end": 49.901
+    },
+    {
+      "word": "volcano",
+      "start": 49.947,
+      "end": 50.47
+    },
+    {
+      "word": "simply",
+      "start": 50.795,
+      "end": 51.155
+    },
+    {
+      "word": "stopped",
+      "start": 51.201,
+      "end": 51.503
+    },
+    {
+      "word": "existing.",
+      "start": 51.538,
+      "end": 52.153
+    },
+    {
+      "word": "The",
+      "start": 53.268,
+      "end": 53.384
+    },
+    {
+      "word": "volcano",
+      "start": 53.442,
+      "end": 53.86
+    },
+    {
+      "word": "was",
+      "start": 53.918,
+      "end": 54.022
+    },
+    {
+      "word": "not",
+      "start": 54.092,
+      "end": 54.22
+    },
+    {
+      "word": "a",
+      "start": 54.254,
+      "end": 54.278
+    },
+    {
+      "word": "stranger.",
+      "start": 54.324,
+      "end": 54.939
+    },
+    {
+      "word": "Hunga",
+      "start": 55.752,
+      "end": 56.066
+    },
+    {
+      "word": "Tonga\u2013Hunga",
+      "start": 56.124,
+      "end": 56.727
+    },
+    {
+      "word": "Ha'apai",
+      "start": 56.797,
+      "end": 57.354
+    },
+    {
+      "word": "is",
+      "start": 57.598,
+      "end": 57.749
+    },
+    {
+      "word": "a",
+      "start": 57.795,
+      "end": 57.819
+    },
+    {
+      "word": "caldera",
+      "start": 57.865,
+      "end": 58.329
+    },
+    {
+      "word": "in",
+      "start": 58.376,
+      "end": 58.446
+    },
+    {
+      "word": "the",
+      "start": 58.48,
+      "end": 58.55
+    },
+    {
+      "word": "western",
+      "start": 58.62,
+      "end": 59.026
+    },
+    {
+      "word": "South",
+      "start": 59.096,
+      "end": 59.34
+    },
+    {
+      "word": "Pacific,",
+      "start": 59.386,
+      "end": 59.967
+    },
+    {
+      "word": "one",
+      "start": 60.292,
+      "end": 60.512
+    },
+    {
+      "word": "hundred",
+      "start": 60.547,
+      "end": 60.78
+    },
+    {
+      "word": "fourteen",
+      "start": 60.849,
+      "end": 61.256
+    },
+    {
+      "word": "metres",
+      "start": 61.314,
+      "end": 61.604
+    },
+    {
+      "word": "above",
+      "start": 61.65,
+      "end": 61.906
+    },
+    {
+      "word": "sea",
+      "start": 61.952,
+      "end": 62.126
+    },
+    {
+      "word": "level",
+      "start": 62.173,
+      "end": 62.428
+    },
+    {
+      "word": "at",
+      "start": 62.637,
+      "end": 62.788
+    },
+    {
+      "word": "its",
+      "start": 62.835,
+      "end": 62.939
+    },
+    {
+      "word": "highest",
+      "start": 63.009,
+      "end": 63.345
+    },
+    {
+      "word": "point,",
+      "start": 63.415,
+      "end": 63.821
+    },
+    {
+      "word": "according",
+      "start": 63.938,
+      "end": 64.297
+    },
+    {
+      "word": "to",
+      "start": 64.332,
+      "end": 64.379
+    },
+    {
+      "word": "the",
+      "start": 64.425,
+      "end": 64.495
+    },
+    {
+      "word": "Smithsonian's",
+      "start": 64.518,
+      "end": 65.226
+    },
+    {
+      "word": "Global",
+      "start": 65.377,
+      "end": 65.772
+    },
+    {
+      "word": "Volcanism",
+      "start": 65.818,
+      "end": 66.283
+    },
+    {
+      "word": "Program,",
+      "start": 66.329,
+      "end": 66.898
+    },
+    {
+      "word": "which",
+      "start": 67.142,
+      "end": 67.339
+    },
+    {
+      "word": "places",
+      "start": 67.386,
+      "end": 67.734
+    },
+    {
+      "word": "the",
+      "start": 67.78,
+      "end": 67.85
+    },
+    {
+      "word": "capital,",
+      "start": 67.885,
+      "end": 68.535
+    },
+    {
+      "word": "Nuku'alofa,",
+      "start": 68.709,
+      "end": 69.696
+    },
+    {
+      "word": "about",
+      "start": 69.905,
+      "end": 70.195
+    },
+    {
+      "word": "sixty-five",
+      "start": 70.265,
+      "end": 70.869
+    },
+    {
+      "word": "kilometres",
+      "start": 70.904,
+      "end": 71.38
+    },
+    {
+      "word": "to",
+      "start": 71.426,
+      "end": 71.472
+    },
+    {
+      "word": "the",
+      "start": 71.53,
+      "end": 71.6
+    },
+    {
+      "word": "south.",
+      "start": 71.635,
+      "end": 72.076
+    },
+    {
+      "word": "It",
+      "start": 72.773,
+      "end": 72.912
+    },
+    {
+      "word": "had",
+      "start": 72.959,
+      "end": 73.063
+    },
+    {
+      "word": "erupted",
+      "start": 73.109,
+      "end": 73.504
+    },
+    {
+      "word": "in",
+      "start": 73.551,
+      "end": 73.62
+    },
+    {
+      "word": "nineteen",
+      "start": 73.713,
+      "end": 74.12
+    },
+    {
+      "word": "twelve,",
+      "start": 74.166,
+      "end": 74.688
+    },
+    {
+      "word": "nineteen",
+      "start": 74.897,
+      "end": 75.28
+    },
+    {
+      "word": "thirty-seven,",
+      "start": 75.315,
+      "end": 76.081
+    },
+    {
+      "word": "nineteen",
+      "start": 76.29,
+      "end": 76.662
+    },
+    {
+      "word": "eighty-eight,",
+      "start": 76.72,
+      "end": 77.312
+    },
+    {
+      "word": "then",
+      "start": 77.556,
+      "end": 77.788
+    },
+    {
+      "word": "in",
+      "start": 77.869,
+      "end": 77.974
+    },
+    {
+      "word": "two",
+      "start": 78.02,
+      "end": 78.171
+    },
+    {
+      "word": "thousand",
+      "start": 78.229,
+      "end": 78.554
+    },
+    {
+      "word": "nine",
+      "start": 78.624,
+      "end": 78.891
+    },
+    {
+      "word": "and",
+      "start": 78.937,
+      "end": 79.042
+    },
+    {
+      "word": "again",
+      "start": 79.088,
+      "end": 79.367
+    },
+    {
+      "word": "in",
+      "start": 79.437,
+      "end": 79.518
+    },
+    {
+      "word": "twenty",
+      "start": 79.564,
+      "end": 79.796
+    },
+    {
+      "word": "fourteen",
+      "start": 79.843,
+      "end": 80.203
+    },
+    {
+      "word": "to",
+      "start": 80.238,
+      "end": 80.284
+    },
+    {
+      "word": "twenty",
+      "start": 80.33,
+      "end": 80.539
+    },
+    {
+      "word": "fifteen",
+      "start": 80.586,
+      "end": 80.981
+    },
+    {
+      "word": "\u2014",
+      "start": 81.155,
+      "end": 81.201
+    },
+    {
+      "word": "and",
+      "start": 81.712,
+      "end": 81.828
+    },
+    {
+      "word": "those",
+      "start": 81.875,
+      "end": 82.072
+    },
+    {
+      "word": "last",
+      "start": 82.118,
+      "end": 82.351
+    },
+    {
+      "word": "two",
+      "start": 82.385,
+      "end": 82.525
+    },
+    {
+      "word": "each",
+      "start": 82.618,
+      "end": 82.803
+    },
+    {
+      "word": "built",
+      "start": 82.85,
+      "end": 83.047
+    },
+    {
+      "word": "a",
+      "start": 83.082,
+      "end": 83.117
+    },
+    {
+      "word": "little",
+      "start": 83.187,
+      "end": 83.43
+    },
+    {
+      "word": "new",
+      "start": 83.465,
+      "end": 83.581
+    },
+    {
+      "word": "land.",
+      "start": 83.628,
+      "end": 84.069
+    },
+    {
+      "word": "By",
+      "start": 84.766,
+      "end": 84.905
+    },
+    {
+      "word": "the",
+      "start": 84.963,
+      "end": 85.033
+    },
+    {
+      "word": "second",
+      "start": 85.091,
+      "end": 85.358
+    },
+    {
+      "word": "of",
+      "start": 85.392,
+      "end": 85.439
+    },
+    {
+      "word": "January,",
+      "start": 85.497,
+      "end": 86.112
+    },
+    {
+      "word": "twenty",
+      "start": 86.205,
+      "end": 86.472
+    },
+    {
+      "word": "twenty-two,",
+      "start": 86.519,
+      "end": 87.157
+    },
+    {
+      "word": "that",
+      "start": 87.401,
+      "end": 87.622
+    },
+    {
+      "word": "land",
+      "start": 87.691,
+      "end": 87.889
+    },
+    {
+      "word": "had",
+      "start": 87.935,
+      "end": 88.04
+    },
+    {
+      "word": "grown.",
+      "start": 88.086,
+      "end": 88.551
+    },
+    {
+      "word": "Satellite",
+      "start": 89.503,
+      "end": 89.979
+    },
+    {
+      "word": "imagery",
+      "start": 90.013,
+      "end": 90.385
+    },
+    {
+      "word": "showed",
+      "start": 90.466,
+      "end": 90.733
+    },
+    {
+      "word": "the",
+      "start": 90.756,
+      "end": 90.838
+    },
+    {
+      "word": "island",
+      "start": 90.907,
+      "end": 91.186
+    },
+    {
+      "word": "reaching",
+      "start": 91.244,
+      "end": 91.5
+    },
+    {
+      "word": "about",
+      "start": 91.546,
+      "end": 91.767
+    },
+    {
+      "word": "three",
+      "start": 91.813,
+      "end": 92.045
+    },
+    {
+      "word": "point",
+      "start": 92.103,
+      "end": 92.324
+    },
+    {
+      "word": "six",
+      "start": 92.394,
+      "end": 92.602
+    },
+    {
+      "word": "square",
+      "start": 92.661,
+      "end": 92.951
+    },
+    {
+      "word": "kilometres,",
+      "start": 92.997,
+      "end": 93.752
+    },
+    {
+      "word": "with",
+      "start": 94.031,
+      "end": 94.193
+    },
+    {
+      "word": "pumice",
+      "start": 94.251,
+      "end": 94.588
+    },
+    {
+      "word": "rafts",
+      "start": 94.646,
+      "end": 94.924
+    },
+    {
+      "word": "roughly",
+      "start": 94.994,
+      "end": 95.296
+    },
+    {
+      "word": "ten",
+      "start": 95.354,
+      "end": 95.54
+    },
+    {
+      "word": "metres",
+      "start": 95.598,
+      "end": 95.865
+    },
+    {
+      "word": "wide",
+      "start": 95.935,
+      "end": 96.353
+    },
+    {
+      "word": "drifting",
+      "start": 96.503,
+      "end": 96.84
+    },
+    {
+      "word": "a",
+      "start": 96.887,
+      "end": 96.91
+    },
+    {
+      "word": "hundred",
+      "start": 97.026,
+      "end": 97.328
+    },
+    {
+      "word": "kilometres",
+      "start": 97.363,
+      "end": 97.85
+    },
+    {
+      "word": "west,",
+      "start": 97.908,
+      "end": 98.373
+    },
+    {
+      "word": "and",
+      "start": 98.756,
+      "end": 98.883
+    },
+    {
+      "word": "the",
+      "start": 98.93,
+      "end": 99.0
+    },
+    {
+      "word": "base",
+      "start": 99.046,
+      "end": 99.29
+    },
+    {
+      "word": "of",
+      "start": 99.325,
+      "end": 99.371
+    },
+    {
+      "word": "the",
+      "start": 99.406,
+      "end": 99.476
+    },
+    {
+      "word": "active",
+      "start": 99.557,
+      "end": 99.882
+    },
+    {
+      "word": "cone",
+      "start": 99.917,
+      "end": 100.184
+    },
+    {
+      "word": "widening",
+      "start": 100.242,
+      "end": 100.671
+    },
+    {
+      "word": "from",
+      "start": 100.729,
+      "end": 100.869
+    },
+    {
+      "word": "five",
+      "start": 100.95,
+      "end": 101.217
+    },
+    {
+      "word": "hundred",
+      "start": 101.24,
+      "end": 101.449
+    },
+    {
+      "word": "metres",
+      "start": 101.495,
+      "end": 101.774
+    },
+    {
+      "word": "to",
+      "start": 101.821,
+      "end": 101.89
+    },
+    {
+      "word": "seventeen",
+      "start": 101.983,
+      "end": 102.482
+    },
+    {
+      "word": "hundred.",
+      "start": 102.54,
+      "end": 102.993
+    },
+    {
+      "word": "Then,",
+      "start": 103.69,
+      "end": 104.061
+    },
+    {
+      "word": "on",
+      "start": 104.108,
+      "end": 104.224
+    },
+    {
+      "word": "the",
+      "start": 104.259,
+      "end": 104.328
+    },
+    {
+      "word": "fourteenth",
+      "start": 104.375,
+      "end": 104.816
+    },
+    {
+      "word": "of",
+      "start": 104.851,
+      "end": 104.897
+    },
+    {
+      "word": "January,",
+      "start": 104.955,
+      "end": 105.617
+    },
+    {
+      "word": "explosions",
+      "start": 105.791,
+      "end": 106.43
+    },
+    {
+      "word": "took",
+      "start": 106.476,
+      "end": 106.639
+    },
+    {
+      "word": "most",
+      "start": 106.708,
+      "end": 106.906
+    },
+    {
+      "word": "of",
+      "start": 106.941,
+      "end": 106.987
+    },
+    {
+      "word": "it",
+      "start": 107.022,
+      "end": 107.08
+    },
+    {
+      "word": "away.",
+      "start": 107.103,
+      "end": 107.626
+    },
+    {
+      "word": "On",
+      "start": 108.322,
+      "end": 108.45
+    },
+    {
+      "word": "the",
+      "start": 108.485,
+      "end": 108.554
+    },
+    {
+      "word": "fifteenth,",
+      "start": 108.601,
+      "end": 109.204
+    },
+    {
+      "word": "they",
+      "start": 109.321,
+      "end": 109.46
+    },
+    {
+      "word": "took",
+      "start": 109.506,
+      "end": 109.657
+    },
+    {
+      "word": "the",
+      "start": 109.692,
+      "end": 109.762
+    },
+    {
+      "word": "rest.",
+      "start": 109.82,
+      "end": 110.296
+    },
+    {
+      "word": "What",
+      "start": 111.248,
+      "end": 111.457
+    },
+    {
+      "word": "made",
+      "start": 111.526,
+      "end": 111.735
+    },
+    {
+      "word": "this",
+      "start": 111.77,
+      "end": 111.91
+    },
+    {
+      "word": "volcano",
+      "start": 111.979,
+      "end": 112.42
+    },
+    {
+      "word": "different",
+      "start": 112.537,
+      "end": 112.908
+    },
+    {
+      "word": "was",
+      "start": 112.955,
+      "end": 113.082
+    },
+    {
+      "word": "not",
+      "start": 113.152,
+      "end": 113.303
+    },
+    {
+      "word": "what",
+      "start": 113.338,
+      "end": 113.465
+    },
+    {
+      "word": "stood",
+      "start": 113.512,
+      "end": 113.721
+    },
+    {
+      "word": "above",
+      "start": 113.744,
+      "end": 113.953
+    },
+    {
+      "word": "the",
+      "start": 113.976,
+      "end": 114.046
+    },
+    {
+      "word": "water.",
+      "start": 114.092,
+      "end": 114.568
+    },
+    {
+      "word": "Hunga's",
+      "start": 115.172,
+      "end": 115.544
+    },
+    {
+      "word": "caldera",
+      "start": 115.59,
+      "end": 115.996
+    },
+    {
+      "word": "floor",
+      "start": 116.066,
+      "end": 116.345
+    },
+    {
+      "word": "sat",
+      "start": 116.414,
+      "end": 116.589
+    },
+    {
+      "word": "about",
+      "start": 116.635,
+      "end": 116.844
+    },
+    {
+      "word": "one",
+      "start": 116.914,
+      "end": 117.111
+    },
+    {
+      "word": "hundred",
+      "start": 117.146,
+      "end": 117.366
+    },
+    {
+      "word": "fifty",
+      "start": 117.424,
+      "end": 117.691
+    },
+    {
+      "word": "metres",
+      "start": 117.761,
+      "end": 118.028
+    },
+    {
+      "word": "below",
+      "start": 118.098,
+      "end": 118.318
+    },
+    {
+      "word": "the",
+      "start": 118.365,
+      "end": 118.435
+    },
+    {
+      "word": "sea",
+      "start": 118.493,
+      "end": 118.655
+    },
+    {
+      "word": "surface,",
+      "start": 118.702,
+      "end": 119.236
+    },
+    {
+      "word": "roughly",
+      "start": 119.561,
+      "end": 119.863
+    },
+    {
+      "word": "the",
+      "start": 119.909,
+      "end": 119.979
+    },
+    {
+      "word": "height",
+      "start": 120.025,
+      "end": 120.234
+    },
+    {
+      "word": "of",
+      "start": 120.281,
+      "end": 120.339
+    },
+    {
+      "word": "a",
+      "start": 120.385,
+      "end": 120.408
+    },
+    {
+      "word": "forty-storey",
+      "start": 120.49,
+      "end": 121.035
+    },
+    {
+      "word": "building.",
+      "start": 121.093,
+      "end": 121.558
+    },
+    {
+      "word": "And",
+      "start": 122.254,
+      "end": 122.405
+    },
+    {
+      "word": "according",
+      "start": 122.452,
+      "end": 122.823
+    },
+    {
+      "word": "to",
+      "start": 122.87,
+      "end": 122.928
+    },
+    {
+      "word": "NASA's",
+      "start": 123.009,
+      "end": 123.45
+    },
+    {
+      "word": "Jet",
+      "start": 123.531,
+      "end": 123.74
+    },
+    {
+      "word": "Propulsion",
+      "start": 123.787,
+      "end": 124.263
+    },
+    {
+      "word": "Laboratory,",
+      "start": 124.321,
+      "end": 125.006
+    },
+    {
+      "word": "citing",
+      "start": 125.25,
+      "end": 125.598
+    },
+    {
+      "word": "Mill\u00e1n",
+      "start": 125.644,
+      "end": 126.109
+    },
+    {
+      "word": "and",
+      "start": 126.225,
+      "end": 126.422
+    },
+    {
+      "word": "colleagues",
+      "start": 126.503,
+      "end": 126.921
+    },
+    {
+      "word": "in",
+      "start": 126.968,
+      "end": 127.038
+    },
+    {
+      "word": "Geophysical",
+      "start": 127.119,
+      "end": 127.804
+    },
+    {
+      "word": "Research",
+      "start": 127.873,
+      "end": 128.222
+    },
+    {
+      "word": "Letters,",
+      "start": 128.28,
+      "end": 128.779
+    },
+    {
+      "word": "that",
+      "start": 129.104,
+      "end": 129.313
+    },
+    {
+      "word": "is",
+      "start": 129.359,
+      "end": 129.441
+    },
+    {
+      "word": "just",
+      "start": 129.51,
+      "end": 129.731
+    },
+    {
+      "word": "the",
+      "start": 129.777,
+      "end": 129.847
+    },
+    {
+      "word": "right",
+      "start": 129.905,
+      "end": 130.079
+    },
+    {
+      "word": "depth.",
+      "start": 130.126,
+      "end": 130.532
+    },
+    {
+      "word": "Any",
+      "start": 131.345,
+      "end": 131.612
+    },
+    {
+      "word": "shallower,",
+      "start": 131.693,
+      "end": 132.413
+    },
+    {
+      "word": "and",
+      "start": 132.657,
+      "end": 132.796
+    },
+    {
+      "word": "there",
+      "start": 132.842,
+      "end": 132.993
+    },
+    {
+      "word": "would",
+      "start": 133.028,
+      "end": 133.225
+    },
+    {
+      "word": "not",
+      "start": 133.272,
+      "end": 133.388
+    },
+    {
+      "word": "have",
+      "start": 133.423,
+      "end": 133.516
+    },
+    {
+      "word": "been",
+      "start": 133.539,
+      "end": 133.643
+    },
+    {
+      "word": "enough",
+      "start": 133.678,
+      "end": 133.864
+    },
+    {
+      "word": "seawater",
+      "start": 133.922,
+      "end": 134.386
+    },
+    {
+      "word": "superheated",
+      "start": 134.456,
+      "end": 134.967
+    },
+    {
+      "word": "by",
+      "start": 135.002,
+      "end": 135.095
+    },
+    {
+      "word": "erupting",
+      "start": 135.164,
+      "end": 135.547
+    },
+    {
+      "word": "magma",
+      "start": 135.617,
+      "end": 136.081
+    },
+    {
+      "word": "to",
+      "start": 136.36,
+      "end": 136.476
+    },
+    {
+      "word": "account",
+      "start": 136.557,
+      "end": 136.848
+    },
+    {
+      "word": "for",
+      "start": 136.894,
+      "end": 136.987
+    },
+    {
+      "word": "what",
+      "start": 137.022,
+      "end": 137.15
+    },
+    {
+      "word": "the",
+      "start": 137.184,
+      "end": 137.254
+    },
+    {
+      "word": "satellites",
+      "start": 137.289,
+      "end": 137.776
+    },
+    {
+      "word": "later",
+      "start": 137.846,
+      "end": 138.078
+    },
+    {
+      "word": "measured.",
+      "start": 138.125,
+      "end": 138.589
+    },
+    {
+      "word": "Any",
+      "start": 139.402,
+      "end": 139.669
+    },
+    {
+      "word": "deeper,",
+      "start": 139.739,
+      "end": 140.249
+    },
+    {
+      "word": "and",
+      "start": 140.458,
+      "end": 140.598
+    },
+    {
+      "word": "the",
+      "start": 140.633,
+      "end": 140.702
+    },
+    {
+      "word": "pressure",
+      "start": 140.76,
+      "end": 141.132
+    },
+    {
+      "word": "of",
+      "start": 141.167,
+      "end": 141.225
+    },
+    {
+      "word": "the",
+      "start": 141.259,
+      "end": 141.329
+    },
+    {
+      "word": "ocean",
+      "start": 141.399,
+      "end": 141.712
+    },
+    {
+      "word": "would",
+      "start": 141.77,
+      "end": 141.898
+    },
+    {
+      "word": "have",
+      "start": 141.921,
+      "end": 142.026
+    },
+    {
+      "word": "muted",
+      "start": 142.084,
+      "end": 142.362
+    },
+    {
+      "word": "the",
+      "start": 142.385,
+      "end": 142.455
+    },
+    {
+      "word": "eruption.",
+      "start": 142.502,
+      "end": 143.128
+    },
+    {
+      "word": "One",
+      "start": 143.941,
+      "end": 144.197
+    },
+    {
+      "word": "caveat",
+      "start": 144.243,
+      "end": 144.696
+    },
+    {
+      "word": "here,",
+      "start": 144.742,
+      "end": 145.056
+    },
+    {
+      "word": "and",
+      "start": 145.439,
+      "end": 145.613
+    },
+    {
+      "word": "it",
+      "start": 145.671,
+      "end": 145.729
+    },
+    {
+      "word": "is",
+      "start": 145.776,
+      "end": 145.868
+    },
+    {
+      "word": "a",
+      "start": 145.926,
+      "end": 145.95
+    },
+    {
+      "word": "live",
+      "start": 145.996,
+      "end": 146.217
+    },
+    {
+      "word": "one.",
+      "start": 146.263,
+      "end": 146.588
+    },
+    {
+      "word": "The",
+      "start": 147.285,
+      "end": 147.401
+    },
+    {
+      "word": "standard",
+      "start": 147.459,
+      "end": 147.796
+    },
+    {
+      "word": "explanation",
+      "start": 147.842,
+      "end": 148.353
+    },
+    {
+      "word": "for",
+      "start": 148.411,
+      "end": 148.539
+    },
+    {
+      "word": "an",
+      "start": 148.574,
+      "end": 148.62
+    },
+    {
+      "word": "eruption",
+      "start": 148.655,
+      "end": 149.015
+    },
+    {
+      "word": "like",
+      "start": 149.061,
+      "end": 149.212
+    },
+    {
+      "word": "this",
+      "start": 149.247,
+      "end": 149.444
+    },
+    {
+      "word": "is",
+      "start": 149.56,
+      "end": 149.758
+    },
+    {
+      "word": "Surtseyan:",
+      "start": 149.885,
+      "end": 150.698
+    },
+    {
+      "word": "magma",
+      "start": 151.395,
+      "end": 151.79
+    },
+    {
+      "word": "meeting",
+      "start": 151.848,
+      "end": 152.091
+    },
+    {
+      "word": "seawater",
+      "start": 152.161,
+      "end": 152.625
+    },
+    {
+      "word": "directly,",
+      "start": 152.683,
+      "end": 153.403
+    },
+    {
+      "word": "fuel",
+      "start": 153.728,
+      "end": 154.088
+    },
+    {
+      "word": "and",
+      "start": 154.204,
+      "end": 154.367
+    },
+    {
+      "word": "coolant.",
+      "start": 154.437,
+      "end": 154.959
+    },
+    {
+      "word": "But",
+      "start": 155.656,
+      "end": 155.83
+    },
+    {
+      "word": "Henley",
+      "start": 155.888,
+      "end": 156.213
+    },
+    {
+      "word": "and",
+      "start": 156.248,
+      "end": 156.317
+    },
+    {
+      "word": "colleagues,",
+      "start": 156.375,
+      "end": 157.072
+    },
+    {
+      "word": "writing",
+      "start": 157.223,
+      "end": 157.548
+    },
+    {
+      "word": "in",
+      "start": 157.583,
+      "end": 157.629
+    },
+    {
+      "word": "the",
+      "start": 157.664,
+      "end": 157.734
+    },
+    {
+      "word": "Journal",
+      "start": 157.792,
+      "end": 158.059
+    },
+    {
+      "word": "of",
+      "start": 158.117,
+      "end": 158.163
+    },
+    {
+      "word": "Volcanology",
+      "start": 158.221,
+      "end": 158.883
+    },
+    {
+      "word": "and",
+      "start": 158.941,
+      "end": 159.011
+    },
+    {
+      "word": "Geothermal",
+      "start": 159.092,
+      "end": 159.673
+    },
+    {
+      "word": "Research",
+      "start": 159.731,
+      "end": 160.126
+    },
+    {
+      "word": "in",
+      "start": 160.172,
+      "end": 160.23
+    },
+    {
+      "word": "twenty",
+      "start": 160.288,
+      "end": 160.52
+    },
+    {
+      "word": "twenty-four,",
+      "start": 160.555,
+      "end": 161.252
+    },
+    {
+      "word": "argue",
+      "start": 161.53,
+      "end": 161.867
+    },
+    {
+      "word": "the",
+      "start": 161.89,
+      "end": 161.96
+    },
+    {
+      "word": "satellite",
+      "start": 162.006,
+      "end": 162.448
+    },
+    {
+      "word": "imagery",
+      "start": 162.494,
+      "end": 162.831
+    },
+    {
+      "word": "does",
+      "start": 162.889,
+      "end": 163.04
+    },
+    {
+      "word": "not",
+      "start": 163.098,
+      "end": 163.26
+    },
+    {
+      "word": "support",
+      "start": 163.307,
+      "end": 163.643
+    },
+    {
+      "word": "that.",
+      "start": 163.678,
+      "end": 164.026
+    },
+    {
+      "word": "They",
+      "start": 164.723,
+      "end": 164.886
+    },
+    {
+      "word": "propose",
+      "start": 164.932,
+      "end": 165.292
+    },
+    {
+      "word": "something",
+      "start": 165.315,
+      "end": 165.594
+    },
+    {
+      "word": "else",
+      "start": 165.652,
+      "end": 165.977
+    },
+    {
+      "word": "\u2014",
+      "start": 166.093,
+      "end": 166.139
+    },
+    {
+      "word": "gas",
+      "start": 166.65,
+      "end": 167.022
+    },
+    {
+      "word": "sealing",
+      "start": 167.138,
+      "end": 167.475
+    },
+    {
+      "word": "itself",
+      "start": 167.521,
+      "end": 167.823
+    },
+    {
+      "word": "off",
+      "start": 167.893,
+      "end": 168.032
+    },
+    {
+      "word": "beneath",
+      "start": 168.09,
+      "end": 168.334
+    },
+    {
+      "word": "the",
+      "start": 168.369,
+      "end": 168.438
+    },
+    {
+      "word": "volcano,",
+      "start": 168.473,
+      "end": 169.158
+    },
+    {
+      "word": "pressure",
+      "start": 169.332,
+      "end": 169.692
+    },
+    {
+      "word": "building,",
+      "start": 169.715,
+      "end": 170.203
+    },
+    {
+      "word": "then",
+      "start": 170.412,
+      "end": 170.633
+    },
+    {
+      "word": "hydraulic",
+      "start": 170.714,
+      "end": 171.143
+    },
+    {
+      "word": "fracture.",
+      "start": 171.19,
+      "end": 171.747
+    },
+    {
+      "word": "That",
+      "start": 172.444,
+      "end": 172.653
+    },
+    {
+      "word": "argument",
+      "start": 172.711,
+      "end": 173.094
+    },
+    {
+      "word": "is",
+      "start": 173.152,
+      "end": 173.233
+    },
+    {
+      "word": "still",
+      "start": 173.268,
+      "end": 173.477
+    },
+    {
+      "word": "open.",
+      "start": 173.535,
+      "end": 173.988
+    },
+    {
+      "word": "Which",
+      "start": 174.313,
+      "end": 174.534
+    },
+    {
+      "word": "leaves",
+      "start": 174.603,
+      "end": 174.836
+    },
+    {
+      "word": "the",
+      "start": 174.87,
+      "end": 174.94
+    },
+    {
+      "word": "question",
+      "start": 174.975,
+      "end": 175.335
+    },
+    {
+      "word": "everything",
+      "start": 175.416,
+      "end": 175.799
+    },
+    {
+      "word": "else",
+      "start": 175.857,
+      "end": 176.043
+    },
+    {
+      "word": "hangs",
+      "start": 176.078,
+      "end": 176.31
+    },
+    {
+      "word": "on.",
+      "start": 176.38,
+      "end": 176.763
+    },
+    {
+      "word": "How",
+      "start": 177.366,
+      "end": 177.529
+    },
+    {
+      "word": "does",
+      "start": 177.587,
+      "end": 177.726
+    },
+    {
+      "word": "a",
+      "start": 177.773,
+      "end": 177.796
+    },
+    {
+      "word": "vent",
+      "start": 177.866,
+      "end": 178.086
+    },
+    {
+      "word": "under",
+      "start": 178.156,
+      "end": 178.342
+    },
+    {
+      "word": "a",
+      "start": 178.411,
+      "end": 178.458
+    },
+    {
+      "word": "hundred",
+      "start": 178.574,
+      "end": 178.853
+    },
+    {
+      "word": "and",
+      "start": 178.876,
+      "end": 178.945
+    },
+    {
+      "word": "fifty",
+      "start": 179.004,
+      "end": 179.271
+    },
+    {
+      "word": "metres",
+      "start": 179.329,
+      "end": 179.596
+    },
+    {
+      "word": "of",
+      "start": 179.642,
+      "end": 179.7
+    },
+    {
+      "word": "ocean",
+      "start": 179.793,
+      "end": 180.118
+    },
+    {
+      "word": "send",
+      "start": 180.199,
+      "end": 180.408
+    },
+    {
+      "word": "anything",
+      "start": 180.501,
+      "end": 180.977
+    },
+    {
+      "word": "into",
+      "start": 181.047,
+      "end": 181.209
+    },
+    {
+      "word": "the",
+      "start": 181.267,
+      "end": 181.337
+    },
+    {
+      "word": "mesosphere",
+      "start": 181.395,
+      "end": 181.999
+    },
+    {
+      "word": "at",
+      "start": 182.034,
+      "end": 182.092
+    },
+    {
+      "word": "all?",
+      "start": 182.138,
+      "end": 182.533
+    },
+    {
+      "word": "Two",
+      "start": 183.23,
+      "end": 183.439
+    },
+    {
+      "word": "weather",
+      "start": 183.497,
+      "end": 183.74
+    },
+    {
+      "word": "satellites",
+      "start": 183.787,
+      "end": 184.228
+    },
+    {
+      "word": "were",
+      "start": 184.263,
+      "end": 184.391
+    },
+    {
+      "word": "waiting",
+      "start": 184.425,
+      "end": 184.658
+    },
+    {
+      "word": "for",
+      "start": 184.704,
+      "end": 184.855
+    },
+    {
+      "word": "it.",
+      "start": 184.913,
+      "end": 185.145
+    },
+    {
+      "word": "One",
+      "start": 185.842,
+      "end": 186.039
+    },
+    {
+      "word": "American,",
+      "start": 186.062,
+      "end": 186.712
+    },
+    {
+      "word": "one",
+      "start": 186.887,
+      "end": 187.107
+    },
+    {
+      "word": "Japanese,",
+      "start": 187.165,
+      "end": 187.885
+    },
+    {
+      "word": "parked",
+      "start": 188.094,
+      "end": 188.407
+    },
+    {
+      "word": "in",
+      "start": 188.442,
+      "end": 188.5
+    },
+    {
+      "word": "geostationary",
+      "start": 188.582,
+      "end": 189.394
+    },
+    {
+      "word": "orbit",
+      "start": 189.464,
+      "end": 189.743
+    },
+    {
+      "word": "on",
+      "start": 189.789,
+      "end": 189.882
+    },
+    {
+      "word": "opposite",
+      "start": 189.998,
+      "end": 190.428
+    },
+    {
+      "word": "sides",
+      "start": 190.462,
+      "end": 190.741
+    },
+    {
+      "word": "of",
+      "start": 190.776,
+      "end": 190.822
+    },
+    {
+      "word": "the",
+      "start": 190.857,
+      "end": 190.927
+    },
+    {
+      "word": "Pacific,",
+      "start": 190.962,
+      "end": 191.519
+    },
+    {
+      "word": "both",
+      "start": 191.902,
+      "end": 192.157
+    },
+    {
+      "word": "carrying",
+      "start": 192.216,
+      "end": 192.587
+    },
+    {
+      "word": "near-identical",
+      "start": 192.668,
+      "end": 193.504
+    },
+    {
+      "word": "infrared",
+      "start": 193.62,
+      "end": 194.108
+    },
+    {
+      "word": "imagers.",
+      "start": 194.166,
+      "end": 194.793
+    },
+    {
+      "word": "Every",
+      "start": 195.49,
+      "end": 195.768
+    },
+    {
+      "word": "ten",
+      "start": 195.826,
+      "end": 196.035
+    },
+    {
+      "word": "minutes",
+      "start": 196.093,
+      "end": 196.372
+    },
+    {
+      "word": "they",
+      "start": 196.407,
+      "end": 196.523
+    },
+    {
+      "word": "watched",
+      "start": 196.569,
+      "end": 196.825
+    },
+    {
+      "word": "the",
+      "start": 196.848,
+      "end": 196.918
+    },
+    {
+      "word": "same",
+      "start": 196.976,
+      "end": 197.231
+    },
+    {
+      "word": "patch",
+      "start": 197.277,
+      "end": 197.51
+    },
+    {
+      "word": "of",
+      "start": 197.544,
+      "end": 197.591
+    },
+    {
+      "word": "ocean",
+      "start": 197.649,
+      "end": 197.893
+    },
+    {
+      "word": "from",
+      "start": 197.939,
+      "end": 198.079
+    },
+    {
+      "word": "two",
+      "start": 198.16,
+      "end": 198.334
+    },
+    {
+      "word": "different",
+      "start": 198.392,
+      "end": 198.682
+    },
+    {
+      "word": "angles.",
+      "start": 198.729,
+      "end": 199.24
+    },
+    {
+      "word": "What",
+      "start": 199.936,
+      "end": 200.122
+    },
+    {
+      "word": "they",
+      "start": 200.157,
+      "end": 200.273
+    },
+    {
+      "word": "recorded",
+      "start": 200.342,
+      "end": 200.784
+    },
+    {
+      "word": "was",
+      "start": 200.818,
+      "end": 200.935
+    },
+    {
+      "word": "a",
+      "start": 200.981,
+      "end": 201.016
+    },
+    {
+      "word": "column",
+      "start": 201.074,
+      "end": 201.515
+    },
+    {
+      "word": "that",
+      "start": 201.689,
+      "end": 201.863
+    },
+    {
+      "word": "rose",
+      "start": 201.933,
+      "end": 202.223
+    },
+    {
+      "word": "off",
+      "start": 202.27,
+      "end": 202.409
+    },
+    {
+      "word": "the",
+      "start": 202.444,
+      "end": 202.514
+    },
+    {
+      "word": "sea",
+      "start": 202.56,
+      "end": 202.734
+    },
+    {
+      "word": "surface",
+      "start": 202.781,
+      "end": 203.14
+    },
+    {
+      "word": "and",
+      "start": 203.175,
+      "end": 203.257
+    },
+    {
+      "word": "kept",
+      "start": 203.326,
+      "end": 203.547
+    },
+    {
+      "word": "rising,",
+      "start": 203.628,
+      "end": 204.209
+    },
+    {
+      "word": "through",
+      "start": 204.452,
+      "end": 204.685
+    },
+    {
+      "word": "the",
+      "start": 204.719,
+      "end": 204.789
+    },
+    {
+      "word": "troposphere",
+      "start": 204.812,
+      "end": 205.37
+    },
+    {
+      "word": "where",
+      "start": 205.393,
+      "end": 205.521
+    },
+    {
+      "word": "your",
+      "start": 205.555,
+      "end": 205.66
+    },
+    {
+      "word": "weather",
+      "start": 205.706,
+      "end": 205.927
+    },
+    {
+      "word": "happens,",
+      "start": 205.985,
+      "end": 206.542
+    },
+    {
+      "word": "through",
+      "start": 206.716,
+      "end": 206.914
+    },
+    {
+      "word": "the",
+      "start": 206.949,
+      "end": 207.018
+    },
+    {
+      "word": "stratosphere",
+      "start": 207.041,
+      "end": 207.657
+    },
+    {
+      "word": "where",
+      "start": 207.692,
+      "end": 207.843
+    },
+    {
+      "word": "the",
+      "start": 207.866,
+      "end": 207.935
+    },
+    {
+      "word": "ozone",
+      "start": 208.005,
+      "end": 208.377
+    },
+    {
+      "word": "layer",
+      "start": 208.411,
+      "end": 208.632
+    },
+    {
+      "word": "sits,",
+      "start": 208.702,
+      "end": 209.178
+    },
+    {
+      "word": "and",
+      "start": 209.421,
+      "end": 209.572
+    },
+    {
+      "word": "into",
+      "start": 209.654,
+      "end": 209.863
+    },
+    {
+      "word": "the",
+      "start": 209.921,
+      "end": 209.99
+    },
+    {
+      "word": "mesosphere.",
+      "start": 210.037,
+      "end": 210.745
+    },
+    {
+      "word": "Here's",
+      "start": 211.442,
+      "end": 211.697
+    },
+    {
+      "word": "how",
+      "start": 211.732,
+      "end": 211.836
+    },
+    {
+      "word": "we",
+      "start": 211.883,
+      "end": 211.964
+    },
+    {
+      "word": "know:",
+      "start": 212.011,
+      "end": 212.44
+    },
+    {
+      "word": "normally",
+      "start": 212.881,
+      "end": 213.276
+    },
+    {
+      "word": "you",
+      "start": 213.346,
+      "end": 213.427
+    },
+    {
+      "word": "measure",
+      "start": 213.497,
+      "end": 213.764
+    },
+    {
+      "word": "a",
+      "start": 213.799,
+      "end": 213.834
+    },
+    {
+      "word": "cloud's",
+      "start": 213.88,
+      "end": 214.205
+    },
+    {
+      "word": "height",
+      "start": 214.252,
+      "end": 214.461
+    },
+    {
+      "word": "by",
+      "start": 214.53,
+      "end": 214.658
+    },
+    {
+      "word": "its",
+      "start": 214.716,
+      "end": 214.844
+    },
+    {
+      "word": "temperature,",
+      "start": 214.879,
+      "end": 215.459
+    },
+    {
+      "word": "because",
+      "start": 215.703,
+      "end": 215.982
+    },
+    {
+      "word": "air",
+      "start": 216.04,
+      "end": 216.225
+    },
+    {
+      "word": "gets",
+      "start": 216.272,
+      "end": 216.446
+    },
+    {
+      "word": "colder",
+      "start": 216.504,
+      "end": 216.829
+    },
+    {
+      "word": "as",
+      "start": 216.876,
+      "end": 216.934
+    },
+    {
+      "word": "you",
+      "start": 216.98,
+      "end": 217.05
+    },
+    {
+      "word": "climb.",
+      "start": 217.096,
+      "end": 217.561
+    },
+    {
+      "word": "Above",
+      "start": 218.257,
+      "end": 218.594
+    },
+    {
+      "word": "the",
+      "start": 218.617,
+      "end": 218.687
+    },
+    {
+      "word": "troposphere",
+      "start": 218.722,
+      "end": 219.325
+    },
+    {
+      "word": "that",
+      "start": 219.36,
+      "end": 219.476
+    },
+    {
+      "word": "rule",
+      "start": 219.546,
+      "end": 219.824
+    },
+    {
+      "word": "breaks",
+      "start": 219.871,
+      "end": 220.15
+    },
+    {
+      "word": "down.",
+      "start": 220.196,
+      "end": 220.602
+    },
+    {
+      "word": "So",
+      "start": 220.985,
+      "end": 221.218
+    },
+    {
+      "word": "Kristopher",
+      "start": 221.311,
+      "end": 221.798
+    },
+    {
+      "word": "Bedka",
+      "start": 221.891,
+      "end": 222.367
+    },
+    {
+      "word": "and",
+      "start": 222.437,
+      "end": 222.576
+    },
+    {
+      "word": "Konstantin",
+      "start": 222.657,
+      "end": 223.238
+    },
+    {
+      "word": "Khlopenkov",
+      "start": 223.307,
+      "end": 223.934
+    },
+    {
+      "word": "at",
+      "start": 224.178,
+      "end": 224.329
+    },
+    {
+      "word": "NASA's",
+      "start": 224.41,
+      "end": 224.828
+    },
+    {
+      "word": "Langley",
+      "start": 224.91,
+      "end": 225.246
+    },
+    {
+      "word": "Research",
+      "start": 225.316,
+      "end": 225.676
+    },
+    {
+      "word": "Center",
+      "start": 225.711,
+      "end": 226.001
+    },
+    {
+      "word": "did",
+      "start": 226.21,
+      "end": 226.384
+    },
+    {
+      "word": "something",
+      "start": 226.442,
+      "end": 226.755
+    },
+    {
+      "word": "else.",
+      "start": 226.813,
+      "end": 227.208
+    },
+    {
+      "word": "They",
+      "start": 227.719,
+      "end": 227.893
+    },
+    {
+      "word": "matched",
+      "start": 227.963,
+      "end": 228.288
+    },
+    {
+      "word": "simultaneous",
+      "start": 228.404,
+      "end": 229.124
+    },
+    {
+      "word": "images",
+      "start": 229.182,
+      "end": 229.53
+    },
+    {
+      "word": "of",
+      "start": 229.6,
+      "end": 229.681
+    },
+    {
+      "word": "the",
+      "start": 229.728,
+      "end": 229.797
+    },
+    {
+      "word": "same",
+      "start": 229.855,
+      "end": 230.099
+    },
+    {
+      "word": "plume",
+      "start": 230.134,
+      "end": 230.413
+    },
+    {
+      "word": "from",
+      "start": 230.447,
+      "end": 230.587
+    },
+    {
+      "word": "GOES-17",
+      "start": 230.668,
+      "end": 231.469
+    },
+    {
+      "word": "and",
+      "start": 231.852,
+      "end": 232.026
+    },
+    {
+      "word": "Himawari-8,",
+      "start": 232.108,
+      "end": 233.048
+    },
+    {
+      "word": "and",
+      "start": 233.292,
+      "end": 233.431
+    },
+    {
+      "word": "used",
+      "start": 233.512,
+      "end": 233.721
+    },
+    {
+      "word": "geometry",
+      "start": 233.803,
+      "end": 234.464
+    },
+    {
+      "word": "\u2014",
+      "start": 234.639,
+      "end": 234.685
+    },
+    {
+      "word": "stereoscopy,",
+      "start": 234.894,
+      "end": 235.974
+    },
+    {
+      "word": "the",
+      "start": 236.148,
+      "end": 236.241
+    },
+    {
+      "word": "trick",
+      "start": 236.287,
+      "end": 236.485
+    },
+    {
+      "word": "your",
+      "start": 236.531,
+      "end": 236.647
+    },
+    {
+      "word": "two",
+      "start": 236.694,
+      "end": 236.833
+    },
+    {
+      "word": "eyes",
+      "start": 236.914,
+      "end": 237.088
+    },
+    {
+      "word": "use",
+      "start": 237.146,
+      "end": 237.321
+    },
+    {
+      "word": "to",
+      "start": 237.355,
+      "end": 237.402
+    },
+    {
+      "word": "build",
+      "start": 237.46,
+      "end": 237.646
+    },
+    {
+      "word": "depth",
+      "start": 237.704,
+      "end": 237.947
+    },
+    {
+      "word": "\u2014",
+      "start": 238.075,
+      "end": 238.156
+    },
+    {
+      "word": "to",
+      "start": 238.54,
+      "end": 238.644
+    },
+    {
+      "word": "rebuild",
+      "start": 238.737,
+      "end": 239.097
+    },
+    {
+      "word": "the",
+      "start": 239.132,
+      "end": 239.201
+    },
+    {
+      "word": "plume",
+      "start": 239.225,
+      "end": 239.445
+    },
+    {
+      "word": "in",
+      "start": 239.468,
+      "end": 239.526
+    },
+    {
+      "word": "three",
+      "start": 239.561,
+      "end": 239.735
+    },
+    {
+      "word": "dimensions,",
+      "start": 239.77,
+      "end": 240.42
+    },
+    {
+      "word": "then",
+      "start": 240.629,
+      "end": 240.803
+    },
+    {
+      "word": "checked",
+      "start": 240.862,
+      "end": 241.129
+    },
+    {
+      "word": "it",
+      "start": 241.152,
+      "end": 241.21
+    },
+    {
+      "word": "against",
+      "start": 241.233,
+      "end": 241.489
+    },
+    {
+      "word": "the",
+      "start": 241.523,
+      "end": 241.593
+    },
+    {
+      "word": "shadows",
+      "start": 241.628,
+      "end": 242.023
+    },
+    {
+      "word": "the",
+      "start": 242.069,
+      "end": 242.139
+    },
+    {
+      "word": "tallest",
+      "start": 242.185,
+      "end": 242.51
+    },
+    {
+      "word": "parts",
+      "start": 242.557,
+      "end": 242.812
+    },
+    {
+      "word": "cast",
+      "start": 242.87,
+      "end": 243.172
+    },
+    {
+      "word": "onto",
+      "start": 243.219,
+      "end": 243.346
+    },
+    {
+      "word": "the",
+      "start": 243.381,
+      "end": 243.451
+    },
+    {
+      "word": "ash",
+      "start": 243.52,
+      "end": 243.729
+    },
+    {
+      "word": "below.",
+      "start": 243.776,
+      "end": 244.252
+    },
+    {
+      "word": "Their",
+      "start": 244.948,
+      "end": 245.157
+    },
+    {
+      "word": "answer",
+      "start": 245.215,
+      "end": 245.541
+    },
+    {
+      "word": "was",
+      "start": 245.599,
+      "end": 245.784
+    },
+    {
+      "word": "fifty-eight",
+      "start": 245.958,
+      "end": 246.446
+    },
+    {
+      "word": "kilometres,",
+      "start": 246.469,
+      "end": 247.201
+    },
+    {
+      "word": "reached",
+      "start": 247.584,
+      "end": 247.851
+    },
+    {
+      "word": "in",
+      "start": 247.886,
+      "end": 247.955
+    },
+    {
+      "word": "roughly",
+      "start": 248.025,
+      "end": 248.327
+    },
+    {
+      "word": "thirty",
+      "start": 248.385,
+      "end": 248.617
+    },
+    {
+      "word": "minutes,",
+      "start": 248.675,
+      "end": 249.174
+    },
+    {
+      "word": "an",
+      "start": 249.349,
+      "end": 249.476
+    },
+    {
+      "word": "ascent",
+      "start": 249.523,
+      "end": 249.825
+    },
+    {
+      "word": "of",
+      "start": 249.871,
+      "end": 249.929
+    },
+    {
+      "word": "at",
+      "start": 249.976,
+      "end": 250.034
+    },
+    {
+      "word": "least",
+      "start": 250.092,
+      "end": 250.289
+    },
+    {
+      "word": "forty",
+      "start": 250.359,
+      "end": 250.637
+    },
+    {
+      "word": "metres",
+      "start": 250.695,
+      "end": 250.951
+    },
+    {
+      "word": "per",
+      "start": 250.997,
+      "end": 251.113
+    },
+    {
+      "word": "second.",
+      "start": 251.16,
+      "end": 251.624
+    },
+    {
+      "word": "A",
+      "start": 252.321,
+      "end": 252.402
+    },
+    {
+      "word": "second",
+      "start": 252.518,
+      "end": 252.82
+    },
+    {
+      "word": "pulse",
+      "start": 252.89,
+      "end": 253.168
+    },
+    {
+      "word": "then",
+      "start": 253.203,
+      "end": 253.354
+    },
+    {
+      "word": "rose",
+      "start": 253.435,
+      "end": 253.679
+    },
+    {
+      "word": "above",
+      "start": 253.714,
+      "end": 253.946
+    },
+    {
+      "word": "fifty",
+      "start": 253.993,
+      "end": 254.271
+    },
+    {
+      "word": "kilometres",
+      "start": 254.318,
+      "end": 254.864
+    },
+    {
+      "word": "and",
+      "start": 255.073,
+      "end": 255.235
+    },
+    {
+      "word": "separated",
+      "start": 255.305,
+      "end": 255.769
+    },
+    {
+      "word": "into",
+      "start": 255.816,
+      "end": 255.955
+    },
+    {
+      "word": "three",
+      "start": 256.025,
+      "end": 256.268
+    },
+    {
+      "word": "pieces.",
+      "start": 256.303,
+      "end": 256.884
+    },
+    {
+      "word": "NASA",
+      "start": 257.487,
+      "end": 257.871
+    },
+    {
+      "word": "Earth",
+      "start": 257.94,
+      "end": 258.126
+    },
+    {
+      "word": "Observatory",
+      "start": 258.172,
+      "end": 258.776
+    },
+    {
+      "word": "calls",
+      "start": 258.834,
+      "end": 259.078
+    },
+    {
+      "word": "it",
+      "start": 259.113,
+      "end": 259.182
+    },
+    {
+      "word": "likely",
+      "start": 259.229,
+      "end": 259.542
+    },
+    {
+      "word": "the",
+      "start": 259.589,
+      "end": 259.658
+    },
+    {
+      "word": "highest",
+      "start": 259.74,
+      "end": 260.1
+    },
+    {
+      "word": "plume",
+      "start": 260.169,
+      "end": 260.448
+    },
+    {
+      "word": "in",
+      "start": 260.471,
+      "end": 260.518
+    },
+    {
+      "word": "the",
+      "start": 260.552,
+      "end": 260.622
+    },
+    {
+      "word": "satellite",
+      "start": 260.657,
+      "end": 261.086
+    },
+    {
+      "word": "record.",
+      "start": 261.121,
+      "end": 261.574
+    },
+    {
+      "word": "When",
+      "start": 262.271,
+      "end": 262.468
+    },
+    {
+      "word": "Mount",
+      "start": 262.538,
+      "end": 262.747
+    },
+    {
+      "word": "Pinatubo",
+      "start": 262.793,
+      "end": 263.42
+    },
+    {
+      "word": "erupted",
+      "start": 263.699,
+      "end": 264.117
+    },
+    {
+      "word": "in",
+      "start": 264.152,
+      "end": 264.198
+    },
+    {
+      "word": "the",
+      "start": 264.233,
+      "end": 264.302
+    },
+    {
+      "word": "Philippines",
+      "start": 264.326,
+      "end": 264.813
+    },
+    {
+      "word": "in",
+      "start": 264.86,
+      "end": 264.929
+    },
+    {
+      "word": "nineteen",
+      "start": 264.999,
+      "end": 265.347
+    },
+    {
+      "word": "ninety-one,",
+      "start": 265.382,
+      "end": 266.056
+    },
+    {
+      "word": "its",
+      "start": 266.334,
+      "end": 266.508
+    },
+    {
+      "word": "plume",
+      "start": 266.566,
+      "end": 266.833
+    },
+    {
+      "word": "reached",
+      "start": 266.868,
+      "end": 267.112
+    },
+    {
+      "word": "thirty-five",
+      "start": 267.182,
+      "end": 267.751
+    },
+    {
+      "word": "kilometres.",
+      "start": 267.786,
+      "end": 268.505
+    },
+    {
+      "word": "This",
+      "start": 269.202,
+      "end": 269.388
+    },
+    {
+      "word": "was",
+      "start": 269.446,
+      "end": 269.562
+    },
+    {
+      "word": "one",
+      "start": 269.655,
+      "end": 269.864
+    },
+    {
+      "word": "and",
+      "start": 269.887,
+      "end": 269.957
+    },
+    {
+      "word": "a",
+      "start": 269.992,
+      "end": 270.026
+    },
+    {
+      "word": "half",
+      "start": 270.096,
+      "end": 270.282
+    },
+    {
+      "word": "times",
+      "start": 270.328,
+      "end": 270.595
+    },
+    {
+      "word": "higher.",
+      "start": 270.653,
+      "end": 271.129
+    },
+    {
+      "word": "Not",
+      "start": 271.826,
+      "end": 272.035
+    },
+    {
+      "word": "everyone",
+      "start": 272.081,
+      "end": 272.418
+    },
+    {
+      "word": "lands",
+      "start": 272.464,
+      "end": 272.708
+    },
+    {
+      "word": "on",
+      "start": 272.755,
+      "end": 272.848
+    },
+    {
+      "word": "fifty-eight.",
+      "start": 272.917,
+      "end": 273.625
+    },
+    {
+      "word": "Carr",
+      "start": 274.322,
+      "end": 274.647
+    },
+    {
+      "word": "and",
+      "start": 274.694,
+      "end": 274.763
+    },
+    {
+      "word": "colleagues,",
+      "start": 274.833,
+      "end": 275.506
+    },
+    {
+      "word": "in",
+      "start": 275.634,
+      "end": 275.762
+    },
+    {
+      "word": "Geophysical",
+      "start": 275.843,
+      "end": 276.505
+    },
+    {
+      "word": "Research",
+      "start": 276.563,
+      "end": 276.911
+    },
+    {
+      "word": "Letters,",
+      "start": 276.969,
+      "end": 277.468
+    },
+    {
+      "word": "ran",
+      "start": 277.712,
+      "end": 277.91
+    },
+    {
+      "word": "their",
+      "start": 277.968,
+      "end": 278.119
+    },
+    {
+      "word": "own",
+      "start": 278.188,
+      "end": 278.397
+    },
+    {
+      "word": "stereo",
+      "start": 278.455,
+      "end": 278.815
+    },
+    {
+      "word": "retrieval",
+      "start": 278.873,
+      "end": 279.28
+    },
+    {
+      "word": "on",
+      "start": 279.349,
+      "end": 279.43
+    },
+    {
+      "word": "the",
+      "start": 279.465,
+      "end": 279.535
+    },
+    {
+      "word": "same",
+      "start": 279.605,
+      "end": 279.883
+    },
+    {
+      "word": "satellite",
+      "start": 279.93,
+      "end": 280.348
+    },
+    {
+      "word": "pair",
+      "start": 280.382,
+      "end": 280.603
+    },
+    {
+      "word": "and",
+      "start": 280.754,
+      "end": 280.917
+    },
+    {
+      "word": "put",
+      "start": 280.975,
+      "end": 281.114
+    },
+    {
+      "word": "the",
+      "start": 281.149,
+      "end": 281.218
+    },
+    {
+      "word": "overshooting",
+      "start": 281.3,
+      "end": 281.834
+    },
+    {
+      "word": "top",
+      "start": 281.88,
+      "end": 282.089
+    },
+    {
+      "word": "at",
+      "start": 282.147,
+      "end": 282.252
+    },
+    {
+      "word": "fifty",
+      "start": 282.333,
+      "end": 282.635
+    },
+    {
+      "word": "to",
+      "start": 282.67,
+      "end": 282.716
+    },
+    {
+      "word": "fifty-five",
+      "start": 282.786,
+      "end": 283.297
+    },
+    {
+      "word": "kilometres.",
+      "start": 283.332,
+      "end": 284.075
+    },
+    {
+      "word": "Still",
+      "start": 284.771,
+      "end": 285.038
+    },
+    {
+      "word": "a",
+      "start": 285.085,
+      "end": 285.108
+    },
+    {
+      "word": "record",
+      "start": 285.166,
+      "end": 285.41
+    },
+    {
+      "word": "for",
+      "start": 285.445,
+      "end": 285.514
+    },
+    {
+      "word": "the",
+      "start": 285.549,
+      "end": 285.619
+    },
+    {
+      "word": "satellite",
+      "start": 285.654,
+      "end": 286.072
+    },
+    {
+      "word": "era,",
+      "start": 286.106,
+      "end": 286.513
+    },
+    {
+      "word": "but",
+      "start": 286.757,
+      "end": 286.907
+    },
+    {
+      "word": "a",
+      "start": 286.954,
+      "end": 286.977
+    },
+    {
+      "word": "range",
+      "start": 287.058,
+      "end": 287.418
+    },
+    {
+      "word": "rather",
+      "start": 287.465,
+      "end": 287.674
+    },
+    {
+      "word": "than",
+      "start": 287.709,
+      "end": 287.825
+    },
+    {
+      "word": "one",
+      "start": 287.906,
+      "end": 288.068
+    },
+    {
+      "word": "agreed",
+      "start": 288.092,
+      "end": 288.37
+    },
+    {
+      "word": "number.",
+      "start": 288.405,
+      "end": 288.846
+    },
+    {
+      "word": "Both",
+      "start": 289.659,
+      "end": 289.926
+    },
+    {
+      "word": "teams",
+      "start": 289.984,
+      "end": 290.263
+    },
+    {
+      "word": "measured",
+      "start": 290.332,
+      "end": 290.599
+    },
+    {
+      "word": "the",
+      "start": 290.623,
+      "end": 290.692
+    },
+    {
+      "word": "same",
+      "start": 290.739,
+      "end": 290.936
+    },
+    {
+      "word": "eruption,",
+      "start": 290.971,
+      "end": 291.598
+    },
+    {
+      "word": "and",
+      "start": 291.772,
+      "end": 291.911
+    },
+    {
+      "word": "drew",
+      "start": 291.958,
+      "end": 292.12
+    },
+    {
+      "word": "its",
+      "start": 292.155,
+      "end": 292.271
+    },
+    {
+      "word": "top",
+      "start": 292.306,
+      "end": 292.538
+    },
+    {
+      "word": "in",
+      "start": 292.596,
+      "end": 292.654
+    },
+    {
+      "word": "slightly",
+      "start": 292.724,
+      "end": 293.072
+    },
+    {
+      "word": "different",
+      "start": 293.107,
+      "end": 293.363
+    },
+    {
+      "word": "places.",
+      "start": 293.386,
+      "end": 294.024
+    },
+    {
+      "word": "And",
+      "start": 294.721,
+      "end": 294.86
+    },
+    {
+      "word": "the",
+      "start": 294.907,
+      "end": 294.976
+    },
+    {
+      "word": "height",
+      "start": 295.023,
+      "end": 295.185
+    },
+    {
+      "word": "of",
+      "start": 295.209,
+      "end": 295.255
+    },
+    {
+      "word": "a",
+      "start": 295.301,
+      "end": 295.325
+    },
+    {
+      "word": "plume",
+      "start": 295.371,
+      "end": 295.661
+    },
+    {
+      "word": "is",
+      "start": 295.696,
+      "end": 295.777
+    },
+    {
+      "word": "only",
+      "start": 295.858,
+      "end": 296.079
+    },
+    {
+      "word": "the",
+      "start": 296.125,
+      "end": 296.195
+    },
+    {
+      "word": "part",
+      "start": 296.241,
+      "end": 296.427
+    },
+    {
+      "word": "you",
+      "start": 296.462,
+      "end": 296.532
+    },
+    {
+      "word": "can",
+      "start": 296.578,
+      "end": 296.694
+    },
+    {
+      "word": "see.",
+      "start": 296.752,
+      "end": 297.159
+    },
+    {
+      "word": "Something",
+      "start": 298.273,
+      "end": 298.621
+    },
+    {
+      "word": "else",
+      "start": 298.679,
+      "end": 298.865
+    },
+    {
+      "word": "came",
+      "start": 298.9,
+      "end": 299.074
+    },
+    {
+      "word": "off",
+      "start": 299.109,
+      "end": 299.237
+    },
+    {
+      "word": "that",
+      "start": 299.283,
+      "end": 299.399
+    },
+    {
+      "word": "explosion",
+      "start": 299.446,
+      "end": 299.922
+    },
+    {
+      "word": "that",
+      "start": 299.957,
+      "end": 300.061
+    },
+    {
+      "word": "you",
+      "start": 300.096,
+      "end": 300.177
+    },
+    {
+      "word": "could",
+      "start": 300.258,
+      "end": 300.444
+    },
+    {
+      "word": "not",
+      "start": 300.479,
+      "end": 300.607
+    },
+    {
+      "word": "see",
+      "start": 300.653,
+      "end": 300.804
+    },
+    {
+      "word": "at",
+      "start": 300.839,
+      "end": 300.897
+    },
+    {
+      "word": "all,",
+      "start": 300.932,
+      "end": 301.28
+    },
+    {
+      "word": "and",
+      "start": 301.559,
+      "end": 301.686
+    },
+    {
+      "word": "it",
+      "start": 301.733,
+      "end": 301.791
+    },
+    {
+      "word": "was",
+      "start": 301.826,
+      "end": 301.919
+    },
+    {
+      "word": "already",
+      "start": 301.977,
+      "end": 302.255
+    },
+    {
+      "word": "running",
+      "start": 302.325,
+      "end": 302.569
+    },
+    {
+      "word": "around",
+      "start": 302.615,
+      "end": 302.824
+    },
+    {
+      "word": "the",
+      "start": 302.859,
+      "end": 302.929
+    },
+    {
+      "word": "world.",
+      "start": 302.975,
+      "end": 304.276
+    },
+    {
+      "word": "Within",
+      "start": 304.624,
+      "end": 304.926
+    },
+    {
+      "word": "the",
+      "start": 304.961,
+      "end": 305.03
+    },
+    {
+      "word": "first",
+      "start": 305.077,
+      "end": 305.321
+    },
+    {
+      "word": "few",
+      "start": 305.379,
+      "end": 305.553
+    },
+    {
+      "word": "hours,",
+      "start": 305.599,
+      "end": 305.982
+    },
+    {
+      "word": "barometers",
+      "start": 306.029,
+      "end": 306.598
+    },
+    {
+      "word": "started",
+      "start": 306.633,
+      "end": 306.923
+    },
+    {
+      "word": "moving.",
+      "start": 306.969,
+      "end": 307.434
+    },
+    {
+      "word": "Not",
+      "start": 308.037,
+      "end": 308.235
+    },
+    {
+      "word": "just",
+      "start": 308.293,
+      "end": 308.467
+    },
+    {
+      "word": "near",
+      "start": 308.537,
+      "end": 308.699
+    },
+    {
+      "word": "Tonga",
+      "start": 308.769,
+      "end": 309.256
+    },
+    {
+      "word": "\u2014",
+      "start": 309.407,
+      "end": 309.477
+    },
+    {
+      "word": "everywhere.",
+      "start": 309.651,
+      "end": 310.301
+    },
+    {
+      "word": "Pressure",
+      "start": 310.998,
+      "end": 311.404
+    },
+    {
+      "word": "sensors",
+      "start": 311.439,
+      "end": 311.834
+    },
+    {
+      "word": "around",
+      "start": 311.88,
+      "end": 312.147
+    },
+    {
+      "word": "the",
+      "start": 312.182,
+      "end": 312.252
+    },
+    {
+      "word": "world",
+      "start": 312.298,
+      "end": 312.542
+    },
+    {
+      "word": "recorded",
+      "start": 312.6,
+      "end": 312.972
+    },
+    {
+      "word": "a",
+      "start": 313.006,
+      "end": 313.03
+    },
+    {
+      "word": "pulse",
+      "start": 313.088,
+      "end": 313.39
+    },
+    {
+      "word": "passing",
+      "start": 313.436,
+      "end": 313.784
+    },
+    {
+      "word": "overhead,",
+      "start": 313.831,
+      "end": 314.434
+    },
+    {
+      "word": "then",
+      "start": 314.818,
+      "end": 315.131
+    },
+    {
+      "word": "recorded",
+      "start": 315.305,
+      "end": 315.712
+    },
+    {
+      "word": "it",
+      "start": 315.746,
+      "end": 315.804
+    },
+    {
+      "word": "again,",
+      "start": 315.839,
+      "end": 316.362
+    },
+    {
+      "word": "and",
+      "start": 316.687,
+      "end": 316.861
+    },
+    {
+      "word": "again.",
+      "start": 316.919,
+      "end": 317.395
+    },
+    {
+      "word": "Matoza",
+      "start": 318.208,
+      "end": 318.87
+    },
+    {
+      "word": "and",
+      "start": 318.94,
+      "end": 319.056
+    },
+    {
+      "word": "colleagues,",
+      "start": 319.137,
+      "end": 319.845
+    },
+    {
+      "word": "writing",
+      "start": 320.054,
+      "end": 320.379
+    },
+    {
+      "word": "in",
+      "start": 320.414,
+      "end": 320.46
+    },
+    {
+      "word": "the",
+      "start": 320.495,
+      "end": 320.565
+    },
+    {
+      "word": "journal",
+      "start": 320.623,
+      "end": 320.913
+    },
+    {
+      "word": "Science,",
+      "start": 321.006,
+      "end": 321.714
+    },
+    {
+      "word": "tracked",
+      "start": 321.993,
+      "end": 322.33
+    },
+    {
+      "word": "what",
+      "start": 322.365,
+      "end": 322.481
+    },
+    {
+      "word": "is",
+      "start": 322.515,
+      "end": 322.573
+    },
+    {
+      "word": "called",
+      "start": 322.62,
+      "end": 322.864
+    },
+    {
+      "word": "a",
+      "start": 322.922,
+      "end": 323.003
+    },
+    {
+      "word": "Lamb",
+      "start": 323.119,
+      "end": 323.386
+    },
+    {
+      "word": "wave,",
+      "start": 323.444,
+      "end": 323.92
+    },
+    {
+      "word": "a",
+      "start": 324.245,
+      "end": 324.315
+    },
+    {
+      "word": "surface-guided",
+      "start": 324.443,
+      "end": 325.186
+    },
+    {
+      "word": "pressure",
+      "start": 325.255,
+      "end": 325.592
+    },
+    {
+      "word": "pulse",
+      "start": 325.627,
+      "end": 326.091
+    },
+    {
+      "word": "that",
+      "start": 326.207,
+      "end": 326.382
+    },
+    {
+      "word": "is",
+      "start": 326.428,
+      "end": 326.498
+    },
+    {
+      "word": "the",
+      "start": 326.544,
+      "end": 326.614
+    },
+    {
+      "word": "signature",
+      "start": 326.695,
+      "end": 327.183
+    },
+    {
+      "word": "of",
+      "start": 327.241,
+      "end": 327.31
+    },
+    {
+      "word": "an",
+      "start": 327.357,
+      "end": 327.415
+    },
+    {
+      "word": "energetic",
+      "start": 327.531,
+      "end": 328.03
+    },
+    {
+      "word": "atmospheric",
+      "start": 328.123,
+      "end": 328.75
+    },
+    {
+      "word": "explosion.",
+      "start": 328.796,
+      "end": 329.505
+    },
+    {
+      "word": "They",
+      "start": 330.317,
+      "end": 330.503
+    },
+    {
+      "word": "watched",
+      "start": 330.573,
+      "end": 330.851
+    },
+    {
+      "word": "it",
+      "start": 330.886,
+      "end": 330.944
+    },
+    {
+      "word": "propagate",
+      "start": 330.991,
+      "end": 331.467
+    },
+    {
+      "word": "for",
+      "start": 331.502,
+      "end": 331.606
+    },
+    {
+      "word": "four",
+      "start": 331.687,
+      "end": 331.943
+    },
+    {
+      "word": "passages",
+      "start": 332.012,
+      "end": 332.5
+    },
+    {
+      "word": "around",
+      "start": 332.546,
+      "end": 332.79
+    },
+    {
+      "word": "the",
+      "start": 332.825,
+      "end": 332.895
+    },
+    {
+      "word": "Earth,",
+      "start": 332.953,
+      "end": 333.301
+    },
+    {
+      "word": "plus",
+      "start": 333.684,
+      "end": 333.986
+    },
+    {
+      "word": "three",
+      "start": 334.056,
+      "end": 334.369
+    },
+    {
+      "word": "antipodal",
+      "start": 334.439,
+      "end": 334.88
+    },
+    {
+      "word": "passages,",
+      "start": 334.926,
+      "end": 335.623
+    },
+    {
+      "word": "over",
+      "start": 335.739,
+      "end": 335.937
+    },
+    {
+      "word": "six",
+      "start": 335.995,
+      "end": 336.192
+    },
+    {
+      "word": "days.",
+      "start": 336.25,
+      "end": 336.738
+    },
+    {
+      "word": "And",
+      "start": 337.55,
+      "end": 337.713
+    },
+    {
+      "word": "people",
+      "start": 337.783,
+      "end": 338.096
+    },
+    {
+      "word": "heard",
+      "start": 338.142,
+      "end": 338.328
+    },
+    {
+      "word": "it.",
+      "start": 338.375,
+      "end": 338.618
+    },
+    {
+      "word": "Audible",
+      "start": 339.315,
+      "end": 339.733
+    },
+    {
+      "word": "sound",
+      "start": 339.779,
+      "end": 340.081
+    },
+    {
+      "word": "was",
+      "start": 340.139,
+      "end": 340.255
+    },
+    {
+      "word": "detected",
+      "start": 340.313,
+      "end": 340.72
+    },
+    {
+      "word": "more",
+      "start": 340.778,
+      "end": 340.917
+    },
+    {
+      "word": "than",
+      "start": 340.952,
+      "end": 341.08
+    },
+    {
+      "word": "ten",
+      "start": 341.138,
+      "end": 341.37
+    },
+    {
+      "word": "thousand",
+      "start": 341.44,
+      "end": 341.823
+    },
+    {
+      "word": "kilometres",
+      "start": 341.881,
+      "end": 342.485
+    },
+    {
+      "word": "from",
+      "start": 342.519,
+      "end": 342.659
+    },
+    {
+      "word": "the",
+      "start": 342.694,
+      "end": 342.763
+    },
+    {
+      "word": "vent.",
+      "start": 342.81,
+      "end": 343.228
+    },
+    {
+      "word": "Sit",
+      "start": 344.18,
+      "end": 344.377
+    },
+    {
+      "word": "with",
+      "start": 344.412,
+      "end": 344.516
+    },
+    {
+      "word": "that",
+      "start": 344.551,
+      "end": 344.69
+    },
+    {
+      "word": "for",
+      "start": 344.737,
+      "end": 344.841
+    },
+    {
+      "word": "a",
+      "start": 344.888,
+      "end": 344.911
+    },
+    {
+      "word": "second.",
+      "start": 344.981,
+      "end": 345.422
+    },
+    {
+      "word": "A",
+      "start": 346.118,
+      "end": 346.2
+    },
+    {
+      "word": "pressure",
+      "start": 346.316,
+      "end": 346.687
+    },
+    {
+      "word": "pulse",
+      "start": 346.722,
+      "end": 347.012
+    },
+    {
+      "word": "made",
+      "start": 347.059,
+      "end": 347.245
+    },
+    {
+      "word": "by",
+      "start": 347.279,
+      "end": 347.407
+    },
+    {
+      "word": "one",
+      "start": 347.523,
+      "end": 347.756
+    },
+    {
+      "word": "volcano,",
+      "start": 347.802,
+      "end": 348.545
+    },
+    {
+      "word": "still",
+      "start": 348.824,
+      "end": 349.091
+    },
+    {
+      "word": "travelling",
+      "start": 349.149,
+      "end": 349.544
+    },
+    {
+      "word": "after",
+      "start": 349.602,
+      "end": 349.857
+    },
+    {
+      "word": "four",
+      "start": 349.938,
+      "end": 350.182
+    },
+    {
+      "word": "laps",
+      "start": 350.263,
+      "end": 350.507
+    },
+    {
+      "word": "of",
+      "start": 350.542,
+      "end": 350.588
+    },
+    {
+      "word": "the",
+      "start": 350.623,
+      "end": 350.693
+    },
+    {
+      "word": "planet.",
+      "start": 350.716,
+      "end": 351.227
+    },
+    {
+      "word": "As",
+      "start": 352.04,
+      "end": 352.214
+    },
+    {
+      "word": "measured",
+      "start": 352.307,
+      "end": 352.632
+    },
+    {
+      "word": "by",
+      "start": 352.655,
+      "end": 352.748
+    },
+    {
+      "word": "the",
+      "start": 352.806,
+      "end": 352.887
+    },
+    {
+      "word": "amplitude",
+      "start": 352.968,
+      "end": 353.479
+    },
+    {
+      "word": "of",
+      "start": 353.503,
+      "end": 353.549
+    },
+    {
+      "word": "that",
+      "start": 353.595,
+      "end": 353.735
+    },
+    {
+      "word": "Lamb",
+      "start": 353.804,
+      "end": 354.037
+    },
+    {
+      "word": "wave,",
+      "start": 354.095,
+      "end": 354.501
+    },
+    {
+      "word": "Matoza's",
+      "start": 354.884,
+      "end": 355.441
+    },
+    {
+      "word": "team",
+      "start": 355.488,
+      "end": 355.72
+    },
+    {
+      "word": "judged",
+      "start": 355.79,
+      "end": 356.057
+    },
+    {
+      "word": "the",
+      "start": 356.08,
+      "end": 356.15
+    },
+    {
+      "word": "climactic",
+      "start": 356.184,
+      "end": 356.788
+    },
+    {
+      "word": "Hunga",
+      "start": 356.846,
+      "end": 357.125
+    },
+    {
+      "word": "explosion",
+      "start": 357.183,
+      "end": 357.682
+    },
+    {
+      "word": "comparable",
+      "start": 357.752,
+      "end": 358.309
+    },
+    {
+      "word": "in",
+      "start": 358.344,
+      "end": 358.414
+    },
+    {
+      "word": "size",
+      "start": 358.483,
+      "end": 358.948
+    },
+    {
+      "word": "to",
+      "start": 359.099,
+      "end": 359.203
+    },
+    {
+      "word": "the",
+      "start": 359.261,
+      "end": 359.331
+    },
+    {
+      "word": "eighteen",
+      "start": 359.412,
+      "end": 359.783
+    },
+    {
+      "word": "eighty-three",
+      "start": 359.853,
+      "end": 360.271
+    },
+    {
+      "word": "eruption",
+      "start": 360.318,
+      "end": 360.689
+    },
+    {
+      "word": "of",
+      "start": 360.724,
+      "end": 360.77
+    },
+    {
+      "word": "Krakatoa.",
+      "start": 360.84,
+      "end": 361.594
+    },
+    {
+      "word": "That",
+      "start": 362.407,
+      "end": 362.72
+    },
+    {
+      "word": "is",
+      "start": 362.79,
+      "end": 362.906
+    },
+    {
+      "word": "the",
+      "start": 362.964,
+      "end": 363.034
+    },
+    {
+      "word": "yardstick",
+      "start": 363.092,
+      "end": 363.591
+    },
+    {
+      "word": "the",
+      "start": 363.638,
+      "end": 363.707
+    },
+    {
+      "word": "modern",
+      "start": 363.765,
+      "end": 364.056
+    },
+    {
+      "word": "record",
+      "start": 364.102,
+      "end": 364.357
+    },
+    {
+      "word": "offers,",
+      "start": 364.404,
+      "end": 364.973
+    },
+    {
+      "word": "and",
+      "start": 365.147,
+      "end": 365.286
+    },
+    {
+      "word": "Hunga",
+      "start": 365.356,
+      "end": 365.635
+    },
+    {
+      "word": "met",
+      "start": 365.681,
+      "end": 365.82
+    },
+    {
+      "word": "it.",
+      "start": 365.855,
+      "end": 366.134
+    },
+    {
+      "word": "On",
+      "start": 366.83,
+      "end": 367.005
+    },
+    {
+      "word": "the",
+      "start": 367.051,
+      "end": 367.121
+    },
+    {
+      "word": "ground",
+      "start": 367.167,
+      "end": 367.515
+    },
+    {
+      "word": "it",
+      "start": 367.585,
+      "end": 367.655
+    },
+    {
+      "word": "was",
+      "start": 367.701,
+      "end": 367.817
+    },
+    {
+      "word": "not",
+      "start": 367.887,
+      "end": 368.026
+    },
+    {
+      "word": "an",
+      "start": 368.073,
+      "end": 368.131
+    },
+    {
+      "word": "abstraction",
+      "start": 368.177,
+      "end": 368.804
+    },
+    {
+      "word": "either.",
+      "start": 368.885,
+      "end": 369.361
+    },
+    {
+      "word": "Tsunami",
+      "start": 370.058,
+      "end": 370.58
+    },
+    {
+      "word": "waves",
+      "start": 370.638,
+      "end": 370.998
+    },
+    {
+      "word": "struck",
+      "start": 371.091,
+      "end": 371.37
+    },
+    {
+      "word": "the",
+      "start": 371.428,
+      "end": 371.498
+    },
+    {
+      "word": "Kingdom",
+      "start": 371.544,
+      "end": 371.846
+    },
+    {
+      "word": "of",
+      "start": 371.892,
+      "end": 371.939
+    },
+    {
+      "word": "Tonga",
+      "start": 371.997,
+      "end": 372.334
+    },
+    {
+      "word": "far",
+      "start": 372.415,
+      "end": 372.67
+    },
+    {
+      "word": "earlier",
+      "start": 372.751,
+      "end": 373.077
+    },
+    {
+      "word": "than",
+      "start": 373.123,
+      "end": 373.239
+    },
+    {
+      "word": "tsunami",
+      "start": 373.274,
+      "end": 373.657
+    },
+    {
+      "word": "models",
+      "start": 373.715,
+      "end": 374.005
+    },
+    {
+      "word": "expected,",
+      "start": 374.052,
+      "end": 374.714
+    },
+    {
+      "word": "and",
+      "start": 375.039,
+      "end": 375.201
+    },
+    {
+      "word": "several",
+      "start": 375.282,
+      "end": 375.608
+    },
+    {
+      "word": "independent",
+      "start": 375.689,
+      "end": 376.2
+    },
+    {
+      "word": "studies",
+      "start": 376.235,
+      "end": 376.653
+    },
+    {
+      "word": "\u2014",
+      "start": 376.804,
+      "end": 376.955
+    },
+    {
+      "word": "Heidarzadeh,",
+      "start": 377.013,
+      "end": 377.965
+    },
+    {
+      "word": "Lynett,",
+      "start": 378.116,
+      "end": 378.696
+    },
+    {
+      "word": "Pakoksung",
+      "start": 378.777,
+      "end": 379.393
+    },
+    {
+      "word": "and",
+      "start": 379.451,
+      "end": 379.532
+    },
+    {
+      "word": "others",
+      "start": 379.602,
+      "end": 379.962
+    },
+    {
+      "word": "\u2014",
+      "start": 380.136,
+      "end": 380.194
+    },
+    {
+      "word": "estimate",
+      "start": 380.577,
+      "end": 381.065
+    },
+    {
+      "word": "initial",
+      "start": 381.111,
+      "end": 381.541
+    },
+    {
+      "word": "wave",
+      "start": 381.599,
+      "end": 381.854
+    },
+    {
+      "word": "amplitudes",
+      "start": 381.9,
+      "end": 382.434
+    },
+    {
+      "word": "exceeding",
+      "start": 382.504,
+      "end": 382.969
+    },
+    {
+      "word": "one",
+      "start": 383.085,
+      "end": 383.317
+    },
+    {
+      "word": "hundred",
+      "start": 383.352,
+      "end": 383.607
+    },
+    {
+      "word": "metres",
+      "start": 383.654,
+      "end": 383.932
+    },
+    {
+      "word": "close",
+      "start": 384.002,
+      "end": 384.315
+    },
+    {
+      "word": "to",
+      "start": 384.35,
+      "end": 384.397
+    },
+    {
+      "word": "the",
+      "start": 384.443,
+      "end": 384.513
+    },
+    {
+      "word": "volcano.",
+      "start": 384.559,
+      "end": 385.349
+    },
+    {
+      "word": "The",
+      "start": 386.045,
+      "end": 386.161
+    },
+    {
+      "word": "waves",
+      "start": 386.219,
+      "end": 386.533
+    },
+    {
+      "word": "damaged",
+      "start": 386.602,
+      "end": 387.032
+    },
+    {
+      "word": "coastlines",
+      "start": 387.102,
+      "end": 387.659
+    },
+    {
+      "word": "across",
+      "start": 387.705,
+      "end": 388.03
+    },
+    {
+      "word": "the",
+      "start": 388.065,
+      "end": 388.135
+    },
+    {
+      "word": "Pacific,",
+      "start": 388.181,
+      "end": 388.785
+    },
+    {
+      "word": "as",
+      "start": 388.994,
+      "end": 389.133
+    },
+    {
+      "word": "far",
+      "start": 389.215,
+      "end": 389.435
+    },
+    {
+      "word": "away",
+      "start": 389.482,
+      "end": 389.679
+    },
+    {
+      "word": "as",
+      "start": 389.726,
+      "end": 389.795
+    },
+    {
+      "word": "Peru,",
+      "start": 389.865,
+      "end": 390.422
+    },
+    {
+      "word": "and",
+      "start": 390.666,
+      "end": 390.828
+    },
+    {
+      "word": "tore",
+      "start": 390.886,
+      "end": 391.165
+    },
+    {
+      "word": "through",
+      "start": 391.2,
+      "end": 391.409
+    },
+    {
+      "word": "submarine",
+      "start": 391.467,
+      "end": 391.966
+    },
+    {
+      "word": "telecommunication",
+      "start": 391.989,
+      "end": 392.837
+    },
+    {
+      "word": "cables.",
+      "start": 392.907,
+      "end": 393.417
+    },
+    {
+      "word": "So",
+      "start": 394.114,
+      "end": 394.253
+    },
+    {
+      "word": "the",
+      "start": 394.311,
+      "end": 394.381
+    },
+    {
+      "word": "blast",
+      "start": 394.428,
+      "end": 394.753
+    },
+    {
+      "word": "wrapped",
+      "start": 394.799,
+      "end": 395.078
+    },
+    {
+      "word": "the",
+      "start": 395.113,
+      "end": 395.182
+    },
+    {
+      "word": "planet",
+      "start": 395.229,
+      "end": 395.612
+    },
+    {
+      "word": "and",
+      "start": 395.739,
+      "end": 395.89
+    },
+    {
+      "word": "the",
+      "start": 395.937,
+      "end": 396.006
+    },
+    {
+      "word": "sea",
+      "start": 396.053,
+      "end": 396.227
+    },
+    {
+      "word": "rose",
+      "start": 396.285,
+      "end": 396.517
+    },
+    {
+      "word": "around",
+      "start": 396.541,
+      "end": 396.808
+    },
+    {
+      "word": "it.",
+      "start": 396.866,
+      "end": 397.109
+    },
+    {
+      "word": "But",
+      "start": 397.922,
+      "end": 398.085
+    },
+    {
+      "word": "the",
+      "start": 398.12,
+      "end": 398.189
+    },
+    {
+      "word": "most",
+      "start": 398.259,
+      "end": 398.491
+    },
+    {
+      "word": "consequential",
+      "start": 398.561,
+      "end": 399.222
+    },
+    {
+      "word": "thing",
+      "start": 399.28,
+      "end": 399.455
+    },
+    {
+      "word": "this",
+      "start": 399.513,
+      "end": 399.664
+    },
+    {
+      "word": "eruption",
+      "start": 399.722,
+      "end": 400.105
+    },
+    {
+      "word": "carried",
+      "start": 400.163,
+      "end": 400.441
+    },
+    {
+      "word": "upward",
+      "start": 400.5,
+      "end": 400.883
+    },
+    {
+      "word": "was",
+      "start": 401.092,
+      "end": 401.254
+    },
+    {
+      "word": "neither",
+      "start": 401.324,
+      "end": 401.568
+    },
+    {
+      "word": "sound",
+      "start": 401.637,
+      "end": 401.951
+    },
+    {
+      "word": "nor",
+      "start": 402.02,
+      "end": 402.171
+    },
+    {
+      "word": "water",
+      "start": 402.241,
+      "end": 402.52
+    },
+    {
+      "word": "in",
+      "start": 402.555,
+      "end": 402.613
+    },
+    {
+      "word": "the",
+      "start": 402.636,
+      "end": 402.705
+    },
+    {
+      "word": "ocean.",
+      "start": 402.763,
+      "end": 403.205
+    },
+    {
+      "word": "It",
+      "start": 403.808,
+      "end": 403.936
+    },
+    {
+      "word": "was",
+      "start": 403.983,
+      "end": 404.099
+    },
+    {
+      "word": "water",
+      "start": 404.192,
+      "end": 404.482
+    },
+    {
+      "word": "in",
+      "start": 404.517,
+      "end": 404.574
+    },
+    {
+      "word": "the",
+      "start": 404.609,
+      "end": 404.679
+    },
+    {
+      "word": "sky.",
+      "start": 404.725,
+      "end": 405.271
+    },
+    {
+      "word": "Within",
+      "start": 406.223,
+      "end": 406.56
+    },
+    {
+      "word": "days,",
+      "start": 406.641,
+      "end": 407.186
+    },
+    {
+      "word": "atmospheric",
+      "start": 407.395,
+      "end": 408.034
+    },
+    {
+      "word": "scientists",
+      "start": 408.08,
+      "end": 408.603
+    },
+    {
+      "word": "were",
+      "start": 408.638,
+      "end": 408.765
+    },
+    {
+      "word": "chasing",
+      "start": 408.8,
+      "end": 409.137
+    },
+    {
+      "word": "the",
+      "start": 409.172,
+      "end": 409.241
+    },
+    {
+      "word": "plume",
+      "start": 409.276,
+      "end": 409.543
+    },
+    {
+      "word": "the",
+      "start": 409.578,
+      "end": 409.648
+    },
+    {
+      "word": "other",
+      "start": 409.717,
+      "end": 409.88
+    },
+    {
+      "word": "way",
+      "start": 409.938,
+      "end": 410.066
+    },
+    {
+      "word": "around",
+      "start": 410.112,
+      "end": 410.344
+    },
+    {
+      "word": "the",
+      "start": 410.379,
+      "end": 410.449
+    },
+    {
+      "word": "world.",
+      "start": 410.495,
+      "end": 410.96
+    },
+    {
+      "word": "Karen",
+      "start": 411.656,
+      "end": 412.005
+    },
+    {
+      "word": "Rosenlof,",
+      "start": 412.063,
+      "end": 412.829
+    },
+    {
+      "word": "a",
+      "start": 413.073,
+      "end": 413.142
+    },
+    {
+      "word": "senior",
+      "start": 413.235,
+      "end": 413.56
+    },
+    {
+      "word": "climate",
+      "start": 413.607,
+      "end": 413.943
+    },
+    {
+      "word": "scientist",
+      "start": 413.967,
+      "end": 414.489
+    },
+    {
+      "word": "at",
+      "start": 414.547,
+      "end": 414.652
+    },
+    {
+      "word": "NOAA's",
+      "start": 414.768,
+      "end": 415.383
+    },
+    {
+      "word": "Chemical",
+      "start": 415.441,
+      "end": 415.824
+    },
+    {
+      "word": "Sciences",
+      "start": 415.882,
+      "end": 416.358
+    },
+    {
+      "word": "Laboratory,",
+      "start": 416.416,
+      "end": 417.113
+    },
+    {
+      "word": "called",
+      "start": 417.438,
+      "end": 417.682
+    },
+    {
+      "word": "colleagues",
+      "start": 417.728,
+      "end": 418.181
+    },
+    {
+      "word": "on",
+      "start": 418.228,
+      "end": 418.297
+    },
+    {
+      "word": "La",
+      "start": 418.367,
+      "end": 418.495
+    },
+    {
+      "word": "R\u00e9union,",
+      "start": 418.576,
+      "end": 419.226
+    },
+    {
+      "word": "an",
+      "start": 419.551,
+      "end": 419.69
+    },
+    {
+      "word": "island",
+      "start": 419.783,
+      "end": 420.143
+    },
+    {
+      "word": "in",
+      "start": 420.19,
+      "end": 420.248
+    },
+    {
+      "word": "the",
+      "start": 420.283,
+      "end": 420.353
+    },
+    {
+      "word": "Indian",
+      "start": 420.422,
+      "end": 420.77
+    },
+    {
+      "word": "Ocean,",
+      "start": 420.84,
+      "end": 421.316
+    },
+    {
+      "word": "eight",
+      "start": 421.56,
+      "end": 421.757
+    },
+    {
+      "word": "thousand",
+      "start": 421.792,
+      "end": 422.117
+    },
+    {
+      "word": "miles",
+      "start": 422.175,
+      "end": 422.466
+    },
+    {
+      "word": "downrange,",
+      "start": 422.535,
+      "end": 423.197
+    },
+    {
+      "word": "directly",
+      "start": 423.371,
+      "end": 423.801
+    },
+    {
+      "word": "in",
+      "start": 423.836,
+      "end": 423.882
+    },
+    {
+      "word": "the",
+      "start": 423.917,
+      "end": 423.986
+    },
+    {
+      "word": "path",
+      "start": 424.021,
+      "end": 424.277
+    },
+    {
+      "word": "of",
+      "start": 424.312,
+      "end": 424.358
+    },
+    {
+      "word": "the",
+      "start": 424.404,
+      "end": 424.474
+    },
+    {
+      "word": "dispersing",
+      "start": 424.521,
+      "end": 425.02
+    },
+    {
+      "word": "cloud.",
+      "start": 425.066,
+      "end": 425.577
+    },
+    {
+      "word": "Elizabeth",
+      "start": 426.39,
+      "end": 426.866
+    },
+    {
+      "word": "Asher",
+      "start": 426.935,
+      "end": 427.26
+    },
+    {
+      "word": "and",
+      "start": 427.319,
+      "end": 427.411
+    },
+    {
+      "word": "several",
+      "start": 427.504,
+      "end": 427.829
+    },
+    {
+      "word": "colleagues",
+      "start": 427.899,
+      "end": 428.317
+    },
+    {
+      "word": "flew",
+      "start": 428.375,
+      "end": 428.619
+    },
+    {
+      "word": "there",
+      "start": 428.665,
+      "end": 428.99
+    },
+    {
+      "word": "with",
+      "start": 429.234,
+      "end": 429.42
+    },
+    {
+      "word": "miniature",
+      "start": 429.513,
+      "end": 429.919
+    },
+    {
+      "word": "atmospheric",
+      "start": 429.966,
+      "end": 430.511
+    },
+    {
+      "word": "instruments",
+      "start": 430.581,
+      "end": 431.022
+    },
+    {
+      "word": "packed",
+      "start": 431.069,
+      "end": 431.312
+    },
+    {
+      "word": "in",
+      "start": 431.347,
+      "end": 431.394
+    },
+    {
+      "word": "their",
+      "start": 431.428,
+      "end": 431.556
+    },
+    {
+      "word": "luggage.",
+      "start": 431.591,
+      "end": 432.137
+    },
+    {
+      "word": "The",
+      "start": 432.74,
+      "end": 432.856
+    },
+    {
+      "word": "balloons",
+      "start": 432.903,
+      "end": 433.274
+    },
+    {
+      "word": "they",
+      "start": 433.321,
+      "end": 433.449
+    },
+    {
+      "word": "released",
+      "start": 433.507,
+      "end": 433.867
+    },
+    {
+      "word": "confirmed",
+      "start": 433.925,
+      "end": 434.401
+    },
+    {
+      "word": "the",
+      "start": 434.447,
+      "end": 434.517
+    },
+    {
+      "word": "numbers.",
+      "start": 434.552,
+      "end": 435.121
+    },
+    {
+      "word": "NOAA",
+      "start": 435.934,
+      "end": 436.526
+    },
+    {
+      "word": "estimated",
+      "start": 436.619,
+      "end": 437.095
+    },
+    {
+      "word": "about",
+      "start": 437.129,
+      "end": 437.338
+    },
+    {
+      "word": "one",
+      "start": 437.396,
+      "end": 437.559
+    },
+    {
+      "word": "hundred",
+      "start": 437.594,
+      "end": 437.838
+    },
+    {
+      "word": "fifty",
+      "start": 437.896,
+      "end": 438.174
+    },
+    {
+      "word": "million",
+      "start": 438.244,
+      "end": 438.557
+    },
+    {
+      "word": "tons",
+      "start": 438.615,
+      "end": 438.848
+    },
+    {
+      "word": "of",
+      "start": 438.894,
+      "end": 438.952
+    },
+    {
+      "word": "water",
+      "start": 439.033,
+      "end": 439.277
+    },
+    {
+      "word": "vapour",
+      "start": 439.324,
+      "end": 439.649
+    },
+    {
+      "word": "injected",
+      "start": 439.893,
+      "end": 440.438
+    },
+    {
+      "word": "into",
+      "start": 440.496,
+      "end": 440.67
+    },
+    {
+      "word": "the",
+      "start": 440.728,
+      "end": 440.798
+    },
+    {
+      "word": "stratosphere.",
+      "start": 440.833,
+      "end": 441.634
+    },
+    {
+      "word": "NASA's",
+      "start": 442.331,
+      "end": 442.83
+    },
+    {
+      "word": "Jet",
+      "start": 442.958,
+      "end": 443.155
+    },
+    {
+      "word": "Propulsion",
+      "start": 443.225,
+      "end": 443.735
+    },
+    {
+      "word": "Laboratory,",
+      "start": 443.793,
+      "end": 444.525
+    },
+    {
+      "word": "working",
+      "start": 444.734,
+      "end": 445.047
+    },
+    {
+      "word": "from",
+      "start": 445.094,
+      "end": 445.21
+    },
+    {
+      "word": "the",
+      "start": 445.245,
+      "end": 445.314
+    },
+    {
+      "word": "Microwave",
+      "start": 445.372,
+      "end": 445.907
+    },
+    {
+      "word": "Limb",
+      "start": 445.965,
+      "end": 446.162
+    },
+    {
+      "word": "Sounder",
+      "start": 446.232,
+      "end": 446.58
+    },
+    {
+      "word": "on",
+      "start": 446.65,
+      "end": 446.731
+    },
+    {
+      "word": "the",
+      "start": 446.766,
+      "end": 446.835
+    },
+    {
+      "word": "Aura",
+      "start": 446.893,
+      "end": 447.114
+    },
+    {
+      "word": "satellite,",
+      "start": 447.184,
+      "end": 447.869
+    },
+    {
+      "word": "arrived",
+      "start": 448.148,
+      "end": 448.554
+    },
+    {
+      "word": "at",
+      "start": 448.589,
+      "end": 448.658
+    },
+    {
+      "word": "one",
+      "start": 448.728,
+      "end": 448.937
+    },
+    {
+      "word": "hundred",
+      "start": 448.983,
+      "end": 449.216
+    },
+    {
+      "word": "forty-six",
+      "start": 449.274,
+      "end": 449.773
+    },
+    {
+      "word": "teragrams.",
+      "start": 449.831,
+      "end": 450.586
+    },
+    {
+      "word": "Same",
+      "start": 451.189,
+      "end": 451.445
+    },
+    {
+      "word": "eruption,",
+      "start": 451.468,
+      "end": 452.072
+    },
+    {
+      "word": "two",
+      "start": 452.188,
+      "end": 452.362
+    },
+    {
+      "word": "instruments,",
+      "start": 452.432,
+      "end": 453.128
+    },
+    {
+      "word": "a",
+      "start": 453.337,
+      "end": 453.418
+    },
+    {
+      "word": "range",
+      "start": 453.535,
+      "end": 453.918
+    },
+    {
+      "word": "rather",
+      "start": 453.964,
+      "end": 454.185
+    },
+    {
+      "word": "than",
+      "start": 454.22,
+      "end": 454.336
+    },
+    {
+      "word": "a",
+      "start": 454.37,
+      "end": 454.394
+    },
+    {
+      "word": "single",
+      "start": 454.463,
+      "end": 454.8
+    },
+    {
+      "word": "agreed",
+      "start": 454.835,
+      "end": 455.114
+    },
+    {
+      "word": "figure.",
+      "start": 455.16,
+      "end": 455.659
+    },
+    {
+      "word": "And",
+      "start": 456.263,
+      "end": 456.402
+    },
+    {
+      "word": "that",
+      "start": 456.46,
+      "end": 456.588
+    },
+    {
+      "word": "range",
+      "start": 456.669,
+      "end": 456.994
+    },
+    {
+      "word": "is",
+      "start": 457.041,
+      "end": 457.145
+    },
+    {
+      "word": "not",
+      "start": 457.227,
+      "end": 457.401
+    },
+    {
+      "word": "abstract.",
+      "start": 457.459,
+      "end": 458.225
+    },
+    {
+      "word": "One",
+      "start": 458.922,
+      "end": 459.142
+    },
+    {
+      "word": "hundred",
+      "start": 459.177,
+      "end": 459.398
+    },
+    {
+      "word": "forty-six",
+      "start": 459.456,
+      "end": 459.932
+    },
+    {
+      "word": "teragrams",
+      "start": 459.99,
+      "end": 460.535
+    },
+    {
+      "word": "is",
+      "start": 460.57,
+      "end": 460.64
+    },
+    {
+      "word": "enough",
+      "start": 460.686,
+      "end": 460.884
+    },
+    {
+      "word": "to",
+      "start": 460.918,
+      "end": 460.965
+    },
+    {
+      "word": "fill",
+      "start": 461.023,
+      "end": 461.197
+    },
+    {
+      "word": "more",
+      "start": 461.255,
+      "end": 461.394
+    },
+    {
+      "word": "than",
+      "start": 461.418,
+      "end": 461.534
+    },
+    {
+      "word": "fifty-eight",
+      "start": 461.603,
+      "end": 462.091
+    },
+    {
+      "word": "thousand",
+      "start": 462.126,
+      "end": 462.474
+    },
+    {
+      "word": "Olympic-size",
+      "start": 462.532,
+      "end": 463.205
+    },
+    {
+      "word": "swimming",
+      "start": 463.229,
+      "end": 463.496
+    },
+    {
+      "word": "pools,",
+      "start": 463.542,
+      "end": 463.983
+    },
+    {
+      "word": "according",
+      "start": 464.192,
+      "end": 464.564
+    },
+    {
+      "word": "to",
+      "start": 464.599,
+      "end": 464.645
+    },
+    {
+      "word": "NASA's",
+      "start": 464.726,
+      "end": 465.121
+    },
+    {
+      "word": "Jet",
+      "start": 465.191,
+      "end": 465.365
+    },
+    {
+      "word": "Propulsion",
+      "start": 465.411,
+      "end": 465.841
+    },
+    {
+      "word": "Laboratory.",
+      "start": 465.887,
+      "end": 466.619
+    },
+    {
+      "word": "It",
+      "start": 467.315,
+      "end": 467.443
+    },
+    {
+      "word": "is",
+      "start": 467.489,
+      "end": 467.559
+    },
+    {
+      "word": "about",
+      "start": 467.606,
+      "end": 467.838
+    },
+    {
+      "word": "ten",
+      "start": 467.884,
+      "end": 468.058
+    },
+    {
+      "word": "percent",
+      "start": 468.128,
+      "end": 468.43
+    },
+    {
+      "word": "of",
+      "start": 468.465,
+      "end": 468.511
+    },
+    {
+      "word": "the",
+      "start": 468.546,
+      "end": 468.616
+    },
+    {
+      "word": "water",
+      "start": 468.674,
+      "end": 468.952
+    },
+    {
+      "word": "that",
+      "start": 468.999,
+      "end": 469.103
+    },
+    {
+      "word": "was",
+      "start": 469.138,
+      "end": 469.243
+    },
+    {
+      "word": "already",
+      "start": 469.324,
+      "end": 469.73
+    },
+    {
+      "word": "up",
+      "start": 469.777,
+      "end": 469.87
+    },
+    {
+      "word": "there.",
+      "start": 469.916,
+      "end": 470.241
+    },
+    {
+      "word": "It",
+      "start": 470.938,
+      "end": 471.065
+    },
+    {
+      "word": "is",
+      "start": 471.1,
+      "end": 471.181
+    },
+    {
+      "word": "roughly",
+      "start": 471.251,
+      "end": 471.553
+    },
+    {
+      "word": "four",
+      "start": 471.634,
+      "end": 471.866
+    },
+    {
+      "word": "times",
+      "start": 471.924,
+      "end": 472.238
+    },
+    {
+      "word": "the",
+      "start": 472.273,
+      "end": 472.342
+    },
+    {
+      "word": "water",
+      "start": 472.389,
+      "end": 472.598
+    },
+    {
+      "word": "scientists",
+      "start": 472.644,
+      "end": 473.085
+    },
+    {
+      "word": "estimate",
+      "start": 473.167,
+      "end": 473.561
+    },
+    {
+      "word": "Pinatubo",
+      "start": 473.596,
+      "end": 474.154
+    },
+    {
+      "word": "put",
+      "start": 474.212,
+      "end": 474.397
+    },
+    {
+      "word": "into",
+      "start": 474.455,
+      "end": 474.618
+    },
+    {
+      "word": "the",
+      "start": 474.676,
+      "end": 474.745
+    },
+    {
+      "word": "stratosphere",
+      "start": 474.768,
+      "end": 475.43
+    },
+    {
+      "word": "\u2014",
+      "start": 475.5,
+      "end": 475.558
+    },
+    {
+      "word": "and",
+      "start": 475.941,
+      "end": 476.08
+    },
+    {
+      "word": "that",
+      "start": 476.15,
+      "end": 476.313
+    },
+    {
+      "word": "thirty-seven",
+      "start": 476.382,
+      "end": 477.021
+    },
+    {
+      "word": "teragram",
+      "start": 477.067,
+      "end": 477.555
+    },
+    {
+      "word": "figure",
+      "start": 477.624,
+      "end": 477.892
+    },
+    {
+      "word": "came",
+      "start": 477.926,
+      "end": 478.124
+    },
+    {
+      "word": "from",
+      "start": 478.159,
+      "end": 478.298
+    },
+    {
+      "word": "modelling,",
+      "start": 478.379,
+      "end": 478.971
+    },
+    {
+      "word": "not",
+      "start": 479.25,
+      "end": 479.424
+    },
+    {
+      "word": "measurement.",
+      "start": 479.482,
+      "end": 480.039
+    },
+    {
+      "word": "The",
+      "start": 480.481,
+      "end": 480.597
+    },
+    {
+      "word": "chemistry",
+      "start": 480.643,
+      "end": 481.073
+    },
+    {
+      "word": "moved",
+      "start": 481.142,
+      "end": 481.375
+    },
+    {
+      "word": "faster",
+      "start": 481.433,
+      "end": 481.827
+    },
+    {
+      "word": "than",
+      "start": 481.874,
+      "end": 482.001
+    },
+    {
+      "word": "anyone",
+      "start": 482.083,
+      "end": 482.443
+    },
+    {
+      "word": "expected.",
+      "start": 482.477,
+      "end": 483.174
+    },
+    {
+      "word": "Sulfate",
+      "start": 483.778,
+      "end": 484.312
+    },
+    {
+      "word": "aerosols",
+      "start": 484.358,
+      "end": 484.892
+    },
+    {
+      "word": "normally",
+      "start": 484.962,
+      "end": 485.299
+    },
+    {
+      "word": "form",
+      "start": 485.368,
+      "end": 485.589
+    },
+    {
+      "word": "from",
+      "start": 485.635,
+      "end": 485.763
+    },
+    {
+      "word": "volcanic",
+      "start": 485.833,
+      "end": 486.309
+    },
+    {
+      "word": "sulfur",
+      "start": 486.378,
+      "end": 486.692
+    },
+    {
+      "word": "dioxide",
+      "start": 486.738,
+      "end": 487.47
+    },
+    {
+      "word": "over",
+      "start": 487.714,
+      "end": 487.957
+    },
+    {
+      "word": "about",
+      "start": 488.015,
+      "end": 488.201
+    },
+    {
+      "word": "a",
+      "start": 488.236,
+      "end": 488.259
+    },
+    {
+      "word": "month.",
+      "start": 488.317,
+      "end": 488.77
+    },
+    {
+      "word": "Here,",
+      "start": 489.467,
+      "end": 489.873
+    },
+    {
+      "word": "because",
+      "start": 490.047,
+      "end": 490.361
+    },
+    {
+      "word": "the",
+      "start": 490.384,
+      "end": 490.453
+    },
+    {
+      "word": "plume",
+      "start": 490.5,
+      "end": 490.767
+    },
+    {
+      "word": "was",
+      "start": 490.79,
+      "end": 490.895
+    },
+    {
+      "word": "so",
+      "start": 490.953,
+      "end": 491.127
+    },
+    {
+      "word": "rich",
+      "start": 491.208,
+      "end": 491.382
+    },
+    {
+      "word": "in",
+      "start": 491.429,
+      "end": 491.487
+    },
+    {
+      "word": "water,",
+      "start": 491.556,
+      "end": 492.067
+    },
+    {
+      "word": "a",
+      "start": 492.241,
+      "end": 492.323
+    },
+    {
+      "word": "dense",
+      "start": 492.416,
+      "end": 492.671
+    },
+    {
+      "word": "aerosol",
+      "start": 492.717,
+      "end": 493.182
+    },
+    {
+      "word": "layer",
+      "start": 493.24,
+      "end": 493.437
+    },
+    {
+      "word": "assembled",
+      "start": 493.495,
+      "end": 493.913
+    },
+    {
+      "word": "within",
+      "start": 493.936,
+      "end": 494.169
+    },
+    {
+      "word": "days",
+      "start": 494.25,
+      "end": 494.587
+    },
+    {
+      "word": "\u2014",
+      "start": 494.796,
+      "end": 495.144
+    },
+    {
+      "word": "Asher's",
+      "start": 495.353,
+      "end": 495.736
+    },
+    {
+      "word": "team",
+      "start": 495.782,
+      "end": 495.991
+    },
+    {
+      "word": "published",
+      "start": 496.061,
+      "end": 496.433
+    },
+    {
+      "word": "that",
+      "start": 496.456,
+      "end": 496.63
+    },
+    {
+      "word": "in",
+      "start": 496.688,
+      "end": 496.769
+    },
+    {
+      "word": "the",
+      "start": 496.804,
+      "end": 496.874
+    },
+    {
+      "word": "Proceedings",
+      "start": 496.909,
+      "end": 497.431
+    },
+    {
+      "word": "of",
+      "start": 497.478,
+      "end": 497.547
+    },
+    {
+      "word": "the",
+      "start": 497.594,
+      "end": 497.663
+    },
+    {
+      "word": "National",
+      "start": 497.733,
+      "end": 498.163
+    },
+    {
+      "word": "Academy",
+      "start": 498.232,
+      "end": 498.662
+    },
+    {
+      "word": "of",
+      "start": 498.708,
+      "end": 498.755
+    },
+    {
+      "word": "Sciences.",
+      "start": 498.801,
+      "end": 499.556
+    },
+    {
+      "word": "And",
+      "start": 500.252,
+      "end": 500.392
+    },
+    {
+      "word": "the",
+      "start": 500.45,
+      "end": 500.519
+    },
+    {
+      "word": "ozone",
+      "start": 500.589,
+      "end": 501.007
+    },
+    {
+      "word": "paid",
+      "start": 501.042,
+      "end": 501.262
+    },
+    {
+      "word": "for",
+      "start": 501.309,
+      "end": 501.46
+    },
+    {
+      "word": "it.",
+      "start": 501.518,
+      "end": 501.75
+    },
+    {
+      "word": "According",
+      "start": 502.563,
+      "end": 502.957
+    },
+    {
+      "word": "to",
+      "start": 502.992,
+      "end": 503.039
+    },
+    {
+      "word": "measurements",
+      "start": 503.108,
+      "end": 503.538
+    },
+    {
+      "word": "reported",
+      "start": 503.584,
+      "end": 503.967
+    },
+    {
+      "word": "by",
+      "start": 504.014,
+      "end": 504.118
+    },
+    {
+      "word": "NOAA",
+      "start": 504.234,
+      "end": 504.768
+    },
+    {
+      "word": "Research,",
+      "start": 504.885,
+      "end": 505.535
+    },
+    {
+      "word": "ozone",
+      "start": 505.918,
+      "end": 506.324
+    },
+    {
+      "word": "concentrations",
+      "start": 506.371,
+      "end": 507.102
+    },
+    {
+      "word": "fell",
+      "start": 507.149,
+      "end": 507.323
+    },
+    {
+      "word": "by",
+      "start": 507.369,
+      "end": 507.462
+    },
+    {
+      "word": "as",
+      "start": 507.52,
+      "end": 507.601
+    },
+    {
+      "word": "much",
+      "start": 507.671,
+      "end": 507.834
+    },
+    {
+      "word": "as",
+      "start": 507.88,
+      "end": 507.95
+    },
+    {
+      "word": "thirty",
+      "start": 508.043,
+      "end": 508.333
+    },
+    {
+      "word": "percent",
+      "start": 508.402,
+      "end": 508.774
+    },
+    {
+      "word": "in",
+      "start": 508.82,
+      "end": 508.89
+    },
+    {
+      "word": "the",
+      "start": 508.925,
+      "end": 509.006
+    },
+    {
+      "word": "air",
+      "start": 509.064,
+      "end": 509.285
+    },
+    {
+      "word": "holding",
+      "start": 509.61,
+      "end": 509.935
+    },
+    {
+      "word": "the",
+      "start": 509.981,
+      "end": 510.051
+    },
+    {
+      "word": "most",
+      "start": 510.132,
+      "end": 510.388
+    },
+    {
+      "word": "water",
+      "start": 510.446,
+      "end": 510.69
+    },
+    {
+      "word": "vapour",
+      "start": 510.748,
+      "end": 511.061
+    },
+    {
+      "word": "\u2014",
+      "start": 511.212,
+      "end": 511.27
+    },
+    {
+      "word": "a",
+      "start": 511.653,
+      "end": 511.711
+    },
+    {
+      "word": "finding",
+      "start": 511.793,
+      "end": 512.152
+    },
+    {
+      "word": "led",
+      "start": 512.222,
+      "end": 512.373
+    },
+    {
+      "word": "by",
+      "start": 512.419,
+      "end": 512.536
+    },
+    {
+      "word": "Stephanie",
+      "start": 512.617,
+      "end": 513.046
+    },
+    {
+      "word": "Evan",
+      "start": 513.104,
+      "end": 513.337
+    },
+    {
+      "word": "and",
+      "start": 513.371,
+      "end": 513.441
+    },
+    {
+      "word": "colleagues",
+      "start": 513.511,
+      "end": 513.987
+    },
+    {
+      "word": "and",
+      "start": 514.196,
+      "end": 514.37
+    },
+    {
+      "word": "published",
+      "start": 514.451,
+      "end": 514.823
+    },
+    {
+      "word": "in",
+      "start": 514.858,
+      "end": 514.927
+    },
+    {
+      "word": "Science.",
+      "start": 514.974,
+      "end": 515.577
+    },
+    {
+      "word": "Two",
+      "start": 516.274,
+      "end": 516.448
+    },
+    {
+      "word": "weeks",
+      "start": 516.495,
+      "end": 516.704
+    },
+    {
+      "word": "later,",
+      "start": 516.762,
+      "end": 517.168
+    },
+    {
+      "word": "Evan's",
+      "start": 517.412,
+      "end": 517.748
+    },
+    {
+      "word": "team",
+      "start": 517.795,
+      "end": 518.004
+    },
+    {
+      "word": "measured",
+      "start": 518.085,
+      "end": 518.387
+    },
+    {
+      "word": "ozone",
+      "start": 518.457,
+      "end": 518.886
+    },
+    {
+      "word": "still",
+      "start": 518.933,
+      "end": 519.177
+    },
+    {
+      "word": "depleted",
+      "start": 519.223,
+      "end": 519.664
+    },
+    {
+      "word": "by",
+      "start": 519.873,
+      "end": 520.047
+    },
+    {
+      "word": "around",
+      "start": 520.117,
+      "end": 520.431
+    },
+    {
+      "word": "five",
+      "start": 520.5,
+      "end": 520.779
+    },
+    {
+      "word": "percent",
+      "start": 520.814,
+      "end": 521.104
+    },
+    {
+      "word": "across",
+      "start": 521.15,
+      "end": 521.464
+    },
+    {
+      "word": "the",
+      "start": 521.499,
+      "end": 521.568
+    },
+    {
+      "word": "Indian",
+      "start": 521.661,
+      "end": 521.998
+    },
+    {
+      "word": "and",
+      "start": 522.056,
+      "end": 522.137
+    },
+    {
+      "word": "Pacific",
+      "start": 522.195,
+      "end": 522.578
+    },
+    {
+      "word": "oceans.",
+      "start": 522.636,
+      "end": 523.217
+    },
+    {
+      "word": "A",
+      "start": 523.914,
+      "end": 523.983
+    },
+    {
+      "word": "separate",
+      "start": 524.099,
+      "end": 524.471
+    },
+    {
+      "word": "study",
+      "start": 524.494,
+      "end": 524.796
+    },
+    {
+      "word": "in",
+      "start": 524.854,
+      "end": 524.924
+    },
+    {
+      "word": "Communications",
+      "start": 524.993,
+      "end": 525.736
+    },
+    {
+      "word": "Earth",
+      "start": 525.829,
+      "end": 526.061
+    },
+    {
+      "word": "and",
+      "start": 526.108,
+      "end": 526.177
+    },
+    {
+      "word": "Environment",
+      "start": 526.236,
+      "end": 526.816
+    },
+    {
+      "word": "estimated",
+      "start": 527.141,
+      "end": 527.698
+    },
+    {
+      "word": "the",
+      "start": 527.733,
+      "end": 527.803
+    },
+    {
+      "word": "global",
+      "start": 527.861,
+      "end": 528.232
+    },
+    {
+      "word": "stratospheric",
+      "start": 528.29,
+      "end": 528.929
+    },
+    {
+      "word": "water",
+      "start": 528.987,
+      "end": 529.219
+    },
+    {
+      "word": "mass",
+      "start": 529.266,
+      "end": 529.556
+    },
+    {
+      "word": "rose",
+      "start": 529.881,
+      "end": 530.16
+    },
+    {
+      "word": "by",
+      "start": 530.195,
+      "end": 530.311
+    },
+    {
+      "word": "thirteen",
+      "start": 530.392,
+      "end": 530.821
+    },
+    {
+      "word": "percent",
+      "start": 530.88,
+      "end": 531.228
+    },
+    {
+      "word": "above",
+      "start": 531.286,
+      "end": 531.588
+    },
+    {
+      "word": "climatological",
+      "start": 531.634,
+      "end": 532.401
+    },
+    {
+      "word": "levels,",
+      "start": 532.447,
+      "end": 532.958
+    },
+    {
+      "word": "against",
+      "start": 533.283,
+      "end": 533.62
+    },
+    {
+      "word": "the",
+      "start": 533.654,
+      "end": 533.724
+    },
+    {
+      "word": "ten",
+      "start": 533.782,
+      "end": 533.968
+    },
+    {
+      "word": "percent",
+      "start": 534.049,
+      "end": 534.374
+    },
+    {
+      "word": "figure",
+      "start": 534.432,
+      "end": 534.699
+    },
+    {
+      "word": "from",
+      "start": 534.723,
+      "end": 534.839
+    },
+    {
+      "word": "NASA.",
+      "start": 534.897,
+      "end": 535.477
+    },
+    {
+      "word": "On",
+      "start": 536.174,
+      "end": 536.325
+    },
+    {
+      "word": "the",
+      "start": 536.36,
+      "end": 536.429
+    },
+    {
+      "word": "size",
+      "start": 536.476,
+      "end": 536.789
+    },
+    {
+      "word": "of",
+      "start": 536.824,
+      "end": 536.882
+    },
+    {
+      "word": "the",
+      "start": 536.917,
+      "end": 536.986
+    },
+    {
+      "word": "perturbation,",
+      "start": 537.045,
+      "end": 537.753
+    },
+    {
+      "word": "the",
+      "start": 537.776,
+      "end": 537.846
+    },
+    {
+      "word": "sources",
+      "start": 537.904,
+      "end": 538.31
+    },
+    {
+      "word": "still",
+      "start": 538.345,
+      "end": 538.554
+    },
+    {
+      "word": "differ.",
+      "start": 538.612,
+      "end": 539.065
+    },
+    {
+      "word": "Water",
+      "start": 539.761,
+      "end": 540.063
+    },
+    {
+      "word": "that",
+      "start": 540.11,
+      "end": 540.226
+    },
+    {
+      "word": "lingers",
+      "start": 540.284,
+      "end": 540.62
+    },
+    {
+      "word": "for",
+      "start": 540.69,
+      "end": 540.841
+    },
+    {
+      "word": "years.",
+      "start": 540.934,
+      "end": 541.468
+    },
+    {
+      "word": "Ozone",
+      "start": 542.165,
+      "end": 542.582
+    },
+    {
+      "word": "loss",
+      "start": 542.606,
+      "end": 542.861
+    },
+    {
+      "word": "measured",
+      "start": 542.919,
+      "end": 543.221
+    },
+    {
+      "word": "in",
+      "start": 543.256,
+      "end": 543.326
+    },
+    {
+      "word": "tens",
+      "start": 543.395,
+      "end": 543.685
+    },
+    {
+      "word": "of",
+      "start": 543.732,
+      "end": 543.778
+    },
+    {
+      "word": "percent.",
+      "start": 543.836,
+      "end": 544.382
+    },
+    {
+      "word": "A",
+      "start": 545.079,
+      "end": 545.16
+    },
+    {
+      "word": "pressure",
+      "start": 545.253,
+      "end": 545.601
+    },
+    {
+      "word": "wave",
+      "start": 545.647,
+      "end": 545.868
+    },
+    {
+      "word": "that",
+      "start": 545.891,
+      "end": 546.007
+    },
+    {
+      "word": "circled",
+      "start": 546.065,
+      "end": 546.391
+    },
+    {
+      "word": "the",
+      "start": 546.414,
+      "end": 546.483
+    },
+    {
+      "word": "planet",
+      "start": 546.529,
+      "end": 546.82
+    },
+    {
+      "word": "four",
+      "start": 546.889,
+      "end": 547.11
+    },
+    {
+      "word": "times.",
+      "start": 547.168,
+      "end": 547.737
+    },
+    {
+      "word": "Each",
+      "start": 548.433,
+      "end": 548.642
+    },
+    {
+      "word": "of",
+      "start": 548.677,
+      "end": 548.735
+    },
+    {
+      "word": "those",
+      "start": 548.793,
+      "end": 549.049
+    },
+    {
+      "word": "is",
+      "start": 549.095,
+      "end": 549.188
+    },
+    {
+      "word": "a",
+      "start": 549.223,
+      "end": 549.258
+    },
+    {
+      "word": "consequence.",
+      "start": 549.304,
+      "end": 550.082
+    },
+    {
+      "word": "None",
+      "start": 550.523,
+      "end": 550.709
+    },
+    {
+      "word": "of",
+      "start": 550.732,
+      "end": 550.779
+    },
+    {
+      "word": "them",
+      "start": 550.814,
+      "end": 550.93
+    },
+    {
+      "word": "is",
+      "start": 550.976,
+      "end": 551.046
+    },
+    {
+      "word": "yet",
+      "start": 551.092,
+      "end": 551.231
+    },
+    {
+      "word": "the",
+      "start": 551.266,
+      "end": 551.336
+    },
+    {
+      "word": "cause.",
+      "start": 551.382,
+      "end": 551.893
+    },
+    {
+      "word": "So",
+      "start": 552.497,
+      "end": 552.636
+    },
+    {
+      "word": "what",
+      "start": 552.683,
+      "end": 552.81
+    },
+    {
+      "word": "actually",
+      "start": 552.857,
+      "end": 553.17
+    },
+    {
+      "word": "drove",
+      "start": 553.217,
+      "end": 553.472
+    },
+    {
+      "word": "it?",
+      "start": 553.507,
+      "end": 553.739
+    },
+    {
+      "word": "The",
+      "start": 554.552,
+      "end": 554.668
+    },
+    {
+      "word": "core",
+      "start": 554.738,
+      "end": 555.028
+    },
+    {
+      "word": "answer",
+      "start": 555.074,
+      "end": 555.423
+    },
+    {
+      "word": "is",
+      "start": 555.504,
+      "end": 555.608
+    },
+    {
+      "word": "three",
+      "start": 555.666,
+      "end": 555.91
+    },
+    {
+      "word": "things",
+      "start": 555.957,
+      "end": 556.212
+    },
+    {
+      "word": "stacked",
+      "start": 556.247,
+      "end": 556.572
+    },
+    {
+      "word": "on",
+      "start": 556.619,
+      "end": 556.7
+    },
+    {
+      "word": "top",
+      "start": 556.758,
+      "end": 556.978
+    },
+    {
+      "word": "of",
+      "start": 557.025,
+      "end": 557.071
+    },
+    {
+      "word": "each",
+      "start": 557.118,
+      "end": 557.257
+    },
+    {
+      "word": "other:",
+      "start": 557.303,
+      "end": 557.663
+    },
+    {
+      "word": "depth,",
+      "start": 558.267,
+      "end": 558.743
+    },
+    {
+      "word": "water,",
+      "start": 558.987,
+      "end": 559.498
+    },
+    {
+      "word": "and",
+      "start": 559.614,
+      "end": 559.776
+    },
+    {
+      "word": "an",
+      "start": 559.823,
+      "end": 559.893
+    },
+    {
+      "word": "open",
+      "start": 559.985,
+      "end": 560.276
+    },
+    {
+      "word": "vent.",
+      "start": 560.345,
+      "end": 560.752
+    },
+    {
+      "word": "A",
+      "start": 561.448,
+      "end": 561.541
+    },
+    {
+      "word": "caldera",
+      "start": 561.657,
+      "end": 562.122
+    },
+    {
+      "word": "floor",
+      "start": 562.18,
+      "end": 562.458
+    },
+    {
+      "word": "one",
+      "start": 562.54,
+      "end": 562.726
+    },
+    {
+      "word": "hundred",
+      "start": 562.772,
+      "end": 563.016
+    },
+    {
+      "word": "fifty",
+      "start": 563.063,
+      "end": 563.295
+    },
+    {
+      "word": "metres",
+      "start": 563.364,
+      "end": 563.643
+    },
+    {
+      "word": "down",
+      "start": 563.701,
+      "end": 564.038
+    },
+    {
+      "word": "gave",
+      "start": 564.363,
+      "end": 564.607
+    },
+    {
+      "word": "erupting",
+      "start": 564.665,
+      "end": 565.164
+    },
+    {
+      "word": "magma",
+      "start": 565.222,
+      "end": 565.547
+    },
+    {
+      "word": "enough",
+      "start": 565.605,
+      "end": 565.802
+    },
+    {
+      "word": "seawater",
+      "start": 565.861,
+      "end": 566.278
+    },
+    {
+      "word": "to",
+      "start": 566.313,
+      "end": 566.36
+    },
+    {
+      "word": "flash",
+      "start": 566.418,
+      "end": 566.72
+    },
+    {
+      "word": "into",
+      "start": 566.754,
+      "end": 566.882
+    },
+    {
+      "word": "steam,",
+      "start": 566.94,
+      "end": 567.405
+    },
+    {
+      "word": "without",
+      "start": 567.556,
+      "end": 567.881
+    },
+    {
+      "word": "enough",
+      "start": 567.927,
+      "end": 568.124
+    },
+    {
+      "word": "ocean",
+      "start": 568.183,
+      "end": 568.473
+    },
+    {
+      "word": "above",
+      "start": 568.519,
+      "end": 568.751
+    },
+    {
+      "word": "it",
+      "start": 568.775,
+      "end": 568.844
+    },
+    {
+      "word": "to",
+      "start": 568.879,
+      "end": 568.937
+    },
+    {
+      "word": "smother",
+      "start": 569.018,
+      "end": 569.355
+    },
+    {
+      "word": "the",
+      "start": 569.402,
+      "end": 569.471
+    },
+    {
+      "word": "blast.",
+      "start": 569.494,
+      "end": 570.017
+    },
+    {
+      "word": "By",
+      "start": 570.713,
+      "end": 570.876
+    },
+    {
+      "word": "the",
+      "start": 570.934,
+      "end": 571.004
+    },
+    {
+      "word": "fifteenth,",
+      "start": 571.062,
+      "end": 571.735
+    },
+    {
+      "word": "the",
+      "start": 571.909,
+      "end": 572.025
+    },
+    {
+      "word": "loose",
+      "start": 572.095,
+      "end": 572.339
+    },
+    {
+      "word": "material",
+      "start": 572.374,
+      "end": 572.803
+    },
+    {
+      "word": "that",
+      "start": 572.85,
+      "end": 572.954
+    },
+    {
+      "word": "had",
+      "start": 572.989,
+      "end": 573.082
+    },
+    {
+      "word": "built",
+      "start": 573.117,
+      "end": 573.314
+    },
+    {
+      "word": "the",
+      "start": 573.349,
+      "end": 573.419
+    },
+    {
+      "word": "island",
+      "start": 573.5,
+      "end": 573.755
+    },
+    {
+      "word": "was",
+      "start": 573.813,
+      "end": 573.929
+    },
+    {
+      "word": "gone,",
+      "start": 573.987,
+      "end": 574.464
+    },
+    {
+      "word": "so",
+      "start": 574.742,
+      "end": 574.87
+    },
+    {
+      "word": "the",
+      "start": 574.928,
+      "end": 574.998
+    },
+    {
+      "word": "vent",
+      "start": 575.044,
+      "end": 575.23
+    },
+    {
+      "word": "was",
+      "start": 575.276,
+      "end": 575.392
+    },
+    {
+      "word": "open",
+      "start": 575.462,
+      "end": 575.706
+    },
+    {
+      "word": "to",
+      "start": 575.752,
+      "end": 575.799
+    },
+    {
+      "word": "the",
+      "start": 575.845,
+      "end": 575.915
+    },
+    {
+      "word": "sea",
+      "start": 575.961,
+      "end": 576.17
+    },
+    {
+      "word": "and",
+      "start": 576.217,
+      "end": 576.298
+    },
+    {
+      "word": "the",
+      "start": 576.333,
+      "end": 576.402
+    },
+    {
+      "word": "sky",
+      "start": 576.437,
+      "end": 576.681
+    },
+    {
+      "word": "at",
+      "start": 576.728,
+      "end": 576.786
+    },
+    {
+      "word": "the",
+      "start": 576.82,
+      "end": 576.89
+    },
+    {
+      "word": "same",
+      "start": 576.936,
+      "end": 577.192
+    },
+    {
+      "word": "time.",
+      "start": 577.238,
+      "end": 577.668
+    },
+    {
+      "word": "Because",
+      "start": 578.481,
+      "end": 578.759
+    },
+    {
+      "word": "that",
+      "start": 578.794,
+      "end": 578.933
+    },
+    {
+      "word": "vent",
+      "start": 578.991,
+      "end": 579.189
+    },
+    {
+      "word": "sat",
+      "start": 579.235,
+      "end": 579.409
+    },
+    {
+      "word": "underwater,",
+      "start": 579.467,
+      "end": 580.199
+    },
+    {
+      "word": "the",
+      "start": 580.524,
+      "end": 580.628
+    },
+    {
+      "word": "plume",
+      "start": 580.687,
+      "end": 580.977
+    },
+    {
+      "word": "was",
+      "start": 581.0,
+      "end": 581.128
+    },
+    {
+      "word": "water-rich",
+      "start": 581.209,
+      "end": 581.766
+    },
+    {
+      "word": "in",
+      "start": 581.801,
+      "end": 581.859
+    },
+    {
+      "word": "a",
+      "start": 581.906,
+      "end": 581.929
+    },
+    {
+      "word": "way",
+      "start": 581.987,
+      "end": 582.126
+    },
+    {
+      "word": "that",
+      "start": 582.173,
+      "end": 582.3
+    },
+    {
+      "word": "subaerial",
+      "start": 582.393,
+      "end": 583.101
+    },
+    {
+      "word": "eruptions",
+      "start": 583.159,
+      "end": 583.624
+    },
+    {
+      "word": "are",
+      "start": 583.682,
+      "end": 583.833
+    },
+    {
+      "word": "not.",
+      "start": 583.879,
+      "end": 584.309
+    },
+    {
+      "word": "From",
+      "start": 585.423,
+      "end": 585.621
+    },
+    {
+      "word": "the",
+      "start": 585.667,
+      "end": 585.737
+    },
+    {
+      "word": "sea",
+      "start": 585.783,
+      "end": 585.969
+    },
+    {
+      "word": "surface",
+      "start": 586.027,
+      "end": 586.399
+    },
+    {
+      "word": "to",
+      "start": 586.433,
+      "end": 586.491
+    },
+    {
+      "word": "fifty-eight",
+      "start": 586.584,
+      "end": 587.026
+    },
+    {
+      "word": "kilometres",
+      "start": 587.049,
+      "end": 587.571
+    },
+    {
+      "word": "in",
+      "start": 587.606,
+      "end": 587.664
+    },
+    {
+      "word": "about",
+      "start": 587.699,
+      "end": 587.92
+    },
+    {
+      "word": "half",
+      "start": 587.978,
+      "end": 588.175
+    },
+    {
+      "word": "an",
+      "start": 588.221,
+      "end": 588.279
+    },
+    {
+      "word": "hour,",
+      "start": 588.314,
+      "end": 588.744
+    },
+    {
+      "word": "at",
+      "start": 588.918,
+      "end": 589.046
+    },
+    {
+      "word": "forty",
+      "start": 589.115,
+      "end": 589.371
+    },
+    {
+      "word": "metres",
+      "start": 589.417,
+      "end": 589.661
+    },
+    {
+      "word": "per",
+      "start": 589.707,
+      "end": 589.823
+    },
+    {
+      "word": "second",
+      "start": 589.881,
+      "end": 590.16
+    },
+    {
+      "word": "or",
+      "start": 590.206,
+      "end": 590.288
+    },
+    {
+      "word": "more.",
+      "start": 590.346,
+      "end": 590.729
+    },
+    {
+      "word": "That",
+      "start": 591.425,
+      "end": 591.634
+    },
+    {
+      "word": "pulse",
+      "start": 591.704,
+      "end": 592.006
+    },
+    {
+      "word": "did",
+      "start": 592.041,
+      "end": 592.18
+    },
+    {
+      "word": "not",
+      "start": 592.261,
+      "end": 592.435
+    },
+    {
+      "word": "stay",
+      "start": 592.493,
+      "end": 592.691
+    },
+    {
+      "word": "local.",
+      "start": 592.749,
+      "end": 593.225
+    },
+    {
+      "word": "It",
+      "start": 593.922,
+      "end": 594.061
+    },
+    {
+      "word": "wrapped",
+      "start": 594.096,
+      "end": 594.363
+    },
+    {
+      "word": "the",
+      "start": 594.398,
+      "end": 594.467
+    },
+    {
+      "word": "planet.",
+      "start": 594.502,
+      "end": 595.024
+    },
+    {
+      "word": "And",
+      "start": 595.976,
+      "end": 596.127
+    },
+    {
+      "word": "the",
+      "start": 596.174,
+      "end": 596.244
+    },
+    {
+      "word": "water",
+      "start": 596.278,
+      "end": 596.511
+    },
+    {
+      "word": "it",
+      "start": 596.569,
+      "end": 596.638
+    },
+    {
+      "word": "carried",
+      "start": 596.685,
+      "end": 596.987
+    },
+    {
+      "word": "went",
+      "start": 597.033,
+      "end": 597.219
+    },
+    {
+      "word": "into",
+      "start": 597.288,
+      "end": 597.474
+    },
+    {
+      "word": "the",
+      "start": 597.532,
+      "end": 597.602
+    },
+    {
+      "word": "stratosphere,",
+      "start": 597.637,
+      "end": 598.415
+    },
+    {
+      "word": "where",
+      "start": 598.624,
+      "end": 598.809
+    },
+    {
+      "word": "the",
+      "start": 598.844,
+      "end": 598.914
+    },
+    {
+      "word": "air",
+      "start": 598.972,
+      "end": 599.134
+    },
+    {
+      "word": "is",
+      "start": 599.192,
+      "end": 599.285
+    },
+    {
+      "word": "dry",
+      "start": 599.343,
+      "end": 599.68
+    },
+    {
+      "word": "and",
+      "start": 599.75,
+      "end": 599.831
+    },
+    {
+      "word": "there",
+      "start": 599.866,
+      "end": 600.005
+    },
+    {
+      "word": "is",
+      "start": 600.04,
+      "end": 600.11
+    },
+    {
+      "word": "almost",
+      "start": 600.156,
+      "end": 600.435
+    },
+    {
+      "word": "nothing",
+      "start": 600.516,
+      "end": 600.783
+    },
+    {
+      "word": "to",
+      "start": 600.829,
+      "end": 600.876
+    },
+    {
+      "word": "remove",
+      "start": 600.946,
+      "end": 601.213
+    },
+    {
+      "word": "it.",
+      "start": 601.247,
+      "end": 602.118
+    },
+    {
+      "word": "On",
+      "start": 602.468,
+      "end": 602.642
+    },
+    {
+      "word": "the",
+      "start": 602.677,
+      "end": 602.747
+    },
+    {
+      "word": "biggest",
+      "start": 602.805,
+      "end": 603.095
+    },
+    {
+      "word": "questions,",
+      "start": 603.141,
+      "end": 603.629
+    },
+    {
+      "word": "the",
+      "start": 603.652,
+      "end": 603.722
+    },
+    {
+      "word": "record",
+      "start": 603.792,
+      "end": 604.047
+    },
+    {
+      "word": "is",
+      "start": 604.082,
+      "end": 604.14
+    },
+    {
+      "word": "still",
+      "start": 604.175,
+      "end": 604.395
+    },
+    {
+      "word": "arguing",
+      "start": 604.477,
+      "end": 604.836
+    },
+    {
+      "word": "with",
+      "start": 604.871,
+      "end": 604.987
+    },
+    {
+      "word": "itself.",
+      "start": 605.034,
+      "end": 605.638
+    },
+    {
+      "word": "NASA",
+      "start": 606.45,
+      "end": 606.845
+    },
+    {
+      "word": "Langley",
+      "start": 606.915,
+      "end": 607.298
+    },
+    {
+      "word": "measures",
+      "start": 607.367,
+      "end": 607.669
+    },
+    {
+      "word": "the",
+      "start": 607.716,
+      "end": 607.785
+    },
+    {
+      "word": "top",
+      "start": 607.832,
+      "end": 608.099
+    },
+    {
+      "word": "at",
+      "start": 608.157,
+      "end": 608.227
+    },
+    {
+      "word": "fifty-eight",
+      "start": 608.308,
+      "end": 608.819
+    },
+    {
+      "word": "kilometres;",
+      "start": 608.853,
+      "end": 609.597
+    },
+    {
+      "word": "Carr's",
+      "start": 610.293,
+      "end": 610.641
+    },
+    {
+      "word": "stereo",
+      "start": 610.665,
+      "end": 611.059
+    },
+    {
+      "word": "work",
+      "start": 611.117,
+      "end": 611.315
+    },
+    {
+      "word": "gives",
+      "start": 611.361,
+      "end": 611.593
+    },
+    {
+      "word": "fifty",
+      "start": 611.663,
+      "end": 612.023
+    },
+    {
+      "word": "to",
+      "start": 612.069,
+      "end": 612.116
+    },
+    {
+      "word": "fifty-five.",
+      "start": 612.186,
+      "end": 612.998
+    },
+    {
+      "word": "The",
+      "start": 613.695,
+      "end": 613.811
+    },
+    {
+      "word": "Communications",
+      "start": 613.858,
+      "end": 614.589
+    },
+    {
+      "word": "Earth",
+      "start": 614.705,
+      "end": 614.937
+    },
+    {
+      "word": "and",
+      "start": 614.984,
+      "end": 615.053
+    },
+    {
+      "word": "Environment",
+      "start": 615.1,
+      "end": 615.599
+    },
+    {
+      "word": "study",
+      "start": 615.646,
+      "end": 615.994
+    },
+    {
+      "word": "assigns",
+      "start": 616.203,
+      "end": 616.632
+    },
+    {
+      "word": "the",
+      "start": 616.679,
+      "end": 616.749
+    },
+    {
+      "word": "eruption",
+      "start": 616.807,
+      "end": 617.178
+    },
+    {
+      "word": "a",
+      "start": 617.248,
+      "end": 617.283
+    },
+    {
+      "word": "Volcanic",
+      "start": 617.352,
+      "end": 617.898
+    },
+    {
+      "word": "Explosivity",
+      "start": 617.991,
+      "end": 618.687
+    },
+    {
+      "word": "Index",
+      "start": 618.757,
+      "end": 619.117
+    },
+    {
+      "word": "of",
+      "start": 619.187,
+      "end": 619.256
+    },
+    {
+      "word": "five",
+      "start": 619.326,
+      "end": 619.593
+    },
+    {
+      "word": "point",
+      "start": 619.639,
+      "end": 619.872
+    },
+    {
+      "word": "eight,",
+      "start": 619.93,
+      "end": 620.313
+    },
+    {
+      "word": "while",
+      "start": 620.696,
+      "end": 620.986
+    },
+    {
+      "word": "Henley",
+      "start": 621.033,
+      "end": 621.346
+    },
+    {
+      "word": "and",
+      "start": 621.381,
+      "end": 621.451
+    },
+    {
+      "word": "colleagues",
+      "start": 621.509,
+      "end": 621.892
+    },
+    {
+      "word": "call",
+      "start": 621.938,
+      "end": 622.124
+    },
+    {
+      "word": "it",
+      "start": 622.182,
+      "end": 622.252
+    },
+    {
+      "word": "six.",
+      "start": 622.321,
+      "end": 622.855
+    },
+    {
+      "word": "Henley's",
+      "start": 623.552,
+      "end": 623.947
+    },
+    {
+      "word": "team",
+      "start": 623.993,
+      "end": 624.225
+    },
+    {
+      "word": "also",
+      "start": 624.295,
+      "end": 624.585
+    },
+    {
+      "word": "rejects",
+      "start": 624.667,
+      "end": 625.015
+    },
+    {
+      "word": "the",
+      "start": 625.05,
+      "end": 625.119
+    },
+    {
+      "word": "long-assumed",
+      "start": 625.189,
+      "end": 625.828
+    },
+    {
+      "word": "fuel-coolant",
+      "start": 625.897,
+      "end": 626.547
+    },
+    {
+      "word": "mechanism,",
+      "start": 626.594,
+      "end": 627.267
+    },
+    {
+      "word": "favouring",
+      "start": 627.592,
+      "end": 627.987
+    },
+    {
+      "word": "gas",
+      "start": 628.056,
+      "end": 628.3
+    },
+    {
+      "word": "sealing",
+      "start": 628.37,
+      "end": 628.683
+    },
+    {
+      "word": "and",
+      "start": 628.741,
+      "end": 628.834
+    },
+    {
+      "word": "hydraulic",
+      "start": 628.904,
+      "end": 629.345
+    },
+    {
+      "word": "fracture.",
+      "start": 629.392,
+      "end": 629.937
+    },
+    {
+      "word": "Three",
+      "start": 630.541,
+      "end": 630.808
+    },
+    {
+      "word": "disagreements,",
+      "start": 630.854,
+      "end": 631.632
+    },
+    {
+      "word": "all",
+      "start": 631.714,
+      "end": 631.911
+    },
+    {
+      "word": "published,",
+      "start": 631.969,
+      "end": 632.491
+    },
+    {
+      "word": "none",
+      "start": 632.642,
+      "end": 632.851
+    },
+    {
+      "word": "settled.",
+      "start": 632.898,
+      "end": 633.374
+    },
+    {
+      "word": "What",
+      "start": 634.07,
+      "end": 634.245
+    },
+    {
+      "word": "is",
+      "start": 634.291,
+      "end": 634.361
+    },
+    {
+      "word": "settled",
+      "start": 634.407,
+      "end": 634.744
+    },
+    {
+      "word": "is",
+      "start": 634.79,
+      "end": 634.872
+    },
+    {
+      "word": "where",
+      "start": 634.93,
+      "end": 635.15
+    },
+    {
+      "word": "this",
+      "start": 635.185,
+      "end": 635.301
+    },
+    {
+      "word": "volcano",
+      "start": 635.359,
+      "end": 635.777
+    },
+    {
+      "word": "sits,",
+      "start": 635.87,
+      "end": 636.358
+    },
+    {
+      "word": "and",
+      "start": 636.381,
+      "end": 636.532
+    },
+    {
+      "word": "what",
+      "start": 636.59,
+      "end": 636.741
+    },
+    {
+      "word": "it",
+      "start": 636.776,
+      "end": 636.845
+    },
+    {
+      "word": "belongs",
+      "start": 636.88,
+      "end": 637.263
+    },
+    {
+      "word": "to.",
+      "start": 637.31,
+      "end": 637.693
+    },
+    {
+      "word": "Hunga",
+      "start": 638.389,
+      "end": 638.738
+    },
+    {
+      "word": "Tonga\u2013Hunga",
+      "start": 638.807,
+      "end": 640.073
+    },
+    {
+      "word": "Ha'apai",
+      "start": 640.131,
+      "end": 640.665
+    },
+    {
+      "word": "is",
+      "start": 640.874,
+      "end": 641.036
+    },
+    {
+      "word": "one",
+      "start": 641.094,
+      "end": 641.211
+    },
+    {
+      "word": "of",
+      "start": 641.234,
+      "end": 641.292
+    },
+    {
+      "word": "twelve",
+      "start": 641.362,
+      "end": 641.721
+    },
+    {
+      "word": "confirmed",
+      "start": 641.756,
+      "end": 642.209
+    },
+    {
+      "word": "submarine",
+      "start": 642.29,
+      "end": 642.743
+    },
+    {
+      "word": "volcanoes",
+      "start": 642.778,
+      "end": 643.3
+    },
+    {
+      "word": "along",
+      "start": 643.37,
+      "end": 643.637
+    },
+    {
+      "word": "the",
+      "start": 643.683,
+      "end": 643.753
+    },
+    {
+      "word": "Tofua",
+      "start": 643.811,
+      "end": 644.241
+    },
+    {
+      "word": "Arc,",
+      "start": 644.31,
+      "end": 644.705
+    },
+    {
+      "word": "according",
+      "start": 645.03,
+      "end": 645.425
+    },
+    {
+      "word": "to",
+      "start": 645.471,
+      "end": 645.518
+    },
+    {
+      "word": "the",
+      "start": 645.564,
+      "end": 645.634
+    },
+    {
+      "word": "Smithsonian's",
+      "start": 645.657,
+      "end": 646.354
+    },
+    {
+      "word": "Global",
+      "start": 646.412,
+      "end": 646.771
+    },
+    {
+      "word": "Volcanism",
+      "start": 646.83,
+      "end": 647.294
+    },
+    {
+      "word": "Program,",
+      "start": 647.352,
+      "end": 647.921
+    },
+    {
+      "word": "a",
+      "start": 648.362,
+      "end": 648.432
+    },
+    {
+      "word": "chain",
+      "start": 648.513,
+      "end": 648.768
+    },
+    {
+      "word": "built",
+      "start": 648.838,
+      "end": 649.047
+    },
+    {
+      "word": "where",
+      "start": 649.082,
+      "end": 649.221
+    },
+    {
+      "word": "the",
+      "start": 649.244,
+      "end": 649.314
+    },
+    {
+      "word": "Pacific",
+      "start": 649.349,
+      "end": 649.778
+    },
+    {
+      "word": "Plate",
+      "start": 649.837,
+      "end": 650.092
+    },
+    {
+      "word": "slides",
+      "start": 650.127,
+      "end": 650.51
+    },
+    {
+      "word": "beneath",
+      "start": 650.568,
+      "end": 650.847
+    },
+    {
+      "word": "the",
+      "start": 650.881,
+      "end": 650.963
+    },
+    {
+      "word": "Indo-Australian",
+      "start": 651.044,
+      "end": 651.903
+    },
+    {
+      "word": "Plate.",
+      "start": 651.95,
+      "end": 652.379
+    },
+    {
+      "word": "Twelve",
+      "start": 653.076,
+      "end": 653.424
+    },
+    {
+      "word": "of",
+      "start": 653.459,
+      "end": 653.517
+    },
+    {
+      "word": "them,",
+      "start": 653.563,
+      "end": 653.854
+    },
+    {
+      "word": "mostly",
+      "start": 653.97,
+      "end": 654.283
+    },
+    {
+      "word": "underwater,",
+      "start": 654.33,
+      "end": 654.933
+    },
+    {
+      "word": "mostly",
+      "start": 655.026,
+      "end": 655.363
+    },
+    {
+      "word": "unmonitored.",
+      "start": 655.421,
+      "end": 656.129
+    },
+    {
+      "word": "And",
+      "start": 656.826,
+      "end": 656.965
+    },
+    {
+      "word": "scientists",
+      "start": 657.046,
+      "end": 657.627
+    },
+    {
+      "word": "expected",
+      "start": 657.685,
+      "end": 658.126
+    },
+    {
+      "word": "the",
+      "start": 658.161,
+      "end": 658.23
+    },
+    {
+      "word": "water",
+      "start": 658.277,
+      "end": 658.521
+    },
+    {
+      "word": "from",
+      "start": 658.567,
+      "end": 658.695
+    },
+    {
+      "word": "one",
+      "start": 658.788,
+      "end": 658.904
+    },
+    {
+      "word": "of",
+      "start": 658.939,
+      "end": 658.997
+    },
+    {
+      "word": "them",
+      "start": 659.043,
+      "end": 659.182
+    },
+    {
+      "word": "to",
+      "start": 659.24,
+      "end": 659.322
+    },
+    {
+      "word": "linger",
+      "start": 659.403,
+      "end": 659.658
+    },
+    {
+      "word": "up",
+      "start": 659.716,
+      "end": 659.798
+    },
+    {
+      "word": "there",
+      "start": 659.844,
+      "end": 660.007
+    },
+    {
+      "word": "for",
+      "start": 660.041,
+      "end": 660.158
+    },
+    {
+      "word": "years,",
+      "start": 660.239,
+      "end": 660.75
+    },
+    {
+      "word": "drifting.",
+      "start": 660.866,
+      "end": 661.446
+    },
+    {
+      "word": "You",
+      "start": 662.05,
+      "end": 662.189
+    },
+    {
+      "word": "cannot",
+      "start": 662.236,
+      "end": 662.503
+    },
+    {
+      "word": "see",
+      "start": 662.561,
+      "end": 662.747
+    },
+    {
+      "word": "it.",
+      "start": 662.781,
+      "end": 663.037
+    },
+    {
+      "word": "No",
+      "start": 663.641,
+      "end": 663.78
+    },
+    {
+      "word": "cloud,",
+      "start": 663.85,
+      "end": 664.349
+    },
+    {
+      "word": "no",
+      "start": 664.558,
+      "end": 664.685
+    },
+    {
+      "word": "colour,",
+      "start": 664.767,
+      "end": 665.173
+    },
+    {
+      "word": "no",
+      "start": 665.324,
+      "end": 665.463
+    },
+    {
+      "word": "smell.",
+      "start": 665.545,
+      "end": 666.055
+    },
+    {
+      "word": "But",
+      "start": 666.752,
+      "end": 666.903
+    },
+    {
+      "word": "the",
+      "start": 666.938,
+      "end": 667.007
+    },
+    {
+      "word": "next",
+      "start": 667.089,
+      "end": 667.333
+    },
+    {
+      "word": "clear",
+      "start": 667.402,
+      "end": 667.681
+    },
+    {
+      "word": "evening,",
+      "start": 667.762,
+      "end": 668.261
+    },
+    {
+      "word": "look",
+      "start": 668.435,
+      "end": 668.621
+    },
+    {
+      "word": "up",
+      "start": 668.668,
+      "end": 668.749
+    },
+    {
+      "word": "past",
+      "start": 668.807,
+      "end": 669.062
+    },
+    {
+      "word": "the",
+      "start": 669.097,
+      "end": 669.167
+    },
+    {
+      "word": "weather",
+      "start": 669.213,
+      "end": 669.446
+    },
+    {
+      "word": "and",
+      "start": 669.48,
+      "end": 669.55
+    },
+    {
+      "word": "past",
+      "start": 669.608,
+      "end": 669.852
+    },
+    {
+      "word": "the",
+      "start": 669.887,
+      "end": 669.956
+    },
+    {
+      "word": "aeroplanes.",
+      "start": 670.003,
+      "end": 670.734
+    },
+    {
+      "word": "Some",
+      "start": 671.431,
+      "end": 671.628
+    },
+    {
+      "word": "of",
+      "start": 671.663,
+      "end": 671.721
+    },
+    {
+      "word": "that",
+      "start": 671.768,
+      "end": 671.906
+    },
+    {
+      "word": "thin,",
+      "start": 671.988,
+      "end": 672.29
+    },
+    {
+      "word": "dry",
+      "start": 672.336,
+      "end": 672.626
+    },
+    {
+      "word": "air",
+      "start": 672.708,
+      "end": 672.882
+    },
+    {
+      "word": "that",
+      "start": 672.928,
+      "end": 673.044
+    },
+    {
+      "word": "filters",
+      "start": 673.114,
+      "end": 673.497
+    },
+    {
+      "word": "ultraviolet",
+      "start": 673.613,
+      "end": 674.228
+    },
+    {
+      "word": "light",
+      "start": 674.298,
+      "end": 674.519
+    },
+    {
+      "word": "before",
+      "start": 674.565,
+      "end": 674.809
+    },
+    {
+      "word": "it",
+      "start": 674.844,
+      "end": 674.89
+    },
+    {
+      "word": "reaches",
+      "start": 674.948,
+      "end": 675.215
+    },
+    {
+      "word": "your",
+      "start": 675.262,
+      "end": 675.378
+    },
+    {
+      "word": "skin",
+      "start": 675.424,
+      "end": 675.738
+    },
+    {
+      "word": "may",
+      "start": 676.063,
+      "end": 676.249
+    },
+    {
+      "word": "still",
+      "start": 676.307,
+      "end": 676.55
+    },
+    {
+      "word": "hold",
+      "start": 676.608,
+      "end": 676.783
+    },
+    {
+      "word": "seawater",
+      "start": 676.852,
+      "end": 677.27
+    },
+    {
+      "word": "that",
+      "start": 677.305,
+      "end": 677.41
+    },
+    {
+      "word": "was",
+      "start": 677.433,
+      "end": 677.537
+    },
+    {
+      "word": "flash-boiled",
+      "start": 677.607,
+      "end": 678.292
+    },
+    {
+      "word": "out",
+      "start": 678.35,
+      "end": 678.478
+    },
+    {
+      "word": "of",
+      "start": 678.501,
+      "end": 678.547
+    },
+    {
+      "word": "the",
+      "start": 678.582,
+      "end": 678.652
+    },
+    {
+      "word": "Pacific",
+      "start": 678.687,
+      "end": 679.047
+    },
+    {
+      "word": "Ocean",
+      "start": 679.116,
+      "end": 679.43
+    },
+    {
+      "word": "by",
+      "start": 679.755,
+      "end": 679.929
+    },
+    {
+      "word": "a",
+      "start": 679.987,
+      "end": 680.01
+    },
+    {
+      "word": "volcano",
+      "start": 680.068,
+      "end": 680.521
+    },
+    {
+      "word": "that",
+      "start": 680.579,
+      "end": 680.695
+    },
+    {
+      "word": "no",
+      "start": 680.776,
+      "end": 680.916
+    },
+    {
+      "word": "longer",
+      "start": 680.997,
+      "end": 681.252
+    },
+    {
+      "word": "exists",
+      "start": 681.311,
+      "end": 681.647
+    },
+    {
+      "word": "above",
+      "start": 681.682,
+      "end": 681.891
+    },
+    {
+      "word": "the",
+      "start": 681.914,
+      "end": 681.984
+    },
+    {
+      "word": "surface.",
+      "start": 682.019,
+      "end": 682.808
+    }
+  ]
+}

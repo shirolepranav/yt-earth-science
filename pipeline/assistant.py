@@ -24,7 +24,7 @@ from __future__ import annotations
 
 import re
 
-from . import brain, chat, publish
+from . import brain, chat, footage, publish
 from .common import RUNS_DIR, Run, latest_run_id, load_persona, log, resolve_run
 
 # Where a run is, from the chat's point of view. Kept in the run's state.json
@@ -34,7 +34,7 @@ STAGES = ("topics", "script", "building", "review", "published", "cancelled")
 # Intents this module finishes on the spot. Everything else is handed to
 # tools/chat_job.py by the studio.
 FAST = {"status", "question", "unclear", "pick_thumbnail", "set_title", "set_tags",
-        "set_description", "set_pinned_comment", "cancel"}
+        "set_description", "set_pinned_comment", "cancel", "footage"}
 
 
 def active_run() -> Run | None:
@@ -109,6 +109,27 @@ def present_script(run: Run) -> None:
 
 
 # ---------------------------------------------------------------------------
+# Gate 2b - the footage, before the render spends 20-40 minutes on it
+# ---------------------------------------------------------------------------
+
+def present_footage(run: Run) -> None:
+    """Every shot against the script, with a swap for any piece of footage."""
+    rows = footage.build(run)
+    rendered = run.is_done("render")
+    if not rendered:
+        run.save_state(chat_stage="footage")
+    chat.send_footage(
+        run.path("footage.json"),
+        f"🎞 <b>Footage</b> — {chat.escape(footage.summary(rows))}\n\n"
+        "Open the list to see each shot next to its line of script and why it was picked. "
+        "Swap any shot for other stock or an AI image, as many as you like"
+        + (" — the video is re-rendered after a swap, redrawing only the changed parts." if rendered
+           else ", then render."),
+        buttons=None if rendered else chat.keyboard([("🎬 Render", "cmd:render")]),
+    )
+
+
+# ---------------------------------------------------------------------------
 # Gate 3 - the finished video
 # ---------------------------------------------------------------------------
 
@@ -153,7 +174,7 @@ def present_review(run: Run) -> None:
         "Watch it, then tell me anything to change — the title, description, tags, "
         "pinned comment, thumbnail, or a stage to redo.",
         buttons=chat.keyboard(
-            [("🔁 Redo thumbnail", "redo:thumbnail"), ("🔁 Redo footage", "redo:stock")],
+            [("🔁 Redo thumbnail", "redo:thumbnail"), ("🎞 Footage", "cmd:footage")],
             [("✅ Accept & upload", "cmd:publish")],
         ),
     )
@@ -316,6 +337,11 @@ def route(text: str) -> dict:
         do_edit_metadata(run, intent, args)
     elif intent == "cancel":
         do_cancel(run)
+    elif intent == "footage":
+        if run and run.path("storyboard.json").exists() and run.is_done("visuals"):
+            present_footage(run)
+        else:
+            chat.send("There's no footage yet — it's ready once the build reaches the render.")
     elif intent == "question":
         do_question(run, text)
     elif intent == "unclear":
@@ -331,14 +357,14 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="Handle one chat message.")
     parser.add_argument("--text", help="The message you sent.")
-    parser.add_argument("--present", choices=["topics", "script", "review"],
+    parser.add_argument("--present", choices=["topics", "script", "footage", "review"],
                         help="Post a gate message instead of routing a reply.")
     parser.add_argument("--run", default="latest")
     args = parser.parse_args()
 
     if args.present:
         target = resolve_run(args.run)
-        {"topics": present_topics, "script": present_script,
+        {"topics": present_topics, "script": present_script, "footage": present_footage,
          "review": present_review}[args.present](target)
     elif args.text:
         decision = route(args.text)

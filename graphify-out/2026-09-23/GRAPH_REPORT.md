@@ -1,29 +1,29 @@
-# Graph Report - yt-deep-earth  (2026-09-23)
+# Graph Report - yt-deep-earth  (2026-09-21)
 
 ## Corpus Check
-- 107 files · ~131,640 words
+- 105 files · ~123,847 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 785 nodes · 1787 edges · 59 communities (56 shown, 3 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 31 edges (avg confidence: 0.67)
+- 763 nodes · 1714 edges · 51 communities (48 shown, 3 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 31 edges (avg confidence: 0.68)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `20e69af6`
+- Built from commit: `4d813aff`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - MainVideo.tsx
 - storyboard.py
-- sources_from_dossier
+- check_storyboard
 - resolve_run
-- .read_text
+- narrate.py
 - captions.py
 - Deep Earth — automated video pipeline
-- stock.py
-- secret
+- log
+- common.py
 - dependencies
 - charts3d.py
 - compilerOptions
@@ -35,46 +35,38 @@
 - youtube_auth.py
 - CLAUDE.md
 - assets.d.ts
-- Run
-- common.py
+- publish.py
+- brain.py
 - audio.py
 - Surface-to-space atmospheric waves from Hunga Tonga–Hunga Ha’apai eruption
 - assistant.py
-- visuals.py
-- topics.py
+- Run
 - chat.py
 - Surface-to-space atmospheric waves from Hunga Tonga–Hunga Ha’apai eruption
 - chat_job.py
-- footage.py
+- build_cues
 - generate
 - load_config
 - dossier.md
 - Stereo Plume Height and Motion Retrievals for the Record-Setting Hunga Tonga-Hunga Ha'apai Eruption of 15 January 2022
 - Blueprint: a local chat UI that drives a long-running, GPU-heavy content pipeline
-- render.py
 - Upload packet — run `2026-09-18-2239`
 - Tonga Eruption Blasted Unprecedented Amount of Water Into Stratosphere
 - The unexpected radiative impact of the Hunga Tonga eruption of 15th January 2022
 - Suggested Searches
 - Abstract
-- log
-- script.py
-- check_footage_and_segments
-- revise
-- understand
-- match_literally
 
 ## God Nodes (most connected - your core abstractions)
-1. `Run` - 93 edges
+1. `Run` - 89 edges
 2. `log()` - 86 edges
-3. `resolve_run()` - 39 edges
-4. `load_config()` - 37 edges
+3. `resolve_run()` - 36 edges
+4. `load_config()` - 35 edges
 5. `secret()` - 29 edges
 6. `Surface-to-space atmospheric waves from Hunga Tonga–Hunga Ha’apai eruption` - 24 edges
 7. `with_retries()` - 23 edges
 8. `has_secret()` - 22 edges
 9. `chat_json()` - 22 edges
-10. `send()` - 21 edges
+10. `send()` - 19 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `do_topics()` --calls--> `present_topics()`  [EXTRACTED]
@@ -83,59 +75,59 @@
   tools/chat_job.py → pipeline/assistant.py
 - `do_revise()` --calls--> `present_script()`  [EXTRACTED]
   tools/chat_job.py → pipeline/assistant.py
-- `do_build()` --calls--> `present_footage()`  [EXTRACTED]
+- `do_build()` --calls--> `present_review()`  [EXTRACTED]
   tools/chat_job.py → pipeline/assistant.py
-- `do_swap()` --calls--> `present_footage()`  [EXTRACTED]
-  tools/chat_job.py → pipeline/assistant.py
+- `do_build()` --calls--> `escape()`  [EXTRACTED]
+  tools/chat_job.py → pipeline/chat.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (59 total, 3 thin omitted)
+## Communities (51 total, 3 thin omitted)
 
 ### Community 0 - "MainVideo.tsx"
 Cohesion: 0.07
-Nodes (54): Bars3D(), BigNumber(), Camera, ChartStage(), decimalsOf(), formatValue(), Label(), project() (+46 more)
+Nodes (53): Bars3D(), BigNumber(), Camera, ChartStage(), decimalsOf(), formatValue(), Label(), project() (+45 more)
 
 ### Community 1 - "storyboard.py"
 Cohesion: 0.16
 Nodes (20): assemble(), figures_supported(), find_quote(), find_words(), normalise(), STAGE 6 - The storyboard. Plans every shot of the video against the REAL…, Every digit run in `text` must appear in the dossier (commas ignored)., Locate `quote` verbatim (whitespace/case-insensitive) and return (before,… (+12 more)
 
-### Community 2 - "sources_from_dossier"
-Cohesion: 0.40
-Nodes (5): clean_page_text(), clean_title(), Scraped pages arrive with markdown images, links, bare URLs and heading marks -…, The research dossier already holds each source's title, URL and text., sources_from_dossier()
+### Community 2 - "check_storyboard"
+Cohesion: 0.18
+Nodes (11): fill(), Best clips first, scoring at least MIN_SCORE, until they cover `length`. One…, clean_page_text(), clean_title(), Group whisper's words into sentences, keeping word indices for snapping., Scraped pages arrive with markdown images, links, bare URLs and heading marks -…, The research dossier already holds each source's title, URL and text., sentences_from_words() (+3 more)
 
 ### Community 3 - "resolve_run"
-Cohesion: 0.26
-Nodes (13): Turn a --run argument into a Run object. Accepts an explicit id, the word…, resolve_run(), Deep Earth - automated YouTube pipeline. Each module in this package does…, cmd_build(), cmd_choose(), cmd_stage(), cmd_topics(), cmd_write() (+5 more)
+Cohesion: 0.18
+Nodes (17): new_run_id(), A sortable, human-readable id like '2026-08-30-1432'., Turn a --run argument into a Run object. Accepts an explicit id, the word…, resolve_run(), Deep Earth - automated YouTube pipeline. Each module in this package does…, cmd_build(), cmd_choose(), cmd_stage() (+9 more)
 
-### Community 4 - ".read_text"
-Cohesion: 0.16
-Nodes (8): die(), Any, Path, Read the run's state file (an empty dict on a brand-new run)., Merge some values into the state file and write it back., Record that a stage finished, so `--resume` can skip it next time., Forget every finished stage except the ones named. Used when something upstream…, Print an error and stop with a non-zero exit code (which fails the CI job).
+### Community 4 - "narrate.py"
+Cohesion: 0.15
+Nodes (20): chunk_text(), _gemini_pcm(), generate(), median_pitch(), Path, _qwen_pcm(), STAGE 4 - Narration. Turns script.txt into one narration WAV. Long scripts have…, Speechify streams raw 16-bit PCM directly when asked via output_format. (+12 more)
 
 ### Community 5 - "captions.py"
-Cohesion: 0.21
-Nodes (11): _fits(), _fix_orphans(), generate(), STAGE - Subtitles. Turns the word-level timings from the align stage into a…, Deal with a stranded tail like "sea." alone on screen. Working on word lists…, Write output/subtitles.srt from words.json., Split a cue across at most two lines, keeping them a similar length. Greedy…, Would this cue text wrap into the two-line box without overflowing? Counting… (+3 more)
+Cohesion: 0.27
+Nodes (9): _fits(), _fix_orphans(), STAGE - Subtitles. Turns the word-level timings from the align stage into a…, Deal with a stranded tail like "sea." alone on screen. Working on word lists…, Split a cue across at most two lines, keeping them a similar length. Greedy…, Would this cue text wrap into the two-line box without overflowing? Counting…, The words of a cue, joined back into a line., _text_of() (+1 more)
 
 ### Community 6 - "Deep Earth — automated video pipeline"
 Cohesion: 0.12
 Nodes (15): Cost, Deep Earth — automated video pipeline, Running a stage by hand, The idea that makes it work: planning shots after the narration exists, The loop, What's in here, What you can say, Why there are three gates (+7 more)
 
-### Community 7 - "stock.py"
-Cohesion: 0.09
-Nodes (37): Lock, build_for_run(), _commons_turn(), contact_sheet(), _credit(), download(), fetch_for_shot(), fill() (+29 more)
+### Community 7 - "log"
+Cohesion: 0.08
+Nodes (49): Lock, log(), Print a timestamped message that flushes immediately. Flushing matters: without…, has_vision(), Whether the configured vision provider has a key to call., ensure_dependencies(), Path, STAGE 10 - Render. Hands the shot list to Remotion, which draws every frame in… (+41 more)
 
-### Community 8 - "secret"
-Cohesion: 0.06
-Nodes (63): Exception, permanent_if_hopeless(), PermanentError, A failure no amount of retrying will fix - an empty balance, a bad key. Raised…, Re-raise as PermanentError when the response says retrying is pointless., Run `fn`, retrying on failure with an increasing wait between tries. The wait…, Fetch an API key from the environment. Args: name: the environment variable…, secret() (+55 more)
+### Community 8 - "common.py"
+Cohesion: 0.05
+Nodes (75): Exception, audio_duration_seconds(), generate(), Path, STAGE 5 - Word-level timing. Produces a JSON file listing every spoken word…, transcribe_with_whisper(), has_secret(), load_persona() (+67 more)
 
 ### Community 9 - "dependencies"
 Cohesion: 0.06
 Nodes (30): react, react-dom, @react-three/fiber, remotion, @remotion/cli, dependencies, react, react-dom (+22 more)
 
 ### Community 10 - "charts3d.py"
-Cohesion: 0.21
-Nodes (17): astra(), build_for_run(), build_one(), chart_spec(), compile_errors(), contract_errors(), extract_code(), key_for() (+9 more)
+Cohesion: 0.24
+Nodes (15): astra(), build_for_run(), build_one(), chart_spec(), compile_errors(), contract_errors(), extract_code(), key_for() (+7 more)
 
 ### Community 11 - "compilerOptions"
 Cohesion: 0.12
@@ -154,20 +146,20 @@ Cohesion: 0.32
 Nodes (7): main(), make_scene(), make_silence(), Image, Path, Build the assets the Remotion demo needs, without calling any paid API. Run…, A dark scene with a lit ground plane and an orange glow, plus a matching depth…
 
 ### Community 15 - "selftest.py"
-Cohesion: 0.11
-Nodes (27): build_cues(), Group timed words into subtitle cues. Each word is `{"word": ..., "start": ...,…, Render cues as SubRip (.srt) text., Seconds -> the `HH:MM:SS,mmm` format SRT requires., _timestamp(), to_srt(), allocate(), Pick which AI shots get motion. Returns (shot ids, estimated USD). Every AI… (+19 more)
+Cohesion: 0.13
+Nodes (22): match_literally(), Catch the handful of messages that have exactly one possible meaning., allocate(), plate_prompt(), The scene behind a text card: the beat's own prompt if it describes a scene,…, Pick which AI shots get motion. Returns (shot ids, estimated USD). Every AI…, check_allocator(), check_button_routing() (+14 more)
 
 ### Community 16 - "embed_fonts.py"
 Cohesion: 0.50
 Nodes (4): main(), Path, Embed the Remotion fonts in the JS bundle as base64, subset to Latin. Why:…, subset_font()
 
-### Community 31 - "Run"
-Cohesion: 0.14
-Nodes (30): Everything about one video-in-progress lives in `runs/<run_id>/`. Why a folder…, Run, apply_metadata(), apply_thumbnail(), build_client(), build_description(), build_packet(), build_snippet() (+22 more)
+### Community 31 - "publish.py"
+Cohesion: 0.12
+Nodes (30): apply_metadata(), apply_thumbnail(), build_client(), build_description(), build_packet(), build_snippet(), chosen_thumbnail(), delete_video() (+22 more)
 
-### Community 32 - "common.py"
-Cohesion: 0.25
-Nodes (6): Turning what you typed into something the pipeline can do. You shouldn't have…, latest_run_id(), new_run_id(), Shared plumbing used by every other module. Nothing in here is specific to…, A sortable, human-readable id like '2026-08-30-1432'., The most recent run folder, so you can type `--run latest`. Only considers…
+### Community 32 - "brain.py"
+Cohesion: 0.29
+Nodes (7): ask_model(), extract_fenced_script(), Turning what you typed into something the pipeline can do. You shouldn't have…, Pull a pasted script out of a ``` code block, if there is one. Takes the…, Send the message to DeepSeek and get a structured intent back., Message in, `{"intent", "args", "reply"}` out. Never raises., understand()
 
 ### Community 33 - "audio.py"
 Cohesion: 0.43
@@ -181,36 +173,32 @@ Nodes (32): Abstract, Abstract, Bulletin Report for March 2022 (BGVN 47:03) Cite
 Cohesion: 0.15
 Nodes (26): active_run(), do_cancel(), do_edit_metadata(), do_pick_thumbnail(), do_question(), do_status(), present_script(), present_topics() (+18 more)
 
-### Community 36 - "visuals.py"
-Cohesion: 0.11
-Nodes (40): has_secret(), True if a key is set. Used to decide whether an optional step can run., data_uri(), download(), fal_run(), generate_image(), _headers(), image_args() (+32 more)
-
-### Community 37 - "topics.py"
-Cohesion: 0.16
-Nodes (16): load_persona(), load_prompt(), Read config/persona.md - pasted into every script-writing prompt., Read a prompt template from the prompts/ folder. Prompts live in their own…, find_outliers(), find_questions(), find_trends(), format_for_humans() (+8 more)
+### Community 36 - "Run"
+Cohesion: 0.08
+Nodes (46): die(), Any, Path, Everything about one video-in-progress lives in `runs/<run_id>/`. Why a folder…, Read the run's state file (an empty dict on a brand-new run)., Merge some values into the state file and write it back., Record that a stage finished, so `--resume` can skip it next time., Forget every finished stage except the ones named. Used when something upstream… (+38 more)
 
 ### Community 38 - "chat.py"
-Cohesion: 0.18
-Nodes (19): present_review(), Post the video to watch here, the thumbnails and every upload detail., _append(), edit(), enabled(), history(), Path, Talking to you in the local studio app. Everything the pipeline says to you… (+11 more)
+Cohesion: 0.19
+Nodes (17): present_review(), Post the video to watch here, the thumbnails and every upload detail., _append(), edit(), enabled(), history(), Path, Talking to you in the local studio app. Everything the pipeline says to you… (+9 more)
 
 ### Community 39 - "Surface-to-space atmospheric waves from Hunga Tonga–Hunga Ha’apai eruption"
 Cohesion: 0.11
 Nodes (18): Abstract, Cathryn N Mitchell, Cathy Clerbaux, Cora E Randall, Corwin J Wright, Fred Prata, Jia Yue, Justin Carstens (+10 more)
 
 ### Community 40 - "chat_job.py"
-Cohesion: 0.15
-Nodes (19): log_path(), Where the studio sends background jobs' output, for error messages., dispatch(), do_build(), do_pick(), do_publish(), do_render(), do_revise() (+11 more)
+Cohesion: 0.17
+Nodes (15): log_path(), Where the studio sends background jobs' output, for error messages., progress(), A one-line 'still working' note. Called between build stages., dispatch(), do_build(), do_pick(), do_revise() (+7 more)
 
-### Community 41 - "footage.py"
-Cohesion: 0.25
-Nodes (10): present_footage(), Every shot against the script, with a swap for any piece of footage., build(), data_label(), media(), The footage list - every shot of the video, in script order, with where its…, A file as something the page can show., summary() (+2 more)
+### Community 41 - "build_cues"
+Cohesion: 0.22
+Nodes (10): build_cues(), generate(), Group timed words into subtitle cues. Each word is `{"word": ..., "start": ...,…, Render cues as SubRip (.srt) text., Write output/subtitles.srt from words.json., Seconds -> the `HH:MM:SS,mmm` format SRT requires., _timestamp(), to_srt() (+2 more)
 
 ### Community 42 - "generate"
-Cohesion: 0.20
-Nodes (10): cover_figures(), generate(), place_missing_charts(), plan_beats(), Group whisper's words into sentences, keeping word indices for snapping., One extra call for charts the chunked passes left unplaced - or placed before…, One extra call for the receipts the chunked passes didn't plan. Asked for…, Give every spoken statistic a visual, where one isn't planned already. The… (+2 more)
+Cohesion: 0.29
+Nodes (7): cover_figures(), generate(), place_missing_charts(), One extra call for charts the chunked passes left unplaced - or placed before…, One extra call for the receipts the chunked passes didn't plan. Asked for…, Give every spoken statistic a visual, where one isn't planned already. The…, top_up_evidence()
 
 ### Community 43 - "load_config"
-Cohesion: 0.23
+Cohesion: 0.22
 Nodes (12): load_brand(), load_config(), Read config/channel.json - the settings for the whole pipeline., Read config/brand.json - colours and fonts., build(), STAGE 9 - The shot list. The join between planning and rendering. The…, One planned stock shot as consecutive clips. Clips that together fall short of…, stock_clips() (+4 more)
 
 ### Community 44 - "dossier.md"
@@ -224,10 +212,6 @@ Nodes (10): Abstract, Eruptive column and water phase transition, Introduction, 
 ### Community 46 - "Blueprint: a local chat UI that drives a long-running, GPU-heavy content pipeline"
 Cohesion: 0.22
 Nodes (8): Blueprint: a local chat UI that drives a long-running, GPU-heavy content pipeline, Components (keep it to these five), Every run must output, Reference implementation, Rules that save pain, The gates, Upload (YouTube Data API v3, OAuth refresh token), Why local, not cloud
-
-### Community 47 - "render.py"
-Cohesion: 0.33
-Nodes (8): code_hash(), ensure_dependencies(), Path, STAGE 10 - Render. Hands the shot list to Remotion, which draws every frame in…, Every file the render draws with: a changed component invalidates every segment., Copy this run's assets where the browser can reach them. Returns the path to…, render(), stage_assets()
 
 ### Community 48 - "Upload packet — run `2026-09-18-2239`"
 Cohesion: 0.22
@@ -249,30 +233,6 @@ Nodes (5): Highlights, How 2 US, European Satellites Are Studying Hurricanes Dur
 Cohesion: 0.50
 Nodes (4): Abstract, Perturbations in stratospheric aerosol evolution due to the water-rich plume of the 2022 Hunga-Tonga eruption, Strong persistent cooling of the stratosphere after the Hunga eruption, Surface-to-space atmospheric waves from Hunga Tonga–Hunga Ha’apai eruption
 
-### Community 53 - "log"
-Cohesion: 0.43
-Nodes (7): audio_duration_seconds(), generate(), Path, STAGE 5 - Word-level timing. Produces a JSON file listing every spoken word…, transcribe_with_whisper(), log(), Print a timestamped message that flushes immediately. Flushing matters: without…
-
-### Community 54 - "script.py"
-Cohesion: 0.38
-Nodes (6): first_seconds_of(), generate(), pick_shape(), STAGE 3 - The script chain. Five separate model calls, each doing one job: 1.…, Choose a structure from the rotation, based on the run id. Using the id rather…, Roughly the opening N seconds of narration. Spoken English runs about 150 words…
-
-### Community 55 - "check_footage_and_segments"
-Cohesion: 0.40
-Nodes (5): One key per SEGMENT_FRAMES segment, from everything outside the shots, the…, segment_keys(), check_footage_and_segments(), fake_words(), The footage list covers every planned shot; a swap re-renders only its segment.
-
-### Community 56 - "revise"
-Cohesion: 0.40
-Nodes (5): format_for_humans(), Apply a change you asked for in words, and rewrite script.txt. This is what…, Render the script for review in a GitHub issue comment (Gate 2)., revise(), word_count()
-
-### Community 57 - "understand"
-Cohesion: 0.50
-Nodes (4): ask_model(), Send the message to DeepSeek and get a structured intent back., Message in, `{"intent", "args", "reply"}` out. Never raises., understand()
-
-### Community 58 - "match_literally"
-Cohesion: 0.50
-Nodes (4): extract_fenced_script(), match_literally(), Pull a pasted script out of a ``` code block, if there is one. Takes the…, Catch the handful of messages that have exactly one possible meaning.
-
 ## Knowledge Gaps
 - **151 isolated node(s):** `name`, `version`, `private`, `description`, `dev` (+146 more)
   These have ≤1 connection - possible missing edges or undocumented components.
@@ -281,17 +241,17 @@ Nodes (4): extract_fenced_script(), match_literally(), Pull a pasted script out 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Run` connect `Run` to `storyboard.py`, `resolve_run`, `.read_text`, `captions.py`, `stock.py`, `secret`, `charts3d.py`, `selftest.py`, `common.py`, `audio.py`, `assistant.py`, `visuals.py`, `topics.py`, `chat.py`, `footage.py`, `generate`, `load_config`, `render.py`, `log`, `script.py`, `check_footage_and_segments`, `revise`, `understand`?**
-  _High betweenness centrality (0.100) - this node is a cross-community bridge._
-- **Why does `log()` connect `log` to `storyboard.py`, `resolve_run`, `captions.py`, `stock.py`, `secret`, `charts3d.py`, `Run`, `common.py`, `audio.py`, `assistant.py`, `visuals.py`, `topics.py`, `chat.py`, `chat_job.py`, `generate`, `load_config`, `render.py`, `script.py`, `revise`, `understand`?**
-  _High betweenness centrality (0.081) - this node is a cross-community bridge._
-- **Why does `resolve_run()` connect `resolve_run` to `common.py`, `audio.py`, `storyboard.py`, `assistant.py`, `.read_text`, `captions.py`, `visuals.py`, `stock.py`, `secret`, `footage.py`, `charts3d.py`, `load_config`, `topics.py`, `chat_job.py`, `render.py`, `log`, `script.py`, `Run`?**
-  _High betweenness centrality (0.023) - this node is a cross-community bridge._
+- **Why does `Run` connect `Run` to `brain.py`, `audio.py`, `storyboard.py`, `assistant.py`, `resolve_run`, `captions.py`, `chat.py`, `narrate.py`, `common.py`, `build_cues`, `charts3d.py`, `log`, `load_config`, `generate`, `check_storyboard`, `selftest.py`, `publish.py`?**
+  _High betweenness centrality (0.094) - this node is a cross-community bridge._
+- **Why does `log()` connect `log` to `brain.py`, `audio.py`, `storyboard.py`, `assistant.py`, `narrate.py`, `captions.py`, `chat.py`, `resolve_run`, `common.py`, `build_cues`, `charts3d.py`, `load_config`, `generate`, `Run`, `chat_job.py`, `publish.py`?**
+  _High betweenness centrality (0.085) - this node is a cross-community bridge._
+- **Why does `resolve_run()` connect `resolve_run` to `brain.py`, `audio.py`, `storyboard.py`, `assistant.py`, `Run`, `captions.py`, `narrate.py`, `log`, `common.py`, `chat_job.py`, `charts3d.py`, `load_config`, `publish.py`?**
+  _High betweenness centrality (0.020) - this node is a cross-community bridge._
 - **What connects `name`, `version`, `private` to the rest of the system?**
   _151 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `MainVideo.tsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.07023214810461358 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07136404697380307 - nodes in this community are weakly interconnected._
 - **Should `Deep Earth — automated video pipeline` be split into smaller, more focused modules?**
   _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
-- **Should `stock.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.09103840682788052 - nodes in this community are weakly interconnected._
+- **Should `log` be split into smaller, more focused modules?**
+  _Cohesion score 0.07529411764705882 - nodes in this community are weakly interconnected._

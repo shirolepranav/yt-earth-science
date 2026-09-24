@@ -567,7 +567,8 @@ def fetch_for_shot(run: Run, shot: dict, words: list[dict], used: set[str], lock
         path = run.path("assets", f"stock_{shot['id']:03d}_{len(clips)}_{safe_id}{ext}")
         if download(url, path):
             clip = {"id": candidate["id"], "path": str(path), "duration": candidate["duration"],
-                    "score": candidate["score"], "page": candidate["page"], "media": candidate.get("media", "video"),
+                    "score": candidate["score"], "why": candidate.get("why"), "page": candidate["page"],
+                    "media": candidate.get("media", "video"),
                     "credit": candidate.get("credit"), "license": candidate.get("license"),
                     "on_screen": on_screen_credit(candidate)}
             if clip["media"] == "image":

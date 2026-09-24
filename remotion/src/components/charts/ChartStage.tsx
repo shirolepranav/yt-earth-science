@@ -130,11 +130,7 @@ export const ChartStage: React.FC<{
         </div>
       ) : null}
 
-      {source ? (
-        <div style={{ position: "absolute", left: 120, bottom: 36, fontFamily: BODY, fontSize: 22, color: brand.colors.muted, opacity: intro }}>
-          Source: {source}
-        </div>
-      ) : null}
+      {/* `source` is drawn by MainVideo's SourceLine, above the vignette. */}
     </AbsoluteFill>
   );
 };

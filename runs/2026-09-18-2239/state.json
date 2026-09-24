@@ -1,0 +1,23 @@
+{
+  "run_id": "2026-09-18-2239",
+  "stages_done": [
+    "topics",
+    "choose",
+    "research",
+    "script",
+    "narrate",
+    "align",
+    "storyboard",
+    "charts",
+    "stock",
+    "visuals",
+    "shotlist",
+    "audio",
+    "thumbnail",
+    "render"
+  ],
+  "narration_seconds": 683.16,
+  "charts3d_spend_usd": 2.31,
+  "visuals_spend_usd": 6.63,
+  "video_path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/output/video.mp4"
+}

@@ -1,0 +1,53 @@
+{
+  "flags": [
+    {
+      "quote": "sixty-five kilometres north-northwest of Tonga's capital, according to the Smithsonian's Global Volcanism Program",
+      "problem": "wrong_attribution",
+      "detail": "The Smithsonian's Global Volcanism Program does give the 114 m elevation, but its Bulletin report says the capital is 65 km *south* of the volcano (\"The capital city of Tonga, Nuku'alofa, is located 65 km S on the island of Tongatapu\"). The \"north-northwest\" bearing and the 65 km figure in that direction come from Matoza et al. in Science, which describes Hunga as \"located ~65 km to the north-northwest of Tongatapu.\" The distance is agreed; the directional wording is credited to the wrong source.",
+      "suggested_fix": "Hunga Tonga\u2013Hunga Ha'apai is a caldera in the western South Pacific, one hundred fourteen metres above sea level at its highest point, according to the Smithsonian's Global Volcanism Program, which places the capital, Nuku'alofa, about sixty-five kilometres to the south; Matoza and colleagues put the volcano roughly sixty-five kilometres north-northwest of Tongatapu."
+    },
+    {
+      "quote": "It had erupted in nineteen twelve, again in nineteen thirty-seven, and again in two thousand nine and twenty fifteen, each time building a little new land.",
+      "problem": "unsupported",
+      "detail": "The Global Volcanism Program lists eruptions in 1912, 1937, 1988, 2009 and December 2014\u2013January 2015. Only two of those are described as adding land: \"In 2009 a short eruption increased the land area at Hunga Ha'apai\" and \"During December 2014 through January 2015 eruptive activity added land between the islands.\" The dossier never says the 1912 or 1937 eruptions built new land, and it records a 1988 eruption the script omits.",
+      "suggested_fix": "It had erupted in nineteen twelve, again in nineteen thirty-seven, again in nineteen eighty-eight, and then in two thousand nine and in twenty fourteen to twenty fifteen \u2014 and those last two each built a little new land."
+    },
+    {
+      "quote": "One paper assigns the eruption a Volcanic Explosivity Index of five point eight, while Henley and colleagues call it six.",
+      "problem": "wrong_attribution",
+      "detail": "The 5.8 VEI comes from the Communications Earth & Environment study (source 9 in the dossier), which the script names only later, in connection with the 13% water figure. As written, the statistic carries no named source, which breaks the channel rule that every figure be attributed aloud.",
+      "suggested_fix": "The Communications Earth and Environment study assigns the eruption a Volcanic Explosivity Index of five point eight, while Henley and colleagues call it six."
+    },
+    {
+      "quote": "According to NOAA's Chemical Sciences Laboratory, ozone concentrations fell by as much as thirty percent in the air holding the most water vapour.",
+      "problem": "wrong_attribution",
+      "detail": "The 30% figure appears in the NOAA Research article, but it is quoted from Stephanie Evan of the Laboratoire de l'Atmosph\u00e8re et des Cyclones, lead author of the study published in Science. NOAA's Chemical Sciences Laboratory is where Karen Rosenlof and Elizabeth Asher work; the ozone measurement is Evan's team's result.",
+      "suggested_fix": "According to measurements reported by NOAA Research, ozone concentrations fell by as much as thirty percent in the air holding the most water vapour \u2014 a finding led by Stephanie Evan and colleagues and published in Science."
+    },
+    {
+      "quote": "Tsunami waves struck the Kingdom of Tonga within minutes",
+      "problem": "unsupported",
+      "detail": "The dossier describes \"fast-arriving tsunamis\" (Matoza et al. in Science) and tsunami waves produced in the first hour of eruptive activity (Yuen et al.), and notes that global tsunami waves arrived \"much earlier than expected.\" It gives no arrival time for the Tongan coast, so \"within minutes\" is a figure the dossier does not supply.",
+      "suggested_fix": "Tsunami waves struck the Kingdom of Tonga far earlier than tsunami models expected"
+    },
+    {
+      "quote": "Pressure sensors in Europe, in the Americas, in Antarctica recorded a pulse passing overhead, and then recorded it again a day later.",
+      "problem": "unsupported",
+      "detail": "Matoza et al. report the Lamb wave propagating for four passages, plus three antipodal passages, over 6 days \u2014 an interval of roughly a day and a half between circumnavigations, not one day \u2014 and the dossier does not specify Europe, the Americas and Antarctica as the recording locations for a second, one-day-later arrival.",
+      "suggested_fix": "Pressure sensors around the world recorded a pulse passing overhead \u2014 and then recorded it again, and again: four passages around the Earth, plus three antipodal passages, over six days."
+    },
+    {
+      "quote": "That was too fast and too high for the pressure pulse to dissipate locally, so it went around the planet instead.",
+      "problem": "overstated_causation",
+      "detail": "The dossier reports the observation (four passages plus three antipodal over 6 days) but contains no explanation of why the Lamb wave circumnavigated rather than dissipating locally. The mechanism as written is the script's own, not the sources'.",
+      "suggested_fix": "That pulse did not stay local. It wrapped the planet \u2014 ground instruments tracked it for four passages around the Earth, plus three antipodal passages, over six days."
+    },
+    {
+      "quote": "Because that vent sat underwater, the eruption delivered a water-rich, gas-driven plume straight upward rather than sideways.",
+      "problem": "overstated_causation",
+      "detail": "The dossier supports the submarine setting producing a water-rich plume (JPL: the caldera at about 150 m was \"just the right depth\" for seawater to be superheated). Nothing in it says the vent's position caused the plume to go up rather than sideways. \"Gas-driven\" is specifically the Henley et al. model that the script itself, correctly, describes as contested \u2014 so using it here as settled fact contradicts the earlier passage.",
+      "suggested_fix": "Because that vent sat underwater, the plume was water-rich in a way that subaerial eruptions are not."
+    }
+  ],
+  "verdict": "minor_fixes"
+}

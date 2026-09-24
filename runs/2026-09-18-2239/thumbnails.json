@@ -1,0 +1,44 @@
+[
+  {
+    "file": "thumbnail.jpg",
+    "text": null,
+    "hero": "a lone figure silhouetted on a dark Pacific shoreline at dusk, dwarfed by a towering white eruption column on the horizon that is already flattening at the top like an anvil",
+    "symbol": "none",
+    "why_click": "No words, no labels \u2014 just a person and a column of ash that has visibly punched through the ceiling of the sky, which makes you click to find out what you're looking at.",
+    "score": 17.0,
+    "shrink_test": {
+      "text_readable": true,
+      "about": "A massive volcanic eruption witnessed from across the sea",
+      "attention": 8,
+      "emotion": 9
+    }
+  },
+  {
+    "file": "thumbnail_b.jpg",
+    "text": "A RECORD 58 KM",
+    "hero": "a straight-down satellite view of a vast white eruption plume bursting through an unbroken deck of cloud, the dark blue Pacific visible at the edges of frame",
+    "symbol": "arrow",
+    "why_click": "It names a height far beyond anything weather reaches, and the arrow forces you to ask what could carry a cloud that high \u2014 and how long it took.",
+    "score": 16.0,
+    "shrink_test": {
+      "text_readable": true,
+      "about": "record-breaking massive volcanic eruption seen from space",
+      "attention": 8,
+      "emotion": 8
+    }
+  },
+  {
+    "file": "thumbnail_c.jpg",
+    "text": "FOUR TIMES. SIX DAYS.",
+    "hero": "the curved limb of Earth photographed from orbit at night, a faint pale ripple band travelling through the upper atmosphere above the dark ocean",
+    "symbol": "rec_dot",
+    "why_click": "A recording indicator on a planet-wide image implies something is still being tracked as it goes round and round \u2014 the viewer clicks to find out what kept circulating.",
+    "score": 15.0,
+    "shrink_test": {
+      "text_readable": true,
+      "about": "Mysterious atmospheric or space event happening repeatedly",
+      "attention": 7,
+      "emotion": 8
+    }
+  }
+]

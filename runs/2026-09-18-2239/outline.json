@@ -1,0 +1,86 @@
+{
+  "hook_angle": "Where things stand now: the stratosphere still holds roughly 146 teragrams of water that a single volcano put there in January 2022. Hold on that number, then rewind to 04:16 UTC on 15 January 2022 \u2014 the moment the island above the vent stopped existing.",
+  "stakes": "A kingdom was hit by a tsunami within minutes and a volcano was erased down to a 850 m crater, while the blast punched the atmosphere from the seafloor into the mesosphere \u2014 and the water it left behind is still changing the chemistry of the layer that shields you from ultraviolet light.",
+  "sections": [
+    {
+      "heading": "The setting: a caldera at exactly the wrong depth",
+      "claim": "Hunga's caldera sat about 150 metres below the surface \u2014 shallow enough that erupting magma flashed enormous volumes of seawater to steam, and deep enough that the ocean did not simply smother it. This is the cause the timeline starts from. One caveat: Henley et al. (2024) argue the standard Surtseyan fuel-coolant explanation is not supported by the satellite imagery, and propose a gas-seal and hydraulic-fracture mechanism instead \u2014 the disagreement is live.",
+      "key_number": "about 150 m (490 ft) of water over the caldera",
+      "source": "NASA Jet Propulsion Laboratory, citing Mill\u00e1n et al., Geophysical Research Letters, 2022",
+      "visual": {
+        "kind": "bignumber",
+        "title": "THE DEPTH THAT MADE IT EXPLODE",
+        "labels": [
+          "Hunga caldera depth below sea level"
+        ],
+        "values": [
+          150
+        ],
+        "unit": "m",
+        "source_note": "NASA/JPL \u2014 Mill\u00e1n et al., Geophys. Res. Lett., 2022"
+      }
+    },
+    {
+      "heading": "Thirty minutes to the mesosphere",
+      "claim": "The climactic plume rose from the ocean surface to 58 km in roughly half an hour, an ascent of at least 40 m/s, and a secondary pulse rose above 50 km shortly after \u2014 the highest plume in the satellite record. Carr et al.'s stereo retrieval puts the overshooting top at 50\u201355 km, so 58 km is NASA Langley's figure, not a settled consensus.",
+      "key_number": "58 km plume top versus 35 km for Pinatubo (1.5 times the height)",
+      "source": "NASA Earth Observatory / NASA Langley Research Center, GOES-17 and Himawari-8 stereo analysis, February 2022",
+      "visual": {
+        "kind": "comparison",
+        "title": "HIGHEST PLUME IN THE SATELLITE RECORD",
+        "labels": [
+          "Hunga Tonga, 15 Jan 2022",
+          "Mount Pinatubo, 1991"
+        ],
+        "values": [
+          58,
+          35
+        ],
+        "unit": "km",
+        "source_note": "NASA Earth Observatory \u2014 GOES-17 / Himawari-8 stereo retrievals"
+      }
+    },
+    {
+      "heading": "The wave that would not stop",
+      "claim": "The explosion launched a surface-guided Lamb wave \u2014 the signature of an atmospheric blast \u2014 that circled the Earth four times, plus three antipodal passages, over six days, and produced audible sound more than 10,000 km from the vent. Measured by Lamb-wave amplitude, the Hunga explosion was comparable in size to the 1883 Krakatoa eruption.",
+      "key_number": "4 passages around Earth, plus 3 antipodal, in 6 days",
+      "source": "Science \u2014 Matoza et al., 'Atmospheric waves and global seismoacoustic observations of the January 2022 Hunga eruption, Tonga', 2022",
+      "visual": {
+        "kind": "bar",
+        "title": "AROUND THE WORLD, THEN AGAIN, THEN AGAIN",
+        "labels": [
+          "Direct passages",
+          "Antipodal passages"
+        ],
+        "values": [
+          4,
+          3
+        ],
+        "unit": "passages around Earth",
+        "source_note": "Matoza et al., Science, 2022 \u2014 Lamb wave tracked over 6 days"
+      }
+    },
+    {
+      "heading": "What it left in the stratosphere, and what is still there",
+      "claim": "The blast injected around 146 teragrams of water vapour \u2014 about 10% of all the water already in the stratosphere and roughly four times the Pinatubo injection \u2014 and because the plume was so water-rich, sulfate aerosols formed in days rather than the usual month. In the wettest air, ozone fell by as much as 30%. JPL gives 146 Tg; NOAA's balloon campaign estimated about 150 million tons from the ground \u2014 the same event, two instruments, a range rather than a single agreed figure.",
+      "key_number": "146\u2013150 teragrams of stratospheric water vapour",
+      "source": "NASA Jet Propulsion Laboratory (Mill\u00e1n et al., 2022) for 146 Tg; NOAA Chemical Sciences Laboratory for the 30% ozone loss",
+      "visual": {
+        "kind": "comparison",
+        "title": "WATER INJECTED INTO THE STRATOSPHERE",
+        "labels": [
+          "Hunga Tonga 2022",
+          "Mount Pinatubo 1991 (modelled)"
+        ],
+        "values": [
+          146,
+          37
+        ],
+        "unit": "teragrams (Tg)",
+        "source_note": "NASA/JPL (MLS, 2022); Pinatubo value from Communications Earth & Environment, 2022 \u2014 a modelling-based estimate, not a measurement"
+      }
+    }
+  ],
+  "payoff": "The core answer is depth plus water plus an open vent: a shallow submarine caldera flash-boiled seawater into steam, the explosion excavated an 850 m deep crater, and because the vent sat under the ocean the blast delivered a water-rich, gas-driven plume straight into the stratosphere and mesosphere in about half an hour \u2014 high enough and fast enough that the pressure pulse it made could not dissipate locally, so it wrapped the planet. On how tall it actually was, how violent it was, and what drove it, scientists still disagree: NASA Langley measures the top at 58 km while Carr et al.'s stereo work gives 50\u201355 km; the Volcanic Explosivity Index is cited as 5.8 in one paper and VEI 6 in another; and Henley et al. argue against the long-assumed phreatomagmatic fuel-coolant mechanism, favouring a gas-sealing and hydraulic-fracture model instead.",
+  "takeaway": "Hunga Tonga is one of twelve confirmed submarine volcanoes along the Tofua Arc, according to the Smithsonian's Global Volcanism Program \u2014 and the water it pushed into the stratosphere is still circulating above you."
+}

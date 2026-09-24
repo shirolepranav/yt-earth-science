@@ -16,50 +16,51 @@ import type { Shot, ShotList } from "./types";
 const FOOTAGE_GRADE = "saturate(0.95) contrast(1.05) brightness(0.97)";
 
 /**
- * Where a shot came from, bottom-left, in the same place and size as a chart's
- * source line. Only public-domain and openly licensed archives are named: it is
- * what turns "some footage of a volcano" into "this volcano, filmed by NASA".
- * Outside the grade, so the credit stays legible over a darkened shot.
+ * Where a shot came from, bottom-left: an archive credit on footage, or a
+ * chart's "Source:" line. Only public-domain and openly licensed archives are
+ * named on footage: it is what turns "some footage of a volcano" into "this
+ * volcano, filmed by NASA".
+ *
+ * Drawn above LookOverlay, not inside the shot: the vignette darkens this
+ * corner by up to 40%, which turned a scrimmed credit grey-on-grey over bright
+ * footage and a muted chart source dark-on-dark. A near-opaque pill with white
+ * text reads over anything from night ocean to sunlit cloud.
  */
-const FootageCredit: React.FC<{ credit: string; brand: ShotList["brand"] }> = ({ credit, brand }) => {
+const SourceLine: React.FC<{ text: string }> = ({ text }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const fade = interpolate(frame, [0, Math.round(0.4 * fps)], [0, 1], { extrapolateRight: "clamp" });
   return (
-    // Footage runs from night-time ocean to sunlit cloud, and neither a grey
-    // credit nor a white one with a shadow survived the bright shots. A low
-    // scrim behind the text does, without reading as a label.
     <div
       style={{
         position: "absolute", left: 120, bottom: 36, opacity: fade,
-        padding: "7px 14px", borderRadius: 4, backgroundColor: "rgba(0,0,0,0.45)",
-        fontFamily: BODY, fontSize: 22, letterSpacing: 0.3, color: "rgba(255,255,255,0.92)",
-        textShadow: "0 1px 3px rgba(0,0,0,0.9)",
+        padding: "7px 14px", borderRadius: 4, backgroundColor: "rgba(0,0,0,0.65)",
+        fontFamily: BODY, fontSize: 22, letterSpacing: 0.3, color: "rgba(255,255,255,0.95)",
       }}
     >
-      {credit}
+      {text}
     </div>
   );
+};
+
+const sourceText = (shot: Shot): string | null => {
+  if (shot.type === "clip" || shot.type === "still") return shot.credit || null;
+  if (shot.type === "chart" || shot.type === "number") return shot.source ? `Source: ${shot.source}` : null;
+  return null;
 };
 
 const ShotView: React.FC<{ shot: Shot; brand: ShotList["brand"] }> = ({ shot, brand }) => {
   switch (shot.type) {
     case "clip":
       return (
-        <AbsoluteFill>
-          <AbsoluteFill style={{ filter: FOOTAGE_GRADE }}>
-            <StockClip src={shot.src} playbackRate={shot.playbackRate} />
-          </AbsoluteFill>
-          {shot.credit ? <FootageCredit credit={shot.credit} brand={brand} /> : null}
+        <AbsoluteFill style={{ filter: FOOTAGE_GRADE }}>
+          <StockClip src={shot.src} playbackRate={shot.playbackRate} />
         </AbsoluteFill>
       );
     case "still":
       return (
-        <AbsoluteFill>
-          <AbsoluteFill style={{ filter: FOOTAGE_GRADE }}>
-            <ParallaxStill src={shot.src} depth={shot.depth} seed={shot.seed} />
-          </AbsoluteFill>
-          {shot.credit ? <FootageCredit credit={shot.credit} brand={brand} /> : null}
+        <AbsoluteFill style={{ filter: FOOTAGE_GRADE }}>
+          <ParallaxStill src={shot.src} depth={shot.depth} seed={shot.seed} />
         </AbsoluteFill>
       );
     case "chart": {
@@ -126,6 +127,15 @@ export const MainVideo: React.FC<ShotList> = ({ brand, shots, audioFile, letterb
         </Sequence>
       ) : null}
       <LookOverlay letterbox={letterbox} />
+      {shots.map((shot, index) => {
+        const text = sourceText(shot);
+        const from = toFrames(shot.start);
+        return text ? (
+          <Sequence key={`source-${index}`} from={from} durationInFrames={Math.max(1, toFrames(shot.end) - from)}>
+            <SourceLine text={text} />
+          </Sequence>
+        ) : null;
+      })}
     </AbsoluteFill>
   );
 };

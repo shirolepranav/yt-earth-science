@@ -1,0 +1,115 @@
+[17:10:26] == research
+[17:10:26] Researching: Hunga Tonga 2022: The Eruption That Touched Space
+[17:11:06]   searched: How did a submarine volcano in Tonga produce the tallest eruption plume and the largest atmospheric explosion ever measured by instruments?
+[17:11:06]   searched: Hunga Tonga 2022: The Eruption That Touched Space evidence research
+[17:11:06]   searched: How did a submarine volcano in Tonga produce the tallest eruption plume and the largest atmospheric explosion ever measured by instruments? USGS NASA scientific explanation
+[17:11:06]   searched: NASA Earth Observatory; Smithsonian Global Volcanism Program; NOAA How did a submarine volcano in Tonga produce the tallest eruption plume and the largest atmospheric explosion ever measured by instruments?
+[17:11:06]   searched: How did a submarine volcano in Tonga produce the tallest eruption plume and the largest atmospheric explosion ever measured by instruments? [canonical sources]
+[17:11:06]   69 unique sources found
+[17:11:06] Dossier written: 14,133 words, 15 primary sources
+[17:11:06] == script
+[17:11:06] Pass 1/5: outline
+[17:11:34]   4 sections
+[17:11:34] Pass 2/5: draft
+[17:12:25]   1,734 words
+[17:12:25] Pass 3/5: hook rewrite
+[17:12:47]   new hook: In the moment - It puts a half-watching viewer physically on the shoreline inside the first second and escalates vertically past the clouds, the weather and the stratosphere, and every claim in it, the January 2022 date, the submarine volcano and the plume exceeding fifty kilometres, comes straight from the Wright et al. study named in the line.
+[17:12:47] Pass 4/5: fact-check
+[17:13:33]   verdict: minor_fixes - 8 flag(s)
+[17:13:33]   fixed: sixty-five kilometres north-northwest of Tonga's capital, ac...
+[17:13:33]   fixed: It had erupted in nineteen twelve, again in nineteen thirty-...
+[17:13:33]   fixed: One paper assigns the eruption a Volcanic Explosivity Index ...
+[17:13:33]   fixed: According to NOAA's Chemical Sciences Laboratory, ozone conc...
+[17:13:33]   fixed: Tsunami waves struck the Kingdom of Tonga within minutes...
+[17:13:33]   fixed: Pressure sensors in Europe, in the Americas, in Antarctica r...
+[17:13:33]   fixed: That was too fast and too high for the pressure pulse to dis...
+[17:13:33]   fixed: Because that vent sat underwater, the eruption delivered a w...
+[17:13:33] Pass 5/5: polish, metadata and thumbnail concepts
+[17:14:35] Final script: 1,737 words
+
+## Gate 2 — script review
+
+**Proposed title:** Hunga Tonga: The Eruption That Reached the Edge of Space
+**Length:** 1,737 words (~11.6 min of narration)
+**Fact-check verdict:** `minor_fixes`
+
+### Fact-check flags
+- **wrong_attribution** — "sixty-five kilometres north-northwest of Tonga's capital, according to the Smithsonian's Global Volcanism Program"  
+  The Smithsonian's Global Volcanism Program does give the 114 m elevation, but its Bulletin report says the capital is 65 km *south* of the volcano ("The capital city of Tonga, Nuku'alofa, is located 65 km S on the island of Tongatapu"). The "north-northwest" bearing and the 65 km figure in that direction come from Matoza et al. in Science, which describes Hunga as "located ~65 km to the north-northwest of Tongatapu." The distance is agreed; the directional wording is credited to the wrong source.
+- **unsupported** — "It had erupted in nineteen twelve, again in nineteen thirty-seven, and again in two thousand nine and twenty fifteen, ea"  
+  The Global Volcanism Program lists eruptions in 1912, 1937, 1988, 2009 and December 2014–January 2015. Only two of those are described as adding land: "In 2009 a short eruption increased the land area at Hunga Ha'apai" and "During December 2014 through January 2015 eruptive activity added land between the islands." The dossier never says the 1912 or 1937 eruptions built new land, and it records a 1988 eruption the script omits.
+- **wrong_attribution** — "One paper assigns the eruption a Volcanic Explosivity Index of five point eight, while Henley and colleagues call it six"  
+  The 5.8 VEI comes from the Communications Earth & Environment study (source 9 in the dossier), which the script names only later, in connection with the 13% water figure. As written, the statistic carries no named source, which breaks the channel rule that every figure be attributed aloud.
+- **wrong_attribution** — "According to NOAA's Chemical Sciences Laboratory, ozone concentrations fell by as much as thirty percent in the air hold"  
+  The 30% figure appears in the NOAA Research article, but it is quoted from Stephanie Evan of the Laboratoire de l'Atmosphère et des Cyclones, lead author of the study published in Science. NOAA's Chemical Sciences Laboratory is where Karen Rosenlof and Elizabeth Asher work; the ozone measurement is Evan's team's result.
+- **unsupported** — "Tsunami waves struck the Kingdom of Tonga within minutes"  
+  The dossier describes "fast-arriving tsunamis" (Matoza et al. in Science) and tsunami waves produced in the first hour of eruptive activity (Yuen et al.), and notes that global tsunami waves arrived "much earlier than expected." It gives no arrival time for the Tongan coast, so "within minutes" is a figure the dossier does not supply.
+- **unsupported** — "Pressure sensors in Europe, in the Americas, in Antarctica recorded a pulse passing overhead, and then recorded it again"  
+  Matoza et al. report the Lamb wave propagating for four passages, plus three antipodal passages, over 6 days — an interval of roughly a day and a half between circumnavigations, not one day — and the dossier does not specify Europe, the Americas and Antarctica as the recording locations for a second, one-day-later arrival.
+- **overstated_causation** — "That was too fast and too high for the pressure pulse to dissipate locally, so it went around the planet instead."  
+  The dossier reports the observation (four passages plus three antipodal over 6 days) but contains no explanation of why the Lamb wave circumnavigated rather than dissipating locally. The mechanism as written is the script's own, not the sources'.
+- **overstated_causation** — "Because that vent sat underwater, the eruption delivered a water-rich, gas-driven plume straight upward rather than side"  
+  The dossier supports the submarine setting producing a water-rich plume (JPL: the caldera at about 150 m was "just the right depth" for seawater to be superheated). Nothing in it says the vent's position caused the plume to go up rather than sideways. "Gas-driven" is specifically the Henley et al. model that the script itself, correctly, describes as contested — so using it here as settled fact contradicts the earlier passage.
+
+### Thumbnail concepts
+- **A RECORD 58 KM** — a straight-down satellite view of a vast white eruption plume bursting through an unbroken deck of cloud, the dark blue Pacific visible at the edges of frame (symbol: arrow) — _It names a height far beyond anything weather reaches, and the arrow forces you to ask what could carry a cloud that high — and how long it took._
+- **(no text)** — a lone figure silhouetted on a dark Pacific shoreline at dusk, dwarfed by a towering white eruption column on the horizon that is already flattening at the top like an anvil (symbol: none) — _No words, no labels — just a person and a column of ash that has visibly punched through the ceiling of the sky, which makes you click to find out what you're looking at._
+- **FOUR TIMES. SIX DAYS.** — the curved limb of Earth photographed from orbit at night, a faint pale ripple band travelling through the upper atmosphere above the dark ocean (symbol: rec_dot) — _A recording indicator on a planet-wide image implies something is still being tracked as it goes round and round — the viewer clicks to find out what kept circulating._
+
+### Script
+
+It's January 2022, and you're standing on the coast of Tonga, looking out at open ocean where a volcano is supposed to be. Underwater. Out of sight. Then the horizon changes. By the time it stops, according to the 2022 study by Wright and colleagues, the plume has punched more than fifty kilometres above your head. Not into the clouds. Through them. Through the weather. Into the stratosphere, and beyond it.
+
+To see how it got there, go back. Sixteen minutes past four in the morning, Coordinated Universal Time, on the fifteenth of January, two thousand twenty-two. On the islands of Tonga it was just after five in the evening. And at that moment, the land that had stood above the vent of the Hunga volcano simply stopped existing.
+
+The volcano was not a stranger. Hunga Tonga–Hunga Ha'apai is a caldera in the western South Pacific, one hundred fourteen metres above sea level at its highest point, according to the Smithsonian's Global Volcanism Program, which places the capital, Nuku'alofa, about sixty-five kilometres to the south. It had erupted in nineteen twelve, nineteen thirty-seven, nineteen eighty-eight, then in two thousand nine and again in twenty fourteen to twenty fifteen — and those last two each built a little new land. By the second of January, twenty twenty-two, that land had grown. Satellite imagery showed the island reaching about three point six square kilometres, with pumice rafts roughly ten metres wide drifting a hundred kilometres west, and the base of the active cone widening from five hundred metres to seventeen hundred. Then, on the fourteenth of January, explosions took most of it away. On the fifteenth, they took the rest.
+
+What made this volcano different was not what stood above the water. Hunga's caldera floor sat about one hundred fifty metres below the sea surface, roughly the height of a forty-storey building. And according to NASA's Jet Propulsion Laboratory, citing Millán and colleagues in Geophysical Research Letters, that is just the right depth. Any shallower, and there would not have been enough seawater superheated by erupting magma to account for what the satellites later measured. Any deeper, and the pressure of the ocean would have muted the eruption.
+
+One caveat here, and it is a live one. The standard explanation for an eruption like this is Surtseyan: magma meeting seawater directly, fuel and coolant. But Henley and colleagues, writing in the Journal of Volcanology and Geothermal Research in twenty twenty-four, argue the satellite imagery does not support that. They propose something else — gas sealing itself off beneath the volcano, pressure building, then hydraulic fracture. That argument is still open.
+
+Which leaves the question everything else hangs on. How does a vent under a hundred and fifty metres of ocean send anything into the mesosphere at all?
+
+Two weather satellites were waiting for it. One American, one Japanese, parked in geostationary orbit on opposite sides of the Pacific, both carrying near-identical infrared imagers. Every ten minutes they watched the same patch of ocean from two different angles. What they recorded was a column that rose off the sea surface and kept rising, through the troposphere where your weather happens, through the stratosphere where the ozone layer sits, and into the mesosphere.
+
+Here's how we know: normally you measure a cloud's height by its temperature, because air gets colder as you climb. Above the troposphere that rule breaks down. So Kristopher Bedka and Konstantin Khlopenkov at NASA's Langley Research Center did something else. They matched simultaneous images of the same plume from GOES-17 and Himawari-8, and used geometry — stereoscopy, the trick your two eyes use to build depth — to rebuild the plume in three dimensions, then checked it against the shadows the tallest parts cast onto the ash below. Their answer was fifty-eight kilometres, reached in roughly thirty minutes, an ascent of at least forty metres per second. A second pulse then rose above fifty kilometres and separated into three pieces.
+
+NASA Earth Observatory calls it likely the highest plume in the satellite record. When Mount Pinatubo erupted in the Philippines in nineteen ninety-one, its plume reached thirty-five kilometres. This was one and a half times higher.
+
+Not everyone lands on fifty-eight. Carr and colleagues, in Geophysical Research Letters, ran their own stereo retrieval on the same satellite pair and put the overshooting top at fifty to fifty-five kilometres. Still a record for the satellite era, but a range rather than one agreed number. Both teams measured the same eruption, and drew its top in slightly different places.
+
+And the height of a plume is only the part you can see. Something else came off that explosion that you could not see at all, and it was already running around the world.
+
+Within the first few hours, barometers started moving. Not just near Tonga — everywhere. Pressure sensors around the world recorded a pulse passing overhead, then recorded it again, and again. Matoza and colleagues, writing in the journal Science, tracked what is called a Lamb wave, a surface-guided pressure pulse that is the signature of an energetic atmospheric explosion. They watched it propagate for four passages around the Earth, plus three antipodal passages, over six days. And people heard it. Audible sound was detected more than ten thousand kilometres from the vent.
+
+Sit with that for a second. A pressure pulse made by one volcano, still travelling after four laps of the planet. As measured by the amplitude of that Lamb wave, Matoza's team judged the climactic Hunga explosion comparable in size to the eighteen eighty-three eruption of Krakatoa. That is the yardstick the modern record offers, and Hunga met it.
+
+On the ground it was not an abstraction either. Tsunami waves struck the Kingdom of Tonga far earlier than tsunami models expected, and several independent studies — Heidarzadeh, Lynett, Pakoksung and others — estimate initial wave amplitudes exceeding one hundred metres close to the volcano. The waves damaged coastlines across the Pacific, as far away as Peru, and tore through submarine telecommunication cables.
+
+So the blast wrapped the planet and the sea rose around it. But the most consequential thing this eruption carried upward was neither sound nor water in the ocean. It was water in the sky.
+
+Within days, atmospheric scientists were chasing the plume the other way around the world. Karen Rosenlof, a senior climate scientist at NOAA's Chemical Sciences Laboratory, called colleagues on La Réunion, an island in the Indian Ocean, eight thousand miles downrange, directly in the path of the dispersing cloud. Elizabeth Asher and several colleagues flew there with miniature atmospheric instruments packed in their luggage. The balloons they released confirmed the numbers.
+
+NOAA estimated about one hundred fifty million tons of water vapour injected into the stratosphere. NASA's Jet Propulsion Laboratory, working from the Microwave Limb Sounder on the Aura satellite, arrived at one hundred forty-six teragrams. Same eruption, two instruments, a range rather than a single agreed figure.
+
+And that range is not abstract. One hundred forty-six teragrams is enough to fill more than fifty-eight thousand Olympic-size swimming pools, according to NASA's Jet Propulsion Laboratory. It is about ten percent of the water that was already up there. It is roughly four times the water scientists estimate Pinatubo put into the stratosphere — and that thirty-seven teragram figure came from modelling, not measurement.
+
+The chemistry moved faster than anyone expected. Sulfate aerosols normally form from volcanic sulfur dioxide over about a month. Here, because the plume was so rich in water, a dense aerosol layer assembled within days — Asher's team published that in the Proceedings of the National Academy of Sciences.
+
+And the ozone paid for it. According to measurements reported by NOAA Research, ozone concentrations fell by as much as thirty percent in the air holding the most water vapour — a finding led by Stephanie Evan and colleagues and published in Science. Two weeks later, Evan's team measured ozone still depleted by around five percent across the Indian and Pacific oceans. A separate study in Communications Earth and Environment estimated the global stratospheric water mass rose by thirteen percent above climatological levels, against the ten percent figure from NASA. On the size of the perturbation, the sources still differ.
+
+Water that lingers for years. Ozone loss measured in tens of percent. A pressure wave that circled the planet four times. Each of those is a consequence. None of them is yet the cause.
+
+So what actually drove it? The core answer is three things stacked on top of each other: depth, water, and an open vent. A caldera floor one hundred fifty metres down gave erupting magma enough seawater to flash into steam, without enough ocean above it to smother the blast. By the fifteenth, the loose material that had built the island was gone, so the vent was open to the sea and the sky at the same time. Because that vent sat underwater, the plume was water-rich in a way that subaerial eruptions are not. From the sea surface to fifty-eight kilometres in about half an hour, at forty metres per second or more. That pulse did not stay local. It wrapped the planet. And the water it carried went into the stratosphere, where the air is dry and there is almost nothing to remove it.
+
+On the biggest questions, the record is still arguing with itself. NASA Langley measures the top at fifty-eight kilometres; Carr's stereo work gives fifty to fifty-five. The Communications Earth and Environment study assigns the eruption a Volcanic Explosivity Index of five point eight, while Henley and colleagues call it six. Henley's team also rejects the long-assumed fuel-coolant mechanism, favouring gas sealing and hydraulic fracture. Three disagreements, all published, none settled.
+
+What is settled is where this volcano sits, and what it belongs to. Hunga Tonga–Hunga Ha'apai is one of twelve confirmed submarine volcanoes along the Tofua Arc, according to the Smithsonian's Global Volcanism Program, a chain built where the Pacific Plate slides beneath the Indo-Australian Plate. Twelve of them, mostly underwater, mostly unmonitored. And the water from one of them is still up there, years later, drifting.
+
+You cannot see it. No cloud, no colour, no smell. But the next clear evening, look up past the weather and past the aeroplanes. Some of that thin, dry air that filters ultraviolet light before it reaches your skin holds seawater that was flash-boiled out of the Pacific Ocean by a volcano that no longer exists above the surface.
+
+---
+
+**This gate is not a rubber stamp.** Edit something. Add an observation, cut a weak paragraph, sharpen an argument. That edit is the difference between a person using AI tools and a content farm.
+
+Reply with `approve` to build the video, or paste an edited script in a fenced code block and it will be used instead.

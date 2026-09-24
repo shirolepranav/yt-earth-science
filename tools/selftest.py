@@ -417,6 +417,32 @@ def check_button_routing() -> None:
     assert match_literally("thumb:c")["args"] == {"choice": "c"}
     assert match_literally("redo:stock")["args"] == {"stage": "stock"}
     assert match_literally("accept")["intent"] == "publish"
+    assert match_literally("swap:12:ai:Lava at night, close")["args"] == {"shot": 12, "to": "ai", "hint": "Lava at night, close"}
+    assert match_literally("swap:3:stock")["args"] == {"shot": 3, "to": "stock", "hint": ""}
+    assert match_literally("cmd:render")["intent"] == "approve_footage"
+
+
+def check_footage_and_segments(run: Run) -> None:
+    """The footage list covers every planned shot; a swap re-renders only its segment."""
+    from pipeline.footage import build as build_footage
+    from pipeline.render import SEGMENT_FRAMES, segment_keys
+
+    board = run.read_json("storyboard.json")["shots"]
+    if not run.path("words.json").exists():
+        run.write_json("words.json", {"words": fake_words(SCRIPT)})
+    rows = build_footage(run)
+    assert [r["id"] for r in rows] == [s["id"] for s in board], "one row per planned shot, in order"
+    assert all(not r["swappable"] for r in rows if r["kind"] == "data")
+
+    fps = 30
+    shots = [{"type": "clip", "src": f"{n}.mp4", "start": n * 10.0, "end": n * 10.0 + 10} for n in range(30)]
+    total = 300 * fps  # 5 min, three segments
+    props = {"fps": fps, "outroSeconds": 5, "shots": shots}
+    before = segment_keys(props, total, "code")
+    shots[2] = {**shots[2], "src": "swapped.mp4"}  # plays in the first segment only
+    after = segment_keys(props, total, "code")
+    assert len(before) == -(-total // SEGMENT_FRAMES) and before[0] != after[0] and before[1:] == after[1:], (before, after)
+    assert segment_keys(props, total, "new code") != after, "a Remotion change re-renders everything"
 
 
 def main() -> None:
@@ -443,7 +469,8 @@ def main() -> None:
     check_captions()
     print("6/7 subtitle cues ok")
     check_button_routing()
-    print("7/7 button routing ok")
+    check_footage_and_segments(run)
+    print("7/7 button routing, footage list and segment cache ok")
     print("\nSELF-TEST PASSED")
 
 

@@ -101,6 +101,35 @@ def stage_assets(run: Run) -> Path:
     return props_path
 
 
+def code_hash() -> str:
+    """Every file the render draws with: a changed component invalidates every segment."""
+    digest = hashlib.sha256()
+    for path in sorted((REMOTION_DIR / "src").rglob("*")):
+        if path.is_file():
+            digest.update(path.relative_to(REMOTION_DIR).as_posix().encode())
+            digest.update(path.read_bytes())
+    return digest.hexdigest()
+
+
+def segment_keys(shot_list: dict, total_frames: int, code: str) -> list[str]:
+    """One key per SEGMENT_FRAMES segment, from everything outside the shots,
+    the shots that overlap it and - for the outro's segment - the last shot,
+    which the outro freezes. Asset names are content hashes or unique stock
+    ids, so a swapped file changes its shot's src."""
+    fps, shots = shot_list["fps"], shot_list["shots"]
+    shared = json.dumps({k: v for k, v in shot_list.items() if k != "shots"}, sort_keys=True) + code
+    outro_from = total_frames - math.ceil(shot_list.get("outroSeconds", 0) * fps)
+    keys = []
+    for start in range(0, total_frames, SEGMENT_FRAMES):
+        end = min(total_frames, start + SEGMENT_FRAMES) - 1
+        drawn = [s for s in shots if round(s["start"] * fps) <= end and round(s["end"] * fps) > start]
+        if end >= outro_from and shots:
+            drawn.append(shots[-1])
+        blob = shared + json.dumps(drawn, sort_keys=True)
+        keys.append(hashlib.sha256(blob.encode()).hexdigest()[:12])
+    return keys
+
+
 def ensure_dependencies() -> None:
     if not (REMOTION_DIR / "node_modules").exists():
         log("Installing Remotion (first run only, takes a few minutes)...")
@@ -115,9 +144,10 @@ def render(run: Run, output_name: str = "video.mp4") -> Path:
     shot_list = json.loads(props_path.read_text())
     total_frames = math.ceil(shot_list["durationSeconds"] * shot_list["fps"])
 
-    # Segments are named by the props they were rendered from, so a changed
-    # shot list never reuses stale segments.
-    fingerprint = hashlib.sha256(props_path.read_bytes()).hexdigest()[:12]
+    # Each segment is named by what it draws, so swapping one shot re-renders
+    # only the segment(s) it plays in, and a Remotion code change re-renders all.
+    keys = segment_keys(shot_list, total_frames, code_hash())
+    fingerprint = hashlib.sha256("".join(keys).encode()).hexdigest()[:12]
     parts_dir = run.path("output", "parts")
     parts_dir.mkdir(exist_ok=True)
 
@@ -146,7 +176,7 @@ def render(run: Run, output_name: str = "video.mp4") -> Path:
         "(the slow part - roughly 4-8 minutes per segment on a Mac)...")
     for number, start in enumerate(starts, 1):
         end = min(total_frames, start + SEGMENT_FRAMES) - 1
-        part = parts_dir / f"{fingerprint}_{start:06d}.mp4"
+        part = parts_dir / f"{keys[number - 1]}_{start:06d}.mp4"
         parts.append(part)
         if part.exists():
             log(f"  segment {number}/{len(starts)}: already rendered")

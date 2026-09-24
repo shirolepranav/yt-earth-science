@@ -1,0 +1,82 @@
+{
+  "0": {
+    "kind": "clip",
+    "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/c82a9105ade0b3f8539c6ec7.mp4",
+    "duration": 5.184,
+    "for": "Aerial wide shot of a small black basalt island in the South Pacific with a towering white steam-and-ash column erupting from the sea beside it, dark turquoise swell, low overcast Pacific dusk light, deep basalt-black shadows, fine 35mm grain."
+  },
+  "8": {
+    "kind": "plate",
+    "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/2ec144b429dfc20dbd9fe1da.jpg",
+    "for": "Wide aerial of dark pre-dawn Pacific ocean with a faint glow on the horizon and low overcast cloud, deep basalt-black water."
+  },
+  "11": {
+    "kind": "clip",
+    "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/58ddada3fc6ce8f846c0eb5b.mp4",
+    "duration": 5.184,
+    "for": "Aerial shot of two small dark volcanic islands joined by a pale isthmus of new tephra, ringed by turquoise shallow water and dark swell."
+  },
+  "16": {
+    "kind": "clip",
+    "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/6c3f051bfcb486d25691b8dc.mp4",
+    "duration": 5.184,
+    "for": "Aerial of a raw black tephra plain connecting two volcanic islands, steaming pumice flats, turquoise water."
+  },
+  "17": {
+    "kind": "clip",
+    "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/bfa7099d8942db55f4684070.mp4",
+    "duration": 5.184,
+    "for": "Top-down aerial of a newly enlarged dark volcanic island with a pale ash apron on grey-green sea, thin cloud."
+  },
+  "21": {
+    "kind": "clip",
+    "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/5ffab612896da21b11947e52.mp4",
+    "duration": 5.184,
+    "for": "High aerial of an explosive volcanic blast in the Pacific throwing a pale ash-laden cloud outward across the sea, black water beneath."
+  },
+  "4": {
+    "kind": "clip",
+    "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/24d6bfe1aa45e4cbf48407ac.mp4",
+    "duration": 5.184,
+    "for": "Wide shot from a shoreline of an enormous grey-white ash plume climbing vertically from the sea into a pale stratospheric sky, dark sea in the foreground."
+  },
+  "12": {
+    "kind": "clip",
+    "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/d5b1e1a050604d757017751a.mp4",
+    "duration": 5.184,
+    "for": "Wide aerial of a submerged caldera rim of dark basalt under churning turquoise Pacific swell, ring of shallow reef water, overcast sky."
+  },
+  "3": {
+    "kind": "still",
+    "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/2c41853b14c8842c5b257df5.jpg",
+    "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/0d707adc4e900c5b8597a657.png",
+    "for": "Telephoto shot of a glassy Pacific swell disturbed by a rising wall of white steam and grey ash breaking the surface, dark sky, far horizon."
+  },
+  "27": {
+    "kind": "still",
+    "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/19c3510ec5081d401ac07a71.jpg",
+    "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/4de6ada9a42a7081b38a3d3a.png",
+    "for": "Wide shot of a Surtseyan-style eruption: black ash and white steam bursting from shallow turquoise water, dark volcanic rubble around the vent."
+  },
+  "31": {
+    "kind": "plate",
+    "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/61ae1944cf038464a1a29e19.jpg",
+    "for": "Seen just above the swell: a wall of white steam and dark tephra bursting through churning turquoise-grey Pacific water, the sea black beneath, gas columns breaking into low overcast dusk light with fine atmospheric haze."
+  },
+  "35": {
+    "kind": "still",
+    "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/004cf7610e2c494b5c73ec3e.jpg",
+    "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/12c4134ea32e2ab5474c5753.png",
+    "for": "An infrared-toned view of towering cloud tops over dark ocean, the coldest tops pale and the warmer slopes darker, a flat grey lid of cloud marking the tropopause under thin haze."
+  },
+  "56": {
+    "kind": "plate",
+    "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/a79471f610ce82625bbbb50e.jpg",
+    "for": "High-altitude stratospheric horizon seen from a balloon at dusk: flat-topped vapour anvils far below, a sky gradient running from warm grey at the horizon to deep basalt-black overhead, faint incandescent glow along the curve, fine 35mm grain."
+  },
+  "82": {
+    "kind": "plate",
+    "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/85edfb9b2c3e1e534317a296.jpg",
+    "for": "Submerged basalt caldera rim beneath a churning turquoise Pacific swell with columns of gas breaking the surface, dusk light, atmospheric haze, dark water against faint magma-orange reflections, wide-angle 65mm."
+  }
+}

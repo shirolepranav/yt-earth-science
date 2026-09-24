@@ -1,0 +1,1571 @@
+{
+  "sentences": [
+    "Hi, welcome to another episode of the Earth Docs.",
+    "It's January 2022, and you're standing on the coast of Tonga, looking out at open ocean where a volcano is supposed to be.",
+    "Underwater.",
+    "Out of sight.",
+    "Then the horizon changes.",
+    "By the time it stops, according to the 2022 study by Wright and colleagues, the plume has punched more than fifty kilometres above your head.",
+    "Not into the clouds.",
+    "Through them.",
+    "Through the weather.",
+    "Into the stratosphere, and beyond it.",
+    "To see how it got there, go back.",
+    "Sixteen minutes past four in the morning, Coordinated Universal Time, on the fifteenth of January, two thousand twenty-two.",
+    "On the islands of Tonga it was just after five in the evening.",
+    "And at that moment, the land that had stood above the vent of the Hunga volcano simply stopped existing.",
+    "The volcano was not a stranger.",
+    "Hunga Tonga\u2013Hunga Ha'apai is a caldera in the western South Pacific, one hundred fourteen metres above sea level at its highest point, according to the Smithsonian's Global Volcanism Program, which places the capital, Nuku'alofa, about sixty-five kilometres to the south.",
+    "It had erupted in nineteen twelve, nineteen thirty-seven, nineteen eighty-eight, then in two thousand nine and again in twenty fourteen to twenty fifteen \u2014 and those last two each built a little new land.",
+    "By the second of January, twenty twenty-two, that land had grown.",
+    "Satellite imagery showed the island reaching about three point six square kilometres, with pumice rafts roughly ten metres wide drifting a hundred kilometres west, and the base of the active cone widening from five hundred metres to seventeen hundred.",
+    "Then, on the fourteenth of January, explosions took most of it away.",
+    "On the fifteenth, they took the rest.",
+    "What made this volcano different was not what stood above the water.",
+    "Hunga's caldera floor sat about one hundred fifty metres below the sea surface, roughly the height of a forty-storey building.",
+    "And according to NASA's Jet Propulsion Laboratory, citing Mill\u00e1n and colleagues in Geophysical Research Letters, that is just the right depth.",
+    "Any shallower, and there would not have been enough seawater superheated by erupting magma to account for what the satellites later measured.",
+    "Any deeper, and the pressure of the ocean would have muted the eruption.",
+    "One caveat here, and it is a live one.",
+    "The standard explanation for an eruption like this is Surtseyan: magma meeting seawater directly, fuel and coolant.",
+    "But Henley and colleagues, writing in the Journal of Volcanology and Geothermal Research in twenty twenty-four, argue the satellite imagery does not support that.",
+    "They propose something else \u2014 gas sealing itself off beneath the volcano, pressure building, then hydraulic fracture.",
+    "That argument is still open.",
+    "Which leaves the question everything else hangs on.",
+    "How does a vent under a hundred and fifty metres of ocean send anything into the mesosphere at all?",
+    "Two weather satellites were waiting for it.",
+    "One American, one Japanese, parked in geostationary orbit on opposite sides of the Pacific, both carrying near-identical infrared imagers.",
+    "Every ten minutes they watched the same patch of ocean from two different angles.",
+    "What they recorded was a column that rose off the sea surface and kept rising, through the troposphere where your weather happens, through the stratosphere where the ozone layer sits, and into the mesosphere.",
+    "Here's how we know: normally you measure a cloud's height by its temperature, because air gets colder as you climb.",
+    "Above the troposphere that rule breaks down.",
+    "So Kristopher Bedka and Konstantin Khlopenkov at NASA's Langley Research Center did something else.",
+    "They matched simultaneous images of the same plume from GOES-17 and Himawari-8, and used geometry \u2014 stereoscopy, the trick your two eyes use to build depth \u2014 to rebuild the plume in three dimensions, then checked it against the shadows the tallest parts cast onto the ash below.",
+    "Their answer was fifty-eight kilometres, reached in roughly thirty minutes, an ascent of at least forty metres per second.",
+    "A second pulse then rose above fifty kilometres and separated into three pieces.",
+    "NASA Earth Observatory calls it likely the highest plume in the satellite record.",
+    "When Mount Pinatubo erupted in the Philippines in nineteen ninety-one, its plume reached thirty-five kilometres.",
+    "This was one and a half times higher.",
+    "Not everyone lands on fifty-eight.",
+    "Carr and colleagues, in Geophysical Research Letters, ran their own stereo retrieval on the same satellite pair and put the overshooting top at fifty to fifty-five kilometres.",
+    "Still a record for the satellite era, but a range rather than one agreed number.",
+    "Both teams measured the same eruption, and drew its top in slightly different places.",
+    "And the height of a plume is only the part you can see.",
+    "Something else came off that explosion that you could not see at all, and it was already running around the world.",
+    "Within the first few hours, barometers started moving.",
+    "Not just near Tonga \u2014 everywhere.",
+    "Pressure sensors around the world recorded a pulse passing overhead, then recorded it again, and again.",
+    "Matoza and colleagues, writing in the journal Science, tracked what is called a Lamb wave, a surface-guided pressure pulse that is the signature of an energetic atmospheric explosion.",
+    "They watched it propagate for four passages around the Earth, plus three antipodal passages, over six days.",
+    "And people heard it.",
+    "Audible sound was detected more than ten thousand kilometres from the vent.",
+    "Sit with that for a second.",
+    "A pressure pulse made by one volcano, still travelling after four laps of the planet.",
+    "As measured by the amplitude of that Lamb wave, Matoza's team judged the climactic Hunga explosion comparable in size to the eighteen eighty-three eruption of Krakatoa.",
+    "That is the yardstick the modern record offers, and Hunga met it.",
+    "On the ground it was not an abstraction either.",
+    "Tsunami waves struck the Kingdom of Tonga far earlier than tsunami models expected, and several independent studies \u2014 Heidarzadeh, Lynett, Pakoksung and others \u2014 estimate initial wave amplitudes exceeding one hundred metres close to the volcano.",
+    "The waves damaged coastlines across the Pacific, as far away as Peru, and tore through submarine telecommunication cables.",
+    "So the blast wrapped the planet and the sea rose around it.",
+    "But the most consequential thing this eruption carried upward was neither sound nor water in the ocean.",
+    "It was water in the sky.",
+    "Within days, atmospheric scientists were chasing the plume the other way around the world.",
+    "Karen Rosenlof, a senior climate scientist at NOAA's Chemical Sciences Laboratory, called colleagues on La R\u00e9union, an island in the Indian Ocean, eight thousand miles downrange, directly in the path of the dispersing cloud.",
+    "Elizabeth Asher and several colleagues flew there with miniature atmospheric instruments packed in their luggage.",
+    "The balloons they released confirmed the numbers.",
+    "NOAA estimated about one hundred fifty million tons of water vapour injected into the stratosphere.",
+    "NASA's Jet Propulsion Laboratory, working from the Microwave Limb Sounder on the Aura satellite, arrived at one hundred forty-six teragrams.",
+    "Same eruption, two instruments, a range rather than a single agreed figure.",
+    "And that range is not abstract.",
+    "One hundred forty-six teragrams is enough to fill more than fifty-eight thousand Olympic-size swimming pools, according to NASA's Jet Propulsion Laboratory.",
+    "It is about ten percent of the water that was already up there.",
+    "It is roughly four times the water scientists estimate Pinatubo put into the stratosphere \u2014 and that thirty-seven teragram figure came from modelling, not measurement.",
+    "The chemistry moved faster than anyone expected.",
+    "Sulfate aerosols normally form from volcanic sulfur dioxide over about a month.",
+    "Here, because the plume was so rich in water, a dense aerosol layer assembled within days \u2014 Asher's team published that in the Proceedings of the National Academy of Sciences.",
+    "And the ozone paid for it.",
+    "According to measurements reported by NOAA Research, ozone concentrations fell by as much as thirty percent in the air holding the most water vapour \u2014 a finding led by Stephanie Evan and colleagues and published in Science.",
+    "Two weeks later, Evan's team measured ozone still depleted by around five percent across the Indian and Pacific oceans.",
+    "A separate study in Communications Earth and Environment estimated the global stratospheric water mass rose by thirteen percent above climatological levels, against the ten percent figure from NASA.",
+    "On the size of the perturbation, the sources still differ.",
+    "Water that lingers for years.",
+    "Ozone loss measured in tens of percent.",
+    "A pressure wave that circled the planet four times.",
+    "Each of those is a consequence.",
+    "None of them is yet the cause.",
+    "So what actually drove it?",
+    "The core answer is three things stacked on top of each other: depth, water, and an open vent.",
+    "A caldera floor one hundred fifty metres down gave erupting magma enough seawater to flash into steam, without enough ocean above it to smother the blast.",
+    "By the fifteenth, the loose material that had built the island was gone, so the vent was open to the sea and the sky at the same time.",
+    "Because that vent sat underwater, the plume was water-rich in a way that subaerial eruptions are not.",
+    "From the sea surface to fifty-eight kilometres in about half an hour, at forty metres per second or more.",
+    "That pulse did not stay local.",
+    "It wrapped the planet.",
+    "And the water it carried went into the stratosphere, where the air is dry and there is almost nothing to remove it.",
+    "On the biggest questions, the record is still arguing with itself.",
+    "NASA Langley measures the top at fifty-eight kilometres; Carr's stereo work gives fifty to fifty-five.",
+    "The Communications Earth and Environment study assigns the eruption a Volcanic Explosivity Index of five point eight, while Henley and colleagues call it six.",
+    "Henley's team also rejects the long-assumed fuel-coolant mechanism, favouring gas sealing and hydraulic fracture.",
+    "Three disagreements, all published, none settled.",
+    "What is settled is where this volcano sits, and what it belongs to.",
+    "Hunga Tonga\u2013Hunga Ha'apai is one of twelve confirmed submarine volcanoes along the Tofua Arc, according to the Smithsonian's Global Volcanism Program, a chain built where the Pacific Plate slides beneath the Indo-Australian Plate.",
+    "Twelve of them, mostly underwater, mostly unmonitored.",
+    "And scientists expected the water from one of them to linger up there for years, drifting.",
+    "You cannot see it.",
+    "No cloud, no colour, no smell.",
+    "But the next clear evening, look up past the weather and past the aeroplanes.",
+    "Some of that thin, dry air that filters ultraviolet light before it reaches your skin may still hold seawater that was flash-boiled out of the Pacific Ocean by a volcano that no longer exists above the surface."
+  ],
+  "beats": [
+    {
+      "sentence": 0,
+      "kind": "stock",
+      "queries": [
+        "Hunga Tonga volcano eruption 2022",
+        "underwater volcano eruption ocean",
+        "volcanic island Pacific aerial"
+      ],
+      "intent": "Real footage of a submarine volcano erupting in open ocean, ash and steam bursting through the sea surface under an overcast sky.",
+      "image_prompt": "Aerial wide shot of a small black basalt island in the South Pacific with a towering white steam-and-ash column erupting from the sea beside it, dark turquoise swell, low overcast Pacific dusk light, deep basalt-black shadows, fine 35mm grain.",
+      "motion_prompt": "Slow aerial push-in toward the vent."
+    },
+    {
+      "sentence": 1,
+      "kind": "stock",
+      "queries": [
+        "Tonga coastline volcanic boulders",
+        "South Pacific shore black rocks surf",
+        "overcast ocean horizon from shore"
+      ],
+      "intent": "A view from a black volcanic-boulder shoreline out across open ocean under an overcast sky, with no volcano visible.",
+      "image_prompt": "Handheld wide shot from a low shoreline of wet black volcanic boulders and dark damp sand, open grey Pacific swell stretching to a hazy overcast horizon, austere dawn light.",
+      "motion_prompt": "Slow pan right along the shoreline to the open sea."
+    },
+    {
+      "sentence": 2,
+      "kind": "stock",
+      "queries": [
+        "underwater volcano submerged caldera",
+        "deep ocean water column sunlight",
+        "dark blue underwater water"
+      ],
+      "intent": "Submerged view of dark deep ocean water above an unseen caldera floor, no land and no surface.",
+      "image_prompt": "Underwater wide shot in deep blue Pacific water, faint sunbeams fading into darkness above a flat drowned caldera shelf, drifting particles, no visible land.",
+      "motion_prompt": "Slow downward drift of the camera into darker water."
+    },
+    {
+      "sentence": 4,
+      "kind": "stock",
+      "queries": [
+        "volcanic gas column sea surface",
+        "eruption plume rising from ocean",
+        "ocean surface steam eruption"
+      ],
+      "intent": "The sea surface breaking open as a gas and ash column punches through the swell on the horizon.",
+      "image_prompt": "Telephoto shot of a glassy Pacific swell disturbed by a rising wall of white steam and grey ash breaking the surface, dark sky, far horizon.",
+      "motion_prompt": "Slow tilt up from the water surface to the rising column."
+    },
+    {
+      "sentence": 5,
+      "kind": "ai",
+      "chart_index": 1,
+      "queries": [
+        "Hunga Tonga plume satellite image",
+        "volcanic ash plume above ocean",
+        "towering eruption column Pacific"
+      ],
+      "intent": "A towering ash plume rising from the ocean far above the horizon, dwarfing the sea.",
+      "image_prompt": "Wide shot from a shoreline of an enormous grey-white ash plume climbing vertically from the sea into a pale stratospheric sky, dark sea in the foreground.",
+      "motion_prompt": "Slow tilt up the full height of the plume."
+    },
+    {
+      "sentence": 6,
+      "kind": "stock",
+      "queries": [
+        "ash plume punching through clouds",
+        "volcanic plume above cloud deck",
+        "cloud top view eruption column"
+      ],
+      "intent": "The ash column passing up through a flat cloud deck.",
+      "image_prompt": "High-altitude view of a vast grey ash column punching through a flat overcast cloud layer, dark clouds below, pale sky above.",
+      "motion_prompt": "Slow rise of the camera alongside the column."
+    },
+    {
+      "sentence": 9,
+      "kind": "evidence",
+      "source_index": 14,
+      "quote": "A very significant amount of material was instantly injected into the atmosphere, with the top of the plume reaching the lower mesosphere, much higher than observed during previous strong volcanic eruptions.",
+      "queries": [
+        "stratosphere horizon from aircraft",
+        "upper atmosphere thin blue sky",
+        "dark mesosphere above haze"
+      ],
+      "intent": "The thin dark edge of the stratosphere seen from high altitude, the plume invisible in the black gradient above.",
+      "image_prompt": "View from the stratosphere looking across a flat anvil of vapor toward the dark gradient of the lower mesosphere, sunlit haze below, black above.",
+      "motion_prompt": "Slow tilt up from the lit haze into the dark upper sky."
+    },
+    {
+      "sentence": 10,
+      "kind": "stock",
+      "queries": [
+        "night ocean dark sea surface",
+        "Pacific ocean before dawn",
+        "black water swell night"
+      ],
+      "intent": "Dark pre-dawn ocean with no land, the sea surface calm before the eruption.",
+      "image_prompt": "Low aerial shot of a black Pacific ocean surface before dawn under heavy overcast, faint pale horizon line, no land.",
+      "motion_prompt": "Slow forward glide low over the dark water."
+    },
+    {
+      "sentence": 11,
+      "kind": "card",
+      "variant": "fact",
+      "text": "16:04 UTC, 15 JANUARY 2022",
+      "queries": [
+        "dark sea before dawn",
+        "night ocean horizon overcast",
+        "Pacific ocean night aerial"
+      ],
+      "intent": "Dark pre-dawn ocean where the volcano sits, the moment before the eruption.",
+      "image_prompt": "Wide aerial of dark pre-dawn Pacific ocean with a faint glow on the horizon and low overcast cloud, deep basalt-black water.",
+      "motion_prompt": "Very slow push toward the faint glow."
+    },
+    {
+      "sentence": 12,
+      "kind": "stock",
+      "queries": [
+        "Tonga island coastline evening",
+        "South Pacific island village dusk",
+        "island shoreline muted sunset"
+      ],
+      "intent": "A Tongan coastline in the evening light, the same eruption time seen locally.",
+      "image_prompt": "Coastal village shoreline of dark volcanic rock and palms under a muted Pacific evening sky, calm grey sea, distant low islands.",
+      "motion_prompt": "Slow pan across the shoreline to the sea."
+    },
+    {
+      "sentence": 13,
+      "kind": "evidence",
+      "source_index": 12,
+      "quote": "The 15 January 2022 climactic eruption of Hunga volcano, Tonga, produced an explosion in the atmosphere of a size that has not been documented in the modern geophysical record.",
+      "queries": [
+        "Hunga Tonga eruption satellite island",
+        "volcanic island destroyed eruption",
+        "eruption column satellite imagery"
+      ],
+      "intent": "The land above the vent disappearing in the opening seconds of the climactic blast.",
+      "image_prompt": "Aerial view of a small twin-island volcano in the Pacific with the sea around it torn open by a white explosive blast, dark ash-laden water.",
+      "motion_prompt": "Slow push in on the vanishing island."
+    },
+    {
+      "sentence": 14,
+      "kind": "stock",
+      "queries": [
+        "Hunga Tonga Hunga Ha'apai islands aerial",
+        "twin volcanic islands Pacific",
+        "caldera island pair aerial"
+      ],
+      "intent": "The volcano as a known landmark: the two small islands joined by a strip of new land.",
+      "image_prompt": "Aerial shot of two small dark volcanic islands joined by a pale isthmus of new tephra, ringed by turquoise shallow water and dark swell.",
+      "motion_prompt": "Slow orbit around the island pair."
+    },
+    {
+      "sentence": 15,
+      "kind": "stock",
+      "queries": [
+        "South Pacific caldera volcano aerial",
+        "submerged caldera rim ocean",
+        "volcanic caldera shallow water"
+      ],
+      "intent": "The caldera rim and shallow shelf in the western South Pacific, seen from the air.",
+      "image_prompt": "Wide aerial of a submerged caldera rim of dark basalt under churning turquoise Pacific swell, ring of shallow reef water, overcast sky.",
+      "motion_prompt": "Slow aerial drift across the caldera."
+    },
+    {
+      "sentence": 15,
+      "from_words": "one hundred fourteen metres",
+      "kind": "number",
+      "value": "114 m",
+      "label": "Hunga's highest point",
+      "source": "Smithsonian GVP",
+      "queries": [
+        "volcanic island summit above sea",
+        "small basalt island ocean",
+        "aerial island peak Pacific"
+      ],
+      "intent": "The low summit of the island standing barely above the sea.",
+      "image_prompt": "Low aerial of a small dark basalt island summit with thin steam haze, open ocean all around, overcast light.",
+      "motion_prompt": "Slow rise above the modest summit."
+    },
+    {
+      "sentence": 15,
+      "from_words": "which places the capital",
+      "kind": "stock",
+      "queries": [
+        "Nuku'alofa Tonga coastline",
+        "Tonga capital waterfront aerial",
+        "South Pacific town shoreline aerial"
+      ],
+      "intent": "The coastline of Nuku'alofa far to the south, seen across the water.",
+      "image_prompt": "Distant aerial of a low Pacific island capital shoreline of pale buildings and dark volcanic rock, calm sea to the horizon, overcast.",
+      "motion_prompt": "Slow lateral glide along the distant shoreline."
+    },
+    {
+      "sentence": 16,
+      "kind": "stock",
+      "queries": [
+        "volcanic island eruption archive footage",
+        "Surtseyan steam explosions vent",
+        "volcanic island growing eruption"
+      ],
+      "intent": "Archive eruption footage from Hunga's earlier eruptions, steam and ash over the sea.",
+      "image_prompt": "Grainy archival-style shot of a dark volcanic island venting white steam and brown ash across grey sea, overcast sky.",
+      "motion_prompt": "Slow zoom toward the vent."
+    },
+    {
+      "sentence": 16,
+      "from_words": "and those last two",
+      "kind": "stock",
+      "queries": [
+        "new volcanic land formed",
+        "tephra isthmus between islands",
+        "eruption builds new island aerial"
+      ],
+      "intent": "New dark tephra land built between the two islands by the 2009 and 2014-15 eruptions.",
+      "image_prompt": "Aerial of a raw black tephra plain connecting two volcanic islands, steaming pumice flats, turquoise water.",
+      "motion_prompt": "Slow aerial track along the new land."
+    },
+    {
+      "sentence": 17,
+      "kind": "stock",
+      "queries": [
+        "Hunga Tonga island growth satellite",
+        "volcanic island expanded aerial",
+        "satellite view volcanic island Pacific"
+      ],
+      "intent": "The island as it stood on 2 January 2022, grown larger, seen whole from above.",
+      "image_prompt": "Top-down aerial of a newly enlarged dark volcanic island with a pale ash apron on grey-green sea, thin cloud.",
+      "motion_prompt": "Slow orbital drift overhead."
+    },
+    {
+      "sentence": 18,
+      "from_words": "three point six square",
+      "kind": "number",
+      "value": "3.6 km\u00b2",
+      "label": "Island area, Jan 2022",
+      "source": "Satellite imagery",
+      "queries": [
+        "volcanic island extent satellite view",
+        "island coastline aerial top down",
+        "dark volcanic island surf"
+      ],
+      "intent": "The full extent of the grown island of dark rock and ash against the sea.",
+      "image_prompt": "High aerial looking down on a dark volcanic island with a pale pumice shoreline, foaming surf around it, overcast light.",
+      "motion_prompt": "Slow pull-back revealing the island's full extent."
+    },
+    {
+      "sentence": 18,
+      "from_words": "with pumice rafts",
+      "kind": "stock",
+      "queries": [
+        "pumice raft floating ocean",
+        "floating pumice stones sea surface",
+        "pumice raft satellite Pacific"
+      ],
+      "intent": "Drifting rafts of frothy grey-white pumice packed across the ocean swell.",
+      "image_prompt": "Close aerial of a tight raft of grey-white frothy pumice stones drifting on a dark Pacific swell, no other objects.",
+      "motion_prompt": "Slow low glide across the floating raft."
+    },
+    {
+      "sentence": 18,
+      "from_words": "and the base of the",
+      "kind": "chart",
+      "data": {
+        "chart_kind": "comparison",
+        "title": "Hunga's cone base widened",
+        "labels": [
+          "Before",
+          "Jan 2022"
+        ],
+        "values": [
+          500,
+          1700
+        ],
+        "unit": "m",
+        "source": "Satellite imagery"
+      },
+      "queries": [
+        "volcanic cone base aerial",
+        "erupting vent widening",
+        "volcanic island cone growth"
+      ],
+      "intent": "The base of the active cone at the vent, widened across the shallow shelf.",
+      "image_prompt": "Aerial of a broad dark volcanic cone base widening in shallow turquoise water, ash-stained sea, overcast.",
+      "motion_prompt": "Slow rise, revealing the widening cone base."
+    },
+    {
+      "sentence": 19,
+      "kind": "stock",
+      "queries": [
+        "Hunga Tonga eruption January 2022 satellite",
+        "volcanic explosion ash cloud satellite",
+        "island destroyed eruption images"
+      ],
+      "intent": "The eruption tearing the island apart, ash and water thrown outward across the sea.",
+      "image_prompt": "High aerial of an explosive volcanic blast in the Pacific throwing a pale ash-laden cloud outward across the sea, black water beneath.",
+      "motion_prompt": "Slow push into the expanding blast cloud."
+    },
+    {
+      "sentence": 21,
+      "kind": "evidence",
+      "source_index": 9,
+      "quote": "The underwater Hunga Tonga-Hunga Ha-apai volcano erupted in the early hours of 15th January 2022, and injected volcanic gases and aerosols to over 50 km altitude.",
+      "queries": [
+        "submerged volcano vent ocean",
+        "underwater eruption bubbles surface",
+        "caldera below sea surface"
+      ],
+      "intent": "The eruption happening below the water surface, hidden beneath the swell.",
+      "image_prompt": "Split-level shot of dark Pacific swell over a submerged venting caldera, faint pale discoloration and gas in the water below the surface.",
+      "motion_prompt": "Slow half-submerge of the camera beneath the swell."
+    },
+    {
+      "sentence": 22,
+      "kind": "stock",
+      "queries": [
+        "submerged caldera floor",
+        "deep water above volcanic shelf",
+        "dark underwater shelf rock"
+      ],
+      "intent": "The drowned caldera floor sitting in dark water far below the surface.",
+      "image_prompt": "Underwater wide of a dark basalt caldera floor with pale mineral staining, deep blue water above, no land.",
+      "motion_prompt": "Slow descent toward the caldera floor."
+    },
+    {
+      "sentence": 22,
+      "from_words": "one hundred fifty metres",
+      "kind": "chart",
+      "chart_index": 0,
+      "queries": [
+        "shallow water above submerged caldera",
+        "sea surface over volcanic shelf",
+        "ocean depth above volcano"
+      ],
+      "intent": "Shallow water over the caldera floor, the sea surface close above it.",
+      "image_prompt": "Half-underwater view showing a dark submerged shelf close beneath the sunlit sea surface, turquoise water, faint swell.",
+      "motion_prompt": "Slow tilt from the underwater shelf up to the surface."
+    },
+    {
+      "sentence": 23,
+      "kind": "stock",
+      "queries": [
+        "NASA satellite view Pacific ocean",
+        "satellite measurement ocean surface",
+        "spacecraft view ocean patch"
+      ],
+      "intent": "Satellite-eye view of the ocean surface above the volcano, as measured from orbit.",
+      "image_prompt": "Very high aerial of the Pacific ocean surface with faint wave texture and a pale discoloured patch above the volcano, thin cloud streaks.",
+      "motion_prompt": "Slow orbital drift over the discoloured patch."
+    },
+    {
+      "sentence": 24,
+      "kind": "evidence",
+      "source_index": 4,
+      "quote": "The underwater eruption in the South Pacific Ocean also blasted an enormous plume of water vapor into Earth\u2019s stratosphere \u2013 enough to fill more than 58,000 Olympic-size swimming pools.",
+      "queries": [
+        "seawater flashing to steam eruption",
+        "superheated water vapour plume",
+        "magma water interaction steam explosion"
+      ],
+      "intent": "Seawater flashing to steam where hot magma meets the ocean.",
+      "image_prompt": "Close shot of dark basalt rubble at the waterline where steam explodes off the surface in dense white bursts, dark swell around it.",
+      "motion_prompt": "Slow push into the bursting steam."
+    },
+    {
+      "sentence": 25,
+      "kind": "stock",
+      "queries": [
+        "deep ocean pressure water column",
+        "deep dark ocean water underwater",
+        "ocean depth dark water"
+      ],
+      "intent": "The weight of deep water pressing down, the eruption stifled by pressure.",
+      "image_prompt": "Underwater shot of dark, deep, lightless Pacific water with faint particulate drifts, black below.",
+      "motion_prompt": "Slow sink deeper into darkness."
+    },
+    {
+      "sentence": 26,
+      "kind": "stock",
+      "queries": [
+        "Surtseyan eruption steam explosion",
+        "volcano water interaction eruption",
+        "phreatic eruption ocean steam"
+      ],
+      "intent": "The classic Surtseyan picture: magma and seawater meeting in a burst of steam and ash.",
+      "image_prompt": "Wide shot of a Surtseyan-style eruption: black ash and white steam bursting from shallow turquoise water, dark volcanic rubble around the vent.",
+      "motion_prompt": "Slow lateral track past the venting crater."
+    },
+    {
+      "sentence": 28,
+      "kind": "evidence",
+      "source_index": 5,
+      "quote": "An extraordinarily powerful, explosive eruption occurred from Hunga volcano in the Tonga island arc on 15 January 2022 and generated an eruption column 58 km high.",
+      "queries": [
+        "Hunga Tonga eruption column photographs",
+        "volcanic column satellite image",
+        "eruption plume from orbit"
+      ],
+      "intent": "The satellite record of the eruption column rising to its full height.",
+      "image_prompt": "High satellite-style view of a vast concentric ash plume spreading from a Pacific volcano, pale umbrella cloud over dark ocean, thin shockwave ripple spreading across the sea surface.",
+      "motion_prompt": "Slow pull-back revealing the full plume."
+    },
+    {
+      "sentence": 29,
+      "kind": "stock",
+      "queries": [
+        "volcanic gas bubbles underwater vent",
+        "vesicular basalt rock close up",
+        "seafloor vent gas streaming"
+      ],
+      "intent": "Gas sealed beneath the volcano, pressure building under the rock.",
+      "image_prompt": "Underwater shot of dark vesicular basalt rock at the vent with bubbles streaming from cracks into blue water, mineral banding on the rock.",
+      "motion_prompt": "Slow push toward the venting crack."
+    },
+    {
+      "sentence": 30,
+      "kind": "stock",
+      "queries": [
+        "Hunga Tonga caldera ocean",
+        "submarine volcano steam venting sea surface",
+        "South Pacific ocean dusk aerial"
+      ],
+      "intent": "The submerged Hunga caldera under open Pacific swell, steam and gas venting through the sea surface \u2014 the still-open argument about what the eruption did under water.",
+      "image_prompt": "A wide low aerial view of open South Pacific water under a low overcast dusk: dark basalt-black swell, a loose raft of porous grey-white pumice bobbing on the surface, thin white steam and haze rising offshore, no land, deep shadows against a pale horizon.",
+      "motion_prompt": "Slow push-in across the water toward the steaming patch of sea."
+    },
+    {
+      "sentence": 32,
+      "kind": "card",
+      "variant": "question",
+      "text": "HOW DID IT REACH THE MESOSPHERE?",
+      "queries": [
+        "Hunga Tonga underwater eruption vent",
+        "submarine volcano gas plume ocean surface",
+        "caldera rim breaking wave steam"
+      ],
+      "intent": "A text card over the venting submarine caldera, posing how a vent under 150 metres of ocean sent material to the mesosphere.",
+      "image_prompt": "Seen just above the swell: a wall of white steam and dark tephra bursting through churning turquoise-grey Pacific water, the sea black beneath, gas columns breaking into low overcast dusk light with fine atmospheric haze.",
+      "motion_prompt": "Slow drift right along the venting waterline."
+    },
+    {
+      "sentence": 33,
+      "kind": "stock",
+      "queries": [
+        "GOES-17 Himawari-8 geostationary satellites",
+        "weather satellite over Pacific from space",
+        "Earth orbit satellite view Pacific Ocean"
+      ],
+      "intent": "Two geostationary weather satellites parked on opposite sides of the Pacific, each carrying a near-identical infrared imager, watching the same patch of ocean.",
+      "image_prompt": "A high-orbit photographic view over the dark Pacific at oceanic dawn, the curved limb of Earth below with thin airglow, two small instrumented geostationary satellites silhouetted against black space, faint cloud decks far beneath.",
+      "motion_prompt": "Slow orbital drift past the two satellites as the Earth turns below."
+    },
+    {
+      "sentence": 35,
+      "kind": "evidence",
+      "source_index": 4,
+      "quote": "The GOES-17 satellite captured the series of images that also show crescent-shaped shock waves and lightning strikes.",
+      "queries": [
+        "GOES-17 Hunga Tonga eruption images",
+        "satellite shock wave lightning volcano",
+        "NOAA GOES imagery eruption plume"
+      ],
+      "intent": "Source page showing that the GOES-17 satellite captured the eruption images, including crescent-shaped shock waves and lightning strikes.",
+      "image_prompt": "A grainy infrared satellite frame of the eruption's umbrella cloud over dark ocean, faint crescent-shaped arcs radiating outward and small lightning flashes inside the cloud.",
+      "motion_prompt": "Very slow push-in on the highlighted line."
+    },
+    {
+      "sentence": 36,
+      "kind": "stock",
+      "queries": [
+        "Hunga Tonga plume January 2022 satellite",
+        "volcanic eruption column from space",
+        "eruption column troposphere stratosphere mesosphere"
+      ],
+      "intent": "The column rising off the sea surface and continuing up through the troposphere, the stratosphere and into the mesosphere \u2014 a limb view of the plume punching through the atmospheric layers.",
+      "image_prompt": "A satellite-limb photographic view of a vast dark ash column rising from the ocean and flattening into a wide fibrous anvil high in a thin blue-black sky, white stratospheric haze layers bending around the plume top.",
+      "motion_prompt": "Slow tilt up the column from sea surface to anvil top."
+    },
+    {
+      "sentence": 37,
+      "kind": "stock",
+      "queries": [
+        "infrared satellite cloud top temperature",
+        "thunderstorm anvil cloud top from space",
+        "weather satellite cloud imagery"
+      ],
+      "intent": "Infrared views of cloud tops, used to measure height by temperature \u2014 and the way that rule breaks down above the troposphere.",
+      "image_prompt": "An infrared-toned view of towering cloud tops over dark ocean, the coldest tops pale and the warmer slopes darker, a flat grey lid of cloud marking the tropopause under thin haze.",
+      "motion_prompt": "Slow pan across the ramped cloud tops."
+    },
+    {
+      "sentence": 39,
+      "kind": "stock",
+      "queries": [
+        "NASA Langley Research Center",
+        "satellite stereo plume measurement",
+        "scientists satellite data room"
+      ],
+      "intent": "The NASA Langley team's alternative method for measuring the plume \u2014 working with satellite geometry instead of temperature.",
+      "image_prompt": "A dim research room at dusk, a large monitor glowing with a grayscale satellite plume over dark ocean, a technician's silhouette at a desk in the foreground, cables and paper traces softly out of focus, cool window light.",
+      "motion_prompt": "Slow dolly left past the monitor."
+    },
+    {
+      "sentence": 40,
+      "kind": "stock",
+      "queries": [
+        "Hunga Tonga plume satellite view",
+        "ash cloud seen from orbit",
+        "volcanic plume Pacific from space"
+      ],
+      "intent": "Simultaneous images of the same plume captured by two satellites over the Pacific.",
+      "image_prompt": "A high-orbit photographic view of a sprawling grey ash umbrella over dark Pacific water, its edges feathered and hazy, a faint offset ghost of the same cloud beside it, cold dawn light and fine grain.",
+      "motion_prompt": "Slow lateral drift across the ash canopy."
+    },
+    {
+      "sentence": 40,
+      "from_words": "and used geometry",
+      "kind": "stock",
+      "queries": [
+        "stereoscopic plume height measurement",
+        "volcanic plume three dimensional satellite",
+        "two angle satellite imagery cloud"
+      ],
+      "intent": "The stereoscopy \u2014 the same plume seen from two angles, rebuilt in three dimensions.",
+      "image_prompt": "A vast ash umbrella over dark ocean seen from two slightly different angles, the plume's turrets doubling faintly across the frame, thin haze around the top, deep black water beneath.",
+      "motion_prompt": "Slow arc around the towering plume top."
+    },
+    {
+      "sentence": 40,
+      "from_words": "then checked it",
+      "kind": "stock",
+      "queries": [
+        "volcanic plume shadow on ash",
+        "eruption cloud shadow satellite",
+        "overshooting top shadow ash deck"
+      ],
+      "intent": "The tallest parts of the plume casting long shadows onto the ash below, used as a cross-check on the height.",
+      "image_prompt": "A vast ash umbrella over dark ocean with long sharp shadows thrown by its tallest turrets onto the lower ash deck, raking low Pacific light, deep basalt-black contrast and fine 35mm grain.",
+      "motion_prompt": "Slow tilt down across the shadowed ash deck."
+    },
+    {
+      "sentence": 41,
+      "kind": "number",
+      "value": "58 km",
+      "label": "Plume top in 30 min",
+      "source": "NASA Langley / Bedka & Khlopenkov",
+      "queries": [
+        "Hunga Tonga 58 km plume",
+        "overshooting top volcano",
+        "eruption plume mesosphere"
+      ],
+      "intent": "The measured top of the plume \u2014 58 kilometres, reached in roughly half an hour.",
+      "image_prompt": "A towering grey-white ash column rising from the ocean into a black upper sky, its overshooting top domed and fibrous, cold light and faint haze at the summit.",
+      "motion_prompt": "Slow tilt up to the highest dome of the plume."
+    },
+    {
+      "sentence": 42,
+      "kind": "stock",
+      "queries": [
+        "Hunga Tonga second eruption pulse",
+        "eruption cloud separating satellite",
+        "ash cloud three parts orbit view"
+      ],
+      "intent": "A second pulse rising above 50 kilometres and separating into three distinct cloud masses.",
+      "image_prompt": "A satellite view of three distinct grey ash masses drifting apart above a dark ocean, the highest edged in thin haze, fine grain and cold light.",
+      "motion_prompt": "Slow pull back as the three masses separate."
+    },
+    {
+      "sentence": 43,
+      "kind": "evidence",
+      "source_index": 6,
+      "quote": "The plume from Hunga Tonga-Hunga Ha\u2018apai behaved like a mega-thunderstorm that rose 58 kilometers (38 miles) into the atmosphere.",
+      "queries": [
+        "NASA Earth Observatory Tonga plume",
+        "Hunga Tonga mega-thunderstorm plume",
+        "plume reaching mesosphere"
+      ],
+      "intent": "NASA Earth Observatory's page calling the plume likely the highest in the satellite record, behaving like a mega-thunderstorm.",
+      "image_prompt": "A satellite view of the plume's fibrous anvil spreading wide over dark ocean, cloud texture like a thunderstorm anvil, cold pale grey against black water.",
+      "motion_prompt": "Slow push-in along the anvil edge."
+    },
+    {
+      "sentence": 44,
+      "kind": "stock",
+      "queries": [
+        "Mount Pinatubo 1991 eruption",
+        "Pinatubo ash column Philippines",
+        "1991 volcanic eruption plume"
+      ],
+      "intent": "The 1991 benchmark eruption: a tropical volcano's plume reaching 35 kilometres.",
+      "image_prompt": "A colossal grey eruption column rising over a forested tropical volcano at dawn, ash falling on dark ridges, a flat white anvil spreading at the top, heavy haze.",
+      "motion_prompt": "Slow push in toward the eruption column."
+    },
+    {
+      "sentence": 45,
+      "kind": "chart",
+      "data": {
+        "chart_kind": "bar",
+        "title": "Plume heights compared",
+        "labels": [
+          "Hunga Tonga 2022",
+          "Pinatubo 1991"
+        ],
+        "values": [
+          58,
+          35
+        ],
+        "unit": "km",
+        "source": "NASA Langley / USGS"
+      },
+      "queries": [
+        "eruption plume height comparison",
+        "volcano plume altitude",
+        "Pinatubo Hunga Tonga plume"
+      ],
+      "intent": "A chart comparing the two plume heights \u2014 Hunga Tonga at 58 km against Pinatubo's 35 km.",
+      "image_prompt": "A horizon shot of a high ash plume over a black volcanic coastline at dusk, magma-orange light catching the cloud base, cold grey sky, fine grain.",
+      "motion_prompt": "Slow vertical tilt up the plume."
+    },
+    {
+      "sentence": 46,
+      "kind": "stock",
+      "queries": [
+        "Hunga Tonga plume height retrieval",
+        "satellite plume top measurement",
+        "eruption overshooting top imagery"
+      ],
+      "intent": "A different team's plume-top retrieval \u2014 the disputed number of how high the top really was.",
+      "image_prompt": "A single satellite frame of the plume's overshooting dome over dark ocean, its top edge soft and ambiguous, thin shadow bands across the ash.",
+      "motion_prompt": "Slow push-in on the dome."
+    },
+    {
+      "sentence": 47,
+      "kind": "number",
+      "value": "50\u201355 km",
+      "label": "Carr et al. plume top",
+      "source": "Carr et al., GRL",
+      "queries": [
+        "Hunga Tonga stereo retrieval",
+        "Geophysical Research Letters plume height",
+        "overshooting top 55 km"
+      ],
+      "intent": "Carr and colleagues' independent stereo retrieval, putting the overshooting top at 50 to 55 kilometres.",
+      "image_prompt": "A cold satellite-style view of the plume top seen from two slightly different angles, the dome doubled faintly across the frame, dark ocean beneath and pale haze around it.",
+      "motion_prompt": "Slow drift sideways across the plume top."
+    },
+    {
+      "sentence": 48,
+      "kind": "stock",
+      "queries": [
+        "Hunga Tonga satellite era record",
+        "volcanic plume highest on record",
+        "ash plume over Pacific dusk"
+      ],
+      "intent": "The same eruption measured twice with slightly different tops \u2014 a record for the satellite era, but a range rather than one agreed number.",
+      "image_prompt": "A wide satellite view of the vast ash umbrella over dark Pacific water at dusk, edges dissolving into haze, deep shadow beneath the cloud, fine 35mm grain.",
+      "motion_prompt": "Slow pull back from the plume top."
+    },
+    {
+      "sentence": 50,
+      "kind": "stock",
+      "queries": [
+        "eruption plume top above haze",
+        "volcanic cloud ocean horizon",
+        "plume visible above sea"
+      ],
+      "intent": "Only the visible top of the plume \u2014 everything else about the eruption hidden below it.",
+      "image_prompt": "A distant aerial view of the pale plume top floating above a grey ocean horizon, empty dark sea beneath, most of the column lost in haze.",
+      "motion_prompt": "Slow tilt down from the plume to the empty sea."
+    },
+    {
+      "sentence": 51,
+      "kind": "evidence",
+      "source_index": 14,
+      "quote": "The amount of water vapor added to the middle atmosphere surpassed anything seen in the observational record so far.",
+      "queries": [
+        "Hunga Tonga water vapor stratosphere",
+        "stratospheric water vapor satellite measurement",
+        "GMAO water vapor injection"
+      ],
+      "intent": "The invisible thing the explosion released \u2014 water vapour injected into the middle atmosphere, more than ever observed.",
+      "image_prompt": "A pale water-rich plume sheet spreading across the stratosphere seen from orbit, translucent white haze over dark ocean and black space above.",
+      "motion_prompt": "Slow drift across the translucent haze."
+    },
+    {
+      "sentence": 52,
+      "kind": "stock",
+      "queries": [
+        "weather station barometer sensor",
+        "pressure sensor outdoor coast",
+        "meteorological instruments overcast sky"
+      ],
+      "intent": "Barometers and pressure sensors around the world registering the pulse as it passes overhead \u2014 not just near Tonga, everywhere.",
+      "image_prompt": "A damp outdoor weather station at grey dawn: an anemometer and a hooded sensor mast silhouetted against an overcast Pacific sky, rain-wet metal, dark volcanic coast far behind, no people.",
+      "motion_prompt": "Slow push-in past the turning anemometer cups."
+    },
+    {
+      "sentence": 54,
+      "kind": "evidence",
+      "source_index": 12,
+      "quote": "Matoza et al. present infrasound and seismic recordings, along with other geophysical observations, that help to describe this event.",
+      "queries": [
+        "Matoza Science 2022 Hunga Tonga",
+        "infrasound recordings eruption",
+        "seismoacoustic observations volcano"
+      ],
+      "intent": "The Matoza et al. paper in Science presenting the infrasound and seismic recordings of the pressure pulse.",
+      "image_prompt": "A field of white seismometer and infrasound sensor domes on a black sand terrace at dusk, thin cables running to the horizon, low overcast sky, fine grain.",
+      "motion_prompt": "Slow track along the cable line past the sensors."
+    },
+    {
+      "sentence": 55,
+      "kind": "stock",
+      "queries": [
+        "Lamb wave pressure pulse",
+        "shockwave ripple ocean surface",
+        "atmospheric wave circling Earth"
+      ],
+      "intent": "A Lamb wave \u2014 the surface-guided pressure pulse of an energetic atmospheric explosion \u2014 travelling around the globe.",
+      "image_prompt": "A glassy ocean surface under pale dawn light with a single concentric ripple ring spreading outward, the outer rings swallowed by dark water, haze at the horizon.",
+      "motion_prompt": "Slow rise above the spreading ripple."
+    },
+    {
+      "sentence": 56,
+      "kind": "chart",
+      "chart_index": 2,
+      "queries": [
+        "global pressure wave passages",
+        "Lamb wave circling globe",
+        "atmospheric pulse antipodal"
+      ],
+      "intent": "The chart of the Lamb wave's passages: four direct passages around the Earth plus three antipodal passages.",
+      "image_prompt": "A wide dusk view of a glassy ocean with a faint pressure ripple crossing it, low cloud and haze on the horizon, dark water beneath.",
+      "motion_prompt": "Slow drift across the rippled water."
+    },
+    {
+      "sentence": 57,
+      "kind": "stock",
+      "queries": [
+        "coastal cliffs ocean overcast",
+        "basalt coastline pumice tide line",
+        "turbulent swell black rock"
+      ],
+      "intent": "People hearing the eruption \u2014 the boom that arrived thousands of kilometres from the vent.",
+      "image_prompt": "A black volcanic coastline under heavy overcast, cold surf breaking on basalt boulders, white pumice rafted in the shallows, no people visible.",
+      "motion_prompt": "Slow drift along the waterline."
+    },
+    {
+      "sentence": 58,
+      "kind": "evidence",
+      "source_index": 12,
+      "quote": "The Hunga Tonga undersea volcanic eruption was one of the most powerful recorded, with audible sound detected more than 10,000 kilometers from the source.",
+      "queries": [
+        "audible sound Hunga Tonga 10000 km",
+        "infrasound audible eruption distance",
+        "Tonga eruption heard worldwide"
+      ],
+      "intent": "The receipt: audible sound from the eruption was detected more than 10,000 kilometres from the source.",
+      "image_prompt": "A wide empty Pacific horizon at dusk, a faint dark pressure ripple crossing the glassy water toward the camera, low cloud and haze.",
+      "motion_prompt": "Very slow push-in on the highlighted line."
+    },
+    {
+      "sentence": 59,
+      "kind": "stock",
+      "queries": [
+        "empty Pacific ocean dusk",
+        "basalt coastline overcast",
+        "pumice tide line black sand"
+      ],
+      "intent": "The empty sea after the blast \u2014 a held frame to sit with the figure.",
+      "image_prompt": "Black volcanic boulders and damp dark sand under a heavy overcast sky, pumice stones washed up along the tideline, cold grey surf, no people.",
+      "motion_prompt": "Slow push-in on the stranded pumice at the tideline."
+    },
+    {
+      "sentence": 60,
+      "kind": "card",
+      "variant": "fact",
+      "text": "FOUR LAPS AROUND EARTH",
+      "queries": [
+        "Hunga Tonga eruption satellite plume",
+        "stratospheric vapour anvil dusk",
+        "South Pacific ocean from orbit"
+      ],
+      "intent": "A high stratospheric horizon behind the card, showing the empty arena the pressure pulse has just crossed four times.",
+      "image_prompt": "High-altitude stratospheric horizon seen from a balloon at dusk: flat-topped vapour anvils far below, a sky gradient running from warm grey at the horizon to deep basalt-black overhead, faint incandescent glow along the curve, fine 35mm grain.",
+      "motion_prompt": "Slow upward drift"
+    },
+    {
+      "sentence": 61,
+      "kind": "stock",
+      "queries": [
+        "Hunga Tonga atmospheric wave",
+        "gravity wave rings atmosphere",
+        "Earth limb from orbit"
+      ],
+      "intent": "The planet-scale pressure wave from the eruption, seen as concentric wave structure spreading across the ocean and atmosphere from orbit.",
+      "image_prompt": "Orbital view of the South Pacific at dusk, the curved limb of the Earth across the top, dark basalt-black ocean with faint concentric bands of pale haze rippling outward, thin turquoise water near the terminator, wide and solemn.",
+      "motion_prompt": "Slow push in"
+    },
+    {
+      "sentence": 62,
+      "kind": "evidence",
+      "source_index": 12,
+      "quote": "An atmospheric lamb wave, characteristic of energetic atmospheric events, circled the planet four times and was similar to the 1883 Krakatau eruption.",
+      "queries": [
+        "Krakatoa 1883 caldera",
+        "tropical volcanic island caldera",
+        "volcanic island Pacific aerial"
+      ],
+      "intent": "The historical yardstick made visible: a young volcanic island standing inside a broad collapsed caldera in a tropical sea.",
+      "image_prompt": "A young volcanic island inside a wide caldera in a tropical sea at overcast dusk, black basalt cliffs, pale grey steam drifting from the crater rim, low warm light on the water, wide aerial vista, 65mm grain.",
+      "motion_prompt": "Slow aerial orbit"
+    },
+    {
+      "sentence": 64,
+      "kind": "stock",
+      "queries": [
+        "Tonga tsunami coastline aerial",
+        "tsunami wave hitting shore",
+        "Pacific island coast aerial dusk"
+      ],
+      "intent": "Tsunami waves arriving at a Pacific island coast within minutes of the eruption, far sooner than any model expected.",
+      "image_prompt": "Aerial view of a dark volcanic coast at overcast dusk, black boulders and damp sand, a pale grey swell breaking in long lines along the shore, spray hanging in the air, wide documentary framing.",
+      "motion_prompt": "Slow forward drone push"
+    },
+    {
+      "sentence": 64,
+      "from_words": "estimate initial wave amplitudes",
+      "kind": "number",
+      "value": "100 metres",
+      "label": "Initial tsunami wave height",
+      "source": "Heidarzadeh et al.",
+      "queries": [
+        "tsunami wave height measurement",
+        "coastal wave damage Pacific",
+        "black volcanic coast swell"
+      ],
+      "intent": "A wall of water standing over a black volcanic shore, the scale of the initial tsunami close to the volcano.",
+      "image_prompt": "Low view across a flooded black basalt shore at dusk, a wall of pale water rising beyond the rocks, heavy spray haze, faint orange glow of a vent far behind, monumental scale.",
+      "motion_prompt": "Slow tilt up"
+    },
+    {
+      "sentence": 65,
+      "kind": "stock",
+      "queries": [
+        "tsunami damage Peru coast",
+        "submarine cable repair ship",
+        "Pacific coastline flooding"
+      ],
+      "intent": "Distant Pacific coastlines struck by the waves and submarine telecommunication cable brought ashore through the surf.",
+      "image_prompt": "A battered Pacific coastal road at dusk, wet black volcanic rocks and scattered grey pumice rafts along the sand, a thick cable coming ashore through the breaking surf, overcast sky, wide observational framing.",
+      "motion_prompt": "Slow lateral track"
+    },
+    {
+      "sentence": 67,
+      "kind": "evidence",
+      "source_index": 14,
+      "quote": "Because this eruption occurred beneath the ocean surface, the plume was extremely rich in moisture (Mill\u00e1n et al. 2022).",
+      "queries": [
+        "underwater eruption gas bubbles",
+        "submerged caldera water column",
+        "submarine volcano steam surface"
+      ],
+      "intent": "The submerged caldera below the swell, where the eruption loaded the plume with water instead of ash.",
+      "image_prompt": "Underwater view in the dark blue water column directly above a drowned caldera shelf, sunbeams fading downward, clouds of fine pale tephra particles suspended in the water, basalt-black depths below.",
+      "motion_prompt": "Slow downward drift"
+    },
+    {
+      "sentence": 69,
+      "kind": "stock",
+      "queries": [
+        "water vapour satellite map ocean",
+        "meteorology research station dusk",
+        "dispersing plume high altitude"
+      ],
+      "intent": "Scientists tracking the dispersing water-rich plume as it spreads west around the world.",
+      "image_prompt": "A broad band of pale dispersing haze high above the dark ocean at dawn, seen from altitude, thin cirrus streaks, no land in sight, serene wide framing.",
+      "motion_prompt": "Slow drift right"
+    },
+    {
+      "sentence": 70,
+      "kind": "stock",
+      "queries": [
+        "La R\u00e9union island aerial",
+        "Indian Ocean volcanic island",
+        "remote island coastline dusk"
+      ],
+      "intent": "La R\u00e9union in the Indian Ocean, the island chosen because the plume was heading straight for it.",
+      "image_prompt": "Remote volcanic island in the Indian Ocean from the air at dusk, black basalt cliffs, green-brown slopes, grey surf encircling the shore, low overcast light, wide shot.",
+      "motion_prompt": "Slow aerial push in"
+    },
+    {
+      "sentence": 70,
+      "from_words": "directly in the path",
+      "kind": "evidence",
+      "source_index": 8,
+      "quote": "Owing to the extreme injection altitude, the volcanic plume circumnavigated the Earth in only 1 week and dispersed nearly pole-to-pole in three months.",
+      "queries": [
+        "satellite view Indian Ocean clouds",
+        "stratospheric haze over ocean",
+        "plume dispersing from space"
+      ],
+      "intent": "The plume travelling as a distinct band of haze around the globe, arriving over the Indian Ocean within days.",
+      "image_prompt": "View from orbit of a curved band of pale volcanic haze sweeping across a dark blue Indian Ocean at dawn, thin cloud below, the limb of the Earth across the top of the frame.",
+      "motion_prompt": "Slow push in"
+    },
+    {
+      "sentence": 71,
+      "kind": "stock",
+      "queries": [
+        "weather balloon release field",
+        "research instruments suitcase",
+        "atmospheric scientists fieldwork"
+      ],
+      "intent": "Miniature atmospheric instruments carried in luggage and the sounding balloons released from them.",
+      "image_prompt": "Close view of a hard-shell case open on a windy grass ridge at dusk, small silver atmospheric instrument packages packed inside, a pale latex balloon half inflated beside it, no people, fine grain.",
+      "motion_prompt": "Slow handheld tilt up"
+    },
+    {
+      "sentence": 73,
+      "kind": "number",
+      "value": "150 million tons",
+      "label": "Water vapour injected into stratosphere",
+      "source": "NOAA",
+      "queries": [
+        "stratospheric water vapour measurement",
+        "atmospheric science laboratory",
+        "high altitude balloon instruments"
+      ],
+      "intent": "The sheer mass of water vapour lofted above the weather, seen as an immense pale vapour field over the ocean.",
+      "image_prompt": "Aerial view of an immense pale water-vapour haze lying over the dark blue Pacific swell, one shaft of light through it, overcast dusk, monumental scale.",
+      "motion_prompt": "Slow pull back"
+    },
+    {
+      "sentence": 74,
+      "kind": "stock",
+      "queries": [
+        "Microwave Limb Sounder satellite",
+        "NASA Aura satellite orbit",
+        "satellite instrument above Earth"
+      ],
+      "intent": "The Microwave Limb Sounder on the Aura satellite, the instrument that produced the independent figure.",
+      "image_prompt": "A satellite in low Earth orbit above the Pacific at dawn, its limb-sounding instrument pointed at the thin orange band of the atmosphere, dark ocean far below, deep basalt-black shadows.",
+      "motion_prompt": "Slow drift"
+    },
+    {
+      "sentence": 75,
+      "kind": "evidence",
+      "source_index": 4,
+      "quote": "The huge amount of water vapor hurled into the atmosphere, as detected by NASA\u2019s Microwave Limb Sounder, could end up temporarily warming Earth\u2019s surface.",
+      "queries": [
+        "NASA JPL satellite water vapor",
+        "Earth atmosphere limb from orbit",
+        "satellite over Pacific ocean"
+      ],
+      "intent": "The measured water vapour in the atmosphere's limb, the value the second instrument reported.",
+      "image_prompt": "The Earth's limb from orbit at dawn, a thin orange-and-grey atmospheric band above the dark Pacific, faint haze layers layered through it, wide and austere.",
+      "motion_prompt": "Slow pan"
+    },
+    {
+      "sentence": 77,
+      "kind": "stock",
+      "queries": [
+        "ocean water vapour haze aerial",
+        "white vapour mass sky",
+        "vast cloud field above ocean"
+      ],
+      "intent": "The volume of water made visible as a vast pale mass of vapour hanging over the ocean.",
+      "image_prompt": "Aerial view of a vast pale water-vapour haze lying in sheets over the dark blue Pacific swell, thin light raking across it, overcast dusk, deep basalt-black water below.",
+      "motion_prompt": "Slow horizontal drift"
+    },
+    {
+      "sentence": 79,
+      "kind": "chart",
+      "chart_index": 3,
+      "queries": [
+        "Pinatubo eruption 1991 plume",
+        "volcanic ash plume stratosphere",
+        "Hunga Tonga eruption cloud"
+      ],
+      "intent": "The direct comparison of water injected by Hunga Tonga against the modelled Pinatubo value.",
+      "image_prompt": "Two volcanic eruption columns seen from orbit at dusk, one broad pale water-rich vapour anvil over open ocean and one grey ash plume over an island, wide solemn framing.",
+      "motion_prompt": "Slow push in"
+    },
+    {
+      "sentence": 80,
+      "kind": "stock",
+      "queries": [
+        "sulfate aerosol haze dusk",
+        "volcanic sulfur dioxide plume",
+        "sunset haze above clouds"
+      ],
+      "intent": "Sulfate haze chemistry in the stratosphere moving far faster than the usual month-long conversion from sulfur dioxide.",
+      "image_prompt": "An orange-tinted stratospheric sulfate haze band above dark cloud tops at dusk, sun low behind it, wide view from altitude, heavy atmospheric haze.",
+      "motion_prompt": "Slow rise"
+    },
+    {
+      "sentence": 82,
+      "kind": "evidence",
+      "source_index": 3,
+      "quote": "A volcanic eruption sent enough water vapor into the stratosphere to cause a rapid change in chemistry",
+      "queries": [
+        "aerosol layer above cloud tops",
+        "stratospheric haze dusk",
+        "volcanic plume fading sky"
+      ],
+      "intent": "A dense aerosol layer assembling within days in the water-rich stratosphere.",
+      "image_prompt": "Dense pale aerosol sheets assembling above the dark ocean at dawn, visible edges on the haze layers, austere grey-orange light, seen from high altitude.",
+      "motion_prompt": "Slow drift"
+    },
+    {
+      "sentence": 83,
+      "kind": "stock",
+      "queries": [
+        "Earth limb sunrise orbit",
+        "ozone layer from space",
+        "planet horizon thin atmosphere"
+      ],
+      "intent": "The thin ozone-bearing shell of atmosphere in which the chemical cost was paid.",
+      "image_prompt": "The curved limb of the Earth at sunrise from orbit, a thin blue-and-orange band of atmosphere above the dark ocean, sparse stars overhead, wide solemn framing.",
+      "motion_prompt": "Slow drift"
+    },
+    {
+      "sentence": 84,
+      "kind": "evidence",
+      "source_index": 3,
+      "quote": "Two research papers have now detailed how that water vapor rapidly affected the Earth\u2019s stratosphere between 10 and 31 miles above the surface, causing an unexpectedly large loss of ozone and an unexpectedly rapid formation of aerosols.",
+      "queries": [
+        "ozone depletion over ocean",
+        "satellite ozone monitoring atmosphere",
+        "high altitude atmosphere haze"
+      ],
+      "intent": "The stratospheric layer where ozone was destroyed, water vapour and aerosol haze occupying the same air.",
+      "image_prompt": "High-altitude view of a band of pale stratospheric haze above the dark ocean at dusk, faint orange gradient through thin cirrus, no land, austere and wide.",
+      "motion_prompt": "Slow tilt down"
+    },
+    {
+      "sentence": 85,
+      "kind": "stock",
+      "queries": [
+        "ozonesonde balloon launch",
+        "remote island research station",
+        "atmospheric sampling instruments field"
+      ],
+      "intent": "Continued ozone soundings two weeks later over the Indian and Pacific oceans, still showing depletion.",
+      "image_prompt": "A small white ozonesonde balloon rising from a windy island ridge at dawn, dark heath and black volcanic rocks below, cold grey light, wide framing, no people.",
+      "motion_prompt": "Slow tilt up following the balloon"
+    },
+    {
+      "sentence": 86,
+      "kind": "chart",
+      "data": {
+        "chart_kind": "comparison",
+        "title": "Stratospheric water increase: two estimates",
+        "labels": [
+          "Comms Earth & Env.",
+          "NASA"
+        ],
+        "values": [
+          13,
+          10
+        ],
+        "unit": "%",
+        "source": "Comm. Earth & Env. / NASA"
+      },
+      "queries": [
+        "stratospheric water vapour globe",
+        "planet atmosphere from orbit",
+        "global haze layer dusk"
+      ],
+      "intent": "A planet-wide increase in stratospheric water, with the two published estimates placed side by side.",
+      "image_prompt": "The limb of the globe at dawn with a broad pale water-vapour band circling above the Pacific, orange rim light, dark ocean and cloud below.",
+      "motion_prompt": "Slow orbit"
+    },
+    {
+      "sentence": 87,
+      "kind": "stock",
+      "queries": [
+        "persistent haze layers stratosphere",
+        "high altitude cirrus dusk",
+        "Earth atmosphere band from orbit"
+      ],
+      "intent": "Haze and water still resident high in the atmosphere where the sources cannot agree on the exact size of the perturbation.",
+      "image_prompt": "Persistent thin haze layers in the upper atmosphere at dawn above a dark ocean, seen from a high-altitude balloon, austere grey-orange gradient, fine grain.",
+      "motion_prompt": "Slow drift"
+    },
+    {
+      "sentence": 89,
+      "kind": "stock",
+      "queries": [
+        "sunset stratosphere above clouds",
+        "high altitude balloon horizon",
+        "twilight upper atmosphere ocean"
+      ],
+      "intent": "The long-lived water and the tens-of-percent ozone loss, held in the same high, dark stratosphere at the close.",
+      "image_prompt": "Twilight stratosphere above a dark cloud deck, a gradient from warm orange haze down to basalt-black, faint band of water vapour crossing it, silent and monumental.",
+      "motion_prompt": "Slow rise"
+    },
+    {
+      "sentence": 90,
+      "kind": "evidence",
+      "source_index": 12,
+      "quote": "Kubota et al. detail how this lamb wave contributed to the global tsunami waves arriving much earlier than expected.",
+      "queries": [
+        "Hunga Tonga atmospheric wave satellite",
+        "pressure wave ripples Pacific ocean",
+        "wide ocean horizon dusk aerial"
+      ],
+      "intent": "Imagery of the eruption's atmospheric wave travelling across the Pacific \u2014 the ring that circled the planet.",
+      "image_prompt": "Concentric circular shockwave ripple spreading across a glassy dark ocean surface under low overcast Pacific dusk, seen from high above, deep basalt-black water with a faint incandescent magma-orange glow at the horizon, fine 35mm grain.",
+      "motion_prompt": "Slow aerial push forward across the rippling water."
+    },
+    {
+      "sentence": 91,
+      "kind": "stock",
+      "queries": [
+        "Hunga Tonga eruption aftermath ocean",
+        "volcanic haze over Pacific swell",
+        "dark ocean swell aerial dusk"
+      ],
+      "intent": "Aftermath footage of drifting haze and disturbed ocean \u2014 these are consequences, not the cause.",
+      "image_prompt": "Dark Pacific swell under low overcast dusk with drifting volcanic haze, empty horizon, no land, muted basalt-black and grey palette with a thin orange glow, 65mm wide-angle.",
+      "motion_prompt": "Slow lateral drift with the swell."
+    },
+    {
+      "sentence": 93,
+      "kind": "card",
+      "variant": "question",
+      "text": "WHAT ACTUALLY DROVE IT?",
+      "queries": [
+        "submerged caldera ocean surface dusk",
+        "underwater volcano gas columns sea",
+        "caldera rim aerial Pacific dusk"
+      ],
+      "intent": "The question card sits over the sea above the submerged caldera, asking what powered the eruption.",
+      "image_prompt": "Submerged basalt caldera rim beneath a churning turquoise Pacific swell with columns of gas breaking the surface, dusk light, atmospheric haze, dark water against faint magma-orange reflections, wide-angle 65mm.",
+      "motion_prompt": "Slow rise of the camera over the venting sea."
+    },
+    {
+      "sentence": 94,
+      "kind": "stock",
+      "queries": [
+        "deep ocean water column sunbeams",
+        "open ocean above underwater volcano",
+        "caldera shelf underwater aerial"
+      ],
+      "intent": "The sea and seafloor setting where depth, water and an open vent stack together.",
+      "image_prompt": "Deep ocean water column directly above a drowned caldera shelf, sunbeams fading into dark blue water choked with fine tephra particles, wide-angle, solemn and immense.",
+      "motion_prompt": "Slow descent through the water column."
+    },
+    {
+      "sentence": 95,
+      "kind": "stock",
+      "queries": [
+        "phreatic steam explosion sea surface",
+        "shallow submarine eruption steam",
+        "underwater volcano bursting ocean surface"
+      ],
+      "intent": "Seawater flashing to steam at a shallow submerged vent, steam bursting through the sea surface.",
+      "image_prompt": "White steam and dark wet tephra bursting through the sea surface above a shallow submerged vent, low overcast dusk light, basalt-black water with magma-orange rim light, wide-angle.",
+      "motion_prompt": "Slow push in toward the bursting steam."
+    },
+    {
+      "sentence": 96,
+      "kind": "evidence",
+      "source_index": 8,
+      "quote": "The eruption of the submarine Hunga volcano in January 2022 was associated with a powerful blast that injected volcanic material to altitudes up to 58 km.",
+      "queries": [
+        "Hunga Tonga submarine blast 2022",
+        "bare rock pinnacles open ocean steam",
+        "volcanic vent open to sea and sky"
+      ],
+      "intent": "The vent open to sea and sky after the loose island material was removed, with a submarine blast driving upward.",
+      "image_prompt": "Bare remnant pinnacles of dark basalt in open ocean where an island used to be, steam rising from the water, overcast dusk, wide-angle, no land on the horizon.",
+      "motion_prompt": "Slow aerial orbit around the remnant rocks."
+    },
+    {
+      "sentence": 97,
+      "kind": "stock",
+      "queries": [
+        "water rich volcanic plume ocean",
+        "sea surface eruption column steam",
+        "submarine volcano column daylight"
+      ],
+      "intent": "A water-laden eruption column rising from a vent under the sea surface, visibly full of steam.",
+      "image_prompt": "Towering vertical vapour column of pulverised ash and micro-droplets of flash-boiled seawater rising from open ocean under low overcast dusk, monumental scale, 65mm wide-angle, fine grain.",
+      "motion_prompt": "Slow tilt up the column."
+    },
+    {
+      "sentence": 98,
+      "kind": "number",
+      "value": "58 km",
+      "label": "in about half an hour",
+      "source": "NASA Earth Observatory",
+      "queries": [
+        "Hunga Tonga plume 58 km",
+        "eruption column satellite timelapse",
+        "volcanic plume sea surface to stratosphere"
+      ],
+      "intent": "The column rising from the sea surface to stratospheric height minutes after the blast.",
+      "image_prompt": "Massive eruption column rising from the ocean surface into a flat-topped vapour anvil at the top of the frame, dusk, dark sea below, orange glow at the base, extreme wide-angle.",
+      "motion_prompt": "Slow vertical tilt up the full height of the column."
+    },
+    {
+      "sentence": 99,
+      "kind": "stock",
+      "queries": [
+        "Earth from space Pacific Ocean",
+        "planet Earth limb atmosphere orbital",
+        "satellite view ocean from orbit"
+      ],
+      "intent": "Orbital view of Earth with the Pacific below, showing the pulse wrapping the whole planet.",
+      "image_prompt": "Earth's curved limb seen from low orbit with the wide dark Pacific below, thin blue atmosphere, no recognisable coastline, dusk terminator, fine grain.",
+      "motion_prompt": "Slow orbiting drift across the globe."
+    },
+    {
+      "sentence": 101,
+      "kind": "evidence",
+      "source_index": 8,
+      "quote": "we show evidence for an unprecedented increase in the global stratospheric water mass by 13% relative to climatological levels, and a 5-fold increase of stratospheric aerosol load, the highest in the last three decades.",
+      "queries": [
+        "stratospheric water vapour plume",
+        "high altitude haze band atmosphere",
+        "stratosphere aerosol layer sunset"
+      ],
+      "intent": "The thin dry stratosphere where the injected volcanic water has almost nothing to remove it.",
+      "image_prompt": "High-altitude stratospheric horizon looking across flat-topped vapour anvils toward the black gradient of the lower mesosphere, dusk light, thin haze, 65mm.",
+      "motion_prompt": "Slow pan along the stratospheric horizon."
+    },
+    {
+      "sentence": 102,
+      "kind": "stock",
+      "queries": [
+        "volcano monitoring station instruments",
+        "satellite dish antenna dusk",
+        "seismic observatory volcano monitoring"
+      ],
+      "intent": "Monitoring hardware and observatories \u2014 the published record that is still arguing with itself.",
+      "image_prompt": "A lone satellite dish and instrument mast on a black volcanic shoreline at dusk, ocean behind, overcast light, no people, wide-angle.",
+      "motion_prompt": "Slow lateral move past the dish."
+    },
+    {
+      "sentence": 103,
+      "kind": "stock",
+      "queries": [
+        "Hunga Tonga plume satellite image",
+        "volcanic plume top from space",
+        "eruption cloud top height satellite"
+      ],
+      "intent": "Satellite or high-altitude imagery of the plume top, the feature whose height the teams measure differently.",
+      "image_prompt": "Enormous flat-topped ash plume seen from above against dark ocean, its top edge catching dusk light, high satellite-like viewpoint, no text or overlays.",
+      "motion_prompt": "Slow push in on the plume top."
+    },
+    {
+      "sentence": 104,
+      "kind": "chart",
+      "data": {
+        "chart_kind": "comparison",
+        "title": "Volcanic Explosivity Index",
+        "labels": [
+          "Comms. Earth & Env.",
+          "Henley et al."
+        ],
+        "values": [
+          5.8,
+          6
+        ],
+        "unit": "VEI",
+        "source": "Communications Earth & Environment / Henley et al."
+      },
+      "queries": [
+        "eruption column wide ocean dusk",
+        "volcanic ash cloud over sea",
+        "volcano plume monumental dusk"
+      ],
+      "intent": "A side-by-side of the two published explosivity figures spoken for this eruption.",
+      "image_prompt": "Massive volcanic ash column over open ocean at dusk, dark basalt tones with magma-orange light at its base, wide-angle, no text or numbers.",
+      "motion_prompt": "Slow drift across the ash column."
+    },
+    {
+      "sentence": 105,
+      "kind": "stock",
+      "queries": [
+        "volcanic fumarole steam venting",
+        "hydrothermal gas vent rock fissure",
+        "cracked basalt steam pressure"
+      ],
+      "intent": "Gas and steam forcing through sealed, fractured rock \u2014 gas sealing and hydraulic fracture.",
+      "image_prompt": "Steam and volcanic gas hissing through fissures in dark vesicular basalt, wet rock, low overcast dusk light, orange glow from within the cracks, close wide-angle.",
+      "motion_prompt": "Slow push into the fissure."
+    },
+    {
+      "sentence": 106,
+      "kind": "evidence",
+      "source_index": 5,
+      "quote": "The 15 January 2022 Hunga (Tonga) eruption: A gas-driven climactic explosion",
+      "queries": [
+        "volcanic gas explosion vent",
+        "vesicular basalt core sample",
+        "hydrothermal mineral banded rock"
+      ],
+      "intent": "The published gas-driven explanation for the eruption \u2014 one of three disagreements, all published, none settled.",
+      "image_prompt": "Cross-section of a vesicular dark basalt core with hydrothermal mineral banding held against low overcast dusk light, fine grain, no text.",
+      "motion_prompt": "Slow rotate around the core."
+    },
+    {
+      "sentence": 107,
+      "kind": "stock",
+      "queries": [
+        "Tofua volcanic arc aerial",
+        "Tonga island chain from air",
+        "South Pacific volcanic islands ocean aerial"
+      ],
+      "intent": "The island arc in the South Pacific where this volcano sits and what it belongs to.",
+      "image_prompt": "Aerial view of a scattered chain of dark volcanic islands and reefs across a vast grey-blue Pacific under overcast dusk, wide-angle, monumental scale.",
+      "motion_prompt": "Slow forward aerial over the chain."
+    },
+    {
+      "sentence": 108,
+      "kind": "stock",
+      "queries": [
+        "Tofua arc submarine volcano",
+        "underwater seamount Pacific aerial",
+        "submarine volcano island arc aerial"
+      ],
+      "intent": "Submarine volcanoes along the Tofua Arc, mostly underwater and mostly unmonitored.",
+      "image_prompt": "Open Pacific sea with a low steaming seamount breaking the surface in the distance, overcast dusk, dark water, wide-angle.",
+      "motion_prompt": "Slow aerial approach toward the steaming seamount."
+    },
+    {
+      "sentence": 108,
+      "from_words": "a chain built",
+      "kind": "stock",
+      "queries": [
+        "ocean trench subduction zone",
+        "Pacific plate boundary ocean surface",
+        "tectonic arc ocean floor aerial"
+      ],
+      "intent": "The plate boundary where the Pacific Plate slides beneath the Indo-Australian Plate, building the chain.",
+      "image_prompt": "Deep ocean surface above a subduction trench with a line of volcanic islands on the distant horizon, overcast dusk, dark basalt sea, wide-angle.",
+      "motion_prompt": "Slow aerial glide toward the island line."
+    },
+    {
+      "sentence": 109,
+      "kind": "number",
+      "value": "12",
+      "label": "confirmed submarine volcanoes",
+      "source": "Smithsonian Global Volcanism Program",
+      "queries": [
+        "submarine volcanoes Pacific aerial",
+        "seamount chain ocean from air",
+        "volcanic island chain dusk aerial"
+      ],
+      "intent": "A dozen submarine volcanoes in the arc, nearly all underwater and unmonitored.",
+      "image_prompt": "A long line of small dark volcanic islands and steaming reefs stretching to the horizon across a grey Pacific under overcast dusk, high aerial view, monumental scale.",
+      "motion_prompt": "Slow high aerial pull back along the chain."
+    },
+    {
+      "sentence": 110,
+      "kind": "stock",
+      "queries": [
+        "stratosphere high altitude clouds dusk",
+        "weather balloon ascending stratosphere",
+        "thin haze high altitude sky"
+      ],
+      "intent": "Water drifting high in the stratosphere, expected to linger there for years.",
+      "image_prompt": "Translucent latex high-altitude sounding balloon ascending into thin, ice-haloed twilight air above a dark sea, wide-angle, cold blue-grey with a warm horizon glow.",
+      "motion_prompt": "Slow tilt up following the balloon."
+    },
+    {
+      "sentence": 111,
+      "kind": "stock",
+      "queries": [
+        "clear evening sky over ocean",
+        "cloudless twilight sky horizon",
+        "empty sky above sea dusk"
+      ],
+      "intent": "An ordinary clear sky with nothing visible in it \u2014 no cloud, no colour, no smell.",
+      "image_prompt": "Empty cloudless twilight sky above a calm dark ocean horizon, no clouds, no aircraft, faint gradient from grey to deep basalt-black, wide-angle.",
+      "motion_prompt": "Very slow tilt up into the empty sky."
+    },
+    {
+      "sentence": 113,
+      "kind": "stock",
+      "queries": [
+        "airplane contrail twilight sky",
+        "aircraft high altitude dusk",
+        "look up twilight sky over ocean"
+      ],
+      "intent": "Looking up past the weather and past the aircraft into the high atmosphere on a clear evening.",
+      "image_prompt": "A high aircraft and a thin contrail crossing a clear twilight sky above the ocean horizon, dusk, cold grey-blue with a salmon glow, wide-angle.",
+      "motion_prompt": "Slow tilt up past the contrail."
+    },
+    {
+      "sentence": 114,
+      "kind": "stock",
+      "queries": [
+        "stratosphere thin air twilight sky",
+        "high altitude balloon stratosphere",
+        "ultraviolet twilight sky above ocean"
+      ],
+      "intent": "The thin dry high air that filters ultraviolet \u2014 the invisible stratospheric seawater overhead.",
+      "image_prompt": "Stratospheric horizon at dusk, deep gradient from warm incandescent glow at the limb to black, faint ice haze, ocean far below, 65mm wide-angle, solemn and immense.",
+      "motion_prompt": "Slow steady tilt upward into the darkening sky."
+    },
+    {
+      "sentence": 5,
+      "kind": "number",
+      "value": "50 km",
+      "label": "plume height",
+      "source": "Wright et al., Surface-to-space atmospheric waves from Hunga Tonga\u2013Hunga Ha\u2019apai eruption, Nature 2022",
+      "queries": [],
+      "image_prompt": "",
+      "motion_prompt": ""
+    },
+    {
+      "sentence": 16,
+      "kind": "chart",
+      "data": {
+        "chart_kind": "timeline",
+        "title": "Hunga Tonga-Hunga Ha'apai eruption years",
+        "labels": [
+          "1912",
+          "1937",
+          "1988",
+          "2009",
+          "2014\u20132015"
+        ],
+        "values": [
+          1912,
+          1937,
+          1988,
+          2009,
+          2014
+        ],
+        "unit": "year",
+        "source": "Global Volcanism Program, Smithsonian (volcano.si.edu)"
+      },
+      "queries": [],
+      "image_prompt": "",
+      "motion_prompt": ""
+    },
+    {
+      "sentence": 40,
+      "kind": "evidence",
+      "source_index": 6,
+      "quote": "two weather satellites were uniquely positioned to observe the height and breadth of the plume",
+      "queries": [],
+      "image_prompt": "",
+      "motion_prompt": ""
+    }
+  ]
+}

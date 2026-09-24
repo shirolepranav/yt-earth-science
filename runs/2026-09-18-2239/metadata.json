@@ -1,0 +1,41 @@
+{
+  "title": "Hunga Tonga: The Eruption That Reached the Edge of Space",
+  "description": "On 15 January 2022, the island sitting above the Hunga volcano stopped existing — and the blast that removed it sent a plume straight through the stratosphere and into the mesosphere, higher than anything in the satellite record. Within hours, barometers on every continent were twitching to a pressure pulse that circled the Earth four times, and the water it carried was expected to linger in the stratosphere for years.\n\nSources:\nNASA Jet Propulsion Laboratory — https://www.jpl.nasa.gov/news/tonga-volcano-eruption-sent-shockwaves-around-the-world\nNASA Earth Observatory — https://earthobservatory.nasa.gov/\nNASA Langley Research Center (GOES-17 / Himawari-8 stereo retrievals) — https://www.nasa.gov/langley/\nNOAA Chemical Sciences Laboratory — https://csl.noaa.gov/\nNOAA Research — https://research.noaa.gov/\nSmithsonian Global Volcanism Program — https://volcano.si.edu/volcano.cfm?vn=243040\nMillán et al., Geophysical Research Letters — https://agupubs.onlinelibrary.wiley.com/journal/19448007\nMatoza et al., Science — https://www.science.org/journal/science\nAsher et al., PNAS — https://www.pnas.org/\nEvan et al., Science — https://www.science.org/journal/science\nCommunications Earth & Environment — https://www.nature.com/commsenv/\nHenley et al., Journal of Volcanology and Geothermal Research — https://www.sciencedirect.com/journal/journal-of-volcanology-and-geothermal-research\n\nNarration is AI-generated (ElevenLabs), from a script written and fact-checked against the sources listed above.",
+  "tags": [
+    "hunga tonga",
+    "hunga tonga hunga ha'apai",
+    "2022 volcanic eruption",
+    "tonga tsunami",
+    "stratosphere",
+    "lamb wave",
+    "volcano documentary",
+    "earth science",
+    "geology",
+    "nasa",
+    "noaa",
+    "ozone layer",
+    "mesosphere",
+    "natural disaster science",
+    "smithsonian global volcanism program"
+  ],
+  "thumbnail_concepts": [
+    {
+      "text": "A RECORD 58 KM",
+      "hero": "a straight-down satellite view of a vast white eruption plume bursting through an unbroken deck of cloud, the dark blue Pacific visible at the edges of frame",
+      "symbol": "arrow",
+      "why_click": "It names a height far beyond anything weather reaches, and the arrow forces you to ask what could carry a cloud that high — and how long it took."
+    },
+    {
+      "text": null,
+      "hero": "a lone figure silhouetted on a dark Pacific shoreline at dusk, dwarfed by a towering white eruption column on the horizon that is already flattening at the top like an anvil",
+      "symbol": "none",
+      "why_click": "No words, no labels — just a person and a column of ash that has visibly punched through the ceiling of the sky, which makes you click to find out what you're looking at."
+    },
+    {
+      "text": "FOUR TIMES. SIX DAYS.",
+      "hero": "the curved limb of Earth photographed from orbit at night, a faint pale ripple band travelling through the upper atmosphere above the dark ocean",
+      "symbol": "rec_dot",
+      "why_click": "A recording indicator on a planet-wide image implies something is still being tracked as it goes round and round — the viewer clicks to find out what kept circulating."
+    }
+  ]
+}

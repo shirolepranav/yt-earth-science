@@ -63,3 +63,4 @@ remotion/build/
 bakeoff/
 runs/selftest/assets/
 runs/selftest/output/
+runs/selftest/footage.json

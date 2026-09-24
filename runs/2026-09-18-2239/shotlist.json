@@ -1,0 +1,1002 @@
+{
+  "title": "Hunga Tonga: The Eruption That Reached the Edge of Space",
+  "durationSeconds": 689.159,
+  "outroSeconds": 5,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "brand": {
+    "_comment": "Your Phase 0.3 brand sheet, as data. Charts, thumbnails and the video components all read these exact values, so changing a colour here changes it everywhere.",
+    "colors": {
+      "accent": "#FF7A1A",
+      "background": "#101214",
+      "text": "#FFFFFF",
+      "muted": "#A89C8A",
+      "positive": "#4FB3BF",
+      "negative": "#E5484D"
+    },
+    "fonts": {
+      "heading": "Inter",
+      "body": "Inter",
+      "_note": "If you change these, also update the Google Fonts link in remotion/src/fonts.ts"
+    },
+    "thumbnail": {
+      "max_words": 5,
+      "font_size": 150,
+      "stroke_width": 12
+    }
+  },
+  "audioFile": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/audio/narration_mixed.wav",
+  "shots": [
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/c82a9105ade0b3f8539c6ec7.mp4",
+      "playbackRate": 1.0,
+      "start": 0.0,
+      "end": 3.189
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_001_0_pexels-37604235.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 3.189,
+      "end": 11.037
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_002_0_pexels-32790667.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 11.037,
+      "end": 13.951
+    },
+    {
+      "type": "still",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/2c41853b14c8842c5b257df5.jpg",
+      "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/0d707adc4e900c5b8597a657.png",
+      "seed": 3,
+      "start": 13.951,
+      "end": 16.552
+    },
+    {
+      "type": "still",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_004_0_nasa-sts113-332-035.jpg",
+      "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/a4478611f573ffa44d92e01d.png",
+      "seed": 16552,
+      "credit": "NASA JSC",
+      "start": 16.552,
+      "end": 20.477
+    },
+    {
+      "type": "number",
+      "value": "50 km",
+      "label": "plume height",
+      "source": "Wright et al., Surface-to-space atmospheric waves from Hunga Tonga\u2013Hunga Ha\u2019apai eruption, Nature 2022",
+      "start": 20.477,
+      "end": 25.26
+    },
+    {
+      "type": "still",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_006_0_commons-11948488.jpg",
+      "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/f07a8a646726db6498d6a034.png",
+      "seed": 25260,
+      "credit": "NASA / Wikimedia Commons (Public domain)",
+      "start": 25.26,
+      "end": 29.581
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "gmao.gsfc.nasa.gov",
+      "headline": "GMAO",
+      "before": "",
+      "quote": "A very significant amount of material was instantly injected into the atmosphere, with the top of the plume reaching the lower mesosphere, much higher than observed during previous strong volcanic eruptions.",
+      "after": " Because this eruption occurred beneath the ocean surface, the plume was extremely rich in moisture (Mill\u00e1n et al. 2022). High water content is a unique characteristic of this event compared to other recent stratosphere-penetrating eruptions, such as that of Mt. Pinatubo in 1991. The amount of water vapor added to the middle atmosphere surpassed anything seen in the",
+      "start": 29.581,
+      "end": 35.581
+    },
+    {
+      "type": "card",
+      "variant": "fact",
+      "text": "16:04 UTC, 15 JANUARY 2022",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/2ec144b429dfc20dbd9fe1da.jpg",
+      "start": 35.581,
+      "end": 40.581
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_009_0_pexels-6073398.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 40.581,
+      "end": 46.53
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "science.org",
+      "headline": "Atmospheric waves and global seismoacoustic ...",
+      "before": "\u2014BG Abstract ",
+      "quote": "The 15 January 2022 climactic eruption of Hunga volcano, Tonga, produced an explosion in the atmosphere of a size that has not been documented in the modern geophysical record.",
+      "after": " The event generated a broad range of atmospheric waves observed globally by various ground-based and spaceborne instrumentation networks. Most prominent was the surface-guided Lamb wave (\u22720.01 hertz), which we observed propagating for four (plus three antipodal) passages around Earth over 6 days. As measured by the Lamb wave amplitudes, the climactic Hunga explosion was",
+      "start": 46.53,
+      "end": 53.148
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_011_0_pexels-32192415.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 53.148,
+      "end": 55.632
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_012_0_pexels-32192414.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 55.632,
+      "end": 60.172
+    },
+    {
+      "type": "number",
+      "value": "114 m",
+      "label": "Hunga's highest point",
+      "source": "Smithsonian GVP",
+      "start": 60.172,
+      "end": 65.172
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_014_0_pexels-28838649.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 65.172,
+      "end": 72.653
+    },
+    {
+      "type": "still",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_015_0_commons-9465448.jpg",
+      "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/f61fd2e28cc01cf418e436fb.png",
+      "seed": 72653,
+      "credit": "Afred John Tattersall / Wikimedia Commons (Public domain)",
+      "start": 72.653,
+      "end": 81.592
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/6c3f051bfcb486d25691b8dc.mp4",
+      "playbackRate": 1.0,
+      "start": 81.592,
+      "end": 84.646
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_017_0_pexels-34756864.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 84.646,
+      "end": 91.693
+    },
+    {
+      "type": "number",
+      "value": "3.6 km\u00b2",
+      "label": "Island area, Jan 2022",
+      "source": "Satellite imagery",
+      "start": 91.693,
+      "end": 95.693
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_019_0_pexels-28096031.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 95.693,
+      "end": 98.636
+    },
+    {
+      "type": "chart",
+      "chartKind": "comparison",
+      "title": "Hunga's cone base widened",
+      "labels": [
+        "Before",
+        "Jan 2022"
+      ],
+      "values": [
+        500,
+        1700
+      ],
+      "unit": "m",
+      "source": "Satellite imagery",
+      "component": "c1a15662cfe58",
+      "start": 98.636,
+      "end": 106.636
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/5ffab612896da21b11947e52.mp4",
+      "playbackRate": 1.0,
+      "start": 106.636,
+      "end": 110.794
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "nature.com",
+      "headline": "The unexpected radiative impact of the Hunga Tonga eruption of 15th January 2022",
+      "before": "Legras ORCID: orcid.org/0000-0002-3756-7794 3 Abstract ",
+      "quote": "The underwater Hunga Tonga-Hunga Ha-apai volcano erupted in the early hours of 15th January 2022, and injected volcanic gases and aerosols to over 50 km altitude.",
+      "after": " Here we synthesise satellite, ground-based, in situ and radiosonde observations of the eruption to investigate the strength of the stratospheric aerosol and water vapour perturbations in the initial weeks after the eruption and we quantify the net radiative impact across the two species using offline radiative transfer modelling. We find that the Hunga Tonga-Hunga Ha-apai",
+      "start": 110.794,
+      "end": 116.794
+    },
+    {
+      "type": "chart",
+      "chartKind": "bignumber",
+      "title": "THE DEPTH THAT MADE IT EXPLODE",
+      "labels": [
+        "Hunga caldera depth below sea level"
+      ],
+      "values": [
+        150
+      ],
+      "unit": "m",
+      "source": "NASA/JPL \u2014 Mill\u00e1n et al., Geophys. Res. Lett., 2022",
+      "component": null,
+      "start": 116.794,
+      "end": 124.794
+    },
+    {
+      "type": "still",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_024_0_nasa-SL3-34-336.jpg",
+      "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/e50f46f58a896abfcf308ef4.png",
+      "seed": 124794,
+      "credit": "NASA JSC",
+      "start": 124.794,
+      "end": 131.225
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "jpl.nasa.gov",
+      "headline": "Tonga Eruption Blasted Unprecedented Amount of Water ...",
+      "before": "",
+      "quote": "The underwater eruption in the South Pacific Ocean also blasted an enormous plume of water vapor into Earth\u2019s stratosphere \u2013 enough to fill more than 58,000 Olympic-size swimming pools.",
+      "after": " The sheer amount of water vapor could be enough to temporarily affect Earth\u2019s global average temperature. \u201cWe\u2019ve never seen anything like it,\u201d said Luis Mill\u00e1n, an atmospheric scientist at NASA\u2019s Jet Propulsion Laboratory in Southern California. He led a new study examining the amount of water vapor that the Tonga volcano injected into the stratosphere, the layer of the",
+      "start": 131.225,
+      "end": 139.282
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_026_0_pexels-34857315.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 139.282,
+      "end": 143.821
+    },
+    {
+      "type": "still",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/19c3510ec5081d401ac07a71.jpg",
+      "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/4de6ada9a42a7081b38a3d3a.png",
+      "seed": 27,
+      "start": 143.821,
+      "end": 155.536
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "repository.library.noaa.gov",
+      "headline": "The 15 January 2022 Hunga (Tonga) eruption: A gas-driven climactic explosion",
+      "before": "2601, Australia d Faculty of Engineering, Department of Civil and Environmental Engineering, Imperial College London, SW7 2AZ, England e NOAA Pacific Marine Environmental Laboratory (PMEL), Seattle, WA 98115, United States of America ARTICLE INFO Keywords: Magmatic vapor Gas-solid reaction Hydraulic fracture Atmospheric gravity waves Meteotsunamis Plinean eruption ABSTRACT ",
+      "quote": "An extraordinarily powerful, explosive eruption occurred from Hunga volcano in the Tonga island arc on 15 January 2022 and generated an eruption column 58 km high.",
+      "after": " The explosive eruption also generated atmospheric gravity waves, extreme runup tsunamis and quite unusual and destructive meteotsunamis. Together these place this VEI 6 eruption as, globally, one of the largest of the past 300 years. Based on the oceanic context of Hunga volcano, it has previously been assumed that the eruption was phreatomagmatic through a fuel-coolant",
+      "start": 155.536,
+      "end": 164.603
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_029_0_pexels-855240.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 164.603,
+      "end": 172.324
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_030_0_pexels-32226037.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 172.324,
+      "end": 177.246
+    },
+    {
+      "type": "card",
+      "variant": "question",
+      "text": "HOW DID IT REACH THE MESOSPHERE?",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/61ae1944cf038464a1a29e19.jpg",
+      "start": 177.246,
+      "end": 183.11
+    },
+    {
+      "type": "still",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_032_0_nasa-2013-1993.jpg",
+      "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/a23f193959fc43a50d0184da.png",
+      "seed": 183110,
+      "credit": "NASA / VAFB_Randy Beaudoin",
+      "start": 183.11,
+      "end": 195.37
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "jpl.nasa.gov",
+      "headline": "Tonga Eruption Blasted Unprecedented Amount of Water ...",
+      "before": "",
+      "quote": "The GOES-17 satellite captured the series of images that also show crescent-shaped shock waves and lightning strikes.",
+      "after": " Credit: NASA Earth Observatory image by Joshua Stevens using GOES imagery courtesy of NOAA and NESDIS The huge amount of water vapor hurled into the atmosphere, as detected by NASA\u2019s Microwave Limb Sounder, could end up temporarily warming Earth\u2019s surface. When the Hunga Tonga-Hunga Ha\u2019apai volcano erupted on Jan. 15, it sent a tsunami racing around the world and set off a",
+      "start": 195.37,
+      "end": 201.37
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_034_0_pexels-2613581.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 201.37,
+      "end": 211.322
+    },
+    {
+      "type": "still",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/004cf7610e2c494b5c73ec3e.jpg",
+      "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/12c4134ea32e2ab5474c5753.png",
+      "seed": 35,
+      "start": 211.322,
+      "end": 220.865
+    },
+    {
+      "type": "still",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_036_0_nasa-LRC-2013-B701_P-00137.jpg",
+      "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/b6e8fe303063301ab7cc4141.png",
+      "seed": 220865,
+      "credit": "NASA Sean Smith ",
+      "start": 220.865,
+      "end": 227.599
+    },
+    {
+      "type": "still",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_037_0_commons-143754710.jpg",
+      "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/68f5d9402ed1d01987364317.png",
+      "seed": 227599,
+      "credit": "MODIS Land Rapid Response Team, NASA GSFC / Wikimedia Commons (Public domain)",
+      "start": 227.599,
+      "end": 233.172
+    },
+    {
+      "type": "still",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_038_0_nasa-PIA14278.jpg",
+      "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/ffa190b1253bd5bf27928e2a.png",
+      "seed": 233172,
+      "credit": "NASA/JPL/EO-1 Mission/GSFC/Ashley Davies",
+      "start": 233.172,
+      "end": 238.828
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "science.nasa.gov",
+      "headline": "Tonga Volcano Plume Reached the Mesosphere",
+      "before": "When an underwater volcano erupted near the small, uninhabited island of Hunga Tonga-Hunga Ha\u2018apai in January 2022, ",
+      "quote": "two weather satellites were uniquely positioned to observe the height and breadth of the plume",
+      "after": ". Together they captured what is likely the highest plume in the satellite record. Scientists at NASA\u2019s Langley Research Center analyzed data from NOAA\u2019s Geostationary Operational Environmental Satellite 17(GOES-17) and the Japanese Aerospace Exploration Agency\u2019s (JAXA) Himawari-8, which both operate in geostationary orbit and carry very similar imaging instruments. The team",
+      "start": 238.828,
+      "end": 244.828
+    },
+    {
+      "type": "number",
+      "value": "58 km",
+      "label": "Plume top in 30 min",
+      "source": "NASA Langley / Bedka & Khlopenkov",
+      "start": 244.828,
+      "end": 249.828
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_041_0_pexels-3192166.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 249.828,
+      "end": 257.367
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "science.nasa.gov",
+      "headline": "Tonga Volcano Plume Reached the Mesosphere",
+      "before": "Tonga Volcano Plume Reached the Mesosphere - NASA Science Search Suggested Searches Earth Observatory Image of the Day for February 17, 2022 ",
+      "quote": "The plume from Hunga Tonga-Hunga Ha\u2018apai behaved like a mega-thunderstorm that rose 58 kilometers (38 miles) into the atmosphere.",
+      "after": " NASA Earth Observatory Feb 17, 2022 Article - Share on X. - Share on Facebook. - Share on LinkedIn. - Link to RSS Feed. To view this video please enable JavaScript, and consider upgrading to a web browser that supports HTML5 video The plume from Hunga Tonga-Hunga Ha\u2018apai behaved like a mega-thunderstorm that rose 58 kilometers (38 miles) into the atmosphere. NASA Earth",
+      "start": 257.367,
+      "end": 263.367
+    },
+    {
+      "type": "still",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_043_0_commons-194308656.jpg",
+      "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/7a289af87aede6235d18b145.png",
+      "seed": 263367,
+      "credit": "NOAA/NGDC, R. Lapointe, U.S. Air Force. / Wikimedia Commons (Public domain)",
+      "start": 263.367,
+      "end": 269.082
+    },
+    {
+      "type": "still",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_044_0_commons-142550487.jpg",
+      "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/4a87d621f7133c1eac419d33.png",
+      "seed": 269082,
+      "credit": "NASA / Kayla Barron / Wikimedia Commons (Public domain)",
+      "start": 269.082,
+      "end": 271.706
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_045_0_pexels-28801833.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 271.706,
+      "end": 274.202
+    },
+    {
+      "type": "number",
+      "value": "50\u201355 km",
+      "label": "Carr et al. plume top",
+      "source": "Carr et al., GRL",
+      "start": 274.202,
+      "end": 279.202
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_047_0_pexels-30001055.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 279.202,
+      "end": 284.771
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_048_0_pexels-35997572.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 284.771,
+      "end": 291.771
+    },
+    {
+      "type": "still",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_048_1_nasa-iss036e002105.jpg",
+      "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/4f611422e30f9e7ef6e6a274.png",
+      "seed": 291771,
+      "credit": "NASA JSC",
+      "start": 291.771,
+      "end": 294.601
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_049_0_pexels-6989133.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 294.601,
+      "end": 298.153
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "gmao.gsfc.nasa.gov",
+      "headline": "GMAO",
+      "before": "",
+      "quote": "The amount of water vapor added to the middle atmosphere surpassed anything seen in the observational record so far.",
+      "after": " Compared to the troposphere, the stratosphere is very arid, with typical water vapor mixing ratios ranging between 3 and 7 parts per million by volume (ppmv). By comparison, preliminary estimates based on satellite and sonde data suggest that the maximum mixing ratio within the Hunga Tonga plume could have been as high as several hundred ppmv. This preliminary study was done",
+      "start": 298.153,
+      "end": 304.504
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_051_0_pexels-32520863.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 304.504,
+      "end": 310.878
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "science.org",
+      "headline": "Atmospheric waves and global seismoacoustic ...",
+      "before": "",
+      "quote": "Matoza et al. present infrasound and seismic recordings, along with other geophysical observations, that help to describe this event.",
+      "after": " An atmospheric lamb wave, characteristic of energetic atmospheric events, circled the planet four times and was similar to the 1883 Krakatau eruption. Kubota et al. detail how this lamb wave contributed to the global tsunami waves arriving much earlier than expected. The eruption also generated long-range infrasounds and ionospheric interations, along with a global tsunami.",
+      "start": 310.878,
+      "end": 318.088
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_053_0_pexels-6887983.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 318.088,
+      "end": 330.197
+    },
+    {
+      "type": "chart",
+      "chartKind": "bar",
+      "title": "AROUND THE WORLD, THEN AGAIN, THEN AGAIN",
+      "labels": [
+        "Direct passages",
+        "Antipodal passages"
+      ],
+      "values": [
+        4,
+        3
+      ],
+      "unit": "passages around Earth",
+      "source": "Matoza et al., Science, 2022 \u2014 Lamb wave tracked over 6 days",
+      "component": "c35be1f0f45cd",
+      "start": 330.197,
+      "end": 339.195
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "science.org",
+      "headline": "Atmospheric waves and global seismoacoustic ...",
+      "before": "Atmospheric waves and global seismoacoustic observations of the January 2022 Hunga eruption, Tonga Science Advertisement Contents Going on the lamb ",
+      "quote": "The Hunga Tonga undersea volcanic eruption was one of the most powerful recorded, with audible sound detected more than 10,000 kilometers from the source.",
+      "after": " Matoza et al. present infrasound and seismic recordings, along with other geophysical observations, that help to describe this event. An atmospheric lamb wave, characteristic of energetic atmospheric events, circled the planet four times and was similar to the 1883 Krakatau eruption. Kubota et al. detail how this lamb wave contributed to the global tsunami waves arriving much",
+      "start": 339.195,
+      "end": 345.998
+    },
+    {
+      "type": "card",
+      "variant": "fact",
+      "text": "FOUR LAPS AROUND EARTH",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/a79471f610ce82625bbbb50e.jpg",
+      "start": 345.998,
+      "end": 351.92
+    },
+    {
+      "type": "still",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_057_0_nasa-s36-07-012.jpg",
+      "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/ac4c50ca8de303ff9f127ec5.png",
+      "seed": 351920,
+      "credit": "NASA JSC",
+      "start": 351.92,
+      "end": 362.287
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "science.org",
+      "headline": "Atmospheric waves and global seismoacoustic ...",
+      "before": "",
+      "quote": "An atmospheric lamb wave, characteristic of energetic atmospheric events, circled the planet four times and was similar to the 1883 Krakatau eruption.",
+      "after": " Kubota et al. detail how this lamb wave contributed to the global tsunami waves arriving much earlier than expected. The eruption also generated long-range infrasounds and ionospheric interations, along with a global tsunami. This set of observations will be helpful for disentangling the event and understanding the propagation of waves through the atmosphere and ocean (see",
+      "start": 362.287,
+      "end": 369.938
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_059_0_pexels-16275536.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 369.938,
+      "end": 380.457
+    },
+    {
+      "type": "number",
+      "value": "100 metres",
+      "label": "Initial tsunami wave height",
+      "source": "Heidarzadeh et al.",
+      "start": 380.457,
+      "end": 385.457
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_061_0_pexels-1582319.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 385.457,
+      "end": 397.802
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "gmao.gsfc.nasa.gov",
+      "headline": "GMAO",
+      "before": "",
+      "quote": "Because this eruption occurred beneath the ocean surface, the plume was extremely rich in moisture (Mill\u00e1n et al. 2022).",
+      "after": " High water content is a unique characteristic of this event compared to other recent stratosphere-penetrating eruptions, such as that of Mt. Pinatubo in 1991. The amount of water vapor added to the middle atmosphere surpassed anything seen in the observational record so far. Compared to the troposphere, the stratosphere is very arid, with typical water vapor mixing ratios",
+      "start": 397.802,
+      "end": 406.103
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_063_0_pexels-854518.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 406.103,
+      "end": 411.536
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_064_0_pexels-16298300.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 411.536,
+      "end": 423.251
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "preview-www.nature.com",
+      "headline": "Global perturbation of stratospheric water and aerosol burden by Hunga eruption",
+      "before": "",
+      "quote": "Owing to the extreme injection altitude, the volcanic plume circumnavigated the Earth in only 1 week and dispersed nearly pole-to-pole in three months.",
+      "after": " The unique nature and magnitude of the global stratospheric perturbation by the Hunga eruption ranks it among the most remarkable climatic events in the modern observation era, with a range of potential long-lasting repercussions for stratospheric composition and climate. Perturbations in stratospheric aerosol evolution due to the water-rich plume of the 2022 Hunga-Tonga",
+      "start": 423.251,
+      "end": 429.251
+    },
+    {
+      "type": "still",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_066_0_nasa-GSFC_20171208_Archive_e001139.jpg",
+      "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/9454143b827060f36e5c8d6c.png",
+      "seed": 429251,
+      "credit": "NASA GSFC",
+      "start": 429.251,
+      "end": 435.814
+    },
+    {
+      "type": "number",
+      "value": "150 million tons",
+      "label": "Water vapour injected into stratosphere",
+      "source": "NOAA",
+      "start": 435.814,
+      "end": 440.814
+    },
+    {
+      "type": "still",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_068_0_nasa-KSC-02pd0399.jpg",
+      "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/2814fbb11b954c1d919b0ffd.png",
+      "seed": 440814,
+      "credit": "NASA KSC",
+      "start": 440.814,
+      "end": 451.069
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "jpl.nasa.gov",
+      "headline": "Tonga Eruption Blasted Unprecedented Amount of Water ...",
+      "before": "Credit: NASA Earth Observatory image by Joshua Stevens using GOES imagery courtesy of NOAA and NESDIS ",
+      "quote": "The huge amount of water vapor hurled into the atmosphere, as detected by NASA\u2019s Microwave Limb Sounder, could end up temporarily warming Earth\u2019s surface.",
+      "after": " When the Hunga Tonga-Hunga Ha\u2019apai volcano erupted on Jan. 15, it sent a tsunami racing around the world and set off a sonic boom that circled the globe twice. The underwater eruption in the South Pacific Ocean also blasted an enormous plume of water vapor into Earth\u2019s stratosphere \u2013 enough to fill more than 58,000 Olympic-size swimming pools. The sheer amount of water vapor",
+      "start": 451.069,
+      "end": 458.802
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_070_0_pexels-10797953.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 458.802,
+      "end": 470.818
+    },
+    {
+      "type": "chart",
+      "chartKind": "comparison",
+      "title": "WATER INJECTED INTO THE STRATOSPHERE",
+      "labels": [
+        "Hunga Tonga 2022",
+        "Mount Pinatubo 1991 (modelled)"
+      ],
+      "values": [
+        146,
+        37
+      ],
+      "unit": "teragrams (Tg)",
+      "source": "NASA/JPL (MLS, 2022); Pinatubo value from Communications Earth & Environment, 2022 \u2014 a modelling-based estimate, not a measurement",
+      "component": "c6f4fb4a20eab",
+      "start": 470.818,
+      "end": 480.361
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_072_0_pexels-37365540.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 480.361,
+      "end": 489.347
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "research.noaa.gov",
+      "headline": "A volcanic eruption sent enough water vapor into the ...",
+      "before": "",
+      "quote": "A volcanic eruption sent enough water vapor into the stratosphere to cause a rapid change in chemistry",
+      "after": " The eruption of the Hunga Tonga-Hunga Ha\u2019apai volcano on January 15, 2022, produced the largest underwater explosion ever recorded by modern scientific instruments, blasting an enormous amount of water and volcanic gases higher than any other eruption in the satellite era. Two research papers have now detailed how that water vapor rapidly affected the Earth\u2019s stratosphere",
+      "start": 489.347,
+      "end": 497.347
+    },
+    {
+      "type": "still",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_074_0_nasa-iss061e123823.jpg",
+      "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/5c25aa33ac705d72d90359a1.png",
+      "seed": 497347,
+      "credit": "NASA JSC",
+      "start": 497.347,
+      "end": 502.443
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "research.noaa.gov",
+      "headline": "A volcanic eruption sent enough water vapor into the ...",
+      "before": "",
+      "quote": "Two research papers have now detailed how that water vapor rapidly affected the Earth\u2019s stratosphere between 10 and 31 miles above the surface, causing an unexpectedly large loss of ozone and an unexpectedly rapid formation of aerosols.",
+      "after": " \u201cUp until now, sulfur has been the primary focus of research on eruptions,\u201d said Elizabeth Asher, a CIRES research scientist now working at NOAA\u2019s Global Monitoring Laboratory. Asher led one of the two recent studies while at the NOAA\u2019s Chemical Sciences Laboratory. \u201cStudying Hunga Tonga showed that other gases, like water vapor, can have a profound impact on these outcomes.\u201d",
+      "start": 502.443,
+      "end": 510.443
+    },
+    {
+      "type": "still",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_076_0_nasa-GSFC_20171208_Archive_e002096.jpg",
+      "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/432febd88da456a3e43e4c1a.png",
+      "seed": 510443,
+      "credit": "NASA/Carla Thomas",
+      "start": 510.443,
+      "end": 523.794
+    },
+    {
+      "type": "chart",
+      "chartKind": "comparison",
+      "title": "Stratospheric water increase: two estimates",
+      "labels": [
+        "Comms Earth & Env.",
+        "NASA"
+      ],
+      "values": [
+        13,
+        10
+      ],
+      "unit": "%",
+      "source": "Comm. Earth & Env. / NASA",
+      "component": "c9ca97dedafc2",
+      "start": 523.794,
+      "end": 536.054
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_078_0_pexels-34195707.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 536.054,
+      "end": 542.045
+    },
+    {
+      "type": "still",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_079_0_nasa-iss023e057948.jpg",
+      "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/4d0206a4f28ef9af28663601.png",
+      "seed": 542045,
+      "credit": "NASA JSC",
+      "start": 542.045,
+      "end": 544.959
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "science.org",
+      "headline": "Atmospheric waves and global seismoacoustic ...",
+      "before": "",
+      "quote": "Kubota et al. detail how this lamb wave contributed to the global tsunami waves arriving much earlier than expected.",
+      "after": " The eruption also generated long-range infrasounds and ionospheric interations, along with a global tsunami. This set of observations will be helpful for disentangling the event and understanding the propagation of waves through the atmosphere and ocean (see the Perspective by Brodsky and Lay). \u2014BG Abstract The 15 January 2022 climactic eruption of Hunga volcano, Tonga,",
+      "start": 544.959,
+      "end": 550.959
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_081_0_pexels-6392435.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 550.959,
+      "end": 552.377
+    },
+    {
+      "type": "card",
+      "variant": "question",
+      "text": "WHAT ACTUALLY DROVE IT?",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/85edfb9b2c3e1e534317a296.jpg",
+      "start": 552.377,
+      "end": 556.377
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_083_0_pexels-34857315.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 556.377,
+      "end": 561.328
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_084_0_pexels-11104082.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 561.328,
+      "end": 570.593
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "preview-www.nature.com",
+      "headline": "Global perturbation of stratospheric water and aerosol burden by Hunga eruption",
+      "before": "Global perturbation of stratospheric water and aerosol burden by Hunga eruption Communications Earth & Environment Subjects - Atmospheric chemistry - Atmospheric dynamics Abstract ",
+      "quote": "The eruption of the submarine Hunga volcano in January 2022 was associated with a powerful blast that injected volcanic material to altitudes up to 58 km.",
+      "after": " From a combination of various types of satellite and ground-based observations supported by transport modeling, we show evidence for an unprecedented increase in the global stratospheric water mass by 13% relative to climatological levels, and a 5-fold increase of stratospheric aerosol load, the highest in the last three decades. Owing to the extreme injection altitude, the",
+      "start": 570.593,
+      "end": 578.361
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_086_0_pexels-1550079.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 578.361,
+      "end": 585.303
+    },
+    {
+      "type": "number",
+      "value": "58 km",
+      "label": "in about half an hour",
+      "source": "NASA Earth Observatory",
+      "start": 585.303,
+      "end": 590.303
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_088_0_pexels-10409075.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 590.303,
+      "end": 595.856
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "preview-www.nature.com",
+      "headline": "Global perturbation of stratospheric water and aerosol burden by Hunga eruption",
+      "before": "From a combination of various types of satellite and ground-based observations supported by transport modeling, ",
+      "quote": "we show evidence for an unprecedented increase in the global stratospheric water mass by 13% relative to climatological levels, and a 5-fold increase of stratospheric aerosol load, the highest in the last three decades.",
+      "after": " Owing to the extreme injection altitude, the volcanic plume circumnavigated the Earth in only 1 week and dispersed nearly pole-to-pole in three months. The unique nature and magnitude of the global stratospheric perturbation by the Hunga eruption ranks it among the most remarkable climatic events in the modern observation era, with a range of potential long-lasting",
+      "start": 595.856,
+      "end": 602.348
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_090_0_pexels-6420488.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 602.348,
+      "end": 606.33
+    },
+    {
+      "type": "still",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_091_0_commons-142550487.jpg",
+      "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/33691bd585875b5d7f6ee9eb.png",
+      "seed": 606330,
+      "credit": "NASA / Kayla Barron / Wikimedia Commons (Public domain)",
+      "start": 606.33,
+      "end": 613.575
+    },
+    {
+      "type": "chart",
+      "chartKind": "comparison",
+      "title": "Volcanic Explosivity Index",
+      "labels": [
+        "Comms. Earth & Env.",
+        "Henley et al."
+      ],
+      "values": [
+        5.8,
+        6
+      ],
+      "unit": "VEI",
+      "source": "Communications Earth & Environment / Henley et al.",
+      "component": "c97c7c9bccef7",
+      "start": 613.575,
+      "end": 623.432
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_093_0_pexels-854742.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 623.432,
+      "end": 630.421
+    },
+    {
+      "type": "evidence",
+      "variant": "article",
+      "publisher": "repository.library.noaa.gov",
+      "headline": "The 15 January 2022 Hunga (Tonga) eruption: A gas-driven climactic explosion",
+      "before": "This is an open access article under the CC BY license ( ",
+      "quote": "The 15 January 2022 Hunga (Tonga) eruption: A gas-driven climactic explosion",
+      "after": " Richard W. Henley a, , Cornel E.J. de Ronde b, Richard J. Arculus c, Graham Hughes d, Thanh Son Pham c, Ana S. Casas c, Vasily Titov e, Sharon L. Walker e a ARC Training Centre for M3D Innovation, Research School of Physics, Australian National University, Canberra, ACT 2601, Australia b GNS Science, Lower Hutt 5040, New Zealand c Research School of Earth Sciences, Australian",
+      "start": 630.421,
+      "end": 636.421
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_095_0_pexels-32192414.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 636.421,
+      "end": 638.269
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_096_0_pexels-34319345.mp4",
+      "playbackRate": 0.902,
+      "credit": null,
+      "start": 638.269,
+      "end": 648.242
+    },
+    {
+      "type": "still",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_097_0_nasa-iss030e122047.jpg",
+      "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/32ea16ca09c2f57d00e4161f.png",
+      "seed": 648242,
+      "credit": "NASA JSC",
+      "start": 648.242,
+      "end": 652.956
+    },
+    {
+      "type": "number",
+      "value": "12",
+      "label": "confirmed submarine volcanoes",
+      "source": "Smithsonian Global Volcanism Program",
+      "start": 652.956,
+      "end": 656.956
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_099_0_pexels-19175289.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 656.956,
+      "end": 661.93
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_100_0_pexels-30129071.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 661.93,
+      "end": 666.632
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_101_0_pexels-5701984.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 666.632,
+      "end": 671.311
+    },
+    {
+      "type": "clip",
+      "src": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_102_0_pexels-5139101.mp4",
+      "playbackRate": 1.0,
+      "credit": null,
+      "start": 671.311,
+      "end": 684.159
+    }
+  ],
+  "letterbox": false
+}

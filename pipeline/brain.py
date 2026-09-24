@@ -39,6 +39,9 @@ INTENTS = {
     "set_pinned_comment": "Change the pinned comment",
     "pick_thumbnail":  "Use thumbnail a, b or c",
     "redo":            "Re-run one stage (thumbnail, stock, visuals, narrate, render)",
+    "footage":         "Show the footage list (every shot, where it came from, why)",
+    "approve_footage": "The footage is good - render the video",
+    "swap":            "Replace one shot's footage: new stock search or an AI image",
     "publish":         "Accept the video - upload it to YouTube and make it public",
     "status":          "Where is the current run up to?",
     "cancel":          "Abandon the current run",
@@ -60,12 +63,20 @@ def match_literally(text: str) -> dict | None:
     """Catch the handful of messages that have exactly one possible meaning."""
     clean = text.strip().lower()
 
+    # From the footage panel: "swap:12:stock", "swap:12:ai:lava at night". The
+    # hint keeps its case and spaces, so it's matched before anything else.
+    swap = re.fullmatch(r"swap:(\d+):(stock|ai)(?::(.*))?", text.strip(), re.I | re.S)
+    if swap:
+        return {"intent": "swap", "args": {"shot": int(swap[1]), "to": swap[2].lower(),
+                                           "hint": (swap[3] or "").strip()}}
+
     # Button taps arrive as "cmd:new", "pick:3", "thumb:b" - see pipeline/chat.py.
     if ":" in clean and " " not in clean:
         prefix, _, value = clean.partition(":")
         mapping = {
             "cmd": {"new": "new", "status": "status", "cancel": "cancel",
-                    "approve": "approve_script", "publish": "publish"},
+                    "approve": "approve_script", "publish": "publish",
+                    "footage": "footage", "render": "approve_footage"},
         }
         if prefix == "pick" and value.isdigit():
             return {"intent": "pick", "args": {"number": int(value)}}
@@ -154,10 +165,13 @@ Rules:
 - "set_title" needs args.title; "set_tags" needs args.tags (a list);
   "set_description" needs args.description; "set_pinned_comment" needs args.text.
 - "edit_script" needs args.instruction - their change, in their own words.
+- "swap" needs args.shot (the shot number), args.to ("stock" for a new library
+  search, "ai" for a generated image) and args.hint (what it should show, in
+  their words, or "" to let the pipeline choose).
 - If they are asking something rather than instructing, use "question" and put
   the answer in "reply".
 - If you genuinely cannot tell, use "unclear". Never guess at an intent that
-  spends money ("approve_script", "redo") or publishes ("publish").
+  spends money ("approve_script", "redo", "swap", "approve_footage") or publishes ("publish").
 
 Also write "reply": one short, friendly sentence confirming what you're about
 to do, as if you were texting them back. No preamble, no emoji spam.

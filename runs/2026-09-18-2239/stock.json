@@ -1,0 +1,944 @@
+{
+  "1": {
+    "query": "Tonga coastline volcanic boulders",
+    "clips": [
+      {
+        "id": "pexels-37604235",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_001_0_pexels-37604235.mp4",
+        "duration": 41,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/ocean-waves-crashing-on-rugged-rocks-37604235/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "2": {
+    "query": "underwater volcano submerged caldera",
+    "clips": [
+      {
+        "id": "pexels-32790667",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_002_0_pexels-32790667.mp4",
+        "duration": 14,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/underwater-ocean-view-with-sunlight-rays-32790667/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "4": {
+    "query": "Hunga Tonga plume satellite image",
+    "clips": [
+      {
+        "id": "nasa-sts113-332-035",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_004_0_nasa-sts113-332-035.jpg",
+        "duration": 15.0,
+        "score": 7.0,
+        "page": "https://images.nasa.gov/details/sts113-332-035",
+        "media": "image",
+        "credit": "NASA JSC",
+        "license": "NASA media (public domain)",
+        "on_screen": "NASA JSC",
+        "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/a4478611f573ffa44d92e01d.png"
+      }
+    ]
+  },
+  "6": {
+    "query": "ash plume punching through clouds",
+    "clips": [
+      {
+        "id": "commons-11948488",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_006_0_commons-11948488.jpg",
+        "duration": 15.0,
+        "score": 10.0,
+        "page": "https://commons.wikimedia.org/wiki/File:Sarychev_Volcano_edit.jpg",
+        "media": "image",
+        "credit": "NASA",
+        "license": "Public domain",
+        "on_screen": "NASA / Wikimedia Commons (Public domain)",
+        "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/f07a8a646726db6498d6a034.png"
+      }
+    ]
+  },
+  "9": {
+    "query": "Tonga island coastline evening",
+    "clips": [
+      {
+        "id": "pexels-6073398",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_009_0_pexels-6073398.mp4",
+        "duration": 25,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/tropical-landscape-6073398/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "11": {
+    "query": "Hunga Tonga Hunga Ha'apai islands aerial",
+    "clips": [
+      {
+        "id": "pexels-32192415",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_011_0_pexels-32192415.mp4",
+        "duration": 9,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/stunning-aerial-view-of-maldives-atolls-32192415/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "12": {
+    "query": "South Pacific caldera volcano aerial",
+    "clips": [
+      {
+        "id": "pexels-32192414",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_012_0_pexels-32192414.mp4",
+        "duration": 11,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/aerial-view-of-maldives-islands-from-above-32192414/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "14": {
+    "query": "Nuku'alofa Tonga coastline",
+    "clips": [
+      {
+        "id": "pexels-28838649",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_014_0_pexels-28838649.mp4",
+        "duration": 25,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/aerial-view-of-tropical-coastline-and-ocean-28838649/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "15": {
+    "query": "volcanic island eruption archive footage",
+    "clips": [
+      {
+        "id": "commons-9465448",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_015_0_commons-9465448.jpg",
+        "duration": 15.0,
+        "score": 8.0,
+        "page": "https://commons.wikimedia.org/wiki/File:Matavanu_volcanic_eruption_-_Savai%27i_1905.jpg",
+        "media": "image",
+        "credit": "Afred John Tattersall",
+        "license": "Public domain",
+        "on_screen": "Afred John Tattersall / Wikimedia Commons (Public domain)",
+        "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/f61fd2e28cc01cf418e436fb.png"
+      }
+    ]
+  },
+  "17": {
+    "query": "Hunga Tonga island growth satellite",
+    "clips": [
+      {
+        "id": "pexels-34756864",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_017_0_pexels-34756864.mp4",
+        "duration": 16,
+        "score": 10.0,
+        "page": "https://www.pexels.com/video/aerial-view-of-glyfada-beach-corfu-greece-34756864/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "19": {
+    "query": "pumice raft floating ocean",
+    "clips": [
+      {
+        "id": "pexels-28096031",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_019_0_pexels-28096031.mp4",
+        "duration": 27,
+        "score": 7.0,
+        "page": "https://www.pexels.com/video/water-over-stones-and-rocks-at-side-of-lake-28096031/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "24": {
+    "query": "NASA satellite view Pacific ocean",
+    "clips": [
+      {
+        "id": "nasa-SL3-34-336",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_024_0_nasa-SL3-34-336.jpg",
+        "duration": 15.0,
+        "score": 7.0,
+        "page": "https://images.nasa.gov/details/SL3-34-336",
+        "media": "image",
+        "credit": "NASA JSC",
+        "license": "NASA media (public domain)",
+        "on_screen": "NASA JSC",
+        "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/e50f46f58a896abfcf308ef4.png"
+      }
+    ]
+  },
+  "26": {
+    "query": "deep ocean pressure water column",
+    "clips": [
+      {
+        "id": "pexels-34857315",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_026_0_pexels-34857315.mp4",
+        "duration": 8,
+        "score": 7.0,
+        "page": "https://www.pexels.com/video/captivating-deep-blue-ocean-bubbles-rising-34857315/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "29": {
+    "query": "volcanic gas bubbles underwater vent",
+    "clips": [
+      {
+        "id": "pexels-855240",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_029_0_pexels-855240.mp4",
+        "duration": 15,
+        "score": 7.0,
+        "page": "https://www.pexels.com/video/volcanic-gas-855240/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "30": {
+    "query": "Hunga Tonga caldera ocean",
+    "clips": [
+      {
+        "id": "pexels-32226037",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_030_0_pexels-32226037.mp4",
+        "duration": 20,
+        "score": 7.0,
+        "page": "https://www.pexels.com/video/serene-pacific-ocean-sunset-scene-32226037/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "32": {
+    "query": "GOES-17 Himawari-8 geostationary satellites",
+    "clips": [
+      {
+        "id": "nasa-2013-1993",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_032_0_nasa-2013-1993.jpg",
+        "duration": 15.0,
+        "score": 8.0,
+        "page": "https://images.nasa.gov/details/2013-1993",
+        "media": "image",
+        "credit": "VAFB_Randy Beaudoin",
+        "license": "NASA media (public domain)",
+        "on_screen": "NASA / VAFB_Randy Beaudoin",
+        "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/a23f193959fc43a50d0184da.png"
+      }
+    ]
+  },
+  "34": {
+    "query": "Hunga Tonga plume January 2022 satellite",
+    "clips": [
+      {
+        "id": "pexels-2613581",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_034_0_pexels-2613581.mp4",
+        "duration": 12,
+        "score": 9.0,
+        "page": "https://www.pexels.com/video/clouds-formation-in-the-sky-2613581/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "36": {
+    "query": "NASA Langley Research Center",
+    "clips": [
+      {
+        "id": "nasa-LRC-2013-B701_P-00137",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_036_0_nasa-LRC-2013-B701_P-00137.jpg",
+        "duration": 15.0,
+        "score": 8.0,
+        "page": "https://images.nasa.gov/details/LRC-2013-B701_P-00137",
+        "media": "image",
+        "credit": "NASA Sean Smith ",
+        "license": "NASA media (public domain)",
+        "on_screen": "NASA Sean Smith ",
+        "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/b6e8fe303063301ab7cc4141.png"
+      }
+    ]
+  },
+  "37": {
+    "query": "Hunga Tonga plume satellite view",
+    "clips": [
+      {
+        "id": "commons-143754710",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_037_0_commons-143754710.jpg",
+        "duration": 15.0,
+        "score": 8.0,
+        "page": "https://commons.wikimedia.org/wiki/File:The_Start_of_Something_Big-_Hunga_Tonga-Hunga_Ha%27apai_Volcano_(MODIS_2022-01-16).jpg",
+        "media": "image",
+        "credit": "MODIS Land Rapid Response Team, NASA GSFC",
+        "license": "Public domain",
+        "on_screen": "MODIS Land Rapid Response Team, NASA GSFC / Wikimedia Commons (Public domain)",
+        "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/68f5d9402ed1d01987364317.png"
+      }
+    ]
+  },
+  "38": {
+    "query": "stereoscopic plume height measurement",
+    "clips": [
+      {
+        "id": "nasa-PIA14278",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_038_0_nasa-PIA14278.jpg",
+        "duration": 15.0,
+        "score": 9.0,
+        "page": "https://images.nasa.gov/details/PIA14278",
+        "media": "image",
+        "credit": "NASA/JPL/EO-1 Mission/GSFC/Ashley Davies",
+        "license": "NASA media (public domain)",
+        "on_screen": "NASA/JPL/EO-1 Mission/GSFC/Ashley Davies",
+        "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/ffa190b1253bd5bf27928e2a.png"
+      }
+    ]
+  },
+  "41": {
+    "query": "Hunga Tonga second eruption pulse",
+    "clips": [
+      {
+        "id": "pexels-3192166",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_041_0_pexels-3192166.mp4",
+        "duration": 16,
+        "score": 7.0,
+        "page": "https://www.pexels.com/video/an-erupting-volcano-spewing-volcanic-ash-up-in-the-air-3192166/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "43": {
+    "query": "Mount Pinatubo 1991 eruption",
+    "clips": [
+      {
+        "id": "commons-194308656",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_043_0_commons-194308656.jpg",
+        "duration": 15.0,
+        "score": 9.0,
+        "page": "https://commons.wikimedia.org/wiki/File:Eruption_of_Mount_Pinatubo,_June_15,_1991_(original_resolution).jpg",
+        "media": "image",
+        "credit": "NOAA/NGDC, R. Lapointe, U.S. Air Force.",
+        "license": "Public domain",
+        "on_screen": "NOAA/NGDC, R. Lapointe, U.S. Air Force. / Wikimedia Commons (Public domain)",
+        "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/7a289af87aede6235d18b145.png"
+      }
+    ]
+  },
+  "44": {
+    "query": "eruption plume height comparison",
+    "clips": [
+      {
+        "id": "commons-142550487",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_044_0_commons-142550487.jpg",
+        "duration": 15.0,
+        "score": 8.0,
+        "page": "https://commons.wikimedia.org/wiki/File:ISS-66_Atmospheric_plume_from_2022_Hunga_Tonga_eruption_-_edited.jpg",
+        "media": "image",
+        "credit": "NASA / Kayla Barron",
+        "license": "Public domain",
+        "on_screen": "NASA / Kayla Barron / Wikimedia Commons (Public domain)",
+        "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/4a87d621f7133c1eac419d33.png"
+      }
+    ]
+  },
+  "45": {
+    "query": "Hunga Tonga plume height retrieval",
+    "clips": [
+      {
+        "id": "pexels-28801833",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_045_0_pexels-28801833.mp4",
+        "duration": 10,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/aerial-view-of-weather-station-on-mountain-28801833/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "47": {
+    "query": "Hunga Tonga satellite era record",
+    "clips": [
+      {
+        "id": "pexels-30001055",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_047_0_pexels-30001055.mp4",
+        "duration": 32,
+        "score": 7.0,
+        "page": "https://www.pexels.com/video/dramatic-volcanic-smoke-plume-captured-in-motion-30001055/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "48": {
+    "query": "Hunga Tonga satellite era record",
+    "clips": [
+      {
+        "id": "pexels-35997572",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_048_0_pexels-35997572.mp4",
+        "duration": 7,
+        "score": 6.0,
+        "page": "https://www.pexels.com/video/earth-from-space-south-america-view-35997572/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      },
+      {
+        "id": "nasa-iss036e002105",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_048_1_nasa-iss036e002105.jpg",
+        "duration": 15.0,
+        "score": 7.0,
+        "page": "https://images.nasa.gov/details/iss036e002105",
+        "media": "image",
+        "credit": "NASA JSC",
+        "license": "NASA media (public domain)",
+        "on_screen": "NASA JSC",
+        "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/4f611422e30f9e7ef6e6a274.png"
+      }
+    ]
+  },
+  "49": {
+    "query": "eruption plume top above haze",
+    "clips": [
+      {
+        "id": "pexels-6989133",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_049_0_pexels-6989133.mp4",
+        "duration": 22,
+        "score": 9.0,
+        "page": "https://www.pexels.com/video/horizon-in-the-sea-6989133/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "51": {
+    "query": "weather station barometer sensor",
+    "clips": [
+      {
+        "id": "pexels-32520863",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_051_0_pexels-32520863.mp4",
+        "duration": 15,
+        "score": 7.0,
+        "page": "https://www.pexels.com/video/modern-weather-station-against-clear-sky-32520863/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "53": {
+    "query": "Lamb wave pressure pulse",
+    "clips": [
+      {
+        "id": "pexels-6887983",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_053_0_pexels-6887983.mp4",
+        "duration": 31,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/top-view-of-an-ocean-with-ice-6887983/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "57": {
+    "query": "Hunga Tonga atmospheric wave",
+    "clips": [
+      {
+        "id": "nasa-s36-07-012",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_057_0_nasa-s36-07-012.jpg",
+        "duration": 15.0,
+        "score": 7.0,
+        "page": "https://images.nasa.gov/details/s36-07-012",
+        "media": "image",
+        "credit": "NASA JSC",
+        "license": "NASA media (public domain)",
+        "on_screen": "NASA JSC",
+        "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/ac4c50ca8de303ff9f127ec5.png"
+      }
+    ]
+  },
+  "59": {
+    "query": "Tonga tsunami coastline aerial",
+    "clips": [
+      {
+        "id": "pexels-16275536",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_059_0_pexels-16275536.mp4",
+        "duration": 12,
+        "score": 6.0,
+        "page": "https://www.pexels.com/video/aerial-view-of-a-beach-and-forest-16275536/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "61": {
+    "query": "tsunami damage Peru coast",
+    "clips": [
+      {
+        "id": "pexels-1582319",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_061_0_pexels-1582319.mp4",
+        "duration": 25,
+        "score": 7.0,
+        "page": "https://www.pexels.com/video/big-waves-crashing-through-the-wall-1582319/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "63": {
+    "query": "water vapour satellite map ocean",
+    "clips": [
+      {
+        "id": "pexels-854518",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_063_0_pexels-854518.mp4",
+        "duration": 20,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/planet-earth-revolving-854518/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "64": {
+    "query": "La R\u00e9union island aerial",
+    "clips": [
+      {
+        "id": "pexels-16298300",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_064_0_pexels-16298300.mp4",
+        "duration": 18,
+        "score": 9.0,
+        "page": "https://www.pexels.com/video/drone-flying-over-a-green-canyon-that-looks-like-a-jungle-16298300/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "66": {
+    "query": "weather balloon release field",
+    "clips": [
+      {
+        "id": "nasa-GSFC_20171208_Archive_e001139",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_066_0_nasa-GSFC_20171208_Archive_e001139.jpg",
+        "duration": 15.0,
+        "score": 8.0,
+        "page": "https://images.nasa.gov/details/GSFC_20171208_Archive_e001139",
+        "media": "image",
+        "credit": "NASA GSFC",
+        "license": "NASA media (public domain)",
+        "on_screen": "NASA GSFC",
+        "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/9454143b827060f36e5c8d6c.png"
+      }
+    ]
+  },
+  "68": {
+    "query": "Microwave Limb Sounder satellite",
+    "clips": [
+      {
+        "id": "nasa-KSC-02pd0399",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_068_0_nasa-KSC-02pd0399.jpg",
+        "duration": 15.0,
+        "score": 9.0,
+        "page": "https://images.nasa.gov/details/KSC-02pd0399",
+        "media": "image",
+        "credit": "NASA KSC",
+        "license": "NASA media (public domain)",
+        "on_screen": "NASA KSC",
+        "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/2814fbb11b954c1d919b0ffd.png"
+      }
+    ]
+  },
+  "70": {
+    "query": "ocean water vapour haze aerial",
+    "clips": [
+      {
+        "id": "pexels-10797953",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_070_0_pexels-10797953.mp4",
+        "duration": 19,
+        "score": 7.0,
+        "page": "https://www.pexels.com/video/aerial-view-of-clouds-10797953/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "72": {
+    "query": "sulfate aerosol haze dusk",
+    "clips": [
+      {
+        "id": "pexels-37365540",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_072_0_pexels-37365540.mp4",
+        "duration": 10,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/breathtaking-aerial-sunrise-over-clouds-37365540/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "74": {
+    "query": "Earth limb sunrise orbit",
+    "clips": [
+      {
+        "id": "nasa-iss061e123823",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_074_0_nasa-iss061e123823.jpg",
+        "duration": 15.0,
+        "score": 9.0,
+        "page": "https://images.nasa.gov/details/iss061e123823",
+        "media": "image",
+        "credit": "NASA JSC",
+        "license": "NASA media (public domain)",
+        "on_screen": "NASA JSC",
+        "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/5c25aa33ac705d72d90359a1.png"
+      }
+    ]
+  },
+  "76": {
+    "query": "ozonesonde balloon launch",
+    "clips": [
+      {
+        "id": "nasa-GSFC_20171208_Archive_e002096",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_076_0_nasa-GSFC_20171208_Archive_e002096.jpg",
+        "duration": 15.0,
+        "score": 7.0,
+        "page": "https://images.nasa.gov/details/GSFC_20171208_Archive_e002096",
+        "media": "image",
+        "credit": "NASA/Carla Thomas",
+        "license": "NASA media (public domain)",
+        "on_screen": "NASA/Carla Thomas",
+        "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/432febd88da456a3e43e4c1a.png"
+      }
+    ]
+  },
+  "78": {
+    "query": "persistent haze layers stratosphere",
+    "clips": [
+      {
+        "id": "pexels-34195707",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_078_0_pexels-34195707.mp4",
+        "duration": 16,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/breathtaking-aerial-sunset-above-the-clouds-34195707/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "79": {
+    "query": "sunset stratosphere above clouds",
+    "clips": [
+      {
+        "id": "nasa-iss023e057948",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_079_0_nasa-iss023e057948.jpg",
+        "duration": 15.0,
+        "score": 8.0,
+        "page": "https://images.nasa.gov/details/iss023e057948",
+        "media": "image",
+        "credit": "NASA JSC",
+        "license": "NASA media (public domain)",
+        "on_screen": "NASA JSC",
+        "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/4d0206a4f28ef9af28663601.png"
+      }
+    ]
+  },
+  "81": {
+    "query": "Hunga Tonga eruption aftermath ocean",
+    "clips": [
+      {
+        "id": "pexels-6392435",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_081_0_pexels-6392435.mp4",
+        "duration": 38,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/waves-hitting-the-beach-shore-6392435/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "83": {
+    "query": "deep ocean water column sunbeams",
+    "clips": [
+      {
+        "id": "pexels-34857315",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_083_0_pexels-34857315.mp4",
+        "duration": 8,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/captivating-deep-blue-ocean-bubbles-rising-34857315/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "84": {
+    "query": "phreatic steam explosion sea surface",
+    "clips": [
+      {
+        "id": "pexels-11104082",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_084_0_pexels-11104082.mp4",
+        "duration": 21,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/water-sprayed-from-geyser-11104082/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "86": {
+    "query": "water rich volcanic plume ocean",
+    "clips": [
+      {
+        "id": "pexels-1550079",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_086_0_pexels-1550079.mp4",
+        "duration": 26,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/underwater-bubbles-1550079/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "88": {
+    "query": "Earth from space Pacific Ocean",
+    "clips": [
+      {
+        "id": "pexels-10409075",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_088_0_pexels-10409075.mp4",
+        "duration": 300,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/view-from-satellite-on-earth-10409075/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "90": {
+    "query": "volcano monitoring station instruments",
+    "clips": [
+      {
+        "id": "pexels-6420488",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_090_0_pexels-6420488.mp4",
+        "duration": 29,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/radio-telescopes-placed-in-a-green-field-6420488/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "91": {
+    "query": "Hunga Tonga plume satellite image",
+    "clips": [
+      {
+        "id": "commons-142550487",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_091_0_commons-142550487.jpg",
+        "duration": 15.0,
+        "score": 6.0,
+        "page": "https://commons.wikimedia.org/wiki/File:ISS-66_Atmospheric_plume_from_2022_Hunga_Tonga_eruption_-_edited.jpg",
+        "media": "image",
+        "credit": "NASA / Kayla Barron",
+        "license": "Public domain",
+        "on_screen": "NASA / Kayla Barron / Wikimedia Commons (Public domain)",
+        "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/33691bd585875b5d7f6ee9eb.png"
+      }
+    ]
+  },
+  "93": {
+    "query": "volcanic fumarole steam venting",
+    "clips": [
+      {
+        "id": "pexels-854742",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_093_0_pexels-854742.mp4",
+        "duration": 12,
+        "score": 9.0,
+        "page": "https://www.pexels.com/video/steaming-rocks-854742/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "95": {
+    "query": "Tofua volcanic arc aerial",
+    "clips": [
+      {
+        "id": "pexels-32192414",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_095_0_pexels-32192414.mp4",
+        "duration": 11,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/aerial-view-of-maldives-islands-from-above-32192414/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "96": {
+    "query": "Tofua arc submarine volcano",
+    "clips": [
+      {
+        "id": "pexels-34319345",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_096_0_pexels-34319345.mp4",
+        "duration": 9,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/underwater-dive-adventure-with-divers-and-bubbles-34319345/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "97": {
+    "query": "ocean trench subduction zone",
+    "clips": [
+      {
+        "id": "nasa-iss030e122047",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_097_0_nasa-iss030e122047.jpg",
+        "duration": 15.0,
+        "score": 8.0,
+        "page": "https://images.nasa.gov/details/iss030e122047",
+        "media": "image",
+        "credit": "NASA JSC",
+        "license": "NASA media (public domain)",
+        "on_screen": "NASA JSC",
+        "depth": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/gen/32ea16ca09c2f57d00e4161f.png"
+      }
+    ]
+  },
+  "99": {
+    "query": "stratosphere high altitude clouds dusk",
+    "clips": [
+      {
+        "id": "pexels-19175289",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_099_0_pexels-19175289.mp4",
+        "duration": 31,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/a-view-of-the-sky-from-an-airplane-19175289/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "100": {
+    "query": "clear evening sky over ocean",
+    "clips": [
+      {
+        "id": "pexels-30129071",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_100_0_pexels-30129071.mp4",
+        "duration": 17,
+        "score": 7.0,
+        "page": "https://www.pexels.com/video/serene-ocean-horizon-at-sunset-30129071/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "101": {
+    "query": "airplane contrail twilight sky",
+    "clips": [
+      {
+        "id": "pexels-5701984",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_101_0_pexels-5701984.mp4",
+        "duration": 14,
+        "score": 9.0,
+        "page": "https://www.pexels.com/video/planes-flying-in-a-blue-sky-5701984/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "102": {
+    "query": "stratosphere thin air twilight sky",
+    "clips": [
+      {
+        "id": "pexels-5139101",
+        "path": "/Users/pranav/coding/projects/yt-deep-earth/runs/2026-09-18-2239/assets/stock_102_0_pexels-5139101.mp4",
+        "duration": 48,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/time-lapse-video-of-white-clouds-and-blue-sky-5139101/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  }
+}

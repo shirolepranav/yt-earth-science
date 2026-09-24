@@ -1,0 +1,84 @@
+{
+  "topics": [
+    {
+      "rank": 1,
+      "title": "The Ice Age That Buried Chicago Under a Mile of Ice",
+      "core_question": "What did North America actually look like under the Laurentide Ice Sheet, and what happened when it melted?",
+      "why_they_click": "A sheet of ice a mile thick sat on top of where Chicago, Detroit and New York are today, and the ground you walk on is still rebounding from its weight.",
+      "data_source": "USGS; NOAA NCEI Paleoclimatology; National Park Service glacial geology resources; peer-reviewed Laurentide Ice Sheet studies",
+      "evidence": "'ice age explained' is rising +691% over five years, the strongest search signal on the board, and the backlog has no Laurentide ice-sheet video."
+    },
+    {
+      "rank": 2,
+      "title": "The Magnetic Stripes That Proved the Continents Move",
+      "core_question": "How did a pattern of magnetised stripes on the ocean floor turn continental drift from a joke into accepted fact?",
+      "why_they_click": "The decisive evidence for plate tectonics was invisible, underwater, and found by accident on a ship's magnetometer tows.",
+      "data_source": "USGS 'This Dynamic Earth'; NOAA seafloor age and bathymetry datasets; Vine & Matthews 1963 and the peer-reviewed seafloor-spreading literature",
+      "evidence": "'plate tectonics explained' is rising +246% over five years, and the backlog covers the consequences of tectonics but never the discovery itself."
+    },
+    {
+      "rank": 3,
+      "title": "Doggerland: The Land Britain Lost to the Sea",
+      "core_question": "How much land did Northwest Europe lose when the ice sheets melted, and who was living on it?",
+      "why_they_click": "A settled landscape the size of a country now sits under the North Sea, and fishing trawlers keep dragging up the evidence.",
+      "data_source": "Peer-reviewed Doggerland palaeolandscape studies; British Geological Survey North Sea survey data; NOAA sea-level records",
+      "evidence": "Rides the same rising 'ice age explained' trend (+691%) while adding a human stake the backlog's ice-age topics don't have."
+    },
+    {
+      "rank": 4,
+      "title": "What the Toba Supervolcano Really Did to Humans",
+      "core_question": "How much did the Toba eruption change the climate and the human story, and how solid is the 'genetic bottleneck' claim?",
+      "why_they_click": "Toba is taught in some places as the eruption that nearly wiped us out and disputed in the peer-reviewed literature, so the evidence and the argument can both be shown.",
+      "data_source": "Smithsonian Global Volcanism Program; peer-reviewed Toba climate-modelling and archaeological studies",
+      "evidence": "'supervolcano' is rising +36% over five years, and the backlog's Yellowstone video busts a myth rather than covering a real VEI 8 eruption."
+    },
+    {
+      "rank": 5,
+      "title": "1964 Alaska: The 9.2 Quake That Shook for 4 Minutes",
+      "core_question": "What did the second-largest earthquake ever recorded do to Alaska, and why did it rewrite earthquake science?",
+      "why_they_click": "Four minutes of shaking dropped shorelines by metres, raised others out of the sea, and drowned a town with a tsunami that crossed the Pacific.",
+      "data_source": "USGS Earthquake Hazards Program; Alaska Earthquake Center (University of Alaska Fairbanks); NOAA tsunami records",
+      "evidence": "'biggest earthquake in history' is rising +53% over five years, and this extends the backlog's 1960 Chile topic instead of repeating it."
+    },
+    {
+      "rank": 6,
+      "title": "New Madrid 1811: When the Mississippi Ran Backwards",
+      "core_question": "Why did the middle of the North American plate tear open in 1811 and 1812, and is it still capable of doing it again?",
+      "why_they_click": "A fault hundreds of kilometres from any plate boundary shook hard enough to be felt in Boston and reportedly reversed the Mississippi's flow.",
+      "data_source": "USGS Earthquake Hazards Program; peer-reviewed New Madrid seismic zone studies",
+      "evidence": "Carries the rising 'plate tectonics explained' signal (+246%) into a live scientific argument about intraplate faults."
+    },
+    {
+      "rank": 7,
+      "title": "Hunga Tonga 2022: The Eruption That Touched Space",
+      "core_question": "How did a submarine volcano in Tonga produce the tallest eruption plume and the largest atmospheric explosion ever measured by instruments?",
+      "why_they_click": "Its pressure wave circled the planet several times and every barometer on Earth recorded it, which makes this the most filmed and best instrumented eruption in history.",
+      "data_source": "NASA Earth Observatory; Smithsonian Global Volcanism Program; NOAA",
+      "evidence": "'supervolcano' is rising +36% over five years, and satellite imagery of the blast gives the channel footage no reconstruction can match."
+    },
+    {
+      "rank": 8,
+      "title": "The Younger Dryas: When the Earth Turned Cold Again",
+      "core_question": "Why did the climate lurch back into near-glacial cold around 12,900 years ago, and what finally ended it?",
+      "why_they_click": "The planet was warming out of the ice age, then flipped back to freezing for more than a thousand years, and the trigger is still argued over.",
+      "data_source": "NOAA NCEI Paleoclimatology; NASA Earth Observatory; peer-reviewed Younger Dryas studies",
+      "evidence": "'ice age explained' is rising +691%; the cause is genuinely contested, so the video can show scientists disagreeing rather than hide it."
+    },
+    {
+      "rank": 9,
+      "title": "Pompeii 79 AD: What Actually Killed the People of Pompeii",
+      "core_question": "Did the people of Pompeii and Herculaneum die from falling ash, from heat, or from the pyroclastic surge, and what do the deposits say?",
+      "why_they_click": "The skeletons and the ash layers point in different directions, and settling the argument changed how volcanologists model what pyroclastic flows do to a city.",
+      "data_source": "Smithsonian Global Volcanism Program; peer-reviewed studies of the AD 79 deposits; USGS volcano hazards pages",
+      "evidence": "No direct trend signal, but it sits exactly on the backlog's eruption-forensics pattern set by Mount St Helens, with the best surviving imagery in the field."
+    },
+    {
+      "rank": 10,
+      "title": "The Deepest Place on Earth: 11 Kilometres Down",
+      "core_question": "What is actually at the bottom of the Mariana Trench, and why is the deepest point on the planet a subduction zone?",
+      "why_they_click": "The pressure at the bottom is more than a thousand times surface pressure, and the surveys of the exact depth disagree with each other by tens of metres.",
+      "data_source": "NOAA bathymetric surveys of Challenger Deep; USGS; peer-reviewed Mariana Trench studies",
+      "evidence": "Extends the rising 'plate tectonics explained' trend (+246%) to the most extreme subduction zone ever measured."
+    }
+  ]
+}

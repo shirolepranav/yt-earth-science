@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "pipeline/render.py": {
-    "mtime": 1790203479.7871475,
-    "ast_hash": "d01866a60b8341a2a5f418973639cfc9",
+    "mtime": 1790025798.249828,
+    "ast_hash": "591f5d532f378745e73c6f08b0690cbc",
     "semantic_hash": ""
   },
   "pipeline/research.py": {
@@ -90,8 +90,8 @@
     "semantic_hash": ""
   },
   "pipeline/stock.py": {
-    "mtime": 1790203441.985047,
-    "ast_hash": "23c45b6cc5c2ebe3998951c64f12a8b2",
+    "mtime": 1789874978.2644029,
+    "ast_hash": "452c939ef072076a2c1d44c3e7ef6bd9",
     "semantic_hash": ""
   },
   "pipeline/storyboard.py": {
@@ -130,8 +130,8 @@
     "semantic_hash": ""
   },
   "remotion/src/MainVideo.tsx": {
-    "mtime": 1790203436.4958487,
-    "ast_hash": "021dd72544d7d2aac5ac6ad6fb3c86ff",
+    "mtime": 1789879215.7661214,
+    "ast_hash": "be36250f423f0e29b9923c79c80a4b8d",
     "semantic_hash": ""
   },
   "remotion/src/Root.tsx": {
@@ -180,8 +180,8 @@
     "semantic_hash": ""
   },
   "remotion/src/components/charts/ChartStage.tsx": {
-    "mtime": 1790203436.496271,
-    "ast_hash": "e578dc216888f27091b6a92a547bf96a",
+    "mtime": 1789442280.0,
+    "ast_hash": "047978a6ae076d512b796c14e2580569",
     "semantic_hash": ""
   },
   "remotion/src/components/charts/ChartView.tsx": {
@@ -230,32 +230,32 @@
     "semantic_hash": ""
   },
   "runs/selftest/metadata.json": {
-    "mtime": 1790203706.2527416,
+    "mtime": 1790036308.4877298,
     "ast_hash": "3fd325147a47fc2ff47dd82cbf91f496",
     "semantic_hash": ""
   },
   "runs/selftest/outline.json": {
-    "mtime": 1790203705.7333155,
+    "mtime": 1790036307.9610035,
     "ast_hash": "c84547241abffd54171cada887893fbf",
     "semantic_hash": ""
   },
   "runs/selftest/shotlist.json": {
-    "mtime": 1790203706.2538035,
+    "mtime": 1790036308.4887009,
     "ast_hash": "cb652acbad7cbefe4d63aec7d465d36d",
     "semantic_hash": ""
   },
   "runs/selftest/state.json": {
-    "mtime": 1790203706.2540288,
+    "mtime": 1790036308.4890473,
     "ast_hash": "67df95054c07e96cf23e7c71518690a1",
     "semantic_hash": ""
   },
   "runs/selftest/stock.json": {
-    "mtime": 1790203706.2525957,
+    "mtime": 1790036308.4874907,
     "ast_hash": "6071b0044ddf8447be6a4409b791526e",
     "semantic_hash": ""
   },
   "runs/selftest/storyboard.json": {
-    "mtime": 1790203705.7331529,
+    "mtime": 1790036307.9608552,
     "ast_hash": "6f5786c6ec173617351ca6bd6c98ba68",
     "semantic_hash": ""
   },
@@ -265,12 +265,12 @@
     "semantic_hash": ""
   },
   "runs/selftest/visuals.json": {
-    "mtime": 1790203706.2524312,
+    "mtime": 1790036308.487012,
     "ast_hash": "c3d81785b9ec7b15b93d715531943496",
     "semantic_hash": ""
   },
   "runs/selftest/words.json": {
-    "mtime": 1790203705.5680423,
+    "mtime": 1789329943.0,
     "ast_hash": "71388a7917d5cf8d29edbe7405bd3fe6",
     "semantic_hash": ""
   },
@@ -285,8 +285,8 @@
     "semantic_hash": ""
   },
   "tools/selftest.py": {
-    "mtime": 1790203705.5559704,
-    "ast_hash": "e7a362512ba42fd5b241688013b7f6fd",
+    "mtime": 1790036307.7268524,
+    "ast_hash": "c90a2a571df636bece955668e5b91c25",
     "semantic_hash": ""
   },
   "tools/youtube_auth.py": {
@@ -385,13 +385,13 @@
     "semantic_hash": ""
   },
   "pipeline/assistant.py": {
-    "mtime": 1790203551.625119,
-    "ast_hash": "cc6635b98554a671f8c1eced82fdd82d",
+    "mtime": 1790036297.9150596,
+    "ast_hash": "2a8ada5d425c0111bd5488c9296116d4",
     "semantic_hash": ""
   },
   "pipeline/brain.py": {
-    "mtime": 1790203501.7324872,
-    "ast_hash": "43b05af1fbe0908e1fc2e403ba7b278c",
+    "mtime": 1790036297.9155245,
+    "ast_hash": "1f44084b666266be823d0d3e2d08e400",
     "semantic_hash": ""
   },
   "pipeline/captions.py": {
@@ -400,8 +400,8 @@
     "semantic_hash": ""
   },
   "pipeline/chat.py": {
-    "mtime": 1790203496.0666614,
-    "ast_hash": "b76bd570b4ebeab347cadbd729e8159b",
+    "mtime": 1790036307.7262309,
+    "ast_hash": "0625dce3a09de7be14d3782a5bab2656",
     "semantic_hash": ""
   },
   "remotion/src/generated/Chart_c35be1f0f45cd.tsx": {
@@ -515,8 +515,8 @@
     "semantic_hash": ""
   },
   "tools/chat_job.py": {
-    "mtime": 1790203567.060465,
-    "ast_hash": "5dc26380aa326afa36b3779c14597e17",
+    "mtime": 1790036297.9160762,
+    "ast_hash": "3b119e1a814094834392b28aa3f4f727",
     "semantic_hash": ""
   },
   "docs/LOCAL_CHAT_BLUEPRINT.md": {
@@ -552,16 +552,6 @@
   "runs/2026-09-18-2239/script.txt": {
     "mtime": 1789852501.0867796,
     "ast_hash": "569f220c5145e46e2ce37713d48c441a",
-    "semantic_hash": ""
-  },
-  "pipeline/footage.py": {
-    "mtime": 1790203469.8161933,
-    "ast_hash": "fa7683aa04c093d8b33d47ef893c169e",
-    "semantic_hash": ""
-  },
-  "runs/2026-09-18-2239/footage.json": {
-    "mtime": 1790203466.8831263,
-    "ast_hash": "01593092e30da0275396341dc81f2e81",
     "semantic_hash": ""
   }
 }

@@ -109,6 +109,12 @@ def send_file(path: Path, caption: str = "") -> None:
         _append({"html": caption, "file": url, "name": Path(path).name})
 
 
+def send_footage(path: Path, caption: str, buttons=None) -> None:
+    """The footage list - the studio shows it as a panel, one row per shot."""
+    if (url := _web_path(path)):
+        _append({"html": caption, "footage": url, "buttons": buttons})
+
+
 def progress(stage: str, detail: str = "") -> None:
     """A one-line 'still working' note. Called between build stages."""
     send(f"⚙️ <b>{escape(stage)}</b>{(' — ' + escape(detail)) if detail else ''}")
