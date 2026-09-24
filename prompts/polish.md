@@ -11,7 +11,7 @@ Produce the final version of this script, plus the YouTube metadata and the thum
 Do two jobs. (The shots are planned later, against the real narration timings - do not plan visuals here.)
 
 JOB 1 — Final pass on the script.
-Tighten anything flabby, fix any rhythm that stumbles when read aloud, and remove every remaining banned phrase. Keep the story arc and the open questions. Do not add new facts. Do not change any number. Keep it between {words_min} and {words_max} words, plain prose, blank line between paragraphs, numbers written as they are spoken.
+Tighten anything flabby, fix any rhythm that stumbles when read aloud, and remove every remaining banned phrase. Keep the story arc and the open questions. Do not add new facts. Keep every source tag such as [S4] attached to its claim exactly as it is; tags are removed before narration, don't count as words, and never appear in the title, description, tags or pinned comment. Do not change any number. Keep it between {words_min} and {words_max} words, plain prose, blank line between paragraphs, numbers written as they are spoken.
 
 JOB 2 — The YouTube metadata and thumbnail concepts.
 

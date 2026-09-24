@@ -21,6 +21,8 @@ Make them gripping. Calm, specific and vivid beats loud. Every figure, source an
 
 Then pick the strongest one and say why in a single sentence, judged only on: does this make someone who is half-watching stop scrolling out of curiosity, and is every claim in it supported?
 
+Tag every factual claim in each opening with its dossier source the same way the script does: [S4] at the end of the sentence, using the SOURCE numbers above. Tags are removed before narration and are not counted as words.
+
 Reply with JSON only:
 
 {{

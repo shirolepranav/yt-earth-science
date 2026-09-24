@@ -1,14 +1,21 @@
 """STAGE 3 - The script chain.
 
-Five separate model calls, each doing one job:
+Six separate model calls, each doing one job:
 
   1. Outline      decide the argument before writing any prose
-  2. Draft        get the words down
+  2. Draft        get the words down, every fact tagged with its source ([S4])
   3. Hook rewrite five alternative openings, pick the best
-  4. Fact-check   flag every claim the dossier doesn't support
+  4. Fact-check   flag every claim its tagged source doesn't support, and fix it
   5. Polish       final pass + YouTube metadata + thumbnail concepts
+  6. Final check  the same fact-check on the polished script - the words that
+                  are actually narrated. Whatever it can't fix is listed at the
+                  script gate for a person.
 
-Why five calls instead of one: asking a model for a finished script in one shot
+Edits made at the gate (script.revise, or a pasted script) are fact-checked the
+same way. The source tags are kept in script_cited.txt; script.txt, which is
+what gets narrated, has them removed.
+
+Why six calls instead of one: asking a model for a finished script in one shot
 gives you mush. Each pass here has a single job and a single output, which is
 the difference between "an AI wrote this" and something worth publishing.
 
@@ -58,7 +65,7 @@ def pick_shape(run_id: str) -> str:
 
 
 def word_count(text: str) -> int:
-    return len(re.findall(r"\b[\w'-]+\b", text))
+    return len(re.findall(r"\b[\w'-]+\b", strip_citations(text)))
 
 
 def first_seconds_of(script: str, seconds: int = 30) -> str:
@@ -68,6 +75,90 @@ def first_seconds_of(script: str, seconds: int = 30) -> str:
     """
     words = script.split()
     return " ".join(words[: int(150 * seconds / 60)])
+
+
+# ---------------------------------------------------------------------------
+# Source tags and fact-check fixes
+# ---------------------------------------------------------------------------
+
+# The draft tags each factual sentence with the dossier sources it comes from,
+# "[S4]" or "[S4, S9]", so the fact-check can hold each claim to its own source
+# instead of "anything in the dossier". Removed from what gets narrated.
+CITATION = re.compile(r"\s*\[S\d+(?:\s*,\s*S?\d+)*\]")
+
+# Flag kinds this channel never rewrites automatically. They're still listed at
+# the script gate for a person.
+NOT_AUTOFIXED: tuple[str, ...] = ()
+
+
+def strip_citations(text: str) -> str:
+    return CITATION.sub("", text)
+
+
+def _loose(quote: str) -> re.Pattern:
+    """A flagged quote as a pattern that survives the checker's copying drift:
+    any run of whitespace, curly or straight quotes, any dash."""
+    parts: list[str] = []
+    for char in quote.strip():
+        if char.isspace():
+            if parts[-1:] != [r"\s+"]:
+                parts.append(r"\s+")
+        elif char in "'\u2018\u2019":
+            parts.append("['\u2018\u2019]")
+        elif char in '"\u201c\u201d':
+            parts.append('["\u201c\u201d]')
+        elif char in "-\u2013\u2014":
+            parts.append("[-\u2013\u2014]")
+        else:
+            parts.append(re.escape(char))
+    return re.compile("".join(parts))
+
+
+def apply_fixes(text: str, flags: list[dict]) -> tuple[str, list[dict]]:
+    """Swap each flagged sentence for the checker's fix. Returns the new text and
+    the flags a person still has to look at: a CUT (deleting a sentence can break
+    the flow), a kind in NOT_AUTOFIXED, or a quote that isn't in the script -
+    which used to be skipped without a word."""
+    unresolved = []
+    for flag in flags:
+        quote = (flag.get("quote") or "").strip()
+        fix = (flag.get("suggested_fix") or "").strip()
+        match = _loose(quote).search(text) if quote else None
+        if not match:
+            unresolved.append({**flag, "unresolved": "quote not found in the script"})
+            log(f"  could not apply (quote not found): {quote[:60]}...")
+        elif flag.get("problem") in NOT_AUTOFIXED or not fix or fix.upper() == "CUT":
+            unresolved.append({**flag, "unresolved": "needs a person"})
+            log(f"  left for a person: {quote[:60]}...")
+        else:
+            text = text[:match.start()] + fix + text[match.end():]
+            log(f"  fixed: {quote[:60]}...")
+    return text, unresolved
+
+
+def fact_check(text: str, system: str, dossier: str, label: str) -> tuple[str, dict]:
+    """One fact-check pass: flag, apply what can be applied, keep what can't."""
+    check = chat_json(system, load_prompt("factcheck.md").format(script=text, dossier=dossier), label=label)
+    log(f"  verdict: {check.get('verdict', 'unknown')} - {len(check.get('flags', []))} flag(s)")
+    text, check["unresolved"] = apply_fixes(text, check.get("flags", []))
+    return text, check
+
+
+def save_script(run: Run, text: str) -> None:
+    """script_cited.txt keeps the source tags; script.txt is what gets narrated."""
+    run.write_text("script_cited.txt", text.strip())
+    run.write_text("script.txt", re.sub(r"[ \t]+\n", "\n", strip_citations(text)).strip())
+
+
+def recheck(run: Run, text: str) -> dict:
+    """Fact-check an edited script against the dossier, apply the fixes it can,
+    and save it. The result becomes factcheck.json, shown at the script gate."""
+    cfg = load_config()
+    system = load_prompt("system.md").format(persona=load_persona(), angle=cfg["channel"]["angle"])
+    text, check = fact_check(text, system, run.read_text("dossier.md"), label="edit factcheck")
+    save_script(run, text)
+    run.write_json("factcheck.json", check)
+    return check
 
 
 # ---------------------------------------------------------------------------
@@ -88,7 +179,7 @@ def generate(run: Run) -> dict:
     target_minutes = f"{video_cfg['target_minutes_min']}-{video_cfg['target_minutes_max']}"
 
     # --- Pass 1: outline ---------------------------------------------------
-    log("Pass 1/5: outline")
+    log("Pass 1/6: outline")
     outline = chat_json(
         system,
         load_prompt("outline.md").format(
@@ -104,7 +195,7 @@ def generate(run: Run) -> dict:
     log(f"  {len(outline.get('sections', []))} sections")
 
     # --- Pass 2: draft -----------------------------------------------------
-    log("Pass 2/5: draft")
+    log("Pass 2/6: draft")
     import json as _json
     draft = chat(
         system,
@@ -120,7 +211,7 @@ def generate(run: Run) -> dict:
     log(f"  {word_count(draft):,} words")
 
     # --- Pass 3: hook rewrite ---------------------------------------------
-    log("Pass 3/5: hook rewrite")
+    log("Pass 3/6: hook rewrite")
     hooks = chat_json(
         system,
         load_prompt("hook.md").format(
@@ -148,33 +239,14 @@ def generate(run: Run) -> dict:
     run.write_text("draft_hooked.txt", draft)
 
     # --- Pass 4: fact-check ------------------------------------------------
-    log("Pass 4/5: fact-check")
-    check = chat_json(
-        system,
-        load_prompt("factcheck.md").format(script=draft, dossier=dossier),
-        label="factcheck",
-    )
-    run.write_json("factcheck.json", check)
-
-    flags = check.get("flags", [])
-    log(f"  verdict: {check.get('verdict', 'unknown')} - {len(flags)} flag(s)")
-
-    # Apply the suggested fixes automatically. Anything the checker says to CUT
-    # is left in place but flagged, because silently deleting a sentence can
-    # break the flow - that's a judgement call for the human gate.
-    # Every flag is applied, overstated_causation included: on a science
-    # channel a dramatic causal leap is a factual error, not a tone choice.
-    for flag in flags:
-        fix = (flag.get("suggested_fix") or "").strip()
-        quote = (flag.get("quote") or "").strip()
-        if fix and fix.upper() != "CUT" and quote and quote in draft:
-            draft = draft.replace(quote, fix, 1)
-            log(f"  fixed: {quote[:60]}...")
+    log("Pass 4/6: fact-check")
+    draft, draft_check = fact_check(draft, system, dossier, label="factcheck")
+    run.write_json("factcheck_draft.json", draft_check)
 
     # --- Pass 5: polish + metadata + thumbnail concepts ---------------------
     # Shots are no longer planned here: pipeline/storyboard.py plans them after
     # narration, against the real word timings.
-    log("Pass 5/5: polish, metadata and thumbnail concepts")
+    log("Pass 5/6: polish, metadata and thumbnail concepts")
     prompt = load_prompt("polish.md").format(
         script=draft,
         outline=_json.dumps(outline, indent=2),
@@ -183,12 +255,18 @@ def generate(run: Run) -> dict:
     )
     final = chat_json(system, prompt, heavy=True, label="polish")
 
-    script_text = final["script"].strip()
-    run.write_text("script.txt", script_text)
     run.write_json("metadata.json", final.get("metadata", {}))
+
+    # --- Pass 6: final check -----------------------------------------------
+    # Polish rewrites the whole script, so the checked draft is not what gets
+    # narrated. Check the words that are.
+    log("Pass 6/6: fact-check the final script")
+    script_text, check = fact_check(final["script"].strip(), system, dossier, label="final factcheck")
+    run.write_json("factcheck.json", check)
+    save_script(run, script_text)
     run.mark_done("script")
 
-    log(f"Final script: {word_count(script_text):,} words")
+    log(f"Final script: {word_count(script_text):,} words, {len(check['unresolved'])} claim(s) left for a person")
 
     return {
         "script": script_text,
@@ -205,15 +283,14 @@ def revise(run: Run, instruction: str) -> str:
     1783 eruption" instead of "approve". One focused model call, the whole
     script back, the metadata refreshed if the change affects the title.
 
-    The fact-check verdict is deliberately NOT re-run here: a targeted edit to
-    prose doesn't invalidate the dossier, and re-running it would cost a full
-    pass for every small change. Re-approve triggers the build either way.
+    The edited script is fact-checked again (recheck): an edit is exactly where
+    an unsupported claim can slip in after the checks have run.
     """
     cfg = load_config()
     system = load_prompt("system.md").format(
         persona=load_persona(), angle=cfg["channel"]["angle"]
     )
-    current = run.read_text("script.txt")
+    current = run.read_text("script_cited.txt" if run.path("script_cited.txt").exists() else "script.txt")
     metadata = run.read_json("metadata.json") if run.path("metadata.json").exists() else {}
     video_cfg = cfg["video"]
 
@@ -222,7 +299,9 @@ def revise(run: Run, instruction: str) -> str:
 \"\"\"{instruction}\"\"\"
 
 Make that change and nothing else. Do not rewrite passages the request doesn't
-touch - the rest of this script has already been approved. Keep the length
+touch - the rest of this script has already been approved. Keep every source
+tag such as [S4] where it is, and tag any new fact with its source the same way.
+Keep the length
 between {video_cfg['target_words_min']} and {video_cfg['target_words_max']} words.
 
 If the change makes the current title wrong, give a new one. Otherwise repeat
@@ -239,7 +318,7 @@ Reply with JSON only:
     result = chat_json(system, prompt, heavy=True, label="revise")
 
     revised = result["script"].strip()
-    run.write_text("script.txt", revised)
+    recheck(run, revised)
 
     if result.get("title"):
         metadata["title"] = result["title"]
@@ -266,7 +345,7 @@ def format_for_humans(run: Run) -> str:
         for c in concepts
     ) or "_None proposed - the thumbnail stage will generate its own._"
 
-    flags = check.get("flags", [])
+    flags = check.get("unresolved", check.get("flags", []))
     flag_lines = (
         "\n".join(
             f"- **{f.get('problem')}** — \"{f.get('quote', '')[:120]}\"  \n"
@@ -284,7 +363,7 @@ def format_for_humans(run: Run) -> str:
         f"(~{word_count(script) / 150:.1f} min of narration)",
         f"**Fact-check verdict:** `{check.get('verdict', 'unknown')}`",
         "",
-        "### Fact-check flags",
+        "### Fact-check: claims left for a person",
         flag_lines,
         "",
         "### Thumbnail concepts",

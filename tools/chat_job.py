@@ -81,9 +81,11 @@ def do_revise(run_id: str, intent: str, args: dict) -> None:
         if len(pasted) < 200:
             chat.send("That looked too short to be a whole script — paste it in a code block?")
             return
-        run.write_text("script.txt", pasted)
+        chat.send("🔎 Fact-checking your script…")
+        run.path("script_cited.txt").unlink(missing_ok=True)
+        script.recheck(run, pasted)
         run.reset_stages(keep=["choose", "research", "script"])
-        chat.send("✅ Using your script as written.")
+        chat.send("✅ Using your script, with any fixes the fact-check could make.")
     else:
         instruction = args.get("instruction") or ""
         if not instruction:

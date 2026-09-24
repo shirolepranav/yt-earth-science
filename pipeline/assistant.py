@@ -84,7 +84,9 @@ def present_script(run: Run) -> None:
     script_text = run.read_text("script.txt")
     metadata = run.read_json("metadata.json")
     check = run.read_json("factcheck.json")
-    flags = check.get("flags", [])
+    # Runs from before the final check have no "unresolved": show every flag.
+    unresolved = check.get("unresolved", check.get("flags", []))
+    fixed = len(check.get("flags", [])) - len(unresolved)
 
     header = [
         f"✍️ <b>Script ready</b> — run <code>{run.id}</code>", "",
@@ -92,9 +94,12 @@ def present_script(run: Run) -> None:
         f"{word_count(script_text):,} words · ~{word_count(script_text) / 150:.0f} min · "
         f"fact-check: <b>{chat.escape(check.get('verdict', 'unknown'))}</b>",
     ]
-    if flags:
-        header += ["", f"⚠️ {len(flags)} claim(s) flagged:"]
-        header += [f"• {chat.escape(f.get('problem', ''))}" for f in flags[:5]]
+    if fixed > 0:
+        header += [f"🔧 {fixed} claim(s) fixed automatically by the fact-check."]
+    if unresolved:
+        header += ["", f"⚠️ <b>{len(unresolved)} claim(s) need you</b> — edit them, or build anyway:"]
+        header += [f"• <b>{chat.escape(f.get('problem', ''))}</b>: “{chat.escape((f.get('quote') or '')[:160])}”"
+                   f" — {chat.escape((f.get('detail') or '')[:240])}" for f in unresolved[:8]]
 
     chat.send("\n".join(header))
     chat.send(chat.escape(script_text))
