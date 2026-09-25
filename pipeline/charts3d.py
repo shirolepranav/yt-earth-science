@@ -241,9 +241,16 @@ def build_for_run(run: Run) -> dict:
     shots = [(s, chart_spec(s, charts)) for s in board["shots"] if s["kind"] == "chart"]
     shots = [(s, spec) for s, spec in shots if spec and spec["chartKind"] != "bignumber"][: cfg["max_per_video"]]
 
+    from . import chat  # late import: charts must work with no chat configured
+
     results: dict[str, str] = {}
     if not has_secret("OPENAI_API_KEY"):
         log("  no OPENAI_API_KEY - every chart uses the built-in three.js components")
+        if shots:
+            chat.note_degraded(
+                f"No OPENAI_API_KEY, so {len(shots)} chart(s) use the built-in "
+                "component instead of a bespoke one."
+            )
     else:
         log(f"GPT-6 Astra is writing {len(shots)} chart component(s)")
         accepted: dict[str, Path] = {}
@@ -253,6 +260,12 @@ def build_for_run(run: Run) -> dict:
                 key = build_one(run, shot, spec, accepted, cfg, ledger)
             except Exception as error:  # noqa: BLE001 - never lose the video over a chart
                 log(f"  shot {shot['id']}: Astra failed ({error}) - built-in chart instead")
+                # An empty balance or a dead key looks exactly like this, and
+                # you would otherwise only find out by noticing plainer charts.
+                chat.note_degraded(
+                    f"GPT-6 Astra wouldn't write the chart components "
+                    f"({str(error)[:120]}) - the built-in chart was used instead."
+                )
                 key = None
             if key:
                 results[str(shot["id"])] = key

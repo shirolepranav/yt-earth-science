@@ -1,0 +1,1644 @@
+{
+  "duration": 568.22,
+  "shots": [
+    {
+      "start": 0.0,
+      "end": 3.978,
+      "sentence": 0,
+      "kind": "stock",
+      "image_prompt": "Aerial wide shot of a vast dried seabed of pale bone-white cracked clay plates curling at the edges, running unbroken to a flat horizon under a low grey overcast sky, fine salt dust lifting in long sheets, low raking dusk light, fine 35mm grain, muted palette.",
+      "motion_prompt": "Slow drone push forward, low over the cracked clay.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "Aral Sea dried seabed aerial",
+      "queries": [
+        "Aral Sea dried seabed aerial",
+        "cracked clay desert plain",
+        "salt flat horizon overcast"
+      ],
+      "intent": "Opening aerial of a vast pale cracked clay seabed running unbroken to a flat horizon under low overcast, to set the film in this vanished sea.",
+      "id": 0
+    },
+    {
+      "start": 3.978,
+      "end": 9.191,
+      "sentence": 1,
+      "kind": "stock",
+      "image_prompt": "Ground-level wide view with the horizon high in frame, pale cracked clay plates curling at the edges across a flat dry seabed stretching to a featureless overcast horizon, one small human silhouette far off for scale only, bone-white and grey-brown earth, natural light, unstyled.",
+      "motion_prompt": "Slow motorised slider drift to the right, just above the clay.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "Aral Sea eastern lobe dry basin",
+      "queries": [
+        "Aral Sea eastern lobe dry basin",
+        "cracked clay plates ground level",
+        "dry lake bed horizon"
+      ],
+      "intent": "Ground-level view of pale cracked clay plates underfoot running out to the horizon, exactly where the eastern lobe of the southern Aral Sea used to hold water.",
+      "id": 1
+    },
+    {
+      "sentence": 1,
+      "kind": "evidence",
+      "source_index": 11,
+      "quote": "some growth in the eastern lobe of the South Aral represents an improvement over August 2014, when that lobe was completely dry.",
+      "queries": [],
+      "image_prompt": "",
+      "motion_prompt": "",
+      "start": 9.191,
+      "end": 15.867,
+      "before": "While the lake was much smaller in August 2017 than it was in the 1960s, ",
+      "after": " Instead of pooling in one large basin, water flowing down the two rivers now ends up in either the North Aral Sea (fed by the Syr Darya) or the South Aral Sea (fed by Amu Darya). The Kok-Aral dike and dam, finished in 2005, separates the two water bodies and prevents flow out of the North Aral into the lower-elevation South Aral. The dam has actually led fisheries in the",
+      "headline": "New Water in the Aral Sea",
+      "publisher": "science.nasa.gov",
+      "id": 2
+    },
+    {
+      "start": 15.867,
+      "end": 21.231,
+      "sentence": 2,
+      "kind": "stock",
+      "image_prompt": "Wide aerial of a bone-dry former lake basin of pale cracked clay and salt polygons reaching the horizon, no water anywhere, thin ground haze, flat overcast light, geologically plain and unstyled.",
+      "motion_prompt": "Slow helicopter aerial orbiting gently over the dry basin.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "Aral Sea basin completely dry",
+      "queries": [
+        "Aral Sea basin completely dry",
+        "cracked seabed salt polygons",
+        "former lake bed no water"
+      ],
+      "intent": "The basin standing completely dry that month, with no water anywhere in the eastern lobe.",
+      "id": 3
+    },
+    {
+      "start": 21.231,
+      "end": 29.706,
+      "sentence": 3,
+      "kind": "stock",
+      "image_prompt": "A rusted steel-hulled fishing trawler sitting upright and waterless on hard sand kilometres from any water, low orange sun raking its hull, rotted wooden boat ribs and mooring posts half-buried in dry sand nearby, no people, ochre and grey-brown desert.",
+      "motion_prompt": "Slow slider move past the hull with the low sun behind it.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "abandoned trawler dry seabed Aral",
+      "queries": [
+        "abandoned trawler dry seabed Aral",
+        "rusted fishing boat desert sand",
+        "Aral fishing village abandoned"
+      ],
+      "intent": "A rusted trawler sitting upright on hard sand kilometres from water, the remnant of the towns that fished the fourth-largest lake in 1960.",
+      "id": 4
+    },
+    {
+      "sentence": 4,
+      "kind": "evidence",
+      "source_index": 10,
+      "quote": "Since 1960, local rivers have been diverted in large-scale agricultural projects, and the Aral Sea has lost 90 percent of its volume.",
+      "queries": [
+        "Aral Sea 2011 satellite image",
+        "shrinking Aral Sea from space",
+        "desiccated seabed aerial"
+      ],
+      "intent": "An Earth Observatory page and imagery carrying the ninety-percent volume loss, with that line highlighted and legible.",
+      "image_prompt": "Satellite view of a small turquoise-grey remnant lake ringed by vast pale dried seabed, faint residual coastlines traced in the dust, flat overhead perspective, muted natural colour.",
+      "motion_prompt": "Very slow zoom out from the remnant lake to reveal the dry seabed around it.",
+      "start": 29.706,
+      "end": 37.415,
+      "before": "",
+      "after": " Once the world\u2019s fourth largest lake, the rapidly shrinking Aral Sea has fragmented into four bodies of water: the Northern Aral Sea, the eastern and western basins of the Southern Aral Sea, and Tsche-Bas Gulf. Of these, the eastern basin of the Southern Aral Sea and Tsche-Bas Gulf show the most dramatic change in 2011. The Moderate Resolution Imaging Spectroradiometer(MODIS)",
+      "headline": "Aral Sea 2011",
+      "publisher": "science.nasa.gov",
+      "id": 5
+    },
+    {
+      "sentence": 6,
+      "kind": "card",
+      "variant": "question",
+      "text": "WHAT IS THE ARAL?",
+      "queries": [
+        "inland lake overcast shore",
+        "closed basin lake grey",
+        "barren lake shore reeds"
+      ],
+      "intent": "A closed inland lake under overcast as the scene behind the section question card.",
+      "image_prompt": "Wide view of a cold grey-green inland lake under heavy overcast, low barren shores, reeds at the waterline, small waves running against the shore, no people, natural light only.",
+      "motion_prompt": "Slow lateral drift along the empty shoreline.",
+      "start": 37.415,
+      "end": 42.187,
+      "id": 6
+    },
+    {
+      "start": 42.187,
+      "end": 49.188,
+      "sentence": 7,
+      "kind": "stock",
+      "image_prompt": "High aerial at dusk of a wide steppe basin where two braided river deltas thread grey water and pale gravel into a shallow inland lake, low grassy shores, distant snow-capped mountains, no people and no structures.",
+      "motion_prompt": "Slow aerial drift north, following one braided channel.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "Amu Darya Syr Darya delta aerial",
+      "queries": [
+        "Amu Darya Syr Darya delta aerial",
+        "two braided rivers inland sea",
+        "steppe basin river deltas dusk"
+      ],
+      "intent": "The closed lake with no outlet fed by two rivers, the Amu Darya from the south and the Syr Darya from the north, seen as braided deltas entering one basin.",
+      "id": 7
+    },
+    {
+      "sentence": 8,
+      "kind": "number",
+      "value": "17,000 years",
+      "label": "ARAL SEA'S ORIGIN",
+      "source": "Aladin et al. 2023",
+      "queries": [
+        "ancient inland sea steppe basin",
+        "glacial meltwater braided delta",
+        "deep time lake basin aerial"
+      ],
+      "intent": "The deep-time origin of the lake seventeen thousand years ago, a wide ancestral brackish basin with glacier meltwater entering.",
+      "image_prompt": "Wide dusk view of a deep-time ancestral brackish inland sea in a broad steppe basin, low grassy shores, braided glacier meltwater streams entering as deltas, distant snow-capped range, cold blue-hour light, no people.",
+      "motion_prompt": "Slow push in toward the waterline.",
+      "start": 49.188,
+      "end": 53.82,
+      "id": 8
+    },
+    {
+      "start": 53.82,
+      "end": 56.362,
+      "sentence": 9,
+      "kind": "stock",
+      "image_prompt": "Wide view of a shallow grey-green inland lake surface under hot haze, a braided meltwater stream entering at one side, salt crust at the waterline, flat natural light, observational and unstyled.",
+      "motion_prompt": "Very slow slider drift along the shoreline.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "shallow lake surface heat haze",
+      "queries": [
+        "shallow lake surface heat haze",
+        "river inflow into inland lake",
+        "brine pool evaporating sun"
+      ],
+      "intent": "Water arriving and water leaving \u2014 a shallow inland lake surface under haze with an inflow at one side.",
+      "id": 9
+    },
+    {
+      "sentence": 10,
+      "kind": "evidence",
+      "source_index": 12,
+      "quote": "Due to the arid and seasonally hot climate, there is extensive evaporation and limited surface waters.",
+      "queries": [
+        "evaporation haze over water",
+        "salt flat heat shimmer",
+        "shallow brine evaporating desert"
+      ],
+      "intent": "The receipt that in this arid basin water leaves only as vapour \u2014 extensive evaporation and limited surface waters.",
+      "image_prompt": "Close wide of a shallow brine pool under hard noon glare, shimmers of evaporation haze above the surface, cracked salt polygons at the edges, pale clay reflections, no people.",
+      "motion_prompt": "Slow push in toward the shimmering water surface.",
+      "start": 56.362,
+      "end": 62.376,
+      "before": "",
+      "after": " Summer temperatures can reach 60\u03bfC (140\u03bfF)! The Aral Sea\u2019s water supply is mainly from the Amu Darya and the Syr Darya, which carry snowmelt from mountainous areas. In the early 1960s, the then-Soviet Union diverted the Amu Darya and Syr Darya Rivers for irrigation of one of the driest parts of Asia to produce rice, melons, cereals, and especially cotton. The Soviets wanted",
+      "headline": "7.5 Case Study: The Aral Sea",
+      "publisher": "pressbooks.uwf.edu",
+      "id": 10
+    },
+    {
+      "start": 62.376,
+      "end": 64.629,
+      "sentence": 12,
+      "kind": "stock",
+      "image_prompt": "Wide aerial of a dry pale river channel threading through ochre desert, grey spoil banks, tamarisk scrub along the lip, low overcast light, no people.",
+      "motion_prompt": "Slow aerial forward along the dry channel.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "dry riverbed desert aerial",
+      "queries": [
+        "dry riverbed desert aerial",
+        "Amu Darya dry channel",
+        "empty river channel ochre desert"
+      ],
+      "intent": "The river channel itself running dry through the desert, the subject the narration is about to turn to.",
+      "id": 11
+    },
+    {
+      "start": 64.629,
+      "end": 70.55,
+      "sentence": 13,
+      "kind": "stock",
+      "image_prompt": "Aerial of a concrete diversion headworks and sluice gates on a wide grey river in ochre desert, grey spoil banks, no markings, no people, flat overcast light, unstyled documentary look.",
+      "motion_prompt": "Slow low aerial pass along the canal leaving the river.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "irrigation headworks river aerial",
+      "queries": [
+        "irrigation headworks river aerial",
+        "diversion gates Central Asia",
+        "canal intake on grey river"
+      ],
+      "intent": "Soviet-era diversion works on the two rivers \u2014 engineers looking at a river as something other than a sea.",
+      "id": 12
+    },
+    {
+      "sentence": 14,
+      "kind": "evidence",
+      "source_index": 12,
+      "quote": "The Soviets wanted cotton or white gold to become a major export.",
+      "queries": [
+        "cotton field irrigation desert",
+        "cotton rows Uzbekistan",
+        "irrigated cotton furrows"
+      ],
+      "intent": "Cotton, white gold, growing in a desert they intended to farm \u2014 the receipt that cotton was the goal.",
+      "image_prompt": "Ground-level wide of irrigated cotton rows in ochre desert soil, water sheeting along a furrow, faint dust haze, low raking sun, no people, no readable text.",
+      "motion_prompt": "Slow slider move along the crop rows.",
+      "start": 70.55,
+      "end": 76.55,
+      "before": "",
+      "after": " They were successful, and today Uzbekistan is one of the world\u2019s largest exporters of cotton. Unfortunately, this action eliminated any river inflow to the Aral Sea and caused it to disappear almost completely. Figure 2. Map of Aral Sea Area Map shows the size of the lake in 1960 and the political boundaries of 2011. Countries in yellow are at least partially in the Aral Sea",
+      "headline": "7.5 Case Study: The Aral Sea",
+      "publisher": "pressbooks.uwf.edu",
+      "id": 13
+    },
+    {
+      "start": 76.55,
+      "end": 81.185,
+      "sentence": 15,
+      "kind": "stock",
+      "image_prompt": "A long straight unlined irrigation canal cutting a trench of dull green water through ochre desert, grey spoil banks, tamarisk scrub along the lip, an unmarked concrete sluice structure, low sun, no people.",
+      "motion_prompt": "Slow low aerial flying along the canal toward the horizon.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "Kara Kum Canal Turkmenistan",
+      "queries": [
+        "Kara Kum Canal Turkmenistan",
+        "unlined irrigation canal desert",
+        "canal trench through desert"
+      ],
+      "intent": "The Kara Kum Canal opened in 1956 \u2014 the rivers taken, a long unlined canal cutting a trench through the desert.",
+      "id": 14
+    },
+    {
+      "sentence": 17,
+      "kind": "chart",
+      "chart_index": 0,
+      "queries": [
+        "Kara Kum Canal water diversion",
+        "irrigated fields from the air",
+        "canal drawing off a river"
+      ],
+      "intent": "The canal diverting a third of the Amu Darya's flow in its opening year, into newly irrigated land in Uzbekistan and Turkmenistan.",
+      "image_prompt": "Wide aerial of a canal drawing water off a wide grey river into a grid of irrigated fields beyond, ochre desert, flat overcast light, no people.",
+      "motion_prompt": "Slow aerial pull back from the canal head to the desert.",
+      "start": 81.185,
+      "end": 93.282,
+      "id": 15
+    },
+    {
+      "start": 93.282,
+      "end": 99.958,
+      "sentence": 18,
+      "kind": "stock",
+      "image_prompt": "Aerial of a large earthen dam and reservoir on a grey river in ochre steppe, exposed pale banks at the low waterline, flat overcast light, no people and no structures beyond the dam.",
+      "motion_prompt": "Slow aerial climb away from the dam.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "large dam reservoir Central Asia",
+      "queries": [
+        "large dam reservoir Central Asia",
+        "earthen dam grey river steppe",
+        "reservoir low waterline aerial"
+      ],
+      "intent": "Not a third of a trickle but a third of the river that fed the sea, and a diversion that kept growing \u2014 dam after dam rising across the basin.",
+      "id": 16
+    },
+    {
+      "sentence": 21,
+      "kind": "chart",
+      "data": {
+        "chart_kind": "bar",
+        "title": "BUILT ACROSS THE BASIN",
+        "labels": [
+          "Dams and reservoirs",
+          "Major irrigation schemes"
+        ],
+        "values": [
+          20,
+          60
+        ],
+        "unit": "sites",
+        "source": "Guy Fipps, Texas A&M"
+      },
+      "queries": [
+        "canal network desert aerial",
+        "irrigation scheme aerial view",
+        "dams and canals Central Asia"
+      ],
+      "intent": "The scale of the build-out across the basin \u2014 roughly twenty dams and reservoirs and sixty major irrigation schemes.",
+      "image_prompt": "High aerial of a desert basin webbed with canals, dams and grids of irrigated fields, grey spoil banks, ochre earth, dull steel water, flat overcast light, no people.",
+      "motion_prompt": "Slow aerial drift sideways over the canal network.",
+      "start": 99.958,
+      "end": 108.724,
+      "id": 17
+    },
+    {
+      "start": 108.724,
+      "end": 122.238,
+      "sentence": 22,
+      "kind": "stock",
+      "image_prompt": "Ground-level wide of an unlined earthen irrigation canal leaking through its banks into dry ochre soil, dark wet patches spreading, tamarisk scrub along the lip, hard noon glare, no people.",
+      "motion_prompt": "Slow slider move along the leaking bank.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "unlined canal leaking water",
+      "queries": [
+        "unlined canal leaking water",
+        "irrigation canal seepage bank",
+        "water loss in desert canal"
+      ],
+      "intent": "Most of the water pulled from the rivers never reached the crops \u2014 it leaked from unlined canals and evaporated on the way.",
+      "id": 18
+    },
+    {
+      "start": 122.238,
+      "end": 128.008,
+      "sentence": 24,
+      "kind": "stock",
+      "image_prompt": "Wide aerial of a once-braided delta reduced to a thin thread of water crossing pale dried flats toward a distant shrinking lake, grey-brown earth, overcast light, no people.",
+      "motion_prompt": "Slow aerial push toward the distant waterline.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "dry river delta inland sea",
+      "queries": [
+        "dry river delta inland sea",
+        "reduced river flow to lake",
+        "shrunken lake delta aerial"
+      ],
+      "intent": "The sea's income cut while its outgoings fell too, but never as fast \u2014 the river barely reaching the water.",
+      "id": 19
+    },
+    {
+      "sentence": 26,
+      "kind": "evidence",
+      "source_index": 3,
+      "quote": "Net evaporation has also decreased, but at a slower rate while the groundwater inflow has remained approximately the same.",
+      "queries": [
+        "salt crust polygons drying",
+        "cracked salt pan wind",
+        "evaporating brine crust"
+      ],
+      "intent": "The receipt that net evaporation fell too, but more slowly than the rivers \u2014 so the deficit grew.",
+      "image_prompt": "Wide of a hardened salt crust cracking into polygons under flat overcast light, wind-blown salt streaming low across the ground, pale blinding white with grey-brown edges, no people.",
+      "motion_prompt": "Very slow tilt down to the cracked surface.",
+      "start": 128.008,
+      "end": 134.008,
+      "before": "",
+      "after": " As a result, there was a net deficit of water to the sea. The figure below shows the components of water balance that resulted in the net deficit of incoming water flow (Micklin 2007). In the first desiccation period, water level dropped by about 21 cm/year. In the next decade, water level decreased by 57 cm/year, and afterwards the drop in water level started accelerating",
+      "headline": "Environmental Impacts",
+      "publisher": "columbia.edu",
+      "id": 20
+    },
+    {
+      "start": 134.008,
+      "end": 139.943,
+      "sentence": 28,
+      "kind": "stock",
+      "image_prompt": "Wide aerial at dusk of a vast pale basin, wind lifting long sheets of salt dust off the cracked floor toward the horizon, low orange sun, deep basalt near-black shadows, no people.",
+      "motion_prompt": "Slow drone ascent revealing the empty basin.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "dried basin dusk aerial",
+      "queries": [
+        "dried basin dusk aerial",
+        "salt dust blowing plain",
+        "empty seabed horizon"
+      ],
+      "intent": "The turn to the general question \u2014 a basin with fewer drops coming in, dust lifting off its dry floor.",
+      "id": 21
+    },
+    {
+      "start": 139.943,
+      "end": 145.458,
+      "sentence": 29,
+      "kind": "stock",
+      "image_prompt": "Ground-level wide of a cold grey-green inland lake under heavy overcast, reeds at the waterline, small waves against a barren shore, no people, natural light only, unhurried.",
+      "motion_prompt": "Long locked-off shot with the slightest drift.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "still lake shore overcast",
+      "queries": [
+        "still lake shore overcast",
+        "reeds waterline grey lake",
+        "barren shore small waves"
+      ],
+      "intent": "Standing on the shore in the nineteen sixties, nothing seeming to change from one year to the next \u2014 a still shoreline under heavy overcast.",
+      "id": 22
+    },
+    {
+      "start": 145.458,
+      "end": 149.962,
+      "sentence": 30,
+      "kind": "stock",
+      "image_prompt": "A rusted steel-hulled trawler resting upright on hard dry sand beside the collapsing remains of a wooden dock, pale cracked clay flats running to the horizon behind it, low orange sun raking along the hull, deep near-black shadows, no people, wide anamorphic frame.",
+      "motion_prompt": "Slow motorised slider drift to the right along the trawler's hull.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "Aral Sea fishing boats stranded",
+      "queries": [
+        "Aral Sea fishing boats stranded",
+        "rusted trawler dry dock sand",
+        "abandoned harbour no water"
+      ],
+      "intent": "A fishing boat sitting where water used to be \u2014 tied at a dock or resting on dry ground \u2014 with no people in frame.",
+      "id": 23
+    },
+    {
+      "start": 149.962,
+      "end": 156.696,
+      "sentence": 31,
+      "kind": "stock",
+      "image_prompt": "A pale cracked clay seabed of curling plates running unbroken to the horizon under a flat featureless overcast sky, a faint dark waterline stain along the low far shore, fine salt dust lifting in long sheets, no people.",
+      "motion_prompt": "Slow forward drone drift low over the cracked plates.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "Aral Sea dried seabed cracked clay",
+      "queries": [
+        "Aral Sea dried seabed cracked clay",
+        "desiccated lake shore waterline",
+        "dried lake bed horizon overcast"
+      ],
+      "intent": "Exposed seabed and an old waterline showing the level has fallen far below anything the sea did naturally.",
+      "id": 24
+    },
+    {
+      "sentence": 32,
+      "kind": "evidence",
+      "source_index": 3,
+      "quote": "The water budget is determined by several components: Inflow from the river, evaporation, precipitation rates, and groundwater inflow.",
+      "queries": [
+        "Aral Sea water budget hydrology",
+        "river inflow evaporation measurement",
+        "dry river gauging station desert"
+      ],
+      "intent": "The water budget accounted for term by term \u2014 river inflow, rainfall, groundwater, evaporation.",
+      "image_prompt": "A dry braided river channel threading grey gravel into a cracked pale basin at dusk, a simple unmarked gauging post at the old waterline, distant snow-capped range, no people, natural light only.",
+      "motion_prompt": "Slow drone rise over the channel toward the basin.",
+      "start": 156.696,
+      "end": 166.437,
+      "before": "",
+      "after": " Net evaporation is defined as the difference between evaporation and precipitation at the surface (Micklin 2007). The river inflow has been rapidly decreasing since 1960. Net evaporation has also decreased, but at a slower rate while the groundwater inflow has remained approximately the same. As a result, there was a net deficit of water to the sea. The figure below shows the",
+      "headline": "Environmental Impacts",
+      "publisher": "columbia.edu",
+      "id": 25
+    },
+    {
+      "start": 166.437,
+      "end": 171.452,
+      "sentence": 33,
+      "kind": "stock",
+      "image_prompt": "A long straight unlined irrigation canal of dull green water cutting a trench through ochre desert at dusk, grey spoil banks, tamarisk scrub along the lip, a concrete sluice structure with no markings, no people.",
+      "motion_prompt": "Slow drone drift along the canal line toward the horizon.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "irrigation canal Central Asia desert",
+      "queries": [
+        "irrigation canal Central Asia desert",
+        "Amu Darya delta dry aerial",
+        "concrete sluice canal desert dusk"
+      ],
+      "intent": "The diverted river and irrigation works being measured \u2014 the machinery that produced the water deficit.",
+      "id": 26
+    },
+    {
+      "sentence": 34,
+      "kind": "chart",
+      "chart_index": 1,
+      "queries": [
+        "Aral Sea level drop rate",
+        "shrinking lake basin aerial",
+        "dry lake shoreline retreat"
+      ],
+      "intent": "The rate of the fall in the first decade of desiccation and then the decade after it.",
+      "image_prompt": "Aerial view of a shrinking milky brine remnant inside a vast pale dry basin, stacked mineral shorelines ringing the water like contour lines, flat overcast light, no people.",
+      "motion_prompt": "Slow drone pull-back from the remnant water.",
+      "start": 171.452,
+      "end": 179.452,
+      "id": 27
+    },
+    {
+      "sentence": 35,
+      "kind": "evidence",
+      "source_index": 3,
+      "quote": "In the next decade, water level decreased by 57 cm/year, and afterwards the drop in water level started accelerating faster.",
+      "queries": [],
+      "image_prompt": "",
+      "motion_prompt": "",
+      "start": 179.452,
+      "end": 184.932,
+      "before": "",
+      "after": " The acceleration of the rate of water loss from the Aral Sea can be explained by the positive feedback between evaporation and Sea Surface Temperature. As the lake loses water, it becomes shallower. The incoming solar radiation for a given square area now has to heat up a smaller volume of water, thus the water temperature at the surface increases faster. This in turn lowers",
+      "headline": "Environmental Impacts",
+      "publisher": "columbia.edu",
+      "id": 28
+    },
+    {
+      "sentence": 37,
+      "kind": "card",
+      "variant": "question",
+      "text": "WHY DOES IT SHRINK FASTER?",
+      "queries": [
+        "shallow water over cracked clay",
+        "evaporating shallow brine low sun",
+        "thin water sheet dry lake"
+      ],
+      "intent": "A sheet of water only centimetres deep lying over cracked clay, sunlight on its surface.",
+      "image_prompt": "A sheet of water only centimetres deep lying over pale cracked clay plates, low orange sun on the rippled surface, barren shore to the horizon, no people.",
+      "motion_prompt": "Very slow push in toward the shallow water.",
+      "start": 184.932,
+      "end": 188.932,
+      "id": 29
+    },
+    {
+      "start": 188.932,
+      "end": 199.363,
+      "sentence": 38,
+      "kind": "stock",
+      "image_prompt": "Long telephoto across a broad sheet of shallow brine a hand-span deep, pale clay visible beneath the water, hard noon glare bouncing off it into visible heat haze, no features, no people.",
+      "motion_prompt": "Slow horizontal pan along the shimmering water surface.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "heat haze shallow water sunlight",
+      "queries": [
+        "heat haze shallow water sunlight",
+        "shallow warm lake surface glare",
+        "evaporation heat shimmer water telephoto"
+      ],
+      "intent": "Shallow water warming quickly under direct sun, heat shimmer rising off the surface.",
+      "id": 30
+    },
+    {
+      "start": 199.363,
+      "end": 203.507,
+      "sentence": 40,
+      "kind": "stock",
+      "image_prompt": "A shallow milky turquoise-grey brine pool at blue-hour dusk, ringed by blinding white salt crust cracked into polygons, the empty basin running flat to the horizon behind it, no people.",
+      "motion_prompt": "Slow drone pull-back revealing the pool's smallness against the basin.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "Aral Sea brine pool dusk salt ring",
+      "queries": [
+        "Aral Sea brine pool dusk salt ring",
+        "remnant hypersaline pool white crust",
+        "evaporating pool blue hour desert"
+      ],
+      "intent": "A small remnant pool inside a vast dry basin \u2014 the water paying for its own disappearance.",
+      "id": 31
+    },
+    {
+      "sentence": 41,
+      "kind": "number",
+      "value": "600 km\u00b3",
+      "label": "water lost 1960-1990",
+      "source": "Guy Fipps, Texas A&M",
+      "queries": [
+        "Aral Sea volume loss",
+        "dry basin vast salt plain aerial",
+        "desiccated inland sea panorama"
+      ],
+      "intent": "The immense volume of water that is simply gone from the basin.",
+      "image_prompt": "High wide aerial of an enormous flat pale basin of cracked clay and faint salt streaks, wholly waterless, running unbroken to a high horizon under flat light.",
+      "motion_prompt": "Slow drone pull-back and rise over the dry basin.",
+      "start": 203.507,
+      "end": 208.507,
+      "id": 32
+    },
+    {
+      "start": 208.507,
+      "end": 219.03,
+      "sentence": 42,
+      "kind": "stock",
+      "image_prompt": "Very high aerial looking straight down the length of a vast pale clay basin, cracked plates and salt streaks running unbroken to a high horizon line, no water anywhere, no people.",
+      "motion_prompt": "Slow continuous drone pull-back, the flat basin opening out.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "dry seabed panorama horizon",
+      "queries": [
+        "dry seabed panorama horizon",
+        "salt flat plain to horizon drone",
+        "cracked clay basin wide aerial"
+      ],
+      "intent": "The empty space where the water used to sit \u2014 the whole frame filled by dry basin to the horizon.",
+      "id": 33
+    },
+    {
+      "sentence": 44,
+      "kind": "evidence",
+      "source_index": 4,
+      "quote": "By the year 2000, little more than a shallow brine pool will be all that remains of this former fourth largest lake in the world.",
+      "queries": [
+        "Aral Sea shallow brine pool remains",
+        "dried lake bed mineral residue",
+        "salt pool remnant dry basin"
+      ],
+      "intent": "What the leaving water left behind: a shallow brine pool lying on a crusted mineral flat.",
+      "image_prompt": "A shallow saline pool lying on a crusted mineral flat at low sun, its edge rimed with white crystal, cracked pale ground running to a high horizon, wind moving dust, no people.",
+      "motion_prompt": "Slow slider move past the pool's salt-rimmed edge.",
+      "start": 219.03,
+      "end": 225.03,
+      "before": "",
+      "after": " The negative impacts of desiccation range from regional climate change to socioeconomic and health problems. Restoration of the Aral Sea basin is imperative if humans wish to live and function as they once did in a pre-degraded environment a mere 30 years ago. Interbasin transfers and water management practices are not successful methods for ameliorating the problems of",
+      "headline": "THE ARAL SEA CRISIS: DESICCATION AND PERSPECTIVES ON ...",
+      "publisher": "oneonta.edu",
+      "id": 34
+    },
+    {
+      "start": 225.03,
+      "end": 234.124,
+      "sentence": 45,
+      "kind": "stock",
+      "image_prompt": "Several small rusted fishing boats standing upright and half-buried in pale dry sand on a crusted flat, ropes still tied to leaning mooring posts, flat overcast light, no people.",
+      "motion_prompt": "Slow slider pass across the grounded boats.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "Aral Sea boat graveyard",
+      "queries": [
+        "Aral Sea boat graveyard",
+        "stranded fishing boats dry sand",
+        "abandoned trawlers desert shore"
+      ],
+      "intent": "Fishing boats still tied up, run aground and sitting upright on dry sand where the shore used to be.",
+      "id": 35
+    },
+    {
+      "sentence": 47,
+      "kind": "evidence",
+      "source_index": 10,
+      "quote": "Once the world\u2019s fourth largest lake, the rapidly shrinking Aral Sea has fragmented into four bodies of water.",
+      "queries": [
+        "Aral Sea fragmented satellite view",
+        "Aral Sea shrinking from space",
+        "Aral Sea divided bodies of water"
+      ],
+      "intent": "The sea broken into separate fragments, water gone from the basin where the trawlers now sit.",
+      "image_prompt": "High aerial of a dry pale basin with a few small remnant water bodies separated by wide dry ground, mineral shorelines visible, no boats, no people, flat overcast light.",
+      "motion_prompt": "Slow drift across the dry basin and its remnant pools.",
+      "start": 234.124,
+      "end": 243.087,
+      "before": "Aral Sea 2011 - NASA Science Search Suggested Searches Earth Observatory Image of the Day for September 11, 2011 ",
+      "after": " The Southern Aral Sea and Tsche-Bas Gulf show the most dramatic change in 2011. NASA Earth Observatory Sep 11, 2011 Article - Share on X. - Share on Facebook. - Share on LinkedIn. - Link to RSS Feed. August 15, 2011 August 26, 2010 Aral Sea 2011 Aral Sea 2011 August 15, 2011August 26, 2010 Aral Sea 2011 Aral Sea 2011 August 15, 2011 August 26, 2010 August 15, 2011 Aral Sea",
+      "headline": "Aral Sea 2011",
+      "publisher": "science.nasa.gov",
+      "id": 36
+    },
+    {
+      "start": 243.087,
+      "end": 247.173,
+      "sentence": 49,
+      "kind": "stock",
+      "image_prompt": "Low view along the salt-encrusted wooden hull of a grounded boat on a flat cracking into polygons, wind-blown salt streaming low across the ground, flat overcast light, no people.",
+      "motion_prompt": "Slow slider move along the crusted hull.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "salt encrusted boat hull dry",
+      "queries": [
+        "salt encrusted boat hull dry",
+        "salt deposit abandoned boat desert",
+        "white crust harbour salt"
+      ],
+      "intent": "Salt left on hulls and ground after the water evaporated \u2014 the second reason the boats stayed.",
+      "id": 37
+    },
+    {
+      "start": 247.173,
+      "end": 252.897,
+      "sentence": 51,
+      "kind": "stock",
+      "image_prompt": "Ground-level wide view of a shining white salt crust cracked into raised polygons stretching to a high horizon, thin sheets of salt dust streaming across it, hard noon glare, no people.",
+      "motion_prompt": "Slow drone drift low over the polygon salt crust.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "salt crust polygons dry lake bed",
+      "queries": [
+        "salt crust polygons dry lake bed",
+        "evaporite crust cracked mudflat",
+        "white salt pan crystallised ground"
+      ],
+      "intent": "Every dissolved mineral the rivers brought in now crystallised on the basin floor.",
+      "id": 38
+    },
+    {
+      "sentence": 52,
+      "kind": "chart",
+      "data": {
+        "chart_kind": "comparison",
+        "title": "Aral Sea salinity",
+        "labels": [
+          "1960",
+          "2004"
+        ],
+        "values": [
+          10,
+          92
+        ],
+        "unit": "ppt",
+        "source": "Zavialov / Columbia"
+      },
+      "queries": [
+        "Aral Sea salinity rise",
+        "salt lake salinity increase",
+        "brine salinity measured lake"
+      ],
+      "intent": "Salinity climbing from about ten parts per thousand to ninety-two as the water evaporates off.",
+      "image_prompt": "Milky brine lapping a white crystalline rim under flat overcast light, cracked salt crust beyond, barren shore, no people.",
+      "motion_prompt": "Slow lateral drone drift along the brine edge.",
+      "start": 252.897,
+      "end": 265.447,
+      "id": 39
+    },
+    {
+      "start": 265.447,
+      "end": 275.559,
+      "sentence": 53,
+      "kind": "stock",
+      "image_prompt": "Milky turquoise-grey brine washing a blinding white salt crust rimed with crystal, barren shore, flat overcast sky, no people, no boats.",
+      "motion_prompt": "Slow lateral drone drift along the brine edge.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "hypersaline brine lake turquoise salt ring",
+      "queries": [
+        "hypersaline brine lake turquoise salt ring",
+        "salt lake brine shore crystals",
+        "Aral Sea brine remnants aerial"
+      ],
+      "intent": "Water far saltier than the sea, rimmed with crystallising salt, with nothing living in it.",
+      "id": 40
+    },
+    {
+      "sentence": 55,
+      "kind": "chart",
+      "chart_index": 2,
+      "queries": [
+        "Aral Sea commercial fishery collapse",
+        "fishing fleet moored shore",
+        "fishing boats harbour 1960s"
+      ],
+      "intent": "The commercial catch going from tens of thousands of tons to nothing in twenty years.",
+      "image_prompt": "A working fishing harbour of small boats moored along a low shore under flat light, nets stacked on the quay, no readable lettering, no faces, no people in the foreground.",
+      "motion_prompt": "Slow slider pass along the moored boats.",
+      "start": 275.559,
+      "end": 287.46,
+      "id": 41
+    },
+    {
+      "start": 287.46,
+      "end": 291.314,
+      "sentence": 56,
+      "kind": "stock",
+      "image_prompt": "A stripped concrete fish-processing shed with empty mooring posts on a dry shore at dusk, no boats, no people, dull steel-blue light, dust moving across the ground.",
+      "motion_prompt": "Slow dolly toward the empty shed.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "abandoned fish cannery shore",
+      "queries": [
+        "abandoned fish cannery shore",
+        "empty fishing harbour no boats",
+        "derelict fish processing plant coast"
+      ],
+      "intent": "The empty infrastructure of a fishery that stopped \u2014 no boats working, nothing landed.",
+      "id": 42
+    },
+    {
+      "sentence": 57,
+      "kind": "number",
+      "value": "24",
+      "label": "fish species in the Aral",
+      "source": "Univ. of West Florida",
+      "queries": [
+        "fish swimming murky lake water",
+        "freshwater fish shoal river",
+        "fish beneath water surface lake"
+      ],
+      "intent": "Fish in the water of the inland sea \u2014 the species the text records for the Aral.",
+      "image_prompt": "Underwater low view of small dull silver fish moving through murky green-grey water over a silty bed, natural light from above, no people, no text.",
+      "motion_prompt": "Slow drift forward through the murky water with the fish.",
+      "start": 291.314,
+      "end": 296.314,
+      "id": 43
+    },
+    {
+      "start": 296.314,
+      "end": 301.114,
+      "sentence": 58,
+      "kind": "stock",
+      "image_prompt": "Perfectly still milky brine water filling the frame to a low far shore, no ripples, no birds, a pale salt rim at the edge, heavy overcast light.",
+      "motion_prompt": "Very slow push in on the still water surface.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "still water hypersaline lake surface",
+      "queries": [
+        "still water hypersaline lake surface",
+        "lifeless brine water overcast",
+        "quiet lake surface no life"
+      ],
+      "intent": "Still, lifeless brine \u2014 nothing swimming, nothing living in it any more.",
+      "id": 44
+    },
+    {
+      "sentence": 59,
+      "kind": "evidence",
+      "source_index": 5,
+      "quote": "Winds pick up dust from the dry seabed and deposit it over a large populated area.",
+      "queries": [
+        "Aral Sea dust storm dry lake bed",
+        "salt dust blowing off seabed",
+        "dust plume dry basin wind"
+      ],
+      "intent": "Wind lifting dust off the exposed seabed and carrying it away across the land.",
+      "image_prompt": "A long low wall of pale salt dust lifting off a cracked clay flat and streaming across the empty basin under a low overcast sky, no people, no structures.",
+      "motion_prompt": "Slow slider move with the moving dust.",
+      "start": 301.114,
+      "end": 307.114,
+      "before": "",
+      "after": " The dust likely contains pesticide and chemical residues that are blamed for the serious rise in mortality and health problems in the region. The Aral Sea, and the now exposed dry seabed, may also be contaminated by runoff from a former Soviet military base and a biological weapons laboratory. The ecosystem of the Aral Sea has collapsed, and climate changes in the Aral Sea",
+      "headline": "The Aral Sea is one of the worst ecological diasters on our planet",
+      "publisher": "gfipps.tamu.edu",
+      "id": 45
+    },
+    {
+      "start": 307.114,
+      "end": 308.672,
+      "sentence": 60,
+      "kind": "stock",
+      "image_prompt": "Wide ground-level view across a pale cracked clay seabed stretching unbroken to a low overcast horizon, long sheets of fine white salt dust streaming low across the ground toward camera, flat featureless light, no people, no structures, fine 35mm grain.",
+      "motion_prompt": "Slow motorised slider drift left to right, low to the ground, dust streaming past the lens.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "Aral Sea dust storm",
+      "queries": [
+        "Aral Sea dust storm",
+        "dust blowing off dry lakebed",
+        "desiccated seabed aerial view"
+      ],
+      "intent": "Wind lifting pale salt-laden dust off a vast cracked, waterless seabed in long streaming sheets.",
+      "id": 46
+    },
+    {
+      "sentence": 60,
+      "from_words": "and dropping tens",
+      "kind": "number",
+      "value": "tens of thousands of tons",
+      "label": "SALT DUST A YEAR",
+      "source": "NASA",
+      "queries": [
+        "dust storm over farmland",
+        "salt dust haze village",
+        "dust pall cotton fields"
+      ],
+      "intent": "A pale dust pall hanging low over flat irrigated fields downwind of the dry seabed.",
+      "image_prompt": "Telephoto view of pale dust haze drifting over flat irrigated fields and low rooftops of a small desert town at low sun, heat-hazed distance, muted ochre and grey palette, no legible text, no faces.",
+      "motion_prompt": "Very slow telephoto push in through the haze.",
+      "start": 308.672,
+      "end": 313.672,
+      "id": 47
+    },
+    {
+      "start": 313.672,
+      "end": 318.796,
+      "sentence": 61,
+      "kind": "stock",
+      "image_prompt": "Wide view of dust-laden air hanging over flat irrigated fields at dusk, low orange sun raking through the haze, tamarisk scrub along a dull green canal, no people, no readable text.",
+      "motion_prompt": "Slow aerial drift forward over the fields.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "airborne dust over fields",
+      "queries": [
+        "airborne dust over fields",
+        "dust haze farmland dusk",
+        "dust drifting over village desert"
+      ],
+      "intent": "Airborne dust visibly drifting over cultivated fields and homes downwind, showing where the sediment lands.",
+      "id": 48
+    },
+    {
+      "sentence": 61,
+      "from_words": "and links it",
+      "kind": "evidence",
+      "source_index": 5,
+      "quote": "The dust likely contains pesticide and chemical residues that are blamed for the serious rise in mortality and health problems in the region.",
+      "queries": [
+        "dust residue on plough soil",
+        "salt dust on farmland soil",
+        "Aral region farmland dust close"
+      ],
+      "intent": "The source page with the sentence about pesticide and chemical residues in the dust highlighted.",
+      "image_prompt": "Pale dust settled as a fine white film on dark ochre plough soil between wilted crop rows, flat overcast light, close low view, no text, no people.",
+      "motion_prompt": "Slow tilt down the settled dust line on the soil.",
+      "start": 318.796,
+      "end": 324.796,
+      "before": "",
+      "after": " The Aral Sea, and the now exposed dry seabed, may also be contaminated by runoff from a former Soviet military base and a biological weapons laboratory. The ecosystem of the Aral Sea has collapsed, and climate changes in the Aral Sea Basin have been documented. Hundreds of agreements have been signed since the 1980\u2019s on programs designed to address the \u201cAral Sea Problem\u201d",
+      "headline": "The Aral Sea is one of the worst ecological diasters on our planet",
+      "publisher": "gfipps.tamu.edu",
+      "id": 49
+    },
+    {
+      "start": 324.796,
+      "end": 328.235,
+      "sentence": 62,
+      "kind": "stock",
+      "image_prompt": "Wide view from a low barren shore of a cold grey-green inland sea under heavy overcast, small waves breaking on an empty earthen bank, reeds at the waterline, horizon high in frame, muted palette.",
+      "motion_prompt": "Slow locked-off drift right across the water surface.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "inland sea calm overcast",
+      "queries": [
+        "inland sea calm overcast",
+        "lake surface under low grey sky",
+        "Aral Sea before shrinkage"
+      ],
+      "intent": "A broad, quiet inland sea under flat overcast, one large water body moderating a desert shore.",
+      "id": 50
+    },
+    {
+      "start": 328.235,
+      "end": 337.221,
+      "sentence": 64,
+      "kind": "stock",
+      "image_prompt": "Ground-level wide of pale cracked clay plates curling at the edges running unbroken to a low horizon, hard noon glare, salt dust streaming low, deep near-black shadows in the cracks, 35mm grain.",
+      "motion_prompt": "Slow forward push at ankle height over the curling plates.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "cracked clay desert floor",
+      "queries": [
+        "cracked clay desert floor",
+        "heat haze desert telephoto",
+        "dried seabed cracked plates"
+      ],
+      "intent": "The dry desert now: cracked curling clay plates and hard glare, standing for a climate with greater temperature extremes.",
+      "id": 51
+    },
+    {
+      "sentence": 66,
+      "kind": "card",
+      "variant": "question",
+      "text": "WHEN A SEA TEARS APART",
+      "queries": [
+        "dry seabed horizon aerial",
+        "Aral Sea dried bed",
+        "empty salt plain horizon"
+      ],
+      "intent": "An empty cracked seabed reaching to the skyline behind the card.",
+      "image_prompt": "Vast pale cracked seabed running unbroken to a low overcast horizon, a faint line of distant water far right, empty and quiet, photographic, no text.",
+      "motion_prompt": "Slow drone rise revealing the seabed reaching the horizon.",
+      "start": 337.221,
+      "end": 341.47,
+      "id": 52
+    },
+    {
+      "start": 341.47,
+      "end": 347.798,
+      "sentence": 67,
+      "kind": "stock",
+      "image_prompt": "High aerial looking down on an inland sea divided by a broad strip of dry ochre land into two separate grey-blue basins, shorelines of pale salt, flat overcast light, no boats, no text.",
+      "motion_prompt": "Slow aerial pull-back revealing the divide.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "Aral Sea split two basins aerial",
+      "queries": [
+        "Aral Sea split two basins aerial",
+        "inland lake divided land strip",
+        "shrunken lake from space"
+      ],
+      "intent": "One sea broken into two separate bodies of water with dry land between them.",
+      "id": 53
+    },
+    {
+      "sentence": 69,
+      "kind": "chart",
+      "chart_index": 3,
+      "queries": [
+        "Aral Sea 1960 satellite",
+        "Aral Sea 1990 satellite",
+        "inland sea surface area imagery"
+      ],
+      "intent": "A wide view of the Aral Sea surface as the two surface-area figures are spoken.",
+      "image_prompt": "Aerial of a large grey-green inland sea edged by pale salt flats in a wide ochre basin, overcast light, no text, no people.",
+      "motion_prompt": "Slow aerial drift along the shoreline.",
+      "start": 347.798,
+      "end": 359.798,
+      "id": 54
+    },
+    {
+      "start": 359.798,
+      "end": 365.642,
+      "sentence": 70,
+      "kind": "stock",
+      "image_prompt": "Wide ground-level view of hard flat seabed sand running to a low horizon, rotted wooden mooring posts half-buried in dry sand in the foreground, dull steel overcast light, no people, no text.",
+      "motion_prompt": "Slow slider drift past the buried mooring posts.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "dry seabed horizon wide",
+      "queries": [
+        "dry seabed horizon wide",
+        "abandoned shoreline dry",
+        "Aral Sea water gone ground view"
+      ],
+      "intent": "Where the water was: hard flat seabed running to the horizon, no tidy new shoreline.",
+      "id": 55
+    },
+    {
+      "sentence": 70,
+      "kind": "number",
+      "value": "28,000",
+      "label": "square kilometres of water surface",
+      "source": "NASA Earth Observatory",
+      "queries": [],
+      "image_prompt": "",
+      "motion_prompt": "",
+      "start": 365.642,
+      "end": 370.642,
+      "id": 56
+    },
+    {
+      "start": 370.642,
+      "end": 381.397,
+      "sentence": 72,
+      "kind": "stock",
+      "image_prompt": "Rusted steel-hulled fishing trawler sitting upright on hard dry sand, low orange sun raking its hull, no people aboard, flat salt plain running to the horizon, fine 35mm grain.",
+      "motion_prompt": "Slow motorised slider pass along the hull.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "stranded fishing trawler dry seabed",
+      "queries": [
+        "stranded fishing trawler dry seabed",
+        "rusting ship on sand desert",
+        "Aral Sea ship graveyard"
+      ],
+      "intent": "A rusted steel-hulled trawler sitting upright and waterless on hard sand kilometres from any water, low raking sun.",
+      "id": 57
+    },
+    {
+      "start": 381.397,
+      "end": 385.368,
+      "sentence": 74,
+      "kind": "stock",
+      "image_prompt": "Wide view with the horizon high in frame across an empty ochre desert plain, a small cluster of low buildings and tamarisk far off in heat haze, fine dust streaming low, late low sun, no legible text.",
+      "motion_prompt": "Slow telephoto creep toward the distant settlement.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "desert plain between town and dry sea",
+      "queries": [
+        "desert plain between town and dry sea",
+        "settlement in heat haze desert",
+        "dry seabed toward village horizon"
+      ],
+      "intent": "A wide empty desert lying between the stranded shore and a distant small settlement.",
+      "id": 58
+    },
+    {
+      "start": 385.368,
+      "end": 394.981,
+      "sentence": 75,
+      "kind": "stock",
+      "image_prompt": "Low aerial over a shrinking delta wetland of remnant reed beds, silty channels and standing grey water in dry ochre plain, sparse tamarisk scrub, overcast light, no people, no structures.",
+      "motion_prompt": "Slow aerial drift along the channels.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "Amu Darya delta wetland reeds",
+      "queries": [
+        "Amu Darya delta wetland reeds",
+        "river delta dried channels desert",
+        "shrinking reed bed wetland aerial"
+      ],
+      "intent": "The Amu Darya delta: remnant reed beds and silty channels in a shrinking wetland, once vast.",
+      "id": 59
+    },
+    {
+      "sentence": 77,
+      "kind": "chart",
+      "data": {
+        "chart_kind": "bar",
+        "title": "AMU DARYA DELTA WETLAND",
+        "labels": [
+          "1950s",
+          "Today"
+        ],
+        "values": [
+          550000,
+          20000
+        ],
+        "unit": "hectares",
+        "source": "Fipps, Texas A&M"
+      },
+      "queries": [
+        "dry delta channels desert",
+        "remnant wetland dry plain",
+        "desiccated relict channels aerial"
+      ],
+      "intent": "The remaining sliver of delta wetland and dry relict channels as the shrinkage figure is spoken.",
+      "image_prompt": "Low aerial of a nearly dry delta where faint relict channels thread a flat ochre plain, only a few small grey water patches and dead reeds left, overcast light, no people, no text.",
+      "motion_prompt": "Slow aerial push along one dry channel.",
+      "start": 394.981,
+      "end": 402.981,
+      "id": 60
+    },
+    {
+      "start": 402.981,
+      "end": 408.912,
+      "sentence": 79,
+      "kind": "stock",
+      "image_prompt": "High aerial of two separate inland water bodies divided by a wide dry isthmus, the northern basin paler and the southern greyer, braided river channels entering each, overcast light, no text, no people.",
+      "motion_prompt": "Slow aerial pull-back holding both basins in frame.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "Small Aral Large Aral separated",
+      "queries": [
+        "Small Aral Large Aral separated",
+        "two lakes different colour aerial",
+        "lake divided by dry isthmus"
+      ],
+      "intent": "Two separate seas, one north one south, each fed by its own river, clearly apart.",
+      "id": 61
+    },
+    {
+      "sentence": 80,
+      "kind": "evidence",
+      "source_index": 11,
+      "quote": "During subsequent decades, the fourth largest lake in the world shrank to roughly a tenth of its former size and divided into several smaller bodies of water.",
+      "queries": [
+        "Aral Sea fragmentation satellite",
+        "lake split several basins",
+        "shrinking inland sea imagery"
+      ],
+      "intent": "Source panel with the line about the lake shrinking to a tenth of its size and dividing into smaller bodies.",
+      "image_prompt": "Aerial of several small grey water bodies scattered across a dry ochre basin, pale salt edges, flat overcast light, no text, no people.",
+      "motion_prompt": "Slow aerial drift across the scattered fragments.",
+      "start": 408.912,
+      "end": 414.912,
+      "before": "",
+      "after": " The image above, captured by the Moderate Resolution Imaging Spectroradiometer(MODIS) on NASA's Terra satellite, shows the Aral Sea in Central Asia on August 22, 2017. While the lake was much smaller in August 2017 than it was in the 1960s, some growth in the eastern lobe of the South Aral represents an improvement over August 2014, when that lobe was completely dry. Instead",
+      "headline": "New Water in the Aral Sea",
+      "publisher": "science.nasa.gov",
+      "id": 62
+    },
+    {
+      "start": 414.912,
+      "end": 418.479,
+      "sentence": 81,
+      "kind": "stock",
+      "image_prompt": "Aerial of two adjacent lake fragments, one milky turquoise-grey and one darker grey, ringed by blinding white salt crust cracked into polygons, hard midday glare, no text, no people.",
+      "motion_prompt": "Slow aerial lateral track between the two colours.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "salt lake milky turquoise aerial",
+      "queries": [
+        "salt lake milky turquoise aerial",
+        "lobes of lake different colours",
+        "basins of different salinity"
+      ],
+      "intent": "Fragments side by side, each with its own colour, depth and salt content.",
+      "id": 63
+    },
+    {
+      "start": 418.479,
+      "end": 425.944,
+      "sentence": 82,
+      "kind": "stock",
+      "image_prompt": "Wide ground-level view of a low earthen and rock embankment dam running straight across frame, grey-green water held behind it on the left, dry ochre plain falling away on the right, overcast light, no markings, no people.",
+      "motion_prompt": "Slow slider along the crest of the dam.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "Kokaral Dam Aral Sea",
+      "queries": [
+        "Kokaral Dam Aral Sea",
+        "earthen embankment dam inland sea",
+        "dam holding lake water desert"
+      ],
+      "intent": "The Kokaral Dam: a low earthen and rock embankment holding back the northern sea, water on one side, dry plain on the other.",
+      "id": 64
+    },
+    {
+      "start": 425.944,
+      "end": 430.193,
+      "sentence": 83,
+      "kind": "stock",
+      "image_prompt": "Mid-distance view of small weathered fishing boats and drying nets moored along a barren grey-green lake shore at low sun, no people visible, muted palette, fine 35mm grain.",
+      "motion_prompt": "Slow drift past the moored boats.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "fishing boats inland sea shore",
+      "queries": [
+        "fishing boats inland sea shore",
+        "nets and boats on lake shore",
+        "small fishing fleet northern Aral"
+      ],
+      "intent": "Fisheries back in the northern basin: small boats and drying nets at a working shoreline, no faces.",
+      "id": 65
+    },
+    {
+      "sentence": 84,
+      "kind": "evidence",
+      "source_index": 13,
+      "quote": "This update shows that by August 2009, virtually nothing remained of the Southern Aral Sea\u2019s eastern lobe.",
+      "queries": [
+        "Southern Aral Sea dry eastern lobe",
+        "dry remnant southern basin aerial",
+        "empty salt basin dried lobe"
+      ],
+      "intent": "Source panel on the southern sea's collapse, with the dry eastern lobe behind it.",
+      "image_prompt": "Aerial of a wide dry clay and salt basin with only a thin pale residue of water in one corner, cracked plates and salt polygons, flat white sky, no text, no people.",
+      "motion_prompt": "Slow aerial push toward the last sliver of water.",
+      "start": 430.193,
+      "end": 438.193,
+      "before": "",
+      "after": " The Moderate Resolution Imaging Spectroradiometer(MODIS)on NASA\u2019sTerrasatellite captured this true-color image of the Aral Sea on August 16, 2009. Although the Northern Aral Sea (upper right) still appears healthy, the Southern Aral Sea consists of two isolated water bodies: an irregular oval shape directly southwest of the Northern Aral Sea, and the long, thin remainder of",
+      "headline": "Aral Sea Continues to Shrink",
+      "publisher": "earthobservatory.nasa.gov",
+      "id": 66
+    },
+    {
+      "start": 438.193,
+      "end": 449.535,
+      "sentence": 85,
+      "kind": "stock",
+      "image_prompt": "High aerial with the frame divided: grey-green water and a low dam in the nearer half, dry pale salt desert running away in the far half, flat overcast light, no text, no people.",
+      "motion_prompt": "Slow aerial rise holding both halves in frame.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "northern Aral water southern dry",
+      "queries": [
+        "northern Aral water southern dry",
+        "lake half water half desert aerial",
+        "Aral Sea split comparison"
+      ],
+      "intent": "One half holding water, one half dry desert \u2014 the two outcomes in a single frame.",
+      "id": 67
+    },
+    {
+      "start": 449.535,
+      "end": 453.366,
+      "sentence": 87,
+      "kind": "stock",
+      "image_prompt": "Ground-level wide of a milky turquoise-grey brine body ringed by blinding white salt crust cracked into polygons, salt glittering under hard midday sun, low distant shore, no people, no text.",
+      "motion_prompt": "Slow low slider across the salt polygons toward the brine.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "hypersaline lake salt crust",
+      "queries": [
+        "hypersaline lake salt crust",
+        "brine lake white salt polygons",
+        "salt pan cracked crust midday"
+      ],
+      "intent": "Hypersalinity: a milky brine remnant ringed by blinding white salt crust cracking into polygons.",
+      "id": 68
+    },
+    {
+      "start": 453.366,
+      "end": 467.082,
+      "sentence": 88,
+      "kind": "stock",
+      "image_prompt": "Wide view of a flat lifeless brine pool the colour of dull steel ringed by white salt crust, no reeds, no birds, no boats, low raking sun and long shadows, deep near-black shoreline, fine 35mm grain.",
+      "motion_prompt": "Very slow push in on the still brine surface.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "dead sea brine lifeless shore",
+      "queries": [
+        "dead sea brine lifeless shore",
+        "sterile brine pool salt flat",
+        "salt-rimmed dead water basin"
+      ],
+      "intent": "The remnant southern brine as a dead water body: hostile, lifeless, salt-rimmed.",
+      "angle": 0,
+      "id": 69
+    },
+    {
+      "start": 467.082,
+      "end": 468.495,
+      "sentence": 88,
+      "kind": "stock",
+      "image_prompt": "Wide view of a flat lifeless brine pool the colour of dull steel ringed by white salt crust, no reeds, no birds, no boats, low raking sun and long shadows, deep near-black shoreline, fine 35mm grain.",
+      "motion_prompt": "Very slow push in on the still brine surface.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "dead sea brine lifeless shore",
+      "queries": [
+        "dead sea brine lifeless shore",
+        "sterile brine pool salt flat",
+        "salt-rimmed dead water basin"
+      ],
+      "intent": "The remnant southern brine as a dead water body: hostile, lifeless, salt-rimmed.",
+      "angle": 1,
+      "id": 70
+    },
+    {
+      "start": 468.495,
+      "end": 475.984,
+      "sentence": 90,
+      "kind": "stock",
+      "image_prompt": "Ground-level wide view across a vast dried seabed of pale cracked clay plates curling at the edges, running unbroken to a low featureless overcast horizon, fine salt dust lifting in long sheets, hard flat light, deep near-black shadows in the crack plates, fine 35mm grain.",
+      "motion_prompt": "Slow motorised slider drift right, low over the cracked clay.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "Aral Sea dry seabed",
+      "queries": [
+        "Aral Sea dry seabed",
+        "cracked clay lakebed plates",
+        "desiccated inland sea aerial"
+      ],
+      "intent": "The exposed, salt-crusted floor of a vanished inland sea: cracked clay plates running unbroken to a low overcast horizon, no water and no living thing anywhere in frame, held long so the emptiness reads.",
+      "id": 71
+    },
+    {
+      "sentence": 93,
+      "kind": "number",
+      "value": "August 2014",
+      "label": "EASTERN LOBE COMPLETELY DRY",
+      "source": "NASA Earth Observatory",
+      "queries": [
+        "Aral Sea eastern lobe 2014",
+        "dry lakebed satellite image",
+        "salt flat desert aerial"
+      ],
+      "intent": "The bone-dry eastern lobe of the Aral Sea seen from above \u2014 pale cracked bed where water stood, faint shoreline lines still visible \u2014 with the date of the dry-out landing on screen.",
+      "image_prompt": "Aerial view looking down on the pale ochre cracked bed of a vanished sea lobe, faint darker strandlines outlining where water once stood, flat overcast light, matte and unstyled, no saturation.",
+      "motion_prompt": "Slow aerial push forward over the dry bed.",
+      "start": 475.984,
+      "end": 480.984,
+      "id": 72
+    },
+    {
+      "start": 480.984,
+      "end": 486.003,
+      "sentence": 94,
+      "kind": "stock",
+      "image_prompt": "Wide low view of shallow milky-turquoise water creeping across pale cracked clay flats, a thin wet edge catching dull overcast light, salt dust on the dry side, no people, no structures.",
+      "motion_prompt": "Slow drift left along the line where wet meets dry.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "Aral Sea refilling 2017",
+      "queries": [
+        "Aral Sea refilling 2017",
+        "shallow water advancing dry mudflat",
+        "flooded lakebed edge water"
+      ],
+      "intent": "Water returning to a dried basin \u2014 shallow, turbid, milky water spreading across pale clay ground that was dry the year before.",
+      "id": 73
+    },
+    {
+      "start": 486.003,
+      "end": 494.734,
+      "sentence": 94,
+      "kind": "stock",
+      "image_prompt": "A high concrete-faced earth dam holding a grey-green reservoir in a bare mountain basin, water spilling down the outlet channel, thin snowfields and grey moraine gravel above under flat overcast light.",
+      "motion_prompt": "Slow drone rise revealing the reservoir behind the dam.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "Toktogul reservoir dam",
+      "queries": [
+        "Toktogul reservoir dam",
+        "Tien Shan glacier melt stream",
+        "mountain reservoir spillway aerial"
+      ],
+      "intent": "The upstream source of the refill: a high mountain reservoir releasing water and snow-and-ice melt feeding a braided stream below in the Tien Shan.",
+      "id": 74
+    },
+    {
+      "start": 494.734,
+      "end": 504.788,
+      "sentence": 95,
+      "kind": "stock",
+      "image_prompt": "One tiny human silhouette standing on the flat horizon of a vast pale cracked seabed, low sun behind, long shadow, featureless dusk sky, fine 35mm grain, no face visible.",
+      "motion_prompt": "Slow telephoto push in on the figure through heat haze.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "Aral Sea shoreline lone figure",
+      "queries": [
+        "Aral Sea shoreline lone figure",
+        "researcher on dry seabed distance",
+        "silhouette salt flat horizon"
+      ],
+      "intent": "A single small human silhouette standing far out on the dry seabed horizon at dusk, standing for decades of study \u2014 no face, never the subject.",
+      "id": 75
+    },
+    {
+      "start": 504.788,
+      "end": 513.472,
+      "sentence": 96,
+      "kind": "stock",
+      "image_prompt": "Low ground-level view of white salt crust cracking into polygons while wind-blown salt and sediment stream in long sheets just above the ground, flat overcast light, deep near-black shadows in the cracks.",
+      "motion_prompt": "Slow motorised slider drift left, very low to the crust.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "wind blown salt across dry lakebed",
+      "queries": [
+        "wind blown salt across dry lakebed",
+        "salt dust streaming desert ground",
+        "drying brine pool salt crust polygons"
+      ],
+      "intent": "The dry-out half of the pattern: wind streaming sheets of salt and sediment low across a cracked, waterless bed, the refill gone.",
+      "id": 76
+    },
+    {
+      "start": 513.472,
+      "end": 526.393,
+      "sentence": 97,
+      "kind": "stock",
+      "image_prompt": "High aerial view of a fragmenting inland sea, pale dry lobes and small residual water bodies separated by exposed ochre beds, flat overcast sky, wide anamorphic frame, horizon high.",
+      "motion_prompt": "Slow aerial orbit, high and steady, over the broken basin.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "Aral Sea satellite time series shrinking",
+      "queries": [
+        "Aral Sea satellite time series shrinking",
+        "inland sea shrinking aerial orbit",
+        "dry basin wide aerial drone"
+      ],
+      "intent": "A slow aerial over the whole broken basin as the narration names the open question \u2014 the oscillation against a one-way decline.",
+      "id": 77
+    },
+    {
+      "sentence": 99,
+      "kind": "card",
+      "variant": "question",
+      "text": "WHERE DID THE WATER GO?",
+      "queries": [
+        "Aral Sea dry seabed horizon",
+        "desert playa wide view overcast",
+        "dried lake clay flats"
+      ],
+      "intent": "A clean, wide, held view of the empty basin behind the card \u2014 cracked pale clay to a high horizon, salt dust drifting.",
+      "image_prompt": "Wide held view of a vast pale cracked seabed under a flat featureless overcast sky, horizon high in frame, salt dust drifting low across the ground, deep basalt shadows in the crack plates, no text or numbers.",
+      "motion_prompt": "Very slow motorised slider drift right.",
+      "start": 526.393,
+      "end": 530.393,
+      "id": 78
+    },
+    {
+      "start": 530.393,
+      "end": 534.195,
+      "sentence": 100,
+      "kind": "stock",
+      "image_prompt": "Hypersaline remnant water body of milky turquoise-grey brine ringed by a wide blinding-white salt crust with polygon cracks, hard midday glare, thin heat shimmer over the surface, barren shore.",
+      "motion_prompt": "Slow drift right along the brine edge.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "Aral Sea remnant brine pool",
+      "queries": [
+        "Aral Sea remnant brine pool",
+        "evaporation shimmer salt lake",
+        "endorheic basin aerial no outlet"
+      ],
+      "intent": "A closed basin with no outlet: a shrinking milky brine body under hard light, ringed by blinding salt crust, water leaving only as vapour.",
+      "id": 79
+    },
+    {
+      "sentence": 101,
+      "from_words": "which means every drop",
+      "kind": "evidence",
+      "source_index": 4,
+      "quote": "The cause of the Sea's degradation is massive, consumptive withdrawals of water from the Amu and Syr Daryas.",
+      "queries": [
+        "irrigation canal desert Central Asia",
+        "Amu Darya dry river channel",
+        "water diverted farmland arid desert"
+      ],
+      "intent": "The receipt being read: the Amu and Syr Darya named as the diverted sources, over the diverted water itself.",
+      "image_prompt": "A long straight unlined irrigation canal cutting a trench of dull green water through ochre desert, grey spoil banks, tamarisk scrub along the lip, overcast sky reflected in the water.",
+      "motion_prompt": "Slow motorised slider drift left along the canal.",
+      "start": 534.195,
+      "end": 540.195,
+      "before": "",
+      "after": " Irrigation accounts for 94 percent of all consumptive uses and is situated over 8.5 million hectares of land across the Aral basin. At current rates of water use, the Aral will progressively decline in size. By the year 2000, little more than a shallow brine pool will be all that remains of this former fourth largest lake in the world. The negative impacts of desiccation",
+      "headline": "THE ARAL SEA CRISIS: DESICCATION AND PERSPECTIVES ON ...",
+      "publisher": "oneonta.edu",
+      "id": 80
+    },
+    {
+      "start": 540.195,
+      "end": 543.054,
+      "sentence": 102,
+      "kind": "stock",
+      "image_prompt": "Shallow trench of dull green canal water with floating debris and wet concrete edges, reflection of an overcast sky, grey spoil and tamarisk along the lip, landscape scale.",
+      "motion_prompt": "Slow low drone drift forward above the water.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "irrigation canal desert water",
+      "queries": [
+        "irrigation canal desert water",
+        "canal through ochre desert aerial",
+        "concrete sluice overcast reflection"
+      ],
+      "intent": "Dull green canal water running through ochre desert \u2014 the drop taken upstream, gone for good; the shot is held as the narration lands on 'Subtracted.'",
+      "id": 81
+    },
+    {
+      "start": 543.054,
+      "end": 545.794,
+      "sentence": 105,
+      "kind": "stock",
+      "image_prompt": "Cold grey-green inland lake under heavy overcast, ringed by low earthen and rock embankment, reeds at the waterline, small waves against a barren pale shore, wide aerial, unstyled and matte.",
+      "motion_prompt": "Slow aerial push forward over the shoreline.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "Great Salt Lake aerial",
+      "queries": [
+        "Great Salt Lake aerial",
+        "Great Salt Lake causeway shoreline",
+        "Utah salt flats lake shoreline wide"
+      ],
+      "intent": "A second closed inland sea, the Great Salt Lake, held wide under heavy overcast \u2014 no outlet, ringed by pale flats, the same kind of basin.",
+      "id": 82
+    },
+    {
+      "sentence": 106,
+      "from_words": "According to a report",
+      "kind": "evidence",
+      "source_index": 8,
+      "quote": "Subsequent years of drought and increased use of inflows have brought the lake to record low levels.",
+      "queries": [
+        "Great Salt Lake record low shoreline",
+        "Great Salt Lake exposed lakebed",
+        "Utah lake dry shoreline aerial"
+      ],
+      "intent": "The USGS receipt on screen as the narration cites the report, over the shrunken Great Salt Lake.",
+      "image_prompt": "Exposed pale lakebed and stranded shoreline of a large inland salt lake under flat featureless overcast, dry mudflats stretching to dull water, low contrast, fine 35mm grain.",
+      "motion_prompt": "Slow motorised slider drift right along the stranded shoreline.",
+      "start": 545.794,
+      "end": 551.794,
+      "before": "",
+      "after": " Sources/Usage: Public Domain. View Media Details Satellite images show 50 years of change on the Great Salt Lake, 1972-2021. False-Color Composite Satellite Imagery Differences in coloration of the false-color infrared imagery in the satellite image map are due to physical, chemical, and biological factors. Terrestrial vegetation appears as bright red throughout the mountains",
+      "headline": "Great Salt Lake",
+      "publisher": "usgs.gov",
+      "id": 83
+    },
+    {
+      "start": 551.794,
+      "end": 555.349,
+      "sentence": 106,
+      "kind": "stock",
+      "image_prompt": "Arid ochre fields being irrigated from a concrete sluice, dull green water flooding dry ground, spoil banks and tamarisk scrub, flat overcast light, no people in frame.",
+      "motion_prompt": "Slow aerial drift back from the irrigated field.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "irrigation water diverted arid farmland",
+      "queries": [
+        "irrigation water diverted arid farmland",
+        "empty canal channel dry desert",
+        "flooded fields irrigation Central Asia"
+      ],
+      "intent": "Consumptive use made visible: irrigation water spread over arid farmland and canals, none of it reaching a lake.",
+      "id": 84
+    },
+    {
+      "start": 555.349,
+      "end": 559.378,
+      "sentence": 106,
+      "kind": "stock",
+      "image_prompt": "Pale cracked clay flats and a shrinking salt lake edge under flat overcast light, wide and quiet, held as a plain graphic surface for the figure.",
+      "motion_prompt": "Very slow slider drift right, near static.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "inland sea inflow decline",
+      "queries": [
+        "inland sea inflow decline"
+      ],
+      "intent": "The figure lands as a chart: thirty-nine percent of net river inflow to the Great Salt Lake consumed over one hundred and fifty years.",
+      "id": 85
+    },
+    {
+      "start": 559.378,
+      "end": 564.892,
+      "sentence": 107,
+      "kind": "stock",
+      "image_prompt": "Dust lifting off a pale exposed lakebed beside a grey-green inland lake, low overcast sky, earthen embankment in the distance, wide ground-level view with the horizon high in frame.",
+      "motion_prompt": "Slow drone rise over the dust-blown flat.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "Great Salt Lake exposed lakebed dust",
+      "queries": [
+        "Great Salt Lake exposed lakebed dust",
+        "Utah salt flats dust aerial",
+        "shrinking lake shoreline dry wide"
+      ],
+      "intent": "The same story in a different desert: the dry, dust-blown margin of the Great Salt Lake today, no longer a faraway place.",
+      "id": 86
+    },
+    {
+      "start": 564.892,
+      "end": 568.22,
+      "sentence": 108,
+      "kind": "stock",
+      "image_prompt": "A long straight unlined dirt road crossing pale salt flats and cracked clay toward a low grey-green lake and a barren embankment, low raking sun near the horizon, single magma-orange note in the sky, no traffic, no lettering.",
+      "motion_prompt": "Slow aerial pull back up the road toward the horizon.",
+      "style": "cinematic",
+      "priority": 3,
+      "query": "desert dirt road salt flats",
+      "queries": [
+        "desert dirt road salt flats",
+        "road to Great Salt Lake",
+        "highway across desert playa"
+      ],
+      "intent": "A plain road crossing the desert flats toward the receding lake \u2014 the closing image: the same sum, somewhere you can simply drive to.",
+      "id": 87
+    }
+  ]
+}

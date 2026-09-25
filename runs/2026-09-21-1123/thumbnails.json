@@ -1,0 +1,16 @@
+[
+  {
+    "file": "thumbnail.jpg",
+    "text": "THE SHIPS STAYED",
+    "hero": "a single rust-streaked fishing trawler standing upright on a cracked, bone-white clay seabed, tilted and half-sunk in the crust, with open desert in every direction and a shimmering empty horizon behind it",
+    "symbol": "arrow",
+    "why_click": "The title says a lake was erased; the image shows boats that were left behind on dry land with no water in sight, and the arrow points at the empty horizon where the sea should be \u2014 you have to click to learn how a trawler ends up kilometres inland.",
+    "score": 16.0,
+    "shrink_test": {
+      "text_readable": true,
+      "about": "Abandoned ships stranded in dried-up sea basins",
+      "attention": 8,
+      "emotion": 8
+    }
+  }
+]

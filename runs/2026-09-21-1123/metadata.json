@@ -1,0 +1,41 @@
+{
+  "title": "How the Soviet Union Erased the Fourth-Largest Lake on Earth",
+  "description": "Two rivers were redirected into cotton fields, and a sea that had fed ports, fish and weather for seventeen thousand years was subtracted drop by drop. Fifty years later the boats are still sitting on the seabed, kilometres from any water \u2014 and the same arithmetic is now running on a lake you can drive to.",
+  "tags": [
+    "Aral Sea",
+    "Aral Sea drying up",
+    "Kazakhstan",
+    "Uzbekistan",
+    "Soviet Union",
+    "Amu Darya",
+    "Syr Darya",
+    "Kara Kum Canal",
+    "Kokaral Dam",
+    "irrigation",
+    "Great Salt Lake",
+    "earth science documentary",
+    "desertification",
+    "water crisis",
+    "NASA Earth Observatory"
+  ],
+  "thumbnail_concepts": [
+    {
+      "text": "THE SHIPS STAYED",
+      "hero": "a single rust-streaked fishing trawler standing upright on a cracked, bone-white clay seabed, tilted and half-sunk in the crust, with open desert in every direction and a shimmering empty horizon behind it",
+      "symbol": "arrow",
+      "why_click": "The title says a lake was erased; the image shows boats that were left behind on dry land with no water in sight, and the arrow points at the empty horizon where the sea should be \u2014 you have to click to learn how a trawler ends up kilometres inland."
+    },
+    {
+      "text": null,
+      "hero": "a high aerial of the dried Aral seabed, its surface split into giant white salt polygons like a shattered plate, with one thin strip of blue water surviving at the far top edge of frame and nothing but pale desert in the south",
+      "symbol": "none",
+      "why_click": "No words at all: the shape is unmistakably a sea, the colour is unmistakably a desert, and that mismatch alone makes the eye stop and ask what it is looking at."
+    },
+    {
+      "text": "THE SAME SUM, ELSEWHERE",
+      "hero": "a lone wooden pier at the Great Salt Lake running out across salt-encrusted mudflats and ending in dry ground, with the brine a distant line on the horizon and snow-capped mountains behind it",
+      "symbol": "rec_dot",
+      "why_click": "The red dot signals something happening right now, and the shot moves the story out of Central Asia and into a lake inside the United States \u2014 you click to find out why the ending of a Soviet sea concerns a shoreline you could visit this weekend."
+    }
+  ]
+}

@@ -26,7 +26,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from pipeline import assistant, chat, publish, script, stock, visuals  # noqa: E402
 from pipeline.common import load_config, log, resolve_run  # noqa: E402
-from pipeline.run import BUILD_STAGES, run_stage  # noqa: E402
+from pipeline.run import BUILD_STAGES, reconcile_stages, run_stage  # noqa: E402
 
 # Re-running one of these changes the thumbnail or the subtitle track but NOT
 # the video file, so the private upload can stay where it is and just have the
@@ -130,6 +130,19 @@ def do_build(run_id: str, args: dict, redo_stage: str = "") -> None:
         publish.delete_video(run)
     elif not run.is_done("thumbnail"):  # not just the render left
         chat.send("🎬 Building. I'll show you every shot before the 20–40 minute render.")
+
+    # A stage can be marked done while its output is gone (a deleted file, a
+    # build killed mid-write). Redo it, whatever the marker says - otherwise
+    # the render dies on a missing file.
+    redoing = reconcile_stages(run)
+    if redoing:
+        chat.send(
+            "ℹ️ Picking up an interrupted build. These stages have to be redone "
+            "because their files didn't survive:\n\n"
+            f"<b>{chat.escape(', '.join(redoing))}</b>\n\n"
+            "<i>Narration and AI visuals cost money to remake, so this run will "
+            "bill twice for those.</i>"
+        )
 
     run.save_state(chat_stage="building")
 

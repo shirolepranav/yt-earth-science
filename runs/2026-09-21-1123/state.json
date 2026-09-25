@@ -1,0 +1,25 @@
+{
+  "run_id": "2026-09-21-1123",
+  "stages_done": [
+    "topics",
+    "choose",
+    "research",
+    "script",
+    "narrate",
+    "align",
+    "captions",
+    "storyboard",
+    "charts",
+    "stock",
+    "visuals",
+    "shotlist",
+    "audio",
+    "thumbnail"
+  ],
+  "chat_stage": "building",
+  "narration_seconds": 567.22,
+  "subtitle_path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/output/subtitles.srt",
+  "subtitle_cues": 154,
+  "charts3d_spend_usd": 0,
+  "visuals_spend_usd": 0.18
+}

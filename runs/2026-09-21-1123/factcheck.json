@@ -1,0 +1,47 @@
+{
+  "flags": [
+    {
+      "quote": "The towns on this shoreline fished it.\n\nwater body on Earth.",
+      "problem": "unsupported",
+      "detail": "This is a stray duplicated fragment of an earlier sentence ('...the fourth-largest lake... water body on Earth'). It is not a factual error but it is a publishing defect that would be read aloud by the TTS voice as a standalone line.",
+      "suggested_fix": "Delete the fragment; the sentence should read only 'The towns on this shoreline fished it.'"
+    },
+    {
+      "quote": "But by nineteen seventy, the level had fallen past the range of natural fluctuation the sea had shown for the previous ten thousand years.",
+      "problem": "imprecise_deep_time",
+      "detail": "Source 4 (Columbia, drawing on Micklin 2007) says only that 'by 1970, the water loss exceeded the limit of natural water level variation that has occurred in the past' \u2014 it gives no 10,000-year window. The 10,000-year figure comes from a different source (Source 5, Allen 1997: 'repeated major surface level fluctuations during the past 10,000 years'), and the script names no source for it, which breaks the one-source-per-statistic rule.",
+      "suggested_fix": "But by nineteen seventy, the level had fallen past the range of natural variation the sea had shown in the past."
+    },
+    {
+      "quote": "Its outgoings weren't. The desert kept drawing water out of it at exactly the rate it always had.",
+      "problem": "overstated_causation",
+      "detail": "Source 4 states the opposite in part: 'Net evaporation has also decreased, but at a slower rate while the groundwater inflow has remained approximately the same.' The deficit grew because outflow fell more slowly than inflow, not because outflow stayed constant.",
+      "suggested_fix": "Its outgoings fell too \u2014 but always more slowly than its income. Net evaporation declined, just never as fast as the rivers did, so the deficit kept growing."
+    },
+    {
+      "quote": "NASA's Earth Observatory describes winds lifting salt-laden sediment off the exposed seabed and dropping tens of thousands of tons of it a year onto farmland and towns downwind.",
+      "problem": "wrong_attribution",
+      "detail": "The 'tens of thousands of tons... every year' figure appears in Source 7, a NASA Goddard Space Flight Center Scientific Visualization Studio release (ID 2105), not in an Earth Observatory article. The Earth Observatory pages in the dossier mention frequent dust storms but give no tonnage.",
+      "suggested_fix": "NASA describes winds lifting salt-laden sediment off the exposed seabed and dropping tens of thousands of tons of it a year onto farmland and towns downwind."
+    },
+    {
+      "quote": "In the late nineteen eighties, satellites passing over Central Asia began sending back images of something no map had ever shown. The Aral was no longer one body of water. It had torn in two.",
+      "problem": "unsupported",
+      "detail": "The dossier dates the split only as 'by 1990' (Source 8: 'By 1990 the original Aral Sea had separated into a [Small and Large Aral]') and offers no claim that no map had ever shown it. The Landsat record cited begins in 1973, so the late-1980s framing and the 'no map had ever shown' line are not supported.",
+      "suggested_fix": "By nineteen ninety, the Aral was no longer one body of water. It had torn in two."
+    },
+    {
+      "quote": "According to the US Geological Survey, consumptive water use has reduced net river inflow to that lake by thirty-nine percent over the past one hundred and fifty years.",
+      "problem": "wrong_attribution",
+      "detail": "Source 9 does say this on a USGS page, but the USGS explicitly credits it elsewhere: 'A report by Utah State University and others indicated that the lake has persistently declined since the mid-1800s.' The 39 percent figure is USU's, quoted by USGS, not a USGS finding.",
+      "suggested_fix": "According to a report by Utah State University and others, cited by the US Geological Survey, consumptive water use has reduced net river inflow to that lake by thirty-nine percent over the past one hundred and fifty years."
+    },
+    {
+      "quote": "Picture a cube of water eight kilometres along every edge.",
+      "problem": "wrong_number",
+      "detail": "Source 6 gives the loss as 600 km3. A cube of that volume is roughly 8.4 km on a side; an 8 km cube holds only about 512 km3, so the illustration understates the volume by about 15 percent.",
+      "suggested_fix": "Picture a cube of water roughly eight and a half kilometres along every edge."
+    }
+  ],
+  "verdict": "minor_fixes"
+}

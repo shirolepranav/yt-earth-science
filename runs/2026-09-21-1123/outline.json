@@ -1,0 +1,86 @@
+{
+  "hook_angle": "August 2014: the eastern lobe of the southern Aral Sea goes completely dry \u2014 a basin that in 1960 was the fourth-largest inland water body on Earth, now holding roughly a tenth of its former size, with 90 percent of its volume gone since 1960, according to NASA's Earth Observatory. You are standing on a seabed you could once have sailed.",
+  "stakes": "A sea that fed a fishing fleet, moderated the climate of a desert and gave its name to a whole region was converted into a salt flat within one human lifetime, and everything that lived on its shores \u2014 fish, birds, farms, ports, people \u2014 had to live inside the arithmetic of its disappearance.",
+  "sections": [
+    {
+      "heading": "The decision",
+      "claim": "The Aral was not emptied by drought. It was emptied on purpose: from the 1950s the Soviet Union redirected the two rivers that fed it, and one canal alone, the Kara Kum, took a third of the Amu Darya's flow the year it opened.",
+      "key_number": "1/3 of the Amu Darya's flow, diverted by the Kara Kum Canal from 1956",
+      "source": "Guy Fipps, Texas A&M University, 'The Aral Sea Disaster'",
+      "visual": {
+        "kind": "bignumber",
+        "title": "A THIRD OF A RIVER, TURNED INTO A CANAL",
+        "labels": [
+          "Share of the Amu Darya's flow diverted by the Kara Kum Canal when it opened in 1956"
+        ],
+        "values": [
+          33
+        ],
+        "unit": "%",
+        "source_note": "Guy Fipps, Texas A&M University"
+      }
+    },
+    {
+      "heading": "The drain",
+      "claim": "With inflow cut below evaporation, the loss fed itself: the shallower the sea got, the faster it warmed and the faster it evaporated \u2014 and the rate of fall almost tripled within a decade.",
+      "key_number": "About 21 cm of water level per year in the first decade of desiccation, then about 57 cm per year in the following decade",
+      "source": "Micklin 2007, via Columbia University's Aral Sea Crisis project",
+      "visual": {
+        "kind": "bar",
+        "title": "HOW FAST THE ARAL FELL",
+        "labels": [
+          "First decade of desiccation",
+          "Following decade"
+        ],
+        "values": [
+          21,
+          57
+        ],
+        "unit": "cm per year",
+        "source_note": "Micklin 2007, via Columbia University's Aral Sea Crisis project"
+      }
+    },
+    {
+      "heading": "The salt",
+      "claim": "The water left; the salt stayed. Salinity climbed from about 10 parts per thousand in 1960 to 92 in 2004, and the commercial fishery that landed 43,430 tons in 1960 landed nothing at all by 1980.",
+      "key_number": "43,430 tons of fish in 1960, falling to zero in 1980",
+      "source": "Bosch, cited in Columbia University's Aral Sea Crisis project",
+      "visual": {
+        "kind": "comparison",
+        "title": "THE FISHERY, 1960 TO 1980",
+        "labels": [
+          "1960",
+          "1980"
+        ],
+        "values": [
+          43430,
+          0
+        ],
+        "unit": "tons of commercial catch per year",
+        "source_note": "Bosch, cited in Columbia University's Aral Sea Crisis project"
+      }
+    },
+    {
+      "heading": "The break",
+      "claim": "As the level fell the sea tore into separate basins \u2014 Small in the north, Large in the south, and later eastern and western lobes \u2014 and the dam built in 2005 to save the northern half ended any prospect of recovery for the southern one.",
+      "key_number": "Surface area of 67,499 km\u00b2 in 1960, down to 39,734 km\u00b2 by 1990",
+      "source": "Aladin, Plotnikov, Zhakova, Mossin and H\u00f8eg, Zoological Studies, 2023",
+      "visual": {
+        "kind": "bar",
+        "title": "THE SEA, BY SURFACE AREA",
+        "labels": [
+          "1960",
+          "1990"
+        ],
+        "values": [
+          67499,
+          39734
+        ],
+        "unit": "square kilometres",
+        "source_note": "Aladin et al., Zoological Studies, 2023"
+      }
+    }
+  ],
+  "payoff": "The Aral did not simply dry up \u2014 it was divided, and the two halves now have opposite futures. The northern Small Aral, sealed behind the Kokaral Dam finished in 2005, has seen its fisheries rebound, according to NASA's Earth Observatory; the southern Large Aral is becoming hypersaline enough that Aladin and colleagues, writing in Zoological Studies in 2023, describe it as heading toward a 'Dead Sea' condition hostile to all animal life. What scientists still disagree on is whether the eastern lobe's occasional refills \u2014 it went completely dry in 2014 and partly filled again during the wet year of 2017 \u2014 are a lasting feature; geographer Philip Micklin told NASA he expects the pattern of refill in wet years and near-total dry-out in low-flow years to continue for the foreseeable future.",
+  "takeaway": "The Aral had no outlet, so every drop that left it left as vapour \u2014 and the same arithmetic is now running on the Great Salt Lake, where the US Geological Survey reports that consumptive water use has reduced net river inflow by 39 percent over the past 150 years."
+}

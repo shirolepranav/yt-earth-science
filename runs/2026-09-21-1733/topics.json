@@ -1,0 +1,84 @@
+{
+  "topics": [
+    {
+      "rank": 1,
+      "title": "Marie Tharp Found the Crack Running Through the Ocean",
+      "core_question": "How did a woman drawing maps of the Atlantic seafloor find the rift valley that proved the continents move?",
+      "why_they_click": "She found the single feature that made continental drift undeniable in 1957, and the men she worked with told her it was impossible.",
+      "data_source": "USGS 'This Dynamic Earth'; NOAA Ocean Exploration seafloor mapping data; Lamont-Doherty Earth Observatory archives",
+      "evidence": "'plate tectonics explained' is the strongest rising signal here at +1325% over five years, alongside 'geology documentary' at +5600%."
+    },
+    {
+      "rank": 2,
+      "title": "The 1,200-Year Freeze That Nearly Undid the Thaw",
+      "core_question": "Why did the planet suddenly plunge back into near-glacial cold 12,900 years ago, and what ended it?",
+      "why_they_click": "Earth was warming out of the last ice age, then slammed into reverse for over a thousand years - and scientists still argue about the trigger.",
+      "data_source": "NOAA NCEI Paleoclimatology; Greenland ice core records; peer-reviewed Younger Dryas studies",
+      "evidence": "'ice age explained' is rising sharply at +694% over five years, and the cause is genuinely contested, which suits the channel's rule of naming disagreements."
+    },
+    {
+      "rank": 3,
+      "title": "The 1964 Alaska Earthquake: 9.2, Four Minutes Long",
+      "core_question": "What did the most powerful earthquake ever recorded in North America do to Alaska in four minutes?",
+      "why_they_click": "The ground shook for four minutes, towns slid into the sea, and the tsunami killed people thousands of kilometres away in California.",
+      "data_source": "USGS Earthquake Hazards Program; NOAA NCEI tsunami database; Alaska Earthquake Center",
+      "evidence": "'biggest earthquake in history' is rising at +52% over five years, and this covers the strongest US event without repeating the Chile 1960 video already in the backlog."
+    },
+    {
+      "rank": 4,
+      "title": "Toba: The Supervolcano That Blotted Out the Sun",
+      "core_question": "What did the eruption of Toba roughly 74,000 years ago actually do to the climate, and did it nearly wipe out humans?",
+      "why_they_click": "It was the largest eruption of the last two million years, and the claim that it caused a human genetic bottleneck is still disputed.",
+      "data_source": "Smithsonian Global Volcanism Program; peer-reviewed Toba tephra and climate studies; NOAA paleoclimate data",
+      "evidence": "'supervolcano' is rising at +37% over five years and the Yellowstone video proves the appetite for the format."
+    },
+    {
+      "rank": 5,
+      "title": "Hunga Tonga: The Loudest Bang Ever Recorded",
+      "core_question": "What happened when an undersea volcano in Tonga exploded in January 2022, and why did the shockwave circle the globe?",
+      "why_they_click": "The pressure wave from a volcano nobody was watching went around the Earth multiple times and reached space, all caught on satellite.",
+      "data_source": "NASA Earth Observatory and NASA JPL atmospheric data; NOAA tsunami records; Smithsonian Global Volcanism Program",
+      "evidence": "'geology documentary' is rising at +5600% over five years, and this is the most visually documented eruption ever recorded, so the footage carries it."
+    },
+    {
+      "rank": 6,
+      "title": "Laki 1783: The Fog That Starved Iceland",
+      "core_question": "How did a fissure eruption in Iceland kill a fifth of its population and send a sulphur haze across Europe?",
+      "why_they_click": "The lava itself killed very few people - the haze, the crop failures and the livestock deaths are what did the damage, a year later and a continent away.",
+      "data_source": "Smithsonian Global Volcanism Program; peer-reviewed Laki 1783-84 climate and mortality studies; NOAA paleoclimate records",
+      "evidence": "Volcanic climate impact sits inside the rising 'geology documentary' and 'supervolcano' signals, and the year-after consequences mirror the channel's best-performing Tambora story without repeating it."
+    },
+    {
+      "rank": 7,
+      "title": "Lisbon 1755: The Quake That Built Modern Seismology",
+      "core_question": "How did an earthquake on All Saints' Day 1755 destroy Lisbon and change how Europe thought about disasters?",
+      "why_they_click": "Church, then tsunami, then fire - three disasters in one morning, in a city that was full of candles, on a religious holiday.",
+      "data_source": "USGS Earthquake Hazards Program; peer-reviewed 1755 Lisbon earthquake studies; NOAA NCEI historical tsunami records",
+      "evidence": "Rides the rising 'biggest earthquake in history' signal at +52% while offering the historical mystery of a magnitude range and death toll that sources never agreed on."
+    },
+    {
+      "rank": 8,
+      "title": "Armero 1985: The Mud That Buried a Town Alive",
+      "core_question": "Why did a lahar from Nevado del Ruiz kill more than 20,000 people after scientists had already mapped the danger?",
+      "why_they_click": "The hazard map existed and the warning was issued, and the town was still in its path when the mud arrived at night.",
+      "data_source": "USGS Volcano Hazards Program; Smithsonian Global Volcanism Program; peer-reviewed Nevado del Ruiz 1985 studies",
+      "evidence": "'supervolcano' is rising at +37% and 'geology documentary' at +5600%; this adds the human-stakes failure that volcano footage alone cannot."
+    },
+    {
+      "rank": 9,
+      "title": "New Madrid 1811: The Quakes That Reversed a River",
+      "core_question": "Why did three enormous earthquakes tear apart the middle of North America in 1811 and 1812, far from any plate boundary?",
+      "why_they_click": "The Mississippi ran backwards, the ground liquefied into sand blows, and church bells rang in Boston - all from a fault zone that should not exist there.",
+      "data_source": "USGS Earthquake Hazards Program New Madrid studies; USGS paleoseismology sand-blow records; peer-reviewed 1811-1812 eyewitness accounts",
+      "evidence": "Sits on the rising 'biggest earthquake in history' signal at +52% and answers a genuine geological mystery rather than a list of facts."
+    },
+    {
+      "rank": 10,
+      "title": "Vredefort: Earth's Largest Crater, 2 Billion Years Old",
+      "core_question": "How do we know a 300-kilometre impact structure in South Africa is the biggest ever found, when almost none of the crater is left?",
+      "why_they_click": "The crater was nearly erased by two billion years of erosion, and geologists reconstructed it from shattered rock and shattered minerals.",
+      "data_source": "NASA Earth Observatory; USGS impact crater records; peer-reviewed Vredefort impact structure studies; Physical Geology open textbook (opentextbc.ca/geology)",
+      "evidence": "Backs the +5600% 'geology documentary' signal with a detective story in the same mould as the channel's Chicxulub clay-layer video, without repeating the impact."
+    }
+  ]
+}

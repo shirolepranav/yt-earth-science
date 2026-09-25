@@ -34,6 +34,7 @@ from __future__ import annotations
 
 import argparse
 import sys
+from pathlib import Path
 
 from . import (
     align, audio, captions, charts3d, narrate, publish, render, research, script, shotlist,
@@ -65,6 +66,86 @@ BUILD_STAGES = [
     "narrate", "align", "captions", "storyboard", "charts", "stock", "visuals", "shotlist",
     "audio", "thumbnail", "render",
 ]
+
+
+def missing_outputs(run: Run, stage: str) -> list[str]:
+    """Files `stage` should have left behind that aren't actually there.
+
+    `stages_done` records that a stage ran, which is not the same as its output
+    still existing. On a Mac those are the same thing. On GitHub Actions they
+    are not: every job gets a fresh container, and only the run's *text* files
+    are committed back - `audio/`, `assets/` and most of `output/` are
+    gitignored because they're far too big for git.
+
+    So a resumed build can be told "audio: already done" while narration_mixed.wav
+    does not exist anywhere on the machine, and the render then dies on a
+    missing file several stages later. Checking the outputs rather than the
+    marker is what makes a resume honest.
+    """
+    def exists(*parts: str) -> bool:
+        return run.path(*parts).exists()
+
+    if stage == "narrate":
+        return [] if exists("audio", "narration.wav") else ["audio/narration.wav"]
+    if stage == "align":
+        return [] if exists("words.json") else ["words.json"]
+    if stage == "captions":
+        return [] if exists("output", "subtitles.srt") else ["output/subtitles.srt"]
+    if stage == "storyboard":
+        return [] if exists("storyboard.json") else ["storyboard.json"]
+    if stage == "shotlist":
+        return [] if exists("shotlist.json") else ["shotlist.json"]
+    if stage == "audio":
+        return [] if exists("audio", "narration_mixed.wav") else ["audio/narration_mixed.wav"]
+    if stage == "thumbnail":
+        return [] if exists("output", "thumbnail.jpg") else ["output/thumbnail.jpg"]
+    if stage == "render":
+        return [] if exists("output", "video.mp4") else ["output/video.mp4"]
+
+    # These three record the files they made in a JSON index, so the index is
+    # only as true as the files it points at.
+    if stage == "charts":
+        if not exists("charts3d.json"):
+            return ["charts3d.json"]
+        return [f"assets/charts/{key}.tsx" for key in run.read_json("charts3d.json").values()
+                if not exists("assets", "charts", f"{key}.tsx")]
+    if stage == "stock":
+        if not exists("stock.json"):
+            return ["stock.json"]
+        return [c["path"] for entry in run.read_json("stock.json").values()
+                for c in entry.get("clips", []) if not Path(c["path"]).exists()]
+    if stage == "visuals":
+        if not exists("visuals.json"):
+            return ["visuals.json"]
+        return [a["src"] for a in run.read_json("visuals.json").values()
+                if a.get("src") and not Path(a["src"]).exists()]
+
+    return []  # publish keeps its result in state.json, which is committed
+
+
+def reconcile_stages(run: Run) -> list[str]:
+    """Un-mark finished stages whose output has gone missing, and everything
+    after them.
+
+    Downstream stages go too, not just the broken one: if the narration is
+    re-recorded the word timings shift, so every shot cut against them has to
+    be re-cut. Returns the stages that will now be redone.
+    """
+    done = run.state().get("stages_done", [])
+    for index, stage in enumerate(BUILD_STAGES):
+        if stage not in done:
+            continue
+        gone = missing_outputs(run, stage)
+        if not gone:
+            continue
+
+        redo = [s for s in BUILD_STAGES[index:] if s in done]
+        log(f"'{stage}' is marked done but {gone[0]} is missing "
+            f"({len(gone)} file(s) gone) - redoing it and everything after.")
+        run.reset_stages(keep=[s for s in done if s not in redo])
+        return redo
+
+    return []
 
 
 def run_stage(run: Run, name: str, force: bool = False) -> None:

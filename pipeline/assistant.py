@@ -151,6 +151,7 @@ def present_review(run: Run) -> None:
     chat.send_video(run.path("output", "video.mp4"),
                     caption=f"🎥 <b>Video ready</b> — run <code>{run.id}</code>")
 
+    problems = chat.degraded()
     chat.send("\n".join([
         f"<b>Title:</b> {chat.escape(metadata.get('title', ''))}",
         "",
@@ -160,6 +161,10 @@ def present_review(run: Run) -> None:
         "",
         f"<b>Pinned comment:</b> {chat.escape(metadata.get('pinned_comment') or '(none)')}",
         f"<b>Subtitles:</b> {state.get('subtitle_cues', 0):,} cues",
+        # Anything that quietly fell back to a lesser path during the build. The
+        # video is finished either way, but you should know before you publish it.
+        *(["", "⚠️ <b>Built with something degraded:</b>", *[f"• {chat.escape(p)}" for p in problems]]
+          if problems else []),
     ]))
 
     # The three thumbnails, so you can pick by eye rather than by filename.

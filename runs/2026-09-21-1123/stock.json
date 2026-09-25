@@ -1,0 +1,899 @@
+{
+  "0": {
+    "query": "Aral Sea dried seabed aerial",
+    "clips": [
+      {
+        "id": "pexels-4454104",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_000_0_pexels-4454104.mp4",
+        "duration": 33,
+        "score": 9.0,
+        "page": "https://www.pexels.com/video/dark-clouds-covering-the-sky-4454104/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "1": {
+    "query": "Aral Sea eastern lobe dry basin",
+    "clips": [
+      {
+        "id": "pexels-14975787",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_001_0_pexels-14975787.mp4",
+        "duration": 24,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/drone-footage-of-a-snow-covered-tundra-on-a-sunny-day-14975787/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "3": {
+    "query": "Aral Sea basin completely dry",
+    "clips": [
+      {
+        "id": "nasa-GSFC_20171208_Archive_e000965",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_003_0_nasa-GSFC_20171208_Archive_e000965.jpg",
+        "duration": 15.0,
+        "score": 8.0,
+        "page": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000965",
+        "media": "image",
+        "credit": "NASA GSFC",
+        "license": "NASA media (public domain)",
+        "on_screen": "NASA GSFC",
+        "depth": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/gen/4f93d8ec76b2dfa2a123f24d.png"
+      }
+    ]
+  },
+  "4": {
+    "query": "abandoned trawler dry seabed Aral",
+    "clips": [
+      {
+        "id": "commons-24488347",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_004_0_commons-24488347.jpg",
+        "duration": 15.0,
+        "score": 9.0,
+        "page": "https://commons.wikimedia.org/wiki/File:Moynaq,_Aral_Sea_(6226807306).jpg",
+        "media": "image",
+        "credit": "Arian Zwegers",
+        "license": "CC BY 2.0",
+        "on_screen": "Arian Zwegers / Wikimedia Commons (CC BY 2.0)",
+        "depth": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/gen/c254237cf3d83a6218b57adc.png"
+      }
+    ]
+  },
+  "7": {
+    "query": "Amu Darya Syr Darya delta aerial",
+    "clips": [
+      {
+        "id": "pexels-4275467",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_007_0_pexels-4275467.mp4",
+        "duration": 39,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/a-drone-shot-over-a-sandy-river-4275467/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "9": {
+    "query": "shallow lake surface heat haze",
+    "clips": [
+      {
+        "id": "pexels-12106448",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_009_0_pexels-12106448.mp4",
+        "duration": 3,
+        "score": 7.0,
+        "page": "https://www.pexels.com/video/drone-footage-of-sand-and-water-12106448/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "11": {
+    "query": "dry riverbed desert aerial",
+    "clips": [
+      {
+        "id": "pexels-36460243",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_011_0_pexels-36460243.mp4",
+        "duration": 22,
+        "score": 9.0,
+        "page": "https://www.pexels.com/video/stunning-aerial-view-of-desert-canyon-riverbed-36460243/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "12": {
+    "query": "irrigation headworks river aerial",
+    "clips": [
+      {
+        "id": "pexels-38286613",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_012_0_pexels-38286613.mp4",
+        "duration": 11,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/serene-aerial-view-of-green-farmland-landscape-38286613/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "14": {
+    "query": "Kara Kum Canal Turkmenistan",
+    "clips": [
+      {
+        "id": "pexels-5418114",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_014_0_pexels-5418114.mp4",
+        "duration": 16,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/aerial-view-of-car-driving-along-a-dusty-road-5418114/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "16": {
+    "query": "large dam reservoir Central Asia",
+    "clips": [
+      {
+        "id": "pexels-38244488",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_016_0_pexels-38244488.mp4",
+        "duration": 14,
+        "score": 7.0,
+        "page": "https://www.pexels.com/video/aerial-drone-footage-of-scenic-water-reservoir-38244488/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "18": {
+    "query": "unlined canal leaking water",
+    "clips": [
+      {
+        "id": "pexels-6496275",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_018_0_pexels-6496275.mp4",
+        "duration": 26,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/aerial-footage-of-a-field-6496275/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "19": {
+    "query": "dry river delta inland sea",
+    "clips": [
+      {
+        "id": "nasa-iss012e23057",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_019_0_nasa-iss012e23057.jpg",
+        "duration": 15.0,
+        "score": 8.0,
+        "page": "https://images.nasa.gov/details/iss012e23057",
+        "media": "image",
+        "credit": "NASA JSC",
+        "license": "NASA media (public domain)",
+        "on_screen": "NASA JSC",
+        "depth": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/gen/ff442229424136e049bf4e33.png"
+      }
+    ]
+  },
+  "21": {
+    "query": "dried basin dusk aerial",
+    "clips": [
+      {
+        "id": "pexels-37899363",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_021_0_pexels-37899363.mp4",
+        "duration": 10,
+        "score": 7.0,
+        "page": "https://www.pexels.com/video/aerial-view-of-vast-desert-plain-and-salt-flats-37899363/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "22": {
+    "query": "still lake shore overcast",
+    "clips": [
+      {
+        "id": "pexels-13067839",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_022_0_pexels-13067839.mp4",
+        "duration": 24,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/rushes-on-lakeshore-13067839/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "23": {
+    "query": "Aral Sea fishing boats stranded",
+    "clips": [
+      {
+        "id": "pexels-34514411",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_023_0_pexels-34514411.mp4",
+        "duration": 25,
+        "score": 9.0,
+        "page": "https://www.pexels.com/video/aerial-view-of-stranded-boat-at-low-tide-on-white-sands-34514411/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "24": {
+    "query": "Aral Sea dried seabed cracked clay",
+    "clips": [
+      {
+        "id": "pexels-18990795",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_024_0_pexels-18990795.mp4",
+        "duration": 18,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/lake-burdur-18990795/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "26": {
+    "query": "irrigation canal Central Asia desert",
+    "clips": [
+      {
+        "id": "pexels-36163703",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_026_0_pexels-36163703.mp4",
+        "duration": 9,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/concrete-construction-site-with-heavy-machinery-36163703/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "30": {
+    "query": "heat haze shallow water sunlight",
+    "clips": [
+      {
+        "id": "pexels-19285362",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_030_0_pexels-19285362.mp4",
+        "duration": 21,
+        "score": 7.0,
+        "page": "https://www.pexels.com/video/a-sandy-beach-with-rocks-and-water-19285362/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "31": {
+    "query": "Aral Sea brine pool dusk salt ring",
+    "clips": [
+      {
+        "id": "pexels-38062561",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_031_0_pexels-38062561.mp4",
+        "duration": 19,
+        "score": 9.0,
+        "page": "https://www.pexels.com/video/aerial-view-of-salt-flats-with-scenic-pools-38062561/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "33": {
+    "query": "dry seabed panorama horizon",
+    "clips": [
+      {
+        "id": "pexels-31755961",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_033_0_pexels-31755961.mp4",
+        "duration": 26,
+        "score": 9.0,
+        "page": "https://www.pexels.com/video/vast-salt-desert-aerial-view-31755961/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "35": {
+    "query": "Aral Sea boat graveyard",
+    "clips": [
+      {
+        "id": "pexels-34155780",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_035_0_pexels-34155780.mp4",
+        "duration": 42,
+        "score": 7.0,
+        "page": "https://www.pexels.com/video/rustic-abandoned-boats-on-brittany-shoreline-34155780/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "37": {
+    "query": "salt encrusted boat hull dry",
+    "clips": [
+      {
+        "id": "pexels-15938885",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_037_0_pexels-15938885.mp4",
+        "duration": 38,
+        "score": 6.0,
+        "page": "https://www.pexels.com/video/a-close-up-view-of-the-ocean-with-ice-15938885/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "38": {
+    "query": "salt crust polygons dry lake bed",
+    "clips": [
+      {
+        "id": "pexels-4028972",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_038_0_pexels-4028972.mp4",
+        "duration": 31,
+        "score": 9.0,
+        "page": "https://www.pexels.com/video/blocks-of-ice-in-a-frozen-lake-4028972/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "40": {
+    "query": "hypersaline brine lake turquoise salt ring",
+    "clips": [
+      {
+        "id": "pexels-30714899",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_040_0_pexels-30714899.mp4",
+        "duration": 28,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/aerial-view-of-stunning-pink-salt-lake-30714899/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "42": {
+    "query": "abandoned fish cannery shore",
+    "clips": [
+      {
+        "id": "pexels-8968775",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_042_0_pexels-8968775.mp4",
+        "duration": 42,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/a-drone-footage-of-an-abandoned-watercrafts-8968775/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "44": {
+    "query": "still water hypersaline lake surface",
+    "clips": [
+      {
+        "id": "pexels-15100741",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_044_0_pexels-15100741.mp4",
+        "duration": 60,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/gray-sky-over-a-frozen-body-of-water-15100741/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "46": {
+    "query": "Aral Sea dust storm",
+    "clips": [
+      {
+        "id": "pexels-7895679",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_046_0_pexels-7895679.mp4",
+        "duration": 15,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/a-car-travelling-on-a-long-road-7895679/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "48": {
+    "query": "airborne dust over fields",
+    "clips": [
+      {
+        "id": "pexels-35665668",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_048_0_pexels-35665668.mp4",
+        "duration": 21,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/serene-sunset-over-foggy-field-with-pole-35665668/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "50": {
+    "query": "inland sea calm overcast",
+    "clips": [
+      {
+        "id": "pexels-17336279",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_050_0_pexels-17336279.mp4",
+        "duration": 38,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/desert-sea-17336279/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "51": {
+    "query": "cracked clay desert floor",
+    "clips": [
+      {
+        "id": "pexels-5358448",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_051_0_pexels-5358448.mp4",
+        "duration": 12,
+        "score": 9.0,
+        "page": "https://www.pexels.com/video/video-of-dry-terrain-5358448/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "53": {
+    "query": "Aral Sea split two basins aerial",
+    "clips": [
+      {
+        "id": "pexels-8415422",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_053_0_pexels-8415422.mp4",
+        "duration": 9,
+        "score": 7.0,
+        "page": "https://www.pexels.com/video/drone-footage-of-a-pink-lake-8415422/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "55": {
+    "query": "dry seabed horizon wide",
+    "clips": [
+      {
+        "id": "pexels-5985519",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_055_0_pexels-5985519.mp4",
+        "duration": 11,
+        "score": 9.0,
+        "page": "https://www.pexels.com/video/drone-video-of-a-person-riding-horse-5985519/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "58": {
+    "query": "desert plain between town and dry sea",
+    "clips": [
+      {
+        "id": "pexels-35868207",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_058_0_pexels-35868207.mp4",
+        "duration": 19,
+        "score": 7.0,
+        "page": "https://www.pexels.com/video/aerial-view-of-arid-landscape-and-town-35868207/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "59": {
+    "query": "Amu Darya delta wetland reeds",
+    "clips": [
+      {
+        "id": "pexels-10069767",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_059_0_pexels-10069767.mp4",
+        "duration": 52,
+        "score": 7.0,
+        "page": "https://www.pexels.com/video/an-aerial-footage-of-a-lake-with-reeds-10069767/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "61": {
+    "query": "Small Aral Large Aral separated",
+    "clips": [
+      {
+        "id": "nasa-GSFC_20171208_Archive_e000965",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_061_0_nasa-GSFC_20171208_Archive_e000965.jpg",
+        "duration": 15.0,
+        "score": 7.0,
+        "page": "https://images.nasa.gov/details/GSFC_20171208_Archive_e000965",
+        "media": "image",
+        "credit": "NASA GSFC",
+        "license": "NASA media (public domain)",
+        "on_screen": "NASA GSFC",
+        "depth": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/gen/24b49f8a15eec32b92375e4b.png"
+      }
+    ]
+  },
+  "63": {
+    "query": "salt lake milky turquoise aerial",
+    "clips": [
+      {
+        "id": "pexels-30714888",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_063_0_pexels-30714888.mp4",
+        "duration": 39,
+        "score": 9.0,
+        "page": "https://www.pexels.com/video/stunning-aerial-view-of-western-australia-s-pink-lake-30714888/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "64": {
+    "query": "Kokaral Dam Aral Sea",
+    "clips": [
+      {
+        "id": "pexels-17283408",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_064_0_pexels-17283408.mp4",
+        "duration": 10,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/construction-of-dam-cinematic-shot-17283408/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "65": {
+    "query": "fishing boats inland sea shore",
+    "clips": [
+      {
+        "id": "pexels-5327726",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_065_0_pexels-5327726.mp4",
+        "duration": 19,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/people-pushing-a-boats-5327726/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "67": {
+    "query": "northern Aral water southern dry",
+    "clips": [
+      {
+        "id": "commons-51482661",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_067_0_commons-51482661.jpg",
+        "duration": 15.0,
+        "score": 8.0,
+        "page": "https://commons.wikimedia.org/wiki/File:Shrinking_Aral_Sea_(15225687200).jpg",
+        "media": "image",
+        "credit": "NASA Goddard Space Flight Center from Greenbelt, MD, USA",
+        "license": "Public domain",
+        "on_screen": "NASA Goddard Space Flight Center from Greenbelt, MD, USA / Wikimedia Commons (Public domain)",
+        "depth": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/gen/bb9dfb6e1a3feb36b558831b.png"
+      }
+    ]
+  },
+  "68": {
+    "query": "hypersaline lake salt crust",
+    "clips": [
+      {
+        "id": "pexels-4028972",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_068_0_pexels-4028972.mp4",
+        "duration": 31,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/blocks-of-ice-in-a-frozen-lake-4028972/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "69": {
+    "query": "dead sea brine lifeless shore",
+    "clips": [
+      {
+        "id": "pexels-38062561",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_069_0_pexels-38062561.mp4",
+        "duration": 19,
+        "score": 9.0,
+        "page": "https://www.pexels.com/video/aerial-view-of-salt-flats-with-scenic-pools-38062561/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "70": {
+    "query": "dead sea brine lifeless shore",
+    "clips": [
+      {
+        "id": "pexels-30133679",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_070_0_pexels-30133679.mp4",
+        "duration": 53,
+        "score": 9.0,
+        "page": "https://www.pexels.com/video/aerial-view-of-coastal-erosion-at-the-dead-sea-30133679/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "71": {
+    "query": "Aral Sea dry seabed",
+    "clips": [
+      {
+        "id": "pexels-32003011",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_071_0_pexels-32003011.mp4",
+        "duration": 30,
+        "score": 9.0,
+        "page": "https://www.pexels.com/video/scenic-aerial-view-of-utah-salt-flats-32003011/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "73": {
+    "query": "Aral Sea refilling 2017",
+    "clips": [
+      {
+        "id": "pexels-6635294",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_073_0_pexels-6635294.mp4",
+        "duration": 20,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/aerial-shot-of-landscape-6635294/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "74": {
+    "query": "Toktogul reservoir dam",
+    "clips": [
+      {
+        "id": "pexels-8761189",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_074_0_pexels-8761189.mp4",
+        "duration": 39,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/drone-footage-of-a-snow-capped-mountain-8761189/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "75": {
+    "query": "Aral Sea shoreline lone figure",
+    "clips": [
+      {
+        "id": "pexels-28368861",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_075_0_pexels-28368861.mp4",
+        "duration": 27,
+        "score": 6.0,
+        "page": "https://www.pexels.com/video/hombre-caminando-en-la-playa-28368861/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "76": {
+    "query": "wind blown salt across dry lakebed",
+    "clips": [
+      {
+        "id": "pexels-13121064",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_076_0_pexels-13121064.mp4",
+        "duration": 77,
+        "score": 9.0,
+        "page": "https://www.pexels.com/video/time-lapse-of-sand-grains-being-blown-by-the-wind-13121064/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "77": {
+    "query": "Aral Sea satellite time series shrinking",
+    "clips": [
+      {
+        "id": "pexels-26580103",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_077_0_pexels-26580103.mp4",
+        "duration": 11,
+        "score": 6.0,
+        "page": "https://www.pexels.com/video/an-aerial-view-of-a-boat-in-the-water-26580103/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      },
+      {
+        "id": "pexels-32003017",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_077_1_pexels-32003017.mp4",
+        "duration": 13,
+        "score": 6.0,
+        "page": "https://www.pexels.com/video/aerial-view-of-bonneville-salt-flats-32003017/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "79": {
+    "query": "Aral Sea remnant brine pool",
+    "clips": [
+      {
+        "id": "pexels-12106447",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_079_0_pexels-12106447.mp4",
+        "duration": 6,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/landscape-of-california-12106447/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "81": {
+    "query": "irrigation canal desert water",
+    "clips": [
+      {
+        "id": "pexels-6498490",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_081_0_pexels-6498490.mp4",
+        "duration": 45,
+        "score": 9.0,
+        "page": "https://www.pexels.com/video/view-of-the-dry-ground-6498490/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "82": {
+    "query": "Great Salt Lake aerial",
+    "clips": [
+      {
+        "id": "commons-30338720",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_082_0_commons-30338720.jpg",
+        "duration": 15.0,
+        "score": 9.0,
+        "page": "https://commons.wikimedia.org/wiki/File:Great_Salt_Lake_and_Interstate_80_from_plane.jpg",
+        "media": "image",
+        "credit": "David Herrera",
+        "license": "CC BY 2.0",
+        "on_screen": "David Herrera / Wikimedia Commons (CC BY 2.0)",
+        "depth": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/gen/8fe91e466b5c0e4f848dff74.png"
+      }
+    ]
+  },
+  "84": {
+    "query": "irrigation water diverted arid farmland",
+    "clips": [
+      {
+        "id": "pexels-33400595",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_084_0_pexels-33400595.mp4",
+        "duration": 46,
+        "score": 9.0,
+        "page": "https://www.pexels.com/video/aerial-view-of-citrus-farms-in-california-33400595/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "85": {
+    "query": "inland sea inflow decline",
+    "clips": [
+      {
+        "id": "pexels-3120741",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_085_0_pexels-3120741.mp4",
+        "duration": 30,
+        "score": 8.0,
+        "page": "https://www.pexels.com/video/a-water-creek-cuts-through-a-wheat-field-3120741/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "86": {
+    "query": "Great Salt Lake exposed lakebed dust",
+    "clips": [
+      {
+        "id": "pexels-32002994",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_086_0_pexels-32002994.mp4",
+        "duration": 30,
+        "score": 9.0,
+        "page": "https://www.pexels.com/video/scenic-aerial-view-of-utah-s-bonneville-salt-flats-32002994/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  },
+  "87": {
+    "query": "desert dirt road salt flats",
+    "clips": [
+      {
+        "id": "pexels-9318006",
+        "path": "/home/runner/work/yt-earth-science/yt-earth-science/runs/2026-09-21-1123/assets/stock_087_0_pexels-9318006.mp4",
+        "duration": 22,
+        "score": 10.0,
+        "page": "https://www.pexels.com/video/an-empty-road-in-the-desert-with-a-car-driving-down-it-9318006/",
+        "media": "video",
+        "credit": null,
+        "license": null,
+        "on_screen": null
+      }
+    ]
+  }
+}
